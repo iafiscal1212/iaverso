@@ -1,0 +1,110 @@
+{
+  "mode_analysis": {
+    "-1": {
+      "n": 619,
+      "r_mean": -0.0171534090905493,
+      "r_p": 0.3001181908912404,
+      "MI_approx": 0.061859734206214004,
+      "TE_neo_to_eva": -0.0053978608842382885,
+      "TE_eva_to_neo": -0.016222664640730265,
+      "G_mean": 0.5,
+      "G_std": 0.0
+    },
+    "0": {
+      "n": 3803,
+      "r_mean": -0.037248385244626196,
+      "r_p": 0.23434911742291473,
+      "MI_approx": 0.06105228011356266,
+      "TE_neo_to_eva": -0.04116045029804593,
+      "TE_eva_to_neo": -0.027969987144732655,
+      "G_mean": 0.5,
+      "G_std": 0.0
+    },
+    "1": {
+      "n": 578,
+      "r_mean": 0.0037369361048025123,
+      "r_p": 0.6085195699579588,
+      "MI_approx": 0.026545191025821684,
+      "TE_neo_to_eva": 0.006112781951166532,
+      "TE_eva_to_neo": 0.031973555665347674,
+      "G_mean": 0.5,
+      "G_std": 0.0
+    }
+  },
+  "bandit_analysis": {
+    "neo_final_regret": 0.0,
+    "eva_final_regret": 0.0,
+    "bandit_stats": {
+      "neo": {
+        "pulls": {
+          "-1": 619,
+          "0": 3803,
+          "1": 578
+        },
+        "mean_rewards": {
+          "-1": 0.5,
+          "0": 0.5,
+          "1": 0.5
+        },
+        "cumulative_reward": 2500.0,
+        "cumulative_regret": 0.0,
+        "alpha": {
+          "-1": 1.0,
+          "0": 1.0,
+          "1": 1.0
+        },
+        "beta": {
+          "-1": 310.5,
+          "0": 1902.5,
+          "1": 290.0
+        }
+      },
+      "eva": {
+        "pulls": {
+          "-1": 586,
+          "0": 3821,
+          "1": 593
+        },
+        "mean_rewards": {
+          "-1": 0.5,
+          "0": 0.5,
+          "1": 0.5
+        },
+        "cumulative_reward": 2500.0,
+        "cumulative_regret": 0.0,
+        "alpha": {
+          "-1": 1.0,
+          "0": 1.0,
+          "1": 1.0
+        },
+        "beta": {
+          "-1": 294.0,
+          "0": 1911.5,
+          "1": 297.5
+        }
+      }
+    }
+  },
+  "consent_analysis": {
+    "P_a_neo": 0.4906,
+    "P_a_eva": 0.4986,
+    "P_both": 0.2442,
+    "lift": 0.9983109657714245,
+    "lift_CI_lower": 0.9697792866444359,
+    "lift_CI_upper": 1.025772733017968,
+    "n_samples": 5000,
+    "n_bootstrap": 1000
+  },
+  "safety_analysis": {
+    "rho_p99": 0.99,
+    "rho_p95": 0.99,
+    "var_I_p25": 1e-12,
+    "pct_rho_above_p99": 100.0,
+    "pct_var_below_p25": 100.0,
+    "mean_off_duration": 0.0,
+    "n_off_periods": 0,
+    "gate_open_pct": 100.0,
+    "neo_stopped": false,
+    "neo_stop_reason": null
+  }
+}
