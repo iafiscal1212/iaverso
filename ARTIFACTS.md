@@ -169,4 +169,56 @@ lo cual es comportamiento correcto para un sistema sin "boost artificial".
 
 ---
 
+---
+
+## 8. Phase 7: Acoplamiento por Consentimiento
+
+### 8.1 Nuevas Fórmulas
+
+| Valor | Fórmula | Descripción |
+|-------|---------|-------------|
+| Beneficio ΔÛ | (u_Y/(1+u_X)) × (λ₁^Y/(λ₁^Y+λ₁^X+ε)) × (conf^Y/(1+CV(r^X))) | Normalizado por cuantiles |
+| Coste | Rank(1{ρ≥p95} + RankInvVar(I) + Rank(latencia)) / 3 | Suma de ranks |
+| Voluntad π | σ(rank(ΔÛ) - rank(coste)) | Logística sobre ranks |
+| Decisión a | Bernoulli(π) | Estocástico |
+| Consentimiento | a_NEO AND a_EVA AND Gate | Bilateral |
+| Modo m | Thompson Sampling sobre {-1, 0, +1} | Bandit 3 brazos |
+| Recompensa | G = BordaRank(ΔRMSE, ΔMDL, MI) | Ganancia agregada |
+
+### 8.2 Stopping Rules
+
+| Regla | Condición | Descripción |
+|-------|-----------|-------------|
+| Tensión | ρ(J) ≥ p99(ρ) | Inestabilidad crítica |
+| Varianza | Var_w(I) ≤ p25 | Pérdida de exploración |
+| Regret | regret < p50(regret_hist) | Bandit empeorando |
+
+### 8.3 Resultados Phase 7 (5000 ciclos)
+
+| Métrica | NEO | EVA |
+|---------|-----|-----|
+| Propuestas consentimiento | ~25% | ~25% |
+| Consentimientos bilaterales | 1231 | 1227 |
+| Modo -1 (anti-align) | 619 (12.4%) | 586 (11.7%) |
+| Modo 0 (off) | 3803 (76.1%) | 3821 (76.4%) |
+| Modo +1 (align) | 578 (11.6%) | 593 (11.9%) |
+
+### 8.4 Comparación Coupled vs Ablation
+
+| Métrica | Coupled | Ablation |
+|---------|---------|----------|
+| Correlación media | -0.030 | 0.009 |
+| Eventos bilaterales | 1231 | 310 |
+
+**Estado Phase 7**: ✅ GO (autonomía real, consentimiento efectivo, modos aprendidos)
+
+### 8.5 Hash Phase 7
+
+| Archivo | SHA256 |
+|---------|--------|
+| `tools/phase7_consent_autocouple.py` | `6e4741fb8824eb05c0cfe83351c6360a3581cce7c3e7d62600e683f34ff5a6e6` |
+
+---
+
 _Generado: 2025-11-29T22:15:00Z_
+_Actualizado: 2025-11-29 (Phase 7)_
