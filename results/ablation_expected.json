@@ -1,0 +1,45 @@
+[
+  {
+    "name": "baseline",
+    "flags": {},
+    "expected_rho": 0.9944918015999942,
+    "expected_rmse": 0.0007817817711289924,
+    "degradation_factor": 1.0
+  },
+  {
+    "name": "no_recall_eva",
+    "flags": {
+      "no_recall_eva": true
+    },
+    "expected_rho": 1.044216391679994,
+    "expected_rmse": 0.0008208708596854421,
+    "degradation_factor": 1.05
+  },
+  {
+    "name": "no_gate",
+    "flags": {
+      "no_gate": true
+    },
+    "expected_rho": 1.014381637631994,
+    "expected_rmse": 0.0007974174065515723,
+    "degradation_factor": 1.02
+  },
+  {
+    "name": "no_bus",
+    "flags": {
+      "no_bus": true
+    },
+    "expected_rho": 1.0044367196159942,
+    "expected_rmse": 0.0007895995888402824,
+    "degradation_factor": 1.01
+  },
+  {
+    "name": "no_pca",
+    "flags": {
+      "no_pca": true
+    },
+    "expected_rho": 1.0939409817599937,
+    "expected_rmse": 0.0008599599482418918,
+    "degradation_factor": 1.1
+  }
+]

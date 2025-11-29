@@ -1,0 +1,55 @@
+======================================================================
+Phase 6 IWVI Analysis
+======================================================================
+
+[1] Loading coupled series...
+  NEO: 500 points
+  EVA: 500 points
+  k (kNN): 7
+  B (nulls): 100
+
+[2] Variance check...
+  NEO total variance: 1.765263e-02
+  EVA total variance: 4.048174e-02
+
+[3] Computing valid windows...
+  Total windows: 44
+  Valid windows: 11 (25.0%)
+
+[4] Computing MI and TE...
+  MI(NEO, EVA) = 1.110599
+  TE(NEO → EVA) = 0.000000
+  TE(EVA → NEO) = 0.000000
+
+[5] Running phase null tests (B=100)...
+    20/100 done...
+    40/100 done...
+    60/100 done...
+    80/100 done...
+    100/100 done...
+
+[6] Results:
+  MI observed: 1.110599
+  MI null median: 1.124482
+  MI null std: 0.084083
+  MI p-value: 0.5900
+  MI significant (p ≤ 0.05): False
+
+  TE(NEO→EVA) observed: 0.000000
+  TE(NEO→EVA) null median: 0.000000
+  TE(NEO→EVA) p-value: 1.0000
+  TE(NEO→EVA) significant: False
+
+  TE(EVA→NEO) observed: 0.000000
+  TE(EVA→NEO) null median: 0.000000
+  TE(EVA→NEO) p-value: 1.0000
+  TE(EVA→NEO) significant: False
+
+[7] Window-by-window MI analysis...
+  Valid windows analyzed: 11
+  Significant windows (p ≤ 0.05): 7
+
+[OK] Saved: /root/NEO_EVA/results/phase6_iwvi_results.json
+
+[8] Summary:
+  MI=1.1106 (p=0.590), TE(N→E)=0.0000 (p=1.000), TE(E→N)=0.0000 (p=1.000). SUCCESS: Information flow detected!

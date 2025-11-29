@@ -1,0 +1,46 @@
+{
+  "timestamp": "2025-11-29T19:17:08.074463",
+  "T": 10176,
+  "activations": 100,
+  "activation_rate": 1.0,
+  "iwvi_valid": true,
+  "diagnostics": {
+    "total_calls": 100,
+    "activations": 100,
+    "activation_rate": 1.0,
+    "jacobians_computed": 1,
+    "controller_state": {
+      "total_steps": 100,
+      "gate_activations": 100,
+      "activation_rate": 1.0,
+      "rho_history_len": 1,
+      "residuals_history_len": 100,
+      "u_c": [
+        -0.8161032191304192,
+        0.4299981763519592,
+        0.3861050427784599
+      ],
+      "u_perp": [
+        -0.025341712484210657,
+        -0.6940952636343894,
+        0.7194369761186
+      ]
+    },
+    "last_diag": {
+      "phase4_active": true,
+      "reason": "gate_open",
+      "rho": 0.9944920299885119,
+      "tau": 0.0005289408920601088,
+      "theta": 0.01,
+      "sigma": 0.005289408920601088,
+      "ou_Z": [
+        -0.0058464435322154356,
+        0.0039571879370292155
+      ],
+      "delta_norm": 0.007059761918388035,
+      "gate_activations": 100,
+      "total_calls": 100,
+      "activation_rate": 1.0
+    }
+  }
+}

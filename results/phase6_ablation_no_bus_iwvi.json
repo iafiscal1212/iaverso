@@ -1,0 +1,116 @@
+{
+  "timestamp": "2025-11-29T20:44:37.114870",
+  "T": 500,
+  "k": 7,
+  "B": 100,
+  "mi": {
+    "observed": 1.1105987157799717,
+    "null_median": 1.1244817521532302,
+    "null_std": 0.08408266164070767,
+    "p_hat": 0.59,
+    "significant": false
+  },
+  "te_neo_to_eva": {
+    "observed": 0.0,
+    "null_median": 0.0,
+    "p_hat": 1.0,
+    "significant": false
+  },
+  "te_eva_to_neo": {
+    "observed": 0.0,
+    "null_median": 0.0,
+    "p_hat": 1.0,
+    "significant": false
+  },
+  "variance": {
+    "neo": 0.01765262587314454,
+    "eva": 0.040481742544569564
+  },
+  "valid_windows": {
+    "total": 44,
+    "valid": 11,
+    "rate": 0.25,
+    "significant": 7
+  },
+  "window_results": [
+    {
+      "start": 11,
+      "end": 33,
+      "mi": 0.5268086994846635,
+      "p_value": 0.02,
+      "significant": true
+    },
+    {
+      "start": 22,
+      "end": 44,
+      "mi": 0.31122034202007276,
+      "p_value": 0.0,
+      "significant": true
+    },
+    {
+      "start": 44,
+      "end": 66,
+      "mi": 0.2381485316178531,
+      "p_value": 0.3,
+      "significant": false
+    },
+    {
+      "start": 55,
+      "end": 77,
+      "mi": 0.0,
+      "p_value": 1.0,
+      "significant": false
+    },
+    {
+      "start": 66,
+      "end": 88,
+      "mi": 0.29677246205333985,
+      "p_value": 0.0,
+      "significant": true
+    },
+    {
+      "start": 77,
+      "end": 99,
+      "mi": 0.5518777687480774,
+      "p_value": 0.06,
+      "significant": false
+    },
+    {
+      "start": 319,
+      "end": 341,
+      "mi": 0.78380233111745,
+      "p_value": 0.0,
+      "significant": true
+    },
+    {
+      "start": 374,
+      "end": 396,
+      "mi": 0.10693340309643196,
+      "p_value": 0.0,
+      "significant": true
+    },
+    {
+      "start": 396,
+      "end": 418,
+      "mi": 0.5168702655378206,
+      "p_value": 0.36,
+      "significant": false
+    },
+    {
+      "start": 418,
+      "end": 440,
+      "mi": 0.2889569238937688,
+      "p_value": 0.04,
+      "significant": true
+    },
+    {
+      "start": 429,
+      "end": 451,
+      "mi": 0.6121467063364947,
+      "p_value": 0.0,
+      "significant": true
+    }
+  ],
+  "success": true,
+  "interpretation": "MI=1.1106 (p=0.590), TE(N\u2192E)=0.0000 (p=1.000), TE(E\u2192N)=0.0000 (p=1.000). SUCCESS: Information flow detected!"
+}

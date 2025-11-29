@@ -1,0 +1,20 @@
+{
+  "T": 2000,
+  "k": 12,
+  "B": 100,
+  "lag": 25,
+  "mi": {
+    "observed": 0.0,
+    "null_median": 0.0,
+    "null_p25": 0.0,
+    "null_p75": 0.0,
+    "null_p95": 0.0,
+    "p_hat": 1.0
+  },
+  "te": {
+    "observed": 0.0,
+    "null_median": 0.0,
+    "null_p95": 0.0,
+    "p_hat": 1.0
+  }
+}

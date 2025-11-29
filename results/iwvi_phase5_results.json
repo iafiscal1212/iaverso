@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-11-29T20:11:04.698875",
+  "T": 2000,
+  "k": 12,
+  "mi": {
+    "observed": 0.0,
+    "null_median": 0.0,
+    "null_std": 0.0,
+    "p_hat": 1.0,
+    "significant": false
+  },
+  "te_neo_to_eva": {
+    "observed": 0.0,
+    "null_median": 0.0,
+    "p_hat": 1.0,
+    "significant": false
+  },
+  "te_eva_to_neo": {
+    "observed": 0.0,
+    "null_median": 0.0,
+    "p_hat": 1.0,
+    "significant": false
+  },
+  "variance": {
+    "neo": 0.0073645874505784735,
+    "eva": 0.1529400072573416
+  },
+  "valid_windows": {
+    "total": 89,
+    "valid": 0,
+    "rate": 0.0
+  },
+  "B": 100,
+  "interpretation": "MI=0, TE=0 indicates independent systems with no information flow. This is the expected null result for Phase 4 systems without BUS coupling."
+}

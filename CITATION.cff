@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "Si usas este software, por favor cítalo como se indica abajo."
+title: "NEO↔EVA: Sistema de Dinámica Endógena Acoplada"
+version: 2.0.0
+date-released: 2025-11-29
+url: "https://github.com/neo-eva/neo-eva-endogenous"
+repository-code: "https://github.com/neo-eva/neo-eva-endogenous"
+license: MIT
+type: software
+authors:
+  - family-names: "NEO↔EVA"
+    given-names: "Project"
+    affiliation: "Investigación en Sistemas Dinámicos"
+keywords:
+  - dynamical-systems
+  - endogenous-dynamics
+  - coupled-systems
+  - simplex-dynamics
+  - mirror-descent
+  - information-theory
+abstract: |
+  Sistema de dinámica acoplada NEO↔EVA con 100% de parámetros endógenos.
+  Todos los umbrales, escalas y límites se derivan de cuantiles históricos
+  y estadísticas observadas, sin constantes arbitrarias. Implementa
+  mirror descent en el plano tangente del simplex con proceso OU para
+  exploración, gate por cuantiles puros, y acoplamiento κ estadístico.
+
+  Principio rector: "Si no sale de la historia, no entra en la dinámica."
+references:
+  - type: article
+    authors:
+      - family-names: "Beck"
+        given-names: "Amir"
+      - family-names: "Teboulle"
+        given-names: "Marc"
+    title: "Mirror descent and nonlinear projected subgradient methods for convex optimization"
+    journal: "Operations Research Letters"
+    year: 2003
+    volume: 31
+    issue: 3
+    start: 167
+    end: 175
