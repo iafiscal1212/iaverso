@@ -8,9 +8,9 @@ repository-code: "https://github.com/neo-eva/neo-eva-endogenous"
 license: MIT
 type: software
 authors:
-  - family-names: "NEO↔EVA"
-    given-names: "Project"
-    affiliation: "Investigación en Sistemas Dinámicos"
+  - family-names: "Esteban"
+    given-names: "Carmen"
+    affiliation: "Investigación en Sistemas Dinámicos Endógenos"
 keywords:
   - dynamical-systems
   - endogenous-dynamics
