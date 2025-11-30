@@ -1,0 +1,156 @@
+{
+  "metrics": {
+    "mean_T_eco": 0.24871968943835263,
+    "mean_F_E_to_N": 0.38942623214487915,
+    "corr_T_eco_proximity": -0.07448849563282875,
+    "corr_T_eco_F": 0.9170035261822413,
+    "mean_displacement": 0.38942623214487915,
+    "T_eco_autocorr": 0.15545657748355746,
+    "beta_mean": 0.38942623214487926,
+    "beta_std": 0.25806304378054035
+  },
+  "per_seed_metrics": [
+    {
+      "mean_T_eco": 0.25748737495980356,
+      "std_T_eco": 0.10396648838287294,
+      "mean_F_E_to_N": 0.4074786327340978,
+      "mean_F_N_to_E": 0.4063558751418011,
+      "corr_T_eco_proximity": 0.038648392692074554,
+      "corr_T_eco_F": 0.9118106360576319,
+      "mean_displacement": 0.4074786327340978,
+      "beta_mean": 0.4074786327340978,
+      "beta_std": 0.2626720470794105,
+      "T_eco_autocorr": 0.08185547185063098
+    },
+    {
+      "mean_T_eco": 0.2549002087862109,
+      "std_T_eco": 0.10026313436852181,
+      "mean_F_E_to_N": 0.41072847404690305,
+      "mean_F_N_to_E": 0.4059853567074249,
+      "corr_T_eco_proximity": -0.03758355148414126,
+      "corr_T_eco_F": 0.9240141492353456,
+      "mean_displacement": 0.41072847404690305,
+      "beta_mean": 0.41072847404690305,
+      "beta_std": 0.2689880544709988,
+      "T_eco_autocorr": 0.18234432305978265
+    },
+    {
+      "mean_T_eco": 0.24275526643960882,
+      "std_T_eco": 0.1040648159812177,
+      "mean_F_E_to_N": 0.38973036422480456,
+      "mean_F_N_to_E": 0.36604791525700886,
+      "corr_T_eco_proximity": -0.05177428449408598,
+      "corr_T_eco_F": 0.9204947809611951,
+      "mean_displacement": 0.38973036422480456,
+      "beta_mean": 0.38973036422480456,
+      "beta_std": 0.26243157806474454,
+      "T_eco_autocorr": 0.18200392541501384
+    },
+    {
+      "mean_T_eco": 0.2460748792364556,
+      "std_T_eco": 0.10280060595795178,
+      "mean_F_E_to_N": 0.3858040410651091,
+      "mean_F_N_to_E": 0.364597809404186,
+      "corr_T_eco_proximity": -0.15240885720533548,
+      "corr_T_eco_F": 0.9284251939990238,
+      "mean_displacement": 0.3858040410651091,
+      "beta_mean": 0.38580404106510924,
+      "beta_std": 0.2543924359556977,
+      "T_eco_autocorr": 0.20133926168844007
+    },
+    {
+      "mean_T_eco": 0.24238071776968448,
+      "std_T_eco": 0.101611044929206,
+      "mean_F_E_to_N": 0.35338964865348144,
+      "mean_F_N_to_E": 0.3625686622585719,
+      "corr_T_eco_proximity": -0.16932417767265562,
+      "corr_T_eco_F": 0.90027287065801,
+      "mean_displacement": 0.35338964865348144,
+      "beta_mean": 0.35338964865348144,
+      "beta_std": 0.24183110333185,
+      "T_eco_autocorr": 0.12973990540391975
+    }
+  ],
+  "null_results": {
+    "disabled": {
+      "mean_F": 0.0
+    },
+    "shuffled": {
+      "mean_F_magnitude": 0.34637359297431086
+    },
+    "random": {
+      "mean_F_magnitude": 0.4958920410807737
+    }
+  },
+  "go_evaluation": {
+    "criteria": {
+      "c1_influence_meaningful": {
+        "pass": true,
+        "value": 0.38942623214487915,
+        "threshold": 0.1,
+        "description": "Cross-influence magnitude > 0.1"
+      },
+      "c2_beta_modulated": {
+        "pass": true,
+        "value": 0.25806304378054035,
+        "threshold": 0.1,
+        "description": "Influence gain is modulated (std > 0.1)"
+      },
+      "c3_T_eco_F_corr": {
+        "pass": true,
+        "value": 0.9170035261822413,
+        "threshold": 0,
+        "description": "Shared tension correlates with influence"
+      },
+      "c4_displacement_positive": {
+        "pass": true,
+        "value": 0.38942623214487915,
+        "threshold": 1e-06,
+        "description": "Ecological update changes trajectory"
+      },
+      "c5_T_eco_coherent": {
+        "pass": true,
+        "value": 0.15545657748355746,
+        "threshold": 0,
+        "description": "Shared tension is temporally coherent"
+      }
+    },
+    "n_pass": 5,
+    "n_total": 5,
+    "go": true
+  },
+  "config": {
+    "n_seeds": 5,
+    "T": 500,
+    "dim": 5,
+    "n_prototypes": 5
+  },
+  "provenance": {
+    "module": "ecology21",
+    "version": "2.0.0",
+    "mechanisms": [
+      "ecological_distance",
+      "individual_tension",
+      "shared_tension",
+      "cross_influence_field",
+      "ecological_resistance",
+      "eco_shock_combination"
+    ],
+    "endogenous_params": [
+      "d_t^NE = ||z_N - z_E||",
+      "d_mu,t^NE = min_{k,l} ||mu_k^N - mu_l^E||",
+      "d_tilde = rank(d)",
+      "Overlap = rank(1 - d_tilde_mu)",
+      "T_a = rank(spread) * rank(R)",
+      "T_eco = (rank(T_N) + rank(T_E))/2 * Overlap",
+      "beta = rank(T_eco) * rank(D_nov)",
+      "F = beta * normalize(z_source - z_target)",
+      "gamma_eco = 1 / (1 + sigma_eco)",
+      "sigma_eco = std(eco_shock_history)",
+      "eco_shock = w_nov*S_nov + w_stab*S_stab + w_surv*S_surv",
+      "z_next = z + F + gamma_eco * eco_shock"
+    ],
+    "no_magic_numbers": true,
+    "no_semantic_labels": true
+  }
+}

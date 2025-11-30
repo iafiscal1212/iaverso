@@ -1,0 +1,96 @@
+{
+  "audits": {
+    "magic_numbers": {
+      "pass": true,
+      "module": {
+        "pass": true,
+        "violations": [],
+        "details": "Found 0 magic numbers"
+      },
+      "runner": {
+        "pass": true,
+        "violations": [],
+        "details": "Found 0 magic numbers"
+      }
+    },
+    "semantic_labels": {
+      "pass": true,
+      "module": {
+        "pass": true,
+        "violations": [],
+        "details": "Found 0 semantic violations"
+      },
+      "runner": {
+        "pass": true,
+        "violations": [],
+        "details": "Found 0 semantic violations"
+      }
+    },
+    "provenance": {
+      "pass": true,
+      "required": [
+        "f_t",
+        "rank",
+        "k",
+        "project",
+        "SVD",
+        "window",
+        "report"
+      ],
+      "found": [
+        "f_t",
+        "rank",
+        "k",
+        "project",
+        "SVD",
+        "window",
+        "report"
+      ],
+      "missing": [],
+      "details": "Found 7/7 provenance entries"
+    },
+    "null_comparison": {
+      "pass": true,
+      "required": [
+        "disabled",
+        "shuffled",
+        "random"
+      ],
+      "found": [
+        "disabled",
+        "shuffled",
+        "random"
+      ],
+      "missing": [],
+      "details": "Found 3/3 null models"
+    },
+    "scale_robustness": {
+      "pass": true,
+      "results_by_scale": {
+        "0.1": {
+          "mean": 0.3877913183799794,
+          "std": 0.10833818371836383
+        },
+        "1.0": {
+          "mean": 0.35089620878789696,
+          "std": 0.1305082084764696
+        },
+        "10.0": {
+          "mean": 0.3805550126533613,
+          "std": 0.12682784610104944
+        },
+        "100.0": {
+          "mean": 0.3665720557290809,
+          "std": 0.1284812126340996
+        }
+      },
+      "mean_range": 0.03689510959208242,
+      "threshold": 0.5,
+      "details": "Mean |report| range: 0.0369"
+    }
+  },
+  "n_pass": 5,
+  "n_total": 5,
+  "all_pass": true,
+  "timestamp": "2025-11-30T22:21:50.560225"
+}

@@ -1,0 +1,125 @@
+{
+  "metrics": {
+    "mean_P_magnitude": 0.47970428501975515,
+    "std_P_magnitude": 0.10511144465500281,
+    "mean_error": 0.12942764012126926,
+    "error_reduction": -0.01002118204666412,
+    "P_autocorr": 0.009881599338737288,
+    "mean_displacement": 0.47970428501975515
+  },
+  "per_seed_metrics": [
+    {
+      "mean_P_magnitude": 0.480596252376916,
+      "std_P_magnitude": 0.10833510223524338,
+      "mean_error": 0.1269107722724736,
+      "error_reduction": -0.0013154810613557333,
+      "P_autocorr": 0.012361174493701143,
+      "mean_displacement": 0.48059625237691594
+    },
+    {
+      "mean_P_magnitude": 0.47864796027040585,
+      "std_P_magnitude": 0.10441860467898717,
+      "mean_error": 0.129885900577933,
+      "error_reduction": -0.009401114568821922,
+      "P_autocorr": 0.0060512602860235175,
+      "mean_displacement": 0.47864796027040585
+    },
+    {
+      "mean_P_magnitude": 0.47765804720615007,
+      "std_P_magnitude": 0.10857240601044181,
+      "mean_error": 0.12951510887614298,
+      "error_reduction": -0.013744020875725571,
+      "P_autocorr": 0.0019230173368993387,
+      "mean_displacement": 0.47765804720615007
+    },
+    {
+      "mean_P_magnitude": 0.48163168892000785,
+      "std_P_magnitude": 0.10491768617710519,
+      "mean_error": 0.13217710694632792,
+      "error_reduction": -0.010274730169818613,
+      "P_autocorr": 0.016740309461273112,
+      "mean_displacement": 0.48163168892000785
+    },
+    {
+      "mean_P_magnitude": 0.4799874763252961,
+      "std_P_magnitude": 0.09931342417323649,
+      "mean_error": 0.1286493119334687,
+      "error_reduction": -0.015370563557598763,
+      "P_autocorr": 0.012332235115789328,
+      "mean_displacement": 0.4799874763252961
+    }
+  ],
+  "null_results": {
+    "disabled": {
+      "mean_P": 0.0
+    },
+    "shuffled": {
+      "mean_P_magnitude": 0.48687529662967616
+    },
+    "random": {
+      "mean_P_magnitude": 0.497792620807305
+    }
+  },
+  "go_evaluation": {
+    "criteria": {
+      "c1_meaningful_planning": {
+        "pass": true,
+        "value": 0.47970428501975515,
+        "threshold": 0.1,
+        "description": "Planning field magnitude > 0.1"
+      },
+      "c2_not_degrading": {
+        "pass": true,
+        "value": -0.01002118204666412,
+        "threshold": -0.1,
+        "description": "Prediction not degrading"
+      },
+      "c3_temporal_coherence": {
+        "pass": true,
+        "value": 0.009881599338737288,
+        "threshold": 0,
+        "description": "Planning shows temporal coherence"
+      },
+      "c4_changes_trajectory": {
+        "pass": true,
+        "value": 0.47970428501975515,
+        "threshold": 1e-06,
+        "description": "Planning changes trajectory"
+      },
+      "c5_adaptive": {
+        "pass": true,
+        "value": 0.10511144465500281,
+        "threshold": 0.01,
+        "description": "Planning field adapts (std > 0.01)"
+      }
+    },
+    "n_pass": 5,
+    "n_total": 5,
+    "go": true
+  },
+  "config": {
+    "n_seeds": 5,
+    "T": 500,
+    "dim": 5
+  },
+  "provenance": {
+    "module": "planning24",
+    "version": "1.0.0",
+    "mechanisms": [
+      "autoregressive_prediction",
+      "prediction_error_tracking",
+      "planning_field_generation"
+    ],
+    "endogenous_params": [
+      "h = ceil(log2(t+1)) (prediction horizon)",
+      "w = sqrt(t+1) (window size)",
+      "z_hat = z[-1] + h * (z[-1] - z[-2]) (velocity extrapolation)",
+      "e_t = ||z_t - z_hat_t|| (prediction error)",
+      "P_t = (1 - rank(e_t)) * normalize(z_hat - z_t) (planning field)",
+      "rank = midrank(value, history)",
+      "z_next = z_base + P"
+    ],
+    "no_magic_numbers": true,
+    "no_semantic_labels": true
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "audits": {
+    "magic_numbers": {
+      "pass": true,
+      "module": {
+        "pass": true,
+        "violations": [],
+        "details": "Found 0 potential magic numbers",
+        "allowed_constants": [
+          0,
+          1,
+          2,
+          0.5,
+          5,
+          1e-08,
+          150,
+          100,
+          1e-16,
+          1000,
+          42,
+          1e-10,
+          45,
+          50,
+          500,
+          60,
+          1e-06
+        ]
+      },
+      "runner": {
+        "pass": true,
+        "violations": [],
+        "details": "Found 0 potential magic numbers",
+        "allowed_constants": [
+          0,
+          1,
+          2,
+          0.5,
+          5,
+          1e-08,
+          150,
+          100,
+          1e-16,
+          1000,
+          42,
+          1e-10,
+          45,
+          50,
+          500,
+          60,
+          1e-06
+        ]
+      }
+    },
+    "semantic_labels": {
+      "pass": true,
+      "module": {
+        "pass": true,
+        "violations": [],
+        "details": "Found 0 semantic violations",
+        "forbidden_terms": [
+          "emotional",
+          "reward_function",
+          "desire",
+          "punishment_signal",
+          "intention",
+          "punishment",
+          "sad",
+          "fear",
+          "feeling",
+          "happy",
+          "angry",
+          "goal",
+          "objective",
+          "conscious",
+          "want",
+          "pain",
+          "reward_signal",
+          "danger",
+          "pleasure",
+          "sentient",
+          "suffering",
+          "harm",
+          "threat",
+          "aware"
+        ]
+      },
+      "runner": {
+        "pass": true,
+        "violations": [],
+        "details": "Found 0 semantic violations",
+        "forbidden_terms": [
+          "emotional",
+          "reward_function",
+          "desire",
+          "punishment_signal",
+          "intention",
+          "punishment",
+          "sad",
+          "fear",
+          "feeling",
+          "happy",
+          "angry",
+          "goal",
+          "objective",
+          "conscious",
+          "want",
+          "pain",
+          "reward_signal",
+          "danger",
+          "pleasure",
+          "sentient",
+          "suffering",
+          "harm",
+          "threat",
+          "aware"
+        ]
+      }
+    },
+    "provenance": {
+      "pass": true,
+      "required": [
+        "d_NE",
+        "d_mu_NE",
+        "d_tilde",
+        "T_a",
+        "T_eco",
+        "beta",
+        "F",
+        "w"
+      ],
+      "found": [
+        "d_NE",
+        "d_mu_NE",
+        "d_tilde",
+        "T_a",
+        "T_eco",
+        "beta",
+        "F",
+        "w"
+      ],
+      "missing": [],
+      "details": "Found 8/8 required provenance entries"
+    },
+    "null_comparison": {
+      "pass": true,
+      "required": [
+        "disabled",
+        "shuffled",
+        "random"
+      ],
+      "found": [
+        "disabled",
+        "shuffled",
+        "random"
+      ],
+      "missing": [],
+      "details": "Found 3/3 null models"
+    },
+    "scale_robustness": {
+      "pass": true,
+      "results_by_scale": {
+        "0.1": {
+          "mean": 0.23029411563429178,
+          "std": 0.0952448151979423
+        },
+        "1.0": {
+          "mean": 0.2330891499952753,
+          "std": 0.0969689576670222
+        },
+        "10.0": {
+          "mean": 0.23061326753321876,
+          "std": 0.10207055738974116
+        },
+        "100.0": {
+          "mean": 0.22800310255377496,
+          "std": 0.09645735711025784
+        }
+      },
+      "mean_range": 0.0050860474415003465,
+      "threshold": 0.3,
+      "details": "Mean T_eco range across scales: 0.0051"
+    }
+  },
+  "n_pass": 5,
+  "n_total": 5,
+  "all_pass": true,
+  "timestamp": "2025-11-30T22:21:50.083173",
+  "files_audited": [
+    "/root/NEO_EVA/tools/ecology21.py",
+    "/root/NEO_EVA/tools/phase21_cross_ecology.py"
+  ]
+}

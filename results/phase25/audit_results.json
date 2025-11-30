@@ -1,0 +1,74 @@
+{
+  "audits": {
+    "magic_numbers": {
+      "pass": true,
+      "module": {
+        "pass": true,
+        "violations": [],
+        "details": "Found 0 magic numbers"
+      },
+      "runner": {
+        "pass": true,
+        "violations": [],
+        "details": "Found 0 magic numbers"
+      }
+    },
+    "semantic_labels": {
+      "pass": true
+    },
+    "provenance": {
+      "pass": true,
+      "required": [
+        "I_t",
+        "d_t",
+        "R_t",
+        "alpha",
+        "rank"
+      ],
+      "found": [
+        "I_t",
+        "d_t",
+        "R_t",
+        "alpha",
+        "rank"
+      ],
+      "missing": [],
+      "details": "Found 5/5 provenance entries"
+    },
+    "null_comparison": {
+      "pass": true,
+      "found": [
+        "disabled",
+        "shuffled",
+        "random"
+      ],
+      "details": "Found 3/3 null models"
+    },
+    "scale_robustness": {
+      "pass": true,
+      "results_by_scale": {
+        "0.1": {
+          "mean": 0.9262672622394322,
+          "std": 0.12426902077979796
+        },
+        "1.0": {
+          "mean": 0.9253215649938081,
+          "std": 0.12469520978354294
+        },
+        "10.0": {
+          "mean": 0.940137692526815,
+          "std": 0.11280365560463892
+        },
+        "100.0": {
+          "mean": 0.9355569240577616,
+          "std": 0.13331676122978564
+        }
+      },
+      "cv_range": 0.022513579455870278,
+      "details": "CV range across scales: 0.0225"
+    }
+  },
+  "n_pass": 5,
+  "all_pass": true,
+  "timestamp": "2025-11-30T22:00:08.065359"
+}

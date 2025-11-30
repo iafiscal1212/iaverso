@@ -1,0 +1,147 @@
+{
+  "metrics": {
+    "mean_G_magnitude": 0.6381390339104085,
+    "std_G_magnitude": 0.33200019769735695,
+    "corr_G_novelty": 0.5677068749980926,
+    "mean_displacement": 0.6381390339104085,
+    "P_norm_std": 0.018505660188347907,
+    "mean_P_norm": 1.4133851352483489,
+    "rank_alignment_std": 0.33200019769735695,
+    "G_autocorr": 0.9816450349387355
+  },
+  "per_seed_metrics": [
+    {
+      "mean_G_magnitude": 0.6592565383194544,
+      "std_G_magnitude": 0.34571505020432836,
+      "corr_G_novelty": 0.594931880102667,
+      "mean_displacement": 0.6592565383194545,
+      "P_norm_std": 0.018505660188347907,
+      "mean_P_norm": 1.413385135248349,
+      "rank_alignment_std": 0.34571505020432836,
+      "G_autocorr": 0.9927328942673145
+    },
+    {
+      "mean_G_magnitude": 0.6524724945814095,
+      "std_G_magnitude": 0.33565383839772944,
+      "corr_G_novelty": 0.5841254051906128,
+      "mean_displacement": 0.6524724945814095,
+      "P_norm_std": 0.018505660188347907,
+      "mean_P_norm": 1.413385135248349,
+      "rank_alignment_std": 0.33565383839772944,
+      "G_autocorr": 0.9827823335715024
+    },
+    {
+      "mean_G_magnitude": 0.6064011058580672,
+      "std_G_magnitude": 0.31581458393051165,
+      "corr_G_novelty": 0.5382136503102988,
+      "mean_displacement": 0.6064011058580672,
+      "P_norm_std": 0.018505660188347907,
+      "mean_P_norm": 1.413385135248349,
+      "rank_alignment_std": 0.31581458393051165,
+      "G_autocorr": 0.969886781301366
+    },
+    {
+      "mean_G_magnitude": 0.6217720561232536,
+      "std_G_magnitude": 0.33443780862284955,
+      "corr_G_novelty": 0.555979196945743,
+      "mean_displacement": 0.6217720561232535,
+      "P_norm_std": 0.01850566018834791,
+      "mean_P_norm": 1.4133851352483489,
+      "rank_alignment_std": 0.33443780862284955,
+      "G_autocorr": 0.9838905047609138
+    },
+    {
+      "mean_G_magnitude": 0.650792974669858,
+      "std_G_magnitude": 0.3283797073313657,
+      "corr_G_novelty": 0.5652842424411413,
+      "mean_displacement": 0.6507929746698579,
+      "P_norm_std": 0.018505660188347907,
+      "mean_P_norm": 1.4133851352483489,
+      "rank_alignment_std": 0.3283797073313657,
+      "G_autocorr": 0.9789326607925809
+    }
+  ],
+  "null_results": {
+    "disabled": {
+      "mean_G": 0.0
+    },
+    "shuffled": {
+      "mean_G_magnitude": 0.6404960900752273
+    },
+    "random": {
+      "mean_G_magnitude": 0.4899545964624865
+    }
+  },
+  "go_evaluation": {
+    "criteria": {
+      "c1_grounding_meaningful": {
+        "pass": true,
+        "value": 0.6381390339104085,
+        "threshold": 0.05,
+        "description": "Grounding magnitude > 0.05"
+      },
+      "c2_projection_adapts": {
+        "pass": true,
+        "value": 0.018505660188347907,
+        "threshold": 0.01,
+        "description": "Projection matrix adapts (std > 0.01)"
+      },
+      "c3_grounding_structured": {
+        "pass": true,
+        "value": 0.5677068749980926,
+        "threshold": 0.01,
+        "description": "Grounding has structure (responds to signal)"
+      },
+      "c4_displacement_positive": {
+        "pass": true,
+        "value": 0.6381390339104085,
+        "threshold": 1e-06,
+        "description": "Grounding changes trajectory"
+      },
+      "c5_temporal_coherence": {
+        "pass": true,
+        "value": 0.9816450349387355,
+        "threshold": 0,
+        "description": "Grounding shows temporal coherence"
+      }
+    },
+    "n_pass": 5,
+    "n_total": 5,
+    "go": true
+  },
+  "config": {
+    "n_seeds": 5,
+    "T": 500,
+    "dim_z": 5,
+    "dim_s": 4
+  },
+  "provenance": {
+    "module": "grounding22",
+    "version": "2.0.0",
+    "mechanisms": [
+      "running_statistics",
+      "eigendecomposition",
+      "effective_dimension",
+      "projection_matrix",
+      "coupling_error",
+      "gradient_learning",
+      "grounding_field"
+    ],
+    "endogenous_params": [
+      "mu_s(t) = (1-alpha)*mu_s(t-1) + alpha*s_t",
+      "Sigma_s(t) = (1-alpha)*Sigma_s(t-1) + alpha*(s-mu)(s-mu).T",
+      "alpha = 1/sqrt(t+1)",
+      "Sigma_s = V_s @ diag(lambda_s) @ V_s.T",
+      "d_s = sum(lambda_i > median(lambda))",
+      "P_s = V_s[:,:d_s] @ V_s[:,:d_s].T",
+      "e_t = u_t - y_t",
+      "g_t = \u2202||e||\u00b2/\u2202W",
+      "eta_t = 1/sqrt(n+1)",
+      "omega_t = rank(E_t)",
+      "W_new = W + eta * omega * normalize(g)",
+      "G_t = rank(||P_s @ z||) * normalize(P_s @ z - z)"
+    ],
+    "no_magic_numbers": true,
+    "no_semantic_labels": true
+  }
+}

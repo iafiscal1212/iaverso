@@ -1,0 +1,139 @@
+{
+  "metrics": {
+    "mean_report_norm": 0.38442183908345406,
+    "report_variance": 0.015295020455124986,
+    "mean_report_dim": 3.9936,
+    "compression_ratio": 2.003205208614525,
+    "corr_SC_input": 0.03990341448991247,
+    "report_autocorr": 0.8628613538883462,
+    "mean_SC": 0.6187092705413948
+  },
+  "per_seed_metrics": [
+    {
+      "mean_report_norm": 0.3989484446629612,
+      "report_variance": 0.013934495024435686,
+      "mean_report_dim": 3.992,
+      "feature_dim": 8,
+      "compression_ratio": 2.004008016032064,
+      "corr_SC_input": 0.016395647763671927,
+      "report_autocorr": 0.8456033644308564,
+      "mean_SC": 0.6072105357836354
+    },
+    {
+      "mean_report_norm": 0.38474991344431514,
+      "report_variance": 0.014781062006006767,
+      "mean_report_dim": 3.994,
+      "feature_dim": 8,
+      "compression_ratio": 2.0030045067601403,
+      "corr_SC_input": 0.08461490026757264,
+      "report_autocorr": 0.8567268420632521,
+      "mean_SC": 0.6259547822631366
+    },
+    {
+      "mean_report_norm": 0.3750573231018864,
+      "report_variance": 0.01635026360073872,
+      "mean_report_dim": 3.994,
+      "feature_dim": 8,
+      "compression_ratio": 2.0030045067601403,
+      "corr_SC_input": 0.05286194330821688,
+      "report_autocorr": 0.8816414085962571,
+      "mean_SC": 0.5874388636331517
+    },
+    {
+      "mean_report_norm": 0.38657773561799214,
+      "report_variance": 0.01569925165796657,
+      "mean_report_dim": 3.994,
+      "feature_dim": 8,
+      "compression_ratio": 2.0030045067601403,
+      "corr_SC_input": -0.005812000202224621,
+      "report_autocorr": 0.8562623024781323,
+      "mean_SC": 0.6459155520255956
+    },
+    {
+      "mean_report_norm": 0.37677577859011535,
+      "report_variance": 0.015710029986477185,
+      "mean_report_dim": 3.994,
+      "feature_dim": 8,
+      "compression_ratio": 2.0030045067601403,
+      "corr_SC_input": 0.05145658131232551,
+      "report_autocorr": 0.874072851873233,
+      "mean_SC": 0.6270266190014544
+    }
+  ],
+  "null_results": {
+    "disabled": {
+      "mean_report_norm": 1.4142135623730956
+    },
+    "shuffled": {
+      "mean_report_norm": 0.5314109488041325
+    },
+    "random": {
+      "mean_report_norm": 0.9567073555962222
+    }
+  },
+  "go_evaluation": {
+    "criteria": {
+      "c1_meaningful_variance": {
+        "pass": true,
+        "value": 0.015295020455124986,
+        "threshold": 0.01,
+        "description": "Report has meaningful variance"
+      },
+      "c2_compression_achieved": {
+        "pass": true,
+        "value": 2.003205208614525,
+        "threshold": 1,
+        "description": "Compression reduces dimensionality"
+      },
+      "c3_responds_to_input": {
+        "pass": true,
+        "value": 0.6187092705413948,
+        "threshold": 0.01,
+        "description": "Report responds to input changes"
+      },
+      "c4_temporal_coherence": {
+        "pass": true,
+        "value": 0.8628613538883462,
+        "threshold": 0,
+        "description": "Report shows temporal coherence"
+      },
+      "c5_nontrivial_report": {
+        "pass": true,
+        "value": 0.38442183908345406,
+        "threshold": 0.1,
+        "description": "Report is non-trivial"
+      }
+    },
+    "n_pass": 5,
+    "n_total": 5,
+    "go": true
+  },
+  "config": {
+    "n_seeds": 5,
+    "T": 500,
+    "dim": 5
+  },
+  "provenance": {
+    "module": "selfreport23",
+    "version": "2.0.0",
+    "mechanisms": [
+      "8_feature_extraction",
+      "covariance_eigendecomposition",
+      "median_eigenvalue_dimension",
+      "feature_compression",
+      "self_consistency_index",
+      "predictive_power"
+    ],
+    "endogenous_params": [
+      "f_t = [rank(||z||), rank(act), rank(spread), rank(|R|), rank(osc), rank(D_nov), rank(I), rank(S)]",
+      "Sigma_f = EMA covariance, alpha = 1/sqrt(t+1)",
+      "Sigma_f = V_f @ diag(lambda_f) @ V_f.T",
+      "d_r = sum(lambda_i > median(lambda))",
+      "r_t = V_f[:,:d_r].T @ (f_t - mu_f)",
+      "r_bar_t = EMA(r), alpha = 1/sqrt(t+1)",
+      "SC_t = cos(r_t, r_bar_t)"
+    ],
+    "no_magic_numbers": true,
+    "no_semantic_labels": true
+  }
+}

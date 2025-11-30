@@ -1,0 +1,136 @@
+{
+  "metrics": {
+    "mean_R": 0.7061103543581878,
+    "std_R": 0.29255577536719357,
+    "corr_d_R": 0.6186251703978367,
+    "I_stability": 7.1778908031025805,
+    "perturbation_response": 1.064902324474761,
+    "mean_d": 1.8719440893000665,
+    "R_autocorr": 0.9826803751063901,
+    "mean_displacement": 0.7061103543581878
+  },
+  "per_seed_metrics": [
+    {
+      "mean_R": 0.7190720374902442,
+      "std_R": 0.2957937747598378,
+      "corr_d_R": 0.6265402319762883,
+      "I_stability": 6.7191628907648,
+      "perturbation_response": 1.045019394973631,
+      "mean_d": 1.7972856522637686,
+      "R_autocorr": 0.9843671644727624,
+      "mean_displacement": 0.7190720374902442
+    },
+    {
+      "mean_R": 0.7064811054695198,
+      "std_R": 0.29148771479329794,
+      "corr_d_R": 0.6083791065591232,
+      "I_stability": 7.392180229114803,
+      "perturbation_response": 1.0857590432335151,
+      "mean_d": 1.8618987861950964,
+      "R_autocorr": 0.9818628571442087,
+      "mean_displacement": 0.7064811054695198
+    },
+    {
+      "mean_R": 0.7079357760236845,
+      "std_R": 0.2934875521939065,
+      "corr_d_R": 0.627399876214051,
+      "I_stability": 7.259808820521093,
+      "perturbation_response": 1.1307810037206147,
+      "mean_d": 1.9334064422954587,
+      "R_autocorr": 0.9838351695435653,
+      "mean_displacement": 0.7079357760236845
+    },
+    {
+      "mean_R": 0.6842208020438172,
+      "std_R": 0.2925292767390092,
+      "corr_d_R": 0.6351357383720619,
+      "I_stability": 7.158515897030799,
+      "perturbation_response": 1.0351329362871156,
+      "mean_d": 1.893853402256019,
+      "R_autocorr": 0.9830946994009414,
+      "mean_displacement": 0.6842208020438172
+    },
+    {
+      "mean_R": 0.712842050763674,
+      "std_R": 0.2894805583499165,
+      "corr_d_R": 0.5956708988676593,
+      "I_stability": 7.359786178081409,
+      "perturbation_response": 1.0278192441589282,
+      "mean_d": 1.87327616348999,
+      "R_autocorr": 0.9802419849704723,
+      "mean_displacement": 0.712842050763674
+    }
+  ],
+  "null_results": {
+    "disabled": {
+      "mean_R": 0.0
+    },
+    "shuffled": {
+      "mean_R_magnitude": 0.5343532894450529
+    },
+    "random": {
+      "mean_R_magnitude": 0.5046074126700253
+    }
+  },
+  "go_evaluation": {
+    "criteria": {
+      "c1_restoration_active": {
+        "pass": true,
+        "value": 0.7061103543581878,
+        "threshold": 0.1,
+        "description": "Restoration field active (|R| > 0.1)"
+      },
+      "c2_deviation_corr": {
+        "pass": true,
+        "value": 0.6186251703978367,
+        "threshold": 0,
+        "description": "Deviation correlates with restoration"
+      },
+      "c3_identity_stable": {
+        "pass": true,
+        "value": 7.1778908031025805,
+        "threshold": 18.719440893000666,
+        "description": "Identity is relatively stable"
+      },
+      "c4_changes_trajectory": {
+        "pass": true,
+        "value": 0.7061103543581878,
+        "threshold": 1e-06,
+        "description": "Restoration changes trajectory"
+      },
+      "c5_adaptive": {
+        "pass": true,
+        "value": 0.29255577536719357,
+        "threshold": 0.01,
+        "description": "Restoration adapts (std > 0.01)"
+      }
+    },
+    "n_pass": 5,
+    "n_total": 5,
+    "go": true
+  },
+  "config": {
+    "n_seeds": 5,
+    "T": 500,
+    "dim": 5
+  },
+  "provenance": {
+    "module": "identity25",
+    "version": "1.0.0",
+    "mechanisms": [
+      "identity_signature",
+      "deviation_tracking",
+      "restoration_field"
+    ],
+    "endogenous_params": [
+      "I_t = EMA(z), alpha = 1/sqrt(t+1)",
+      "d_t = ||z_t - I_t||",
+      "R_t = rank(d_t) * normalize(I_t - z_t)",
+      "z_next = z_base + R_t",
+      "alpha = 1/sqrt(t+1)",
+      "rank = midrank(d, history)"
+    ],
+    "no_magic_numbers": true,
+    "no_semantic_labels": true
+  }
+}
