@@ -1,0 +1,14 @@
+{
+  "rho_neo_p95": 0.8508425094384094,
+  "rho_eva_p95": 0.877037608733216,
+  "var_neo_p25": 0.060447317588826106,
+  "var_eva_p25": 0.0678282096173941,
+  "rho_triggers_neo": 98,
+  "var_triggers_neo": 488,
+  "willing_when_safe_neo": 0.5010956902848794,
+  "willing_when_danger_neo": 0.5025817555938038,
+  "reduction_neo": -0.001486065308924367,
+  "willing_when_safe_eva": 0.5168621700879765,
+  "willing_when_danger_eva": 0.5051194539249146,
+  "reduction_eva": 0.011742716163061884,
+  "safety_effective": 

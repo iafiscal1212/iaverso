@@ -1,0 +1,7 @@
+{
+  "r_cost_a_neo": NaN,
+  "r_cost_a_eva": NaN,
+  "delta_a_by_cost_neo": NaN,
+  "delta_a_by_cost_eva": NaN,
+  "safety_effect": "marginal"
+}

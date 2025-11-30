@@ -1,0 +1,57 @@
+{
+  "ts": 1764499904.0412812,
+  "hours_window": 12.0,
+  "NEO": {
+    "world": "NEO",
+    "t": "-",
+    "n": 647,
+    "last_I": [
+      0.9999999997999867,
+      1.000078784485759e-10,
+      1.0000553712460125e-10
+    ],
+    "var_last1k": {
+      "errors": 7.398637828472411e-08
+    },
+    "prop_rate": 0.0,
+    "gate_rate": null,
+    "modes": {},
+    "cuts": {
+      "count": 0,
+      "top": []
+    },
+    "recent_len": 647,
+    "recent_last_hours": 12.0,
+    "population_size": 0,
+    "source": "yaml"
+  },
+  "EVA": {
+    "world": "EVA",
+    "t0": 0,
+    "t": 200,
+    "n": 201,
+    "last_I": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "var_last1k": {
+      "S": 4.459529304827532e-31,
+      "N": 4.459529304827532e-31,
+      "C": 4.459529304827532e-31
+    },
+    "prop_rate": 0.0,
+    "gate_rate": null,
+    "modes": {},
+    "cuts": {
+      "count": 0,
+      "top": []
+    },
+    "recent_len": 201,
+    "recent_last_hours": 12.0,
+    "source": "jsonl"
+  },
+  "COUPLING": {
+    "events": 0
+  }
+}

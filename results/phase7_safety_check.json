@@ -1,0 +1,10 @@
+{
+  "neo_stopped_count": 0,
+  "eva_stopped_count": 0,
+  "neo_gate_closed_count": 0,
+  "eva_gate_closed_count": 0,
+  "neo_willing_changes": 1027,
+  "neo_var_rolling_p25": 0.06313503170080802,
+  "eva_var_rolling_p25": 0.07166133013418288,
+  "safety_activated": false
+}

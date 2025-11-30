@@ -1,0 +1,24 @@
+{
+  "coupled": {
+    "correlation_mean": -0.08153530880640887,
+    "neo_bilateral": 507,
+    "eva_bilateral": 505,
+    "neo_mode_dist": {
+      "-1": 245,
+      "0": 1513,
+      "1": 242
+    },
+    "eva_mode_dist": {
+      "-1": 243,
+      "0": 1511,
+      "1": 246
+    },
+    "neo_bandit_regret": 0.0,
+    "eva_bandit_regret": 0.0
+  },
+  "ablation": {
+    "correlation_mean": 0.03662108904258587,
+    "neo_bilateral": 118,
+    "eva_bilateral": 117
+  }
+}

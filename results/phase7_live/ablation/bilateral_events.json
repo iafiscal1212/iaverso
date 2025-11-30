@@ -1,0 +1,3383 @@
+[
+  {
+    "t": 5,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 11,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 12,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 14,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 17,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 18,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 21,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 22,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 26,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 28,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 29,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 41,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 47,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 48,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 55,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 56,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 57,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 63,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 64,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 66,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 67,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 88,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 91,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 93,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 96,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 100,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 108,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 116,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 117,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 121,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 138,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 154,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 156,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 167,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 169,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 179,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 182,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 183,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 184,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 185,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 190,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 194,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 195,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 198,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 199,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 201,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 209,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 214,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 217,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 219,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 223,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 225,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 229,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 238,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 243,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 244,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 258,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 259,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 262,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 263,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 264,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 266,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 268,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 270,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 272,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 278,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 282,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 289,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 293,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 305,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 311,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 313,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 315,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 316,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 320,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 322,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 323,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": -1
+  },
+  {
+    "t": 330,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 331,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 333,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 334,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 339,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 343,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 347,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 351,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 356,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 369,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 374,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 377,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 381,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 393,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 397,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 409,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": -1
+  },
+  {
+    "t": 414,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 416,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 417,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 418,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 421,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 423,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 424,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 428,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 434,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 443,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 445,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 452,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 454,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 461,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 468,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 475,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 476,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 477,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 478,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 485,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 486,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 488,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 489,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 490,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 509,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 517,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 519,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 520,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 521,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 531,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 539,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 545,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 552,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 554,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 558,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 559,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 562,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 564,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 569,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 572,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 580,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 581,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 586,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 587,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 590,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 596,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 602,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 603,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 604,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 609,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 611,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 613,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 616,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 619,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 624,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 626,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 634,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 641,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 645,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 658,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 669,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 670,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 673,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 681,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 684,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 685,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 687,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 696,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 701,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 703,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 704,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": -1
+  },
+  {
+    "t": 708,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 711,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 722,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 730,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 732,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 737,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 741,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 750,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 754,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 756,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 760,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 761,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 762,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 766,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 770,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 774,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 778,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 781,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 782,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 785,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 786,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 792,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 794,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 796,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 1
+  },
+  {
+    "t": 798,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 799,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 812,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 813,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 1
+  },
+  {
+    "t": 814,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 816,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 818,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": -1
+  },
+  {
+    "t": 821,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 832,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 836,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 838,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 839,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 843,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 845,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 853,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 855,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 859,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 864,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 871,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 874,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 886,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 890,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 904,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 905,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 913,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 919,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 923,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 930,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 933,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 940,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 941,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 943,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 953,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 954,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 964,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 970,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 979,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 984,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 995,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1003,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1004,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1009,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1016,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1018,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1027,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1029,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1032,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1038,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1041,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1044,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1046,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1048,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1057,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1060,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1062,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1064,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1065,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1066,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1068,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1077,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1078,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1080,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1081,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1084,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1089,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 1091,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 1093,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1096,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 1098,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1104,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1107,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1108,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1111,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1113,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1114,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1122,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1124,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1126,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 1135,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1139,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 1142,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1145,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1146,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1148,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1151,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1155,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1156,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1157,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1165,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1168,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1169,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1170,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1171,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 1175,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1180,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 1193,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1205,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1207,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 1212,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1213,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1222,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 1226,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1233,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1235,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1242,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1243,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1246,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1251,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1254,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1256,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1264,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1279,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1297,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1302,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 1305,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1307,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1308,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1309,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1314,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 1333,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1334,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 1335,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1342,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1343,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1347,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1350,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1351,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1367,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1377,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1391,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1408,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1409,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1410,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1411,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1412,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1414,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1415,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1418,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1421,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1426,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1429,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1430,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1441,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1445,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1447,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1448,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1451,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1452,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1459,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1460,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1461,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1462,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1463,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1470,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1471,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1472,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1475,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1477,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1483,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1489,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1492,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1502,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1517,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1522,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1526,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1528,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1529,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1530,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1533,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1537,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1540,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1542,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1544,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 1552,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 1556,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1565,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1572,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 1573,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1574,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1582,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1587,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1588,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1591,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1592,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1594,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1600,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1602,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": -1
+  },
+  {
+    "t": 1606,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1610,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1611,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1614,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1616,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1618,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1619,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1622,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1625,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1626,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1631,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1633,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1635,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1638,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1640,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1641,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1655,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1660,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 1661,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1663,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1667,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1668,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1669,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1670,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1673,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1683,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 1688,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1692,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1694,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1703,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 1705,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1707,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1719,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1720,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1721,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1727,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1732,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1740,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1742,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1757,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 1763,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1764,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1771,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1773,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1774,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1794,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1797,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1803,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1807,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1814,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1815,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1824,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 1825,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1826,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1828,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1830,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1832,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1834,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": -1
+  },
+  {
+    "t": 1835,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1842,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1843,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1844,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 1845,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1847,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1850,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1851,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 1
+  },
+  {
+    "t": 1853,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 1
+  },
+  {
+    "t": 1858,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1863,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1868,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1870,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1876,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1877,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1881,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1883,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1885,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1889,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1891,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 1897,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1900,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1903,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1904,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1911,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1912,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1913,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1914,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1917,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1922,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1923,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1924,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1935,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1937,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1940,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1941,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1945,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1953,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1956,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1959,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 1
+  },
+  {
+    "t": 1964,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1965,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1966,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": -1
+  },
+  {
+    "t": 1972,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1979,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1984,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1987,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": -1,
+    "eva_mode": 0
+  },
+  {
+    "t": 1992,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1994,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  },
+  {
+    "t": 1998,
+    "neo_pi": 0.5,
+    "eva_pi": 0.5,
+    "neo_mode": 0,
+    "eva_mode": 0
+  }
+]
