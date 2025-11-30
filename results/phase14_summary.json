@@ -1,0 +1,13 @@
+{
+  "neo_mean_tension": 0.4710703997268778,
+  "eva_mean_tension": 0.5163137802202735,
+  "neo_tension_trend": "stable",
+  "eva_tension_trend": "stable",
+  "neo_n_attractors": 3,
+  "eva_n_attractors": 3,
+  "neo_n_preferences": 1,
+  "eva_n_preferences": 0,
+  "preference_correlation": 0.0,
+  "neo_top_preference": "state_WORK",
+  "eva_top_preference": null
+}

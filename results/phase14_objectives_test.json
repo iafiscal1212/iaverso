@@ -1,0 +1,564 @@
+{
+  "timestamp": "2025-11-30T16:56:51.987183",
+  "neo_tension_history": [
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486,
+    0.5434972044114486
+  ],
+  "eva_tension_history": [
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612,
+    0.4851089226335612
+  ],
+  "neo_attractors": [
+    {
+      "sequence": [
+        1,
+        2,
+        0
+      ],
+      "frequency": 1,
+      "mean_te": 0.7485664484851329,
+      "stability": 0.03119026868688054
+    },
+    {
+      "sequence": [
+        2,
+        0,
+        0
+      ],
+      "frequency": 1,
+      "mean_te": 0.6216657218830003,
+      "stability": 0.025902738411791682
+    },
+    {
+      "sequence": [
+        2,
+        0
+      ],
+      "frequency": 2,
+      "mean_te": 0.5377405219455769,
+      "stability": 0.022405855081065705
+    },
+    {
+      "sequence": [
+        0,
+        0
+      ],
+      "frequency": 2,
+      "mean_te": 0.42187817231393887,
+      "stability": 0.017578257179747456
+    },
+    {
+      "sequence": [
+        0,
+        0,
+        2
+      ],
+      "frequency": 1,
+      "mean_te": 0.3016622533531799,
+      "stability": 0.012569260556382498
+    },
+    {
+      "sequence": [
+        0,
+        0,
+        0
+      ],
+      "frequency": 1,
+      "mean_te": 0.4593214217404215,
+      "stability": 0.0
+    },
+    {
+      "sequence": [
+        0,
+        2,
+        0
+      ],
+      "frequency": 1,
+      "mean_te": 0.2983627990922278,
+      "stability": 0.0
+    },
+    {
+      "sequence": [
+        2,
+        0,
+        1
+      ],
+      "frequency": 1,
+      "mean_te": 0.46500305609355364,
+      "stability": 0.0
+    }
+  ],
+  "eva_attractors": [
+    {
+      "sequence": [
+        0,
+        0
+      ],
+      "frequency": 4,
+      "mean_te": 0.6122638074244614,
+      "stability": 0.07653297592805768
+    },
+    {
+      "sequence": [
+        0,
+        0,
+        0
+      ],
+      "frequency": 2,
+      "mean_te": 0.6584853106550153,
+      "stability": 0.05487377588791795
+    },
+    {
+      "sequence": [
+        0,
+        0,
+        1
+      ],
+      "frequency": 1,
+      "mean_te": 0.48872267738287783,
+      "stability": 0.04072688978190649
+    },
+    {
+      "sequence": [
+        0,
+        1,
+        0
+      ],
+      "frequency": 1,
+      "mean_te": 0.5699223060956827,
+      "stability": 0.03562014413098017
+    },
+    {
+      "sequence": [
+        2,
+        0,
+        0
+      ],
+      "frequency": 1,
+      "mean_te": 0.7993776112875111,
+      "stability": 0.03330740047031296
+    },
+    {
+      "sequence": [
+        1,
+        0,
+        0
+      ],
+      "frequency": 1,
+      "mean_te": 0.41263147965384145,
+      "stability": 0.0
+    }
+  ],
+  "neo_preferences": [
+    {
+      "name": "state_SOCIAL",
+      "direction": "seek",
+      "strength": 0.5493179570500031,
+      "evidence": {
+        "state": "SOCIAL",
+        "mean_te": 0.7866079515366219,
+        "overall_te": 0.5077124085196636
+      }
+    },
+    {
+      "name": "role_leader",
+      "direction": "seek",
+      "strength": 1.0,
+      "evidence": {
+        "role": "leader",
+        "outcome_te": 0.7994958221128631,
+        "other_te": 0.3814929630817828
+      }
+    }
+  ],
+  "eva_preferences": [
+    {
+      "name": "state_LEARN",
+      "direction": "seek",
+      "strength": 0.40986060308353073,
+      "evidence": {
+        "state": "LEARN",
+        "mean_te": 0.8012787297170694,
+        "overall_te": 0.5683389747642984
+      }
+    },
+    {
+      "name": "role_follower",
+      "direction": "seek",
+      "strength": 0.4192557996674631,
+      "evidence": {
+        "role": "follower",
+        "outcome_te": 0.7896730421833941,
+        "other_te": 0.5563993766087955
+      }
+    }
+  ],
+  "preference_evolution": [
+    {
+      "t": 100,
+      "neo": [
+        {
+          "name": "state_SOCIAL",
+          "direction": "seek",
+          "strength": 0.5493179570500031
+        },
+        {
+          "name": "role_leader",
+          "direction": "seek",
+          "strength": 1.0
+        }
+      ],
+      "eva": [
+        {
+          "name": "state_LEARN",
+          "direction": "seek",
+          "strength": 0.40986060308353073
+        },
+        {
+          "name": "role_follower",
+          "direction": "seek",
+          "strength": 0.4192557996674631
+        }
+      ]
+    },
+    {
+      "t": 400,
+      "neo": [
+        {
+          "name": "state_SOCIAL",
+          "direction": "seek",
+          "strength": 0.5493179570500031
+        },
+        {
+          "name": "role_leader",
+          "direction": "seek",
+          "strength": 1.0
+        }
+      ],
+      "eva": [
+        {
+          "name": "state_LEARN",
+          "direction": "seek",
+          "strength": 0.40986060308353073
+        },
+        {
+          "name": "role_follower",
+          "direction": "seek",
+          "strength": 0.4192557996674631
+        }
+      ]
+    },
+    {
+      "t": 600,
+      "neo": [
+        {
+          "name": "state_SOCIAL",
+          "direction": "seek",
+          "strength": 0.5493179570500031
+        },
+        {
+          "name": "role_leader",
+          "direction": "seek",
+          "strength": 1.0
+        }
+      ],
+      "eva": [
+        {
+          "name": "state_LEARN",
+          "direction": "seek",
+          "strength": 0.40986060308353073
+        },
+        {
+          "name": "role_follower",
+          "direction": "seek",
+          "strength": 0.4192557996674631
+        }
+      ]
+    },
+    {
+      "t": 900,
+      "neo": [
+        {
+          "name": "state_SOCIAL",
+          "direction": "seek",
+          "strength": 0.5493179570500031
+        },
+        {
+          "name": "role_leader",
+          "direction": "seek",
+          "strength": 1.0
+        }
+      ],
+      "eva": [
+        {
+          "name": "state_LEARN",
+          "direction": "seek",
+          "strength": 0.40986060308353073
+        },
+        {
+          "name": "role_follower",
+          "direction": "seek",
+          "strength": 0.4192557996674631
+        }
+      ]
+    },
+    {
+      "t": 1600,
+      "neo": [
+        {
+          "name": "state_SOCIAL",
+          "direction": "seek",
+          "strength": 0.5493179570500031
+        },
+        {
+          "name": "role_leader",
+          "direction": "seek",
+          "strength": 1.0
+        }
+      ],
+      "eva": [
+        {
+          "name": "state_LEARN",
+          "direction": "seek",
+          "strength": 0.40986060308353073
+        },
+        {
+          "name": "role_follower",
+          "direction": "seek",
+          "strength": 0.4192557996674631
+        }
+      ]
+    },
+    {
+      "t": 2400,
+      "neo": [
+        {
+          "name": "state_SOCIAL",
+          "direction": "seek",
+          "strength": 0.5493179570500031
+        },
+        {
+          "name": "role_leader",
+          "direction": "seek",
+          "strength": 1.0
+        }
+      ],
+      "eva": [
+        {
+          "name": "state_LEARN",
+          "direction": "seek",
+          "strength": 0.40986060308353073
+        },
+        {
+          "name": "role_follower",
+          "direction": "seek",
+          "strength": 0.4192557996674631
+        }
+      ]
+    },
+    {
+      "t": 2500,
+      "neo": [
+        {
+          "name": "state_SOCIAL",
+          "direction": "seek",
+          "strength": 0.5493179570500031
+        },
+        {
+          "name": "role_leader",
+          "direction": "seek",
+          "strength": 1.0
+        }
+      ],
+      "eva": [
+        {
+          "name": "state_LEARN",
+          "direction": "seek",
+          "strength": 0.40986060308353073
+        },
+        {
+          "name": "role_follower",
+          "direction": "seek",
+          "strength": 0.4192557996674631
+        }
+      ]
+    },
+    {
+      "t": 2600,
+      "neo": [
+        {
+          "name": "state_SOCIAL",
+          "direction": "seek",
+          "strength": 0.5493179570500031
+        },
+        {
+          "name": "role_leader",
+          "direction": "seek",
+          "strength": 1.0
+        }
+      ],
+      "eva": [
+        {
+          "name": "state_LEARN",
+          "direction": "seek",
+          "strength": 0.40986060308353073
+        },
+        {
+          "name": "role_follower",
+          "direction": "seek",
+          "strength": 0.4192557996674631
+        }
+      ]
+    },
+    {
+      "t": 3600,
+      "neo": [
+        {
+          "name": "state_SOCIAL",
+          "direction": "seek",
+          "strength": 0.5493179570500031
+        },
+        {
+          "name": "role_leader",
+          "direction": "seek",
+          "strength": 1.0
+        }
+      ],
+      "eva": [
+        {
+          "name": "state_LEARN",
+          "direction": "seek",
+          "strength": 0.40986060308353073
+        },
+        {
+          "name": "role_follower",
+          "direction": "seek",
+          "strength": 0.4192557996674631
+        }
+      ]
+    },
+    {
+      "t": 4900,
+      "neo": [
+        {
+          "name": "state_SOCIAL",
+          "direction": "seek",
+          "strength": 0.5493179570500031
+        },
+        {
+          "name": "role_leader",
+          "direction": "seek",
+          "strength": 1.0
+        }
+      ],
+      "eva": [
+        {
+          "name": "state_LEARN",
+          "direction": "seek",
+          "strength": 0.40986060308353073
+        },
+        {
+          "name": "role_follower",
+          "direction": "seek",
+          "strength": 0.4192557996674631
+        }
+      ]
+    }
+  ]
+}
