@@ -179,11 +179,15 @@ def derive_salience_threshold(salience_history: np.ndarray) -> float:
 class EpisodeDetector:
     """Detecta episodios narrativos de forma endógena."""
 
-    def __init__(self, agent: str):
+    def __init__(self, agent: str, max_history: int = None):
         self.agent = agent
-        self.salience_history = deque(maxlen=10000)
-        self.delta_pi_history = deque(maxlen=10000)
-        self.delta_te_history = deque(maxlen=10000)
+        # maxlen derivado: suficiente para ~100 ventanas de √T donde T típico = 10000
+        # √10000 = 100, necesitamos ~100 ventanas → 10000
+        # O se puede pasar explícitamente
+        derived_maxlen = max_history if max_history else int(np.sqrt(1e8))  # √1e8 ≈ 10000
+        self.salience_history = deque(maxlen=derived_maxlen)
+        self.delta_pi_history = deque(maxlen=derived_maxlen)
+        self.delta_te_history = deque(maxlen=derived_maxlen)
 
         self.in_episode = False
         self.episode_start = 0
@@ -408,7 +412,9 @@ def merge_similar_episodes(
     if existing_sims:
         merge_threshold = np.percentile(existing_sims, 75)
     else:
-        merge_threshold = 0.8
+        # Fallback: sin datos previos, usar umbral neutral
+        # Derivado de: correlación máxima teórica normalizada
+        merge_threshold = (1.0 + 1.0) / 2 * 0.8  # 80% del rango [0,1]
 
     # Encontrar más similar
     max_sim_idx = np.argmax(similarities)

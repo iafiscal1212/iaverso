@@ -864,8 +864,9 @@ def write_auditor_report(audit: Dict, output_path: str):
 
 def leak_check(neo_history: np.ndarray, eva_history: np.ndarray) -> Dict:
     """Verifica independencia de buffers."""
-    # Skip warmup
-    skip = 500
+    # Skip warmup - derivado de 5% del total o √n
+    n = len(neo_history)
+    skip = max(int(n * 0.05), int(np.sqrt(n)))  # 5% o √n, el mayor
     if len(neo_history) <= skip or len(eva_history) <= skip:
         return {'checked': False, 'reason': 'Insufficient data'}
 

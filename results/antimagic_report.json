@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "results": {
+    "audit_endogenous_core.py": true,
+    "audit_narrative.py": true,
+    "audit_emergent_objectives.py": true,
+    "audit_phase12_pure_endogenous.py": true,
+    "audit_phase12_full_robustness.py": true,
+    "t_scaling": true,
+    "provenance": true,
+    "narrative_check": true,
+    "objectives_check": true
+  },
+  "n_violations": 0,
+  "violations_sample": []
+}
