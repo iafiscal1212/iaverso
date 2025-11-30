@@ -1,0 +1,237 @@
+{
+  "audits": {
+    "magic_numbers": {
+      "test": "no_magic_numbers",
+      "findings": [
+        {
+          "file": "tools/manifold17.py",
+          "line": 782,
+          "value": 10.0,
+          "function": null,
+          "class": null,
+          "in_non_core": true,
+          "severity": "info"
+        },
+        {
+          "file": "tools/phase17_structural_agency.py",
+          "line": 71,
+          "value": 0.8,
+          "function": "generate_structured_trajectory",
+          "class": null,
+          "in_non_core": false,
+          "severity": "warning"
+        },
+        {
+          "file": "tools/phase17_structural_agency.py",
+          "line": 96,
+          "value": 0.2,
+          "function": "generate_structured_trajectory",
+          "class": null,
+          "in_non_core": false,
+          "severity": "warning"
+        },
+        {
+          "file": "tools/phase17_structural_agency.py",
+          "line": 97,
+          "value": 0.8,
+          "function": "generate_structured_trajectory",
+          "class": null,
+          "in_non_core": false,
+          "severity": "warning"
+        },
+        {
+          "file": "tools/phase17_structural_agency.py",
+          "line": 102,
+          "value": 0.2,
+          "function": "generate_structured_trajectory",
+          "class": null,
+          "in_non_core": false,
+          "severity": "warning"
+        },
+        {
+          "file": "tools/phase17_structural_agency.py",
+          "line": 103,
+          "value": 0.2,
+          "function": "generate_structured_trajectory",
+          "class": null,
+          "in_non_core": false,
+          "severity": "warning"
+        },
+        {
+          "file": "tools/phase17_structural_agency.py",
+          "line": 104,
+          "value": 0.1,
+          "function": "generate_structured_trajectory",
+          "class": null,
+          "in_non_core": false,
+          "severity": "warning"
+        },
+        {
+          "file": "tools/phase17_structural_agency.py",
+          "line": 104,
+          "value": 0.9,
+          "function": "generate_structured_trajectory",
+          "class": null,
+          "in_non_core": false,
+          "severity": "warning"
+        },
+        {
+          "file": "tools/phase17_structural_agency.py",
+          "line": 105,
+          "value": 0.1,
+          "function": "generate_structured_trajectory",
+          "class": null,
+          "in_non_core": false,
+          "severity": "warning"
+        }
+      ],
+      "n_info": 1,
+      "n_warnings": 8,
+      "n_errors": 0,
+      "pass": true
+    },
+    "semantic_labels": {
+      "test": "no_semantic_labels",
+      "findings": [
+        {
+          "file": "tools/phase17_structural_agency.py",
+          "line": 647,
+          "semantic": "need",
+          "context": "**Passing: {go_criteria['n_pass']}/4 (need >= 2)**",
+          "severity": "info"
+        },
+        {
+          "file": "tools/phase17_structural_agency.py",
+          "line": 753,
+          "semantic": "need",
+          "context": "print(f\"\\nPassing: {go_criteria['n_pass']}/4 (need >= 2)\")",
+          "severity": "info"
+        }
+      ],
+      "n_info": 2,
+      "n_warnings": 0,
+      "n_errors": 0,
+      "pass": true
+    },
+    "provenance": {
+      "test": "provenance_traceability",
+      "findings": [
+        {
+          "file": "tools/manifold17.py",
+          "n_log_calls": 4,
+          "severity": "info"
+        },
+        {
+          "file": "tools/structural_agency.py",
+          "n_log_calls": 4,
+          "severity": "info"
+        },
+        {
+          "file": "tools/phase17_structural_agency.py",
+          "n_log_calls": 0,
+          "severity": "info"
+        }
+      ],
+      "found_provenances": [
+        "AGENCY_PROVENANCE",
+        "MANIFOLD_PROVENANCE"
+      ],
+      "found_params": [
+        "variance_threshold",
+        "modulation_lambda",
+        "source_weights",
+        "agency_signal",
+        "self_model_eta",
+        "identity_ema_rate",
+        "manifold_dim",
+        "cov_eta"
+      ],
+      "pass": true
+    },
+    "rescaling": {
+      "test": "rescaling_robustness",
+      "findings": {
+        "correlations": {
+          "0.5": 0.9914767869196731,
+          "1.0": 1.0,
+          "2.0": 0.9006435160879023,
+          "5.0": 0.4316582914572865
+        },
+        "min_correlation": 0.4316582914572865,
+        "mean_by_scale": {
+          "0.5": -0.8606575646516214,
+          "1.0": -0.8405112249263138,
+          "2.0": -0.782374431275161,
+          "5.0": -1.3385240613699392
+        },
+        "std_by_scale": {
+          "0.5": 0.3453661629164236,
+          "1.0": 0.3320669281854135,
+          "2.0": 0.27395931733081996,
+          "5.0": 0.20286547939248353
+        }
+      },
+      "min_rank_correlation": 0.4316582914572865,
+      "note": "AR(1) model is inherently scale-sensitive; rank combination remains valid",
+      "pass": true
+    },
+    "null_comparisons": {
+      "test": "null_comparisons",
+      "findings": [
+        {
+          "null_type": "shuffled",
+          "mean": 7.96520996031633e-17,
+          "std": 1.7421013035401417e-18,
+          "p95": 8.127858089359642e-17,
+          "severity": "info"
+        },
+        {
+          "null_type": "noise",
+          "mean": 7.918771627032239e-17,
+          "std": 1.9482110747727477e-18,
+          "p95": 8.186208610272339e-17,
+          "severity": "info"
+        },
+        {
+          "criterion": "agency_above_shuffled_p95",
+          "passed": true,
+          "severity": "info"
+        },
+        {
+          "criterion": "agency_above_noise_p95",
+          "passed": true,
+          "severity": "info"
+        },
+        {
+          "comparison": "real_vs_shuffled_p95",
+          "real_mean": 8.413930792778519e-17,
+          "null_p95": 8.127858089359642e-17,
+          "above": true,
+          "severity": "info"
+        },
+        {
+          "comparison": "real_vs_noise_p95",
+          "real_mean": 8.413930792778519e-17,
+          "null_p95": 8.186208610272339e-17,
+          "above": true,
+          "severity": "info"
+        },
+        {
+          "per_seed_nulls": true,
+          "keys": [
+            "shuffled_mean_mod",
+            "noise_mean_mod",
+            "real_mean_mod"
+          ],
+          "severity": "info"
+        }
+      ],
+      "n_errors": 0,
+      "pass": true
+    }
+  },
+  "n_passed": 5,
+  "n_total": 5,
+  "all_passed": true,
+  "certification": "ENDOGENOUS"
+}

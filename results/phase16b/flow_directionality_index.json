@@ -1,0 +1,93 @@
+{
+  "seeds": [
+    {
+      "seed": 0,
+      "mean_fdi": 0.3456389356493699,
+      "max_fdi": 0.9397260273972603,
+      "net_flow_normalized": 0.5388481091136399,
+      "fraction_directional": 0.3333333333333333
+    },
+    {
+      "seed": 1,
+      "mean_fdi": 0.35532105693042604,
+      "max_fdi": 0.9388888888888889,
+      "net_flow_normalized": 0.542986888471842,
+      "fraction_directional": 0.3333333333333333
+    },
+    {
+      "seed": 2,
+      "mean_fdi": 0.3598315049058546,
+      "max_fdi": 0.9653179190751445,
+      "net_flow_normalized": 0.5312943658036293,
+      "fraction_directional": 0.3333333333333333
+    },
+    {
+      "seed": 3,
+      "mean_fdi": 0.35952133237326106,
+      "max_fdi": 0.9665738161559888,
+      "net_flow_normalized": 0.5442100610512195,
+      "fraction_directional": 0.3333333333333333
+    },
+    {
+      "seed": 4,
+      "mean_fdi": 0.3826495083420261,
+      "max_fdi": 0.9661016949152542,
+      "net_flow_normalized": 0.5360618345394945,
+      "fraction_directional": 0.3333333333333333
+    },
+    {
+      "seed": 5,
+      "mean_fdi": 0.3634058138593033,
+      "max_fdi": 0.9660056657223796,
+      "net_flow_normalized": 0.5366818940942166,
+      "fraction_directional": 0.3333333333333333
+    },
+    {
+      "seed": 6,
+      "mean_fdi": 0.39782356216782766,
+      "max_fdi": 0.9438202247191011,
+      "net_flow_normalized": 0.535760176951812,
+      "fraction_directional": 0.3333333333333333
+    },
+    {
+      "seed": 7,
+      "mean_fdi": 0.38826612544794137,
+      "max_fdi": 0.967479674796748,
+      "net_flow_normalized": 0.5443879904944579,
+      "fraction_directional": 0.3333333333333333
+    },
+    {
+      "seed": 8,
+      "mean_fdi": 0.378456056318458,
+      "max_fdi": 0.949438202247191,
+      "net_flow_normalized": 0.531405985780754,
+      "fraction_directional": 0.3333333333333333
+    },
+    {
+      "seed": 9,
+      "mean_fdi": 0.38377149011984424,
+      "max_fdi": 0.9456521739130435,
+      "net_flow_normalized": 0.538765436557089,
+      "fraction_directional": 0.3333333333333333
+    }
+  ],
+  "global": {
+    "mean": 0.37146853861143125,
+    "std": 0.016040641098272735,
+    "median": 0.37093093508888064,
+    "p95": 0.3935227156438788,
+    "fraction_above_0.5": 0.0
+  },
+  "vs_null": {
+    "null_mean": 0.014678436907704904,
+    "null_std": 0.011159445615049429,
+    "null_p95": 0.03820043113123867,
+    "real_mean": 0.37146853861143125,
+    "above_p95": true
+  },
+  "net_flow": {
+    "mean": 0.5380402742858156,
+    "std": 0.004522018893987957,
+    "median": 0.5377236653256527
+  }
+}

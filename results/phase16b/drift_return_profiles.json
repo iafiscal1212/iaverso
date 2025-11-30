@@ -1,0 +1,108 @@
+{
+  "seeds": [
+    {
+      "seed": 0,
+      "drift_rms_mean": 0.4391649355893857,
+      "drift_rms_p95": 0.6202377524417089,
+      "return_penalty_mean": 0.004254911074386351,
+      "fast_drift_mean": 0.28154680295392437,
+      "slow_drift_mean": 0.1657915353683724
+    },
+    {
+      "seed": 1,
+      "drift_rms_mean": 0.47853966500541534,
+      "drift_rms_p95": 0.7221192217182706,
+      "return_penalty_mean": 0.0038605654856445895,
+      "fast_drift_mean": 0.4610911327171202,
+      "slow_drift_mean": 0.16179460378227742
+    },
+    {
+      "seed": 2,
+      "drift_rms_mean": 0.4113628775504088,
+      "drift_rms_p95": 0.6399188667089643,
+      "return_penalty_mean": 0.0043817105726271085,
+      "fast_drift_mean": 0.3640247431582697,
+      "slow_drift_mean": 0.11191963803665247
+    },
+    {
+      "seed": 3,
+      "drift_rms_mean": 0.5806543753659171,
+      "drift_rms_p95": 0.8715593108113625,
+      "return_penalty_mean": 0.004835531617763628,
+      "fast_drift_mean": 0.30159336306680673,
+      "slow_drift_mean": 0.20715622203517503
+    },
+    {
+      "seed": 4,
+      "drift_rms_mean": 0.530165477833263,
+      "drift_rms_p95": 0.8108619552927306,
+      "return_penalty_mean": 0.005155382451799575,
+      "fast_drift_mean": 0.5002185399956459,
+      "slow_drift_mean": 0.1843098468208874
+    },
+    {
+      "seed": 5,
+      "drift_rms_mean": 0.4423678494211996,
+      "drift_rms_p95": 0.7725604665790822,
+      "return_penalty_mean": 0.004183775235376879,
+      "fast_drift_mean": 0.3324349685686476,
+      "slow_drift_mean": 0.18578054214611134
+    },
+    {
+      "seed": 6,
+      "drift_rms_mean": 0.43819899140675855,
+      "drift_rms_p95": 0.6281435422185399,
+      "return_penalty_mean": 0.003968319263646696,
+      "fast_drift_mean": 0.44319917712118817,
+      "slow_drift_mean": 0.14893926257376233
+    },
+    {
+      "seed": 7,
+      "drift_rms_mean": 0.4868924859110631,
+      "drift_rms_p95": 0.7300519268741479,
+      "return_penalty_mean": 0.003863132849072015,
+      "fast_drift_mean": 0.5076667641660133,
+      "slow_drift_mean": 0.12201757628843005
+    },
+    {
+      "seed": 8,
+      "drift_rms_mean": 0.34847202041663744,
+      "drift_rms_p95": 0.5010368992259164,
+      "return_penalty_mean": 0.003468161184255853,
+      "fast_drift_mean": 0.3518909059587263,
+      "slow_drift_mean": 0.12288831195382058
+    },
+    {
+      "seed": 9,
+      "drift_rms_mean": 0.5005086058283028,
+      "drift_rms_p95": 0.8597394991295566,
+      "return_penalty_mean": 0.004966791148406902,
+      "fast_drift_mean": 0.35034310782321665,
+      "slow_drift_mean": 0.23695324960980818
+    }
+  ],
+  "drift_rms": {
+    "mean": 0.4656327284328351,
+    "std": 0.0615594062109972,
+    "median": 0.4604537572133075,
+    "p95": 0.5579343714762227
+  },
+  "return_penalty": {
+    "mean": 0.0042938280882979605,
+    "std": 0.0005168021008220987,
+    "median": 0.004219343154881615,
+    "all_positive": true
+  },
+  "dual_memory": {
+    "fast_drift_mean": 0.38940095055295587,
+    "slow_drift_mean": 0.16475507886152974,
+    "fast_slow_ratio": 2.363514090171878
+  },
+  "vs_null": {
+    "null_mean": 0.4729347040452116,
+    "null_std": 0.07229011957619777,
+    "null_p95": 0.5943506977817538,
+    "real_mean": 0.4656327284328351,
+    "above_p95": false
+  }
+}

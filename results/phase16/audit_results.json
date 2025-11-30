@@ -1,0 +1,446 @@
+{
+  "timestamp": "2025-11-30T19:44:43.586022",
+  "file_audits": {
+    "/root/NEO_EVA/tools/irreversibility.py": {
+      "filepath": "/root/NEO_EVA/tools/irreversibility.py",
+      "magic_numbers": [
+        {
+          "value": 16.0,
+          "line": 3,
+          "context": "Phase 16: Irreversibility Module"
+        },
+        {
+          "value": 100.0,
+          "line": 10,
+          "context": "100% endogenous - ZERO magic numbers."
+        },
+        {
+          "value": 1000.0,
+          "line": 66,
+          "context": "self.delta_norm_history: deque = deque(maxlen=1000)"
+        },
+        {
+          "value": 0.0,
+          "line": 71,
+          "context": "self.cumulative_drift_norm = 0.0"
+        },
+        {
+          "value": 1.0,
+          "line": 94,
+          "context": "return delta_norm / (delta_norm + 1.0)"
+        },
+        {
+          "value": 0.0,
+          "line": 207,
+          "context": "return 0.0"
+        },
+        {
+          "value": 1.0,
+          "line": 219,
+          "context": "d_cosine = 1.0 - cos_sim"
+        },
+        {
+          "value": 1.0,
+          "line": 221,
+          "context": "d_cosine = 1.0"
+        },
+        {
+          "value": 0.0,
+          "line": 384,
+          "context": "return {'index': 0.0, 'error': 'insufficient_data'}"
+        },
+        {
+          "value": 0.0,
+          "line": 394,
+          "context": "kl_sum = 0.0"
+        },
+        {
+          "value": 1.0,
+          "line": 406,
+          "context": "idx = np.argmin(np.abs(eigenvalues - 1.0))"
+        },
+        {
+          "value": 0.0,
+          "line": 414,
+          "context": "entropy_prod = 0.0"
+        },
+        {
+          "value": 0.05,
+          "line": 508,
+          "context": "'kl_significant': kl_p < 0.05,"
+        },
+        {
+          "value": 0.05,
+          "line": 509,
+          "context": "'entropy_significant': entropy_p < 0.05"
+        },
+        {
+          "value": 1.0,
+          "line": 624,
+          "context": "'version': '1.0.0',"
+        },
+        {
+          "value": 16.0,
+          "line": 642,
+          "context": "print(\"Phase 16 Irreversibility Module\")"
+        },
+        {
+          "value": 50.0,
+          "line": 643,
+          "context": "print(\"=\" * 50)"
+        },
+        {
+          "value": 0.5,
+          "line": 658,
+          "context": "neo_proto = np.random.randn(4) * 0.5"
+        },
+        {
+          "value": 0.5,
+          "line": 659,
+          "context": "eva_proto = np.random.randn(4) * 0.5"
+        }
+      ],
+      "semantic_violations": [
+        {
+          "label": "energy",
+          "line": 11,
+          "context": "NO semantic labels (energy, hunger, reward, etc.)"
+        },
+        {
+          "label": "hunger",
+          "line": 11,
+          "context": "NO semantic labels (energy, hunger, reward, etc.)"
+        },
+        {
+          "label": "reward",
+          "line": 11,
+          "context": "NO semantic labels (energy, hunger, reward, etc.)"
+        }
+      ],
+      "n_magic": 19,
+      "n_semantic": 3,
+      "clean": false
+    },
+    "/root/NEO_EVA/tools/phase16_structural_autonomy.py": {
+      "filepath": "/root/NEO_EVA/tools/phase16_structural_autonomy.py",
+      "magic_numbers": [
+        {
+          "value": 16.0,
+          "line": 3,
+          "context": "Phase 16: Structural Autonomy - Endogenous Irreversibility"
+        },
+        {
+          "value": 100.0,
+          "line": 12,
+          "context": "100% endogenous - ZERO magic numbers."
+        },
+        {
+          "value": 0.5,
+          "line": 100,
+          "context": "ranks[key] = 0.5"
+        },
+        {
+          "value": 16.0,
+          "line": 114,
+          "context": "Main runner for Phase 16: Structural Autonomy."
+        },
+        {
+          "value": 16.0,
+          "line": 116,
+          "context": "Integrates all Phase 16 mechanisms with Phase 15B infrastructure."
+        },
+        {
+          "value": 0.0,
+          "line": 213,
+          "context": "irreversibility_index=0.0,  # Will be computed in analysis"
+        },
+        {
+          "value": 0.0,
+          "line": 214,
+          "context": "directionality_index=dir_mom.get('directionality', 0.0),"
+        },
+        {
+          "value": 0.5,
+          "line": 215,
+          "context": "transition_novelty=0.5,  # Placeholder"
+        },
+        {
+          "value": 0.05,
+          "line": 293,
+          "context": "if p > 0.05:"
+        },
+        {
+          "value": 42.0,
+          "line": 362,
+          "context": "seed: int = 42, verbose: bool = True) -> Dict:"
+        },
+        {
+          "value": 16.0,
+          "line": 364,
+          "context": "Run Phase 16 simulation and analysis."
+        },
+        {
+          "value": 70.0,
+          "line": 376,
+          "context": "print(\"=\" * 70)"
+        },
+        {
+          "value": 16.0,
+          "line": 377,
+          "context": "print(\"PHASE 16: STRUCTURAL AUTONOMY - ENDOGENOUS IRREVERSIBILITY\")"
+        },
+        {
+          "value": 70.0,
+          "line": 378,
+          "context": "print(\"=\" * 70)"
+        },
+        {
+          "value": 100.0,
+          "line": 380,
+          "context": "print(\"  - 100% endogenous (no magic numbers)\")"
+        },
+        {
+          "value": 70.0,
+          "line": 383,
+          "context": "print(\"=\" * 70)"
+        },
+        {
+          "value": 0.33,
+          "line": 394,
+          "context": "neo_pi = np.array([0.33, 0.33, 0.34])"
+        },
+        {
+          "value": 0.33,
+          "line": 394,
+          "context": "neo_pi = np.array([0.33, 0.33, 0.34])"
+        },
+        {
+          "value": 0.34,
+          "line": 394,
+          "context": "neo_pi = np.array([0.33, 0.33, 0.34])"
+        },
+        {
+          "value": 0.33,
+          "line": 395,
+          "context": "eva_pi = np.array([0.33, 0.33, 0.34])"
+        },
+        {
+          "value": 0.33,
+          "line": 395,
+          "context": "eva_pi = np.array([0.33, 0.33, 0.34])"
+        },
+        {
+          "value": 0.34,
+          "line": 395,
+          "context": "eva_pi = np.array([0.33, 0.33, 0.34])"
+        },
+        {
+          "value": 0.3,
+          "line": 399,
+          "context": "coupling = 0.3 + 0.2 * np.tanh(np.random.randn())"
+        },
+        {
+          "value": 0.2,
+          "line": 399,
+          "context": "coupling = 0.3 + 0.2 * np.tanh(np.random.randn())"
+        },
+        {
+          "value": 0.1,
+          "line": 400,
+          "context": "te_neo = max(0, coupling + np.random.randn() * 0.1)"
+        },
+        {
+          "value": 0.1,
+          "line": 401,
+          "context": "te_eva = max(0, coupling + np.random.randn() * 0.1)"
+        },
+        {
+          "value": 0.1,
+          "line": 402,
+          "context": "neo_se = abs(np.random.randn() * 0.1)"
+        },
+        {
+          "value": 0.1,
+          "line": 403,
+          "context": "eva_se = abs(np.random.randn() * 0.1)"
+        },
+        {
+          "value": 0.5,
+          "line": 404,
+          "context": "sync = 0.5 + 0.3 * np.tanh(te_neo + te_eva - 0.6)"
+        },
+        {
+          "value": 0.3,
+          "line": 404,
+          "context": "sync = 0.5 + 0.3 * np.tanh(te_neo + te_eva - 0.6)"
+        },
+        {
+          "value": 0.6,
+          "line": 404,
+          "context": "sync = 0.5 + 0.3 * np.tanh(te_neo + te_eva - 0.6)"
+        },
+        {
+          "value": 0.03,
+          "line": 407,
+          "context": "neo_pi = np.abs(neo_pi + np.random.randn(3) * 0.03)"
+        },
+        {
+          "value": 0.03,
+          "line": 409,
+          "context": "eva_pi = np.abs(eva_pi + np.random.randn(3) * 0.03)"
+        },
+        {
+          "value": 70.0,
+          "line": 468,
+          "context": "print(\"\\n\" + \"=\" * 70)"
+        },
+        {
+          "value": 70.0,
+          "line": 470,
+          "context": "print(\"=\" * 70)"
+        },
+        {
+          "value": 70.0,
+          "line": 477,
+          "context": "print(\"=\" * 70)"
+        },
+        {
+          "value": 16.0,
+          "line": 510,
+          "context": "md.append(\"# Phase 16: Structural Autonomy Report\")"
+        },
+        {
+          "value": 100.0,
+          "line": 517,
+          "context": "md.append(\"- 100% endogenous parameters (no magic numbers)\")"
+        },
+        {
+          "value": 16.0,
+          "line": 587,
+          "context": "md.append(\"Phase 16 introduces endogenous irreversibility through:\")"
+        }
+      ],
+      "semantic_violations": [
+        {
+          "label": "energy",
+          "line": 13,
+          "context": "NO semantic labels (energy, hunger, reward, punishment, etc.)"
+        },
+        {
+          "label": "hunger",
+          "line": 13,
+          "context": "NO semantic labels (energy, hunger, reward, punishment, etc.)"
+        },
+        {
+          "label": "reward",
+          "line": 13,
+          "context": "NO semantic labels (energy, hunger, reward, punishment, etc.)"
+        },
+        {
+          "label": "punishment",
+          "line": 13,
+          "context": "NO semantic labels (energy, hunger, reward, punishment, etc.)"
+        },
+        {
+          "label": "energy",
+          "line": 381,
+          "context": "print(\"  - No semantic labels (energy, hunger, etc.)\")"
+        },
+        {
+          "label": "hunger",
+          "line": 381,
+          "context": "print(\"  - No semantic labels (energy, hunger, etc.)\")"
+        },
+        {
+          "label": "energy",
+          "line": 518,
+          "context": "md.append(\"- No semantic labels (energy, hunger, reward, punishment)\")"
+        },
+        {
+          "label": "hunger",
+          "line": 518,
+          "context": "md.append(\"- No semantic labels (energy, hunger, reward, punishment)\")"
+        },
+        {
+          "label": "reward",
+          "line": 518,
+          "context": "md.append(\"- No semantic labels (energy, hunger, reward, punishment)\")"
+        },
+        {
+          "label": "punishment",
+          "line": 518,
+          "context": "md.append(\"- No semantic labels (energy, hunger, reward, punishment)\")"
+        }
+      ],
+      "n_magic": 39,
+      "n_semantic": 10,
+      "clean": false
+    }
+  },
+  "statistical_tests": {
+    "irreversibility": {
+      "test": "irreversibility_vs_null",
+      "neo_kl_z": -0.8687089646952403,
+      "eva_kl_z": -0.5406504544895877,
+      "neo_significant": false,
+      "eva_significant": false,
+      "null_generated": true,
+      "pass": true
+    },
+    "directionality": {
+      "test": "directionality_vs_null",
+      "real_mean": 0.9002242270376692,
+      "null_mean": 0.9102891144294329,
+      "z_score": -1.439181205190164,
+      "above_p95": "False",
+      "pass": true
+    },
+    "drift_stability": {
+      "test": "drift_stability",
+      "neo_final": 0.586097423715897,
+      "eva_final": 0.586097423715897,
+      "neo_trend": 0.0003504872776587075,
+      "eva_trend": 0.0003504872776587075,
+      "neo_stable": "True",
+      "eva_stable": "True",
+      "pass": "True"
+    },
+    "multi_seed": {
+      "test": "multi_seed_robustness",
+      "seeds": [
+        42,
+        123,
+        456
+      ],
+      "results": {
+        "42": {
+          "total_passed": "1",
+          "total_criteria": 6
+        },
+        "123": {
+          "total_passed": "2",
+          "total_criteria": 6
+        },
+        "456": {
+          "total_passed": "2",
+          "total_criteria": 6
+        }
+      },
+      "passed_range": [
+        "1",
+        "2"
+      ],
+      "consistent": "True",
+      "pass": "True"
+    }
+  },
+  "summary": {
+    "files_audited": 2,
+    "files_clean": 0,
+    "total_magic_numbers": 58,
+    "total_semantic_violations": 13,
+    "statistical_tests": 4,
+    "statistical_tests_passed": 4,
+    "overall_pass": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "neo": {
+    "n_nulls": 500,
+    "n_states": 1376,
+    "real": {
+      "kl_asymmetry": 45969.5223425843,
+      "transition_entropy": 0.1407170335300506
+    },
+    "kl_p_value": 1.0,
+    "entropy_p_value": 1.0,
+    "kl_z_score": -17.863441439433995,
+    "entropy_z_score": -7.000353252344855,
+    "kl_significant": false,
+    "entropy_significant": false,
+    "null_kl_stats": {
+      "mean": 47502.11164683995,
+      "std": 85.79473946562277
+    }
+  },
+  "eva": {
+    "n_nulls": 500,
+    "n_states": 1363,
+    "real": {
+      "kl_asymmetry": 45637.575637751965,
+      "transition_entropy": 0.14017921982722814
+    },
+    "kl_p_value": 1.0,
+    "entropy_p_value": 1.0,
+    "kl_z_score": -16.753098457124725,
+    "entropy_z_score": -11.327876412336066,
+    "kl_significant": false,
+    "entropy_significant": false,
+    "null_kl_stats": {
+      "mean": 47023.559736867064,
+      "std": 82.73001574378445
+    }
+  }
+}

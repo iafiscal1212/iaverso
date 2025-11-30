@@ -1,0 +1,197 @@
+{
+  "timestamp": "2025-11-30T17:29:17.698143",
+  "file_audit": {
+    "files": {
+      "emergent_states.py": {
+        "passed": true,
+        "n_violations": 0,
+        "violations": []
+      },
+      "global_trace.py": {
+        "passed": true,
+        "n_violations": 0,
+        "violations": []
+      },
+      "state_dynamics.py": {
+        "passed": true,
+        "n_violations": 0,
+        "violations": []
+      },
+      "phase15_structural_consciousness.py": {
+        "passed": true,
+        "n_violations": 0,
+        "violations": []
+      }
+    },
+    "total_violations": 0,
+    "all_passed": true
+  },
+  "derivations": {
+    "tests": [
+      {
+        "name": "window_size(T=100)",
+        "expected": 10,
+        "got": 10,
+        "passed": true
+      },
+      {
+        "name": "window_size(T=1000)",
+        "expected": 31,
+        "got": 31,
+        "passed": true
+      },
+      {
+        "name": "window_size(T=10000)",
+        "expected": 100,
+        "got": 100,
+        "passed": true
+      },
+      {
+        "name": "learning_rate(T=100)",
+        "expected": 0.09950371902099892,
+        "got": 0.09950371902099892,
+        "passed": "True"
+      },
+      {
+        "name": "learning_rate(T=1000)",
+        "expected": 0.0316069770620507,
+        "got": 0.0316069770620507,
+        "passed": "True"
+      },
+      {
+        "name": "learning_rate(T=10000)",
+        "expected": 0.009999500037496875,
+        "got": 0.009999500037496875,
+        "passed": "True"
+      },
+      {
+        "name": "threshold_quantile",
+        "expected": -0.04119298962600939,
+        "got": -0.04119298962600939,
+        "passed": "True"
+      }
+    ],
+    "all_passed": true
+  },
+  "no_predefined_states": {
+    "tests": [
+      {
+        "name": "NEO proto 0 is int",
+        "passed": true
+      },
+      {
+        "name": "NEO proto 13 is int",
+        "passed": true
+      },
+      {
+        "name": "NEO proto 22 is int",
+        "passed": true
+      },
+      {
+        "name": "NEO proto 26 is int",
+        "passed": true
+      },
+      {
+        "name": "NEO proto 55 is int",
+        "passed": true
+      },
+      {
+        "name": "NEO proto 56 is int",
+        "passed": true
+      },
+      {
+        "name": "NEO proto 60 is int",
+        "passed": true
+      },
+      {
+        "name": "NEO proto 61 is int",
+        "passed": true
+      },
+      {
+        "name": "NEO proto 66 is int",
+        "passed": true
+      },
+      {
+        "name": "NEO proto 67 is int",
+        "passed": true
+      },
+      {
+        "name": "No SLEEP in summary",
+        "passed": true
+      },
+      {
+        "name": "No WAKE in summary",
+        "passed": true
+      },
+      {
+        "name": "No WORK in summary",
+        "passed": true
+      },
+      {
+        "name": "No LEARN in summary",
+        "passed": true
+      },
+      {
+        "name": "No SOCIAL in summary",
+        "passed": true
+      }
+    ],
+    "all_passed": true
+  },
+  "gnt_endogenous": {
+    "tests": [
+      {
+        "name": "alpha is increasing with t",
+        "passed": true
+      },
+      {
+        "name": "alpha(t=0) = 1 - 1/sqrt(t+1)",
+        "expected": 0.0,
+        "got": 0.0,
+        "passed": "True"
+      },
+      {
+        "name": "alpha(t=10) = 1 - 1/sqrt(t+1)",
+        "expected": 0.6984886554222364,
+        "got": 0.6984886554222364,
+        "passed": "True"
+      },
+      {
+        "name": "alpha(t=100) = 1 - 1/sqrt(t+1)",
+        "expected": 0.9004962809790011,
+        "got": 0.9004962809790011,
+        "passed": "True"
+      },
+      {
+        "name": "alpha(t=1000) = 1 - 1/sqrt(t+1)",
+        "expected": 0.9683930229379493,
+        "got": 0.9683930229379493,
+        "passed": "True"
+      }
+    ],
+    "all_passed": true
+  },
+  "provenance": {
+    "tests": [
+      {
+        "name": "Provenance has records",
+        "n_records": 50,
+        "passed": true
+      },
+      {
+        "name": "Provenance has state_vector",
+        "passed": true
+      },
+      {
+        "name": "Provenance has merge_threshold",
+        "passed": true
+      }
+    ],
+    "all_passed": true
+  },
+  "overall": {
+    "passed": true,
+    "total_tests": 30,
+    "passed_tests": 30
+  }
+}

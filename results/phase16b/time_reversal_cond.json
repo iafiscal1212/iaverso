@@ -1,0 +1,84 @@
+{
+  "seeds": [
+    {
+      "seed": 0,
+      "global_auc": 0.5,
+      "conditional_auc": 0.5,
+      "n_high_int_windows": 0
+    },
+    {
+      "seed": 1,
+      "global_auc": 0.5,
+      "conditional_auc": 0.5,
+      "n_high_int_windows": 0
+    },
+    {
+      "seed": 2,
+      "global_auc": 0.5,
+      "conditional_auc": 0.5,
+      "n_high_int_windows": 0
+    },
+    {
+      "seed": 3,
+      "global_auc": 0.5,
+      "conditional_auc": 0.5,
+      "n_high_int_windows": 0
+    },
+    {
+      "seed": 4,
+      "global_auc": 0.5,
+      "conditional_auc": 0.5,
+      "n_high_int_windows": 0
+    },
+    {
+      "seed": 5,
+      "global_auc": 0.5,
+      "conditional_auc": 0.5,
+      "n_high_int_windows": 0
+    },
+    {
+      "seed": 6,
+      "global_auc": 0.5,
+      "conditional_auc": 0.5,
+      "n_high_int_windows": 0
+    },
+    {
+      "seed": 7,
+      "global_auc": 0.4963579604578564,
+      "conditional_auc": 0.5,
+      "n_high_int_windows": 0
+    },
+    {
+      "seed": 8,
+      "global_auc": 0.5,
+      "conditional_auc": 0.5,
+      "n_high_int_windows": 0
+    },
+    {
+      "seed": 9,
+      "global_auc": 0.5,
+      "conditional_auc": 0.5,
+      "n_high_int_windows": 0
+    }
+  ],
+  "global": {
+    "mean_auc": 0.4996357960457857,
+    "std_auc": 0.001092611862643078,
+    "median_auc": 0.5,
+    "fraction_above_0.75": 0.0
+  },
+  "conditional": {
+    "mean_cond_auc": 0.5,
+    "std_cond_auc": 0.0,
+    "median_cond_auc": 0.5,
+    "fraction_above_0.75": 0.0
+  },
+  "vs_null": {
+    "null_mean": 0.4955948664585501,
+    "null_std": 0.01152084815164672,
+    "null_p95": 0.5,
+    "real_mean": 0.4996357960457857,
+    "above_p95": false,
+    "above_0.75_and_p95": false
+  }
+}

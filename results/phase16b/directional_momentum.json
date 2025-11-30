@@ -1,0 +1,82 @@
+{
+  "seeds": [
+    {
+      "seed": 0,
+      "mean_directionality": 0.04213741517320981,
+      "p95_directionality": 0.10587803995458969,
+      "align_positive_fraction": 0.078
+    },
+    {
+      "seed": 1,
+      "mean_directionality": 0.05527039434744481,
+      "p95_directionality": 0.1153251776795046,
+      "align_positive_fraction": 0.0685
+    },
+    {
+      "seed": 2,
+      "mean_directionality": 0.046120086530376754,
+      "p95_directionality": 0.09719910294195871,
+      "align_positive_fraction": 0.098
+    },
+    {
+      "seed": 3,
+      "mean_directionality": 0.053399702055203946,
+      "p95_directionality": 0.09897925308532533,
+      "align_positive_fraction": 0.0995
+    },
+    {
+      "seed": 4,
+      "mean_directionality": 0.057200437839981265,
+      "p95_directionality": 0.10952047105413128,
+      "align_positive_fraction": 0.0705
+    },
+    {
+      "seed": 5,
+      "mean_directionality": 0.046678877346078874,
+      "p95_directionality": 0.08266959978851993,
+      "align_positive_fraction": 0.0935
+    },
+    {
+      "seed": 6,
+      "mean_directionality": 0.053940292538356104,
+      "p95_directionality": 0.13082340063568473,
+      "align_positive_fraction": 0.008
+    },
+    {
+      "seed": 7,
+      "mean_directionality": 0.055612950216322024,
+      "p95_directionality": 0.11192466899431001,
+      "align_positive_fraction": 0.08
+    },
+    {
+      "seed": 8,
+      "mean_directionality": 0.04092098532566632,
+      "p95_directionality": 0.08548567245262961,
+      "align_positive_fraction": 0.072
+    },
+    {
+      "seed": 9,
+      "mean_directionality": 0.058284997673042495,
+      "p95_directionality": 0.13594740482487094,
+      "align_positive_fraction": 0.0915
+    }
+  ],
+  "global": {
+    "mean": 0.05095661390456824,
+    "std": 0.0060665877377276975,
+    "median": 0.05366999729678003,
+    "p95": 0.05779694574816494,
+    "fraction_positive": 1.0
+  },
+  "vs_null": {
+    "null_mean": 0.05302843712656818,
+    "null_std": 0.008484872150451335,
+    "null_p95": 0.0683123935266089,
+    "real_mean": 0.05095661390456824,
+    "above_p95": false
+  },
+  "alignment": {
+    "mean_positive_frac": 0.07595,
+    "std_positive_frac": 0.025157951029445944
+  }
+}

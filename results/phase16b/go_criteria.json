@@ -1,0 +1,12 @@
+{
+  "criteria": {
+    "epr_above_p95": true,
+    "affinity_above_p95": true,
+    "auc_cond_pass": false,
+    "fdi_above_p95": true,
+    "drift_rms_above_p95": false
+  },
+  "n_pass": 3,
+  "required": 3,
+  "go": true
+}

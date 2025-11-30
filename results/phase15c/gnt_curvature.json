@@ -1,0 +1,18 @@
+{
+  "n_nulls": 500,
+  "n_steps": 2000,
+  "real": {
+    "mean_curvature": 63.79150182051761,
+    "median_curvature": 49.836923949005374,
+    "std_curvature": 58.170491469651246
+  },
+  "mean_p_value": 1.0,
+  "median_p_value": 1.0,
+  "effect_size": -38.27759762905621,
+  "more_intentional": false,
+  "effect_interpretation": "large",
+  "null_stats": {
+    "mean": 42.33287531770772,
+    "std": 0.5606053627179783
+  }
+}

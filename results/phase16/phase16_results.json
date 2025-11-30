@@ -1,0 +1,335 @@
+{
+  "timestamp": "2025-11-30T19:44:04.976215",
+  "n_steps": 1000,
+  "n_nulls": 100,
+  "irreversibility": {
+    "neo": {
+      "real": {
+        "kl": 0.8044472957158241,
+        "entropy_production": 0.004723457686179734
+      },
+      "null": {
+        "kl_mean": 1.2269548863783444,
+        "kl_std": 0.7127241105112377,
+        "entropy_mean": 0.009359154863585805,
+        "entropy_std": 0.006000665849225388
+      },
+      "statistics": {
+        "kl_z_score": -0.5928066476654691,
+        "kl_p_value": 0.66,
+        "entropy_z_score": -0.7725304647657245,
+        "entropy_p_value": 0.74,
+        "kl_significant": false,
+        "entropy_significant": false
+      },
+      "n_nulls": 100
+    },
+    "eva": {
+      "real": {
+        "kl": 0.9253380457614576,
+        "entropy_production": 0.0031673113644359713
+      },
+      "null": {
+        "kl_mean": 0.9037107789560692,
+        "kl_std": 0.6469457046188789,
+        "entropy_mean": 0.006790596770785281,
+        "entropy_std": 0.005034474458342893
+      },
+      "statistics": {
+        "kl_z_score": 0.03342980199262502,
+        "kl_p_value": 0.44,
+        "entropy_z_score": -0.719694863153951,
+        "entropy_p_value": 0.74,
+        "kl_significant": false,
+        "entropy_significant": false
+      },
+      "n_nulls": 100
+    }
+  },
+  "directionality": {
+    "real_mean_directionality": 0.9407887985726939,
+    "null": {
+      "mean": 0.9329830837311905,
+      "std": 0.005532654578085011,
+      "p95": 0.9416066736747136
+    },
+    "z_score": 1.4108444204020458,
+    "p_value": 0.07,
+    "significant": false,
+    "above_null_p95": false,
+    "n_nulls": 100
+  },
+  "drift": {
+    "neo": {
+      "drift": {
+        "n_prototypes": 663,
+        "total_updates": 1000,
+        "drift_norms": {
+          "mean": 0.0,
+          "std": 0.0,
+          "max": 0.0,
+          "min": 0.0
+        },
+        "cumulative_drift": 0.0,
+        "history_length": 1000
+      },
+      "penalty": {
+        "n_penalties": 337,
+        "mean": 0.17549846555784596,
+        "std": 0.08368061337756715,
+        "median": 0.16402267556376304,
+        "max": 0.691008352392252,
+        "p25": 0.1180406220263801,
+        "p75": 0.21610689507256153,
+        "n_prototypes_visited": 663
+      }
+    },
+    "eva": {
+      "drift": {
+        "n_prototypes": 653,
+        "total_updates": 1000,
+        "drift_norms": {
+          "mean": 0.0,
+          "std": 0.0,
+          "max": 0.0,
+          "min": 0.0
+        },
+        "cumulative_drift": 0.0,
+        "history_length": 1000
+      },
+      "penalty": {
+        "n_penalties": 347,
+        "mean": 0.18222647617617496,
+        "std": 0.08254692307108949,
+        "median": 0.1736834151636032,
+        "max": 0.8639177131605207,
+        "p25": 0.132683509340631,
+        "p75": 0.22098971842014153,
+        "n_prototypes_visited": 653
+      }
+    },
+    "n_steps": 1000
+  },
+  "return_cost": {
+    "neo": {
+      "n_penalties": 337,
+      "mean": 0.17549846555784596,
+      "std": 0.08368061337756715,
+      "median": 0.16402267556376304,
+      "max": 0.691008352392252,
+      "p25": 0.1180406220263801,
+      "p75": 0.21610689507256153,
+      "n_prototypes_visited": 663
+    },
+    "eva": {
+      "n_penalties": 347,
+      "mean": 0.18222647617617496,
+      "std": 0.08254692307108949,
+      "median": 0.1736834151636032,
+      "max": 0.8639177131605207,
+      "p25": 0.132683509340631,
+      "p75": 0.22098971842014153,
+      "n_prototypes_visited": 653
+    }
+  },
+  "gnt_summary": {
+    "gnt": {
+      "gnt": [
+        0.4438670812943616,
+        0.4196371828344956,
+        0.4459031329274198,
+        0.48572545952322044,
+        0.46104544152040217,
+        0.5616872057382879,
+        0.4459031329274198,
+        0.9121930872186393
+      ],
+      "t": 1000,
+      "momentum": 0.02791345624581515,
+      "stability": 0.6604586473450024,
+      "inertia": 0.9683930229379493,
+      "curvature": 28.996169773533023,
+      "attractor": {
+        "in_attractor": true,
+        "confidence": 0.9838707380674526,
+        "threshold": 0.025485753501128576,
+        "median_velocity": 0.022810220976076566
+      },
+      "n_history": 1000
+    },
+    "trajectory": {
+      "total": {
+        "path_length": 44.711338207065324,
+        "displacement": 0.43691154898230977,
+        "tortuosity": 102.33498819431678
+      },
+      "recent": {
+        "window": 31,
+        "path_length": 0.695803137339928,
+        "displacement": 0.09872618753116347,
+        "tortuosity": 7.047807220554262
+      },
+      "n_turning_points": 100,
+      "turning_points_sample": [
+        {
+          "t": 185,
+          "acceleration": 0.12297554177311794,
+          "gnt": [
+            0.46646161644915746,
+            0.406167631829742,
+            0.43179869770504636,
+            0.11461512045122861,
+            0.42157556603362273,
+            0.5463487707807617,
+            0.43179869770504636,
+            0.6451066898407665
+          ]
+        },
+        {
+          "t": 189,
+          "acceleration": 0.11959653353637384,
+          "gnt": [
+            0.5031930028692897,
+            0.4578348423710672,
+            0.48061396753458935,
+            0.08672482497886083,
+            0.46692650161858557,
+            0.524243369242357,
+            0.48061396753458935,
+            0.5807479297815314
+          ]
+        },
+        {
+          "t": 212,
+          "acceleration": 0.1158355688607341,
+          "gnt": [
+            0.48690150403086924,
+            0.4974626085592036,
+            0.46906486653096435,
+            0.03993159713185374,
+            0.46839092510268515,
+            0.4600866808464379,
+            0.46906486653096435,
+            0.6862384084679535
+          ]
+        },
+        {
+          "t": 232,
+          "acceleration": 0.11166493238326174,
+          "gnt": [
+            0.4394711460702968,
+            0.4940383063065861,
+            0.44068815158974706,
+            0.06187722718644963,
+            0.45488941429761914,
+            0.49513795052181153,
+            0.44068815158974706,
+            0.36697957586283897
+          ]
+        },
+        {
+          "t": 263,
+          "acceleration": 0.11241370714187225,
+          "gnt": [
+            0.45193159673615885,
+            0.5801839488137234,
+            0.4614396465730748,
+            0.19517705464694027,
+            0.4595374857356758,
+            0.5172542370839586,
+            0.4614396465730748,
+            0.24003441701781825
+          ]
+        }
+      ]
+    },
+    "n_events": 75,
+    "recent_events": [
+      {
+        "t": 777,
+        "event": "exit_attractor",
+        "confidence": 0.9795186005399135
+      },
+      {
+        "t": 799,
+        "event": "enter_attractor",
+        "confidence": 0.981296214564207
+      },
+      {
+        "t": 854,
+        "event": "exit_attractor",
+        "confidence": 0.9800064222430165
+      },
+      {
+        "t": 856,
+        "event": "enter_attractor",
+        "confidence": 0.982151268068414
+      },
+      {
+        "t": 871,
+        "event": "exit_attractor",
+        "confidence": 0.9804401705573524
+      },
+      {
+        "t": 875,
+        "event": "enter_attractor",
+        "confidence": 0.9814913828872323
+      },
+      {
+        "t": 928,
+        "event": "exit_attractor",
+        "confidence": 0.981310655066247
+      },
+      {
+        "t": 931,
+        "event": "enter_attractor",
+        "confidence": 0.9845662471260078
+      },
+      {
+        "t": 980,
+        "event": "exit_attractor",
+        "confidence": 0.9816062816380065
+      },
+      {
+        "t": 984,
+        "event": "enter_attractor",
+        "confidence": 0.9845673686207465
+      }
+    ],
+    "directional_momentum": {
+      "directionality": {
+        "mean": 0.9407887985726939,
+        "std": 0.11557362404046187,
+        "median": 0.979069118535891,
+        "p25": 0.9466029812074807,
+        "p75": 0.9906662721249947,
+        "fraction_positive": 0.996996996996997
+      },
+      "gradient_norm": {
+        "mean": 0.044756094301366636,
+        "std": 0.04099224976512128
+      },
+      "momentum_norm": {
+        "mean": 0.01184334836865219,
+        "std": 0.023421863019044035
+      },
+      "n_samples": 999
+    }
+  },
+  "autonomy": {
+    "history_mean": 0.1714119646079989,
+    "history_std": 0.05915370069994782,
+    "final": 0.1046046046046046,
+    "trend": "increasing"
+  },
+  "go_criteria": {
+    "irreversibility_significant": false,
+    "entropy_production_significant": false,
+    "directionality_above_null": false,
+    "drift_stable": false,
+    "return_cost_nonzero": true,
+    "autonomy_not_decreasing": true,
+    "total_passed": 2.0,
+    "total_criteria": 6
+  }
+}
