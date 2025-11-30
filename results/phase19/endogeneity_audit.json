@@ -1,0 +1,244 @@
+{
+  "audits": {
+    "magic_numbers": {
+      "test": "no_magic_numbers",
+      "findings": [
+        {
+          "file": "tools/drives19.py",
+          "line": 599,
+          "value": 3.0,
+          "function": "compute_direction",
+          "class": "DriveDirectionComputer",
+          "in_non_core": false,
+          "severity": "warning"
+        },
+        {
+          "file": "tools/phase19_structural_drives.py",
+          "line": 508,
+          "value": 60,
+          "function": "run_full_experiment",
+          "class": null,
+          "in_non_core": false,
+          "severity": "warning"
+        },
+        {
+          "file": "tools/phase19_structural_drives.py",
+          "line": 767,
+          "value": 111,
+          "function": "generate_figures",
+          "class": null,
+          "in_non_core": true,
+          "severity": "info"
+        }
+      ],
+      "n_info": 1,
+      "n_warnings": 2,
+      "n_errors": 0,
+      "pass": true
+    },
+    "semantic_labels": {
+      "test": "no_semantic_labels",
+      "findings": [
+        {
+          "file": "tools/drives19.py",
+          "line": 12,
+          "semantic": "reward",
+          "context": "NO semantic labels (reward, goal, hunger, pain, etc.)",
+          "severity": "info"
+        },
+        {
+          "file": "tools/drives19.py",
+          "line": 12,
+          "semantic": "goal",
+          "context": "NO semantic labels (reward, goal, hunger, pain, etc.)",
+          "severity": "info"
+        },
+        {
+          "file": "tools/drives19.py",
+          "line": 12,
+          "semantic": "hunger",
+          "context": "NO semantic labels (reward, goal, hunger, pain, etc.)",
+          "severity": "info"
+        },
+        {
+          "file": "tools/drives19.py",
+          "line": 12,
+          "semantic": "pain",
+          "context": "NO semantic labels (reward, goal, hunger, pain, etc.)",
+          "severity": "info"
+        },
+        {
+          "file": "tools/phase19_structural_drives.py",
+          "line": 95,
+          "semantic": "choice",
+          "context": "state = np.random.choice(N_STATES, p=state_probs[:N_STATES] / np.sum(state_probs",
+          "severity": "info"
+        },
+        {
+          "file": "tools/phase19_structural_drives.py",
+          "line": 874,
+          "semantic": "need",
+          "context": "**Passing: {go['n_pass']}/5 (need >= 3)**",
+          "severity": "info"
+        },
+        {
+          "file": "tools/phase19_structural_drives.py",
+          "line": 957,
+          "semantic": "need",
+          "context": "print(f\"\\nPassing: {go['n_pass']}/5 (need >= 3)\")",
+          "severity": "info"
+        }
+      ],
+      "n_info": 7,
+      "n_warnings": 0,
+      "n_errors": 0,
+      "pass": true
+    },
+    "provenance": {
+      "test": "provenance_traceability",
+      "findings": [
+        {
+          "file": "tools/drives19.py",
+          "n_log_calls": 7,
+          "severity": "info"
+        },
+        {
+          "file": "tools/phase19_structural_drives.py",
+          "n_log_calls": 1,
+          "severity": "info"
+        }
+      ],
+      "found_provenances": [
+        "DRIVES_PROVENANCE",
+        "DRIVES19_PROVENANCE"
+      ],
+      "found_params": [
+        "D_stab",
+        "drive_weights",
+        "D_nov",
+        "lambda_drive",
+        "D_irr",
+        "k_neighbors"
+      ],
+      "pass": true
+    },
+    "null_comparisons": {
+      "test": "null_comparisons",
+      "findings": [
+        {
+          "null_type": "disabled",
+          "mean_divergence": 0.0,
+          "severity": "info"
+        },
+        {
+          "null_type": "shuffled",
+          "mean_divergence": 156.16836090952842,
+          "severity": "info"
+        },
+        {
+          "null_type": "noise",
+          "mean_divergence": 156.16836090952842,
+          "severity": "info"
+        },
+        {
+          "criterion": "drives_endogenous",
+          "passed": true,
+          "severity": "info"
+        },
+        {
+          "criterion": "divergence_positive",
+          "passed": true,
+          "severity": "info"
+        },
+        {
+          "criterion": "divergence_above_shuffled_p95",
+          "passed": true,
+          "severity": "info"
+        },
+        {
+          "criterion": "divergence_above_noise_p95",
+          "passed": true,
+          "severity": "info"
+        },
+        {
+          "criterion": "persistence_sufficient",
+          "passed": true,
+          "severity": "info"
+        },
+        {
+          "comparison": "real_vs_shuffled_p95",
+          "real_divergence": 253.2307513990243,
+          "null_p95": 157.32314001655357,
+          "above": true,
+          "severity": "info"
+        },
+        {
+          "comparison": "real_vs_noise_p95",
+          "real_divergence": 253.2307513990243,
+          "null_p95": 157.32314001655357,
+          "above": true,
+          "severity": "info"
+        }
+      ],
+      "n_errors": 0,
+      "pass": true
+    },
+    "scale_robustness": {
+      "test": "scale_robustness",
+      "findings": {
+        "correlations": {
+          "0.5": {
+            "D_stab": 1.0,
+            "D_nov": 0.7679948124978886,
+            "D_irr": 0.9999999999999998
+          },
+          "1.0": {
+            "D_stab": 1.0,
+            "D_nov": 0.9999999999999998,
+            "D_irr": 0.9999999999999998
+          },
+          "2.0": {
+            "D_stab": 1.0,
+            "D_nov": 0.8968803157596852,
+            "D_irr": 0.9999999999999998
+          },
+          "5.0": {
+            "D_stab": 1.0,
+            "D_nov": 0.7340657870067232,
+            "D_irr": 0.9999999999999998
+          }
+        },
+        "min_avg_correlation": 0.9113552623355744,
+        "drive_means": {
+          "0.5": {
+            "D_stab": 0.5098190941109735,
+            "D_nov": 0.5871903161354011,
+            "D_irr": 0.4945040864529078
+          },
+          "1.0": {
+            "D_stab": 0.5098190941109735,
+            "D_nov": 0.5501523426516699,
+            "D_irr": 0.4945040864529078
+          },
+          "2.0": {
+            "D_stab": 0.5098190941109735,
+            "D_nov": 0.5244611067125997,
+            "D_irr": 0.4945040864529078
+          },
+          "5.0": {
+            "D_stab": 0.5098190941109735,
+            "D_nov": 0.46651449144583085,
+            "D_irr": 0.4945040864529078
+          }
+        }
+      },
+      "min_avg_correlation": 0.9113552623355744,
+      "note": "Drive dynamics should be qualitatively similar across scales",
+      "pass": "True"
+    }
+  },
+  "n_passed": 5,
+  "n_total": 5,
+  "all_passed": true,
+  "certification": "ENDOGENOUS"
+}
