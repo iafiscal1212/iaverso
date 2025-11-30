@@ -1,0 +1,62 @@
+{
+  "auc_full_shuffle": {
+    "name": "AUC",
+    "null_type": "full_shuffle",
+    "observed": 0.827106635501324,
+    "null_mean": 0.5000423665637675,
+    "null_std": 0.0033588511114556224,
+    "null_q025": 0.4943461174791312,
+    "null_q975": 0.5070606604973951,
+    "p_value": 0.0,
+    "n_bootstrap": 200,
+    "significant": true
+  },
+  "corr_inter_agent": {
+    "name": "Inter-agent correlation",
+    "null_type": "inter_agent_shuffle",
+    "observed": 0.9308320923289831,
+    "null_mean": -0.0009123178606652665,
+    "null_std": 0.009236007110674163,
+    "null_q025": -0.01816990693878467,
+    "null_q975": 0.017982215272334623,
+    "p_value": 0.0,
+    "n_bootstrap": 200,
+    "significant": true
+  },
+  "auc_time_reversal": {
+    "name": "AUC time-reversed",
+    "null_type": "time_reversal",
+    "observed": 0.827106635501324,
+    "null_mean": 0.49975803036721905,
+    "null_std": 0.0036321005405955528,
+    "null_q025": 0.49304821251875836,
+    "null_q975": 0.5072203989820715,
+    "p_value": 0.0,
+    "n_bootstrap": 200,
+    "significant": true
+  },
+  "intensity_shuffle": {
+    "name": "Mean coupling intensity",
+    "null_type": "event_time_shuffle",
+    "observed": 0.3645166977791252,
+    "null_mean": 0.18246191744410367,
+    "null_std": 0.0023704230156309587,
+    "null_q025": 0.17790173860845981,
+    "null_q975": 0.18686875276250714,
+    "p_value": 0.0,
+    "n_bootstrap": 200,
+    "significant": true
+  },
+  "entropy_stability": {
+    "name": "Entropy stability",
+    "null_type": "random_walk",
+    "observed": 0.999705300252492,
+    "null_mean": 0.9422867502672893,
+    "null_std": 0.01396647290915683,
+    "null_q025": 0.9122221405895309,
+    "null_q975": 0.9638710482638272,
+    "p_value": 0.0,
+    "n_bootstrap": 200,
+    "significant": true
+  }
+}

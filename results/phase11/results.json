@@ -1,0 +1,38 @@
+{
+  "n_cycles": 25000,
+  "n_bilateral": 20471,
+  "n_gw_broadcasts": 12184,
+  "n_ruptures": 6614,
+  "self_error_neo_mean": 0.03484692982732514,
+  "self_error_eva_mean": 0.03765929630705412,
+  "metacognition_neo": 0.22499999999999998,
+  "metacognition_eva": 0.5449999999999999,
+  "identity_neo_mean": 0.7120148550575115,
+  "identity_eva_mean": 0.7103685956760702,
+  "entropy_neo": 0.5259220473538114,
+  "entropy_eva": 0.5214850716080675,
+  "neo_identity_signature": {
+    "profile": {
+      "SLEEP": 0.9410460380976228,
+      "LEARN": 0.013413554858857035,
+      "WORK": 0.02943027161860693,
+      "SOCIAL": 0.009989191088565476,
+      "WAKE": 0.006120944336348436
+    },
+    "consistency": 0.7295077771911264,
+    "n_ruptures": 3430,
+    "transition_entropy": 0.6962841648006715
+  },
+  "eva_identity_signature": {
+    "profile": {
+      "LEARN": 0.03479489221025597,
+      "SLEEP": 0.9164872070514161,
+      "WORK": 0.029687773067297404,
+      "WAKE": 0.018990099659980348,
+      "SOCIAL": 4.002801105068362e-05
+    },
+    "consistency": 0.7608927054399862,
+    "n_ruptures": 3184,
+    "transition_entropy": 0.6870044169247013
+  }
+}
