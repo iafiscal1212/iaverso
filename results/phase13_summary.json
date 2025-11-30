@@ -1,0 +1,9 @@
+{
+  "neo_episodes_total": 9,
+  "eva_episodes_total": 9,
+  "neo_ini_final": 0.39540546303448565,
+  "eva_ini_final": 0.6055796099395544,
+  "ini_correlation": -0.23167434764772493,
+  "shared_episodes": 307,
+  "n_cycles": 25000
+}
