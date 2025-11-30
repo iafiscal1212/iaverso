@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-12-01T00:24:50.075426",
+  "total_time_seconds": 30.7052264213562,
+  "phases": {
+    "R1": {
+      "go": true,
+      "criteria_passed": 5,
+      "criteria_total": 5
+    },
+    "R2": {
+      "go": true,
+      "criteria_passed": 5,
+      "criteria_total": 5
+    },
+    "R3": {
+      "go": true,
+      "criteria_passed": 4,
+      "criteria_total": 5
+    },
+    "R4": {
+      "go": true,
+      "criteria_passed": 5,
+      "criteria_total": 5
+    },
+    "R5": {
+      "go": true,
+      "criteria_passed": 3,
+      "criteria_total": 5
+    }
+  },
+  "all_go": true
+}
