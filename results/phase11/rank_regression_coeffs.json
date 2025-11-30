@@ -1,0 +1,44 @@
+{
+  "coefficients": {
+    "intercept": 0.75535965988365,
+    "kappa": -0.2121011490967017,
+    "GW": -0.21210114909670114,
+    "entropy": -0.07658331459126942,
+    "state_WAKE": 0.0041417800670307675,
+    "state_WORK": -0.002227783770790151,
+    "state_LEARN": 0.0,
+    "state_SOCIAL": -0.021676319281682246
+  },
+  "p_values": {
+    "intercept": 0.0,
+    "kappa": 0.0,
+    "GW": 0.0,
+    "entropy": 0.04,
+    "state_WAKE": 0.98,
+    "state_WORK": 0.9,
+    "state_LEARN": 0.0,
+    "state_SOCIAL": 0.47
+  },
+  "ci_low": {
+    "intercept": 0.694974462839809,
+    "kappa": -0.2513987771903861,
+    "GW": -0.25139877719038645,
+    "entropy": -0.14877224160520083,
+    "state_WAKE": -0.04679241220892738,
+    "state_WORK": -0.05424297052350389,
+    "state_LEARN": 0.0,
+    "state_SOCIAL": -0.07127079227770107
+  },
+  "ci_high": {
+    "intercept": 0.8124013610744354,
+    "kappa": -0.17770793951357852,
+    "GW": -0.17770793951357794,
+    "entropy": -0.007797298024473139,
+    "state_WAKE": 0.062264389746902425,
+    "state_WORK": 0.044914347954034296,
+    "state_LEARN": 0.0,
+    "state_SOCIAL": 0.038484811438722275
+  },
+  "r_squared": 0.19349535382048366,
+  "kappa_significant": false
+}

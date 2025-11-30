@@ -1,0 +1,12 @@
+# Provenance Log NEO-EVA
+## Fecha: 2025-11-30T16:14:19.257796
+## Versión: PHASE12_ENDOGENOUS
+
+## Parámetros Registrados
+Total: 50
+
+## Definiciones
+### window_size
+- Definición: max(10, floor(sqrt(T)))
+- Fuente: historia interna
+
