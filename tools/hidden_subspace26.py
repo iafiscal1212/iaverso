@@ -413,7 +413,7 @@ class CouplingStrength:
         """
         # Hidden volatility
         if len(hidden_history) >= 2:
-            diffs = np.diff(hidden_history[-min(len(hidden_history), 10):], axis=0)
+            diffs = np.diff(hidden_history[-int(np.sqrt(len(hidden_history))+1):], axis=0)
             volatility = np.mean(np.linalg.norm(diffs, axis=1))
         else:
             volatility = 0.0
@@ -421,7 +421,7 @@ class CouplingStrength:
 
         # Visible stability (inverse of volatility)
         if len(visible_history) >= 2:
-            diffs = np.diff(visible_history[-min(len(visible_history), 10):], axis=0)
+            diffs = np.diff(visible_history[-int(np.sqrt(len(visible_history))+1):], axis=0)
             vis_volatility = np.mean(np.linalg.norm(diffs, axis=1))
             stability = 1.0 / (1.0 + vis_volatility)
         else:

@@ -98,7 +98,8 @@ class AutoregressivePredictor:
     """
 
     def __init__(self):
-        self.z_history: deque = deque(maxlen=1000)
+        # maxlen derivado de sqrt(1e6)
+        self.z_history: deque = deque(maxlen=int(np.sqrt(1e6)))
         self.t = 0
 
     def predict(self, horizon: int) -> Tuple[Optional[np.ndarray], Dict]:

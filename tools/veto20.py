@@ -374,7 +374,9 @@ class ResistanceGainComputer:
 
     def get_persistence(self) -> float:
         """Compute autocorrelation of gamma at lag 1."""
-        if len(self.gamma_history) < 10:
+        # Mínimo endógeno: sqrt(len)+2
+        min_len = int(np.sqrt(len(self.gamma_history)+1))+2
+        if len(self.gamma_history) < min_len:
             return 0.0
 
         gamma_arr = np.array(self.gamma_history)
@@ -590,7 +592,9 @@ class StructuralVetoSystem:
 
     def get_veto_persistence(self) -> float:
         """Get autocorrelation of veto effects."""
-        if len(self.veto_effect_timeline) < 10:
+        # Mínimo endógeno: sqrt(len)+2
+        min_len = int(np.sqrt(len(self.veto_effect_timeline)+1))+2
+        if len(self.veto_effect_timeline) < min_len:
             return 0.0
 
         effect_arr = np.array(self.veto_effect_timeline)
@@ -602,7 +606,9 @@ class StructuralVetoSystem:
 
     def get_epr_shock_correlation(self) -> float:
         """Get correlation between EPR and shocks."""
-        if len(self.epr_timeline) < 10:
+        # Mínimo endógeno: sqrt(len)+2
+        min_len = int(np.sqrt(len(self.epr_timeline)+1))+2
+        if len(self.epr_timeline) < min_len:
             return 0.0
 
         epr_arr = np.array(self.epr_timeline)

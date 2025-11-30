@@ -81,7 +81,7 @@ class UncertaintyEstimator:
 
         # State variance from history
         if len(z_history) >= 2:
-            state_var = np.var([np.linalg.norm(h) for h in z_history[-10:]])
+            state_var = np.var([np.linalg.norm(h) for h in z_history[-int(np.sqrt(len(z_history))+1):]])
         else:
             state_var = 1.0
         self.state_variances.append(state_var)
@@ -129,7 +129,7 @@ class PerturbationGenerator:
         """
         # Variance from history
         if len(z_history) >= 2:
-            z_array = np.array(z_history[-min(len(z_history), 20):])
+            z_array = np.array(z_history[-int(np.sqrt(len(z_history))+1):])
             base_var = np.var(z_array, axis=0)
         else:
             base_var = np.ones(self.d_state)
@@ -164,7 +164,8 @@ class DynamicsSimulator:
     def __init__(self, d_state: int):
         self.d_state = d_state
         # Simple linear dynamics (will be replaced by learned)
-        self.W = np.eye(d_state) * 0.95
+        # Inicialización endógena: (1 - 1/d) para estabilidad
+        self.W = np.eye(d_state) * (1.0 - 1.0 / d_state)
 
     def set_dynamics(self, W: np.ndarray):
         """Set dynamics matrix from learned model."""
@@ -209,10 +210,14 @@ class CounterfactualGenerator:
         self.counterfactual_history = []
 
     def generate(self, z_current: np.ndarray, uncertainty_rank: float,
-                 z_history: List[np.ndarray], horizon: int = 10) -> List[Dict]:
+                 z_history: List[np.ndarray], horizon: int = None) -> List[Dict]:
         """
         Generate multiple counterfactual trajectories.
         """
+        # Horizon endógeno si no se proporciona: sqrt(len(history))
+        if horizon is None:
+            horizon = int(np.sqrt(len(z_history) + 1)) + 1
+
         counterfactuals = []
 
         # Actual trajectory (no perturbation)
@@ -350,7 +355,7 @@ class InternalCounterfactuals:
         self.t = 0
 
     def step(self, z: np.ndarray, z_hat: Optional[np.ndarray] = None,
-             generate_cf: bool = False, horizon: int = 10) -> Dict:
+             generate_cf: bool = False, horizon: int = None) -> Dict:
         """
         Process one step, optionally generating counterfactuals.
 
@@ -374,7 +379,9 @@ class InternalCounterfactuals:
             'counterfactuals_generated': False
         }
 
-        if generate_cf and len(self.z_history) >= 5:
+        # Mínimo endógeno para generar counterfactuals
+        min_history = int(np.sqrt(self.d_state)) + 1
+        if generate_cf and len(self.z_history) >= min_history:
             # Generate counterfactuals
             counterfactuals = self.cf_generator.generate(
                 z, uncertainty_rank, self.z_history, horizon

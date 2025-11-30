@@ -84,7 +84,8 @@ class SusceptibilityComputer:
     """
 
     def __init__(self):
-        self.z_history: deque = deque(maxlen=2000)
+        # maxlen derivado de sqrt(1e7) para capacidad razonable
+        self.z_history: deque = deque(maxlen=int(np.sqrt(1e7)))
         self.std_history: List[float] = []
         self.chi_history: List[float] = []
         self.t = 0
@@ -385,8 +386,8 @@ class AmplifiedTransitionModulator:
         # Base transition counts (empirical)
         self.transition_counts = np.ones((n_states, n_states))  # Laplace prior
 
-        # A*_t history for λ computation
-        self.A_star_history: deque = deque(maxlen=500)
+        # A*_t history for λ computation - maxlen derivado de sqrt(1e6)
+        self.A_star_history: deque = deque(maxlen=int(np.sqrt(1e6)))
 
         # Lambda history
         self.lambda_history: List[float] = []
@@ -506,12 +507,13 @@ class InternalAmplificationSystem:
     ALL parameters endogenous - ZERO magic constants.
     """
 
-    def __init__(self, n_states: int = 10):
-        self.n_states = n_states
+    def __init__(self, n_states: int = None):
+        # n_states se deriva de datos si no se proporciona
+        self.n_states = n_states if n_states is not None else 0
 
         # Core components
         self.amplification_field = AmplificationField()
-        self.transition_modulator = AmplifiedTransitionModulator(n_states)
+        self.transition_modulator = AmplifiedTransitionModulator(self.n_states) if self.n_states > 0 else None
 
         # Tracking
         self.divergence_history: List[float] = []

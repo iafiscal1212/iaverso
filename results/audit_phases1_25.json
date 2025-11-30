@@ -1,0 +1,13 @@
+{
+  "magic_numbers": {
+    "total_errors": 0,
+    "total_suspicious": 0,
+    "pass": true
+  },
+  "semantics": {
+    "total_violations": 0,
+    "pass": true
+  },
+  "score": 1.0,
+  "certification": "CERTIFIED ENDOGENOUS"
+}

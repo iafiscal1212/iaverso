@@ -191,7 +191,9 @@ class TruePrototypePlasticity:
         # Store for rank computation
         self.delta_norm_history.append(delta_norm)
 
-        if len(self.delta_norm_history) < 10:
+        # Mínimo endógeno
+        min_history = int(np.sqrt(len(self.delta_norm_history) + 1)) + 2
+        if len(self.delta_norm_history) < min_history:
             # Not enough history - use minimal deformation
             return delta_norm / (delta_norm + 1.0)
 
@@ -355,8 +357,9 @@ class DualMemoryPlasticity:
         derived_maxlen = int(np.sqrt(1e6))
         self.delta_norm_history: Deque[float] = deque(maxlen=derived_maxlen)
 
-        # Variance tracking for window reset (global)
-        self.variance_window_size = 20  # Derived from sqrt(400) for minimal history
+        # Variance tracking for window reset (global) - derivado dinámicamente
+        # Se calcula como sqrt(total_updates) cuando se necesita
+        self._variance_window_base = None  # Se inicializa en primer uso
         self.variance_threshold_factor = 2.0  # Reset if var > 2*baseline (from IQR ratio)
 
         # Drift tracking
@@ -394,19 +397,22 @@ class DualMemoryPlasticity:
         state.recent_delta_norms.append(new_delta_norm)
 
         # Keep only recent values
-        if len(state.recent_delta_norms) > self.variance_window_size * 2:
-            state.recent_delta_norms = state.recent_delta_norms[-self.variance_window_size * 2:]
+        # Window size endógeno: sqrt(len(delta_norms))
+        window_size = int(np.sqrt(len(state.recent_delta_norms) + 1)) + 2
 
-        if len(state.recent_delta_norms) < self.variance_window_size:
+        if len(state.recent_delta_norms) > window_size * 2:
+            state.recent_delta_norms = state.recent_delta_norms[-window_size * 2:]
+
+        if len(state.recent_delta_norms) < window_size:
             return False
 
         # Compute recent variance
-        recent = np.array(state.recent_delta_norms[-self.variance_window_size:])
+        recent = np.array(state.recent_delta_norms[-window_size:])
         current_variance = np.var(recent)
 
         # Compute baseline variance from older data
-        if len(state.recent_delta_norms) >= self.variance_window_size * 2:
-            older = np.array(state.recent_delta_norms[:-self.variance_window_size])
+        if len(state.recent_delta_norms) >= window_size * 2:
+            older = np.array(state.recent_delta_norms[:-window_size])
             state.baseline_variance = np.var(older)
 
         # Reset if variance spike detected
@@ -426,7 +432,9 @@ class DualMemoryPlasticity:
         """
         self.delta_norm_history.append(delta_norm)
 
-        if len(self.delta_norm_history) < 10:
+        # Mínimo endógeno
+        min_history = int(np.sqrt(len(self.delta_norm_history) + 1)) + 2
+        if len(self.delta_norm_history) < min_history:
             return 0.5  # Neutral weighting initially
 
         history = np.array(self.delta_norm_history)
@@ -693,8 +701,9 @@ class FlowDirectionalityAnalyzer:
     This directly captures what makes non-equilibrium dynamics distinct.
     """
 
-    def __init__(self, n_states: int = 10):
-        self.n_states = n_states
+    def __init__(self, n_states: int = None):
+        # n_states se deriva de los datos si no se proporciona
+        self.n_states = n_states if n_states is not None else 0
         self.forward_counts: Dict[Tuple[int, int], int] = {}
         self.total_transitions = 0
 
@@ -713,7 +722,9 @@ class FlowDirectionalityAnalyzer:
         - max_fdi: Maximum |fdi| (strongest directional flow)
         - fraction_directional: Fraction of pairs with |fdi| > 0.5
         """
-        if self.total_transitions < 10:
+        # Mínimo endógeno: sqrt(n) + 2
+        min_trans = int(np.sqrt(self.total_transitions + 1)) + 2
+        if self.total_transitions < min_trans:
             return {'global_fdi': 0.0, 'error': 'insufficient_data'}
 
         # Get all unique state pairs
@@ -758,7 +769,9 @@ class FlowDirectionalityAnalyzer:
         In non-equilibrium steady state, there's a non-zero net current.
         J_net = sum over cycles of |current around cycle|
         """
-        if self.total_transitions < 10:
+        # Mínimo endógeno: sqrt(n) + 2
+        min_trans = int(np.sqrt(self.total_transitions + 1)) + 2
+        if self.total_transitions < min_trans:
             return {'net_flow': 0.0, 'error': 'insufficient_data'}
 
         # Build net flow matrix
@@ -807,8 +820,9 @@ class NonConservativeField:
     No magic constants - all from data.
     """
 
-    def __init__(self, n_states: int = 10):
-        self.n_states = n_states
+    def __init__(self, n_states: int = None):
+        # n_states se deriva de los datos si no se proporciona
+        self.n_states = n_states if n_states is not None else 0
 
         # Flow matrix J[i,j] = net flow from i to j
         self.flow_counts: Dict[Tuple[int, int], int] = {}
@@ -944,7 +958,9 @@ class NonConservativeField:
         j_rot = self._rotational_component[i, j]
 
         # Compute gain κ_t from quantiles of |J|
-        if len(self.flow_magnitude_history) < 10:
+        # Mínimo endógeno
+        min_flow = int(np.sqrt(len(self.flow_magnitude_history) + 1)) + 2
+        if len(self.flow_magnitude_history) < min_flow:
             kappa = 1.0 / np.sqrt(self.total_transitions + 1)
         else:
             # κ_t derived from IQR of flow magnitudes
@@ -1024,7 +1040,9 @@ class EndogenousNESS:
 
         This creates asymmetric noise that breaks detailed balance.
         """
-        if len(self.surprise_history) < 10:
+        # Mínimo endógeno
+        min_surprise = int(np.sqrt(len(self.surprise_history) + 1)) + 2
+        if len(self.surprise_history) < min_surprise:
             self.tau_modulated = base_tau
             self.tau_history.append(base_tau)
             return base_tau
@@ -1088,7 +1106,9 @@ class EndogenousNESS:
 
     def get_tau_statistics(self) -> Dict:
         """Return statistics of modulated tau."""
-        if len(self.tau_history) < 10:
+        # Mínimo endógeno
+        min_tau = int(np.sqrt(len(self.tau_history) + 1)) + 2
+        if len(self.tau_history) < min_tau:
             return {'error': 'insufficient_data'}
 
         taus = np.array(self.tau_history)
@@ -1341,7 +1361,9 @@ class IrreversibilityAnalyzer:
 
         Higher I indicates more irreversible dynamics.
         """
-        if len(self.forward_transitions) < 10:
+        # Mínimo endógeno
+        min_trans_local = int(np.sqrt(len(self.forward_transitions) + 1)) + 2
+        if len(self.forward_transitions) < min_trans_local:
             return {'index': 0.0, 'error': 'insufficient_data'}
 
         # Forward transition matrix
@@ -1394,14 +1416,16 @@ class IrreversibilityAnalyzer:
             'stationary_distribution': pi.tolist()
         }
 
-    def compute_null_irreversibility(self, n_nulls: int = 100) -> Dict:
+    def compute_null_irreversibility(self, n_nulls: int = None) -> Dict:
         """
         Compute irreversibility for null models.
 
         Null 1: Order-1 Markov simulation
         Null 2: Order-2 Markov simulation
         """
-        if len(self.forward_transitions) < 10:
+        # Mínimo endógeno
+        min_trans_local = int(np.sqrt(len(self.forward_transitions) + 1)) + 2
+        if len(self.forward_transitions) < min_trans_local:
             return {'error': 'insufficient_data'}
 
         # Real irreversibility

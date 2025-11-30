@@ -169,11 +169,14 @@ class EndogenousNoiseGenerator:
         """
         if len(report_history) < 2:
             # Initial: pseudo-random based on dimension
-            noise = np.array([np.sin((i + 1) * 0.1) for i in range(self.d_report)])
+            # Factor (i+1)/d_report normaliza por la dimensión
+            noise = np.array([np.sin((i + 1) / self.d_report) for i in range(self.d_report)])
         else:
             # Derive from history structure
             # Use cross-correlation patterns
-            recent = np.array(report_history[-min(len(report_history), 5):])
+            # Window endógeno
+            window = int(np.sqrt(len(report_history))) + 1
+            recent = np.array(report_history[-window:])
 
             # SVD of recent history
             try:

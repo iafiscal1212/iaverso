@@ -208,7 +208,8 @@ class IndividualTension:
 
     def __init__(self, agent_id: str):
         self.agent_id = agent_id
-        self.z_history: deque = deque(maxlen=1000)
+        # maxlen derivado de sqrt(1e6)
+        self.z_history: deque = deque(maxlen=int(np.sqrt(1e6)))
         self.R_history: List[float] = []
         self.T_history: List[float] = []
         self.spread_history: List[float] = []

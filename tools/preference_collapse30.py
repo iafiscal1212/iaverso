@@ -88,18 +88,22 @@ class AttractorDetector:
         self.t += 1
         self.trajectory.append(z.copy())
 
-        # Only detect after sufficient history
-        min_points = max(10, int(np.sqrt(self.t)))
+        # Only detect after sufficient history - mínimo endógeno
+        min_points = int(np.sqrt(self.t) * np.sqrt(self.d_state)) + 1
         if len(self.trajectory) < min_points:
             return self.attractors
 
         # Detect attractors via density clustering
         # Use simple k-means-like approach with endogenous k
-        recent = np.array(self.trajectory[-min(len(self.trajectory), 100):])
+        # Window endógeno basado en t y dimensión
+        window = int(np.sqrt(len(self.trajectory)) * np.sqrt(self.d_state)) + 1
+        recent = np.array(self.trajectory[-window:])
 
         # Number of clusters from data variance
         total_var = np.trace(np.cov(recent.T)) if recent.shape[0] > 1 else 1.0
-        k = max(1, min(5, int(np.sqrt(total_var * self.d_state))))
+        # k máximo = sqrt(d_state) para mantener interpretabilidad
+        k_max = int(np.sqrt(self.d_state)) + 1
+        k = max(1, min(k_max, int(np.sqrt(total_var * self.d_state))))
 
         # Simple clustering: find k densest regions
         attractors = []
@@ -170,8 +174,9 @@ class InstabilityDetector:
             # Distance to nearest attractor
             min_dist = min(np.linalg.norm(z - a['center']) for a in attractors)
 
-            # Recent volatility
-            recent = trajectory[-min(len(trajectory), 10):]
+            # Recent volatility - window endógeno
+            window = int(np.sqrt(len(trajectory))) + 1
+            recent = trajectory[-window:]
             if len(recent) >= 2:
                 diffs = np.diff(recent, axis=0)
                 volatility = np.mean(np.linalg.norm(diffs, axis=1))
@@ -228,7 +233,8 @@ class CollapseTrigger:
         Threshold is based on time since last collapse.
         """
         # Minimum interval increases with collapse count (adaptation)
-        min_interval = int(np.sqrt(self.collapse_count + 1) * 10)
+        # Factor endógeno: sqrt(collapses) * sqrt(collapses+1)
+        min_interval = int(np.sqrt(self.collapse_count + 1) * np.sqrt(self.collapse_count + 2))
 
         if t - self.last_collapse_t < min_interval:
             return False
@@ -285,8 +291,9 @@ class PreferenceReconfigurer:
             a['strength'] = max(0.0, a['strength'] - eta * instability_rank)
             a['age'] += 1
 
-        # Remove very weak attractors
-        attractors = [a for a in attractors if a['strength'] > 0.1]
+        # Remove very weak attractors - threshold endógeno basado en número de atractores
+        strength_threshold = 1.0 / (len(attractors) + 1)
+        attractors = [a for a in attractors if a['strength'] > strength_threshold]
 
         # Merge closest pair if at least 2 remain
         if len(attractors) >= 2:
@@ -373,10 +380,17 @@ class IdentityTracker:
         for a, w in zip(attractors, weights):
             new_identity += w * a['center']
 
-        # Track discontinuity
+        # Track discontinuity - threshold basado en variabilidad histórica
         if len(self.identity_history) > 0:
             change = np.linalg.norm(new_identity - self.identity)
-            if collapsed and change > 0.1:
+            # Threshold endógeno: std de cambios previos
+            if len(self.identity_history) >= 2:
+                prev_changes = [np.linalg.norm(self.identity_history[i+1] - self.identity_history[i])
+                               for i in range(len(self.identity_history)-1)]
+                change_threshold = np.mean(prev_changes) + np.std(prev_changes) if prev_changes else change
+            else:
+                change_threshold = change
+            if collapsed and change > change_threshold:
                 self.discontinuities.append({
                     't': t,
                     'change': change,

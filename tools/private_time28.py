@@ -72,7 +72,7 @@ class NoveltyDetector:
 
     def __init__(self):
         self.mu = None
-        self.sigma = 1.0
+        self.sigma = None  # Será inicializado desde los datos
         self.history = []
         self.novelty_history = []
         self.t = 0
@@ -89,6 +89,7 @@ class NoveltyDetector:
 
         if self.mu is None:
             self.mu = z.copy()
+            self.sigma = np.linalg.norm(z) + 1e-10  # Inicializar desde primer dato
             novelty = 0.0
         else:
             # Deviation from expected
@@ -97,9 +98,10 @@ class NoveltyDetector:
             # Update mean
             self.mu = (1 - alpha) * self.mu + alpha * z
 
-            # Update sigma (running std of deviations)
+            # Update sigma (running std of deviations) - window endógeno
             if len(self.history) > 1:
-                recent_devs = [np.linalg.norm(h - self.mu) for h in self.history[-min(len(self.history), 10):]]
+                window = int(np.sqrt(len(self.history))) + 1
+                recent_devs = [np.linalg.norm(h - self.mu) for h in self.history[-window:]]
                 self.sigma = np.std(recent_devs) + 1e-10
 
             # Novelty = normalized deviation
@@ -282,39 +284,41 @@ class TimePerceptionMetrics:
         self.tau_history.append(tau)
         self.dt_history.append(dt)
 
-        if len(self.dt_history) < 3:
+        if len(self.dt_history) < int(np.sqrt(len(self.dt_history) + 1)) + 1:
             return {
-                'time_feel': 'normal',
+                'time_regime': 'nominal',
                 'acceleration': 0.0,
                 'period_type': 'initial'
             }
 
-        # Recent time behavior
-        recent_dt = self.dt_history[-min(len(self.dt_history), 10):]
+        # Recent time behavior - window endógeno
+        window = int(np.sqrt(len(self.dt_history))) + 1
+        recent_dt = self.dt_history[-window:]
 
         mean_dt = np.mean(recent_dt)
         current_dt = recent_dt[-1]
 
         # Time acceleration (second derivative)
-        if len(self.dt_history) >= 3:
+        if len(self.dt_history) >= int(np.sqrt(len(self.dt_history) + 1)) + 1:
             acceleration = self.dt_history[-1] - self.dt_history[-2]
         else:
             acceleration = 0.0
 
-        # Classify time perception
+        # Classify time regime (matemático, sin semántica humana)
         if current_dt > mean_dt + np.std(recent_dt):
-            time_feel = 'fast'  # Time moving quickly (high novelty)
+            time_regime = 'accelerated'  # dt > mean + std
         elif current_dt < mean_dt - np.std(recent_dt):
-            time_feel = 'slow'  # Time moving slowly (high stability)
+            time_regime = 'decelerated'  # dt < mean - std
         else:
-            time_feel = 'normal'
+            time_regime = 'nominal'  # dt ≈ mean
 
-        # Period type based on trend
-        if len(self.dt_history) >= 5:
+        # Period type based on trend - threshold endógeno basado en variabilidad
+        if len(self.dt_history) >= int(np.sqrt(len(self.dt_history) + 1)) + 2:
             trend = np.polyfit(range(5), self.dt_history[-5:], 1)[0]
-            if trend > 0.01:
+            trend_threshold = np.std(self.dt_history) / np.sqrt(len(self.dt_history))
+            if trend > trend_threshold:
                 period_type = 'accelerating'
-            elif trend < -0.01:
+            elif trend < -trend_threshold:
                 period_type = 'decelerating'
             else:
                 period_type = 'steady'
@@ -324,11 +328,11 @@ class TimePerceptionMetrics:
         PRIVATETIME_PROVENANCE.log(
             'time_perception',
             'dt_analysis',
-            'time_feel = classify(dt vs mean_dt)'
+            'time_regime = classify(dt vs mean_dt)'
         )
 
         return {
-            'time_feel': time_feel,
+            'time_regime': time_regime,
             'acceleration': acceleration,
             'period_type': period_type,
             'mean_dt': mean_dt,
@@ -398,7 +402,7 @@ class PrivateInternalTime:
             'novelty_rank': alpha_t,
             'stability': stability,
             'stability_rank': beta_t,
-            'time_feel': perception['time_feel'],
+            'time_regime': perception['time_regime'],
             'acceleration': perception['acceleration'],
             'period_type': perception['period_type']
         }
@@ -445,7 +449,7 @@ PRIVATETIME28_PROVENANCE = {
         'beta_t: beta_t = rank(stability)',
         'tau: tau_{t+1} = tau_t + alpha_t - beta_t',
         'dilation: dilation = tau / t_external',
-        'perception: time_feel = classify(dt vs mean_dt)'
+        'perception: time_regime = classify(dt vs mean_dt)'
     ],
     'no_magic_numbers': True,
     'no_semantic_labels': True
@@ -475,7 +479,7 @@ if __name__ == "__main__":
     print(f"    External time: {result['t_external']}")
     print(f"    Internal time (tau): {result['tau']:.2f}")
     print(f"    Time ratio: {result['time_ratio']:.3f}")
-    print(f"    Time feel: {result['time_feel']}")
+    print(f"    Time regime: {result['time_regime']}")
 
     print(f"\n[2] Phase 2: High stability (convergent dynamics)")
 
@@ -489,7 +493,7 @@ if __name__ == "__main__":
     print(f"    External time: {result['t_external']}")
     print(f"    Internal time (tau): {result['tau']:.2f}")
     print(f"    Time ratio: {result['time_ratio']:.3f}")
-    print(f"    Time feel: {result['time_feel']}")
+    print(f"    Time regime: {result['time_regime']}")
 
     print(f"\n[3] Phase 3: Return to novelty")
 
@@ -501,7 +505,7 @@ if __name__ == "__main__":
     print(f"    External time: {result['t_external']}")
     print(f"    Internal time (tau): {result['tau']:.2f}")
     print(f"    Time ratio: {result['time_ratio']:.3f}")
-    print(f"    Time feel: {result['time_feel']}")
+    print(f"    Time regime: {result['time_regime']}")
 
     # Statistics
     stats = pit.get_time_stats()

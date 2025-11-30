@@ -88,7 +88,7 @@ class VisiblePredictor:
         Uses least squares on recent transitions.
         W_pred = argmin sum ||W @ z_t - z_{t+1}||^2
         """
-        if len(self.visible_history) < 3:
+        if len(self.visible_history) < int(np.sqrt(self.t + 1)) + 1:
             return
 
         # Adaptive window
@@ -107,7 +107,8 @@ class VisiblePredictor:
         try:
             XtX = X.T @ X
             # Regularize
-            reg = np.trace(XtX) / (self.d_visible + 1e-10) * 0.01
+            # Regularización endógena: proporcional a la varianza de los datos
+            reg = np.trace(XtX) / (self.d_visible + 1e-10) / (window + 1)
             XtX_reg = XtX + reg * np.eye(self.d_visible)
             XtX_inv = np.linalg.inv(XtX_reg)
             self.W_pred = (Y.T @ X @ XtX_inv).T
@@ -196,9 +197,10 @@ class SelfSurpriseComputer:
         else:
             surprise_direction = np.zeros_like(error)
 
-        # Volatility of surprise
+        # Volatility of surprise - window endógeno
         if len(self.surprise_history) > 1:
-            surprise_volatility = np.std(self.surprise_history[-min(len(self.surprise_history), 10):])
+            window = int(np.sqrt(len(self.surprise_history))) + 1
+            surprise_volatility = np.std(self.surprise_history[-window:])
         else:
             surprise_volatility = 0.0
 
@@ -249,8 +251,8 @@ class SurpriseIntegrator:
         mean_surprise = np.mean(self.surprises[-window:])
 
         # Trend detection
-        if len(self.surprises) >= 3:
-            recent = self.surprises[-min(len(self.surprises), 5):]
+        if len(self.surprises) >= int(np.sqrt(self.t + 1)) + 1:
+            recent = self.surprises[-int(np.sqrt(len(self.surprises))+1):]
             if len(recent) >= 2:
                 trend = (recent[-1] - recent[0]) / len(recent)
             else:
@@ -260,8 +262,8 @@ class SurpriseIntegrator:
         self.trends.append(trend)
 
         # Oscillation detection
-        if len(self.surprises) >= 4:
-            diffs = np.diff(self.surprises[-min(len(self.surprises), 10):])
+        if len(self.surprises) >= int(np.sqrt(self.t + 1)) + 2:
+            diffs = np.diff(self.surprises[-int(np.sqrt(len(self.surprises))+1):])
             sign_changes = np.sum(np.abs(np.diff(np.sign(diffs)))) / 2
             oscillation = sign_changes / len(diffs) if len(diffs) > 0 else 0.0
         else:

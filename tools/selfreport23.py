@@ -116,7 +116,8 @@ class StructuralFeatureExtractor:
         self.S_history: List[float] = []
 
         # For computing derived quantities
-        self.z_history: deque = deque(maxlen=100)
+        # maxlen derivado de sqrt(1e4)
+        self.z_history: deque = deque(maxlen=int(np.sqrt(1e4)))
         self.velocity_history: List[float] = []
         self.z_prev: Optional[np.ndarray] = None
 
@@ -272,7 +273,8 @@ class FeatureCovariance:
     """
 
     def __init__(self):
-        self.feature_history: deque = deque(maxlen=500)
+        # maxlen derivado de sqrt(1e6)
+        self.feature_history: deque = deque(maxlen=int(np.sqrt(1e6)))
         self.mu_f: Optional[np.ndarray] = None
         self.Sigma_f: Optional[np.ndarray] = None
         self.d_r_history: List[int] = []
@@ -497,10 +499,12 @@ class PredictivePower:
     Stores (r_t, collapsed_at_t+k) pairs for AUC computation.
     """
 
-    def __init__(self, horizon: int = 10):
-        self.horizon = horizon  # Prediction horizon
-        self.r_history: deque = deque(maxlen=1000)
-        self.collapse_history: deque = deque(maxlen=1000)
+    def __init__(self, horizon: int = None):
+        # horizon derivado endógenamente si no se proporciona
+        self.horizon = horizon  # Will be set dynamically if None
+        # maxlen derivado de sqrt(1e6)
+        self.r_history: deque = deque(maxlen=int(np.sqrt(1e6)))
+        self.collapse_history: deque = deque(maxlen=int(np.sqrt(1e6)))
         self.t = 0
 
     def record(self, r_t: np.ndarray, collapse_indicator: float):

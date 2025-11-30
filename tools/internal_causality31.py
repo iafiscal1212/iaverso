@@ -165,7 +165,9 @@ class TransferEntropyComputer:
         H_Y_given_Ylag = self.entropy_estimator.conditional_entropy(Y_t, Y_lag)
 
         # H(Y_t | Y_{t-1}, X_{t-1}) - approximate via combined variable
-        combined = Y_lag + X_lag * 0.1  # Simple combination
+        # Factor endógeno: 1/d para normalizar por dimensionalidad
+        d = len(Y_t[0]) if len(Y_t) > 0 and hasattr(Y_t[0], '__len__') else 1
+        combined = Y_lag + X_lag / (d + 1)  # Normalizado por dimensión
         H_Y_given_both = self.entropy_estimator.conditional_entropy(Y_t, combined)
 
         # TE = H(Y|Y_lag) - H(Y|Y_lag, X_lag)
@@ -296,12 +298,16 @@ class ArchitectureReorderer:
         self.current_order = list(range(d_state))
         self.reorder_history = []
 
-    def reorder(self, causal_hierarchy: List[int], threshold: float = 0.1) -> List[int]:
+    def reorder(self, causal_hierarchy: List[int], threshold: float = None) -> List[int]:
         """
         Potentially reorder based on causal hierarchy.
 
         Only reorders if hierarchy differs significantly from current.
         """
+        # Threshold endógeno si no se proporciona: 1/d_state
+        if threshold is None:
+            threshold = 1.0 / self.d_state
+
         # Check if reordering is needed
         if causal_hierarchy == self.current_order:
             return self.current_order
@@ -359,7 +365,7 @@ class InternalCausalityReconstruction:
         self.trajectory.append(z.copy())
 
         # Only analyze with sufficient history
-        min_history = max(20, int(np.sqrt(self.t) * 5))
+        min_history = max(int(np.sqrt(self.d_state)*2)+1, int(np.sqrt(self.t) * 5))
         if len(self.trajectory) < min_history:
             return {
                 'causal_matrix': self.graph_builder.causal_matrix,
@@ -368,19 +374,20 @@ class InternalCausalityReconstruction:
                 'sufficient_data': False
             }
 
-        # Build causal graph from recent trajectory
-        window = min(len(self.trajectory), 100)
+        # Build causal graph from recent trajectory - window endógeno
+        window = int(np.sqrt(len(self.trajectory)) * np.sqrt(self.d_state)) + 1
         traj_array = np.array(self.trajectory[-window:])
 
         causal_matrix = self.graph_builder.build(traj_array)
         hierarchy = self.graph_builder.get_causal_hierarchy()
         order = self.reorderer.reorder(hierarchy)
 
-        # Find dominant causal relationships
+        # Find dominant causal relationships - threshold endógeno
+        causal_threshold = 1.0 / self.d_state
         dominant_causes = []
         for i in range(self.d_state):
             max_j = np.argmax(np.abs(causal_matrix[i, :]))
-            if causal_matrix[i, max_j] > 0.1:
+            if causal_matrix[i, max_j] > causal_threshold:
                 dominant_causes.append((i, max_j, causal_matrix[i, max_j]))
 
         return {
@@ -402,8 +409,10 @@ class InternalCausalityReconstruction:
         net_influence = np.sum(cm, axis=1) - np.sum(cm, axis=0)
 
         # Identify sources (net positive) and sinks (net negative)
-        sources = np.where(net_influence > 0.1)[0].tolist()
-        sinks = np.where(net_influence < -0.1)[0].tolist()
+        # Threshold endógeno basado en variabilidad
+        influence_threshold = np.std(net_influence) if len(net_influence) > 0 else 0
+        sources = np.where(net_influence > influence_threshold)[0].tolist()
+        sinks = np.where(net_influence < -influence_threshold)[0].tolist()
 
         return {
             'net_influence': net_influence.tolist(),

@@ -203,8 +203,8 @@ class IdentityConsolidator:
         if len(z_history) < 3:
             return current_I
 
-        # Use recent states for new identity base
-        window = min(len(z_history), 10)
+        # Use recent states for new identity base - window endógeno
+        window = int(np.sqrt(len(z_history))) + 1
         recent = np.array(z_history[-window:])
 
         # New identity: weighted average favoring recent
@@ -213,16 +213,17 @@ class IdentityConsolidator:
 
         new_I = np.sum(recent * weights[:, np.newaxis], axis=0)
 
-        # Blend with old identity
-        blend_factor = 0.5  # Could be made endogenous
-        consolidated_I = blend_factor * new_I + (1 - blend_factor) * current_I
+        # Blend with old identity - factor endógeno basado en rupture severity
+        # Más ruptures = más peso a la nueva identidad
+        blend_factor = 1.0 / (1.0 + self.consolidation_count)
+        consolidated_I = (1 - blend_factor) * new_I + blend_factor * current_I
 
         self.consolidation_count += 1
 
         IDENTITY_LOSS_PROVENANCE.log(
             'consolidate',
             'weighted_blend',
-            'I_new = 0.5 * weighted_mean(recent) + 0.5 * I_old'
+            'I_new = (1-β)*weighted_mean(recent) + β*I_old, β=1/(1+n_consolidations)'
         )
 
         return consolidated_I
@@ -247,15 +248,16 @@ class LossTracker:
         """
         Update cumulative loss.
         """
-        # Decay old loss + add new
-        alpha = 0.1
+        # Decay old loss + add new - alpha endógeno
+        n = len(self.loss_history) + 1
+        alpha = 1.0 / np.sqrt(n + 1)
         self.cumulative_loss = (1 - alpha) * self.cumulative_loss + alpha * d
         self.loss_history.append(self.cumulative_loss)
 
         IDENTITY_LOSS_PROVENANCE.log(
             'cumulative_loss',
             'decaying_sum',
-            'L = (1-alpha)*L + alpha*d_t'
+            'L = (1-alpha)*L + alpha*d_t, alpha=1/sqrt(n+1)'
         )
 
         return self.cumulative_loss

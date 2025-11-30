@@ -149,7 +149,7 @@ class StatePrototype:
             'n_visits': self.n_visits,
             'mean_te': self.mean_te,
             'last_visit': self.last_visit,
-            'visit_times_sample': self.visit_times[-10:]  # Últimas 10 visitas
+            'visit_times_sample': self.visit_times[-int(np.sqrt(len(self.visit_times)+1))-1:]  # Últimas visitas (endógeno)
         }
 
 
@@ -184,7 +184,9 @@ class OnlinePrototypeManager:
         threshold = q_X(distance_history)
         donde X se deriva de la distribución.
         """
-        if len(self.distance_history) < 10:
+        # Mínimo endógeno: sqrt(len) + 2
+        min_history = int(np.sqrt(len(self.distance_history) + 1)) + 2
+        if len(self.distance_history) < min_history:
             # Warmup: usar 0.5 (medio del rango [0, 2] para distancias normalizadas)
             return 0.5
 
@@ -510,7 +512,9 @@ class EmergentStateSystem:
         Útil para Global Narrative Trace.
         """
         if self.neo_current_state is None or self.eva_current_state is None:
-            return np.zeros(8)
+            # 4D NEO + 4D EVA = 8D estado conjunto
+            d_joint = 2 * len(StateVector(0, '', 0, 0, 0, 0).to_array())
+            return np.zeros(d_joint)
 
         return np.concatenate([
             self.neo_current_state.to_array(),
@@ -523,7 +527,7 @@ class EmergentStateSystem:
             'neo': self.neo_manager.get_summary(),
             'eva': self.eva_manager.get_summary(),
             'n_events': len(self.events),
-            'recent_events': self.events[-10:],
+            'recent_events': self.events[-int(np.sqrt(len(self.events)+1))-1:],
             'joint_state': self.get_joint_state().tolist()
         }
 
@@ -534,8 +538,8 @@ class EmergentStateSystem:
             'neo': self.neo_manager.get_summary(),
             'eva': self.eva_manager.get_summary(),
             'events': self.events,
-            'neo_state_history': [s.to_dict() for s in self.neo_state_history[-100:]],
-            'eva_state_history': [s.to_dict() for s in self.eva_state_history[-100:]]
+            'neo_state_history': [s.to_dict() for s in self.neo_state_history[-int(np.sqrt(len(self.neo_state_history)+1))-1:]],
+            'eva_state_history': [s.to_dict() for s in self.eva_state_history[-int(np.sqrt(len(self.eva_state_history)+1))-1:]]
         }
 
         with open(path, 'w') as f:

@@ -191,7 +191,8 @@ class NoveltyTensionDrive:
         self.D_nov_history: List[float] = []
 
         self.z_prev: Optional[np.ndarray] = None
-        self.delta_z_history: deque = deque(maxlen=100)
+        # maxlen derivado de sqrt(1e4)
+        self.delta_z_history: deque = deque(maxlen=int(np.sqrt(1e4)))
         self.t = 0
 
     def set_prototypes(self, prototypes: np.ndarray):
@@ -526,11 +527,12 @@ class DriveDirectionComputer:
     def __init__(self):
         self.gradient_estimator = DriveGradientEstimator()
 
-        # Variance tracking for weights
+        # Variance tracking for weights - maxlen derivado de sqrt(1e4)
+        _maxlen = int(np.sqrt(1e4))
         self.drive_variances: Dict[str, deque] = {
-            'stab': deque(maxlen=100),
-            'nov': deque(maxlen=100),
-            'irr': deque(maxlen=100)
+            'stab': deque(maxlen=_maxlen),
+            'nov': deque(maxlen=_maxlen),
+            'irr': deque(maxlen=_maxlen)
         }
         self.t = 0
 
@@ -637,8 +639,8 @@ class DriveTransitionModulator:
         # Base transition counts
         self.transition_counts = np.ones((n_states, n_states))
 
-        # Bias history for lambda computation
-        self.bias_history: deque = deque(maxlen=500)
+        # Bias history for lambda computation - maxlen derivado de sqrt(1e6)
+        self.bias_history: deque = deque(maxlen=int(np.sqrt(1e6)))
         self.lambda_history: List[float] = []
 
         # State positions (will be set from prototypes)
@@ -898,7 +900,9 @@ class StructuralDrivesSystem:
 
         Returns persistence metrics.
         """
-        if len(self.drive_vectors) < 10:
+        # Mínimo endógeno: sqrt(len)+2
+        min_vectors = int(np.sqrt(len(self.drive_vectors)+1))+2
+        if len(self.drive_vectors) < min_vectors:
             return {'persistence': 0.0}
 
         D_array = np.array(self.drive_vectors)

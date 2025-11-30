@@ -71,7 +71,7 @@ class EpisodeMarker:
         self.current_episode_tau_start = 0.0
 
     def mark(self, t: int, tau: float, novelty: float,
-             novelty_threshold: float = 0.8) -> Optional[Dict]:
+             novelty_history: List[float] = None) -> Optional[Dict]:
         """
         Check if new episode should start.
 
@@ -82,6 +82,12 @@ class EpisodeMarker:
             self.current_episode_start = t
             self.current_episode_tau_start = tau
             return None
+
+        # Threshold endógeno: percentil 90 de la historia de novelty
+        if novelty_history is not None and len(novelty_history) > 2:
+            novelty_threshold = np.percentile(novelty_history, 90)
+        else:
+            novelty_threshold = novelty  # No trigger sin historia
 
         # High novelty triggers new episode
         if novelty > novelty_threshold:
@@ -255,8 +261,9 @@ class StructuralNow:
                 'type': 'initial'
             }
 
-        # Width of now based on recent tau variability
-        recent = tau_history[-min(len(tau_history), 10):]
+        # Width of now based on recent tau variability - window endógeno
+        window = int(np.sqrt(len(tau_history))) + 1
+        recent = tau_history[-window:]
         width = np.std(recent)
         self.now_widths.append(width)
 
@@ -320,8 +327,8 @@ class PersonalTimeReconstruction:
         # Add to temporal ordering
         self.temporal_ordering.add(self.t, tau, z)
 
-        # Check for new episode
-        new_episode = self.episode_marker.mark(self.t, tau, novelty_rank)
+        # Check for new episode - pasar historia para threshold endógeno
+        new_episode = self.episode_marker.mark(self.t, tau, novelty_rank, self.novelty_history)
 
         # Compute subjective duration if we have history
         if len(self.tau_history) >= 2:

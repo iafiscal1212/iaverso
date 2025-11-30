@@ -124,7 +124,8 @@ class StationarityDetector:
             ranks = rankdata(self.stationarity_history)
             rank_percentile = ranks[-1] / len(ranks)
 
-            if rank_percentile > 0.9:  # Top 10% stationarity
+            # Top percentile estabilidad - threshold = 1 - 1/d
+        if rank_percentile > (1.0 - 1.0/self.d_state):  # Top 10% stationarity
                 self.stationary_points.append({
                     'z': z.copy(),
                     'stationarity': stationarity,

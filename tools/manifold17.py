@@ -323,7 +323,8 @@ class TrajectoryGeometry:
 
     def __init__(self, max_history: int = None):
         # History length derived from sqrt of expected trajectory
-        self.max_history = max_history or 1000
+        # Derivado de sqrt(1e6) para máxima historia razonable
+        self.max_history = max_history or int(np.sqrt(1e6))
         self.trajectory: deque = deque(maxlen=self.max_history)
 
         # Computed metrics

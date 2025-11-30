@@ -171,7 +171,7 @@ class ConsistencyDetector:
 
         # Normalize by typical state magnitude
         if len(z_history) > 0:
-            typical_mag = np.mean([np.linalg.norm(h) for h in z_history[-10:]])
+            typical_mag = np.mean([np.linalg.norm(h) for h in z_history[-int(np.sqrt(len(z_history))+1):]])
         else:
             typical_mag = 1.0
 

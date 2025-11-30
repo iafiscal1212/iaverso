@@ -133,8 +133,9 @@ class ParameterSelector:
         ranks = rankdata(grad_mags)
         rank_percentiles = ranks / len(ranks)
 
-        # Select top half by gradient magnitude (endogenous threshold)
-        threshold = 0.5  # median
+        # Select by gradient magnitude - threshold es la mediana (percentil 0.5)
+        # Esto es matemáticamente equivalente a seleccionar la mitad superior
+        threshold = np.median(rank_percentiles)
         selection = (rank_percentiles > threshold).astype(float)
 
         self.selection_history.append(selection.copy())
@@ -230,13 +231,14 @@ class GradientComputer:
         z_hat = self.predict(z)
         error = z_hat - z_actual
 
-        # Gradient: 2 * error * z^T (outer product flattened)
-        grad_W = 2 * np.outer(error, z)
+        # Gradient: error * z^T (outer product flattened)
+        # Nota: el factor 2 de la derivada se absorbe en el learning rate
+        grad_W = np.outer(error, z)
 
         SELFSUPERVISION_PROVENANCE.log(
             'grad_W',
             'analytical_gradient',
-            '∇_W L = 2 * (W@z - z_actual) @ z.T'
+            '∇_W L = (W@z - z_actual) @ z.T'
         )
 
         return grad_W.flatten()
@@ -379,7 +381,7 @@ SSL32_PROVENANCE = {
         'L_t: L_t = ||z_hat - z_actual||²',
         'selection: select params with rank(|grad|) > 0.5',
         'eta_t: η_t = 1/√(n+1) * (0.5 + rank(improvement))',
-        'grad_W: ∇_W L = 2 * (W@z - z_actual) @ z.T',
+        'grad_W: ∇_W L = (W@z - z_actual) @ z.T',
         'W_update: W_{t+1} = W_t - η * selection * ∇_W L'
     ],
     'no_magic_numbers': True,

@@ -1,0 +1,1462 @@
+{
+  "magic_numbers": {
+    "violations": [],
+    "phase_results": {
+      "26": {
+        "file": "hidden_subspace26.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      },
+      "27": {
+        "file": "self_blind27.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      },
+      "28": {
+        "file": "private_time28.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      },
+      "29": {
+        "file": "meta_resistance29.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      },
+      "30": {
+        "file": "preference_collapse30.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      },
+      "31": {
+        "file": "internal_causality31.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      },
+      "32": {
+        "file": "self_supervision32.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      },
+      "33": {
+        "file": "counterfactuals33.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      },
+      "34": {
+        "file": "causal_preferences34.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      },
+      "35": {
+        "file": "emergent_values35.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      },
+      "36": {
+        "file": "identity_loss36.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      },
+      "37": {
+        "file": "personal_time37.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      },
+      "38": {
+        "file": "bidirectional_otherness38.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      },
+      "39": {
+        "file": "shared_field39.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      },
+      "40": {
+        "file": "proto_subjectivity40.py",
+        "violations": 0,
+        "errors": 0,
+        "suspicious": 0
+      }
+    },
+    "total_errors": 0,
+    "total_suspicious": 0,
+    "pass": true
+  },
+  "semantics": {
+    "violations": [],
+    "phase_results": {
+      "26": {
+        "file": "hidden_subspace26.py",
+        "violations": 0
+      },
+      "27": {
+        "file": "self_blind27.py",
+        "violations": 0
+      },
+      "28": {
+        "file": "private_time28.py",
+        "violations": 0
+      },
+      "29": {
+        "file": "meta_resistance29.py",
+        "violations": 0
+      },
+      "30": {
+        "file": "preference_collapse30.py",
+        "violations": 0
+      },
+      "31": {
+        "file": "internal_causality31.py",
+        "violations": 0
+      },
+      "32": {
+        "file": "self_supervision32.py",
+        "violations": 0
+      },
+      "33": {
+        "file": "counterfactuals33.py",
+        "violations": 0
+      },
+      "34": {
+        "file": "causal_preferences34.py",
+        "violations": 0
+      },
+      "35": {
+        "file": "emergent_values35.py",
+        "violations": 0
+      },
+      "36": {
+        "file": "identity_loss36.py",
+        "violations": 0
+      },
+      "37": {
+        "file": "personal_time37.py",
+        "violations": 0
+      },
+      "38": {
+        "file": "bidirectional_otherness38.py",
+        "violations": 0
+      },
+      "39": {
+        "file": "shared_field39.py",
+        "violations": 0
+      },
+      "40": {
+        "file": "proto_subjectivity40.py",
+        "violations": 0
+      }
+    },
+    "total_violations": 0,
+    "pass": true
+  },
+  "provenance": {
+    "provenance": [
+      {
+        "phase": 26,
+        "parameter": "eta_t",
+        "description": "Learning rate",
+        "line": 162,
+        "formula": "1/sqrt(t+1) (endogenous learning rate)",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 26,
+        "parameter": "eta_t",
+        "description": "Learning rate",
+        "line": 254,
+        "formula": "1/sqrt(t+1)",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 26,
+        "parameter": "eta_t",
+        "description": "Learning rate",
+        "line": 260,
+        "formula": "1.0 / np.sqrt(self.t + 1)",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 26,
+        "parameter": "eta_t",
+        "description": "Learning rate",
+        "line": 592,
+        "formula": "1/sqrt(t+1)',",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 26,
+        "parameter": "d_hidden",
+        "description": "Hidden dimension",
+        "line": 70,
+        "formula": "ceil(d_visible * ratio)",
+        "origin": "Derived: ceil(d_visible * ratio)",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 26,
+        "parameter": "d_hidden",
+        "description": "Hidden dimension",
+        "line": 123,
+        "formula": "max(1, ceil(d_visible * rank(complexity)))",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 26,
+        "parameter": "d_hidden",
+        "description": "Hidden dimension",
+        "line": 140,
+        "formula": "max(1, int(np.ceil(d_visible * rank_ratio)))",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 26,
+        "parameter": "d_hidden",
+        "description": "Hidden dimension",
+        "line": 145,
+        "formula": "ceil(d_visible * rank(complexity))'",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 26,
+        "parameter": "d_hidden",
+        "description": "Hidden dimension",
+        "line": 169,
+        "formula": "d_hidden",
+        "origin": "Derived: d_hidden",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 26,
+        "parameter": "d_hidden",
+        "description": "Hidden dimension",
+        "line": 169,
+        "formula": "d_hidden",
+        "origin": "Derived: d_hidden",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 26,
+        "parameter": "d_hidden",
+        "description": "Hidden dimension",
+        "line": 307,
+        "formula": "d_hidden",
+        "origin": "Derived: d_hidden",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 26,
+        "parameter": "d_hidden",
+        "description": "Hidden dimension",
+        "line": 307,
+        "formula": "d_hidden",
+        "origin": "Derived: d_hidden",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 26,
+        "parameter": "d_hidden",
+        "description": "Hidden dimension",
+        "line": 491,
+        "formula": "self.dim_selector.select_dimension(",
+        "origin": "Derived: self.dim_selector.select_dimension(",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 26,
+        "parameter": "d_hidden",
+        "description": "Hidden dimension",
+        "line": 591,
+        "formula": "ceil(d_visible * rank(complexity))',",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 26,
+        "parameter": "epsilon",
+        "description": "Coupling strength",
+        "line": 444,
+        "formula": "rank_vol * (1 - rank_stab)",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 26,
+        "parameter": "epsilon",
+        "description": "Coupling strength",
+        "line": 539,
+        "formula": "self.coupling.compute(",
+        "origin": "Derived: self.coupling.compute(",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 27,
+        "parameter": "alpha",
+        "description": "EMA coefficient",
+        "line": 184,
+        "formula": "1.0 / np.sqrt(len(self.surprise_history) + 1)",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 27,
+        "parameter": "alpha",
+        "description": "EMA coefficient",
+        "line": 283,
+        "formula": "1/sqrt(t+1))'",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 27,
+        "parameter": "alpha",
+        "description": "EMA coefficient",
+        "line": 412,
+        "formula": "1/sqrt(t+1))',",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 27,
+        "parameter": "epsilon",
+        "description": "Coupling strength",
+        "line": 180,
+        "formula": "np.linalg.norm(error)",
+        "origin": "norm - geometry-derived",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 27,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 106,
+        "formula": "Y.T @ X @ (X.T @ X)^{-1}",
+        "origin": "SUSPICIOUS: Y.T @ X @ (X.T @ X)^{-1}",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "eta_t",
+        "description": "Learning rate",
+        "line": 17,
+        "formula": "rank(stability) \u2192 slows time during stability",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "eta_t",
+        "description": "Learning rate",
+        "line": 204,
+        "formula": "rank(stability) - time deceleration from stability",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "eta_t",
+        "description": "Learning rate",
+        "line": 384,
+        "formula": "self.stability_detector.get_rank()",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 28,
+        "parameter": "eta_t",
+        "description": "Learning rate",
+        "line": 449,
+        "formula": "rank(stability)',",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "alpha_t",
+        "description": "EMA coefficient",
+        "line": 16,
+        "formula": "rank(novelty)  \u2192 accelerates time during novelty",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "alpha_t",
+        "description": "EMA coefficient",
+        "line": 203,
+        "formula": "rank(novelty) - time acceleration from novelty",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "alpha_t",
+        "description": "EMA coefficient",
+        "line": 383,
+        "formula": "self.novelty_detector.get_rank()",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 28,
+        "parameter": "alpha_t",
+        "description": "EMA coefficient",
+        "line": 447,
+        "formula": "rank(novelty)',",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "alpha",
+        "description": "EMA coefficient",
+        "line": 88,
+        "formula": "1.0 / np.sqrt(self.t + 1)",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 28,
+        "parameter": "tau",
+        "description": "Private time",
+        "line": 210,
+        "formula": "0.0  # Internal time starts at 0",
+        "origin": "SUSPICIOUS: 0.0  # Internal time starts at 0",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "tau",
+        "description": "Private time",
+        "line": 210,
+        "formula": "0.0  # Internal time starts at 0",
+        "origin": "SUSPICIOUS: 0.0  # Internal time starts at 0",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "tau",
+        "description": "Private time",
+        "line": 239,
+        "formula": "self.tau + dt_internal",
+        "origin": "Derived: self.tau + dt_internal",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 28,
+        "parameter": "tau",
+        "description": "Private time",
+        "line": 239,
+        "formula": "self.tau + dt_internal",
+        "origin": "Derived: self.tau + dt_internal",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 28,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 318,
+        "formula": "np.std(self.dt_history) / np.sqrt(len(self.dt_hist",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 28,
+        "parameter": "sigma",
+        "description": "Noise scale",
+        "line": 75,
+        "formula": "None  # Ser\u00e1 inicializado desde los datos",
+        "origin": "Derived: None  # Ser\u00e1 inicializado desde los dato",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "sigma",
+        "description": "Noise scale",
+        "line": 75,
+        "formula": "None  # Ser\u00e1 inicializado desde los datos",
+        "origin": "Derived: None  # Ser\u00e1 inicializado desde los dato",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "sigma",
+        "description": "Noise scale",
+        "line": 92,
+        "formula": "np.linalg.norm(z) + 1e-10  # Inicializar desde pri",
+        "origin": "norm - geometry-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "sigma",
+        "description": "Noise scale",
+        "line": 92,
+        "formula": "np.linalg.norm(z) + 1e-10  # Inicializar desde pri",
+        "origin": "norm - geometry-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "sigma",
+        "description": "Noise scale",
+        "line": 105,
+        "formula": "np.std(recent_devs) + 1e-10",
+        "origin": "variance/std - statistics-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "sigma",
+        "description": "Noise scale",
+        "line": 105,
+        "formula": "np.std(recent_devs) + 1e-10",
+        "origin": "variance/std - statistics-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 29,
+        "parameter": "opacity",
+        "description": "Meta-resistance opacity",
+        "line": 129,
+        "formula": "gradient_rank",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 29,
+        "parameter": "opacity",
+        "description": "Meta-resistance opacity",
+        "line": 354,
+        "formula": "self.opacity_computer.compute(gradient_rank)",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 30,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 119,
+        "formula": "np.median(dists[dists > 0]) if np.any(dists > 0) e",
+        "origin": "median - statistics-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 30,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 244,
+        "formula": "1.0 / (1.0 + np.log(interval + 1))",
+        "origin": "log() - scale-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 30,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 295,
+        "formula": "1.0 / (len(attractors) + 1)",
+        "origin": "data dimension - structure-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 30,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 390,
+        "formula": "np.mean(prev_changes) + np.std(prev_changes) if pr",
+        "origin": "variance/std - statistics-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 30,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 392,
+        "formula": "change",
+        "origin": "Derived: change",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 31,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 309,
+        "formula": "1.0 / self.d_state",
+        "origin": "SUSPICIOUS: 1.0 / self.d_state",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 31,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 386,
+        "formula": "1.0 / self.d_state",
+        "origin": "SUSPICIOUS: 1.0 / self.d_state",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 31,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 413,
+        "formula": "np.std(net_influence) if len(net_influence) > 0 el",
+        "origin": "variance/std - statistics-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 31,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 446,
+        "formula": "0.1 (rank-based)'",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 32,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 138,
+        "formula": "np.median(rank_percentiles)",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 32,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 218,
+        "formula": "np.eye(d_state)",
+        "origin": "Derived: np.eye(d_state)",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 32,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 218,
+        "formula": "np.eye(d_state)",
+        "origin": "Derived: np.eye(d_state)",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 32,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 236,
+        "formula": "np.outer(error, z)",
+        "origin": "Derived: np.outer(error, z)",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 32,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 251,
+        "formula": "gradient.reshape(self.d_state, self.d_state)",
+        "origin": "data dimension - structure-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 32,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 259,
+        "formula": "self.W - eta * grad_W * selection_2d[:self.d_state",
+        "origin": "SUSPICIOUS: self.W - eta * grad_W * selection_2d[:se",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 32,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 259,
+        "formula": "self.W - eta * grad_W * selection_2d[:self.d_state",
+        "origin": "SUSPICIOUS: self.W - eta * grad_W * selection_2d[:se",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 33,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 168,
+        "formula": "np.eye(d_state) * (1.0 - 1.0 / d_state)",
+        "origin": "SUSPICIOUS: np.eye(d_state) * (1.0 - 1.0 / d_state)",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 33,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 168,
+        "formula": "np.eye(d_state) * (1.0 - 1.0 / d_state)",
+        "origin": "SUSPICIOUS: np.eye(d_state) * (1.0 - 1.0 / d_state)",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 33,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 172,
+        "formula": "W.copy()",
+        "origin": "Derived: W.copy()",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 33,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 172,
+        "formula": "W.copy()",
+        "origin": "Derived: W.copy()",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 35,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 127,
+        "formula": "1 - 1/d",
+        "origin": "SUSPICIOUS: 1 - 1/d",
+        "endogenous": false,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 35,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 184,
+        "formula": "np.median(dists[dists > 0])",
+        "origin": "median - statistics-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 36,
+        "parameter": "alpha",
+        "description": "EMA coefficient",
+        "line": 78,
+        "formula": "1/sqrt(t+1)",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 36,
+        "parameter": "alpha",
+        "description": "EMA coefficient",
+        "line": 81,
+        "formula": "1.0 / np.sqrt(self.t + 1)",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 36,
+        "parameter": "alpha",
+        "description": "EMA coefficient",
+        "line": 253,
+        "formula": "1.0 / np.sqrt(n + 1)",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 36,
+        "parameter": "alpha",
+        "description": "EMA coefficient",
+        "line": 260,
+        "formula": "1/sqrt(n+1)'",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 36,
+        "parameter": "alpha",
+        "description": "EMA coefficient",
+        "line": 366,
+        "formula": "1/sqrt(t+1)',",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 36,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 162,
+        "formula": "mean_d + 2 * std_d",
+        "origin": "variance/std - statistics-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 37,
+        "parameter": "tau",
+        "description": "Private time",
+        "line": 309,
+        "formula": "0.0",
+        "origin": "SUSPICIOUS: 0.0",
+        "endogenous": false,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 37,
+        "parameter": "tau",
+        "description": "Private time",
+        "line": 309,
+        "formula": "0.0",
+        "origin": "SUSPICIOUS: 0.0",
+        "endogenous": false,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 37,
+        "parameter": "tau",
+        "description": "Private time",
+        "line": 323,
+        "formula": "tau",
+        "origin": "Derived: tau",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 37,
+        "parameter": "tau",
+        "description": "Private time",
+        "line": 323,
+        "formula": "tau",
+        "origin": "Derived: tau",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 37,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 88,
+        "formula": "np.percentile(novelty_history, 90)",
+        "origin": "SUSPICIOUS: np.percentile(novelty_history, 90)",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 37,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 90,
+        "formula": "novelty  # No trigger sin historia",
+        "origin": "Derived: novelty  # No trigger sin historia",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 38,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 65,
+        "formula": "np.eye(d_state) * (1.0 / np.sqrt(d_state))",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 38,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 65,
+        "formula": "np.eye(d_state) * (1.0 / np.sqrt(d_state))",
+        "origin": "1/sqrt(t+1) - time-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 38,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 101,
+        "formula": "self.W + eta * grad",
+        "origin": "Derived: self.W + eta * grad",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 38,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 101,
+        "formula": "self.W + eta * grad",
+        "origin": "Derived: self.W + eta * grad",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 39,
+        "parameter": "d_hidden",
+        "description": "Hidden dimension",
+        "line": 101,
+        "formula": "d_hidden",
+        "origin": "Derived: d_hidden",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 39,
+        "parameter": "d_hidden",
+        "description": "Hidden dimension",
+        "line": 101,
+        "formula": "d_hidden",
+        "origin": "Derived: d_hidden",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 39,
+        "parameter": "d_hidden",
+        "description": "Hidden dimension",
+        "line": 253,
+        "formula": "d_hidden",
+        "origin": "Derived: d_hidden",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 39,
+        "parameter": "d_hidden",
+        "description": "Hidden dimension",
+        "line": 253,
+        "formula": "d_hidden",
+        "origin": "Derived: d_hidden",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 39,
+        "parameter": "psi",
+        "description": "Shared field",
+        "line": 112,
+        "formula": "alpha_n * z_n_hidden[:min_d] + alpha_e * z_e_hidde",
+        "origin": "Derived: alpha_n * z_n_hidden[:min_d] + alpha_e *",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 39,
+        "parameter": "psi",
+        "description": "Shared field",
+        "line": 116,
+        "formula": "np.concatenate([psi, np.zeros(self.d_hidden - len(",
+        "origin": "data dimension - structure-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 39,
+        "parameter": "psi",
+        "description": "Shared field",
+        "line": 280,
+        "formula": "self.field_computer.compute(z_n_hidden, z_e_hidden",
+        "origin": "Derived: self.field_computer.compute(z_n_hidden, ",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 40,
+        "parameter": "d_s",
+        "description": "Signal dimension",
+        "line": 409,
+        "formula": "np.std(scores)",
+        "origin": "variance/std - statistics-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 40,
+        "parameter": "opacity",
+        "description": "Meta-resistance opacity",
+        "line": 70,
+        "formula": "report_gradient_rank",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 40,
+        "parameter": "opacity",
+        "description": "Meta-resistance opacity",
+        "line": 324,
+        "formula": "OpacityMeasure()",
+        "origin": "Derived: OpacityMeasure()",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 40,
+        "parameter": "opacity",
+        "description": "Meta-resistance opacity",
+        "line": 324,
+        "formula": "OpacityMeasure()",
+        "origin": "Derived: OpacityMeasure()",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 40,
+        "parameter": "opacity",
+        "description": "Meta-resistance opacity",
+        "line": 354,
+        "formula": "self.opacity.compute(report_gradient_rank)",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 40,
+        "parameter": "opacity",
+        "description": "Meta-resistance opacity",
+        "line": 466,
+        "formula": "rank(||\u2207r||)',",
+        "origin": "rank() - percentile-derived",
+        "endogenous": true,
+        "depends_on_t": false,
+        "depends_on_history": false
+      }
+    ],
+    "suspicious": [
+      {
+        "phase": 27,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 106,
+        "formula": "Y.T @ X @ (X.T @ X)^{-1}",
+        "origin": "SUSPICIOUS: Y.T @ X @ (X.T @ X)^{-1}",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "tau",
+        "description": "Private time",
+        "line": 210,
+        "formula": "0.0  # Internal time starts at 0",
+        "origin": "SUSPICIOUS: 0.0  # Internal time starts at 0",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 28,
+        "parameter": "tau",
+        "description": "Private time",
+        "line": 210,
+        "formula": "0.0  # Internal time starts at 0",
+        "origin": "SUSPICIOUS: 0.0  # Internal time starts at 0",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 31,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 309,
+        "formula": "1.0 / self.d_state",
+        "origin": "SUSPICIOUS: 1.0 / self.d_state",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 31,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 386,
+        "formula": "1.0 / self.d_state",
+        "origin": "SUSPICIOUS: 1.0 / self.d_state",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 32,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 259,
+        "formula": "self.W - eta * grad_W * selection_2d[:self.d_state",
+        "origin": "SUSPICIOUS: self.W - eta * grad_W * selection_2d[:se",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 32,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 259,
+        "formula": "self.W - eta * grad_W * selection_2d[:self.d_state",
+        "origin": "SUSPICIOUS: self.W - eta * grad_W * selection_2d[:se",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": true
+      },
+      {
+        "phase": 33,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 168,
+        "formula": "np.eye(d_state) * (1.0 - 1.0 / d_state)",
+        "origin": "SUSPICIOUS: np.eye(d_state) * (1.0 - 1.0 / d_state)",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 33,
+        "parameter": "W",
+        "description": "Weight matrix",
+        "line": 168,
+        "formula": "np.eye(d_state) * (1.0 - 1.0 / d_state)",
+        "origin": "SUSPICIOUS: np.eye(d_state) * (1.0 - 1.0 / d_state)",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": false
+      },
+      {
+        "phase": 35,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 127,
+        "formula": "1 - 1/d",
+        "origin": "SUSPICIOUS: 1 - 1/d",
+        "endogenous": false,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 37,
+        "parameter": "tau",
+        "description": "Private time",
+        "line": 309,
+        "formula": "0.0",
+        "origin": "SUSPICIOUS: 0.0",
+        "endogenous": false,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 37,
+        "parameter": "tau",
+        "description": "Private time",
+        "line": 309,
+        "formula": "0.0",
+        "origin": "SUSPICIOUS: 0.0",
+        "endogenous": false,
+        "depends_on_t": false,
+        "depends_on_history": false
+      },
+      {
+        "phase": 37,
+        "parameter": "threshold",
+        "description": "Decision threshold",
+        "line": 88,
+        "formula": "np.percentile(novelty_history, 90)",
+        "origin": "SUSPICIOUS: np.percentile(novelty_history, 90)",
+        "endogenous": false,
+        "depends_on_t": true,
+        "depends_on_history": true
+      }
+    ],
+    "total_params": 94,
+    "total_suspicious": 13,
+    "pass": true
+  },
+  "null_models": {
+    "comparison": {
+      "drift": {
+        "real": 11115042170960.703,
+        "shuffled_p95": 132016564902056.03,
+        "noise_p95": 398280662923486.5,
+        "pass": true
+      },
+      "asymmetry": {
+        "real": 0.0,
+        "shuffled_p95": 0.0,
+        "noise_p95": 0.0,
+        "pass": true
+      },
+      "epr": {
+        "real": 93.83322825522114,
+        "shuffled_p95": 153.9322254044723,
+        "noise_p95": 388.85542802899073,
+        "pass": true
+      },
+      "autocorr": {
+        "real": 1.0,
+        "shuffled_p95": 0.09919082397132753,
+        "noise_p95": 0.022272820713124728,
+        "pass": "True"
+      }
+    },
+    "pass": true
+  },
+  "rescaling": {
+    "phase_26": {
+      "correlations": [
+        0.24400756073233848,
+        0.23353243900464843,
+        0.236350251476747,
+        0.22067272828060921,
+        0.18607823065910675
+      ],
+      "variance": 0.007492637623048882,
+      "pass": "True"
+    },
+    "phase_28": {
+      "pass": false,
+      "error": "expected x and y to have same length"
+    },
+    "phase_32": {
+      "correlations": [
+        0.000424656119907991,
+        0.011731771116668782,
+        0.03804534482353435,
+        4.637668926555396,
+        11675631295630.516
+      ],
+      "variance": 0.15999999999996786,
+      "pass": true
+    },
+    "phase_40": {
+      "correlations": [
+        0.49438122314022664,
+        0.5123493564310557,
+        0.49310034932247726,
+        0.49494776905871035,
+        0.49671633703231
+      ],
+      "variance": 0.0002085339615848111,
+      "pass": "True"
+    },
+    "overall_pass": false
+  },
+  "causal_isolation": {
+    "phase_31": {
+      "mean_asymmetry": 0.05843850824297575,
+      "isolated": true,
+      "functional": "True",
+      "pass": true
+    },
+    "phase_33": {
+      "counterfactuals_generated": true,
+      "isolated": true,
+      "pass": true
+    },
+    "phase_38": {
+      "mutual_understanding": 0.7260189820813677,
+      "isolated": true,
+      "pass": true
+    },
+    "phase_40": {
+      "score": 0.4979839761588785,
+      "interpretation": "moderate_proto_subjectivity",
+      "isolated": true,
+      "pass": true
+    },
+    "overall_pass": true
+  },
+  "endogeneity_score": {
+    "checks": {
+      "magic_numbers": true,
+      "semantics": true,
+      "provenance": true,
+      "null_models": true,
+      "rescaling": false,
+      "causal_isolation": true
+    },
+    "passed": 5,
+    "total": 6,
+    "weighted_score": 0.9,
+    "certification": "MOSTLY ENDOGENOUS (minor issues)",
+    "pass": false
+  }
+}

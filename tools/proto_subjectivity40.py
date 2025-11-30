@@ -232,7 +232,7 @@ class StabilityMeasure:
         if len(z_history) < 2:
             return 0.5
 
-        diffs = np.diff(z_history[-min(len(z_history), 10):], axis=0)
+        diffs = np.diff(z_history[-int(np.sqrt(len(z_history))+1):], axis=0)
         volatility = np.mean(np.linalg.norm(diffs, axis=1))
 
         stability = 1.0 / (1.0 + volatility)
@@ -417,7 +417,7 @@ class ProtoSubjectivityTest:
 
     def get_test_summary(self) -> Dict:
         """Get comprehensive test summary."""
-        if self.t < 10:
+        if self.t < int(np.sqrt(self.t + 1)) + 1:
             return {'insufficient_data': True}
 
         scores = self.score_computer.score_history

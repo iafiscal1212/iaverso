@@ -61,7 +61,8 @@ class OtherModel:
 
     def __init__(self, d_state: int):
         self.d_state = d_state
-        self.W = np.eye(d_state) * 0.5  # Initial: scaled identity
+        # Inicialización endógena: 1/sqrt(d) para normalización
+        self.W = np.eye(d_state) * (1.0 / np.sqrt(d_state))
         self.prediction_history = []
         self.error_history = []
         self.t = 0
@@ -141,7 +142,7 @@ class InterpretationQuality:
         if len(self.quality_history) < 5:
             return 0.0
 
-        recent = self.quality_history[-10:]
+        recent = self.quality_history[-int(np.sqrt(len(self.quality_history))+1):]
         if len(recent) >= 2:
             return recent[-1] - recent[0]
         return 0.0
