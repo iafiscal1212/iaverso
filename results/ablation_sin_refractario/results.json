@@ -1,0 +1,10 @@
+{
+  "ablation": "sin_refractario",
+  "cycles": 5000,
+  "bilateral_events": 41,
+  "auc": 0.7028044742367954,
+  "rho_p95": 1.1837010261162337,
+  "var_p25": 0.048150345812893694,
+  "neo_coupling_count": 41,
+  "eva_coupling_count": 41
+}

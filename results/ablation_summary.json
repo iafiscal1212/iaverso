@@ -1,0 +1,40 @@
+{
+  "baseline": {
+    "ablation": "baseline",
+    "cycles": 5000,
+    "bilateral_events": 51,
+    "auc": 0.7049109030013332,
+    "rho_p95": 1.1804601304796212,
+    "var_p25": 0.04630491486573647
+  },
+  "sin_reciprocidad": {
+    "ablation": "sin_reciprocidad",
+    "cycles": 5000,
+    "bilateral_events": 55,
+    "auc": 0.6439738007657083,
+    "rho_p95": 1.1779773971965568,
+    "var_p25": 0.04533855098881041,
+    "neo_coupling_count": 55,
+    "eva_coupling_count": 55
+  },
+  "sin_temperatura": {
+    "ablation": "sin_temperatura",
+    "cycles": 5000,
+    "bilateral_events": 53,
+    "auc": 0.6970041379093743,
+    "rho_p95": 1.1792059328230156,
+    "var_p25": 0.048658783665521184,
+    "neo_coupling_count": 53,
+    "eva_coupling_count": 53
+  },
+  "sin_refractario": {
+    "ablation": "sin_refractario",
+    "cycles": 5000,
+    "bilateral_events": 41,
+    "auc": 0.7028044742367954,
+    "rho_p95": 1.1837010261162337,
+    "var_p25": 0.048150345812893694,
+    "neo_coupling_count": 41,
+    "eva_coupling_count": 41
+  }
+}
