@@ -1,26 +1,26 @@
 # Meta-Analysis: Phases 1-40 + R1-R5
 
-**Generated**: 2025-12-01T00:40:52.243562
+**Generated**: 2025-12-01T00:52:52.762909
 
 ---
 
 ## 1. Structural AGI Index (SAGI)
 
-### SAGI = 0.5708
+### SAGI = 0.0336
 
-**Interpretation**: Medio: Capacidades AGI parciales
+**Interpretation**: Mínimo: Capacidades AGI básicas
 
 ### Components:
 
 | Component | Value | Weight |
 |-----------|-------|--------|
-| reasoning | 1.0000 | 1.5 |
-| goals | 1.0000 | 1.2 |
-| learning | 0.8000 | 1.3 |
+| reasoning | 1.0000 | 1.0 |
+| goals | 1.0000 | 1.0 |
+| learning | 0.8000 | 1.0 |
 | communication | 1.0000 | 1.0 |
 | phenomenology | 0.6000 | 1.0 |
-| integration | 0.0000 | 0.8 |
-| autonomy | 1.0000 | 1.2 |
+| integration | 0.0000 | 1.0 |
+| autonomy | 1.0000 | 1.0 |
 
 ---
 
@@ -174,7 +174,7 @@ Phases 27-39 → Phase 40 (Proto-Subjectivity)
 
 ### Key Findings:
 
-1. **SAGI = 0.5708**: Medio: Capacidades AGI parciales
+1. **SAGI = 0.0336**: Mínimo: Capacidades AGI básicas
 
 2. **Critical Tipping Points**:
    - Phase 7 (Consent): Bilateral coordination emerges

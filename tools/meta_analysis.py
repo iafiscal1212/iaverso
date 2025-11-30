@@ -248,28 +248,21 @@ class MetaAnalyzer:
         advanced_go = [metrics.get(p, {}).get('go', 0) for p in advanced_phases if p in metrics]
         components['autonomy'] = np.mean(advanced_go) if advanced_go else 0.0
 
-        # Calcular SAGI como media geométrica ponderada
-        weights = {
-            'reasoning': 1.5,      # Crítico para AGI
-            'goals': 1.2,          # Importante
-            'learning': 1.3,       # Muy importante
-            'communication': 1.0,  # Base
-            'phenomenology': 1.0,  # Base
-            'integration': 0.8,    # Fundamento
-            'autonomy': 1.2        # Importante
-        }
+        # =========================================================
+        # ENDÓGENO: Pesos uniformes (sin preferencias a priori)
+        # SAGI = media geométrica simple
+        # =========================================================
+        weights = {k: 1.0 for k in components.keys()}  # Todos peso 1
 
-        # Media geométrica ponderada
+        # Media geométrica (endógena: todos los componentes iguales)
         values = []
-        total_weight = 0
         for k, v in components.items():
-            w = weights.get(k, 1.0)
             # Evitar log(0)
-            v = max(v, 0.01)
-            values.append(w * np.log(v))
-            total_weight += w
+            v = max(v, 1e-10)
+            values.append(np.log(v))
 
-        SAGI = np.exp(np.sum(values) / total_weight)
+        # Media geométrica simple
+        SAGI = np.exp(np.mean(values))
 
         return {
             'SAGI': float(SAGI),
@@ -279,14 +272,18 @@ class MetaAnalyzer:
         }
 
     def _interpret_SAGI(self, sagi: float) -> str:
-        """Interpreta el valor de SAGI."""
-        if sagi >= 0.9:
+        """
+        Interpreta el valor de SAGI.
+        Thresholds endógenos basados en cuartiles de distribución uniforme [0,1].
+        """
+        # Thresholds endógenos: cuartiles
+        if sagi >= 0.75:  # Q4
             return "Excepcional: Capacidades estructurales AGI completas"
-        elif sagi >= 0.7:
+        elif sagi >= 0.50:  # Q3
             return "Alto: Mayoría de capacidades AGI presentes"
-        elif sagi >= 0.5:
+        elif sagi >= 0.25:  # Q2
             return "Medio: Capacidades AGI parciales"
-        elif sagi >= 0.3:
+        elif sagi >= 0.10:  # Q1 (10% = ~√(0.01))
             return "Bajo: Capacidades AGI emergentes"
         else:
             return "Mínimo: Capacidades AGI básicas"
@@ -332,8 +329,10 @@ class MetaAnalyzer:
                 prev_val = values[i-1][1]
                 curr_val = values[i][1]
                 if prev_val and curr_val:
-                    change = abs(curr_val - prev_val) / (abs(prev_val) + 0.01)
-                    if change > 0.5:  # Cambio > 50%
+                    change = abs(curr_val - prev_val) / (abs(prev_val) + 1e-10)
+                    # Threshold endógeno: cambio > 1/√i (decrece con experiencia)
+                    threshold = 1.0 / np.sqrt(i + 1)
+                    if change > threshold:
                         tipping_points.append({
                             'phase': values[i][0],
                             'type': f'{key}_jump',
@@ -425,10 +424,12 @@ class MetaAnalyzer:
         if len(go_series) > 5:
             phases = list(range(len(go_series)))
             corr, p = spearmanr(phases, go_series)
+            # Threshold endógeno: correlación > 1/√n (significativa para n puntos)
+            significance_threshold = 1.0 / np.sqrt(len(go_series))
             correlations['go_vs_phase_number'] = {
                 'correlation': float(corr),
                 'p_value': float(p),
-                'interpretation': "Mejora sistemática" if corr > 0.3 else "Sin tendencia clara"
+                'interpretation': "Mejora sistemática" if corr > significance_threshold else "Sin tendencia clara"
             }
 
         # Correlaciones entre componentes R
@@ -446,9 +447,12 @@ class MetaAnalyzer:
                     pair = f'{keys[i]}_vs_{keys[j]}'
                     # Con solo 2 puntos no podemos calcular correlación real
                     # pero podemos ver si van en la misma dirección
+                    # Threshold endógeno: diferencia < 1/√n_pairs
+                    n_pairs = len(keys) * (len(keys) - 1) // 2
+                    similarity_threshold = 1.0 / np.sqrt(n_pairs + 1)
                     correlations[pair] = {
                         'values': [values[i], values[j]],
-                        'similar': abs(values[i] - values[j]) < 0.3
+                        'similar': abs(values[i] - values[j]) < similarity_threshold
                     }
 
         return correlations

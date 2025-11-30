@@ -1,6 +1,6 @@
 {
   "sagi": {
-    "SAGI": 0.5708487168457734,
+    "SAGI": 0.03356538286432561,
     "components": {
       "reasoning": 1.0,
       "goals": 1.0,
@@ -11,15 +11,15 @@
       "autonomy": 1.0
     },
     "weights": {
-      "reasoning": 1.5,
-      "goals": 1.2,
-      "learning": 1.3,
+      "reasoning": 1.0,
+      "goals": 1.0,
+      "learning": 1.0,
       "communication": 1.0,
       "phenomenology": 1.0,
-      "integration": 0.8,
-      "autonomy": 1.2
+      "integration": 1.0,
+      "autonomy": 1.0
     },
-    "interpretation": "Medio: Capacidades AGI parciales"
+    "interpretation": "M\u00ednimo: Capacidades AGI b\u00e1sicas"
   },
   "tipping_points": [
     {

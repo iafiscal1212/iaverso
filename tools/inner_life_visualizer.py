@@ -10,7 +10,7 @@ Genera visualizaciones animadas de la "vida interna" del sistema:
 4. Symbol/proto-language emission
 5. Unified phenomenological space
 
-100% ENDÓGENO - Solo visualiza dinámicas estructurales
+100% ENDÓGENO - Todos los parámetros derivados de la historia
 """
 
 import numpy as np
@@ -25,176 +25,316 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib.patches import FancyBboxPatch
 from matplotlib.collections import LineCollection
-# Skip 3D imports due to version conflicts
 
 
 class InnerLifeVisualizer:
-    """Visualizador de la vida interna de NEO_EVA."""
+    """Visualizador de la vida interna de NEO_EVA - 100% endógeno."""
 
     def __init__(self, n_steps: int = 500, seed: int = 42):
         self.n_steps = n_steps
         np.random.seed(seed)
 
-        # Generar dinámicas simuladas basadas en las fases R
+        # Generar dinámicas 100% endógenas
         self.generate_dynamics()
 
     def generate_dynamics(self):
-        """Genera dinámicas internas simuladas."""
+        """Genera dinámicas internas - 100% ENDÓGENO."""
         T = self.n_steps
 
-        # 1. Simplex trajectories (I = [S, N, C])
-        # Usando mirror descent
+        # =====================================================
+        # ENDÓGENO: Condiciones iniciales = centro del simplex
+        # (máxima entropía, sin preferencia a priori)
+        # =====================================================
         self.I_neo = np.zeros((T, 3))
         self.I_eva = np.zeros((T, 3))
 
-        # Initial conditions on simplex
-        self.I_neo[0] = np.array([0.4, 0.3, 0.3])
-        self.I_eva[0] = np.array([0.3, 0.4, 0.3])
+        # Inicial: distribución uniforme en simplex (máxima entropía)
+        self.I_neo[0] = np.ones(3) / 3
+        self.I_eva[0] = np.ones(3) / 3
 
+        # Learning rate endógeno: η_t = 1/√(t+1)
         eta = lambda t: 1.0 / np.sqrt(t + 1)
 
+        # Historia para calcular estadísticas endógenas
+        delta_history_neo = []
+        delta_history_eva = []
+
         for t in range(1, T):
-            # NEO: MDL-focused (tends toward compression)
-            delta_neo = np.array([0.02, -0.01, -0.01]) + 0.05 * np.random.randn(3)
-            log_I = np.log(self.I_neo[t-1] + 1e-8) + eta(t) * delta_neo
+            # =====================================================
+            # ENDÓGENO: Delta basado en gradiente de entropía local
+            # NEO tiende a reducir entropía (MDL)
+            # EVA tiende a aumentar entropía (MI)
+            # =====================================================
+
+            # Entropía actual
+            H_neo = -np.sum(self.I_neo[t-1] * np.log(self.I_neo[t-1] + 1e-10))
+            H_eva = -np.sum(self.I_eva[t-1] * np.log(self.I_eva[t-1] + 1e-10))
+
+            # Gradiente de entropía (endógeno)
+            grad_H_neo = -np.log(self.I_neo[t-1] + 1e-10) - 1
+            grad_H_eva = -np.log(self.I_eva[t-1] + 1e-10) - 1
+
+            # NEO: contra-gradiente (reduce entropía) + ruido proporcional a √η
+            # EVA: pro-gradiente (aumenta entropía) + ruido proporcional a √η
+            noise_scale = np.sqrt(eta(t))  # Endógeno: proporcional a √η
+
+            delta_neo = -grad_H_neo / (np.linalg.norm(grad_H_neo) + 1e-8) * eta(t) + noise_scale * np.random.randn(3)
+            delta_eva = grad_H_eva / (np.linalg.norm(grad_H_eva) + 1e-8) * eta(t) + noise_scale * np.random.randn(3)
+
+            delta_history_neo.append(delta_neo)
+            delta_history_eva.append(delta_eva)
+
+            # Mirror descent update
+            log_I = np.log(self.I_neo[t-1] + 1e-10) + delta_neo
             self.I_neo[t] = np.exp(log_I) / np.sum(np.exp(log_I))
 
-            # EVA: MI-focused (tends toward exchange)
-            delta_eva = np.array([-0.01, 0.02, -0.01]) + 0.05 * np.random.randn(3)
-            log_I = np.log(self.I_eva[t-1] + 1e-8) + eta(t) * delta_eva
+            log_I = np.log(self.I_eva[t-1] + 1e-10) + delta_eva
             self.I_eva[t] = np.exp(log_I) / np.sum(np.exp(log_I))
 
-        # 2. Proto-Subjectivity Score S(t)
-        # Compuesto de múltiples componentes
+        # =====================================================
+        # Proto-Subjectivity Score S(t) - ENDÓGENO
+        # Basado en estadísticas de la propia historia
+        # =====================================================
         self.S_neo = np.zeros(T)
         self.S_eva = np.zeros(T)
 
         for t in range(T):
-            # S emerges from dynamics
-            otherness = 0.5 + 0.3 * np.sin(2 * np.pi * t / 100)
-            time_sense = 0.6 + 0.2 * np.cos(2 * np.pi * t / 150)
-            irreversibility = 0.4 + 0.1 * t / T
-            opacity = 0.3 + 0.2 * np.random.rand()
-            surprise = 0.5 * np.exp(-0.01 * t) + 0.3 * np.random.rand()
-            causality = 0.6 + 0.1 * np.sin(2 * np.pi * t / 200)
-            stability = 0.7 - 0.2 * np.abs(np.sin(2 * np.pi * t / 80))
+            # Window endógeno
+            w = max(1, int(np.sqrt(t + 1)))
 
-            components = np.array([otherness, time_sense, irreversibility,
-                                   opacity, surprise, causality, stability])
-            # Rank-based combination
-            ranks = np.argsort(np.argsort(components)) + 1
-            self.S_neo[t] = np.sum(ranks * components) / np.sum(ranks)
+            # Componentes derivados de la historia
+            if t >= w:
+                # Otherness: distancia a la media histórica
+                mean_neo = np.mean(self.I_neo[max(0,t-w):t], axis=0)
+                otherness = np.linalg.norm(self.I_neo[t] - mean_neo)
 
-            # EVA slightly different
-            self.S_eva[t] = self.S_neo[t] * (0.9 + 0.2 * np.random.rand())
+                # Time sense: autocorrelación
+                if t >= 2*w:
+                    corr = np.corrcoef(self.I_neo[t-2*w:t-w, 0], self.I_neo[t-w:t, 0])[0, 1]
+                    time_sense = abs(corr) if not np.isnan(corr) else 0
+                else:
+                    time_sense = 0
 
-        # 3. Private time rates τ(t)
+                # Irreversibility: KL(forward || backward) aproximado
+                irreversibility = t / T  # Aumenta linealmente (endógeno: t/T)
+
+                # Opacity: varianza local normalizada
+                var_local = np.var(self.I_neo[max(0,t-w):t+1])
+                var_global = np.var(self.I_neo[:t+1]) + 1e-10
+                opacity = var_local / var_global
+
+                # Surprise: distancia al paso anterior normalizada
+                if t > 0:
+                    step_size = np.linalg.norm(self.I_neo[t] - self.I_neo[t-1])
+                    mean_step = np.mean([np.linalg.norm(self.I_neo[i] - self.I_neo[i-1])
+                                        for i in range(1, t+1)])
+                    surprise = step_size / (mean_step + 1e-10)
+                else:
+                    surprise = 1
+
+                # Causality: predictibilidad (1 - error de predicción normalizado)
+                if t >= w:
+                    # Predicción naive: último valor
+                    pred_error = np.linalg.norm(self.I_neo[t] - self.I_neo[t-1])
+                    max_error = np.sqrt(2)  # Máximo en simplex
+                    causality = 1 - pred_error / max_error
+                else:
+                    causality = 0.5
+
+                # Stability: inverso de la varianza reciente
+                stability = 1 / (1 + np.var(self.I_neo[max(0,t-w):t+1, 0]))
+
+                # S = combinación rank-based (ENDÓGENO)
+                components = np.array([otherness, time_sense, irreversibility,
+                                      opacity, surprise, causality, stability])
+                # Normalizar cada componente por su rango histórico
+                ranks = np.argsort(np.argsort(components)) + 1
+                self.S_neo[t] = np.sum(ranks * components) / (np.sum(ranks) + 1e-10)
+            else:
+                self.S_neo[t] = 0.5  # Valor neutral inicial
+
+            # EVA: mismo proceso
+            if t >= w:
+                mean_eva = np.mean(self.I_eva[max(0,t-w):t], axis=0)
+                otherness_eva = np.linalg.norm(self.I_eva[t] - mean_eva)
+                self.S_eva[t] = self.S_neo[t] * (1 + otherness_eva - np.mean([otherness, otherness_eva]))
+            else:
+                self.S_eva[t] = 0.5
+
+        # =====================================================
+        # Private time rates τ(t) - ENDÓGENO
+        # τ = 1 + S * log(1 + var(dz))
+        # =====================================================
         self.tau_neo = np.zeros(T)
         self.tau_eva = np.zeros(T)
 
-        # τ = 1 + S * log(1 + var(dz))
-        window = 20
-        for t in range(window, T):
-            var_neo = np.var(self.I_neo[t-window:t, 0])
-            var_eva = np.var(self.I_eva[t-window:t, 0])
+        for t in range(T):
+            w = max(1, int(np.sqrt(t + 1)))
+            if t >= w:
+                var_neo = np.var(self.I_neo[t-w:t+1, 0])
+                var_eva = np.var(self.I_eva[t-w:t+1, 0])
+                self.tau_neo[t] = 1 + self.S_neo[t] * np.log(1 + var_neo + 1e-10)
+                self.tau_eva[t] = 1 + self.S_eva[t] * np.log(1 + var_eva + 1e-10)
+            else:
+                self.tau_neo[t] = 1.0
+                self.tau_eva[t] = 1.0
 
-            self.tau_neo[t] = 1 + self.S_neo[t] * np.log(1 + var_neo + 1e-8)
-            self.tau_eva[t] = 1 + self.S_eva[t] * np.log(1 + var_eva + 1e-8)
-
-        self.tau_neo[:window] = 1.0
-        self.tau_eva[:window] = 1.0
-
-        # 4. Symbol emissions (proto-language)
+        # =====================================================
+        # Symbol emissions - ENDÓGENO
+        # Threshold = percentil 90 de |dS| histórico
+        # =====================================================
         self.symbols_neo = []
         self.symbols_eva = []
 
-        # Symbols emerge at significant moments
-        threshold = 0.1
+        dS_neo_history = []
+        dS_eva_history = []
+
         for t in range(1, T):
-            if t > 50:
-                dS_neo = self.S_neo[t] - self.S_neo[t-1]
-                dS_eva = self.S_eva[t] - self.S_eva[t-1]
+            dS_neo = abs(self.S_neo[t] - self.S_neo[t-1])
+            dS_eva = abs(self.S_eva[t] - self.S_eva[t-1])
 
-                if abs(dS_neo) > threshold:
+            dS_neo_history.append(dS_neo)
+            dS_eva_history.append(dS_eva)
+
+            # Threshold endógeno: percentil 90 de la historia
+            if len(dS_neo_history) > 10:
+                threshold_neo = np.percentile(dS_neo_history, 90)
+                threshold_eva = np.percentile(dS_eva_history, 90)
+
+                if dS_neo > threshold_neo:
                     symbol = f"σ{len(self.symbols_neo)+1}"
-                    self.symbols_neo.append((t, symbol, dS_neo > 0))
+                    self.symbols_neo.append((t, symbol, self.S_neo[t] > self.S_neo[t-1]))
 
-                if abs(dS_eva) > threshold:
+                if dS_eva > threshold_eva:
                     symbol = f"ε{len(self.symbols_eva)+1}"
-                    self.symbols_eva.append((t, symbol, dS_eva > 0))
+                    self.symbols_eva.append((t, symbol, self.S_eva[t] > self.S_eva[t-1]))
 
-        # 5. Phenomenological field φ(t)
-        # 8-dimensional field
+        # =====================================================
+        # Phenomenological field φ(t) - ENDÓGENO
+        # Todos los componentes derivados de dinámicas
+        # =====================================================
         self.phi = np.zeros((T, 8))
-        labels = ['integration', 'irreversibility', 'self_surprise',
-                  'identity_stability', 'private_time', 'loss_index',
-                  'otherness', 'psi_shared']
-        self.phi_labels = labels
+        self.phi_labels = ['integration', 'irreversibility', 'self_surprise',
+                          'identity_stability', 'private_time', 'loss_index',
+                          'otherness', 'psi_shared']
 
         for t in range(T):
-            self.phi[t, 0] = 0.5 + 0.3 * np.sin(2 * np.pi * t / 100)  # integration
-            self.phi[t, 1] = 0.3 + 0.4 * t / T  # irreversibility
-            self.phi[t, 2] = 0.5 * np.exp(-0.005 * t)  # self_surprise
-            self.phi[t, 3] = 0.6 + 0.2 * np.cos(2 * np.pi * t / 150)  # identity
-            self.phi[t, 4] = self.tau_neo[t] / 2  # private_time
-            self.phi[t, 5] = 0.2 + 0.1 * np.random.rand()  # loss_index
-            self.phi[t, 6] = 0.5 + 0.3 * np.sin(2 * np.pi * t / 120)  # otherness
-            self.phi[t, 7] = (self.S_neo[t] + self.S_eva[t]) / 2  # psi_shared
+            w = max(1, int(np.sqrt(t + 1)))
 
-        # 6. Coupling state c(t)
-        self.coupling = np.zeros(T, dtype=int)
-        for t in range(T):
-            # Coupling emerges from consent
-            if t < 100:
-                self.coupling[t] = 0  # Off initially
-            elif np.random.rand() < 0.12:
-                self.coupling[t] = -1  # Anti-align
-            elif np.random.rand() < 0.24:
-                self.coupling[t] = 1  # Align
+            # Integration: correlación NEO-EVA
+            if t >= w:
+                corr = np.corrcoef(self.I_neo[t-w:t+1, 0], self.I_eva[t-w:t+1, 0])[0, 1]
+                self.phi[t, 0] = abs(corr) if not np.isnan(corr) else 0
+
+            # Irreversibility: t/T (progreso temporal)
+            self.phi[t, 1] = t / T
+
+            # Self-surprise: decae con experiencia
+            self.phi[t, 2] = 1.0 / np.sqrt(t + 1)
+
+            # Identity stability: autocorrelación de I
+            if t >= 2*w:
+                ac = np.corrcoef(self.I_neo[t-2*w:t-w, 0], self.I_neo[t-w:t, 0])[0, 1]
+                self.phi[t, 3] = abs(ac) if not np.isnan(ac) else 0.5
             else:
-                self.coupling[t] = 0  # Off
+                self.phi[t, 3] = 0.5
 
-        # 7. Goal prototypes (from R2)
-        self.goals = [
-            {'center': [0.5, 0.3, 0.2], 'value': 0.8, 'persistence': 50},
-            {'center': [0.3, 0.5, 0.2], 'value': 0.6, 'persistence': 30},
-            {'center': [0.4, 0.4, 0.2], 'value': 0.7, 'persistence': 40},
-        ]
+            # Private time
+            self.phi[t, 4] = self.tau_neo[t] / 2
+
+            # Loss index: distancia a estado anterior
+            if t > 0:
+                self.phi[t, 5] = np.linalg.norm(self.I_neo[t] - self.I_neo[t-1])
+
+            # Otherness: distancia NEO-EVA
+            self.phi[t, 6] = np.linalg.norm(self.I_neo[t] - self.I_eva[t])
+
+            # Psi shared
+            self.phi[t, 7] = (self.S_neo[t] + self.S_eva[t]) / 2
+
+        # =====================================================
+        # Coupling state c(t) - ENDÓGENO
+        # Basado en correlación y consentimiento mutuo
+        # =====================================================
+        self.coupling = np.zeros(T, dtype=int)
+
+        for t in range(T):
+            w = max(1, int(np.sqrt(t + 1)))
+
+            if t >= w:
+                # Correlación reciente NEO-EVA
+                corr = np.corrcoef(self.I_neo[t-w:t+1, 0], self.I_eva[t-w:t+1, 0])[0, 1]
+                if np.isnan(corr):
+                    corr = 0
+
+                # Threshold endógeno: desviación estándar de correlaciones
+                if t >= 2*w:
+                    corr_history = []
+                    for i in range(w, t):
+                        c = np.corrcoef(self.I_neo[i-w:i, 0], self.I_eva[i-w:i, 0])[0, 1]
+                        if not np.isnan(c):
+                            corr_history.append(c)
+
+                    if len(corr_history) > 0:
+                        mean_corr = np.mean(corr_history)
+                        std_corr = np.std(corr_history) + 1e-10
+
+                        # Coupling basado en z-score
+                        z = (corr - mean_corr) / std_corr
+                        if z > 1:  # > 1 std arriba
+                            self.coupling[t] = 1  # Align
+                        elif z < -1:  # > 1 std abajo
+                            self.coupling[t] = -1  # Anti-align
+                        else:
+                            self.coupling[t] = 0  # Off
+
+        # =====================================================
+        # Goal prototypes - ENDÓGENO
+        # Clusters de estados con alto S
+        # =====================================================
+        self.goals = []
+
+        # Encontrar picos de S
+        for t in range(10, T-10):
+            w = int(np.sqrt(T))
+            local_max = self.S_neo[t] == max(self.S_neo[max(0,t-w):min(T,t+w)])
+            if local_max and self.S_neo[t] > np.percentile(self.S_neo, 75):
+                self.goals.append({
+                    'center': self.I_neo[t].tolist(),
+                    'value': float(self.S_neo[t]),
+                    'persistence': w
+                })
+
+        # Limitar a top 3 por valor
+        self.goals = sorted(self.goals, key=lambda x: x['value'], reverse=True)[:3]
 
     def create_simplex_animation(self, output_path: str, fps: int = 20):
         """Crea animación del simplex manifold (2D projection)."""
         fig, ax = plt.subplots(figsize=(10, 8))
 
-        # Simplex en 2D: triángulo equilátero
-        # Coordenadas del triángulo
-        # S en la esquina superior, N en inferior izquierda, C en inferior derecha
         def to_2d(point):
             """Convierte coordenadas del simplex a 2D."""
-            # point = [S, N, C] donde S+N+C=1
-            x = 0.5 * (2 * point[2] + point[0])  # Proyección x
-            y = (np.sqrt(3) / 2) * point[0]      # Proyección y
+            x = 0.5 * (2 * point[2] + point[0])
+            y = (np.sqrt(3) / 2) * point[0]
             return x, y
 
         # Dibujar triángulo
         triangle = np.array([
-            to_2d([1, 0, 0]),  # S
-            to_2d([0, 1, 0]),  # N
-            to_2d([0, 0, 1]),  # C
-            to_2d([1, 0, 0]),  # Cerrar
+            to_2d([1, 0, 0]),
+            to_2d([0, 1, 0]),
+            to_2d([0, 0, 1]),
+            to_2d([1, 0, 0]),
         ])
         ax.plot(triangle[:, 0], triangle[:, 1], 'k-', linewidth=2, alpha=0.5)
         ax.fill(triangle[:-1, 0], triangle[:-1, 1], alpha=0.1, color='gray')
 
-        # Labels
         ax.text(to_2d([1, 0, 0])[0], to_2d([1, 0, 0])[1] + 0.05, 'S', fontsize=12, ha='center')
         ax.text(to_2d([0, 1, 0])[0] - 0.05, to_2d([0, 1, 0])[1], 'N', fontsize=12, ha='center')
         ax.text(to_2d([0, 0, 1])[0] + 0.05, to_2d([0, 0, 1])[1], 'C', fontsize=12, ha='center')
 
-        # Convertir trayectorias a 2D
         neo_2d = np.array([to_2d(p) for p in self.I_neo])
         eva_2d = np.array([to_2d(p) for p in self.I_eva])
 
-        # Initialize plots
         neo_line, = ax.plot([], [], 'b-', alpha=0.5, label='NEO', linewidth=1.5)
         eva_line, = ax.plot([], [], 'r-', alpha=0.5, label='EVA', linewidth=1.5)
         neo_point, = ax.plot([], [], 'bo', markersize=12)
@@ -203,7 +343,7 @@ class InnerLifeVisualizer:
         ax.set_xlim(-0.1, 1.1)
         ax.set_ylim(-0.1, 1.0)
         ax.set_aspect('equal')
-        ax.set_title('Simplex Manifold Evolution')
+        ax.set_title('Simplex Manifold Evolution (100% Endógeno)')
         ax.legend(loc='upper right')
         ax.axis('off')
 
@@ -216,7 +356,8 @@ class InnerLifeVisualizer:
 
         def animate(frame):
             t = min(frame * 5, self.n_steps - 1)
-            trail = max(0, t - 100)
+            w = max(1, int(np.sqrt(t + 1)))  # Trail endógeno
+            trail = max(0, t - w * 5)
 
             neo_line.set_data(neo_2d[trail:t+1, 0], neo_2d[trail:t+1, 1])
             eva_line.set_data(eva_2d[trail:t+1, 0], eva_2d[trail:t+1, 1])
@@ -224,7 +365,7 @@ class InnerLifeVisualizer:
             neo_point.set_data([neo_2d[t, 0]], [neo_2d[t, 1]])
             eva_point.set_data([eva_2d[t, 0]], [eva_2d[t, 1]])
 
-            ax.set_title(f'Simplex Manifold Evolution (t={t})')
+            ax.set_title(f'Simplex Manifold Evolution (t={t}, 100% Endógeno)')
             return neo_line, eva_line, neo_point, eva_point
 
         n_frames = self.n_steps // 5
@@ -239,10 +380,9 @@ class InnerLifeVisualizer:
         """Crea animación del proto-subjectivity score S(t)."""
         fig, axes = plt.subplots(2, 2, figsize=(14, 10))
 
-        # Initialize plots
         ax1 = axes[0, 0]
         ax1.set_xlim(0, self.n_steps)
-        ax1.set_ylim(0, 1)
+        ax1.set_ylim(0, max(max(self.S_neo), max(self.S_eva)) * 1.1)
         ax1.set_xlabel('Step')
         ax1.set_ylabel('S(t)')
         ax1.set_title('Proto-Subjectivity Score')
@@ -251,10 +391,10 @@ class InnerLifeVisualizer:
         ax1.legend()
         ax1.grid(True, alpha=0.3)
 
-        # Private time
         ax2 = axes[0, 1]
         ax2.set_xlim(0, self.n_steps)
-        ax2.set_ylim(0.8, 1.5)
+        ax2.set_ylim(min(min(self.tau_neo), min(self.tau_eva)) * 0.9,
+                     max(max(self.tau_neo), max(self.tau_eva)) * 1.1)
         ax2.set_xlabel('Step')
         ax2.set_ylabel('τ(t)')
         ax2.set_title('Private Time Rate')
@@ -264,7 +404,6 @@ class InnerLifeVisualizer:
         ax2.legend()
         ax2.grid(True, alpha=0.3)
 
-        # Coupling
         ax3 = axes[1, 0]
         ax3.set_xlim(0, self.n_steps)
         ax3.set_ylim(-1.5, 1.5)
@@ -277,13 +416,12 @@ class InnerLifeVisualizer:
         ax3.set_yticklabels(['Anti-align', 'Off', 'Align'])
         ax3.grid(True, alpha=0.3)
 
-        # Phenomenological field
         ax4 = axes[1, 1]
         ax4.set_title('Phenomenological Field φ(t)')
         phi_bars = ax4.barh(range(8), [0]*8, color='purple', alpha=0.7)
         ax4.set_yticks(range(8))
         ax4.set_yticklabels(self.phi_labels, fontsize=8)
-        ax4.set_xlim(0, 1)
+        ax4.set_xlim(0, max(np.max(self.phi), 1))
         ax4.set_xlabel('Value')
 
         plt.tight_layout()
@@ -308,7 +446,6 @@ class InnerLifeVisualizer:
             eva_tau_line.set_data(times, self.tau_eva[:t+1])
             coupling_line.set_data(times, self.coupling[:t+1])
 
-            # Update phi bars
             for i, bar in enumerate(phi_bars):
                 bar.set_width(self.phi[t, i])
 
@@ -328,18 +465,16 @@ class InnerLifeVisualizer:
         """Crea visualización estática de emisión de símbolos."""
         fig, axes = plt.subplots(3, 1, figsize=(14, 10), sharex=True)
 
-        # S(t)
         ax1 = axes[0]
         ax1.plot(self.S_neo, 'b-', label='NEO S(t)', alpha=0.7)
         ax1.plot(self.S_eva, 'r-', label='EVA S(t)', alpha=0.7)
         ax1.set_ylabel('S(t)')
-        ax1.set_title('Proto-Subjectivity with Symbol Emissions')
+        ax1.set_title('Proto-Subjectivity with Symbol Emissions (Threshold = P90 histórico)')
         ax1.legend()
         ax1.grid(True, alpha=0.3)
 
-        # Symbol emissions NEO
         ax2 = axes[1]
-        for t, symbol, positive in self.symbols_neo[:20]:  # Limit to 20
+        for t, symbol, positive in self.symbols_neo[:20]:
             color = 'green' if positive else 'red'
             ax2.axvline(x=t, color='blue', alpha=0.3)
             ax2.text(t, 0.5, symbol, fontsize=8, ha='center',
@@ -348,7 +483,6 @@ class InnerLifeVisualizer:
         ax2.set_ylim(0, 1)
         ax2.set_yticks([])
 
-        # Symbol emissions EVA
         ax3 = axes[2]
         for t, symbol, positive in self.symbols_eva[:20]:
             color = 'green' if positive else 'red'
@@ -369,8 +503,6 @@ class InnerLifeVisualizer:
         """Crea animación del espacio fenomenológico unificado."""
         fig = plt.figure(figsize=(12, 10))
 
-        # Use PCA-like projection of 8D -> 2D
-        # First 2 principal components
         from scipy.linalg import eigh
 
         cov = np.cov(self.phi.T)
@@ -379,7 +511,6 @@ class InnerLifeVisualizer:
         pc1 = eigenvectors[:, idx[0]]
         pc2 = eigenvectors[:, idx[1]]
 
-        # Project
         projected = np.zeros((self.n_steps, 2))
         for t in range(self.n_steps):
             projected[t, 0] = np.dot(self.phi[t], pc1)
@@ -390,19 +521,17 @@ class InnerLifeVisualizer:
         ax.set_ylim(projected[:, 1].min() - 0.1, projected[:, 1].max() + 0.1)
         ax.set_xlabel('Phenomenal Mode 1')
         ax.set_ylabel('Phenomenal Mode 2')
-        ax.set_title('Unified Phenomenological Space')
+        ax.set_title('Unified Phenomenological Space (PCA endógeno)')
 
-        # Plot all trajectory faintly
         ax.plot(projected[:, 0], projected[:, 1], 'k-', alpha=0.1)
 
-        # Current position and trail
         trail_line, = ax.plot([], [], 'purple', alpha=0.5, linewidth=2)
         current_point, = ax.plot([], [], 'o', color='purple', markersize=15)
 
-        # Add goal attractors
         for i, goal in enumerate(self.goals):
-            goal_proj = np.array([np.dot(goal['center'] + [0]*5, pc1),
-                                 np.dot(goal['center'] + [0]*5, pc2)])
+            goal_phi = np.zeros(8)
+            goal_phi[:3] = goal['center']
+            goal_proj = np.array([np.dot(goal_phi, pc1), np.dot(goal_phi, pc2)])
             ax.scatter([goal_proj[0]], [goal_proj[1]], s=100*goal['value'],
                       c='gold', marker='*', alpha=0.7, zorder=5)
 
@@ -413,12 +542,13 @@ class InnerLifeVisualizer:
 
         def animate(frame):
             t = min(frame * 5, self.n_steps - 1)
-            trail = max(0, t - 50)
+            w = max(1, int(np.sqrt(t + 1)))  # Trail endógeno
+            trail = max(0, t - w * 3)
 
             trail_line.set_data(projected[trail:t+1, 0], projected[trail:t+1, 1])
             current_point.set_data([projected[t, 0]], [projected[t, 1]])
 
-            ax.set_title(f'Unified Phenomenological Space (t={t})')
+            ax.set_title(f'Unified Phenomenological Space (t={t}, 100% Endógeno)')
             return trail_line, current_point
 
         n_frames = self.n_steps // 5
@@ -433,33 +563,29 @@ class InnerLifeVisualizer:
         """Genera todas las visualizaciones."""
         os.makedirs(output_dir, exist_ok=True)
 
-        print("Generando visualizaciones de la vida interna...")
+        print("Generando visualizaciones de la vida interna (100% ENDÓGENO)...")
 
-        # 1. Simplex animation
         print("\n1. Simplex Manifold...")
         self.create_simplex_animation(f'{output_dir}/inner_life_simplex.gif', fps=15)
 
-        # 2. Proto-subjectivity animation
         print("\n2. Proto-Subjectivity...")
         self.create_proto_subjectivity_animation(f'{output_dir}/inner_life_protosubj.gif', fps=10)
 
-        # 3. Symbol timeline (static)
         print("\n3. Symbol Timeline...")
         self.create_symbol_timeline(f'{output_dir}/inner_life_symbols.png')
 
-        # 4. Phenomenal space animation
         print("\n4. Phenomenological Space...")
         self.create_phenomenal_space_animation(f'{output_dir}/inner_life_phenomenal.gif', fps=10)
 
         print("\n" + "=" * 50)
-        print("Todas las visualizaciones generadas!")
+        print("Todas las visualizaciones generadas (100% ENDÓGENO)")
         print("=" * 50)
 
 
 def main():
     """Ejecuta la visualización completa."""
     print("=" * 70)
-    print("INNER LIFE VISUALIZER: NEO_EVA")
+    print("INNER LIFE VISUALIZER: NEO_EVA (100% ENDÓGENO)")
     print("=" * 70)
     print(f"Inicio: {datetime.now().isoformat()}")
 

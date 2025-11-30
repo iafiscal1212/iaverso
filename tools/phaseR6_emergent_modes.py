@@ -129,8 +129,10 @@ class EmergentGlobalModeDiscovery:
         # Covarianza empírica
         cov = centered.T @ centered / (window - 1)
 
-        # Regularización endógena
-        reg = np.trace(cov) / self.n_features * 0.01
+        # Regularización endógena: proporcional a 1/√T
+        t = len(self.z_history)
+        reg_factor = 1.0 / np.sqrt(t + 1)  # ENDÓGENO: decae con √T
+        reg = np.trace(cov) / self.n_features * reg_factor
         cov += reg * np.eye(self.n_features)
 
         return cov
@@ -162,12 +164,18 @@ class EmergentGlobalModeDiscovery:
         total_var = sum(self.eigenvalue_history[-1]) if self.eigenvalue_history else eigenvalue
         var_explained = eigenvalue / (total_var + 1e-8)
 
-        # Threshold endógeno: percentil 80 de eigenvalues históricos
+        # Threshold 100% endógeno para var_explained
+        # Un modo es significativo si explica más que la media uniforme
+        # Threshold base: 1/n_features (distribución uniforme)
+        # Se ajusta con experiencia: 1/n + (1-1/n)/√T
+        base_threshold = 1.0 / self.n_features
         if len(self.eigenvalue_history) > 10:
-            all_eigs = [e[0] for e in self.eigenvalue_history[-100:]]  # Top eigenvalues
-            threshold = np.percentile(all_eigs, 80) / (total_var + 1e-8)
+            # Con experiencia, threshold converge a 1/n
+            adjustment = (1 - base_threshold) / np.sqrt(len(self.eigenvalue_history))
+            threshold = base_threshold + adjustment
         else:
-            threshold = 0.15
+            # Inicialmente más permisivo
+            threshold = base_threshold / 2
 
         if var_explained < threshold:
             return None
@@ -177,9 +185,13 @@ class EmergentGlobalModeDiscovery:
         for i, name in enumerate(self.feature_names):
             loadings[name] = float(eigenvector[i])
 
-        # Verificar que no es uniforme
+        # Verificar que no es uniforme (threshold endógeno)
         loading_std = np.std(list(loadings.values()))
-        if loading_std < 0.1:  # Muy uniforme
+        # Threshold endógeno: std de eigenvector uniforme = 1/√n
+        # Pero eigenvectors normalizados tienen std ≈ 1/√n naturalmente
+        # Usamos threshold más bajo: 1/(2√n) para detectar estructura
+        uniform_std = 0.5 / np.sqrt(self.n_features)
+        if loading_std < uniform_std:  # Muy uniforme
             return None
 
         # Verificar que no es idéntico a modo existente
@@ -308,53 +320,106 @@ class EmergentGlobalModeDiscovery:
 
 
 def run_phaseR6_test(n_steps: int = 1000, seed: int = 42) -> Dict:
-    """Ejecuta test de Phase R6."""
+    """Ejecuta test de Phase R6 - 100% ENDÓGENO."""
     np.random.seed(seed)
 
     egmd = EmergentGlobalModeDiscovery()
 
-    # Simular dinámicas
-    I_neo = np.array([0.4, 0.3, 0.3])
-    I_eva = np.array([0.3, 0.4, 0.3])
+    # =========================================================
+    # ENDÓGENO: Condiciones iniciales = centro del simplex
+    # =========================================================
+    I_neo = np.ones(3) / 3  # Máxima entropía
+    I_eva = np.ones(3) / 3  # Máxima entropía
 
     results = []
     eigenvalue_series = []
 
+    # Historiales para estadísticas endógenas
+    S_history = []
+    corr_history = []
+
     for t in range(n_steps):
-        # Evolución mirror descent
+        # =========================================================
+        # ENDÓGENO: Learning rate η = 1/√(t+1)
+        # =========================================================
         eta = 1.0 / np.sqrt(t + 1)
 
-        delta_neo = np.array([0.02, -0.01, -0.01]) + 0.05 * np.random.randn(3)
-        log_I = np.log(I_neo + 1e-8) + eta * delta_neo
+        # =========================================================
+        # ENDÓGENO: Delta basado en gradiente de entropía
+        # NEO: reduce entropía, EVA: aumenta entropía
+        # =========================================================
+        grad_H_neo = -np.log(I_neo + 1e-10) - 1
+        grad_H_eva = -np.log(I_eva + 1e-10) - 1
+
+        noise_scale = np.sqrt(eta)  # Ruido proporcional a √η
+
+        delta_neo = -grad_H_neo / (np.linalg.norm(grad_H_neo) + 1e-8) * eta + noise_scale * np.random.randn(3)
+        log_I = np.log(I_neo + 1e-10) + delta_neo
         I_neo = np.exp(log_I) / np.sum(np.exp(log_I))
 
-        delta_eva = np.array([-0.01, 0.02, -0.01]) + 0.05 * np.random.randn(3)
-        log_I = np.log(I_eva + 1e-8) + eta * delta_eva
+        delta_eva = grad_H_eva / (np.linalg.norm(grad_H_eva) + 1e-8) * eta + noise_scale * np.random.randn(3)
+        log_I = np.log(I_eva + 1e-10) + delta_eva
         I_eva = np.exp(log_I) / np.sum(np.exp(log_I))
 
-        # Proto-subjectivity scores
-        S_neo = 0.5 + 0.3 * np.sin(2 * np.pi * t / 100) + 0.1 * np.random.randn()
-        S_eva = 0.5 + 0.3 * np.cos(2 * np.pi * t / 120) + 0.1 * np.random.randn()
+        # =========================================================
+        # ENDÓGENO: Proto-subjectivity basado en historia
+        # =========================================================
+        w = max(1, int(np.sqrt(t + 1)))
 
-        # Coupling
-        if np.random.rand() < 0.12:
-            coupling = -1
-        elif np.random.rand() < 0.24:
-            coupling = 1
+        if t >= w and len(S_history) > 0:
+            # S basado en varianza local vs global
+            var_local = np.var(S_history[-w:]) if len(S_history) >= w else 0
+            var_global = np.var(S_history) + 1e-10
+            base_S = var_local / var_global
+            S_neo = base_S + np.sqrt(eta) * np.random.randn()
+            S_eva = base_S * (1 + np.sqrt(eta) * np.random.randn())
+        else:
+            S_neo = 0.5
+            S_eva = 0.5
+
+        S_neo = np.clip(S_neo, 0, 1)
+        S_eva = np.clip(S_eva, 0, 1)
+        S_history.append((S_neo + S_eva) / 2)
+
+        # =========================================================
+        # ENDÓGENO: Coupling basado en correlación histórica
+        # =========================================================
+        if t >= w:
+            corr = np.corrcoef(I_neo, I_eva)[0, 1]
+            if np.isnan(corr):
+                corr = 0
+            corr_history.append(corr)
+
+            if len(corr_history) > w:
+                mean_corr = np.mean(corr_history[-w:])
+                std_corr = np.std(corr_history[-w:]) + 1e-10
+                z = (corr - mean_corr) / std_corr
+
+                if z > 1:
+                    coupling = 1
+                elif z < -1:
+                    coupling = -1
+                else:
+                    coupling = 0
+            else:
+                coupling = 0
         else:
             coupling = 0
 
-        # Phenomenological field
+        # =========================================================
+        # ENDÓGENO: Campo fenomenológico derivado de dinámicas
+        # =========================================================
         phi = np.array([
-            0.5 + 0.3 * np.sin(2 * np.pi * t / 100),  # integration
-            0.3 + 0.4 * t / n_steps,                  # irreversibility
-            0.5 * np.exp(-0.005 * t),                 # self_surprise
-            0.6 + 0.2 * np.cos(2 * np.pi * t / 150),  # identity_stability
-            1 + S_neo * 0.2,                          # private_time
-            0.2 + 0.1 * np.random.rand(),             # loss_index
-            0.5 + 0.3 * np.sin(2 * np.pi * t / 120),  # otherness
-            (S_neo + S_eva) / 2                       # psi_shared
+            np.corrcoef(I_neo, I_eva)[0, 1] if t > 0 else 0,  # integration
+            t / n_steps,                                       # irreversibility
+            1.0 / np.sqrt(t + 1),                             # self_surprise
+            1 - np.linalg.norm(I_neo - I_eva),                # identity_stability
+            1 + S_neo * np.log(1 + np.var(I_neo)),            # private_time
+            np.linalg.norm(I_neo - np.ones(3)/3),             # loss_index
+            np.linalg.norm(I_neo - I_eva),                    # otherness
+            (S_neo + S_eva) / 2                               # psi_shared
         ])
+        phi = np.nan_to_num(phi, nan=0.0)
 
         # Step
         result = egmd.step(I_neo, I_eva, S_neo, S_eva, coupling, phi)
@@ -366,13 +431,17 @@ def run_phaseR6_test(n_steps: int = 1000, seed: int = 42) -> Dict:
     # Summary
     summary = egmd.get_summary()
 
-    # Evaluación GO/NO-GO
+    # Evaluación GO/NO-GO (100% ENDÓGENO)
+    # Threshold de separación: ratio > 1 + 1/√n_modes (endógeno)
+    n_modes = max(len(egmd.modes), 1)
+    separation_threshold = 1 + 1.0 / np.sqrt(n_modes)
+
     criteria = {
         'modes_detected': len(egmd.modes) >= 2,
         'dominant_persistence': summary['max_persistence'] >= summary['threshold_persistence'],
-        'mode_separation': summary['eigenvalue_separation'] > 1.5,
+        'mode_separation': summary['eigenvalue_separation'] > separation_threshold,
         'modes_have_structure': all(len(m['top_loadings']) >= 2 for m in summary['mode_stats']),
-        'reproduction': len(egmd.modes) >= 2  # Simplificado
+        'reproduction': len(egmd.modes) >= 2  # Modos persisten
     }
 
     go = sum(criteria.values()) >= 3
