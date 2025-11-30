@@ -1,0 +1,231 @@
+{
+  "audits": {
+    "magic_numbers": {
+      "test": "no_magic_numbers",
+      "findings": [
+        {
+          "file": "tools/phase20_structural_veto.py",
+          "line": 559,
+          "value": 60,
+          "function": "run_full_experiment",
+          "class": null,
+          "in_non_core": false,
+          "severity": "warning"
+        }
+      ],
+      "n_info": 0,
+      "n_warnings": 1,
+      "n_errors": 0,
+      "pass": true
+    },
+    "semantic_labels": {
+      "test": "no_semantic_labels",
+      "findings": [
+        {
+          "file": "tools/veto20.py",
+          "line": 16,
+          "semantic": "pain",
+          "context": "NO semantic labels (pain, fear, threat, danger, etc.)",
+          "severity": "info"
+        },
+        {
+          "file": "tools/veto20.py",
+          "line": 16,
+          "semantic": "fear",
+          "context": "NO semantic labels (pain, fear, threat, danger, etc.)",
+          "severity": "info"
+        },
+        {
+          "file": "tools/veto20.py",
+          "line": 16,
+          "semantic": "threat",
+          "context": "NO semantic labels (pain, fear, threat, danger, etc.)",
+          "severity": "info"
+        },
+        {
+          "file": "tools/veto20.py",
+          "line": 16,
+          "semantic": "danger",
+          "context": "NO semantic labels (pain, fear, threat, danger, etc.)",
+          "severity": "info"
+        },
+        {
+          "file": "tools/phase20_structural_veto.py",
+          "line": 106,
+          "semantic": "choice",
+          "context": "state = np.random.choice(N_STATES, p=state_probs[:N_STATES] / np.sum(state_probs",
+          "severity": "info"
+        },
+        {
+          "file": "tools/phase20_structural_veto.py",
+          "line": 869,
+          "semantic": "need",
+          "context": "**Passing: {go['n_pass']}/5 (need >= 3)**",
+          "severity": "info"
+        },
+        {
+          "file": "tools/phase20_structural_veto.py",
+          "line": 885,
+          "semantic": "pain",
+          "context": "**ZERO magic constants. NO pain. NO fear. NO threat semantics.**",
+          "severity": "info"
+        },
+        {
+          "file": "tools/phase20_structural_veto.py",
+          "line": 885,
+          "semantic": "fear",
+          "context": "**ZERO magic constants. NO pain. NO fear. NO threat semantics.**",
+          "severity": "info"
+        },
+        {
+          "file": "tools/phase20_structural_veto.py",
+          "line": 885,
+          "semantic": "threat",
+          "context": "**ZERO magic constants. NO pain. NO fear. NO threat semantics.**",
+          "severity": "info"
+        },
+        {
+          "file": "tools/phase20_structural_veto.py",
+          "line": 951,
+          "semantic": "need",
+          "context": "print(f\"\\nPassing: {go['n_pass']}/5 (need >= 3)\")",
+          "severity": "info"
+        }
+      ],
+      "n_info": 10,
+      "n_warnings": 0,
+      "n_errors": 0,
+      "pass": true
+    },
+    "provenance": {
+      "test": "provenance_traceability",
+      "findings": [
+        {
+          "file": "tools/veto20.py",
+          "n_log_calls": 4,
+          "severity": "info"
+        },
+        {
+          "file": "tools/phase20_structural_veto.py",
+          "n_log_calls": 0,
+          "severity": "info"
+        }
+      ],
+      "found_provenances": [
+        "VETO_PROVENANCE",
+        "VETO20_PROVENANCE"
+      ],
+      "found_params": [
+        "shock_t",
+        "veto_effect",
+        "gamma_t",
+        "O_t_magnitude"
+      ],
+      "pass": true
+    },
+    "null_comparisons": {
+      "test": "null_comparisons",
+      "findings": [
+        {
+          "null_type": "disabled",
+          "data": {
+            "mean_collapse_rate": 0.006256410256410256
+          },
+          "severity": "info"
+        },
+        {
+          "null_type": "shuffled",
+          "data": {
+            "mean_veto_effect": 851.9708538424554,
+            "veto_p95": 857.4331080520518
+          },
+          "severity": "info"
+        },
+        {
+          "null_type": "random_opposition",
+          "data": {
+            "mean_veto_effect": 1691.788000861381,
+            "veto_p95": 1696.1019112508275
+          },
+          "severity": "info"
+        },
+        {
+          "criterion": "veto_above_shuffled_p95",
+          "passed": true,
+          "severity": "info"
+        },
+        {
+          "criterion": "veto_above_random_p95",
+          "passed": false,
+          "severity": "warning"
+        },
+        {
+          "criterion": "persistence_sufficient",
+          "passed": true,
+          "severity": "info"
+        },
+        {
+          "criterion": "epr_increases_during_shocks",
+          "passed": true,
+          "severity": "info"
+        },
+        {
+          "criterion": "epr_shock_correlated",
+          "passed": true,
+          "severity": "info"
+        }
+      ],
+      "n_errors": 0,
+      "pass": true
+    },
+    "scale_robustness": {
+      "test": "scale_robustness",
+      "findings": {
+        "correlations": {
+          "0.5": {
+            "shock": 1.0,
+            "veto": 0.9999999999999998
+          },
+          "1.0": {
+            "shock": 1.0,
+            "veto": 1.0
+          },
+          "2.0": {
+            "shock": 1.0,
+            "veto": 1.0
+          },
+          "5.0": {
+            "shock": 1.0,
+            "veto": 1.0
+          }
+        },
+        "min_avg_correlation": 0.9999999999999999,
+        "metrics_by_scale": {
+          "0.5": {
+            "shock_mean": 0.17295345903712975,
+            "veto_mean": 0.4705162351099683
+          },
+          "1.0": {
+            "shock_mean": 0.17295345903712975,
+            "veto_mean": 0.4705162351099683
+          },
+          "2.0": {
+            "shock_mean": 0.17295345903712975,
+            "veto_mean": 0.4705162351099683
+          },
+          "5.0": {
+            "shock_mean": 0.17295345903712975,
+            "veto_mean": 0.4705162351099683
+          }
+        }
+      },
+      "min_avg_correlation": 0.9999999999999999,
+      "note": "Veto dynamics should be qualitatively similar across scales",
+      "pass": "True"
+    }
+  },
+  "n_passed": 5,
+  "n_total": 5,
+  "all_passed": true,
+  "certification": "ENDOGENOUS"
+}
