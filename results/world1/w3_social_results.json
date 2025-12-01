@@ -1,0 +1,107 @@
+{
+  "tests": {
+    "episodic_working": true,
+    "symbols_emerged": true,
+    "games_played": true,
+    "preferences_adapted": true,
+    "metacognition_working": true
+  },
+  "report": {
+    "t": 1000,
+    "games_played": 773,
+    "world": {
+      "mean_entropy": -0.10325510110275045,
+      "mean_health": 0.6133277864098654
+    },
+    "social": {
+      "mean_energy": 0.8346228317959444,
+      "games_per_step": 0.773,
+      "mean_coalition_size": 1.675
+    },
+    "agents": {
+      "NEO": {
+        "mean_SAGI": 0.43635539137704243,
+        "social_energy": 0.9035559285845525,
+        "n_episodes": 152,
+        "n_symbols": 6,
+        "n_goals": 3,
+        "self_model_error": 105.03307795366634,
+        "metacognition": 0.0,
+        "regulation_action": "continue",
+        "partner_preferences": {
+          "EVA": 1.0,
+          "ALEX": 1.0,
+          "ADAM": 1.0,
+          "IRIS": 1.0
+        }
+      },
+      "EVA": {
+        "mean_SAGI": 0.4309554983623859,
+        "social_energy": 0.8202440256486981,
+        "n_episodes": 152,
+        "n_symbols": 7,
+        "n_goals": 3,
+        "self_model_error": 106.60589130163885,
+        "metacognition": 0.0,
+        "regulation_action": "recalibrate",
+        "partner_preferences": {
+          "NEO": 1.0,
+          "ALEX": 1.0,
+          "ADAM": 1.0,
+          "IRIS": 1.0
+        }
+      },
+      "ALEX": {
+        "mean_SAGI": 0.43558551112913746,
+        "social_energy": 0.9556591947818849,
+        "n_episodes": 152,
+        "n_symbols": 6,
+        "n_goals": 3,
+        "self_model_error": 107.3368721804356,
+        "metacognition": 0.020000000000000018,
+        "regulation_action": "stabilize",
+        "partner_preferences": {
+          "NEO": 1.0,
+          "EVA": 1.0,
+          "ADAM": 1.0,
+          "IRIS": 1.0
+        }
+      },
+      "ADAM": {
+        "mean_SAGI": 0.4027738644746327,
+        "social_energy": 0.8789624174352785,
+        "n_episodes": 152,
+        "n_symbols": 7,
+        "n_goals": 3,
+        "self_model_error": 106.28814618871637,
+        "metacognition": 0.06999999999999995,
+        "regulation_action": "stabilize",
+        "partner_preferences": {
+          "NEO": 1.0,
+          "EVA": 1.0,
+          "ALEX": 1.0,
+          "IRIS": 1.0
+        }
+      },
+      "IRIS": {
+        "mean_SAGI": 0.42381058107765524,
+        "social_energy": 0.9677829913581135,
+        "n_episodes": 152,
+        "n_symbols": 6,
+        "n_goals": 3,
+        "self_model_error": 106.23717225028153,
+        "metacognition": 0.050000000000000044,
+        "regulation_action": "stabilize",
+        "partner_preferences": {
+          "NEO": 1.0,
+          "EVA": 1.0,
+          "ALEX": 1.0,
+          "ADAM": 1.0
+        }
+      }
+    }
+  },
+  "phase": "W3_SOCIAL",
+  "status": "PASS",
+  "timestamp": "2025-12-01T05:46:47.748268"
+}
