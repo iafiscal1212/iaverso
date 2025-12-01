@@ -68,6 +68,22 @@ from .repair_protocols import (
     InterventionType
 )
 
+# MED-X Benchmark
+from .medx_benchmark import (
+    MedXBenchmark,
+    MedXResults,
+    AgentHealthSnapshot,
+    TreatmentEvent
+)
+
+# Clinical Cases
+from .clinical_cases import (
+    ClinicalCaseSimulator,
+    ClinicalCondition,
+    ClinicalCaseReport,
+    TreatmentProtocol
+)
+
 __all__ = [
     # Emergent System (new)
     'EmergentMedicalSystem',
@@ -98,4 +114,14 @@ __all__ = [
     'Intervention',
     'InterventionResult',
     'InterventionType',
+    # MED-X Benchmark
+    'MedXBenchmark',
+    'MedXResults',
+    'AgentHealthSnapshot',
+    'TreatmentEvent',
+    # Clinical Cases
+    'ClinicalCaseSimulator',
+    'ClinicalCondition',
+    'ClinicalCaseReport',
+    'TreatmentProtocol',
 ]
