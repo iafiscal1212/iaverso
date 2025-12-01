@@ -26,8 +26,47 @@ sys.path.insert(0, '/root/NEO_EVA')
 
 from cognition.agi_dynamic_constants import (
     L_t, max_history, adaptive_learning_rate, adaptive_momentum,
-    to_simplex, softmax, normalized_entropy
+    to_simplex, softmax, normalized_entropy, confidence_from_error
 )
+
+
+def endogenous_context_dim(n_agents: int) -> int:
+    """
+    Dimensión del contexto endógena basada solo en número de agentes.
+
+    Se calcula una vez al inicio y no cambia, para mantener
+    consistencia con AGI-16 (meta_rules).
+    """
+    # Fórmula: base + componente por agente
+    # Mínimo 6, crece logarítmicamente con agentes
+    return max(6, int(6 + 2 * np.log1p(n_agents)))
+
+
+def endogenous_initial_weights(module_names: List[str], t: int) -> Dict[str, float]:
+    """
+    Pesos iniciales endógenos basados en prioridad implícita.
+
+    Módulos más fundamentales (self_model, tom) tienen mayor peso inicial.
+    Los pesos son uniformes cuando t=0 y se ajustan por reconfiguración.
+    """
+    n = len(module_names)
+    # Distribución Dirichlet con alpha uniforme
+    alpha = np.ones(n) + np.arange(n)[::-1] * 0.1  # Prioridad decreciente
+    weights_raw = np.random.dirichlet(alpha) * n  # Escalar a media ~1
+    return {name: float(w) for name, w in zip(module_names, weights_raw)}
+
+
+def endogenous_action_scale(t: int, confidence: float) -> float:
+    """Escala de acción endógena: decrece con t, aumenta con confianza."""
+    base_scale = 0.15 / (1 + np.log1p(t) / 20)
+    return base_scale * (0.5 + confidence * 0.5)
+
+
+def endogenous_threshold(values: List[float], target_percentile: float = 0.5) -> float:
+    """Umbral endógeno basado en percentil de valores históricos."""
+    if len(values) < 3:
+        return 0.5
+    return float(np.percentile(values, target_percentile * 100))
 
 # Importar módulos AGI-16 a AGI-19
 from cognition.agi16_meta_rules import StructuralMetaRules
@@ -107,6 +146,7 @@ class CognitiveActionLayer:
         """
         self.agent_name = agent_name
         self.all_agent_names = all_agent_names or [agent_name]
+        self.n_agents = len(self.all_agent_names)
 
         # Módulos cognitivos básicos (se conectarán externamente)
         self.self_model = None
@@ -116,17 +156,24 @@ class CognitiveActionLayer:
         self.curiosity_module = None
         self.norm_system = None
 
+        # Dimensión de contexto endógena (fija basada en n_agents)
+        self.context_dim = endogenous_context_dim(self.n_agents)
+
         # Nuevos módulos AGI-16 a AGI-19 (propios del agente)
         self.meta_rules = StructuralMetaRules(
             agent_name,
-            context_dim=10,
+            context_dim=self.context_dim,
             n_policies=len(self.POLICY_NAMES)
         )
+
+        # Nombres de módulos para AGI-18
+        self.module_names = ['self_model', 'tom', 'ethics', 'planning',
+                            'curiosity', 'norms', 'meta_rules', 'robustness',
+                            'collective_intent']
+
         self.reconfig_system = ReflectiveReconfiguration(
             agent_name,
-            module_names=['self_model', 'tom', 'ethics', 'planning',
-                         'curiosity', 'norms', 'meta_rules', 'robustness',
-                         'collective_intent']
+            module_names=self.module_names
         )
 
         # AGI-17 y AGI-19 son compartidos (se conectan externamente)
@@ -136,31 +183,22 @@ class CognitiveActionLayer:
         # Estado interno
         self.current_goal: Optional[np.ndarray] = None
         self.goal_history: List[np.ndarray] = []
-        self.current_context: np.ndarray = np.zeros(10)
+        self.current_context: np.ndarray = np.zeros(self.context_dim)
 
         # Historial de decisiones y outcomes
         self.decision_history: List[CognitiveDecision] = []
         self.outcome_history: List[ActionOutcome] = []
 
-        # Pesos de módulos (se ajustan por AGI-18 reconfiguration)
-        self.module_weights = {
-            'self_model': 1.0,
-            'tom': 1.0,
-            'ethics': 1.0,
-            'planning': 1.0,
-            'curiosity': 1.0,
-            'norms': 1.0,
-            'meta_rules': 0.8,
-            'robustness': 0.7,
-            'collective_intent': 0.6
-        }
+        # Pesos de módulos endógenos (se ajustan por AGI-18 reconfiguration)
+        self.module_weights = endogenous_initial_weights(self.module_names, 0)
 
         # Estadísticas para aprendizaje
         self.reward_history: List[float] = []
         self.surprise_history: List[float] = []
+        self.confidence_history: List[float] = []  # Para umbrales endógenos
 
-        # Política actual sugerida por meta-reglas
-        self.current_policy: int = 6  # balance por defecto
+        # Política actual: última política (balance) por defecto
+        self.current_policy: int = len(self.POLICY_NAMES) - 1
 
         self.t = 0
 
@@ -207,7 +245,9 @@ class CognitiveActionLayer:
             (confidence, predicted_next_state)
         """
         if self.self_model is None:
-            return 0.5, state.get('z', np.zeros(6))
+            # Confianza por defecto basada en historial
+            default_conf = endogenous_threshold(self.confidence_history) if self.confidence_history else 0.5
+            return default_conf, state.get('z', np.zeros(6))
 
         # Construir estado actual
         z = state.get('z', np.zeros(6))
@@ -219,6 +259,12 @@ class CognitiveActionLayer:
         # Predecir siguiente estado
         predicted = self.self_model.predict_k_steps(current_state, 1)
         confidence = self.self_model.confidence()
+
+        # Guardar confianza para umbrales endógenos
+        self.confidence_history.append(confidence)
+        max_hist = max_history(self.t)
+        if len(self.confidence_history) > max_hist:
+            self.confidence_history = self.confidence_history[-max_hist:]
 
         return confidence, predicted
 
@@ -233,9 +279,12 @@ class CognitiveActionLayer:
         """
         anticipations = {}
 
+        # Valor por defecto endógeno basado en confianza histórica
+        default_anticipation = endogenous_threshold(self.confidence_history) if self.confidence_history else 0.5
+
         if self.tom_system is None:
             for other in others:
-                anticipations[other] = 0.5
+                anticipations[other] = default_anticipation
             return anticipations
 
         for other_name, other_state in others.items():
@@ -253,7 +302,7 @@ class CognitiveActionLayer:
                 # Ponderar por ToM accuracy
                 anticipations[other_name] = float(change * tom_acc)
             else:
-                anticipations[other_name] = 0.5
+                anticipations[other_name] = default_anticipation
 
         return anticipations
 
@@ -266,14 +315,22 @@ class CognitiveActionLayer:
             Score ético [0, 1], mayor = más ético
         """
         if self.ethics_module is None:
-            # Sin módulo: evaluación básica
-            # Evitar acciones muy extremas
+            # Sin módulo: evaluación endógena basada en magnitud relativa
             magnitude = np.linalg.norm(action_candidate)
-            return float(1.0 - min(1.0, magnitude / 2.0))
+
+            # Escala endógena: percentil de magnitudes históricas
+            if self.decision_history:
+                historical_mags = [np.linalg.norm(d.direction) for d in self.decision_history[-L_t(self.t):]]
+                if historical_mags:
+                    p95_mag = np.percentile(historical_mags, 95)
+                    relative_mag = magnitude / (p95_mag + 1e-8)
+                    return float(1.0 - min(1.0, relative_mag))
+
+            return float(1.0 - min(1.0, magnitude / (magnitude + 1)))  # Sigmoid suave
 
         # Con módulo: usar evaluación estructural
         # TODO: Integrar con StructuralEthics
-        return 0.8
+        return self.ethics_module.evaluate(action_candidate, state, others)
 
     def _compute_goal_alignment(self, action_candidate: np.ndarray,
                                 current_position: np.ndarray) -> float:
@@ -308,22 +365,29 @@ class CognitiveActionLayer:
         """
         if self.curiosity_module is None:
             # Sin módulo: bonus basado en novedad de la posición
-            if len(self.decision_history) < 5:
-                return 0.5
+            min_history = L_t(self.t)  # Mínimo endógeno
+            if len(self.decision_history) < min_history:
+                return endogenous_threshold(self.confidence_history) if self.confidence_history else 0.5
 
-            # Comparar con acciones recientes
-            recent_directions = [d.direction for d in self.decision_history[-10:]]
+            # Comparar con acciones recientes (ventana endógena)
+            window = L_t(self.t) * 2
+            recent_directions = [d.direction for d in self.decision_history[-window:]]
             if not recent_directions:
                 return 0.5
 
             mean_direction = np.mean(recent_directions, axis=0)
             novelty = np.linalg.norm(action_candidate - mean_direction)
 
+            # Normalizar por varianza histórica
+            if len(recent_directions) > 3:
+                std_dir = np.std([np.linalg.norm(d - mean_direction) for d in recent_directions])
+                normalized_novelty = novelty / (std_dir + 1e-8)
+                return float(min(1.0, normalized_novelty))
+
             return float(min(1.0, novelty))
 
         # Con módulo: usar curiosidad estructural
-        # TODO: Integrar con StructuralCuriosity
-        return 0.5
+        return self.curiosity_module.compute_curiosity(state, action_candidate)
 
     def _compute_norm_compliance(self, action_candidate: np.ndarray,
                                  state: Dict) -> float:
@@ -334,11 +398,23 @@ class CognitiveActionLayer:
             Compliance [0, 1]
         """
         if self.norm_system is None:
-            return 1.0  # Sin normas, todo permitido
+            # Sin normas explícitas: compliance basado en consistencia con historial
+            if len(self.decision_history) < L_t(self.t):
+                return 1.0  # Aún no hay suficiente historial para normas implícitas
+
+            # Norma implícita: no desviarse mucho de acciones típicas
+            window = L_t(self.t) * 2
+            recent = [d.direction for d in self.decision_history[-window:]]
+            mean_action = np.mean(recent, axis=0)
+            deviation = np.linalg.norm(action_candidate - mean_action)
+
+            # Compliance = 1 si deviation es menor que varianza, 0 si es >> varianza
+            std_action = np.std([np.linalg.norm(d - mean_action) for d in recent])
+            compliance = 1.0 / (1.0 + deviation / (std_action + 1e-8))
+            return float(compliance)
 
         # Con módulo: evaluar contra normas activas
-        # TODO: Integrar con NormSystem
-        return 0.9
+        return self.norm_system.evaluate_compliance(action_candidate, state)
 
     def _update_module_weights(self):
         """
@@ -412,20 +488,33 @@ class CognitiveActionLayer:
         - Estado cognitivo (z, phi, drives)
         - Régimen del mundo
         - Recursos disponibles
+
+        La dimensión del contexto es endógena.
         """
         z = state.get('z', np.zeros(6))
         phi = state.get('phi', np.zeros(5))
-        context_raw = state.get('context', np.zeros(10))
+        context_raw = state.get('context', np.zeros(self.context_dim))
 
-        # Combinar en vector de contexto de 10 dims
-        self.current_context = np.zeros(10)
-        self.current_context[:min(3, len(z))] = z[:3]
-        self.current_context[3:3+min(2, len(phi))] = phi[:2]
-        self.current_context[5:] = context_raw[:5] if len(context_raw) >= 5 else np.zeros(5)
+        # La dimensión del contexto es fija (definida en __init__)
 
-    def generate_action_candidates(self, state: Dict, n_candidates: int = 7) -> List[np.ndarray]:
+        # Combinar en vector de contexto
+        self.current_context = np.zeros(self.context_dim)
+
+        # Proporción endógena de cada componente
+        z_portion = min(len(z), self.context_dim // 3)
+        phi_portion = min(len(phi), self.context_dim // 4)
+        context_portion = self.context_dim - z_portion - phi_portion
+
+        self.current_context[:z_portion] = z[:z_portion]
+        self.current_context[z_portion:z_portion+phi_portion] = phi[:phi_portion]
+        if len(context_raw) >= context_portion:
+            self.current_context[z_portion+phi_portion:] = context_raw[:context_portion]
+
+    def generate_action_candidates(self, state: Dict, n_candidates: int = None) -> List[np.ndarray]:
         """
         Genera candidatos de acción considerando política de AGI-16.
+
+        El número de candidatos y las escalas son endógenos.
 
         Returns:
             Lista de vectores de acción candidatos
@@ -434,38 +523,52 @@ class CognitiveActionLayer:
 
         position = state.get('z', np.zeros(6))[:3]
 
+        # Número de candidatos endógeno
+        if n_candidates is None:
+            n_candidates = max(5, L_t(self.t) + len(self.POLICY_NAMES))
+
         # Obtener política óptima de AGI-16
         policy, policy_confidence = self._get_meta_rule_policy(self.current_context)
         self.current_policy = policy
 
+        # Escala de acción endógena basada en confianza
+        base_scale = endogenous_action_scale(self.t, policy_confidence)
+
+        # Umbral de confianza colectiva endógeno
+        coll_threshold = endogenous_threshold(self.confidence_history, 0.3) if self.confidence_history else 0.3
+
         # Candidato 1: hacia la meta (si existe) - planning
         if self.current_goal is not None:
             to_goal = self.current_goal[:3] - position
-            to_goal = to_goal / (np.linalg.norm(to_goal) + 1e-8) * 0.1
+            to_goal = to_goal / (np.linalg.norm(to_goal) + 1e-8) * base_scale
             candidates.append(to_goal)
 
         # Candidato 2: continuar dirección actual - exploit
         if self.decision_history:
             last_dir = self.decision_history[-1].direction
-            candidates.append(last_dir * 0.9)
+            # Factor de continuidad endógeno basado en rewards
+            continuity_factor = 1.0 - adaptive_learning_rate(self.t)  # Más estable con t
+            candidates.append(last_dir * continuity_factor)
 
         # Candidato 3: dirección colectiva (AGI-19) - cooperate
         if self.collective_intent is not None:
             collective_dir, coll_conf = self.collective_intent.get_collective_direction()
-            if coll_conf > 0.3 and len(collective_dir) >= 3:
-                candidates.append(collective_dir[:3] * 0.1)
+            if coll_conf > coll_threshold and len(collective_dir) >= 3:
+                candidates.append(collective_dir[:3] * base_scale)
 
         # Candidatos según política de AGI-16
         if policy == 0:  # exploit
             if self.decision_history:
                 # Amplificar última dirección exitosa
-                candidates.append(self.decision_history[-1].direction * 1.1)
+                amplify_factor = 1.0 + policy_confidence * 0.2  # Endógeno
+                candidates.append(self.decision_history[-1].direction * amplify_factor)
         elif policy == 1:  # explore
             # Dirección ortogonal a última
             if self.decision_history:
                 last = self.decision_history[-1].direction
                 perp = np.array([-last[1], last[0], 0]) if len(last) >= 2 else np.random.randn(3)
-                candidates.append(perp / (np.linalg.norm(perp) + 1e-8) * 0.15)
+                explore_scale = base_scale * (1.0 + policy_confidence)  # Más exploración si más confiado
+                candidates.append(perp / (np.linalg.norm(perp) + 1e-8) * explore_scale)
         elif policy == 2:  # cooperate
             # Hacia centroide de otros (si tenemos info)
             pass  # Ya cubierto por collective_dir
@@ -474,20 +577,21 @@ class CognitiveActionLayer:
             if self.collective_intent is not None:
                 collective_dir, _ = self.collective_intent.get_collective_direction()
                 if len(collective_dir) >= 3:
-                    candidates.append(-collective_dir[:3] * 0.08)
+                    compete_scale = base_scale * 0.8  # Algo menor para competir
+                    candidates.append(-collective_dir[:3] * compete_scale)
         elif policy == 4:  # conserve
             # Movimiento mínimo
             candidates.append(np.zeros(3))
         elif policy == 5:  # adapt
             # Dirección basada en cambio reciente del mundo
-            context = state.get('context', np.zeros(10))
-            adapt_dir = context[:3] / (np.linalg.norm(context[:3]) + 1e-8) * 0.1
+            context = state.get('context', np.zeros(self.context_dim))
+            adapt_dir = context[:3] / (np.linalg.norm(context[:3]) + 1e-8) * base_scale
             candidates.append(adapt_dir)
 
-        # Candidatos aleatorios (exploración)
+        # Candidatos aleatorios (exploración) - número endógeno
         while len(candidates) < n_candidates:
             random_dir = np.random.randn(3)
-            random_dir = random_dir / (np.linalg.norm(random_dir) + 1e-8) * 0.1
+            random_dir = random_dir / (np.linalg.norm(random_dir) + 1e-8) * base_scale
             candidates.append(random_dir)
 
         return candidates
@@ -600,21 +704,26 @@ class CognitiveActionLayer:
         return decision
 
     def _generate_reasoning(self, evaluation: Dict) -> str:
-        """Genera explicación de la decisión incluyendo AGI-16 a AGI-19."""
+        """Genera explicación de la decisión incluyendo AGI-16 a AGI-19 con umbrales endógenos."""
         parts = []
 
-        if evaluation.get('goal_alignment', 0) > 0.5:
+        # Umbrales endógenos basados en historial
+        high_threshold = endogenous_threshold(self.confidence_history, 0.75) if self.confidence_history else 0.75
+        mid_threshold = endogenous_threshold(self.confidence_history, 0.5) if self.confidence_history else 0.5
+        low_threshold = endogenous_threshold(self.confidence_history, 0.25) if self.confidence_history else 0.25
+
+        if evaluation.get('goal_alignment', 0) > mid_threshold:
             parts.append("hacia meta")
-        elif evaluation.get('goal_alignment', 0) < -0.3:
+        elif evaluation.get('goal_alignment', 0) < -low_threshold:
             parts.append("alejándose de meta")
 
-        if evaluation.get('curiosity_bonus', 0) > 0.7:
+        if evaluation.get('curiosity_bonus', 0) > high_threshold:
             parts.append("explorando")
 
-        if evaluation.get('ethical_score', 1) < 0.5:
+        if evaluation.get('ethical_score', 1) < mid_threshold:
             parts.append("ética cuestionable")
 
-        if evaluation.get('confidence', 0) > 0.8:
+        if evaluation.get('confidence', 0) > high_threshold:
             parts.append("alta confianza")
 
         # AGI-16: política
@@ -622,12 +731,14 @@ class CognitiveActionLayer:
             policy_name = self.POLICY_NAMES[self.current_policy]
             parts.append(f"política:{policy_name}")
 
-        # AGI-17: robustez
-        if evaluation.get('robustness_bonus', 0) > 0.15:
+        # AGI-17: robustez (umbral endógeno)
+        rob_threshold = low_threshold * 0.6
+        if evaluation.get('robustness_bonus', 0) > rob_threshold:
             parts.append("robusto")
 
-        # AGI-19: colectivo
-        if evaluation.get('collective_alignment', 0) > 0.2:
+        # AGI-19: colectivo (umbral endógeno)
+        coll_threshold = low_threshold * 0.8
+        if evaluation.get('collective_alignment', 0) > coll_threshold:
             parts.append("alineado-colectivo")
 
         return "; ".join(parts) if parts else "decisión estándar"
@@ -690,6 +801,7 @@ class CognitiveActionLayer:
     def _update_from_outcome(self, outcome: ActionOutcome):
         """
         Actualiza módulos cognitivos AGI-16, AGI-17, AGI-18 con el resultado.
+        Todos los valores son endógenos o derivados de las señales del sistema.
         """
         # AGI-16: Registrar observación (contexto, política, utilidad)
         self.meta_rules.record_observation(
@@ -701,8 +813,10 @@ class CognitiveActionLayer:
         # AGI-17: Registrar recompensa para robustez
         if self.robustness_system is not None:
             # Construir policy vector simplificado para AGI-17
-            policy_vec = np.zeros(7)
-            policy_vec[self.current_policy] = 1.0
+            n_policies = len(self.POLICY_NAMES)
+            policy_vec = np.zeros(n_policies)
+            if self.current_policy < n_policies:
+                policy_vec[self.current_policy] = 1.0
             self.robustness_system.record_reward(
                 self.agent_name,
                 outcome.reward_signal,
@@ -710,16 +824,28 @@ class CognitiveActionLayer:
             )
 
         # AGI-18: Registrar activaciones para reconfiguración
+        # Todos los valores derivados de las señales del outcome
+
+        # Valor base endógeno: media de confianzas históricas
+        base_activation = endogenous_threshold(self.confidence_history) if self.confidence_history else 0.5
+
+        # Social feedback promedio
+        social_mean = np.mean(list(outcome.social_feedback.values())) if outcome.social_feedback else base_activation
+
+        # Reward normalizado al rango [0,1]
+        reward_norm = (outcome.reward_signal + 1) / 2  # Asumiendo reward en [-1, 1]
+        reward_norm = np.clip(reward_norm, 0, 1)
+
         activations = {
             'self_model': 1.0 - outcome.surprise,  # Baja sorpresa = self-model funcionó
-            'tom': np.mean(list(outcome.social_feedback.values())) if outcome.social_feedback else 0.5,
-            'ethics': 0.8,  # Por ahora constante
-            'planning': max(0, outcome.goal_progress + 0.5),
+            'tom': social_mean,
+            'ethics': 1.0 - abs(outcome.reward_signal) * (1 - base_activation),  # Ética indirecta
+            'planning': max(0, outcome.goal_progress + base_activation),
             'curiosity': outcome.surprise,  # Sorpresa = novedad
-            'norms': 1 - abs(outcome.reward_signal - 0.5),
-            'meta_rules': 0.5 + outcome.reward_signal * 0.3,  # Correlacionado con reward
-            'robustness': 0.5,  # Contribución base
-            'collective_intent': np.mean(list(outcome.social_feedback.values())) if outcome.social_feedback else 0.5
+            'norms': 1.0 - abs(outcome.reward_signal - base_activation),  # Endógeno
+            'meta_rules': base_activation + reward_norm * base_activation,  # Correlacionado con reward
+            'robustness': base_activation,  # Contribución endógena
+            'collective_intent': social_mean
         }
         self.reconfig_system.record_activations(activations, outcome.reward_signal)
 
@@ -731,14 +857,17 @@ class CognitiveActionLayer:
         # AGI-18 stats
         reconfig_stats = self.reconfig_system.get_statistics()
 
+        # Ventana endógena para estadísticas
+        stats_window = L_t(self.t) * 3
+
         return {
             'agent': self.agent_name,
             't': self.t,
             'n_decisions': len(self.decision_history),
             'n_outcomes': len(self.outcome_history),
-            'mean_confidence': np.mean([d.confidence for d in self.decision_history[-20:]]) if self.decision_history else 0,
-            'mean_reward': np.mean(self.reward_history[-20:]) if self.reward_history else 0,
-            'mean_surprise': np.mean(self.surprise_history[-20:]) if self.surprise_history else 0,
+            'mean_confidence': np.mean([d.confidence for d in self.decision_history[-stats_window:]]) if self.decision_history else 0,
+            'mean_reward': np.mean(self.reward_history[-stats_window:]) if self.reward_history else 0,
+            'mean_surprise': np.mean(self.surprise_history[-stats_window:]) if self.surprise_history else 0,
             'module_weights': self.module_weights.copy(),
             'has_goal': self.current_goal is not None,
             # AGI-16: Meta-Rules
