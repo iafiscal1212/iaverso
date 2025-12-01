@@ -1,0 +1,35 @@
+{
+  "phase": "G2",
+  "name": "Grounding Tests",
+  "timestamp": "2025-12-01T01:21:04.775404",
+  "tests": {
+    "predictive": {
+      "score_real": 0.6380488479572006,
+      "score_null": 0.7082927924412876,
+      "p95_null": 0.6380488479572006,
+      "passed": "False"
+    },
+    "symbolic": {
+      "score_real": 0.10850216295922677,
+      "score_null": 0.003775714471788938,
+      "p95_null": 0.006034562106523815,
+      "passed": "True"
+    },
+    "value": {
+      "score_real": 0.5925731611409694,
+      "score_null": -0.0019618455149645825,
+      "p95_null": 0.07832782344230257,
+      "passed": "True"
+    }
+  },
+  "criteria": {
+    "predictive_grounding": "False",
+    "symbolic_grounding": "True",
+    "value_grounding": "True",
+    "majority_passed": "True",
+    "scores_positive": true
+  },
+  "go_status": "GO",
+  "passed_criteria": "4",
+  "total_criteria": 5
+}

@@ -1,0 +1,62 @@
+{
+  "phase": "I2",
+  "name": "Global Integration Index",
+  "timestamp": "2025-12-01T01:18:30.126140",
+  "metrics": {
+    "ready": true,
+    "t": 498,
+    "IGI_current": 0.7730923694779117,
+    "IGI_mean": 0.6883857502651091,
+    "IGI_std": 0.3755716488226522,
+    "n_episodes": 13,
+    "episodes": [
+      {
+        "start": 454,
+        "duration": 1,
+        "mean_igi": NaN
+      },
+      {
+        "start": 458,
+        "duration": 1,
+        "mean_igi": NaN
+      },
+      {
+        "start": 460,
+        "duration": 1,
+        "mean_igi": NaN
+      },
+      {
+        "start": 471,
+        "duration": 1,
+        "mean_igi": NaN
+      },
+      {
+        "start": 498,
+        "duration": 1,
+        "mean_igi": NaN
+      }
+    ]
+  },
+  "certification": {
+    "certified": "False",
+    "IGI_real_mean": 0.6883857502651091,
+    "p95_shuffle": 1.2399166666666666,
+    "p95_markov": 1.25,
+    "test_shuffle": "False",
+    "test_markov": "False",
+    "n_long_episodes": 0,
+    "K_required": 2,
+    "test_episodes": false,
+    "min_episode_duration": 5
+  },
+  "criteria": {
+    "igi_computed": true,
+    "test_shuffle": "False",
+    "test_markov": "False",
+    "episodes_detected": false,
+    "certified": "False"
+  },
+  "go_status": "NO-GO",
+  "passed_criteria": "1",
+  "total_criteria": 5
+}

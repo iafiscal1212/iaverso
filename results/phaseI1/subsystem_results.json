@@ -1,0 +1,52 @@
+{
+  "phase": "I1",
+  "name": "Subsystem Decomposition",
+  "timestamp": "2025-12-01T01:17:42.987486",
+  "metrics": {
+    "ready": true,
+    "n_subsystems": 6,
+    "subsystem_names": [
+      "NEO_visible",
+      "NEO_hidden",
+      "EVA_visible",
+      "EVA_hidden",
+      "workspace",
+      "drives"
+    ],
+    "top_couplings": [
+      {
+        "pair": [
+          "NEO_visible",
+          "NEO_hidden"
+        ],
+        "coupling": 0.9333333333333333
+      },
+      {
+        "pair": [
+          "EVA_visible",
+          "EVA_hidden"
+        ],
+        "coupling": 0.8666666666666667
+      },
+      {
+        "pair": [
+          "NEO_visible",
+          "drives"
+        ],
+        "coupling": 0.8
+      }
+    ],
+    "mean_coupling": 0.4666666666666667,
+    "coupling_std": 0.28803291992923824
+  },
+  "criteria": {
+    "matrices_computed": true,
+    "couplings_differentiated": "True",
+    "strong_couplings": "True",
+    "te_captured": true,
+    "system_stable": "True"
+  },
+  "go_status": "GO",
+  "passed_criteria": "5",
+  "total_criteria": 5
+}

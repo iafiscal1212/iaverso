@@ -1,0 +1,29 @@
+{
+  "phase": "G1",
+  "name": "Structured World Channel",
+  "timestamp": "2025-12-01T01:21:03.926051",
+  "metrics": {
+    "dim_s": 6,
+    "regime_stats": {
+      "counts": {
+        "regime_0": 30,
+        "regime_1": 7,
+        "regime_2": 463
+      },
+      "n_transitions": 5,
+      "mean_duration": 83.33333333333333,
+      "n_shocks": "6"
+    },
+    "predictability": 0.7723748494212873
+  },
+  "criteria": {
+    "multiple_regimes": true,
+    "transitions_detected": true,
+    "shocks_present": "True",
+    "predictability_nontrivial": true,
+    "temporal_structure": "True"
+  },
+  "go_status": "GO",
+  "passed_criteria": "5",
+  "total_criteria": 5
+}

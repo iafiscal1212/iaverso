@@ -1,0 +1,55 @@
+{
+  "timestamp": "2025-12-01T01:25:19.901523",
+  "config": {
+    "n_seeds": 3,
+    "T": 500
+  },
+  "aggregate": {
+    "SAGI_mean": 0.5242142430248616,
+    "SAGI_std": 0.03729535712439505,
+    "IGI_mean": 0.7012275292658824,
+    "IGI_std": 0.0241231346534378,
+    "mode_transitions_mean": 53.333333333333336
+  },
+  "runs": [
+    {
+      "seed": 42,
+      "final_metrics": {
+        "SAGI_mean": 0.48980448455854814,
+        "SAGI_std": 0.08340314058926873,
+        "SAGI_final": 0.4283921929032733,
+        "IGI_mean": 0.72892028732429,
+        "IGI_std": 0.3332511299398161,
+        "n_mode_transitions": 156,
+        "dominant_mode": 0,
+        "mode_entropy": 0.7635703851422757
+      }
+    },
+    {
+      "seed": 59,
+      "final_metrics": {
+        "SAGI_mean": 0.5760369195055574,
+        "SAGI_std": 0.07769950153250459,
+        "SAGI_final": 0.5105066219299251,
+        "IGI_mean": 0.6701265334168036,
+        "IGI_std": 0.3621768306689857,
+        "n_mode_transitions": 2,
+        "dominant_mode": 0,
+        "mode_entropy": 0.08203397652688318
+      }
+    },
+    {
+      "seed": 76,
+      "final_metrics": {
+        "SAGI_mean": 0.5068013250104791,
+        "SAGI_std": 0.08968180349246055,
+        "SAGI_final": 0.4779020714800805,
+        "IGI_mean": 0.7046357670565534,
+        "IGI_std": 0.3703773776807434,
+        "n_mode_transitions": 2,
+        "dominant_mode": 0,
+        "mode_entropy": 0.08203397652688318
+      }
+    }
+  ]
+}

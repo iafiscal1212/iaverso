@@ -1,0 +1,23 @@
+{
+  "phase": "S2",
+  "name": "Self-Report Structural Test",
+  "timestamp": "2025-12-01T01:24:00.161229",
+  "test_result": {
+    "AUC_ext": 0.5142857142857142,
+    "AUC_mix": 0.8542857142857143,
+    "delta_AUC": 0.3400000000000001,
+    "p95_null": -0.07085714285714281,
+    "passed": "True",
+    "interpretation": "El self-report aporta informaci\u00f3n propia sobre el estado fenomenol\u00f3gico"
+  },
+  "criteria": {
+    "reports_generated": true,
+    "external_predictor_works": true,
+    "mixed_better": true,
+    "delta_significant": "True",
+    "subjectivity_test_passed": "True"
+  },
+  "go_status": "GO",
+  "passed_criteria": "5",
+  "total_criteria": 5
+}
