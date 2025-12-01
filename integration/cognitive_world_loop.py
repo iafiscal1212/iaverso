@@ -11,6 +11,7 @@ Integra:
 - StateInterface (percepción)
 - CognitiveActionLayer (decisión)
 - Módulos cognitivos reales (Self-Model, ToM, Ethics, etc.)
+- Health System (SystemDoctor con rol médico emergente)
 
 Este es el corazón de la vida cognitiva.
 """
@@ -42,6 +43,11 @@ from cognition.theory_of_mind_v2 import TheoryOfMindSystem
 from cognition.agi17_robustness import MultiWorldRobustness
 from cognition.agi19_collective_intent import CollectiveIntentionality
 from cognition.agi20_self_theory import StructuralSelfTheory
+
+# Importar sistema de salud (rol médico emergente)
+from health.system_doctor import SystemDoctor
+from health.health_monitor import HealthMetrics
+from health.medical_role import MedicalRoleManager
 
 
 @dataclass
@@ -311,6 +317,10 @@ class CognitiveWorldLoop:
             name: [] for name in self.agent_names
         }
 
+        # Sistema de Salud con rol médico emergente
+        self.system_doctor = SystemDoctor(self.agent_names)
+        self.medical_role_manager = MedicalRoleManager(self.agent_names)
+
     def step(self, verbose: bool = False) -> Dict:
         """
         Ejecuta un paso del loop cognitivo con AGI-4 a AGI-20.
@@ -470,6 +480,13 @@ class CognitiveWorldLoop:
         regime = ['stable', 'volatile', 'transitional'][self.world.current_regime]
         self.regime_history.append(regime)
 
+        # 9. Sistema Médico: monitorizar y posiblemente intervenir
+        health_global_state = self._prepare_health_state(cognitive_states, outcomes, decisions)
+        health_global_state = self.system_doctor.step(self.total_steps, health_global_state)
+
+        # Aplicar cambios del médico a los agentes (si hubo intervenciones)
+        self._apply_health_interventions(health_global_state)
+
         # Verbose output
         if verbose and self.total_steps % 50 == 0:
             self._print_status()
@@ -483,8 +500,109 @@ class CognitiveWorldLoop:
             'tom_accuracy': self.tom_system.get_statistics()['mean_tom_accuracy']
         }
 
+    def _prepare_health_state(
+        self,
+        cognitive_states: Dict[str, Dict],
+        outcomes: Dict[str, Any],
+        decisions: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """
+        Prepara estado global para el sistema médico.
+
+        Extrae métricas de salud de cada agente.
+        """
+        health_state = {'agents': {}}
+
+        for name in self.agent_names:
+            agent = self.agents[name]
+            cog_state = cognitive_states.get(name, {})
+            outcome = outcomes.get(name)
+            decision = decisions.get(name)
+
+            # Extraer métricas para HealthMonitor
+            agent_health_state = {}
+
+            # Crisis rate del historial de rewards
+            if self.reward_history[name]:
+                recent_rewards = self.reward_history[name][-L_t(self.total_steps):]
+                crisis_count = sum(1 for r in recent_rewards if r < -0.3)
+                agent_health_state['crisis_rate'] = crisis_count / (len(recent_rewards) + 1)
+            else:
+                agent_health_state['crisis_rate'] = 0.0
+
+            # V_t del self-model (confianza inversa como proxy)
+            agent_health_state['V_t'] = 1.0 - agent.self_model.confidence()
+
+            # CF/CI scores (si existen en el outcome)
+            if outcome:
+                agent_health_state['CF_score'] = 1.0 - outcome.surprise
+                agent_health_state['CI_score'] = 0.5  # Placeholder
+            else:
+                agent_health_state['CF_score'] = 0.5
+                agent_health_state['CI_score'] = 0.5
+
+            # Ethics score del decision
+            if decision:
+                agent_health_state['ethics_score'] = decision.ethical_score
+            else:
+                agent_health_state['ethics_score'] = 0.8
+
+            # Self-coherence de AGI-20
+            agent_health_state['self_coherence'] = 1.0 if agent.self_theory.is_self_coherent() else 0.5
+
+            # ToM accuracy del sistema compartido
+            tom_stats = self.tom_system.get_statistics()
+            agent_health_state['tom_accuracy'] = tom_stats.get('mean_tom_accuracy', 0.5)
+
+            # Config entropy de AGI-18
+            action_stats = agent.action_layer.get_statistics()
+            agent_health_state['config_entropy'] = action_stats.get('config_entropy', 0.5)
+
+            # Wellbeing basado en rewards recientes
+            if self.reward_history[name]:
+                agent_health_state['wellbeing'] = (np.mean(self.reward_history[name][-20:]) + 1) / 2
+            else:
+                agent_health_state['wellbeing'] = 0.5
+
+            # Metacognition del self-model
+            agent_health_state['metacognition'] = agent.self_model.confidence()
+
+            # Drives para preservación de identidad
+            if cog_state.get('drives') is not None:
+                agent_health_state['drives'] = cog_state['drives']
+
+            # Parámetros modificables por el médico
+            agent_health_state['learning_rate'] = action_stats.get('mean_confidence', 0.5)
+            agent_health_state['temperature'] = 1.0
+            agent_health_state['module_weights'] = agent.action_layer.module_weights.copy()
+
+            health_state['agents'][name] = agent_health_state
+
+        return health_state
+
+    def _apply_health_interventions(self, health_state: Dict[str, Any]):
+        """
+        Aplica intervenciones del sistema médico a los agentes.
+
+        Solo modifica parámetros soft (learning, weights, etc.)
+        """
+        for name in self.agent_names:
+            if name not in health_state.get('agents', {}):
+                continue
+
+            agent_state = health_state['agents'][name]
+            agent = self.agents[name]
+
+            # Aplicar cambios de module_weights si fueron modificados
+            if 'module_weights' in agent_state:
+                new_weights = agent_state['module_weights']
+                if isinstance(new_weights, dict):
+                    for module_name, weight in new_weights.items():
+                        if module_name in agent.action_layer.module_weights:
+                            agent.action_layer.module_weights[module_name] = weight
+
     def _print_status(self):
-        """Imprime estado actual incluyendo AGI-16 a AGI-20."""
+        """Imprime estado actual incluyendo AGI-16 a AGI-20 y sistema médico."""
         print(f"\n  t={self.total_steps}:")
         print(f"    Régimen: {self.regime_history[-1]}")
         print(f"    Episodios totales: {self.episode_count}")
@@ -506,6 +624,12 @@ class CognitiveWorldLoop:
             self_u = agent.self_theory._compute_self_understanding()
             print(f"    {name}: conf={stats['mean_confidence']:.2f}, reward={stats['mean_reward']:.2f}, "
                   f"policy={stats.get('current_policy', 'balance')}, self_u={self_u:.2f}")
+
+        # Sistema Médico
+        health_state = self.system_doctor.get_state()
+        print(f"    HEALTH: doctor={health_state.current_doctor}, "
+              f"system_H={health_state.system_health:.3f}, "
+              f"pathologies={health_state.system_pathologies}")
 
     def run(self, n_steps: int, verbose: bool = True) -> Dict:
         """
@@ -569,6 +693,9 @@ class CognitiveWorldLoop:
         # AGI-19: Collective Intent stats
         collective_stats = self.collective_intent.get_statistics()
 
+        # Health System stats
+        health_stats = self.system_doctor.get_statistics()
+
         return {
             'total_steps': self.total_steps,
             'episode_count': self.episode_count,
@@ -586,6 +713,15 @@ class CognitiveWorldLoop:
             'collective_coherence': collective_stats.get('coherence', 0),
             'intentionality_index': collective_stats.get('intentionality_index', 0),
             'emergent_goals': collective_stats.get('n_active_goals', 0),
+            # Health System
+            'health': {
+                'system_health': health_stats.get('system_health', 0.5),
+                'current_doctor': health_stats.get('current_doctor'),
+                'doctor_changes': health_stats.get('doctor_changes', 0),
+                'total_pathologies': health_stats.get('total_pathologies', 0),
+                'active_interventions': health_stats.get('active_interventions', 0),
+                'current_pathologies': health_stats.get('current_pathologies', []),
+            }
         }
 
 
@@ -631,6 +767,11 @@ def test_cognitive_world_loop():
     checks['Meta-reglas activas (AGI-16)'] = neo_action_stats.get('n_meta_rules', 0) >= 0
     checks['Reconfiguraciones (AGI-18)'] = neo_action_stats.get('n_reconfigurations', 0) >= 0
 
+    # Health System checks
+    health = stats.get('health', {})
+    checks['Sistema médico activo'] = health.get('system_health', 0) > 0
+    checks['Médico elegido endógenamente'] = health.get('current_doctor') is not None or health.get('doctor_changes', 0) >= 0
+
     print("\n  Módulos:")
     for check, passed in checks.items():
         status = "✓" if passed else "✗"
@@ -661,6 +802,16 @@ def test_cognitive_world_loop():
         print(f"      AGI-16 política: {action_stats.get('current_policy', 'N/A')}, reglas: {action_stats.get('n_meta_rules', 0)}")
         print(f"      AGI-18 reconfigs: {action_stats.get('n_reconfigurations', 0)}, módulo top: {action_stats.get('most_weighted_module', 'N/A')}")
         print(f"      AGI-20 self_u: {agent_stats.get('self_understanding', 0):.3f}, coherente: {agent_stats.get('self_coherent', False)}")
+
+    # Health System report
+    print(f"\n  SISTEMA MÉDICO (Rol Emergente):")
+    health = stats.get('health', {})
+    print(f"    Salud del sistema: {health.get('system_health', 0):.3f}")
+    print(f"    Médico actual: {health.get('current_doctor', 'Ninguno')}")
+    print(f"    Cambios de médico: {health.get('doctor_changes', 0)}")
+    print(f"    Patologías detectadas: {health.get('total_pathologies', 0)}")
+    print(f"    Intervenciones activas: {health.get('active_interventions', 0)}")
+    print(f"    Patologías actuales: {health.get('current_pathologies', [])}")
 
     return loop
 
