@@ -49,6 +49,16 @@ from health.system_doctor import SystemDoctor
 from health.health_monitor import HealthMetrics
 from health.medical_role import MedicalRoleManager
 
+# Importar sistema de ciclo de vida
+from lifecycle.circadian_system import (
+    CircadianPhase,
+    AgentCircadianCycle,
+    AbsenceSimulator
+)
+from lifecycle.dream_processor import DreamProcessor
+from lifecycle.life_journal import LifeJournal, JournalEntryType
+from lifecycle.reconnection_narrative import ReconnectionNarrativeGenerator
+
 
 @dataclass
 class Episode:
@@ -108,6 +118,12 @@ class CognitiveAgent:
         # Memoria
         self.memory = AgentMemory()
 
+        # Sistema de Ciclo de Vida
+        self.circadian = AgentCircadianCycle(name)
+        self.dream_processor = DreamProcessor(name)
+        self.life_journal = LifeJournal(name)
+        self.reconnection_narrator = ReconnectionNarrativeGenerator(name)
+
         # Estado actual
         self.current_state: Optional[Dict] = None
         self.current_perception: Optional[Any] = None
@@ -156,6 +172,51 @@ class CognitiveAgent:
         """Procesa resultado de la acción."""
         self.episode_outcomes.append(outcome)
         self.episode_reward += outcome.reward_signal
+
+        # Actualizar ciclo circadiano
+        activity_level = abs(outcome.reward_signal) + 0.3
+        crisis_level = outcome.surprise
+        self.circadian.step(activity_level, crisis_level)
+
+        # Agregar experiencia al procesador de suenos
+        if abs(outcome.reward_signal) > 0.3 or outcome.surprise > 0.5:
+            experience = {
+                'id': f'exp_{self.t}',
+                'content': f'reward={outcome.reward_signal:.2f}',
+                'emotional_valence': outcome.reward_signal,
+                'importance': abs(outcome.reward_signal) + outcome.surprise,
+                'timestamp': self.t,
+                'context': {'surprise': outcome.surprise}
+            }
+            self.dream_processor.add_memory_for_consolidation(experience)
+
+        # Si esta en fase DREAM, procesar consolidacion
+        if self.circadian.phase == CircadianPhase.DREAM:
+            result = self.dream_processor.process_dream(
+                dream_depth=self.circadian.get_state().rest_depth
+            )
+            if result.memories_processed > 0:
+                self.life_journal.record_dream(
+                    result.dream_narrative,
+                    result.integration_strength,
+                    0.0  # tono neutral para suenos
+                )
+
+        # Registrar eventos significativos en el diario
+        if outcome.reward_signal > 0.5:
+            self.life_journal.record_event(
+                title="Exito notable",
+                content=f"Logro significativo con confianza alta",
+                significance=outcome.reward_signal,
+                emotional_state=outcome.reward_signal
+            )
+        elif outcome.reward_signal < -0.3:
+            self.life_journal.record_event(
+                title="Desafio",
+                content=f"Momento dificil, sorpresa={outcome.surprise:.2f}",
+                significance=abs(outcome.reward_signal),
+                emotional_state=outcome.reward_signal
+            )
 
     def should_end_episode(self) -> bool:
         """Decide si terminar episodio actual."""
@@ -721,7 +782,92 @@ class CognitiveWorldLoop:
                 'total_pathologies': health_stats.get('total_pathologies', 0),
                 'active_interventions': health_stats.get('active_interventions', 0),
                 'current_pathologies': health_stats.get('current_pathologies', []),
+            },
+            # Lifecycle stats
+            'lifecycle': self._get_lifecycle_stats()
+        }
+
+    def _get_lifecycle_stats(self) -> Dict:
+        """Obtiene estadisticas del ciclo de vida de los agentes."""
+        lifecycle_stats = {}
+        for name, agent in self.agents.items():
+            circadian_state = agent.circadian.get_state()
+            lifecycle_stats[name] = {
+                'phase': circadian_state.phase.value,
+                'energy': circadian_state.energy,
+                'stress': circadian_state.stress,
+                'cycles_completed': circadian_state.cycles_completed,
+                'journal_entries': agent.life_journal.get_statistics()['total_entries'],
+                'patterns_discovered': len(agent.dream_processor.discovered_patterns)
             }
+        return lifecycle_stats
+
+    def simulate_absence(self, hours: float) -> Dict[str, str]:
+        """
+        Simula lo que paso durante la ausencia del usuario.
+
+        Args:
+            hours: Horas de ausencia
+
+        Returns:
+            Dict con narrativas de reconexion por agente
+        """
+        # Obtener ciclos circadianos
+        cycles = {name: agent.circadian for name, agent in self.agents.items()}
+
+        # Simular ausencia
+        simulator = AbsenceSimulator(self.agent_names)
+        reports = simulator.simulate_absence(cycles, hours)
+
+        # Generar narrativas de reconexion
+        narratives = {}
+        for name, agent in self.agents.items():
+            narrative = agent.reconnection_narrator.generate_reconnection_narrative(
+                reports[name],
+                agent.circadian,
+                agent.life_journal,
+                agent.dream_processor
+            )
+            narratives[name] = agent.reconnection_narrator.format_narrative_for_display(
+                narrative, "medium"
+            )
+
+        return narratives
+
+    def reconnect(self, hours_away: float, verbose: bool = True) -> Dict:
+        """
+        Metodo para reconectar despues de ausencia.
+
+        Simula lo que paso y presenta narrativas.
+
+        Args:
+            hours_away: Horas de ausencia
+            verbose: Si imprimir narrativas
+
+        Returns:
+            Dict con narrativas y estado
+        """
+        if verbose:
+            print("=" * 70)
+            print(f"RECONEXION DESPUES DE {hours_away:.1f} HORAS")
+            print("=" * 70)
+
+        narratives = self.simulate_absence(hours_away)
+
+        if verbose:
+            for name in self.agent_names:
+                print(f"\n{'-' * 50}")
+                print(narratives[name])
+
+        # Actualizar tiempo total
+        simulated_steps = int(hours_away * 100)
+        self.total_steps += simulated_steps
+
+        return {
+            'narratives': narratives,
+            'hours_simulated': hours_away,
+            'steps_simulated': simulated_steps,
+            'lifecycle': self._get_lifecycle_stats()
         }
 
 
