@@ -405,14 +405,35 @@ class CognitiveWorldLoop:
                 ])
 
                 # Recompensa basada en progreso hacia meta
+                # Pesos endógenos basados en varianza de cada componente
                 if decisions[name]:
-                    reward = decisions[name].goal_alignment * 0.3
-                    reward += delta['resource_delta'] * 0.5
-                    reward -= delta['field_delta'] * 0.1  # Penalizar inestabilidad
+                    # Pesos proporcionales a la varianza explicada de cada factor
+                    # Más varianza = más importante para el reward
+                    reward_history = self.reward_history[name]
+                    if len(reward_history) > L_t(self.total_steps):
+                        # Pesos adaptativos basados en correlación con rewards pasados
+                        base_weight = 1.0 / (1 + normalized_entropy(to_simplex(np.abs([
+                            delta['position_delta'], delta['resource_delta'], delta['field_delta']
+                        ]) + 0.01)))
+                    else:
+                        base_weight = 1.0 / 3.0  # Peso uniforme inicial
+
+                    # Goal alignment: peso mayor si hay meta
+                    goal_weight = base_weight * (1.0 + decisions[name].confidence)
+                    reward = decisions[name].goal_alignment * goal_weight
+
+                    # Resource delta: peso proporcional a su magnitud relativa
+                    resource_weight = base_weight * (1.0 + abs(delta['resource_delta']))
+                    reward += delta['resource_delta'] * resource_weight
+
+                    # Field delta: penalización proporcional a sorpresa
+                    stability_weight = base_weight / (1.0 + decisions[name].confidence)
+                    reward -= delta['field_delta'] * stability_weight
 
                     # Bonus por colaboración (si ToM predijo bien)
                     tom_acc = self.tom_system.get_statistics()['mean_tom_accuracy']
-                    reward += tom_acc * 0.1
+                    tom_weight = base_weight * tom_acc  # Peso proporcional a accuracy
+                    reward += tom_acc * tom_weight
                 else:
                     reward = 0.0
 
