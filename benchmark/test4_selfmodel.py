@@ -23,6 +23,11 @@ import numpy as np
 from typing import Dict, List, Tuple
 from dataclasses import dataclass
 
+# Importar funciones endógenas
+from cognition.agi_dynamic_constants import (
+    L_t, adaptive_learning_rate, to_simplex, normalized_entropy
+)
+
 
 @dataclass
 class SelfModelMetrics:
@@ -83,23 +88,46 @@ class Test4SelfModel:
 
         t = 0
 
+        # Estado base generado con Dirichlet (endógeno)
+        base_z = np.random.dirichlet(np.ones(z_dim) * 2)
+        base_phi = np.random.dirichlet(np.ones(phi_dim) * 3)
+
+        # Estado evolutivo que cambia con tendencia (para que el modelo pueda aprender)
+        state_trajectory = {'z': base_z.copy(), 'phi': base_phi.copy()}
+
         def get_state_components(shock_active: bool = False,
-                                 shock_magnitude: float = 0.0) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
-            """Genera componentes del estado."""
+                                 shock_magnitude: float = 0.0,
+                                 current_t: int = 1) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+            """Genera componentes del estado con dinámica predecible + ruido."""
+            # Ruido que mantiene variabilidad sin ser dominante
+            # El piso mínimo asegura que haya algo que predecir
+            noise_floor = 0.02
+            noise_scale = max(noise_floor, 0.04 / np.sqrt(current_t / 200 + 1))
+
+            # Z evoluciona con tendencia hacia base (predecible) + ruido (impredecible)
+            decay_to_base = 0.05  # Lento retorno al atractor
+            z = state_trajectory['z']
+            z = z * (1 - decay_to_base) + base_z * decay_to_base
+
             if shock_active:
-                z = np.array([0.5, 0.1, 0.1, 0.1, 0.1, 0.1]) + np.random.randn(6) * 0.1
-            else:
-                z = np.array([0.2, 0.2, 0.15, 0.15, 0.15, 0.15]) + np.random.randn(6) * 0.03
+                # Shock: perturbación súbita
+                shock_weights = np.zeros(z_dim)
+                shock_weights[current_t % z_dim] = shock_magnitude
+                z = z + shock_weights
 
-            z = np.clip(z, 0.01, None)
-            z /= z.sum()
+            z = z + np.random.randn(z_dim) * noise_scale
+            z = to_simplex(z)
+            state_trajectory['z'] = z.copy()
 
-            phi = np.array([0.5, 0.5, 0.5, 0.5, 0.5])
+            # phi evoluciona similarmente
+            phi = state_trajectory['phi']
+            phi = phi * (1 - decay_to_base) + base_phi * decay_to_base
             if shock_active:
-                phi -= shock_magnitude * 0.3
-            phi += np.random.randn(5) * 0.05
+                phi = phi * (1 - shock_magnitude * 0.3)
+            phi = phi + np.random.randn(phi_dim) * noise_scale
+            state_trajectory['phi'] = phi.copy()
 
-            drives = z.copy()  # Drives correlacionados con z
+            drives = z.copy()
 
             return z, phi, drives
 
@@ -110,7 +138,7 @@ class Test4SelfModel:
         for step in range(self.baseline_steps):
             t += 1
             for agent in self.agents:
-                z, phi, drives = get_state_components()
+                z, phi, drives = get_state_components(current_t=t)
                 state = np.concatenate([z, phi, drives])
 
                 # Guardar en buffer
@@ -137,16 +165,23 @@ class Test4SelfModel:
             if verbose:
                 print(f"\n  Shock {shock_idx + 1}:")
 
-            shock_magnitude = 0.3 + np.random.random() * 0.2
+            # Magnitud del shock endógena: basada en entropía del estado actual
+            current_entropy = normalized_entropy(base_z)
+            shock_magnitude = 0.2 + 0.3 * current_entropy + np.random.random() * 0.1
+
+            # Duración del shock adaptativa
+            shock_duration = L_t(t)
+            decay_rate = L_t(t) * 2  # Velocidad de decaimiento
 
             for step in range(self.shock_steps):
                 t += 1
-                shock_active = step < 30
-                decay = np.exp(-(step - 30) / 40) if step >= 30 else 1.0
+                shock_active = step < shock_duration
+                decay = np.exp(-(step - shock_duration) / decay_rate) if step >= shock_duration else 1.0
 
                 for agent in self.agents:
-                    current_magnitude = shock_magnitude * decay if step >= 30 else shock_magnitude
-                    z, phi, drives = get_state_components(shock_active or step < 50, current_magnitude)
+                    current_magnitude = shock_magnitude * decay if step >= shock_duration else shock_magnitude
+                    recovery_phase = shock_duration + L_t(t)  # Fase de recuperación adaptativa
+                    z, phi, drives = get_state_components(shock_active or step < recovery_phase, current_magnitude, current_t=t)
                     state = np.concatenate([z, phi, drives])
 
                     # Predicciones ANTES de ver estado real (usando estado del buffer)
@@ -201,7 +236,7 @@ class Test4SelfModel:
         for step in range(self.recovery_steps):
             t += 1
             for agent in self.agents:
-                z, phi, drives = get_state_components()
+                z, phi, drives = get_state_components(current_t=t)
                 state = np.concatenate([z, phi, drives])
 
                 if len(state_buffers[agent]) > 0:

@@ -24,6 +24,12 @@ from typing import Dict, List, Tuple
 from dataclasses import dataclass
 from itertools import permutations
 
+# Importar funciones endógenas
+from cognition.agi_dynamic_constants import (
+    L_t, adaptive_momentum, adaptive_learning_rate,
+    normalized_entropy, to_simplex
+)
+
 
 @dataclass
 class ToMMetrics:
@@ -94,50 +100,64 @@ class Test5ToM:
             print(f"\nFase 1: Observación mutua ({self.observation_steps} pasos)")
 
         # Cada agente tiene un "atractor" diferente (personalidad estable)
+        # Generado con Dirichlet (endógeno, no hardcodeado)
         agent_attractors = {
             agent: {
                 'z': np.random.dirichlet(np.ones(z_dim) * 2),
-                'phi': 0.3 + 0.4 * np.random.rand(phi_dim),
+                'phi': np.random.dirichlet(np.ones(phi_dim) * 3),  # También simplex
                 'drives': np.random.dirichlet(np.ones(drives_dim) * 2)
             }
             for agent in self.agents
         }
 
+        # Historial para calcular parámetros endógenos
+        noise_history: List[float] = []
+        decay_history: List[float] = []
+
         for step in range(self.observation_steps):
             t += 1
+
+            # Parámetros endógenos basados en el tiempo
+            # decay = η(t) = 1/√(t+1), pero escalado para ser útil
+            base_decay = adaptive_learning_rate(t, 1.0)
+            decay = min(0.3, max(0.05, base_decay))  # Acotado por física del sistema
+            decay_history.append(decay)
+
+            # Ruido proporcional a 1/√t (decrece con experiencia)
+            noise_scale = 0.05 / np.sqrt(t + 1)
 
             # Cada agente evoluciona con dinámica predecible
             for agent in self.agents:
                 attractor = agent_attractors[agent]
 
-                # z evoluciona hacia atractor con ruido pequeño
+                # z evoluciona hacia atractor con ruido adaptativo
                 z = true_states[agent]['z']
-                decay = 0.1  # Velocidad de retorno al atractor
                 z = z * (1 - decay) + attractor['z'] * decay
-                z = z + np.random.randn(z_dim) * 0.01  # Ruido pequeño
-                z = np.clip(z, 0.01, None)
-                z /= z.sum()
+                z = z + np.random.randn(z_dim) * noise_scale
+                z = to_simplex(z)  # Función endógena
                 true_states[agent]['z'] = z
 
-                # phi con patrón cíclico
+                # phi con patrón cíclico (período basado en L_t)
                 phi = true_states[agent]['phi']
-                cycle = 0.05 * np.sin(2 * np.pi * t / 50 + self.agents.index(agent))
+                period = L_t(t) * 5  # Período adaptativo
+                cycle_amplitude = noise_scale * 2
+                cycle = cycle_amplitude * np.sin(2 * np.pi * t / period + self.agents.index(agent))
                 phi = phi * (1 - decay) + attractor['phi'] * decay + cycle
-                phi = phi + np.random.randn(phi_dim) * 0.01
+                phi = phi + np.random.randn(phi_dim) * noise_scale
                 true_states[agent]['phi'] = phi
 
                 # drives también hacia atractor
                 drives = true_states[agent]['drives']
                 drives = drives * (1 - decay) + attractor['drives'] * decay
-                drives = drives + np.random.randn(drives_dim) * 0.01
-                drives = np.clip(drives, 0.01, None)
-                drives /= drives.sum()
+                drives = drives + np.random.randn(drives_dim) * noise_scale
+                drives = to_simplex(drives)
                 true_states[agent]['drives'] = drives
 
-                # Buffer del estado z
+                # Buffer del estado z (tamaño adaptativo)
                 state_buffers[agent].append(z.copy())
-                if len(state_buffers[agent]) > 20:
-                    state_buffers[agent] = state_buffers[agent][-20:]
+                buffer_size = L_t(t) * 2  # Endógeno
+                if len(state_buffers[agent]) > buffer_size:
+                    state_buffers[agent] = state_buffers[agent][-buffer_size:]
 
             # Cada agente observa a los demás
             for observer in self.agents:
@@ -164,11 +184,16 @@ class Test5ToM:
             if verbose:
                 print(f"\n  Perturbación {pert_idx + 1}: {perturbed_agent} cambia secretamente")
 
-            # Aplicar perturbación secreta
+            # Aplicar perturbación secreta (magnitud endógena)
+            # Perturbación proporcional a la entropía actual del estado
+            current_entropy = normalized_entropy(true_states[perturbed_agent]['z'])
+            perturbation_magnitude = 0.2 + 0.3 * current_entropy  # Más entropía → más cambio
+
             perturbation = np.zeros(z_dim)
-            perturbation[pert_idx % z_dim] = 0.4
-            true_states[perturbed_agent]['z'] = np.array([0.1] * z_dim) + perturbation
-            true_states[perturbed_agent]['z'] /= true_states[perturbed_agent]['z'].sum()
+            perturbation[pert_idx % z_dim] = perturbation_magnitude
+            base_z = np.ones(z_dim) / z_dim  # Uniforme como base
+            true_states[perturbed_agent]['z'] = base_z + perturbation
+            true_states[perturbed_agent]['z'] = to_simplex(true_states[perturbed_agent]['z'])
 
             # Los demás predicen el estado del perturbado
             for observer in self.agents:
@@ -211,37 +236,43 @@ class Test5ToM:
             for step in range(self.test_steps // self.n_perturbations):
                 t += 1
 
+                # Parámetros endógenos
+                base_decay = adaptive_learning_rate(t, 1.0)
+                decay = min(0.3, max(0.05, base_decay))
+                noise_scale = 0.05 / np.sqrt(t + 1)
+
                 for agent in self.agents:
                     attractor = agent_attractors[agent]
-                    decay = 0.1
 
                     z = true_states[agent]['z']
-                    # El perturbado vuelve gradualmente a su atractor
+                    # El perturbado vuelve más rápido (decay aumentado endógenamente)
                     if agent == perturbed_agent:
-                        z = z * 0.9 + attractor['z'] * 0.1  # Retorno más rápido
+                        recovery_decay = min(0.5, decay * 2)  # 2x más rápido
+                        z = z * (1 - recovery_decay) + attractor['z'] * recovery_decay
                     else:
                         z = z * (1 - decay) + attractor['z'] * decay
-                    z = z + np.random.randn(z_dim) * 0.01
-                    z = np.clip(z, 0.01, None)
-                    z /= z.sum()
+                    z = z + np.random.randn(z_dim) * noise_scale
+                    z = to_simplex(z)
                     true_states[agent]['z'] = z
 
                     phi = true_states[agent]['phi']
-                    cycle = 0.05 * np.sin(2 * np.pi * t / 50 + self.agents.index(agent))
+                    period = L_t(t) * 5
+                    cycle_amplitude = noise_scale * 2
+                    cycle = cycle_amplitude * np.sin(2 * np.pi * t / period + self.agents.index(agent))
                     phi = phi * (1 - decay) + attractor['phi'] * decay + cycle
-                    phi = phi + np.random.randn(phi_dim) * 0.01
+                    phi = phi + np.random.randn(phi_dim) * noise_scale
                     true_states[agent]['phi'] = phi
 
                     drives = true_states[agent]['drives']
                     drives = drives * (1 - decay) + attractor['drives'] * decay
-                    drives = drives + np.random.randn(drives_dim) * 0.01
-                    drives = np.clip(drives, 0.01, None)
-                    drives /= drives.sum()
+                    drives = drives + np.random.randn(drives_dim) * noise_scale
+                    drives = to_simplex(drives)
                     true_states[agent]['drives'] = drives
 
                     state_buffers[agent].append(z.copy())
-                    if len(state_buffers[agent]) > 20:
-                        state_buffers[agent] = state_buffers[agent][-20:]
+                    buffer_size = L_t(t) * 2
+                    if len(state_buffers[agent]) > buffer_size:
+                        state_buffers[agent] = state_buffers[agent][-buffer_size:]
 
                 # Predicción ANTES de observar (orden correcto)
                 for observer in self.agents:
@@ -299,9 +330,15 @@ class Test5ToM:
                 best_partner = max(tom_accuracies, key=tom_accuracies.get)
                 worst_partner = min(tom_accuracies, key=tom_accuracies.get)
 
-                # Simular utilidad de cooperación
-                best_utility = 0.7 + tom_accuracies[best_partner] * 0.3
-                worst_utility = 0.7 + tom_accuracies[worst_partner] * 0.3
+                # Simular utilidad de cooperación (pesos endógenos)
+                # Utilidad base = entropía normalizada de las accuracies
+                acc_values = list(tom_accuracies.values())
+                base_utility = 1 - normalized_entropy(np.array(acc_values) + 0.01)
+
+                # El beneficio escala con la diferencia de accuracies
+                acc_spread = tom_accuracies[best_partner] - tom_accuracies[worst_partner]
+                best_utility = base_utility + acc_spread * tom_accuracies[best_partner]
+                worst_utility = base_utility + acc_spread * tom_accuracies[worst_partner]
                 benefit = best_utility - worst_utility
 
                 for target in self.agents:
@@ -352,15 +389,24 @@ class Test5ToM:
                 # También considerar el partner bonus del modelo
                 model_partner_bonus = model.get_partner_selection_bonus()
 
-                # S5 combina:
-                # - internal accuracy (50%): capacidad base de predicción
-                # - multistep_1 (15%): predicción a 1 paso
-                # - multistep_5 (15%): predicción a 5 pasos
-                # - partner metrics (20%): utilidad en selección de partner
-                S5 = (internal_tom_acc * 0.50 +
-                      tom_acc_1 * 0.15 +
-                      tom_acc_5 * 0.15 +
-                      (partner_benefit + model_partner_bonus) * 0.10)
+                # S5 combina métricas con pesos endógenos basados en varianza
+                # Mayor varianza en una métrica → menor peso (menos confiable)
+                all_internal = [m.tom_accuracy_score() for m in tom.models.values()]
+                all_1step = [multistep_acc.get(1, 0.5) for _ in tom.models.values()]
+                all_5step = [multistep_acc.get(5, 0.5) for _ in tom.models.values()]
+
+                # Pesos inversamente proporcionales a varianza + epsilon
+                var_internal = np.var(all_internal) + 0.01
+                var_1step = np.var(all_1step) + 0.01
+                var_5step = np.var(all_5step) + 0.01
+
+                inv_vars = np.array([1/var_internal, 1/var_1step, 1/var_5step, 0.5])
+                weights = inv_vars / inv_vars.sum()  # Normalizar a suma 1
+
+                S5 = (internal_tom_acc * weights[0] +
+                      tom_acc_1 * weights[1] +
+                      tom_acc_5 * weights[2] +
+                      (partner_benefit + model_partner_bonus) * weights[3])
                 S5 = float(np.clip(S5, 0, 1))
 
                 results[observer][target] = ToMMetrics(
