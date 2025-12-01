@@ -1,0 +1,22 @@
+{
+  "tests": {
+    "variance_non_degenerate": true,
+    "entropy_intermediate": true,
+    "regime_changes": true,
+    "health_meaningful": true,
+    "d_eff_adapts": true,
+    "phi_world_meaningful": true
+  },
+  "metrics": {
+    "mean_variance": 0.45217666503537796,
+    "mean_entropy": 0.3626077694247776,
+    "mean_health": 0.7023477659144799,
+    "mean_phi_world": 0.29599170775176875,
+    "final_d_eff": 8,
+    "n_regime_changes": 127,
+    "n_unique_regimes": 4
+  },
+  "phase": "W1",
+  "status": "PASS",
+  "timestamp": "2025-12-01T05:21:00.356317"
+}

@@ -1,0 +1,39 @@
+{
+  "tests": {
+    "distinct_projections": true,
+    "actions_affect_world": true,
+    "agent_world_correlation": true,
+    "phi_correlation": true,
+    "regime_detection": true
+  },
+  "metrics": {
+    "mean_world_entropy": -0.10872979178752555,
+    "mean_world_health": 0.6230431138797976,
+    "mean_world_phi": 0.30171278045167493,
+    "agent_world_correlations": {
+      "NEO": 0.003071275641062571,
+      "EVA": 0.01680168793329969,
+      "ALEX": -0.003290060355991785,
+      "ADAM": 0.04081249490038248,
+      "IRIS": 0.013915856932508254
+    },
+    "phi_correlations": {
+      "NEO": 0.05839746486582105,
+      "EVA": 0.04724744881364062,
+      "ALEX": 0.055367820605746916,
+      "ADAM": 0.1103128180367588,
+      "IRIS": 0.04013206043913529
+    },
+    "n_regime_changes": 261
+  },
+  "phase": "W2",
+  "status": "PASS",
+  "timestamp": "2025-12-01T05:22:59.972035",
+  "agents": [
+    "NEO",
+    "EVA",
+    "ALEX",
+    "ADAM",
+    "IRIS"
+  ]
+}
