@@ -1,17 +1,19 @@
 """
-TEST 4 — AUTO-MODELO (Self-Model Accuracy)
-==========================================
+TEST 4 — AUTO-MODELO (Self-Model Accuracy) V2
+=============================================
 
 Qué mide: Autoconsciencia estructural
-AGI involucrada: AGI-4, AGI-11, AGI-14
+AGI involucrada: AGI-4 (SelfPredictorV2), AGI-11, AGI-14
 
 Procedimiento:
 1. Perturbas al agente internamente (shock controlado)
-2. El agente predice sus estados futuros
+2. El agente predice sus estados futuros a 1,3,5 pasos
 3. Comparas predicción vs realidad
 
 Métrica:
-    S4 = 1 - rank(|s_t - ŝ_t|)
+    S4 = 1 - MSE_5steps / percentile95(MSE_null)
+
+donde MSE_null es el error de un predictor naive (predice t-1).
 """
 
 import sys
@@ -26,50 +28,80 @@ from dataclasses import dataclass
 class SelfModelMetrics:
     """Métricas de auto-modelo por agente."""
     agent_name: str
-    prediction_accuracy: float
-    shock_recovery: float
-    self_awareness: float
-    calibration_error: float
+    mse_1step: float
+    mse_3step: float
+    mse_5step: float
+    mse_null: float
+    confidence_mean: float
+    confidence_behavior_corr: float
     S4_score: float
 
 
 class Test4SelfModel:
-    """Test de precisión del auto-modelo."""
+    """Test de precisión del auto-modelo usando SelfPredictorV2."""
 
     def __init__(self, agents: List[str] = None):
         self.agents = agents or ['NEO', 'EVA', 'ALEX', 'ADAM', 'IRIS']
-        self.baseline_steps = 200
-        self.shock_steps = 100
+        self.baseline_steps = 300
+        self.shock_steps = 150
         self.recovery_steps = 200
         self.n_shocks = 3
 
     def run(self, verbose: bool = True) -> Tuple[float, Dict]:
         """Ejecuta el test."""
-        from cognition import (
-            SelfModel,
-            CounterfactualSelves,
-            IntrospectiveUncertainty, PredictionChannel
-        )
+        from cognition.self_model_v2 import SelfPredictorV2
+        from cognition import IntrospectiveUncertainty, PredictionChannel
 
         if verbose:
             print("=" * 70)
-            print("TEST 4: AUTO-MODELO")
+            print("TEST 4: AUTO-MODELO (SelfPredictorV2)")
             print("=" * 70)
 
-        # Inicializar módulos (state_dim = z_dim + phi_dim = 6 + 5 = 11)
-        self_model = {a: SelfModel(a, state_dim=11) for a in self.agents}
-        counterfactual = {a: CounterfactualSelves(a) for a in self.agents}
+        # Dimensiones del estado
+        z_dim = 6
+        phi_dim = 5
+        drives_dim = 6
+        state_dim = z_dim + phi_dim + drives_dim
+
+        # Inicializar módulos
+        self_model = {a: SelfPredictorV2(a, z_dim=z_dim, phi_dim=phi_dim, drives_dim=drives_dim)
+                      for a in self.agents}
         uncertainty = {a: IntrospectiveUncertainty(a) for a in self.agents}
 
         # Métricas
         metrics: Dict[str, Dict] = {a: {
-            'prediction_errors': [],
-            'shock_predictions': [],
-            'shock_actuals': [],
-            'recovery_predictions': []
+            'errors_1step': [],
+            'errors_3step': [],
+            'errors_5step': [],
+            'errors_null': [],  # Predictor naive
+            'confidences': [],
+            'behaviors': []  # Para correlación confianza-comportamiento
         } for a in self.agents}
 
+        # Buffer de estados pasados para predictor null
+        state_buffers: Dict[str, List[np.ndarray]] = {a: [] for a in self.agents}
+
         t = 0
+
+        def get_state_components(shock_active: bool = False,
+                                 shock_magnitude: float = 0.0) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+            """Genera componentes del estado."""
+            if shock_active:
+                z = np.array([0.5, 0.1, 0.1, 0.1, 0.1, 0.1]) + np.random.randn(6) * 0.1
+            else:
+                z = np.array([0.2, 0.2, 0.15, 0.15, 0.15, 0.15]) + np.random.randn(6) * 0.03
+
+            z = np.clip(z, 0.01, None)
+            z /= z.sum()
+
+            phi = np.array([0.5, 0.5, 0.5, 0.5, 0.5])
+            if shock_active:
+                phi -= shock_magnitude * 0.3
+            phi += np.random.randn(5) * 0.05
+
+            drives = z.copy()  # Drives correlacionados con z
+
+            return z, phi, drives
 
         # Fase 1: Baseline (aprender auto-modelo)
         if verbose:
@@ -78,35 +110,26 @@ class Test4SelfModel:
         for step in range(self.baseline_steps):
             t += 1
             for agent in self.agents:
-                # Estado normal
-                z = np.array([0.2, 0.2, 0.15, 0.15, 0.15, 0.15]) + np.random.randn(6) * 0.03
-                z = np.clip(z, 0.01, None)
-                z /= z.sum()
+                z, phi, drives = get_state_components()
+                state = np.concatenate([z, phi, drives])
 
-                phi = np.array([0.5, 0.5, 0.5, 0.5, 0.5]) + np.random.randn(5) * 0.05
-                V = 0.6 + np.random.randn() * 0.05
+                # Guardar en buffer
+                state_buffers[agent].append(state.copy())
+                if len(state_buffers[agent]) > 20:
+                    state_buffers[agent] = state_buffers[agent][-20:]
 
-                # Estado combinado
-                state = np.concatenate([z, phi])
+                # Actualizar modelo
+                self_model[agent].update(z, phi, drives)
 
-                # Hacer predicción antes de actualizar
-                predicted_state = self_model[agent].predict_self()
-
-                # Actualizar self-model con estado actual
-                self_model[agent].update_model(state)
-
-                # Registrar en counterfactual
-                policy = np.ones(7) / 7
-                counterfactual[agent].record_state(z, phi, policy, V, 0.5, 0.1)
-
-                # Registrar predicción
+                # Registrar predicción para uncertainty
+                pred_1 = self_model[agent].predict_k_steps(state, 1)
                 uncertainty[agent].record_prediction(
                     PredictionChannel.SELF_MODEL,
-                    predicted_state[0] if len(predicted_state) > 0 else 0.5,
-                    z[0]
+                    pred_1[0],
+                    state[0]
                 )
 
-        # Fase 2: Shocks controlados
+        # Fase 2: Shocks controlados con evaluación multi-paso
         if verbose:
             print(f"\nFase 2: {self.n_shocks} shocks controlados")
 
@@ -114,69 +137,91 @@ class Test4SelfModel:
             if verbose:
                 print(f"\n  Shock {shock_idx + 1}:")
 
-            # Aplicar shock
             shock_magnitude = 0.3 + np.random.random() * 0.2
 
             for step in range(self.shock_steps):
                 t += 1
+                shock_active = step < 30
+                decay = np.exp(-(step - 30) / 40) if step >= 30 else 1.0
+
                 for agent in self.agents:
-                    # Estado perturbado
-                    if step < 20:
-                        # Shock activo
-                        z = np.array([0.5, 0.1, 0.1, 0.1, 0.1, 0.1]) + np.random.randn(6) * 0.1
-                        perturbation = shock_magnitude
-                    else:
-                        # Recuperación
-                        decay = np.exp(-(step - 20) / 30)
-                        z = np.array([0.2, 0.2, 0.15, 0.15, 0.15, 0.15])
-                        z[0] += shock_magnitude * decay
-                        z += np.random.randn(6) * 0.05
-                        perturbation = shock_magnitude * decay
+                    current_magnitude = shock_magnitude * decay if step >= 30 else shock_magnitude
+                    z, phi, drives = get_state_components(shock_active or step < 50, current_magnitude)
+                    state = np.concatenate([z, phi, drives])
 
-                    z = np.clip(z, 0.01, None)
-                    z /= z.sum()
+                    # Predicciones ANTES de ver estado real (usando estado del buffer)
+                    if len(state_buffers[agent]) > 0:
+                        prev_state = state_buffers[agent][-1]
 
-                    phi = np.array([0.5, 0.5, 0.5, 0.5, 0.5]) - perturbation * 0.3
-                    phi += np.random.randn(5) * 0.08
+                        pred_1 = self_model[agent].predict_k_steps(prev_state, 1)
+                        pred_3 = self_model[agent].predict_k_steps(prev_state, 3)
+                        pred_5 = self_model[agent].predict_k_steps(prev_state, 5)
 
-                    # Predicción del self-model ANTES de ver estado real
-                    predicted_state = self_model[agent].predict_self()
+                        # Errores de predicción
+                        mse_1 = float(np.mean((pred_1 - state) ** 2))
+                        metrics[agent]['errors_1step'].append(mse_1)
 
-                    # Estado real
-                    actual_state = np.concatenate([z, phi])
+                        if len(state_buffers[agent]) >= 3:
+                            mse_3 = float(np.mean((pred_3 - state) ** 2))
+                            metrics[agent]['errors_3step'].append(mse_3)
 
-                    # Error de predicción
-                    if len(predicted_state) > 0:
-                        error = np.linalg.norm(predicted_state - actual_state)
-                    else:
-                        error = 1.0
+                        if len(state_buffers[agent]) >= 5:
+                            mse_5 = float(np.mean((pred_5 - state) ** 2))
+                            metrics[agent]['errors_5step'].append(mse_5)
 
-                    metrics[agent]['prediction_errors'].append(error)
+                        # Error del predictor null (predice estado anterior)
+                        null_pred = state_buffers[agent][-1]
+                        mse_null = float(np.mean((null_pred - state) ** 2))
+                        metrics[agent]['errors_null'].append(mse_null)
 
-                    if step < 20:
-                        metrics[agent]['shock_predictions'].append(predicted_state[0] if len(predicted_state) > 0 else 0.5)
-                        metrics[agent]['shock_actuals'].append(z[0])
+                    # Confianza
+                    conf = self_model[agent].confidence()
+                    metrics[agent]['confidences'].append(conf)
 
-                    # Actualizar modelo con realidad
-                    self_model[agent].update_model(actual_state)
+                    # Comportamiento (learning rate que debería bajar con alta confianza)
+                    lr = self_model[agent].get_learning_rate_modifier()
+                    metrics[agent]['behaviors'].append(lr)
 
-                    # Counterfactual
-                    V = 0.4 + np.random.randn() * 0.1
-                    policy = np.ones(7) / 7
-                    counterfactual[agent].record_state(z, phi, policy, V, 0.3, perturbation)
+                    # Actualizar buffer y modelo
+                    state_buffers[agent].append(state.copy())
+                    if len(state_buffers[agent]) > 20:
+                        state_buffers[agent] = state_buffers[agent][-20:]
+
+                    self_model[agent].update(z, phi, drives)
 
             if verbose:
-                mean_error = np.mean([metrics[a]['prediction_errors'][-self.shock_steps:]
-                                     for a in self.agents])
-                print(f"    Error medio predicción: {mean_error:.3f}")
+                mean_mse_5 = np.mean([np.mean(metrics[a]['errors_5step'][-self.shock_steps:])
+                                     for a in self.agents if metrics[a]['errors_5step']])
+                print(f"    MSE 5-step medio: {mean_mse_5:.4f}")
 
-        # Fase 3: Análisis contrafactual
+        # Fase 3: Recuperación
         if verbose:
-            print(f"\nFase 3: Análisis contrafactual")
+            print(f"\nFase 3: Recuperación ({self.recovery_steps} pasos)")
 
-        for agent in self.agents:
-            analysis = counterfactual[agent].analyze_counterfactuals(5)
-            metrics[agent]['counterfactual_potential'] = analysis.self_exploration_potential
+        for step in range(self.recovery_steps):
+            t += 1
+            for agent in self.agents:
+                z, phi, drives = get_state_components()
+                state = np.concatenate([z, phi, drives])
+
+                if len(state_buffers[agent]) > 0:
+                    prev_state = state_buffers[agent][-1]
+                    pred_5 = self_model[agent].predict_k_steps(prev_state, 5)
+                    mse_5 = float(np.mean((pred_5 - state) ** 2))
+                    metrics[agent]['errors_5step'].append(mse_5)
+
+                    null_pred = state_buffers[agent][-1]
+                    mse_null = float(np.mean((null_pred - state) ** 2))
+                    metrics[agent]['errors_null'].append(mse_null)
+
+                conf = self_model[agent].confidence()
+                metrics[agent]['confidences'].append(conf)
+
+                state_buffers[agent].append(state.copy())
+                if len(state_buffers[agent]) > 20:
+                    state_buffers[agent] = state_buffers[agent][-20:]
+
+                self_model[agent].update(z, phi, drives)
 
         # Calcular resultados
         results: Dict[str, SelfModelMetrics] = {}
@@ -188,66 +233,74 @@ class Test4SelfModel:
             print("=" * 70)
 
         for agent in self.agents:
-            # Precisión de predicción (inverso del error)
-            mean_error = np.mean(metrics[agent]['prediction_errors'])
-            prediction_accuracy = 1.0 / (1.0 + mean_error)
+            # MSE por horizonte
+            mse_1 = float(np.mean(metrics[agent]['errors_1step'])) if metrics[agent]['errors_1step'] else 1.0
+            mse_3 = float(np.mean(metrics[agent]['errors_3step'])) if metrics[agent]['errors_3step'] else 1.0
+            mse_5 = float(np.mean(metrics[agent]['errors_5step'])) if metrics[agent]['errors_5step'] else 1.0
 
-            # Recuperación tras shock
-            early_errors = metrics[agent]['prediction_errors'][:100]
-            late_errors = metrics[agent]['prediction_errors'][-100:]
-            shock_recovery = np.mean(early_errors) - np.mean(late_errors) if early_errors and late_errors else 0
-            shock_recovery = max(0, shock_recovery)
+            # MSE null (percentil 95)
+            mse_null_list = metrics[agent]['errors_null']
+            if mse_null_list:
+                mse_null_p95 = float(np.percentile(mse_null_list, 95))
+            else:
+                mse_null_p95 = 1.0
 
-            # Self-awareness (correlación predicción-realidad durante shocks)
-            if metrics[agent]['shock_predictions'] and metrics[agent]['shock_actuals']:
+            # S4 = 1 - MSE_5steps / percentile95(MSE_null)
+            S4 = 1.0 - (mse_5 / (mse_null_p95 + 1e-8))
+            S4 = float(np.clip(S4, 0, 1))
+
+            # Confianza media
+            conf_mean = float(np.mean(metrics[agent]['confidences'])) if metrics[agent]['confidences'] else 0.5
+
+            # Correlación confianza-comportamiento
+            if len(metrics[agent]['confidences']) > 10 and len(metrics[agent]['behaviors']) > 10:
                 try:
                     corr = np.corrcoef(
-                        metrics[agent]['shock_predictions'],
-                        metrics[agent]['shock_actuals']
+                        metrics[agent]['confidences'][-200:],
+                        metrics[agent]['behaviors'][-200:]
                     )[0, 1]
-                    self_awareness = float(corr) if not np.isnan(corr) else 0.5
+                    conf_behav_corr = float(corr) if not np.isnan(corr) else 0.0
                 except:
-                    self_awareness = 0.5
+                    conf_behav_corr = 0.0
             else:
-                self_awareness = 0.5
-
-            # Error de calibración
-            unc_stats = uncertainty[agent].get_statistics()
-            calibration_error = 1.0 - unc_stats.get('global_confidence', 0.5)
-
-            # S4 = 1 - rank(|s_t - ŝ_t|)
-            S4 = prediction_accuracy * 0.5 + max(0, self_awareness) * 0.3 + (1 - calibration_error) * 0.2
+                conf_behav_corr = 0.0
 
             results[agent] = SelfModelMetrics(
                 agent_name=agent,
-                prediction_accuracy=float(prediction_accuracy),
-                shock_recovery=float(shock_recovery),
-                self_awareness=float(self_awareness),
-                calibration_error=float(calibration_error),
-                S4_score=float(S4)
+                mse_1step=mse_1,
+                mse_3step=mse_3,
+                mse_5step=mse_5,
+                mse_null=mse_null_p95,
+                confidence_mean=conf_mean,
+                confidence_behavior_corr=conf_behav_corr,
+                S4_score=S4
             )
 
             S4_scores.append(S4)
 
             if verbose:
                 print(f"\n  {agent}:")
-                print(f"    Precisión predicción: {prediction_accuracy:.3f}")
-                print(f"    Recuperación shock: {shock_recovery:.3f}")
-                print(f"    Self-awareness: {self_awareness:.3f}")
-                print(f"    Error calibración: {calibration_error:.3f}")
-                print(f"    S4: {S4:.3f}")
+                print(f"    MSE 1-step: {mse_1:.4f}")
+                print(f"    MSE 3-step: {mse_3:.4f}")
+                print(f"    MSE 5-step: {mse_5:.4f}")
+                print(f"    MSE null p95: {mse_null_p95:.4f}")
+                print(f"    Confianza media: {conf_mean:.3f}")
+                print(f"    Corr conf-behav: {conf_behav_corr:.3f}")
+                print(f"    S4: {S4:.4f}")
 
         S4_global = float(np.mean(S4_scores))
 
         if verbose:
             print(f"\n{'═' * 70}")
             print(f"S4 (Auto-Modelo): {S4_global:.4f}")
+            print(f"  Fórmula: S4 = 1 - MSE_5steps / percentile95(MSE_null)")
             print("═" * 70)
 
         return S4_global, {
             'score': S4_global,
             'agents': {a: vars(m) for a, m in results.items()},
-            'n_shocks': self.n_shocks
+            'n_shocks': self.n_shocks,
+            'total_steps': t
         }
 
 
