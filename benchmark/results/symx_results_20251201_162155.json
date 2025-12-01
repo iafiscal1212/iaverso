@@ -1,0 +1,246 @@
+{
+  "timestamp": "2025-12-01T16:21:55.015982",
+  "n_tests": 10,
+  "passed": 7,
+  "failed": 3,
+  "pass_rate": 0.7,
+  "mean_score": 0.6172561704607381,
+  "std_score": 0.17130309978366598,
+  "weighted_score": 0.404271783965009,
+  "sym_x_score": 0.404271783965009,
+  "individual_results": {
+    "SX1": {
+      "name": "Symbolic Richness",
+      "score": 0.5390418418474031,
+      "passed": true,
+      "details": {
+        "final_richness": 0.1361595372584316,
+        "alpha_richness": 0.08756214150787141,
+        "mean_entropy": 0.7999738110131398,
+        "beta_entropy": 0.0,
+        "n_symbols_final": 3,
+        "richness_trend": [
+          0.06726727939963124,
+          0.19324698792024925,
+          0.1856953381770519,
+          0.11930999725437871,
+          0.115278083540847
+        ],
+        "entropy_trend": [
+          0.0,
+          0.9999907708772282,
+          0.9999044620997026,
+          0.9999889325350758,
+          0.9999848895536926
+        ]
+      },
+      "elapsed_seconds": 0.21021103858947754
+    },
+    "SX2": {
+      "name": "Compositionality",
+      "score": 0.2692033219439257,
+      "passed": true,
+      "details": {
+        "mean_useful_lift": 1.0095415168600512,
+        "mean_useful_delta_cons": -0.2090166047602818,
+        "n_useful_bindings": 6,
+        "n_bigrams": 36,
+        "n_trigrams": 117,
+        "total_bindings": 153,
+        "lift_trend": [
+          0.14469149175579754,
+          0.13852954429715858,
+          0.13221801092871516,
+          0.13049250205446503,
+          0.12577012638283497
+        ],
+        "delta_cons_trend": [
+          -0.24439512855229087,
+          -0.2716054863321142,
+          -0.2550269185294707,
+          -0.2668998253623462,
+          -0.2502112096216172
+        ]
+      },
+      "elapsed_seconds": 1.012812614440918
+    },
+    "SX3": {
+      "name": "Grammar Causality",
+      "score": 0.6832735598053961,
+      "passed": false,
+      "details": {
+        "corr_v": 0.7853397883958093,
+        "corr_sagi": 0.8263499740404668,
+        "corr_total": 0.8930942392215842,
+        "n_strong_rules": 1,
+        "n_total_rules": 61,
+        "role_distribution": {
+          "evaluative": 3,
+          "operative": 3,
+          "transitional": 4
+        },
+        "mean_lift": 0.3822672119032115,
+        "n_predictions": 250
+      },
+      "elapsed_seconds": 0.009091615676879883
+    },
+    "SX4": {
+      "name": "World Grounding",
+      "score": 0.701694415933235,
+      "passed": true,
+      "details": {
+        "mean_sel_world": 0.5464199249496566,
+        "mean_sel_social": 0.00988777327637597,
+        "mean_impact": 0.43277378074176126,
+        "mean_grounded_score": 0.005648053110783544,
+        "n_grounded_symbols": 3,
+        "symbols_by_regime": {
+          "0": 3,
+          "1": 3,
+          "2": 4
+        },
+        "total_tracked": 10,
+        "sel_world_trend": [
+          0.5788105027848081,
+          0.565136480252255,
+          0.5541960019879094,
+          0.5492013209752328,
+          0.5464199249496566
+        ]
+      },
+      "elapsed_seconds": 0.016264915466308594
+    },
+    "SX5": {
+      "name": "Social Grounding",
+      "score": 0.636009629358664,
+      "passed": true,
+      "details": {
+        "mean_sel_social": 0.26224108405531243,
+        "mean_sel_world": 0.03964610068435642,
+        "mean_grounded_score": 0.04104137144761708,
+        "n_grounded_symbols": 3,
+        "symbols_by_agent": {
+          "NEO": 9,
+          "EVA": 5,
+          "ALEX": 3,
+          "ADAM": 8,
+          "IRIS": 5
+        },
+        "agents_with_symbols": 5,
+        "total_tracked": 10,
+        "sel_social_trend": [
+          0.27699679767834534,
+          0.27288382507956765,
+          0.2690721292976196,
+          0.26517208736797665,
+          0.26224108405531243
+        ]
+      },
+      "elapsed_seconds": 0.014870166778564453
+    },
+    "SX6": {
+      "name": "Narrative Compression",
+      "score": 0.8137830144253737,
+      "passed": "True",
+      "details": {
+        "L_symbolic": 68.36409066998674,
+        "L_raw": 367.12059568051535,
+        "NC": 0.8137830144253737,
+        "quantile_Q75": 0.3,
+        "delta_R": 0.0506598220869649,
+        "vocab_size": 5,
+        "total_symbols": 398
+      },
+      "elapsed_seconds": 0.012412548065185547
+    },
+    "SX7": {
+      "name": "Planning Gain",
+      "score": 0.8784070202226362,
+      "passed": "True",
+      "details": {
+        "R_plan": 0.7502177387915068,
+        "R_no_plan": 0.6516466114839888,
+        "MAD_delta_R": 0.09969615721692082,
+        "PG": 0.9887154135043036,
+        "CI_lower": 0.14656228345519218,
+        "CI_upper": 1.828498241538541,
+        "overlap_current": 0.4524678118485771,
+        "pct_valid_blocks": 0.7058823529411765,
+        "n_plan": 136,
+        "n_no_plan": 136
+      },
+      "elapsed_seconds": 0.0024156570434570312
+    },
+    "SX8": {
+      "name": "Multi-Agent Coordination",
+      "score": 0.4,
+      "passed": false,
+      "details": {
+        "mean_overlap": 0.12962962962962962,
+        "n_shared_active": 0,
+        "coordination_score": 0.0,
+        "overlaps": [
+          0.16666666666666666,
+          0.0,
+          0.2222222222222222
+        ],
+        "symbols_per_agent": {
+          "NEO": 2,
+          "EVA": 3,
+          "ALEX": 3
+        },
+        "active_per_agent": {
+          "NEO": 1,
+          "EVA": 2,
+          "ALEX": 2
+        }
+      },
+      "elapsed_seconds": 0.16281485557556152
+    },
+    "SX9": {
+      "name": "Symbol Robustness",
+      "score": 0.6158726393976722,
+      "passed": true,
+      "details": {
+        "symbol_retention": 0.5,
+        "mean_score_change": 0.1341273606023278,
+        "stability_proportion": 1.0,
+        "score_correlation": 0.0,
+        "n_active_pre": 2,
+        "n_active_post": 1,
+        "n_symbols_pre": 3,
+        "n_symbols_post": 3,
+        "sample_changes": [
+          0.10192804290157031,
+          0.16164660614396653,
+          0.13880743276144658
+        ]
+      },
+      "elapsed_seconds": 0.10320544242858887
+    },
+    "SX10": {
+      "name": "Symbolic Maturity",
+      "score": 0.635276261673075,
+      "passed": false,
+      "details": {
+        "M": 0.635276261673075,
+        "z_stability": 0.7484708063018541,
+        "z_reuse": 0.780851678534109,
+        "z_predictivity": 0.29411764705882354,
+        "z_transfer": 0.35294117647058826,
+        "z_robustness": 1.0,
+        "weights": {
+          "stability": 0.2,
+          "reuse": 0.2,
+          "predictivity": 0.2,
+          "transfer": 0.2,
+          "robustness": 0.2
+        },
+        "components_ok": 3,
+        "n_symbols": 10,
+        "mean_lifetime": 201.9
+      },
+      "elapsed_seconds": 0.0021457672119140625
+    }
+  }
+}

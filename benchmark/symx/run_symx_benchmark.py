@@ -14,8 +14,32 @@ from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, '/root/NEO_EVA')
+sys.path.insert(0, '/root/NEO_EVA/benchmark/symx')
 
-from benchmark.symx import TESTS
+# Direct imports to avoid circular dependency
+from test_sx1_richness import run_test as run_sx1
+from test_sx2_compositionality import run_test as run_sx2
+from test_sx3_grammar_causality import run_test as run_sx3
+from test_sx4_grounding_world import run_test as run_sx4
+from test_sx5_grounding_social import run_test as run_sx5
+from test_sx6_narrative_compression import run_test as run_sx6
+from test_sx7_planning_gain import run_test as run_sx7
+from test_sx8_multiagent_coordination import run_test as run_sx8
+from test_sx9_robustness import run_test as run_sx9
+from test_sx10_maturity import run_test as run_sx10
+
+TESTS = {
+    'SX1': ('Symbolic Richness', run_sx1),
+    'SX2': ('Compositionality', run_sx2),
+    'SX3': ('Grammar Causality', run_sx3),
+    'SX4': ('World Grounding', run_sx4),
+    'SX5': ('Social Grounding', run_sx5),
+    'SX6': ('Narrative Compression', run_sx6),
+    'SX7': ('Planning Gain', run_sx7),
+    'SX8': ('Multi-Agent Coordination', run_sx8),
+    'SX9': ('Symbol Robustness', run_sx9),
+    'SX10': ('Symbolic Maturity', run_sx10),
+}
 
 
 def run_all_tests(verbose: bool = True) -> dict:
