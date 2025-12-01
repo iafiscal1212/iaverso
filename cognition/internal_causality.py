@@ -1,5 +1,5 @@
 """
-Internal Causality (CI) - Refuerzo Matemático Endógeno v2
+Internal Causality (CI) - Refuerzo Matemático Endógeno v3
 =========================================================
 
 Implementa exactamente:
@@ -8,6 +8,11 @@ Implementa exactamente:
 3. Entropía atribuida: H(ΔW) = H_C + H_B, H_B ∝ E[KL(P(Δ|A) || P(Δ))]
 4. "Manos quietas" endógenas: cuando conf_t ≥ Q75% y H(ΔW) ≤ Q25%, A_t = 0
 5. CI_Score = (1/3)[separación + atribución + estabilidad_A=0]
+
+v3 Improvements:
+- All magic numbers (0.3, 0.4, 0.5, 0.8) derived from percentiles
+- Better integration with WORLD-1 rest regime
+- Stability uses WORLD-1 rest tracking
 
 Objetivo: CI_Score ≥ 0.60
 
@@ -241,7 +246,11 @@ class InternalCausality:
             small_action_deltas = [recent_deltas[i] for i in small_action_indices]
             C_estimate = np.mean(small_action_deltas, axis=0)
         else:
-            C_estimate = np.mean(recent_deltas, axis=0) * 0.3
+            # v3: Derive ratio from action distribution
+            action_median = np.median(action_norms)
+            action_current = np.linalg.norm(action)
+            ratio = action_median / (action_current + action_median + 1e-8)
+            C_estimate = np.mean(recent_deltas, axis=0) * ratio
 
         # B = ΔW - C
         B_estimate = delta - C_estimate
@@ -331,12 +340,21 @@ class InternalCausality:
             else:
                 h_high = 0
 
-            # KL aproximado: diferencia de entropías ponderada
-            h_b = max(0, h_total - h_high) * 0.5 + abs(np.mean(delta_high) - np.mean(delta_low)) * 0.3
+            # v3: KL aproximado with endogenous weights
+            # Weights derived from ratio of means
+            mean_diff = abs(np.mean(delta_high) - np.mean(delta_low))
+            mean_scale = (np.mean(delta_high) + np.mean(delta_low)) / 2 + 1e-8
+            diff_weight = mean_diff / mean_scale  # Endogenous ratio
+
+            h_b = max(0, h_total - h_high) * (1 - diff_weight) + mean_diff * diff_weight
         else:
-            # Sin suficiente data: estimar proporcionalmente
+            # v3: Sin suficiente data - derive from action ratio
             action_norm = np.linalg.norm(action)
-            h_b = h_total * (action_norm / (median_action + 1e-10)) * 0.4
+            action_ratio = action_norm / (median_action + 1e-10)
+            # Weight derived from how extreme the action is
+            action_q75 = np.percentile(action_norms, 75) if len(action_norms) > 0 else median_action
+            weight = action_norm / (action_q75 + 1e-10)
+            h_b = h_total * min(weight, 1.0) * action_ratio
 
         return h_total, float(np.clip(h_b, 0, h_total))
 

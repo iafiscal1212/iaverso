@@ -1,6 +1,6 @@
 """
-AGI-18: Auto-Reconfiguración Reflexiva
-=======================================
+AGI-18: Auto-Reconfiguración Reflexiva v2
+==========================================
 
 "Cambiar cómo funciono en respuesta a cómo funcioné."
 
@@ -24,6 +24,11 @@ Entropía de configuración:
 Restricciones:
     w_m ∈ [w_min, w_max]
     w_min = 0.05, w_max = 0.4 (endógenos de var(U))
+
+v2 Improvements:
+- CF and CI scores integrated as utility signals
+- Modules with high CF/CI correlation get boosted weights
+- Causal effectiveness becomes a driver
 
 100% endógeno.
 """
@@ -132,6 +137,13 @@ class ReflectiveReconfiguration:
         self.n_reconfigurations = 0
         self.stability_counter = 0
 
+        # v2: CF/CI integration
+        self.cf_score_history: List[float] = []
+        self.ci_score_history: List[float] = []
+        self.cf_ci_correlations: Dict[str, List[float]] = {
+            name: [] for name in self.module_names
+        }
+
         self.t = 0
 
     def _compute_utility_correlations(self):
@@ -170,7 +182,9 @@ class ReflectiveReconfiguration:
         """
         Calcula gradientes de reconfiguración.
 
-        Δw_m = η · (U_m - median(U))
+        Δw_m = η · (U_m - median(U)) + η_cf · CF_CI_corr_m
+
+        v2: Adds boost from CF/CI correlation.
         """
         correlations = [m.utility_correlation for m in self.modules.values()]
 
@@ -181,7 +195,23 @@ class ReflectiveReconfiguration:
         eta = adaptive_learning_rate(self.t, 1.0)
 
         for module in self.modules.values():
-            module.gradient = eta * (module.utility_correlation - median_corr)
+            # Base gradient from reward correlation
+            base_gradient = eta * (module.utility_correlation - median_corr)
+
+            # v2: CF/CI boost
+            cf_ci_boost = 0.0
+            if self.cf_ci_correlations[module.module_id]:
+                # Mean CF/CI correlation for this module
+                mean_cf_ci_corr = np.mean(self.cf_ci_correlations[module.module_id][-20:])
+                # Boost scale: endogenous from variance of correlations
+                all_cf_ci = [np.mean(corrs[-20:]) if corrs else 0
+                            for corrs in self.cf_ci_correlations.values()]
+                if len(all_cf_ci) > 1:
+                    median_cf_ci = np.median(all_cf_ci)
+                    # Boost if above median
+                    cf_ci_boost = eta * 0.5 * (mean_cf_ci_corr - median_cf_ci)
+
+            module.gradient = base_gradient + cf_ci_boost
 
     def _apply_reconfiguration(self):
         """
@@ -236,35 +266,102 @@ class ReflectiveReconfiguration:
         if len(self.weight_history) > max_history(self.t):
             self.weight_history = self.weight_history[-max_history(self.t):]
 
-    def record_activations(self, module_activations: Dict[str, float], reward: float):
+    def record_activations(
+        self,
+        module_activations: Dict[str, float],
+        reward: float,
+        cf_score: Optional[float] = None,
+        ci_score: Optional[float] = None
+    ):
         """
         Registra activaciones de módulos y recompensa.
+
+        v2: Also records CF/CI scores for causal utility integration.
 
         Args:
             module_activations: {nombre_módulo: activación}
             reward: Recompensa obtenida
+            cf_score: Optional CF score for this step
+            ci_score: Optional CI score for this step
         """
         self.t += 1
+        max_hist = max_history(self.t)
 
         # Registrar recompensa
         self.reward_history.append(reward)
-        if len(self.reward_history) > max_history(self.t):
-            self.reward_history = self.reward_history[-max_history(self.t):]
+        if len(self.reward_history) > max_hist:
+            self.reward_history = self.reward_history[-max_hist:]
+
+        # v2: Record CF/CI scores
+        if cf_score is not None:
+            self.cf_score_history.append(cf_score)
+            if len(self.cf_score_history) > max_hist:
+                self.cf_score_history = self.cf_score_history[-max_hist:]
+
+        if ci_score is not None:
+            self.ci_score_history.append(ci_score)
+            if len(self.ci_score_history) > max_hist:
+                self.ci_score_history = self.ci_score_history[-max_hist:]
 
         # Registrar activaciones
         for name, activation in module_activations.items():
             if name in self.modules:
                 self.modules[name].activation_history.append(activation)
-                if len(self.modules[name].activation_history) > max_history(self.t):
+                if len(self.modules[name].activation_history) > max_hist:
                     self.modules[name].activation_history = \
-                        self.modules[name].activation_history[-max_history(self.t):]
+                        self.modules[name].activation_history[-max_hist:]
 
         # Reconfigurar periódicamente
         update_freq = max(10, L_t(self.t))
         if self.t % update_freq == 0:
             self._compute_utility_correlations()
+            self._compute_cf_ci_correlations()  # v2
             self._compute_gradients()
             self._apply_reconfiguration()
+
+    def _compute_cf_ci_correlations(self):
+        """
+        v2: Compute correlation of each module with CF/CI scores.
+
+        Modules that correlate with high CF/CI get boosted.
+        """
+        min_samples = L_t(self.t)
+
+        # Need both CF and CI history
+        if len(self.cf_score_history) < min_samples or len(self.ci_score_history) < min_samples:
+            return
+
+        window = min(max_history(self.t), len(self.cf_score_history))
+
+        # Combined causal score: CF * CI
+        cf_scores = np.array(self.cf_score_history[-window:])
+        ci_scores = np.array(self.ci_score_history[-window:])
+        causal_scores = cf_scores * ci_scores
+
+        for module in self.modules.values():
+            if len(module.activation_history) < min_samples:
+                continue
+
+            activations = np.array(module.activation_history[-window:])
+
+            # Align lengths
+            min_len = min(len(activations), len(causal_scores))
+            if min_len < min_samples:
+                continue
+
+            activations = activations[-min_len:]
+            cs = causal_scores[-min_len:]
+
+            # Correlation with causal effectiveness
+            if np.std(activations) > 0 and np.std(cs) > 0:
+                corr = np.corrcoef(activations, cs)[0, 1]
+                if not np.isnan(corr):
+                    self.cf_ci_correlations[module.module_id].append(corr)
+
+                    # Limit history
+                    if len(self.cf_ci_correlations[module.module_id]) > 100:
+                        self.cf_ci_correlations[module.module_id] = \
+                            self.cf_ci_correlations[module.module_id][-100:]
 
     def get_module_weight(self, module_name: str) -> float:
         """

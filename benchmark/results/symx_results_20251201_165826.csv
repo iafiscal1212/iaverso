@@ -1,0 +1,14 @@
+test_id,name,score,passed
+SX1,Symbolic Richness,0.5390,True
+SX2,Compositionality,0.2692,True
+SX3,Grammar Causality,0.6833,False
+SX4,World Grounding,0.7017,True
+SX5,Social Grounding,0.6360,True
+SX6,Narrative Compression,0.8138,True
+SX7,Planning Gain,0.8784,True
+SX8,Multi-Agent Coordination,0.4000,False
+SX9,Symbol Robustness,0.6159,True
+SX10,Symbolic Maturity,0.6353,False
+
+SYM_X_SCORE,0.4043
+PASS_RATE,0.7000

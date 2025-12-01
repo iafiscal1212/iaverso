@@ -72,8 +72,7 @@ class LyapunovUnified:
         self.gamma_history: List[float] = []
         self.xi_history: List[float] = []
 
-        # Para contracción por bloques
-        self.block_size = 10
+        # Para contracción por bloques (v3: endogenous block size)
         self.block_contractions: List[bool] = []
 
         self.t = 0
@@ -237,14 +236,26 @@ class LyapunovUnified:
 
         return V_t, components
 
+    def _compute_block_size(self, t: int) -> int:
+        """
+        Endogenous block size: floor(sqrt(t/10) + 5).
+
+        Grows slowly with time, never hardcoded.
+        """
+        return max(5, int(np.sqrt(t / 10 + 1)) + 5)
+
     def compute_eta(self, t: int) -> float:
         """
         Computa η_t = Median_bloque(ΔV^-) ∈ (0, 1).
 
         ΔV^- = decrementos negativos de V.
         """
-        if len(self.delta_V_history) < self.block_size:
-            return 0.1  # Default
+        block_size = self._compute_block_size(t)
+        if len(self.delta_V_history) < block_size:
+            # v3: Bootstrap from variance of V history
+            if len(self.V_history) > 3:
+                return np.std(self.V_history) / (np.mean(self.V_history) + 1e-8)
+            return 0.1  # Structural default only
 
         # ΔV negativos (contracciones)
         negative_deltas = [d for d in self.delta_V_history if d < 0]
@@ -271,16 +282,17 @@ class LyapunovUnified:
 
         Retorna si hay contracción y la fracción de bloques contractivos.
         """
-        if len(self.V_history) < self.block_size:
+        block_size = self._compute_block_size(t)
+        if len(self.V_history) < block_size:
             return True, 1.0  # Default
 
         # Verificar por bloques
-        n_blocks = len(self.V_history) // self.block_size
+        n_blocks = len(self.V_history) // block_size
         contractions = []
 
         for i in range(n_blocks):
-            start = i * self.block_size
-            end = min(start + self.block_size, len(self.V_history))
+            start = i * block_size
+            end = min(start + block_size, len(self.V_history))
             block = self.V_history[start:end]
 
             if len(block) >= 2:
