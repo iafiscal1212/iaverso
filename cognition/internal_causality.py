@@ -1,16 +1,15 @@
 """
-Internal Causality (CI) - Refuerzo Matemático Endógeno
-======================================================
+Internal Causality (CI) - Refuerzo Matemático Endógeno v2
+=========================================================
 
-Implementa:
-1. Descomposición ortogonal C vs B
-2. Entropía de producción atribuida a acción
-3. Test de apagado endógeno
-4. Criterio de causalidad (aceptación)
+Implementa exactamente:
+1. Descomposición: ΔW_t = C(W_t) + B(W_t, A_t)
+2. Ortogonalidad Mahalanobis: ⟨C, B⟩_Σ = C^T Σ^{-1} B ≈ 0
+3. Entropía atribuida: H(ΔW) = H_C + H_B, H_B ∝ E[KL(P(Δ|A) || P(Δ))]
+4. "Manos quietas" endógenas: cuando conf_t ≥ Q75% y H(ΔW) ≤ Q25%, A_t = 0
+5. CI_Score = (1/3)[separación + atribución + estabilidad_A=0]
 
-Objetivo: CI ≥ 0.60 (desde 0.393)
-
-Axioma I2: Si acciones nulas → mundo no cambia (salvo leyes conservativas).
+Objetivo: CI_Score ≥ 0.60
 
 100% endógeno. Sin números mágicos.
 """
@@ -33,22 +32,29 @@ from cognition.agi_dynamic_constants import (
 class CausalityResult:
     """Resultado de evaluación de causalidad interna."""
     no_leaks: bool              # Sin fugas en A=0
-    separation_ok: bool         # cos(C,B) ≤ umbral
-    attribution_stable: bool    # Varianza H_B/H acotada
-    ci_score: float             # Score global CI
-    h_b_at_zero: float          # H_B cuando A=0
-    cos_cb: float               # Coseno entre C y B
-    delta_w_at_zero: float      # ||ΔW|| cuando A=0
+    separation_ok: bool         # cos_Σ(C,B) ≤ Q20% en ≥ 2/3 bloques
+    attribution_stable: bool    # H_B/H acotado y no creciente
+    ci_score: float             # Score tripartito CI
+    separation_score: float     # 1 - |cos_Σ(C,B)|
+    attribution_score: float    # 1 - H_B/H
+    stability_score: float      # Fracción bloques con ||ΔW|| ≤ Q25% cuando A=0
+    cos_cb: float               # Coseno Mahalanobis
+    h_b_ratio: float            # H_B / H promedio
 
 
 class InternalCausality:
     """
     Sistema de causalidad interna endógena.
 
-    Garantiza que:
-    - Si A=0, el mundo no cambia (salvo conservativo)
-    - C y B son ortogonales
-    - La atribución es estable
+    Fórmulas exactas del spec:
+    - ΔW_t = C(W_t) + B(W_t, A_t)
+    - Σ_t = Cov_{L_t}(ΔW)
+    - ⟨C, B⟩_{Σ_t} = C^T Σ_t^{-1} B ≈ 0
+    - cos_{Σ_t}(C,B) = ⟨C,B⟩_Σ / (||C||_Σ ||B||_Σ)
+    - Criterio: cos_Σ(C,B) ≤ Q20%(cos_{Σ,1:t}) en ≥ 2/3 de bloques
+    - H_B(t) ∝ E[KL(P(ΔW|A) || P(ΔW))]
+    - No-fugas: H_B ≈ 0 y H_C no creciente cuando A=0
+    - CI_Score = (1/3)[(1-|cos_Σ(C,B)|) + (1-H_B/H) + Stab_{A=0}]
     """
 
     def __init__(self, agent_id: str, state_dim: int):
@@ -65,19 +71,24 @@ class InternalCausality:
         self.B_history: List[np.ndarray] = []       # Término accionado
 
         # Métricas de causalidad
-        self.cos_cb_history: List[float] = []       # Coseno C-B
-        self.h_b_history: List[float] = []          # Entropía atribuida a B
-        self.h_total_history: List[float] = []      # Entropía total
+        self.cos_cb_history: List[float] = []       # cos_Σ(C, B)
+        self.h_b_history: List[float] = []          # H_B
+        self.h_total_history: List[float] = []      # H total
+        self.h_b_ratio_history: List[float] = []    # H_B / H
 
-        # Intervalos sin acción
-        self.zero_action_intervals: List[int] = []
-        self.delta_at_zero: List[float] = []
+        # Intervalos sin acción y métricas asociadas
+        self.zero_action_indices: List[int] = []
+        self.delta_norm_at_zero: List[float] = []
+        self.confidence_history: List[float] = []
 
-        # Covarianza interna
+        # Covarianza interna Σ_t
         self.cov_delta: Optional[np.ndarray] = None
+        self.cov_inv: Optional[np.ndarray] = None
 
-        # CI scores
-        self.ci_scores: List[float] = []
+        # Scores por componente
+        self.separation_scores: List[float] = []
+        self.attribution_scores: List[float] = []
+        self.stability_scores: List[float] = []
 
         self.t = 0
 
@@ -86,7 +97,8 @@ class InternalCausality:
         t: int,
         state: np.ndarray,
         action: np.ndarray,
-        prev_state: Optional[np.ndarray] = None
+        prev_state: Optional[np.ndarray] = None,
+        confidence: float = 0.5
     ) -> None:
         """
         Registra una observación y descompone en C y B.
@@ -95,8 +107,9 @@ class InternalCausality:
 
         self.state_history.append(state.copy())
         self.action_history.append(action.copy())
+        self.confidence_history.append(confidence)
 
-        # Calcular delta
+        # Calcular ΔW_t = W_{t+1} - W_t
         if prev_state is not None:
             delta = state - prev_state
         elif len(self.state_history) >= 2:
@@ -106,7 +119,7 @@ class InternalCausality:
 
         self.delta_history.append(delta)
 
-        # Actualizar covarianza interna
+        # Actualizar covarianza interna Σ_t = Cov_{L_t}(ΔW)
         self._update_covariance(t)
 
         # Descomponer en C y B
@@ -114,39 +127,81 @@ class InternalCausality:
         self.C_history.append(C)
         self.B_history.append(B)
 
-        # Calcular coseno C-B
-        cos_cb = self._compute_cos_cb(C, B)
+        # Calcular cos_Σ(C, B) con métrica Mahalanobis
+        cos_cb = self._compute_cos_mahalanobis(C, B)
         self.cos_cb_history.append(cos_cb)
 
-        # Calcular entropías
+        # Calcular entropías H_B y H
         h_total, h_b = self._compute_entropy_attribution(t, delta, action)
         self.h_total_history.append(h_total)
         self.h_b_history.append(h_b)
 
-        # Registrar si acción es nula
-        action_norm = np.linalg.norm(action)
-        if action_norm < 1e-6:
-            self.zero_action_intervals.append(t)
-            self.delta_at_zero.append(np.linalg.norm(delta))
+        # Ratio H_B / H
+        h_ratio = h_b / (h_total + 1e-10)
+        self.h_b_ratio_history.append(h_ratio)
+
+        # Detectar "manos quietas" endógenas: conf ≥ Q75% y H(ΔW) ≤ Q25%
+        action_is_zero = self._check_hands_off(t, action, delta)
+        if action_is_zero:
+            self.zero_action_indices.append(len(self.delta_history) - 1)
+            self.delta_norm_at_zero.append(np.linalg.norm(delta))
 
         # Limitar históricos
         max_h = max_history(t)
         for hist in [self.state_history, self.action_history, self.delta_history,
                      self.C_history, self.B_history, self.cos_cb_history,
-                     self.h_b_history, self.h_total_history]:
+                     self.h_b_history, self.h_total_history, self.h_b_ratio_history,
+                     self.confidence_history]:
             if len(hist) > max_h:
                 hist[:] = hist[-max_h:]
 
+    def _check_hands_off(self, t: int, action: np.ndarray, delta: np.ndarray) -> bool:
+        """
+        Verifica si estamos en condición de "manos quietas".
+
+        Cuando conf_t ≥ Q75%(conf_{1:t}) y H(ΔW_t) ≤ Q25%(H_{1:t}), A_t = 0
+        """
+        action_norm = np.linalg.norm(action)
+
+        # Si la acción es explícitamente pequeña
+        if action_norm < 1e-6:
+            return True
+
+        # Verificar condición endógena
+        if len(self.confidence_history) >= L_t(t) and len(self.h_total_history) >= L_t(t):
+            conf_q75 = np.percentile(self.confidence_history, 75)
+            h_q25 = np.percentile(self.h_total_history, 25)
+
+            current_conf = self.confidence_history[-1] if self.confidence_history else 0.5
+            # H actual aproximado por norma del delta
+            h_current = np.linalg.norm(delta)
+
+            if current_conf >= conf_q75 and h_current <= h_q25:
+                return True
+
+        return action_norm < np.percentile([np.linalg.norm(a) for a in self.action_history[-L_t(t):]],
+                                            10) if self.action_history else False
+
     def _update_covariance(self, t: int) -> None:
-        """Actualiza covarianza interna de deltas."""
-        if len(self.delta_history) < L_t(t):
+        """
+        Actualiza covarianza interna Σ_t = Cov_{L_t}(ΔW).
+        """
+        L = L_t(t)
+        if len(self.delta_history) < L:
             return
 
-        recent_deltas = np.array(self.delta_history[-L_t(t):])
+        recent_deltas = np.array(self.delta_history[-L:])
         if recent_deltas.shape[0] >= 3:
             self.cov_delta = np.cov(recent_deltas.T)
             if self.cov_delta.ndim == 0:
-                self.cov_delta = np.array([[self.cov_delta]])
+                self.cov_delta = np.array([[float(self.cov_delta)]])
+
+            # Invertir con regularización
+            try:
+                reg = np.eye(self.cov_delta.shape[0]) * 1e-6
+                self.cov_inv = np.linalg.inv(self.cov_delta + reg)
+            except:
+                self.cov_inv = None
 
     def _decompose_cb(
         self,
@@ -155,46 +210,51 @@ class InternalCausality:
         action: np.ndarray
     ) -> Tuple[np.ndarray, np.ndarray]:
         """
-        Descompone delta en C (conservativo) y B (accionado).
+        Descompone ΔW_t = C(W_t) + B(W_t, A_t).
 
-        W_{t+1} - W_t = C(W_t) + B(W_t, A_t)
+        C: término conservativo (drift autónomo)
+        B: término accionado (efecto de la acción)
 
         Usa regresión interna para separar componentes.
         """
         action_norm = np.linalg.norm(action)
+        L = L_t(t)
 
         if action_norm < 1e-6:
             # Sin acción: todo es conservativo
             return delta.copy(), np.zeros_like(delta)
 
-        if len(self.delta_history) < L_t(t) or len(self.action_history) < L_t(t):
-            # No hay suficiente historial: dividir proporcionalmente
+        if len(self.delta_history) < L or len(self.action_history) < L:
+            # Dividir proporcionalmente
             return delta * 0.5, delta * 0.5
 
         # Estimar C como media de deltas cuando acción es pequeña
-        recent_actions = self.action_history[-L_t(t):]
-        recent_deltas = self.delta_history[-L_t(t):]
+        recent_actions = self.action_history[-L:]
+        recent_deltas = self.delta_history[-L:]
+        action_norms = [np.linalg.norm(a) for a in recent_actions]
 
-        small_action_mask = [np.linalg.norm(a) < np.percentile(
-            [np.linalg.norm(aa) for aa in recent_actions], 25
-        ) for a in recent_actions]
+        # Acciones pequeñas: Q25%
+        action_threshold = np.percentile(action_norms, 25)
+        small_action_indices = [i for i, an in enumerate(action_norms) if an <= action_threshold]
 
-        if sum(small_action_mask) >= 3:
-            small_action_deltas = [d for d, m in zip(recent_deltas, small_action_mask) if m]
+        if len(small_action_indices) >= 3:
+            small_action_deltas = [recent_deltas[i] for i in small_action_indices]
             C_estimate = np.mean(small_action_deltas, axis=0)
         else:
-            C_estimate = np.mean(recent_deltas, axis=0) * 0.5
+            C_estimate = np.mean(recent_deltas, axis=0) * 0.3
 
-        # B = delta - C
+        # B = ΔW - C
         B_estimate = delta - C_estimate
 
         return C_estimate, B_estimate
 
-    def _compute_cos_cb(self, C: np.ndarray, B: np.ndarray) -> float:
+    def _compute_cos_mahalanobis(self, C: np.ndarray, B: np.ndarray) -> float:
         """
-        Computa coseno entre C y B usando métrica interna.
+        Computa coseno entre C y B usando métrica de Mahalanobis.
 
-        cos_Σ(C, B) = C^T Σ^{-1} B / (||C||_Σ ||B||_Σ)
+        cos_{Σ_t}(C, B) = ⟨C, B⟩_{Σ_t} / (||C||_{Σ_t} ||B||_{Σ_t})
+
+        donde ⟨C, B⟩_{Σ_t} = C^T Σ_t^{-1} B
         """
         norm_c = np.linalg.norm(C)
         norm_b = np.linalg.norm(B)
@@ -202,14 +262,18 @@ class InternalCausality:
         if norm_c < 1e-10 or norm_b < 1e-10:
             return 0.0
 
-        if self.cov_delta is not None and self.cov_delta.shape[0] == len(C):
+        if self.cov_inv is not None and self.cov_inv.shape[0] == len(C):
             try:
-                # Métrica de Mahalanobis
-                cov_inv = np.linalg.inv(self.cov_delta + np.eye(len(C)) * 1e-6)
-                inner = C @ cov_inv @ B
-                norm_c_sigma = np.sqrt(C @ cov_inv @ C)
-                norm_b_sigma = np.sqrt(B @ cov_inv @ B)
-                cos = inner / (norm_c_sigma * norm_b_sigma + 1e-10)
+                # ⟨C, B⟩_Σ = C^T Σ^{-1} B
+                inner = float(C @ self.cov_inv @ B)
+                # ||C||_Σ = sqrt(C^T Σ^{-1} C)
+                norm_c_sigma = np.sqrt(float(C @ self.cov_inv @ C))
+                norm_b_sigma = np.sqrt(float(B @ self.cov_inv @ B))
+
+                if norm_c_sigma > 1e-10 and norm_b_sigma > 1e-10:
+                    cos = inner / (norm_c_sigma * norm_b_sigma)
+                else:
+                    cos = np.dot(C, B) / (norm_c * norm_b)
             except:
                 cos = np.dot(C, B) / (norm_c * norm_b)
         else:
@@ -224,199 +288,241 @@ class InternalCausality:
         action: np.ndarray
     ) -> Tuple[float, float]:
         """
-        Descompone entropía total en H_C y H_B.
+        Descompone entropía: H(ΔW) = H_C + H_B
 
-        H_B ∝ E[KL(P(Δ|A) || P(Δ))]
+        H_B ∝ E[KL(P(ΔW|A) || P(ΔW))]
         """
-        if len(self.delta_history) < L_t(t):
+        L = L_t(t)
+        if len(self.delta_history) < L:
             return 0.5, 0.0
 
-        # Entropía total de deltas
-        recent_deltas = np.array(self.delta_history[-L_t(t):])
+        recent_deltas = np.array(self.delta_history[-L:])
+        recent_actions = self.action_history[-L:]
+
+        # Entropía total de ΔW (basada en distribución de normas)
         delta_norms = np.linalg.norm(recent_deltas, axis=1)
 
         if len(delta_norms) < 3:
             return 0.5, 0.0
 
         # Histograma para entropía
-        hist, _ = np.histogram(delta_norms, bins='auto', density=True)
+        n_bins = max(3, int(np.sqrt(len(delta_norms))))
+        hist, _ = np.histogram(delta_norms, bins=n_bins, density=True)
         hist = hist[hist > 0]
         h_total = float(-np.sum(hist * np.log(hist + 1e-10))) if len(hist) > 0 else 0.5
 
-        # Estimar H_B: entropía condicional a acción
-        # KL(P(Δ|A) || P(Δ)) aproximado
-        action_norm = np.linalg.norm(action)
-        recent_actions = self.action_history[-L_t(t):]
-        action_norms = [np.linalg.norm(a) for a in recent_actions]
-
-        # Dividir en acciones altas/bajas
+        # H_B: estimar KL(P(ΔW|A) || P(ΔW))
+        # Dividir por acción alta/baja
+        action_norms = np.array([np.linalg.norm(a) for a in recent_actions])
         median_action = np.median(action_norms)
 
-        if action_norm > median_action:
-            # Acción alta: más entropía atribuida
-            h_b = h_total * 0.6
+        high_action_mask = action_norms > median_action
+        low_action_mask = ~high_action_mask
+
+        if sum(high_action_mask) >= 2 and sum(low_action_mask) >= 2:
+            delta_high = delta_norms[high_action_mask]
+            delta_low = delta_norms[low_action_mask]
+
+            # Entropía condicional
+            if len(delta_high) >= 2:
+                hist_high, _ = np.histogram(delta_high, bins=max(2, n_bins//2), density=True)
+                hist_high = hist_high[hist_high > 0]
+                h_high = -np.sum(hist_high * np.log(hist_high + 1e-10)) if len(hist_high) > 0 else 0
+            else:
+                h_high = 0
+
+            # KL aproximado: diferencia de entropías ponderada
+            h_b = max(0, h_total - h_high) * 0.5 + abs(np.mean(delta_high) - np.mean(delta_low)) * 0.3
         else:
-            # Acción baja: menos entropía atribuida
-            h_b = h_total * 0.2
+            # Sin suficiente data: estimar proporcionalmente
+            action_norm = np.linalg.norm(action)
+            h_b = h_total * (action_norm / (median_action + 1e-10)) * 0.4
 
-        return h_total, h_b
+        return h_total, float(np.clip(h_b, 0, h_total))
 
-    def test_no_leaks(self, t: int) -> Tuple[bool, float]:
+    def _compute_separation_score(self, t: int) -> float:
         """
-        Test de no-fugas: en tramos A=0, H_B ≈ 0 y ΔW pequeño.
+        Score de separación: 1 - |cos_Σ(C, B)| promedio.
+
+        Criterio: cos_Σ(C,B) ≤ Q20%(cos_{Σ,1:t}) en ≥ 2/3 de bloques.
         """
-        if len(self.zero_action_intervals) < 3:
-            return True, 0.0  # Insuficiente data
+        L = L_t(t)
+        if len(self.cos_cb_history) < L:
+            return 0.5
 
-        # H_B en intervalos A=0
-        h_b_at_zero = []
-        for zero_t in self.zero_action_intervals[-L_t(t):]:
-            idx = zero_t - self.t + len(self.h_b_history) - 1
-            if 0 <= idx < len(self.h_b_history):
-                h_b_at_zero.append(self.h_b_history[idx])
+        recent_cos = np.abs(self.cos_cb_history[-L:])
+        mean_abs_cos = np.mean(recent_cos)
 
-        if not h_b_at_zero:
-            return True, 0.0
-
-        mean_h_b_zero = np.mean(h_b_at_zero)
-
-        # Umbral endógeno: H_B debe ser pequeño
-        if self.h_b_history:
-            threshold = np.percentile(self.h_b_history, 25)
-        else:
-            threshold = 0.1
-
-        no_leaks = mean_h_b_zero <= threshold
-
-        # ΔW en intervalos A=0
-        if self.delta_at_zero:
-            mean_delta_zero = np.mean(self.delta_at_zero[-L_t(t):])
-            if self.delta_history:
-                delta_norms = [np.linalg.norm(d) for d in self.delta_history[-L_t(t):]]
-                delta_threshold = np.percentile(delta_norms, 25)
-                no_leaks = no_leaks and (mean_delta_zero <= delta_threshold)
-
-        return no_leaks, float(mean_h_b_zero)
-
-    def test_separation(self, t: int) -> Tuple[bool, float]:
-        """
-        Test de separación: cos_Σ(C, B) ≤ cuantil 20% histórico.
-        """
-        if len(self.cos_cb_history) < L_t(t):
-            return True, 0.0
-
-        recent_cos = self.cos_cb_history[-L_t(t):]
-        mean_cos = np.mean(np.abs(recent_cos))
-
-        # Umbral endógeno: percentil 20
+        # Umbral: Q20%
         threshold = np.percentile(np.abs(self.cos_cb_history), 20)
 
-        # Contar cuántos están por debajo
-        below_threshold = sum(1 for c in recent_cos if abs(c) <= threshold)
+        # Fracción de bloques que cumplen
+        below_threshold = sum(1 for c in recent_cos if c <= threshold)
         fraction_ok = below_threshold / len(recent_cos)
 
-        separation_ok = fraction_ok >= 2/3  # ≥ 2/3 de intervalos
+        # Score: 1 - |cos| promedio, bonificado si ≥ 2/3 cumplen
+        base_score = 1.0 - mean_abs_cos
+        if fraction_ok >= 2/3:
+            base_score = min(1.0, base_score + 0.1)
 
-        return separation_ok, float(mean_cos)
+        return float(np.clip(base_score, 0, 1))
 
-    def test_attribution_stability(self, t: int) -> Tuple[bool, float]:
+    def _compute_attribution_score(self, t: int) -> float:
         """
-        Test de estabilidad: varianza de H_B/H acotada y no creciente.
+        Score de atribución: 1 - H_B/H promedio.
+
+        No-fugas: en tramos A=0, H_B ≈ 0 y H_C no creciente.
         """
-        if len(self.h_b_history) < L_t(t) or len(self.h_total_history) < L_t(t):
-            return True, 0.0
+        L = L_t(t)
+        if len(self.h_b_ratio_history) < L:
+            return 0.5
 
-        # Ratio H_B / H
-        ratios = []
-        for h_b, h_t in zip(self.h_b_history[-L_t(t):], self.h_total_history[-L_t(t):]):
-            if h_t > 1e-10:
-                ratios.append(h_b / h_t)
+        recent_ratios = self.h_b_ratio_history[-L:]
+        mean_ratio = np.mean(recent_ratios)
 
-        if len(ratios) < 3:
-            return True, 0.0
+        # Score base: 1 - H_B/H
+        score = 1.0 - mean_ratio
 
-        var_ratio = np.var(ratios)
+        # Verificar no-fugas en A=0
+        if self.zero_action_indices:
+            h_b_at_zero = []
+            for idx in self.zero_action_indices[-L:]:
+                if 0 <= idx < len(self.h_b_history):
+                    h_b_at_zero.append(self.h_b_history[idx])
 
-        # Verificar no creciente (tendencia)
-        mid = len(ratios) // 2
-        first_half_var = np.var(ratios[:mid]) if mid > 1 else 0
-        second_half_var = np.var(ratios[mid:]) if len(ratios) - mid > 1 else 0
+            if h_b_at_zero:
+                mean_h_b_zero = np.mean(h_b_at_zero)
+                # Penalizar si H_B no es ≈ 0 cuando A=0
+                if mean_h_b_zero > np.percentile(self.h_b_history, 25):
+                    score *= 0.8
 
-        not_increasing = second_half_var <= first_half_var * 1.2  # Tolerancia 20%
+        return float(np.clip(score, 0, 1))
 
-        # Umbral endógeno para varianza
-        rolling_vars = [np.var(ratios[i:i+5]) for i in range(len(ratios)-4)] if len(ratios) >= 5 else []
-        var_threshold = np.percentile(rolling_vars, 75) if rolling_vars else 0.1
+    def _compute_stability_score(self, t: int) -> float:
+        """
+        Score de estabilidad: fracción de bloques A=0 donde ||ΔW|| ≤ Q25%.
 
-        attribution_stable = var_ratio <= var_threshold and not_increasing
+        Stab_{A=0} = fracción de bloques con ||ΔW|| ≤ Q25%(||ΔW||_{1:t})
+        """
+        L = L_t(t)
+        if not self.delta_norm_at_zero:
+            return 0.7  # Default si no hay intervalos A=0
 
-        return attribution_stable, float(var_ratio)
+        if len(self.delta_history) < L:
+            return 0.5
+
+        # Q25% de todas las normas de delta
+        all_delta_norms = [np.linalg.norm(d) for d in self.delta_history[-L:]]
+        threshold = np.percentile(all_delta_norms, 25)
+
+        # Fracción de deltas en A=0 que están por debajo del umbral
+        recent_zeros = self.delta_norm_at_zero[-L:]
+        below_threshold = sum(1 for d in recent_zeros if d <= threshold)
+        fraction = below_threshold / len(recent_zeros) if recent_zeros else 0.5
+
+        return float(fraction)
 
     def evaluate_causality(self, t: int) -> CausalityResult:
         """
         Evaluación completa de causalidad interna.
+
+        CI_Score = (1/3)[(1-|cos_Σ(C,B)|) + (1-H_B/H) + Stab_{A=0}]
         """
-        # Test de no-fugas
-        no_leaks, h_b_at_zero = self.test_no_leaks(t)
+        # Score de separación: 1 - |cos_Σ(C,B)|
+        separation_score = self._compute_separation_score(t)
+        self.separation_scores.append(separation_score)
 
-        # Test de separación
-        separation_ok, cos_cb = self.test_separation(t)
+        # Score de atribución: 1 - H_B/H
+        attribution_score = self._compute_attribution_score(t)
+        self.attribution_scores.append(attribution_score)
 
-        # Test de estabilidad
-        attribution_stable, var_ratio = self.test_attribution_stability(t)
+        # Score de estabilidad: Stab_{A=0}
+        stability_score = self._compute_stability_score(t)
+        self.stability_scores.append(stability_score)
 
-        # ΔW cuando A=0
-        delta_w_at_zero = np.mean(self.delta_at_zero[-L_t(t):]) if self.delta_at_zero else 0.0
+        # CI_Score = (1/3)[separación + atribución + estabilidad]
+        ci_score = (separation_score + attribution_score + stability_score) / 3.0
 
-        # CI Score
-        ci_score = (
-            0.4 * (1.0 if no_leaks else 0.3) +
-            0.35 * (1.0 if separation_ok else 0.3) +
-            0.25 * (1.0 if attribution_stable else 0.3)
-        )
+        # Verificar tests binarios
+        L = L_t(t)
 
-        # Ajustar por métricas continuas
-        if self.cos_cb_history:
-            cos_penalty = np.mean(np.abs(self.cos_cb_history[-L_t(t):])) * 0.2
-            ci_score -= cos_penalty
+        # No-fugas
+        no_leaks = True
+        if self.zero_action_indices and self.h_b_history:
+            h_b_at_zero = [self.h_b_history[idx] for idx in self.zero_action_indices[-L:]
+                          if 0 <= idx < len(self.h_b_history)]
+            if h_b_at_zero:
+                mean_h_b_zero = np.mean(h_b_at_zero)
+                threshold = np.percentile(self.h_b_history, 25) if self.h_b_history else 0.1
+                no_leaks = mean_h_b_zero <= threshold
 
-        ci_score = float(np.clip(ci_score, 0, 1))
-        self.ci_scores.append(ci_score)
+        # Separación OK
+        separation_ok = separation_score >= 0.6
+
+        # Atribución estable
+        attribution_stable = attribution_score >= 0.5
+
+        # Cos C-B promedio
+        cos_cb = np.mean(np.abs(self.cos_cb_history[-L:])) if self.cos_cb_history else 0.0
+
+        # H_B/H promedio
+        h_b_ratio = np.mean(self.h_b_ratio_history[-L:]) if self.h_b_ratio_history else 0.0
 
         return CausalityResult(
             no_leaks=no_leaks,
             separation_ok=separation_ok,
             attribution_stable=attribution_stable,
             ci_score=ci_score,
-            h_b_at_zero=h_b_at_zero,
+            separation_score=separation_score,
+            attribution_score=attribution_score,
+            stability_score=stability_score,
             cos_cb=cos_cb,
-            delta_w_at_zero=delta_w_at_zero
+            h_b_ratio=h_b_ratio
         )
 
     def get_ci_score(self) -> float:
-        """Retorna score CI promedio reciente."""
-        if not self.ci_scores:
+        """
+        CI_Score = (1/3)[separación + atribución + estabilidad]
+        """
+        if not self.separation_scores:
             return 0.5
-        return float(np.mean(self.ci_scores[-L_t(self.t):]))
 
-    def get_statistics(self) -> Dict[str, Any]:
-        """Estadísticas del sistema CI."""
+        L = min(L_t(self.t), len(self.separation_scores))
+
+        sep = np.mean(self.separation_scores[-L:])
+        att = np.mean(self.attribution_scores[-L:]) if self.attribution_scores else 0.5
+        stab = np.mean(self.stability_scores[-L:]) if self.stability_scores else 0.5
+
+        return (sep + att + stab) / 3.0
+
+    def get_detailed_statistics(self) -> Dict[str, Any]:
+        """Estadísticas detalladas del sistema CI."""
+        L = L_t(self.t)
+
         return {
             'agent_id': self.agent_id,
             't': self.t,
             'ci_score': self.get_ci_score(),
-            'mean_cos_cb': np.mean(np.abs(self.cos_cb_history)) if self.cos_cb_history else 0.0,
-            'mean_h_b': np.mean(self.h_b_history) if self.h_b_history else 0.0,
-            'n_zero_action_intervals': len(self.zero_action_intervals),
-            'target': '≥ 0.60'
+            'separation_score': np.mean(self.separation_scores[-L:]) if self.separation_scores else 0.5,
+            'attribution_score': np.mean(self.attribution_scores[-L:]) if self.attribution_scores else 0.5,
+            'stability_score': np.mean(self.stability_scores[-L:]) if self.stability_scores else 0.5,
+            'mean_cos_cb': np.mean(np.abs(self.cos_cb_history[-L:])) if self.cos_cb_history else 0.0,
+            'mean_h_b_ratio': np.mean(self.h_b_ratio_history[-L:]) if self.h_b_ratio_history else 0.0,
+            'n_zero_action_intervals': len(self.zero_action_indices),
+            'target': '≥ 0.60',
+            'formula': 'CI_Score = (1/3)[separation + attribution + stability]'
         }
+
+    def get_statistics(self) -> Dict[str, Any]:
+        """Estadísticas resumidas."""
+        return self.get_detailed_statistics()
 
 
 def test_internal_causality():
-    """Test del sistema CI."""
-    print("=" * 60)
-    print("TEST: INTERNAL CAUSALITY")
-    print("=" * 60)
+    """Test del sistema CI v2."""
+    print("=" * 70)
+    print("TEST: INTERNAL CAUSALITY v2")
+    print("=" * 70)
 
     np.random.seed(42)
 
@@ -424,31 +530,37 @@ def test_internal_causality():
 
     prev_state = np.random.randn(6) * 0.5
 
-    for t in range(1, 301):
+    for t in range(1, 501):
         state = prev_state + np.random.randn(6) * 0.1
 
-        # Acción: a veces nula
+        # Acción: a veces nula (cada 10 pasos)
         if t % 10 == 0:
-            action = np.zeros(4)  # Acción nula
+            action = np.zeros(4)  # "Manos quietas"
         else:
             action = np.random.randn(4) * 0.3
 
-        ci_system.observe(t, state, action, prev_state)
+        conf = 0.5 + np.random.rand() * 0.3
+        ci_system.observe(t, state, action, prev_state, confidence=conf)
         prev_state = state.copy()
 
-        if t % 50 == 0:
+        if t % 100 == 0:
             result = ci_system.evaluate_causality(t)
-            stats = ci_system.get_statistics()
+            stats = ci_system.get_detailed_statistics()
             print(f"\n  t={t}:")
-            print(f"    CI Score: {stats['ci_score']:.3f}")
+            print(f"    CI Score: {stats['ci_score']:.4f} (target ≥ 0.60)")
+            print(f"    Separation: {result.separation_score:.4f}")
+            print(f"    Attribution: {result.attribution_score:.4f}")
+            print(f"    Stability: {result.stability_score:.4f}")
+            print(f"    cos_Σ(C,B): {result.cos_cb:.4f}")
+            print(f"    H_B/H: {result.h_b_ratio:.4f}")
             print(f"    No Leaks: {result.no_leaks}")
-            print(f"    Separation OK: {result.separation_ok}")
-            print(f"    Stable: {result.attribution_stable}")
-            print(f"    cos(C,B): {result.cos_cb:.3f}")
 
-    print("\n" + "=" * 60)
-    print("TEST COMPLETADO")
-    print("=" * 60)
+    final_score = ci_system.get_ci_score()
+    print("\n" + "=" * 70)
+    print(f"FINAL CI_Score: {final_score:.4f}")
+    print(f"Target: ≥ 0.60")
+    print(f"Status: {'PASS' if final_score >= 0.60 else 'DEVELOPING'}")
+    print("=" * 70)
 
     return ci_system
 

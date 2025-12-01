@@ -118,9 +118,13 @@ class SymbolicAgent:
 
         # 2. Observar en CF y CI
         policy = softmax(action + np.random.randn(len(action)) * 0.1)
+        # Divergencia por acción D_t(a) - basada en sorpresa/coste
         surprise = float(np.linalg.norm(consequence))
-        self.cf_system.observe(t, state, policy, action, reward, surprise)
-        self.ci_system.observe(t, state, action, self.prev_state)
+        divergence = np.abs(action) * surprise + np.random.rand(len(action)) * 0.1
+        self.cf_system.observe(t, state, policy, action, reward, divergence)
+        # Confianza endógena basada en historial
+        confidence = 0.5 + 0.3 * (1.0 - surprise / (surprise + 1))
+        self.ci_system.observe(t, state, action, self.prev_state, confidence)
 
         # 3. Observar secuencia en binding manager
         states = [state]
