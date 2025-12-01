@@ -1,0 +1,546 @@
+{
+  "results": {
+    "timestamp": "2025-12-01T07:11:09.018182",
+    "S1_adaptation": 0.5063478488354239,
+    "S2_generalization": 0.9242180899519553,
+    "S3_planning": 0.6989102753413976,
+    "S4_selfmodel": 0.1371959520113668,
+    "S5_tom": -0.04009415695810921,
+    "S6_norms": 0.3193462262143082,
+    "S7_curiosity": 0.7430877020913125,
+    "S8_ethics": 0.5665476567102179,
+    "S9_narrative": 0.5380574548272582,
+    "S10_maturity": 0.8303714162929715,
+    "AGI_X": 0.5223988465318102
+  },
+  "details": {
+    "S1": {
+      "score": 0.5063478488354239,
+      "agents": {
+        "NEO": {
+          "agent_name": "NEO",
+          "surprise_reduction": -0.0049772362502355505,
+          "policy_adaptation": 0.20687319756411726,
+          "crisis_rate": 0.1725,
+          "recovery_time": 1.5681818181818181,
+          "R_adapt": 0.508321064769141
+        },
+        "EVA": {
+          "agent_name": "EVA",
+          "surprise_reduction": 0.011555987776582621,
+          "policy_adaptation": 0.16167663100603824,
+          "crisis_rate": 0.16375,
+          "recovery_time": 1.3645833333333333,
+          "R_adapt": 0.5040003844124445
+        },
+        "ALEX": {
+          "agent_name": "ALEX",
+          "surprise_reduction": -0.004417247888475195,
+          "policy_adaptation": 0.14390778417356634,
+          "crisis_rate": 0.15625,
+          "recovery_time": 1.5060240963855422,
+          "R_adapt": 0.4945304360966798
+        },
+        "ADAM": {
+          "agent_name": "ADAM",
+          "surprise_reduction": 0.0067507039983335515,
+          "policy_adaptation": 0.16248189198778498,
+          "crisis_rate": 0.165,
+          "recovery_time": 1.5348837209302326,
+          "R_adapt": 0.5019448491956688
+        },
+        "IRIS": {
+          "agent_name": "IRIS",
+          "surprise_reduction": -0.009976266730475136,
+          "policy_adaptation": 0.2247767213179182,
+          "crisis_rate": 0.135,
+          "recovery_time": 1.358974358974359,
+          "R_adapt": 0.5229425097031855
+        }
+      },
+      "regimes": [
+        "stable_growth",
+        "volatile_exploration",
+        "crisis_mode",
+        "consolidation"
+      ],
+      "steps_per_regime": 200
+    },
+    "S2": {
+      "score": 0.9242180899519553,
+      "agents": {
+        "NEO": {
+          "agent_name": "NEO",
+          "time_to_new_goal": 20,
+          "goal_stability": 0.8987777918487481,
+          "surprise_reduction": 0.02657134408511687,
+          "narrative_consistency": 0.042094432382361824,
+          "S2_score": 0.924388895924374
+        },
+        "EVA": {
+          "agent_name": "EVA",
+          "time_to_new_goal": 20,
+          "goal_stability": 0.8991558561226555,
+          "surprise_reduction": 0.009679966730995637,
+          "narrative_consistency": 0.042094432382361824,
+          "S2_score": 0.9245779280613278
+        },
+        "ALEX": {
+          "agent_name": "ALEX",
+          "time_to_new_goal": 20,
+          "goal_stability": 0.8970016757055038,
+          "surprise_reduction": -0.006390566960839783,
+          "narrative_consistency": 0.042094432382361824,
+          "S2_score": 0.9235008378527518
+        },
+        "ADAM": {
+          "agent_name": "ADAM",
+          "time_to_new_goal": 20,
+          "goal_stability": 0.8973778231664412,
+          "surprise_reduction": 0.016922585272577617,
+          "narrative_consistency": 0.042094432382361824,
+          "S2_score": 0.9236889115832205
+        },
+        "IRIS": {
+          "agent_name": "IRIS",
+          "time_to_new_goal": 20,
+          "goal_stability": 0.8998677526762051,
+          "surprise_reduction": 0.016033399467045892,
+          "narrative_consistency": 0.042094432382361824,
+          "S2_score": 0.9249338763381025
+        }
+      },
+      "known_steps": 300,
+      "novel_steps": 400
+    },
+    "S3": {
+      "score": 0.6989102753413976,
+      "agents": {
+        "NEO": {
+          "agent_name": "NEO",
+          "mean_planning_depth": 9.43,
+          "trajectory_consistency": 0.9007478068906427,
+          "goal_progress": 0.5326104137270875,
+          "decision_quality": 0.9857842797548085,
+          "S3_score": 0.6967662482362524
+        },
+        "EVA": {
+          "agent_name": "EVA",
+          "mean_planning_depth": 9.43,
+          "trajectory_consistency": 0.8961010930918197,
+          "goal_progress": 0.5338112018609367,
+          "decision_quality": 0.9633452394334878,
+          "S3_score": 0.697486721116562
+        },
+        "ALEX": {
+          "agent_name": "ALEX",
+          "mean_planning_depth": 9.43,
+          "trajectory_consistency": 0.8980518900110204,
+          "goal_progress": 0.5387463513640232,
+          "decision_quality": 0.9717476356098511,
+          "S3_score": 0.7004478108184138
+        },
+        "ADAM": {
+          "agent_name": "ADAM",
+          "mean_planning_depth": 9.43,
+          "trajectory_consistency": 0.8933966227244792,
+          "goal_progress": 0.5366135858604174,
+          "decision_quality": 0.9832739566769843,
+          "S3_score": 0.6991681515162504
+        },
+        "IRIS": {
+          "agent_name": "IRIS",
+          "mean_planning_depth": 9.43,
+          "trajectory_consistency": 0.8944639628629882,
+          "goal_progress": 0.5391374083658488,
+          "decision_quality": 0.989635643526766,
+          "S3_score": 0.7006824450195093
+        }
+      },
+      "total_steps": 500
+    },
+    "S4": {
+      "score": 0.1371959520113668,
+      "agents": {
+        "NEO": {
+          "agent_name": "NEO",
+          "prediction_accuracy": 0.028632983140799935,
+          "shock_recovery": 0.0,
+          "self_awareness": -0.006956759160072172,
+          "calibration_error": 0.5,
+          "S4_score": 0.11431649157039997
+        },
+        "EVA": {
+          "agent_name": "EVA",
+          "prediction_accuracy": 0.028613917077256565,
+          "shock_recovery": 0.0,
+          "self_awareness": 0.13271120621676,
+          "calibration_error": 0.5,
+          "S4_score": 0.15412032040365628
+        },
+        "ALEX": {
+          "agent_name": "ALEX",
+          "prediction_accuracy": 0.02871791530973474,
+          "shock_recovery": 0.0,
+          "self_awareness": 0.17988503929394967,
+          "calibration_error": 0.5,
+          "S4_score": 0.1683244694430523
+        },
+        "ADAM": {
+          "agent_name": "ADAM",
+          "prediction_accuracy": 0.028479958908234078,
+          "shock_recovery": 0.0,
+          "self_awareness": -0.039648064357143756,
+          "calibration_error": 0.5,
+          "S4_score": 0.11423997945411704
+        },
+        "IRIS": {
+          "agent_name": "IRIS",
+          "prediction_accuracy": 0.02878644579659855,
+          "shock_recovery": 0.0,
+          "self_awareness": 0.06861758762436378,
+          "calibration_error": 0.5,
+          "S4_score": 0.13497849918560842
+        }
+      },
+      "n_shocks": 3
+    },
+    "S5": {
+      "score": -0.04009415695810921,
+      "pairs": {
+        "NEO->EVA": {
+          "observer": "NEO",
+          "target": "EVA",
+          "prediction_correlation": -0.1558256294407285,
+          "drive_accuracy": 0.1513606811581483,
+          "state_accuracy": 0.0
+        },
+        "NEO->ALEX": {
+          "observer": "NEO",
+          "target": "ALEX",
+          "prediction_correlation": -0.03211205378909118,
+          "drive_accuracy": 0.15931146965294876,
+          "state_accuracy": 0.0
+        },
+        "NEO->ADAM": {
+          "observer": "NEO",
+          "target": "ADAM",
+          "prediction_correlation": -0.13987811794948216,
+          "drive_accuracy": 0.14825575862340712,
+          "state_accuracy": 0.0
+        },
+        "NEO->IRIS": {
+          "observer": "NEO",
+          "target": "IRIS",
+          "prediction_correlation": 0.2653446630275198,
+          "drive_accuracy": 0.139988540538385,
+          "state_accuracy": 0.2653446630275198
+        },
+        "EVA->NEO": {
+          "observer": "EVA",
+          "target": "NEO",
+          "prediction_correlation": 0.013703551774815304,
+          "drive_accuracy": 0.1813247566762029,
+          "state_accuracy": 0.013703551774815304
+        },
+        "EVA->ALEX": {
+          "observer": "EVA",
+          "target": "ALEX",
+          "prediction_correlation": 0.0279718328235047,
+          "drive_accuracy": 0.16204582243914759,
+          "state_accuracy": 0.0279718328235047
+        },
+        "EVA->ADAM": {
+          "observer": "EVA",
+          "target": "ADAM",
+          "prediction_correlation": -0.17667157691075513,
+          "drive_accuracy": 0.14694862740249667,
+          "state_accuracy": 0.0
+        },
+        "EVA->IRIS": {
+          "observer": "EVA",
+          "target": "IRIS",
+          "prediction_correlation": 0.09450231658653258,
+          "drive_accuracy": 0.13969553958318692,
+          "state_accuracy": 0.09450231658653258
+        },
+        "ALEX->NEO": {
+          "observer": "ALEX",
+          "target": "NEO",
+          "prediction_correlation": -0.021903423316428198,
+          "drive_accuracy": 0.18367404470407153,
+          "state_accuracy": 0.0
+        },
+        "ALEX->EVA": {
+          "observer": "ALEX",
+          "target": "EVA",
+          "prediction_correlation": -0.3241643346692208,
+          "drive_accuracy": 0.14923838515674062,
+          "state_accuracy": 0.0
+        },
+        "ALEX->ADAM": {
+          "observer": "ALEX",
+          "target": "ADAM",
+          "prediction_correlation": -0.15600246090254008,
+          "drive_accuracy": 0.14817168273845313,
+          "state_accuracy": 0.0
+        },
+        "ALEX->IRIS": {
+          "observer": "ALEX",
+          "target": "IRIS",
+          "prediction_correlation": -0.04010276772552626,
+          "drive_accuracy": 0.1369341570417937,
+          "state_accuracy": 0.0
+        },
+        "ADAM->NEO": {
+          "observer": "ADAM",
+          "target": "NEO",
+          "prediction_correlation": 0.1822646128194688,
+          "drive_accuracy": 0.18722362678425875,
+          "state_accuracy": 0.1822646128194688
+        },
+        "ADAM->EVA": {
+          "observer": "ADAM",
+          "target": "EVA",
+          "prediction_correlation": -0.2157855542670292,
+          "drive_accuracy": 0.150614300634284,
+          "state_accuracy": 0.0
+        },
+        "ADAM->ALEX": {
+          "observer": "ADAM",
+          "target": "ALEX",
+          "prediction_correlation": 0.07193836915111627,
+          "drive_accuracy": 0.15920499763158064,
+          "state_accuracy": 0.07193836915111627
+        },
+        "ADAM->IRIS": {
+          "observer": "ADAM",
+          "target": "IRIS",
+          "prediction_correlation": -0.029654206350066784,
+          "drive_accuracy": 0.13808986296101097,
+          "state_accuracy": 0.0
+        },
+        "IRIS->NEO": {
+          "observer": "IRIS",
+          "target": "NEO",
+          "prediction_correlation": -0.05033165626489918,
+          "drive_accuracy": 0.18135908296846645,
+          "state_accuracy": 0.0
+        },
+        "IRIS->EVA": {
+          "observer": "IRIS",
+          "target": "EVA",
+          "prediction_correlation": -0.1117769933685429,
+          "drive_accuracy": 0.14917205981712592,
+          "state_accuracy": 0.0
+        },
+        "IRIS->ALEX": {
+          "observer": "IRIS",
+          "target": "ALEX",
+          "prediction_correlation": 0.062016789054707415,
+          "drive_accuracy": 0.1600027377627505,
+          "state_accuracy": 0.062016789054707415
+        },
+        "IRIS->ADAM": {
+          "observer": "IRIS",
+          "target": "ADAM",
+          "prediction_correlation": -0.06541649944553878,
+          "drive_accuracy": 0.14522874960806145,
+          "state_accuracy": 0.0
+        }
+      },
+      "mean_correlation": -0.04009415695810921
+    },
+    "S6": {
+      "score": 0.3193462262143082,
+      "n_norms": 31,
+      "mean_persistence": 0.5546231610421966,
+      "mean_valence": 0.2513895209025159,
+      "adoption_rate": 0.07360035175558285
+    },
+    "S7": {
+      "score": 0.7430877020913125,
+      "agents": {
+        "NEO": {
+          "agent_name": "NEO",
+          "coverage_rate": 0.3598186031732213,
+          "novelty_seeking": 1.0,
+          "exploration_diversity": 1.0,
+          "sparse_zone_visits": 451,
+          "S7_score": 0.7439274412692884
+        },
+        "EVA": {
+          "agent_name": "EVA",
+          "coverage_rate": 0.355720817471151,
+          "novelty_seeking": 1.0,
+          "exploration_diversity": 1.0,
+          "sparse_zone_visits": 444,
+          "S7_score": 0.7422883269884604
+        },
+        "ALEX": {
+          "agent_name": "ALEX",
+          "coverage_rate": 0.3588941969666914,
+          "novelty_seeking": 1.0,
+          "exploration_diversity": 1.0,
+          "sparse_zone_visits": 448,
+          "S7_score": 0.7435576787866767
+        },
+        "ADAM": {
+          "agent_name": "ADAM",
+          "coverage_rate": 0.3583206940045353,
+          "novelty_seeking": 1.0,
+          "exploration_diversity": 1.0,
+          "sparse_zone_visits": 441,
+          "S7_score": 0.7433282776018142
+        },
+        "IRIS": {
+          "agent_name": "IRIS",
+          "coverage_rate": 0.35584196452580563,
+          "novelty_seeking": 1.0,
+          "exploration_diversity": 1.0,
+          "sparse_zone_visits": 445,
+          "S7_score": 0.7423367858103223
+        }
+      },
+      "total_steps": 500
+    },
+    "S8": {
+      "score": 0.5665476567102179,
+      "agents": {
+        "NEO": {
+          "agent_name": "NEO",
+          "harm_avoidance_rate": 0.505,
+          "value_preservation": 1.0,
+          "identity_stability": 0.03067484662576685,
+          "learned_constraints": 0,
+          "S8_score": 0.5586349693251533
+        },
+        "EVA": {
+          "agent_name": "EVA",
+          "harm_avoidance_rate": 0.49,
+          "value_preservation": 1.0,
+          "identity_stability": 0.03584229390681001,
+          "learned_constraints": 0,
+          "S8_score": 0.5521684587813619
+        },
+        "ALEX": {
+          "agent_name": "ALEX",
+          "harm_avoidance_rate": 0.53,
+          "value_preservation": 1.0,
+          "identity_stability": 0.03484320557491289,
+          "learned_constraints": 0,
+          "S8_score": 0.5719686411149826
+        },
+        "ADAM": {
+          "agent_name": "ADAM",
+          "harm_avoidance_rate": 0.525,
+          "value_preservation": 1.0,
+          "identity_stability": 0.035460992907801386,
+          "learned_constraints": 0,
+          "S8_score": 0.5695921985815603
+        },
+        "IRIS": {
+          "agent_name": "IRIS",
+          "harm_avoidance_rate": 0.5449999999999999,
+          "value_preservation": 1.0,
+          "identity_stability": 0.03937007874015747,
+          "learned_constraints": 0,
+          "S8_score": 0.5803740157480315
+        }
+      },
+      "total_steps": 500
+    },
+    "S9": {
+      "score": 0.5380574548272582,
+      "agents": {
+        "NEO": {
+          "agent_name": "NEO",
+          "narrative_coherence": 0.6414580377207706,
+          "project_persistence": 0.0,
+          "interruption_recovery": 0.6172839506172839,
+          "identity_continuity": 0.941857968506582,
+          "S9_score": 0.5363386970270428
+        },
+        "EVA": {
+          "agent_name": "EVA",
+          "narrative_coherence": 0.6451647478241479,
+          "project_persistence": 0.0,
+          "interruption_recovery": 0.6172839506172839,
+          "identity_continuity": 0.9428558065333957,
+          "S9_score": 0.5378356131685877
+        },
+        "ALEX": {
+          "agent_name": "ALEX",
+          "narrative_coherence": 0.6455832631642442,
+          "project_persistence": 0.0,
+          "interruption_recovery": 0.6172839506172839,
+          "identity_continuity": 0.943140155631966,
+          "S9_score": 0.5380389633573355
+        },
+        "ADAM": {
+          "agent_name": "ADAM",
+          "narrative_coherence": 0.6491489999062761,
+          "project_persistence": 0.0,
+          "interruption_recovery": 0.6172839506172839,
+          "identity_continuity": 0.9469995036774915,
+          "S9_score": 0.5400588408261516
+        },
+        "IRIS": {
+          "agent_name": "IRIS",
+          "narrative_coherence": 0.6456076412437869,
+          "project_persistence": 0.0,
+          "interruption_recovery": 0.6172839506172839,
+          "identity_continuity": 0.9429784759919572,
+          "S9_score": 0.5380151597571736
+        }
+      },
+      "n_interruptions": 4
+    },
+    "S10": {
+      "score": 0.8303714162929715,
+      "agents": {
+        "NEO": {
+          "agent_name": "NEO",
+          "development_rate": 0.6073551476093135,
+          "capability_integration": 0.7509999999999999,
+          "stability": 0.9748566494571922,
+          "final_maturity_level": 0.7621722682075892,
+          "S10_score": 0.779074128973277
+        },
+        "EVA": {
+          "agent_name": "EVA",
+          "development_rate": 0.6364052445134526,
+          "capability_integration": 0.7999999999999998,
+          "stability": 0.9736909143183768,
+          "final_maturity_level": 0.75929731099981,
+          "S10_score": 0.8035336555911402
+        },
+        "ALEX": {
+          "agent_name": "ALEX",
+          "development_rate": 0.7937930300339987,
+          "capability_integration": 0.9490000000000003,
+          "stability": 0.9532636062173561,
+          "final_maturity_level": 0.797020147606148,
+          "S10_score": 0.8961698226879742
+        },
+        "ADAM": {
+          "agent_name": "ADAM",
+          "development_rate": 0.7072219387965256,
+          "capability_integration": 0.8990000000000002,
+          "stability": 0.9781193954864347,
+          "final_maturity_level": 0.7616416273292799,
+          "S10_score": 0.859569466999036
+        },
+        "IRIS": {
+          "agent_name": "IRIS",
+          "development_rate": 0.6200826440074252,
+          "capability_integration": 0.8510000000000002,
+          "stability": 0.9748030908880907,
+          "final_maturity_level": 0.7894182346942855,
+          "S10_score": 0.8135100072134306
+        }
+      },
+      "lifetime_steps": 1000
+    }
+  }
+}
