@@ -1,0 +1,46 @@
+{
+  "timestamp": "2025-12-01T04:20:26.591101",
+  "experiments": {
+    "symmetric": {
+      "total_rounds": 100,
+      "total_payoffs": {
+        "NEO": 362.9649079900595,
+        "EVA": 362.6758785156355
+      },
+      "avg_cooperation": {
+        "NEO": 0.8014531831598345,
+        "EVA": 0.8030495783637669
+      },
+      "avg_entanglement": 0.5250094858149772,
+      "rounds_quantum": 100,
+      "rounds_classical": 0,
+      "nash_classical_payoff": 100,
+      "pareto_optimal_payoff": 300,
+      "quantum_advantage": 262.82039325284745,
+      "pareto_efficiency": 1.2094013108428248
+    },
+    "asymmetric": {
+      "total_rounds": 100,
+      "total_payoffs": {
+        "Alice": 150.26860148269145,
+        "Bob": 330.7281388256876
+      },
+      "avg_cooperation": {
+        "Alice": 0.8048914960745077,
+        "Bob": 0.24860812861228165
+      },
+      "avg_entanglement": 0.4354449731235818,
+      "rounds_quantum": 100,
+      "rounds_classical": 0,
+      "nash_classical_payoff": 100,
+      "pareto_optimal_payoff": 300,
+      "quantum_advantage": 140.49837015418953,
+      "pareto_efficiency": 0.8016612338472985
+    },
+    "three_players": {
+      "NEO": 319.2673844517809,
+      "EVA": 319.1301470827408,
+      "ALEX": 318.99290971370067
+    }
+  }
+}

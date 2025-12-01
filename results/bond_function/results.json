@@ -1,0 +1,52 @@
+{
+  "timestamp": "2025-12-01T04:29:47.368815",
+  "parameters": {
+    "T": 500,
+    "n_seeds": 3
+  },
+  "summary": {
+    "solo_neo": {
+      "surprise": 0.3659364356525902,
+      "phi": 0.0,
+      "grounding": 0.09983387730143772,
+      "crisis_rate": 3.0
+    },
+    "solo_eva": {
+      "surprise": 0.3810275201726317,
+      "phi": 0.0,
+      "grounding": 0.07334147842255764,
+      "crisis_rate": 2.9333333333333336
+    },
+    "dyad_neo": {
+      "surprise": 0.36489327463646165,
+      "phi": 0.0,
+      "grounding": 0.07576754827054719,
+      "crisis_rate": 2.8000000000000003
+    },
+    "dyad_eva": {
+      "surprise": 0.36181456830625297,
+      "phi": 0.0,
+      "grounding": 0.10104849986469712,
+      "crisis_rate": 2.9333333333333336
+    },
+    "triad_neo": {
+      "surprise": 0.34941210551580476,
+      "phi": 0.0,
+      "grounding": 0.08640609438295839,
+      "crisis_rate": 2.1999999999999997
+    },
+    "triad_eva": {
+      "surprise": 0.346841091023463,
+      "phi": 0.0,
+      "grounding": 0.07712856375028794,
+      "crisis_rate": 2.3333333333333335
+    },
+    "triad_alex": {
+      "surprise": 0.32568301786806186,
+      "phi": 0.0,
+      "grounding": 0.09844709253258448,
+      "crisis_rate": 3.0
+    }
+  },
+  "conclusion": "bond_other_function"
+}

@@ -1,0 +1,79 @@
+{
+  "timestamp": "2025-12-01T02:04:08.687851",
+  "config": {
+    "n_seeds": 2,
+    "T": 300
+  },
+  "aggregate": {
+    "NEO_SAGI_mean": 0.5464873743412022,
+    "EVA_SAGI_mean": 0.5492010797029945,
+    "NEO_GI_mean": 1.2246826583394124,
+    "EVA_GI_mean": 0.8583433652137704,
+    "NEO_tau_mean": 0.996352882445333,
+    "EVA_tau_mean": 0.996352882445333
+  },
+  "runs": [
+    {
+      "seed": 42,
+      "final_comparison": {
+        "ready": true,
+        "NEO": {
+          "SAGI_mean": 0.5470213918450786,
+          "IGI_mean": 0.1854428753529308,
+          "GI_mean": 1.3348491475687043,
+          "psi_mean": 0.3855727323156444,
+          "tau_mean": 0.996352882445333,
+          "identity_mean": 0.7698041883602812,
+          "otherness_mean": 0.7825987913195854
+        },
+        "EVA": {
+          "SAGI_mean": 0.5522974118369504,
+          "IGI_mean": 0.08299617936456932,
+          "GI_mean": 0.8908506018397832,
+          "psi_mean": 0.4372238168348864,
+          "tau_mean": 0.996352882445333,
+          "identity_mean": 0.6419508488998124,
+          "otherness_mean": 0.8195369188397592
+        },
+        "characterization": {
+          "neo_more_pragmatic": "True",
+          "eva_more_internal": "True",
+          "tau_divergence": 0.0,
+          "personality_neo": "Pragm\u00e1tico",
+          "personality_eva": "Fenomenol\u00f3gico"
+        }
+      }
+    },
+    {
+      "seed": 59,
+      "final_comparison": {
+        "ready": true,
+        "NEO": {
+          "SAGI_mean": 0.5459533568373259,
+          "IGI_mean": 0.19069862741979868,
+          "GI_mean": 1.1145161691101206,
+          "psi_mean": 0.3846008632837586,
+          "tau_mean": 0.996352882445333,
+          "identity_mean": 0.762810938624729,
+          "otherness_mean": 0.7078256043074396
+        },
+        "EVA": {
+          "SAGI_mean": 0.5461047475690387,
+          "IGI_mean": 0.08413794606810242,
+          "GI_mean": 0.8258361285877577,
+          "psi_mean": 0.41698999881048854,
+          "tau_mean": 0.996352882445333,
+          "identity_mean": 0.6405264338860032,
+          "otherness_mean": 0.7663217038525727
+        },
+        "characterization": {
+          "neo_more_pragmatic": "True",
+          "eva_more_internal": "True",
+          "tau_divergence": 0.0,
+          "personality_neo": "Pragm\u00e1tico",
+          "personality_eva": "Fenomenol\u00f3gico"
+        }
+      }
+    }
+  ]
+}

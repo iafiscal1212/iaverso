@@ -1,0 +1,66 @@
+{
+  "phase": "I2-Dual",
+  "name": "Dual Agent IGI",
+  "timestamp": "2025-12-01T01:57:09.053996",
+  "comparison": {
+    "ready": true,
+    "t": 500,
+    "NEO": {
+      "IGI_mean": 0.40804998666252223,
+      "IGI_std": 0.3282161413305368,
+      "I_int_mean": 0.4472891566265059,
+      "I_eco_mean": 0.4269578313253012,
+      "n_episodes": 1
+    },
+    "EVA": {
+      "IGI_mean": 0.43952082204793486,
+      "IGI_std": 0.32836080557139574,
+      "I_int_mean": 0.4472891566265059,
+      "I_eco_mean": 0.4269578313253012,
+      "n_episodes": 1
+    },
+    "correlation": 0.4501587800708491,
+    "divergence": 0.03147083538541262,
+    "dominant": "EVA"
+  },
+  "certification_NEO": {
+    "agent": "NEO",
+    "certified": "False",
+    "IGI_mean": 0.40804998666252223,
+    "IGI_var": 0.1077258354299069,
+    "p95_null": 1.0,
+    "p95_var_null": 0.1108926001635781,
+    "test_mean": "False",
+    "test_var": "False",
+    "corr_TE": 0.3320911437574972,
+    "test_corr": "True",
+    "n_long_episodes": 1,
+    "K_required": 2,
+    "test_episodes": false
+  },
+  "certification_EVA": {
+    "agent": "EVA",
+    "certified": "False",
+    "IGI_mean": 0.43952082204793486,
+    "IGI_var": 0.10782081863549597,
+    "p95_null": 1.0,
+    "p95_var_null": 0.10760558196799379,
+    "test_mean": "False",
+    "test_var": "True",
+    "corr_TE": 0.3225889746626437,
+    "test_corr": "True",
+    "n_long_episodes": 0,
+    "K_required": 2,
+    "test_episodes": false
+  },
+  "criteria": {
+    "igi_computed": true,
+    "neo_certified": "False",
+    "eva_certified": "False",
+    "differentiated": false,
+    "correlated": true
+  },
+  "go_status": "NO-GO",
+  "passed_criteria": "2",
+  "total_criteria": 5
+}

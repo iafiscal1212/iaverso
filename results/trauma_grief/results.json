@@ -1,0 +1,81 @@
+{
+  "timestamp": "2025-12-01T03:40:03.603524",
+  "trauma": {
+    "with_partner": [
+      {
+        "seed": 42,
+        "recovery_time": 2,
+        "pre_trauma_identity": 0.5847788285987285,
+        "final_identity": 0.5517867543954423,
+        "eva_final_identity": 0.7522560052364718
+      },
+      {
+        "seed": 123,
+        "recovery_time": 1,
+        "pre_trauma_identity": 0.7242725737690694,
+        "final_identity": 0.5768714065586893,
+        "eva_final_identity": 0.6734205546873991
+      }
+    ],
+    "alone": [
+      {
+        "seed": 42,
+        "recovery_time": 1,
+        "final_identity": 0.26245381442134136
+      },
+      {
+        "seed": 123,
+        "recovery_time": 6,
+        "final_identity": 0.5322168817566757
+      }
+    ]
+  },
+  "resonance": {
+    "natural": [
+      {
+        "seed": 42,
+        "period": 44.117647058823536
+      },
+      {
+        "seed": 123,
+        "period": 44.117647058823536
+      }
+    ],
+    "forced": [
+      {
+        "seed": 42,
+        "period": 45.45454545454546,
+        "power_natural": 71.74813361454582,
+        "power_forced": 7.894059593606971
+      },
+      {
+        "seed": 123,
+        "period": 42.85714285714286,
+        "power_natural": 26.984825523173026,
+        "power_forced": 9.289187053854263
+      }
+    ]
+  },
+  "grief": [
+    {
+      "seed": 42,
+      "period_before": 44.117647058823536,
+      "period_after": 37.5,
+      "crises_before": 19,
+      "crises_after": 21,
+      "final_attachment": 0.955,
+      "grief_detected": "False",
+      "identity_drop": 0.010765599543585691
+    },
+    {
+      "seed": 123,
+      "period_before": 37.5,
+      "period_after": 41.666666666666664,
+      "crises_before": 21,
+      "crises_after": 15,
+      "final_attachment": 0.975,
+      "grief_detected": "False",
+      "identity_drop": 0.018115883615735406
+    }
+  ]
+}

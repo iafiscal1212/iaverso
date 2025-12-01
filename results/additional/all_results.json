@@ -1,0 +1,92 @@
+{
+  "timestamp": "2025-12-01T03:59:18.559404",
+  "plasticity": {
+    "normal": [
+      {
+        "seed": 42,
+        "neo_crises": 19,
+        "eva_crises": 21,
+        "final_attachment_neo": 0.995,
+        "final_attachment_eva": 1.0,
+        "correlation": -0.22998392987486513
+      },
+      {
+        "seed": 123,
+        "neo_crises": 22,
+        "eva_crises": 22,
+        "final_attachment_neo": 1.0,
+        "final_attachment_eva": 0.955,
+        "correlation": -0.20084062970957697
+      }
+    ],
+    "crisis_disconnect": [
+      {
+        "seed": 42,
+        "neo_crises": 27,
+        "eva_crises": 28,
+        "final_attachment_neo": 0.0,
+        "final_attachment_eva": 0.0,
+        "disconnect_count": 535,
+        "correlation": -0.21168761060477934
+      },
+      {
+        "seed": 123,
+        "neo_crises": 22,
+        "eva_crises": 29,
+        "final_attachment_neo": 0.0,
+        "final_attachment_eva": 0.0,
+        "disconnect_count": 431,
+        "correlation": -0.07624441752263217
+      }
+    ],
+    "memory_decay": [
+      {
+        "seed": 42,
+        "attachment_at_separation": 0.995,
+        "final_attachment": 0.2211807388415433,
+        "decay_rate": 0.0015476385223169133,
+        "half_life": 332.49930381392693
+      },
+      {
+        "seed": 123,
+        "attachment_at_separation": 1.0,
+        "final_attachment": 0.22229219984074702,
+        "decay_rate": 0.001555415600318506,
+        "half_life": 332.49930381392693
+      }
+    ]
+  },
+  "alex": {
+    "dyad": [
+      {
+        "seed": 42,
+        "neo_crises": 19,
+        "eva_crises": 21,
+        "correlation": -0.22998392987486513,
+        "mean_psi": 0.15907948685913922
+      },
+      {
+        "seed": 123,
+        "neo_crises": 22,
+        "eva_crises": 22,
+        "correlation": -0.20084062970957697,
+        "mean_psi": 0.16632155071314136
+      }
+    ],
+    "triad": [
+      {
+        "seed": 42,
+        "neo_crises": 20,
+        "eva_crises": 21,
+        "alex_crises": 14,
+        "corr_neo_eva": -0.6013883006600295,
+        "corr_neo_alex": -0.14287092305672183,
+        "corr_eva_alex": -0.12393845624242361,
+        "dominant_coalition": "NEO-ALEX",
+        "coalition_counts": {
+          "NEO-EVA": 245,
+          "NEO-ALEX": 304,
+          "EVA-ALEX": 251
+        },
+        "final_attachments": {
+          

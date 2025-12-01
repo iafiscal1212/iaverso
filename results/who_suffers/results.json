@@ -1,0 +1,185 @@
+{
+  "timestamp": "2025-12-01T03:17:03.458296",
+  "T": 1000,
+  "seeds": [
+    42,
+    123
+  ],
+  "all_results": {
+    "baseline": [
+      {
+        "neo_crises": 24,
+        "eva_crises": 29,
+        "neo_resolved": 24,
+        "eva_resolved": 29,
+        "neo_interval": 41.26086956521739,
+        "eva_interval": 32.42857142857143,
+        "correlation": 0.36694523388462796,
+        "neo_period": 43.47826086956522,
+        "eva_period": 43.47826086956522,
+        "neo_wellbeing": 0.8497444795647691,
+        "eva_wellbeing": 0.8709453297501389,
+        "neo_attachment": 0.9349999999999999,
+        "eva_attachment": 1.0,
+        "condition": "baseline"
+      },
+      {
+        "neo_crises": 32,
+        "eva_crises": 35,
+        "neo_resolved": 32,
+        "eva_resolved": 34,
+        "neo_interval": 28.64516129032258,
+        "eva_interval": 27.470588235294116,
+        "correlation": 0.3965909030463009,
+        "neo_period": 43.47826086956522,
+        "eva_period": 43.47826086956522,
+        "neo_wellbeing": 0.8743321510622447,
+        "eva_wellbeing": 0.8560466033779263,
+        "neo_attachment": 0.99,
+        "eva_attachment": 0.99,
+        "condition": "baseline"
+      }
+    ],
+    "neo_mutated": [
+      {
+        "neo_crises": 23,
+        "eva_crises": 38,
+        "neo_resolved": 22,
+        "eva_resolved": 37,
+        "neo_interval": 43.68181818181818,
+        "eva_interval": 26.16216216216216,
+        "correlation": 0.34778402261393654,
+        "neo_period": 45.45454545454546,
+        "eva_period": 43.47826086956522,
+        "neo_wellbeing": 0.8514754104176986,
+        "eva_wellbeing": 0.8618197157166958,
+        "neo_attachment": 0.9199999999999999,
+        "eva_attachment": 0.955,
+        "condition": "neo_mutated"
+      },
+      {
+        "neo_crises": 28,
+        "eva_crises": 26,
+        "neo_resolved": 28,
+        "eva_resolved": 26,
+        "neo_interval": 34.592592592592595,
+        "eva_interval": 34.72,
+        "correlation": 0.16868434908694152,
+        "neo_period": 43.47826086956522,
+        "eva_period": 45.45454545454546,
+        "neo_wellbeing": 0.8605496873221137,
+        "eva_wellbeing": 0.851508745300175,
+        "neo_attachment": 0.955,
+        "eva_attachment": 1.0,
+        "condition": "neo_mutated"
+      }
+    ],
+    "eva_mutated": [
+      {
+        "neo_crises": 34,
+        "eva_crises": 28,
+        "neo_resolved": 34,
+        "eva_resolved": 28,
+        "neo_interval": 26.78787878787879,
+        "eva_interval": 34.2962962962963,
+        "correlation": 0.43996397330468207,
+        "neo_period": 40.0,
+        "eva_period": 35.714285714285715,
+        "neo_wellbeing": 0.8683017251172414,
+        "eva_wellbeing": 0.861762700110472,
+        "neo_attachment": 0.95,
+        "eva_attachment": 0.98,
+        "condition": "eva_mutated"
+      },
+      {
+        "neo_crises": 22,
+        "eva_crises": 31,
+        "neo_resolved": 22,
+        "eva_resolved": 31,
+        "neo_interval": 43.476190476190474,
+        "eva_interval": 30.533333333333335,
+        "correlation": 0.3688525303026154,
+        "neo_period": 43.47826086956522,
+        "eva_period": 40.0,
+        "neo_wellbeing": 0.8677216688377154,
+        "eva_wellbeing": 0.862262920605872,
+        "neo_attachment": 1.0,
+        "eva_attachment": 0.995,
+        "condition": "eva_mutated"
+      }
+    ],
+    "neo_stability": [
+      {
+        "neo_crises": 26,
+        "eva_crises": 35,
+        "neo_resolved": 26,
+        "eva_resolved": 34,
+        "neo_interval": 37.92,
+        "eva_interval": 27.470588235294116,
+        "correlation": 0.29751766241429384,
+        "neo_period": 41.666666666666664,
+        "eva_period": 40.0,
+        "neo_wellbeing": 0.8559499256167048,
+        "eva_wellbeing": 0.8616056569883188,
+        "neo_attachment": 0.9149999999999999,
+        "eva_attachment": 0.8999999999999999,
+        "condition": "neo_stability"
+      },
+      {
+        "neo_crises": 20,
+        "eva_crises": 32,
+        "neo_resolved": 19,
+        "eva_resolved": 31,
+        "neo_interval": 50.578947368421055,
+        "eva_interval": 29.451612903225808,
+        "correlation": 0.4911736614286757,
+        "neo_period": 43.47826086956522,
+        "eva_period": 43.47826086956522,
+        "neo_wellbeing": 0.8625697112167696,
+        "eva_wellbeing": 0.8602105344549339,
+        "neo_attachment": 0.9049999999999999,
+        "eva_attachment": 0.9049999999999999,
+        "condition": "neo_stability"
+      }
+    ],
+    "eva_entropy": [
+      {
+        "neo_crises": 32,
+        "eva_crises": 30,
+        "neo_resolved": 32,
+        "eva_resolved": 30,
+        "neo_interval": 29.741935483870968,
+        "eva_interval": 32.58620689655172,
+        "correlation": 0.1460019305915026,
+        "neo_period": 41.666666666666664,
+        "eva_period": 40.0,
+        "neo_wellbeing": 0.8542692566641852,
+        "eva_wellbeing": 0.8541251279763885,
+        "neo_attachment": 0.965,
+        "eva_attachment": 1.0,
+        "condition": "eva_entropy"
+      },
+      {
+        "neo_crises": 31,
+        "eva_crises": 30,
+        "neo_resolved": 30,
+        "eva_resolved": 29,
+        "neo_interval": 30.966666666666665,
+        "eva_interval": 32.13793103448276,
+        "correlation": 0.3806878094513153,
+        "neo_period": 43.47826086956522,
+        "eva_period": 43.47826086956522,
+        "neo_wellbeing": 0.862226135079497,
+        "eva_wellbeing": 0.8595371364474902,
+        "neo_attachment": 0.9049999999999999,
+        "eva_attachment": 0.9099999999999999,
+        "condition": "eva_entropy"
+      }
+    ]
+  },
+  "conclusion": {
+    "neo_impact_when_eva_mutates": 0.0625,
+    "eva_impact_when_neo_mutates": 0.0234375,
+    "more_dependent": "NEO"
+  }
+}

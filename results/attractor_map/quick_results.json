@@ -1,0 +1,1097 @@
+{
+  "timestamp": "2025-12-01T03:55:44.224667",
+  "n_points": 6,
+  "T": 500,
+  "k_neo": 2,
+  "k_eva": 2,
+  "neo_cluster_names": [
+    "neg-ent",
+    "neg-sta"
+  ],
+  "eva_cluster_names": [
+    "neg-int",
+    "neg-int"
+  ],
+  "neo_centroids": [
+    [
+      0.21836653972910364,
+      0.359820961590311,
+      0.009019177249142028,
+      0.18963124516705815,
+      0.21414289901524314,
+      0.009019177249142028
+    ],
+    [
+      0.26132418734092344,
+      0.3306937691265706,
+      0.008972874176366635,
+      0.2766800017267191,
+      0.11335629345305352,
+      0.008972874176366635
+    ]
+  ],
+  "eva_centroids": [
+    [
+      0.17901021419046942,
+      0.4084131710631617,
+      0.009260483758866891,
+      0.1427541701958454,
+      0.2514480346684222,
+      0.009113926123234358
+    ],
+    [
+      0.14744932447508816,
+      0.45200196510560303,
+      0.009133402696886792,
+      0.045292365889035374,
+      0.33698953913649987,
+      0.009133402696886792
+    ]
+  ],
+  "results": [
+    {
+      "init_stability": 0.1,
+      "init_novelty": 0.1,
+      "neo_final_drives": [
+        0.20782787043063883,
+        0.33318528425323474,
+        0.008891898566385796,
+        0.19890107218672715,
+        0.24230197599662787,
+        0.008891898566385796
+      ],
+      "eva_final_drives": [
+        0.15802964863231594,
+        0.5003412457653499,
+        0.013544039595286925,
+        0.13372701162248385,
+        0.18521074385825237,
+        0.009147310526310968
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 11,
+      "correlation": -0.1452232320651466,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.1,
+      "init_novelty": 0.2,
+      "neo_final_drives": [
+        0.26694283955405856,
+        0.33242849545789116,
+        0.00896883045194304,
+        0.27494612041294714,
+        0.10774488367121693,
+        0.00896883045194304
+      ],
+      "eva_final_drives": [
+        0.14284333273991562,
+        0.46097842576923925,
+        0.009144336262914481,
+        0.028616911667540063,
+        0.3492726572974761,
+        0.009144336262914481
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 15,
+      "eva_crises": 14,
+      "correlation": 0.4661094937576878,
+      "neo_cluster": 1,
+      "eva_cluster": 1,
+      "neo_cluster_name": "neg-sta",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.1,
+      "init_novelty": 0.30000000000000004,
+      "neo_final_drives": [
+        0.2669460929040246,
+        0.33243739483287615,
+        0.008968856529230606,
+        0.2749434704832029,
+        0.10773532872143518,
+        0.008968856529230606
+      ],
+      "eva_final_drives": [
+        0.14294346026609966,
+        0.46082036474718624,
+        0.009144252083311405,
+        0.02864818383481634,
+        0.349299486985275,
+        0.009144252083311405
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 15,
+      "eva_crises": 14,
+      "correlation": 0.46602935801216533,
+      "neo_cluster": 1,
+      "eva_cluster": 1,
+      "neo_cluster_name": "neg-sta",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.1,
+      "init_novelty": 0.4,
+      "neo_final_drives": [
+        0.2283724311627451,
+        0.3170717854677542,
+        0.008821680405207585,
+        0.22128141728576514,
+        0.21563100527332027,
+        0.008821680405207585
+      ],
+      "eva_final_drives": [
+        0.19242682682224618,
+        0.4014254590375372,
+        0.009068371618936985,
+        0.1281337889948618,
+        0.2598771819074809,
+        0.009068371618936985
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 15,
+      "eva_crises": 17,
+      "correlation": 0.3155387431203964,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.1,
+      "init_novelty": 0.5,
+      "neo_final_drives": [
+        0.2283790638247035,
+        0.3171074997544832,
+        0.008821755478161176,
+        0.22128452018758604,
+        0.2155854052769049,
+        0.008821755478161176
+      ],
+      "eva_final_drives": [
+        0.19246210766087934,
+        0.4015479190913846,
+        0.00906876018201983,
+        0.12786981532583983,
+        0.25998263755785644,
+        0.00906876018201983
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 15,
+      "eva_crises": 17,
+      "correlation": 0.3154376726472353,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.1,
+      "init_novelty": 0.6,
+      "neo_final_drives": [
+        0.2283788899095123,
+        0.3171073397474633,
+        0.008821752398881085,
+        0.22128547582142444,
+        0.21558478972383768,
+        0.008821752398881085
+      ],
+      "eva_final_drives": [
+        0.19246335213514978,
+        0.4015496468062693,
+        0.009068765606440916,
+        0.12786633350842816,
+        0.25998313633727077,
+        0.009068765606440916
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 15,
+      "eva_crises": 17,
+      "correlation": 0.3154210298226941,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.2,
+      "init_novelty": 0.1,
+      "neo_final_drives": [
+        0.2160331791976509,
+        0.37777925777607557,
+        0.009098077579942306,
+        0.17535264320260271,
+        0.2126387646637861,
+        0.009098077579942306
+      ],
+      "eva_final_drives": [
+        0.17778367035845105,
+        0.404180173448818,
+        0.009133924240625885,
+        0.15252930084001243,
+        0.2472390068714667,
+        0.009133924240625885
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6550200801473871,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.2,
+      "init_novelty": 0.2,
+      "neo_final_drives": [
+        0.26694278928971976,
+        0.33242779561399294,
+        0.00896882652644509,
+        0.27494626463558985,
+        0.1077454974078072,
+        0.00896882652644509
+      ],
+      "eva_final_drives": [
+        0.14284230145190793,
+        0.4609814617644552,
+        0.009144341079256161,
+        0.02861309170486825,
+        0.3492744629202565,
+        0.009144341079256161
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 15,
+      "eva_crises": 14,
+      "correlation": 0.4660948420012433,
+      "neo_cluster": 1,
+      "eva_cluster": 1,
+      "neo_cluster_name": "neg-sta",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.2,
+      "init_novelty": 0.30000000000000004,
+      "neo_final_drives": [
+        0.26692000950643147,
+        0.3323791939451788,
+        0.008968646312103652,
+        0.27496902046113825,
+        0.10779448346304416,
+        0.008968646312103652
+      ],
+      "eva_final_drives": [
+        0.14293029298684393,
+        0.4608540917008452,
+        0.00914429175094873,
+        0.028627261142883165,
+        0.3492997706675301,
+        0.00914429175094873
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 15,
+      "eva_crises": 14,
+      "correlation": 0.46572952708503706,
+      "neo_cluster": 1,
+      "eva_cluster": 1,
+      "neo_cluster_name": "neg-sta",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.2,
+      "init_novelty": 0.4,
+      "neo_final_drives": [
+        0.2173039632220374,
+        0.32235320739463963,
+        0.00888547086613071,
+        0.2331784855226627,
+        0.20939340212839888,
+        0.00888547086613071
+      ],
+      "eva_final_drives": [
+        0.15656913904489944,
+        0.43418655393297806,
+        0.00911159345139981,
+        0.07862693994003063,
+        0.31239418017929227,
+        0.00911159345139981
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 15,
+      "eva_crises": 14,
+      "correlation": 0.4436002694980035,
+      "neo_cluster": 0,
+      "eva_cluster": 1,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.2,
+      "init_novelty": 0.5,
+      "neo_final_drives": [
+        0.2538397162301675,
+        0.3283955575335909,
+        0.008978322118521438,
+        0.2789847817285115,
+        0.12082330027068726,
+        0.008978322118521438
+      ],
+      "eva_final_drives": [
+        0.16737947176059903,
+        0.4198745717370693,
+        0.009059999448227066,
+        0.11018876702121469,
+        0.2844371905846628,
+        0.009059999448227066
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 16,
+      "eva_crises": 12,
+      "correlation": 0.6667755826281193,
+      "neo_cluster": 1,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-sta",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.2,
+      "init_novelty": 0.6,
+      "neo_final_drives": [
+        0.2538391919837744,
+        0.32839489476881634,
+        0.008978320148562402,
+        0.27898504417989295,
+        0.1208242287703915,
+        0.008978320148562402
+      ],
+      "eva_final_drives": [
+        0.16737866385321296,
+        0.4198747486706402,
+        0.009060000172265808,
+        0.11018790356398298,
+        0.2844386835676324,
+        0.009060000172265808
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 16,
+      "eva_crises": 12,
+      "correlation": 0.666760373037115,
+      "neo_cluster": 1,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-sta",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.30000000000000004,
+      "init_novelty": 0.1,
+      "neo_final_drives": [
+        0.21603227761829832,
+        0.3777748339803227,
+        0.009098075371145388,
+        0.17535124343315012,
+        0.21264549422593795,
+        0.009098075371145388
+      ],
+      "eva_final_drives": [
+        0.17778272480675622,
+        0.4041811580002147,
+        0.009133925318667212,
+        0.15253038446966072,
+        0.24723788208603398,
+        0.009133925318667212
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6550505966941621,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.30000000000000004,
+      "init_novelty": 0.2,
+      "neo_final_drives": [
+        0.2159909935134732,
+        0.37771469958420056,
+        0.009098161485305028,
+        0.17531280550487577,
+        0.21278517842684025,
+        0.009098161485305028
+      ],
+      "eva_final_drives": [
+        0.17777547333396176,
+        0.4041650569379999,
+        0.00913392553032144,
+        0.15253530681596458,
+        0.2472563118514309,
+        0.00913392553032144
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6550940200688218,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.30000000000000004,
+      "init_novelty": 0.30000000000000004,
+      "neo_final_drives": [
+        0.21598947126569787,
+        0.37771286863865045,
+        0.009098166740479335,
+        0.17531068069396158,
+        0.2127906459207314,
+        0.009098166740479335
+      ],
+      "eva_final_drives": [
+        0.17777635151921006,
+        0.4041701040114735,
+        0.009133927743363987,
+        0.15253361088529957,
+        0.24725207809728902,
+        0.009133927743363987
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.655166417567008,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.30000000000000004,
+      "init_novelty": 0.4,
+      "neo_final_drives": [
+        0.2173047806114832,
+        0.32235062938907166,
+        0.008885468227960951,
+        0.23317876351597908,
+        0.20939489002754422,
+        0.008885468227960951
+      ],
+      "eva_final_drives": [
+        0.1565674203608623,
+        0.4341908927189142,
+        0.009111601553490167,
+        0.07862180704407375,
+        0.3123966767691695,
+        0.009111601553490167
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 15,
+      "eva_crises": 14,
+      "correlation": 0.44358164003015177,
+      "neo_cluster": 0,
+      "eva_cluster": 1,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.30000000000000004,
+      "init_novelty": 0.5,
+      "neo_final_drives": [
+        0.25383867191828796,
+        0.32839305173364813,
+        0.008978317147760224,
+        0.278985310185751,
+        0.12082633186679247,
+        0.008978317147760224
+      ],
+      "eva_final_drives": [
+        0.16737754602142724,
+        0.41987792996300755,
+        0.009060003981164359,
+        0.11018521467955016,
+        0.28443930137368645,
+        0.009060003981164359
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 16,
+      "eva_crises": 12,
+      "correlation": 0.6667984820193033,
+      "neo_cluster": 1,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-sta",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.30000000000000004,
+      "init_novelty": 0.6,
+      "neo_final_drives": [
+        0.2283804181363418,
+        0.3171060242808737,
+        0.008821752642806876,
+        0.22128633787537172,
+        0.21558371442179897,
+        0.008821752642806876
+      ],
+      "eva_final_drives": [
+        0.19246570508285946,
+        0.40155468372907555,
+        0.009068772938601933,
+        0.12786221280339033,
+        0.2599798525074708,
+        0.009068772938601933
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 15,
+      "eva_crises": 17,
+      "correlation": 0.31544447201544595,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.4,
+      "init_novelty": 0.1,
+      "neo_final_drives": [
+        0.2159910684828616,
+        0.37771264685457767,
+        0.009098158399508964,
+        0.17531286641171148,
+        0.21278710145183133,
+        0.009098158399508964
+      ],
+      "eva_final_drives": [
+        0.17777549710466584,
+        0.4041632135306053,
+        0.009133923798737693,
+        0.1525373292629657,
+        0.24725611250428764,
+        0.009133923798737693
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6550806816433775,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.4,
+      "init_novelty": 0.2,
+      "neo_final_drives": [
+        0.21599014153522958,
+        0.37770972575965034,
+        0.009098160304652337,
+        0.17531194122737456,
+        0.21279187086844084,
+        0.009098160304652337
+      ],
+      "eva_final_drives": [
+        0.1777766533356086,
+        0.4041659250040911,
+        0.00913392418973107,
+        0.15253680636549471,
+        0.24725276691534337,
+        0.00913392418973107
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6551397705675357,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.4,
+      "init_novelty": 0.30000000000000004,
+      "neo_final_drives": [
+        0.2159866718974677,
+        0.3777004664163495,
+        0.00909815120537485,
+        0.17530625249501222,
+        0.21281030678042084,
+        0.00909815120537485
+      ],
+      "eva_final_drives": [
+        0.17772178003482347,
+        0.40412444537660264,
+        0.009133963900648134,
+        0.1525137891667441,
+        0.24737205762053338,
+        0.009133963900648134
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6551659478795879,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.4,
+      "init_novelty": 0.4,
+      "neo_final_drives": [
+        0.21598704127208826,
+        0.37770542117691525,
+        0.009098172432161995,
+        0.1753083849176982,
+        0.21280280776897417,
+        0.009098172432161995
+      ],
+      "eva_final_drives": [
+        0.1777808062726035,
+        0.40417651086834083,
+        0.0091339266315648,
+        0.1525332368144121,
+        0.24724159278151386,
+        0.0091339266315648
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6553147873984562,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.4,
+      "init_novelty": 0.5,
+      "neo_final_drives": [
+        0.22837507884784286,
+        0.3170685810822404,
+        0.008821675473980039,
+        0.2212851423083035,
+        0.2156278468136531,
+        0.008821675473980039
+      ],
+      "eva_final_drives": [
+        0.19243095234734245,
+        0.4014351244539103,
+        0.009068385077168865,
+        0.12812625852473838,
+        0.2598708945196712,
+        0.009068385077168865
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 15,
+      "eva_crises": 17,
+      "correlation": 0.31559128611045717,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.4,
+      "init_novelty": 0.6,
+      "neo_final_drives": [
+        0.22838123263955273,
+        0.3171053472181923,
+        0.008821752772719738,
+        0.2212875588409921,
+        0.21558235575582352,
+        0.008821752772719738
+      ],
+      "eva_final_drives": [
+        0.1924667316768523,
+        0.40155880697149865,
+        0.009068779505443162,
+        0.1278591266565335,
+        0.25997777568422914,
+        0.009068779505443162
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 15,
+      "eva_crises": 17,
+      "correlation": 0.3154701567267773,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.5,
+      "init_novelty": 0.1,
+      "neo_final_drives": [
+        0.21599040707400038,
+        0.3777096739997519,
+        0.009098157348894189,
+        0.17531181889040282,
+        0.21279178533805662,
+        0.009098157348894189
+      ],
+      "eva_final_drives": [
+        0.17777529961472685,
+        0.40416407336888766,
+        0.009133924082976325,
+        0.15253824259306006,
+        0.24725453625737273,
+        0.009133924082976325
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6551022974688171,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.5,
+      "init_novelty": 0.2,
+      "neo_final_drives": [
+        0.21598948607978036,
+        0.3777067154343647,
+        0.009098159611807105,
+        0.1753110488238791,
+        0.2127964304383617,
+        0.009098159611807105
+      ],
+      "eva_final_drives": [
+        0.17777662601993072,
+        0.4041665939279683,
+        0.009133924310277366,
+        0.1525375113903798,
+        0.24725142004116643,
+        0.009133924310277366
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6551659429003577,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.5,
+      "init_novelty": 0.30000000000000004,
+      "neo_final_drives": [
+        0.2159859870085454,
+        0.37769725840395973,
+        0.009098150911707114,
+        0.17530547771328797,
+        0.21281497505079272,
+        0.009098150911707114
+      ],
+      "eva_final_drives": [
+        0.1777224798190846,
+        0.40412539726961305,
+        0.00913396338661356,
+        0.15251459807306778,
+        0.24736959806500758,
+        0.00913396338661356
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6551993750870353,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.5,
+      "init_novelty": 0.4,
+      "neo_final_drives": [
+        0.21598625258763726,
+        0.37770188606265115,
+        0.009098172787260498,
+        0.1753076765206601,
+        0.21280783925453045,
+        0.009098172787260498
+      ],
+      "eva_final_drives": [
+        0.1777824056240964,
+        0.40417798517090575,
+        0.009133925443959695,
+        0.15253413723664802,
+        0.24723762108043054,
+        0.009133925443959695
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.65535917057739,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.5,
+      "init_novelty": 0.5,
+      "neo_final_drives": [
+        0.21598521390887052,
+        0.3776999095383706,
+        0.00909817674232736,
+        0.17530675977490764,
+        0.2128117632931964,
+        0.00909817674232736
+      ],
+      "eva_final_drives": [
+        0.1777840407142487,
+        0.40418112574656595,
+        0.009133925874292613,
+        0.15253291866765117,
+        0.24723406312294893,
+        0.009133925874292613
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6554237328758815,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.5,
+      "init_novelty": 0.6,
+      "neo_final_drives": [
+        0.21602635730646733,
+        0.37775595161216585,
+        0.009098087365853892,
+        0.17534546268860043,
+        0.21267605366105857,
+        0.009098087365853892
+      ],
+      "eva_final_drives": [
+        0.17779036882287436,
+        0.404197023126449,
+        0.009133926868233793,
+        0.1525280691503396,
+        0.2472166851638695,
+        0.009133926868233793
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6554313228900859,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.6,
+      "init_novelty": 0.1,
+      "neo_final_drives": [
+        0.21598991679413562,
+        0.37770916504741614,
+        0.00909815712377606,
+        0.17531059425179404,
+        0.21279400965910197,
+        0.00909815712377606
+      ],
+      "eva_final_drives": [
+        0.17777335842323908,
+        0.40416482596852404,
+        0.00913392657859536,
+        0.15253798899814,
+        0.24725597345290626,
+        0.00913392657859536
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6551009608961565,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.6,
+      "init_novelty": 0.2,
+      "neo_final_drives": [
+        0.21598904643482386,
+        0.3777064276226438,
+        0.009098159548425473,
+        0.17530993219671495,
+        0.2127982746489665,
+        0.009098159548425473
+      ],
+      "eva_final_drives": [
+        0.1777747289544414,
+        0.40416722904750324,
+        0.009133926758402935,
+        0.1525371491365034,
+        0.2472530393447462,
+        0.009133926758402935
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6551640671710212,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.6,
+      "init_novelty": 0.30000000000000004,
+      "neo_final_drives": [
+        0.2159855919976461,
+        0.37769716594911223,
+        0.009098150971795067,
+        0.17530446176915615,
+        0.21281647834049536,
+        0.009098150971795067
+      ],
+      "eva_final_drives": [
+        0.17772075656206343,
+        0.40412604897218674,
+        0.009133965675803523,
+        0.15251423570931058,
+        0.24737102740483222,
+        0.009133965675803523
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6551970284941487,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.6,
+      "init_novelty": 0.4,
+      "neo_final_drives": [
+        0.21598588863715684,
+        0.37770193494446697,
+        0.009098172951508882,
+        0.17530673554508078,
+        0.21280909497027764,
+        0.009098172951508882
+      ],
+      "eva_final_drives": [
+        0.17778082307739373,
+        0.4041786519843986,
+        0.009133927600598443,
+        0.15253377586609052,
+        0.24723889387092018,
+        0.009133927600598443
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6553564807529167,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.6,
+      "init_novelty": 0.5,
+      "neo_final_drives": [
+        0.21598488126235574,
+        0.37770004183229167,
+        0.009098176938643149,
+        0.1753058879308251,
+        0.2128128350972413,
+        0.009098176938643149
+      ],
+      "eva_final_drives": [
+        0.17778256808265816,
+        0.4041817728990101,
+        0.009133927912850656,
+        0.15253256428183007,
+        0.24723523891080054,
+        0.009133927912850656
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.655420963884678,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    },
+    {
+      "init_stability": 0.6,
+      "init_novelty": 0.6,
+      "neo_final_drives": [
+        0.21602604948496051,
+        0.3777561368971289,
+        0.009098087572315885,
+        0.17534466230817883,
+        0.21267697616509987,
+        0.009098087572315885
+      ],
+      "eva_final_drives": [
+        0.17778900724036012,
+        0.40419768100895015,
+        0.00913392879418637,
+        0.15252771745076393,
+        0.24721773671155312,
+        0.00913392879418637
+      ],
+      "neo_dominant": "neg_surprise",
+      "eva_dominant": "neg_surprise",
+      "neo_crises": 14,
+      "eva_crises": 15,
+      "correlation": 0.6554284675316959,
+      "neo_cluster": 0,
+      "eva_cluster": 0,
+      "neo_cluster_name": "neg-ent",
+      "eva_cluster_name": "neg-int"
+    }
+  ]
+}

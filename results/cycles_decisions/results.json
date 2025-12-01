@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-12-01T04:30:17.113117",
+  "parameters": {
+    "T": 1000,
+    "n_seeds": 3
+  },
+  "hypotheses": {
+    "H1": {
+      "description": "\u03c6 alto + identidad baja \u2192 m\u00e1s cambio",
+      "confirmed": false,
+      "details": [
+        {
+          "ratio": 0.0,
+          "supported": false
+        },
+        {
+          "ratio": 0.0,
+          "supported": false
+        },
+        {
+          "ratio": 0.0,
+          "supported": false
+        }
+      ]
+    },
+    "H2": {
+      "description": "identidad alta + \u03c6 bajo \u2192 consolidaci\u00f3n",
+      "confirmed": false,
+      "details": [
+        {
+          "ratio": 0,
+          "supported": false
+        },
+        {
+          "ratio": 0,
+          "supported": false
+        },
+        {
+          "ratio": 0,
+          "supported": false
+        }
+      ]
+    },
+    "H3": {
+      "description": "crisis predicen cambios de drive",
+      "confirmed": false,
+      "details": [
+        {
+          "ratio": 0.8641614346982875,
+          "supported": 

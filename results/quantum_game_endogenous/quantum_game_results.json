@@ -1,0 +1,53 @@
+{
+  "timestamp": "2025-12-01T04:47:51.681333",
+  "experiment_2_agents": {
+    "num_rounds": 500,
+    "final_entanglement": 0.0,
+    "mean_entanglement": 0.0,
+    "mean_system_payoff": 6.0,
+    "mean_fairness": 0.9562499999999998,
+    "crisis_rate_neo": 0.0,
+    "crisis_rate_eva": 0.0,
+    "nash_approximation": {
+      "NEO": {
+        "exploration": 0.19683710817245262,
+        "integration": 0.20033458727934708,
+        "attachment": 0.1985164669988318,
+        "momentum": 0.20425101978377636,
+        "homeostasis": 0.20006081776559212
+      },
+      "EVA": {
+        "exploration": 0.19351395778131839,
+        "integration": 0.20079472173082644,
+        "attachment": 0.20548416349853219,
+        "momentum": 0.1988498032181986,
+        "homeostasis": 0.20135735377112446
+      }
+    }
+  },
+  "experiment_3_agents": {
+    "num_rounds": 500,
+    "final_entanglements": {
+      "NEO-EVA": 0.0,
+      "NEO-ALEX": 0.0,
+      "EVA-ALEX": 0.0
+    },
+    "mean_entanglements": {
+      "NEO-EVA": 0.0,
+      "NEO-ALEX": 0.0,
+      "EVA-ALEX": 0.0
+    },
+    "mean_fairness": 0.9283333333333335,
+    "mean_inequality": 0.07166666666666666,
+    "strongest_bond": "NEO-EVA",
+    "weakest_bond": "NEO-EVA",
+    "coalition_detected": false
+  },
+  "experiment_perturbation": {
+    "num_rounds": 500,
+    "num_perturbations": 4,
+    "mean_recovery_time": 0.0,
+    "recovery_rate": 1.0,
+    "final_entanglement": 0.3099484982727134
+  }
+}

@@ -1,0 +1,178 @@
+% A_ANEXO_DATOS_EXPERIMENTALES.tex - Datos Experimentales NEOSYNT
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a-1b]{pdfx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{setspace}
+\setstretch{1.2}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries ANEXO A}\\[0.5cm]
+{\Large DATOS EXPERIMENTALES}\\[1cm]
+{\large Dispositivo de control autónomo multi-agente NEOSYNT}\\[2cm]
+\end{center}
+
+\section{Protocolo de Pruebas}
+
+\subsection{Configuración del Sistema}
+
+\begin{table}[H]
+\centering
+\caption{Configuración hardware y software de pruebas}
+\begin{tabular}{ll}
+\toprule
+\textbf{Parámetro} & \textbf{Valor} \\
+\midrule
+Procesador & Intel Core i7 / AMD equivalente \\
+Memoria RAM & 8 GB \\
+Sistema Operativo & Linux (kernel 5.15+) \\
+Lenguaje de implementación & Python 3.10+ \\
+Número de agentes & 2-3 (NEO, EVA, ALEX) \\
+Ciclos por experimento & 1500 \\
+Repeticiones (semillas) & 10 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Condiciones de Prueba}
+
+\begin{table}[H]
+\centering
+\caption{Condiciones experimentales}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Condición} & \textbf{Ruido (varianza)} & \textbf{Carga (factor)} \\
+\midrule
+Normal & 0.01 & 1.0x \\
+Media & 0.05 & 2.0x \\
+Alta & 0.10 & 5.0x \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Resultados Experimentales}
+
+\subsection{Comparativa Principal: NEOSYNT vs Baseline}
+
+\begin{table}[H]
+\centering
+\caption{Resultados principales (n=10 semillas, 1500 ciclos)}
+\begin{tabular}{lcccr}
+\toprule
+\textbf{Métrica} & \textbf{Baseline} & \textbf{NEOSYNT} & \textbf{Mejora} & \textbf{p-valor} \\
+\midrule
+Tasa de colapsos (\%) & $23.4 \pm 4.2$ & $2.97 \pm 0.8$ & -87.3\% & $<0.001$ \\
+Latencia mediana (ms) & $145 \pm 28$ & $79 \pm 12$ & -45.5\% & $<0.001$ \\
+Índice de estabilidad & $0.52 \pm 0.11$ & $0.89 \pm 0.04$ & +71.2\% & $<0.001$ \\
+Robustez (CV error) & $0.38 \pm 0.08$ & $0.12 \pm 0.03$ & -68.4\% & $<0.001$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Rendimiento bajo Carga Variable}
+
+\begin{table}[H]
+\centering
+\caption{Rendimiento de NEOSYNT bajo diferentes condiciones de carga}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Carga} & \textbf{Colapsos (\%)} & \textbf{Latencia (ms)} & \textbf{Estabilidad} & \textbf{CPU (\%)} \\
+\midrule
+Normal (1x) & $2.1 \pm 0.5$ & $72 \pm 8$ & $0.91 \pm 0.03$ & $12 \pm 3$ \\
+Alta (2x) & $3.8 \pm 0.9$ & $89 \pm 15$ & $0.87 \pm 0.04$ & $24 \pm 5$ \\
+Pico (5x) & $5.2 \pm 1.2$ & $124 \pm 22$ & $0.82 \pm 0.05$ & $45 \pm 8$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Robustez ante Ruido}
+
+\begin{table}[H]
+\centering
+\caption{Coeficiente de variación del error bajo diferentes niveles de ruido}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Ruido (varianza)} & \textbf{Baseline CV} & \textbf{NEOSYNT CV} & \textbf{Reducción} \\
+\midrule
+0.01 & 0.15 & 0.08 & -46.7\% \\
+0.03 & 0.25 & 0.10 & -60.0\% \\
+0.05 & 0.35 & 0.11 & -68.6\% \\
+0.07 & 0.42 & 0.13 & -69.0\% \\
+0.10 & 0.55 & 0.15 & -72.7\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Efectividad del Gate de Consentimiento Bilateral}
+
+\begin{table}[H]
+\centering
+\caption{Métricas de consentimiento bilateral}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Métrica} & \textbf{Sin Gate} & \textbf{Con Gate (140)} \\
+\midrule
+Interacciones exitosas (\%) & 67.3 & 94.2 \\
+Colisiones/bloqueos (\%) & 15.8 & 1.2 \\
+Tiempo medio de negociación (ms) & 89 & 34 \\
+Consistencia de decisiones & 0.58 & 0.92 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Métricas de Integración (φ)}
+
+\begin{table}[H]
+\centering
+\caption{Integración de información bajo diferentes condiciones}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Fase} & \textbf{φ medio} & \textbf{Identidad media} \\
+\midrule
+Exploración & $0.35 \pm 0.12$ & $0.42 \pm 0.15$ \\
+Transición & $0.52 \pm 0.18$ & $0.58 \pm 0.12$ \\
+Consolidación & $0.78 \pm 0.08$ & $0.85 \pm 0.06$ \\
+Flow & $0.65 \pm 0.10$ & $0.72 \pm 0.09$ \\
+Crisis & $0.18 \pm 0.15$ & $0.25 \pm 0.18$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Gráficas de Resultados}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../figuras/fig6_curvas_comparativas.pdf}
+\caption{Comparativa de rendimiento: NEOSYNT vs Baseline}
+\end{figure}
+
+\section{Conclusiones Experimentales}
+
+Los datos experimentales demuestran que el dispositivo NEOSYNT proporciona:
+
+\begin{enumerate}
+    \item \textbf{Reducción significativa de colapsos}: 87.3\% menos colapsos que la configuración baseline ($p < 0.001$).
+
+    \item \textbf{Mejora de latencia}: 45.5\% de reducción en latencia mediana de coordinación.
+
+    \item \textbf{Aumento de estabilidad}: Índice de estabilidad de 0.89 vs 0.52 del baseline (+71.2\%).
+
+    \item \textbf{Robustez ante ruido}: El CV del error se mantiene por debajo de 0.15 incluso con varianza de ruido de 0.10.
+
+    \item \textbf{Escalabilidad controlada}: Degradación gradual bajo carga (5.2\% colapsos en carga 5x vs 23.4\% del baseline en carga normal).
+\end{enumerate}
+
+Estos resultados validan la eficacia técnica de la combinación estructural de los elementos (100)-(170) del dispositivo NEOSYNT.
+
+\end{document}

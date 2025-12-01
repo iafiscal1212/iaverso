@@ -1,0 +1,126 @@
+% 02_REIVINDICACIONES_MU.tex - Reivindicaciones para Modelo de Utilidad OEPM
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a-1b]{pdfx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\setstretch{1.2}
+\usepackage{enumitem}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{NEOSYNT - Modelo de Utilidad}
+\lhead{Reivindicaciones}
+\rfoot{Página \thepage}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries REIVINDICACIONES}\\[1cm]
+{\large Dispositivo de control autónomo multi-agente\\
+con bus local y núcleo endógeno de seguridad (NEOSYNT)}\\[2cm]
+\end{center}
+
+\section*{Reivindicaciones}
+
+\begin{enumerate}[label=\textbf{\arabic*.}, leftmargin=*, labelwidth=2em]
+
+% ============================================================================
+% REIVINDICACIÓN 1 - INDEPENDIENTE (PRINCIPAL)
+% ============================================================================
+\item \textbf{Dispositivo de control autónomo multi-agente}, que comprende:
+
+\begin{enumerate}[label=(\alph*)]
+    \item un bus local (100) configurado como socket UNIX para intercambiar resúmenes estadísticos entre agentes;
+
+    \item buffers circulares (110) por agente para almacenamiento temporal de estados y mensajes;
+
+    \item un módulo de validación (120) con checksum y registro inmutable de mensajes;
+
+    \item un núcleo autónomo (130) configurado para mantener y actualizar, por agente, un vector de intención $\mathbf{I} = [S, N, C]$ restringido al simplex, y modular la interacción mediante una puerta de consentimiento bilateral (140);
+
+    \item un watchdog de recursos (150) con umbrales derivados endógenamente de estadísticas históricas;
+
+    \item un sandbox de evolución de código (160) condicionado a umbrales endógenos de estabilidad;
+\end{enumerate}
+
+en donde la configuración (a)-(f) reduce colapsos del sistema y aumenta robustez frente a ruido respecto a dispositivos sin dicha combinación.
+
+% ============================================================================
+% REIVINDICACIONES DEPENDIENTES
+% ============================================================================
+
+\item El dispositivo de la reivindicación 1, en donde el bus local (100) es un socket UNIX de tipo datagrama (SOCK\_DGRAM) con tamaño máximo de mensaje preestablecido.
+
+\item El dispositivo de la reivindicación 1 o 2, en donde los buffers circulares (110) implementan descarte FIFO con longitud máxima (maxlen) configurable derivada de $\lceil \sqrt{t+1} \times k \rceil$, donde $t$ es el tiempo de operación y $k$ un factor estructural.
+
+\item El dispositivo de cualquiera de las reivindicaciones anteriores, en donde el módulo de validación (120) aplica:
+\begin{itemize}
+    \item checksum SHA-256 parcial sobre los primeros bytes de cada mensaje;
+    \item sello temporal de alta resolución; y
+    \item hash encadenado en el registro inmutable, donde cada entrada incluye el hash de la entrada anterior.
+\end{itemize}
+
+\item El dispositivo de cualquiera de las reivindicaciones anteriores, en donde el núcleo autónomo (130) actualiza el vector de intención $\mathbf{I}$ mediante mirror-descent en espacio logit con proyección softmax al simplex.
+
+\item El dispositivo de cualquiera de las reivindicaciones anteriores, en donde el núcleo autónomo (130) inyecta ruido Ornstein-Uhlenbeck con parámetros $(\theta, \sigma, \tau)$ estimados endógenamente a partir de:
+\begin{itemize}
+    \item $\theta$: autocorrelación de los residuos del sistema;
+    \item $\sigma$: varianza de los residuos;
+    \item $\tau = 1/\theta$: tiempo de correlación.
+\end{itemize}
+
+\item El dispositivo de cualquiera de las reivindicaciones anteriores, en donde la puerta de consentimiento bilateral (140) integra las siguientes variables para determinar el consentimiento de cada agente:
+\begin{itemize}
+    \item urgencia ($u$), derivada de la componente de conexión del vector de intención;
+    \item primer autovalor ($\lambda_1$) del análisis de componentes principales del historial;
+    \item confianza (conf), basada en historial de interacciones exitosas;
+    \item coeficiente de variación (CV) del error de predicción;
+\end{itemize}
+permitiendo una interacción solo cuando ambos agentes consienten simultáneamente.
+
+\item El dispositivo de cualquiera de las reivindicaciones anteriores, en donde el watchdog de recursos (150) aplica umbrales dinámicos derivados de:
+\begin{equation*}
+\text{threshold}_i(t) = \text{percentile}_{95}(\text{history}_i[t-w:t])
+\end{equation*}
+donde $w$ es una ventana temporal endógena para cada recurso monitorizado (CPU, RAM, I/O).
+
+\item El dispositivo de cualquiera de las reivindicaciones anteriores, en donde el sandbox de evolución de código (160) solo se activa cuando:
+\begin{equation*}
+S > 0.6 \quad \land \quad \text{stability\_index} > 0.6
+\end{equation*}
+siendo $S$ la componente de estabilidad del vector de intención y stability\_index un índice derivado de la varianza del estado interno.
+
+\item El dispositivo de cualquiera de las reivindicaciones anteriores, que comprende además un planificador (170) con horizonte adaptativo:
+\begin{equation*}
+h = \lceil \log_2(t+1) \rceil
+\end{equation*}
+para gestión de colas y caché, donde $t$ es el tiempo de operación.
+
+\item El dispositivo de cualquiera de las reivindicaciones anteriores, en donde los mensajes intercambiados por el bus local (100) contienen únicamente resúmenes estadísticos (media, varianza, percentiles, hash de estado) y no vectores completos de estado interno, limitando así la exposición de información y el consumo de ancho de banda.
+
+\item Dispositivo según cualquiera de las reivindicaciones anteriores, caracterizado por proporcionar:
+\begin{itemize}
+    \item una reducción $\geq 85\%$ de colapsos del sistema; y
+    \item una disminución $\geq 40\%$ de latencia de coordinación;
+\end{itemize}
+frente a una configuración nula (sin los elementos (100)-(170)) en pruebas estandarizadas con al menos 1000 ciclos de operación y condiciones de ruido controladas.
+
+\end{enumerate}
+
+\vfill
+
+\begin{center}
+\rule{0.5\textwidth}{0.4pt}\\[0.5cm]
+{\small Fin de las reivindicaciones}
+\end{center}
+
+\end{document}

@@ -1,0 +1,81 @@
+{
+  "phase": "G2-Dual",
+  "name": "Dual Agent Grounding",
+  "timestamp": "2025-12-01T01:59:44.162046",
+  "comparison": {
+    "ready": true,
+    "t": 500,
+    "NEO": {
+      "GI_mean": 1.124378222403004,
+      "G_pred_mean": 0.6223035893562955,
+      "G_sym_mean": 0.1783943066431395,
+      "G_val_mean": 0.32368032640356903,
+      "pred_error_mean": 0.18183165662478698
+    },
+    "EVA": {
+      "GI_mean": 1.1385768507959997,
+      "G_pred_mean": 0.6611007695681651,
+      "G_sym_mean": 0.185712074729415,
+      "G_val_mean": 0.2917640064984197,
+      "pred_error_mean": 0.2187841914067282
+    },
+    "more_grounded": "EVA",
+    "divergence": 0.014198628392995793
+  },
+  "test_NEO": {
+    "agent": "NEO",
+    "tested": true,
+    "certified": "False",
+    "tests": {
+      "predictive": {
+        "MSE_real": 0.06587544155324354,
+        "MSE_null_mean": 0.06587544155324354,
+        "passed": "False"
+      },
+      "symbolic": {
+        "MI_real": 0.015843693339669507,
+        "p95_MI_null": 0.010145200267685527,
+        "passed": "True"
+      },
+      "value": {
+        "corr_real": 0.10313221404725788,
+        "p95_corr_null": 0.11036019372421844,
+        "passed": "False"
+      }
+    },
+    "n_passed": "1"
+  },
+  "test_EVA": {
+    "agent": "EVA",
+    "tested": true,
+    "certified": "False",
+    "tests": {
+      "predictive": {
+        "MSE_real": 0.09105934822682908,
+        "MSE_null_mean": 0.09105934822682908,
+        "passed": "False"
+      },
+      "symbolic": {
+        "MI_real": 0.024355943740386077,
+        "p95_MI_null": 0.008433379309493876,
+        "passed": "True"
+      },
+      "value": {
+        "corr_real": 0.014865317270457217,
+        "p95_corr_null": 0.06742756777406232,
+        "passed": "False"
+      }
+    },
+    "n_passed": "1"
+  },
+  "criteria": {
+    "gi_computed": true,
+    "neo_more_grounded": false,
+    "neo_certified": "False",
+    "differentiated": false,
+    "both_functional": true
+  },
+  "go_status": "NO-GO",
+  "passed_criteria": "2",
+  "total_criteria": 5
+}

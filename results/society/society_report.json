@@ -1,0 +1,111 @@
+{
+  "total_steps": 1500,
+  "agents": {
+    "NEO": {
+      "final_z": [
+        0.2420987795348269,
+        0.39936405493837335,
+        0.0957876809670014,
+        0.016420805483812178,
+        0.11741874692093632,
+        0.12890993215504992
+      ],
+      "identity_strength": 0.4983724782388711,
+      "crisis_rate": 0.416,
+      "role": "independent",
+      "centrality": 0.15390086836158545,
+      "influence": 0.034098467922911435
+    },
+    "EVA": {
+      "final_z": [
+        0.16024438886580283,
+        0.43279055934195865,
+        0.10691484074199609,
+        0.0751569106429325,
+        0.07373054201082381,
+        0.15116275839648607
+      ],
+      "identity_strength": 0.5577238043555244,
+      "crisis_rate": 0.406,
+      "role": "independent",
+      "centrality": 0.20894698996992822,
+      "influence": 0.052379473315670166
+    },
+    "ALEX": {
+      "final_z": [
+        0.008772234337963675,
+        0.4176062777067408,
+        0.20150065462090314,
+        0.23666633498935932,
+        0.11453251731669686,
+        0.020921981028336197
+      ],
+      "identity_strength": 0.5241502149121565,
+      "crisis_rate": 0.4,
+      "role": "independent",
+      "centrality": 0.1340894190153446,
+      "influence": 0.04781109087649812
+    },
+    "ADAM": {
+      "final_z": [
+        0.22442864277958657,
+        0.43940261416326837,
+        0.05424348547915436,
+        0.10723515342626033,
+        0.08275330176157618,
+        0.09193680239015421
+      ],
+      "identity_strength": 0.41799553812544754,
+      "crisis_rate": 0.4046666666666667,
+      "role": "independent",
+      "centrality": 0.19667336039972927,
+      "influence": 0.036921194542319576
+    }
+  },
+  "relations": {
+    "ADAM-ALEX": {
+      "correlation": 0.11091385119195761,
+      "influence_forward": 0.047993617582834124,
+      "influence_backward": 0.05923641060435934
+    },
+    "ADAM-EVA": {
+      "correlation": 0.20159830173690432,
+      "influence_forward": 0.006604030594259315,
+      "influence_backward": 0.026652745239334728
+    },
+    "ADAM-NEO": {
+      "correlation": 0.27750792827032583,
+      "influence_forward": 0.05616593544986529,
+      "influence_backward": 0.045294073674942065
+    },
+    "ALEX-EVA": {
+      "correlation": 0.26620119860626296,
+      "influence_forward": 0.052356110649049055,
+      "influence_backward": 0.059999710335971956
+    },
+    "ALEX-NEO": {
+      "correlation": -0.02515320724781322,
+      "influence_forward": 0.031840751376085955,
+      "influence_backward": 0.012571843704950264
+    },
+    "EVA-NEO": {
+      "correlation": 0.15904146956661733,
+      "influence_forward": 0.07048596437170383,
+      "influence_backward": 0.044429486388841984
+    }
+  },
+  "coalitions": [],
+  "hierarchy": [
+    "EVA",
+    "ALEX",
+    "ADAM",
+    "NEO"
+  ],
+  "social_metrics": {
+    "mean_correlation": 0.16501825702070913,
+    "max_correlation": 0.27750792827032583,
+    "min_correlation": -0.02515320724781322,
+    "total_coalitions_formed": 0,
+    "hierarchy_stability": 0.0
+  }
+}

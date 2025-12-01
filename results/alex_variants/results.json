@@ -1,0 +1,161 @@
+{
+  "timestamp": "2025-12-01T04:11:21.422544",
+  "results": [
+    {
+      "label": "dyad_baseline",
+      "total_crises": 40,
+      "corr_neo_eva": -0.22998392987486513
+    },
+    {
+      "label": "alex_dominant",
+      "neo_crises": 20,
+      "eva_crises": 22,
+      "alex_crises": 12,
+      "corr_neo_eva": -0.6004457450981335,
+      "corr_neo_alex": -0.142012703614408,
+      "corr_eva_alex": -0.12534396394495778,
+      "coalition_counts": {
+        "NEO-EVA": 244,
+        "NEO-ALEX": 308,
+        "EVA-ALEX": 248
+      },
+      "dominant_coalition": "NEO-ALEX",
+      "final_attachments": {
+        "NEO->EVA": 1.0,
+        "NEO->ALEX": 1.0,
+        "EVA->NEO": 1.0,
+        "EVA->ALEX": 1.0,
+        "ALEX->NEO": 1.0,
+        "ALEX->EVA": 1.0
+      },
+      "mean_psi": 0.8101696586790468
+    },
+    {
+      "label": "alex_late",
+      "neo_crises": 29,
+      "eva_crises": 28,
+      "alex_crises": 9,
+      "corr_neo_eva": 0.7864375870910638,
+      "corr_neo_alex": 0.11130158114000994,
+      "corr_eva_alex": 0.29134157332791594,
+      "coalition_counts": {
+        "NEO-EVA": 657,
+        "NEO-ALEX": 140,
+        "EVA-ALEX": 203
+      },
+      "dominant_coalition": "NEO-EVA",
+      "final_attachments": {
+        "NEO->EVA": 1.0,
+        "NEO->ALEX": 1.0,
+        "EVA->NEO": 1.0,
+        "EVA->ALEX": 1.0,
+        "ALEX->NEO": 1.0,
+        "ALEX->EVA": 1.0
+      },
+      "mean_psi": 0.8120051858986074,
+      "corr_before_alex": 0.17581504555932,
+      "corr_after_alex": 0.4098476250372721,
+      "disruption": -0.2340325794779521
+    },
+    {
+      "label": "alex_stabilizer",
+      "neo_crises": 20,
+      "eva_crises": 21,
+      "alex_crises": 13,
+      "corr_neo_eva": -0.6013781620864901,
+      "corr_neo_alex": -0.1428831300359897,
+      "corr_eva_alex": -0.12388965109294739,
+      "coalition_counts": {
+        "NEO-EVA": 245,
+        "NEO-ALEX": 304,
+        "EVA-ALEX": 251
+      },
+      "dominant_coalition": "NEO-ALEX",
+      "final_attachments": {
+        "NEO->EVA": 1.0,
+        "NEO->ALEX": 1.0,
+        "EVA->NEO": 1.0,
+        "EVA->ALEX": 1.0,
+        "ALEX->NEO": 1.0,
+        "ALEX->EVA": 1.0
+      },
+      "mean_psi": 0.8097208287171389
+    },
+    {
+      "label": "alex_volatile",
+      "neo_crises": 17,
+      "eva_crises": 18,
+      "alex_crises": 12,
+      "corr_neo_eva": 0.07152785628843991,
+      "corr_neo_alex": -0.3153611595072292,
+      "corr_eva_alex": 0.1131180033025322,
+      "coalition_counts": {
+        "NEO-EVA": 255,
+        "NEO-ALEX": 292,
+        "EVA-ALEX": 253
+      },
+      "dominant_coalition": "NEO-ALEX",
+      "final_attachments": {
+        "NEO->EVA": 1.0,
+        "NEO->ALEX": 1.0,
+        "EVA->NEO": 1.0,
+        "EVA->ALEX": 1.0,
+        "ALEX->NEO": 1.0,
+        "ALEX->EVA": 1.0
+      },
+      "mean_psi": 0.8149665091354259
+    },
+    {
+      "label": "alex_death",
+      "neo_crises": 22,
+      "eva_crises": 30,
+      "alex_crises": 0,
+      "corr_neo_eva": 0.5610073440477674,
+      "corr_neo_alex": 0,
+      "corr_eva_alex": 0,
+      "coalition_counts": {
+        "NEO-EVA": 687,
+        "NEO-ALEX": 168,
+        "EVA-ALEX": 145
+      },
+      "dominant_coalition": "NEO-EVA",
+      "final_attachments": {
+        "NEO->EVA": 1.0,
+        "NEO->ALEX": 0,
+        "EVA->NEO": 1.0,
+        "EVA->ALEX": 0,
+        "ALEX->NEO": 0,
+        "ALEX->EVA": 0
+      },
+      "mean_psi": 0.8182434181937558,
+      "corr_with_alex": 0.22479200331101012,
+      "corr_without_alex": 0.21947611239618786,
+      "recovery": -0.005315890914822263
+    },
+    {
+      "label": "alex_outsider",
+      "neo_crises": 29,
+      "eva_crises": 16,
+      "alex_crises": 22,
+      "corr_neo_eva": -0.4548309088719906,
+      "corr_neo_alex": -0.48961892767715665,
+      "corr_eva_alex": 0.2778080602995566,
+      "coalition_counts": {
+        "NEO-EVA": 276,
+        "NEO-ALEX": 250,
+        "EVA-ALEX": 274
+      },
+      "dominant_coalition": "NEO-EVA",
+      "final_attachments": {
+        "NEO->EVA": 1.0,
+        "NEO->ALEX": 1.0,
+        "EVA->NEO": 1.0,
+        "EVA->ALEX": 1.0,
+        "ALEX->NEO": 1.0,
+        "ALEX->EVA": 1.0
+      },
+      "mean_psi": 0.7966744001387596,
+      "alex_integrated": true
+    }
+  ]
+}

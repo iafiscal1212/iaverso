@@ -1,0 +1,58 @@
+{
+  "timestamp": "2025-12-01T03:03:07.081061",
+  "T": 2000,
+  "seed": 42,
+  "results": {
+    "10": {
+      "window_size": 10,
+      "neo_period": 41.666666666666664,
+      "eva_period": 55.55555555555555,
+      "neo_interval": 39.89795918367347,
+      "eva_interval": 29.545454545454547,
+      "neo_crises": 50,
+      "eva_crises": 67,
+      "predicted_period": 20
+    },
+    "15": {
+      "window_size": 15,
+      "neo_period": 41.666666666666664,
+      "eva_period": 42.5531914893617,
+      "neo_interval": 43.84090909090909,
+      "eva_interval": 41.65217391304348,
+      "neo_crises": 45,
+      "eva_crises": 47,
+      "predicted_period": 30
+    },
+    "20": {
+      "window_size": 20,
+      "neo_period": 41.666666666666664,
+      "eva_period": 40.816326530612244,
+      "neo_interval": 98.77777777777777,
+      "eva_interval": 94.26315789473684,
+      "neo_crises": 19,
+      "eva_crises": 20,
+      "predicted_period": 40
+    },
+    "30": {
+      "window_size": 30,
+      "neo_period": 55.55555555555555,
+      "eva_period": 55.55555555555555,
+      "neo_interval": 110.875,
+      "eva_interval": 107.25,
+      "neo_crises": 17,
+      "eva_crises": 17,
+      "predicted_period": 60
+    },
+    "40": {
+      "window_size": 40,
+      "neo_period": 62.5,
+      "eva_period": 71.42857142857143,
+      "neo_interval": 263.14285714285717,
+      "eva_interval": 235.875,
+      "neo_crises": 8,
+      "eva_crises": 9,
+      "predicted_period": 80
+    }
+  },
+  "conclusion": "period_partially_depends"
+}

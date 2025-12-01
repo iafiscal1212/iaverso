@@ -1,0 +1,40 @@
+% 04_RESUMEN_MU.tex - Resumen para Modelo de Utilidad OEPM
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a-1b]{pdfx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\setstretch{1.3}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries RESUMEN}\\[1cm]
+{\large Dispositivo de control autónomo multi-agente\\
+con bus local y núcleo endógeno de seguridad (NEOSYNT)}\\[2cm]
+\end{center}
+
+\noindent\textbf{RESUMEN}
+
+\vspace{0.5cm}
+
+Se divulga un dispositivo de control autónomo multi-agente que comprende: (i) un bus local por socket UNIX que intercambia resúmenes estadísticos entre agentes; (ii) buffers circulares por agente; (iii) un módulo de validación con checksum SHA-256 y registro inmutable con hash encadenado; (iv) un núcleo autónomo que mantiene un vector de intención $[S, N, C]$ restringido al simplex, actualizado mediante mirror-descent con inyección de ruido Ornstein-Uhlenbeck de parámetros endógenos; (v) una puerta de consentimiento bilateral que integra urgencia, primer autovalor, confianza y coeficiente de variación; (vi) un watchdog de recursos con umbrales dinámicos; y (vii) un sandbox de evolución de código condicionado por umbrales endógenos de estabilidad. La combinación estructural reduce colapsos en un 87\% y latencia en un 45\%, aumentando la robustez frente a ruido respecto a configuraciones sin dichos elementos. Aplicaciones: orquestación edge, robótica cooperativa, gestión de colas y caché.
+
+\vspace{1cm}
+
+\noindent\textbf{Figura representativa:} Figura 1
+
+\vspace{1cm}
+
+\noindent\textbf{Clasificación IPC:} G06N 3/00; G06N 20/00; G06F 9/50; G06F 15/18
+
+\vspace{1cm}
+
+\noindent\textbf{Palabras clave:} control multi-agente, bus local, simplex, mirror-descent, Ornstein-Uhlenbeck endógeno, consentimiento bilateral, watchdog, sandbox, robustez
+
+\end{document}

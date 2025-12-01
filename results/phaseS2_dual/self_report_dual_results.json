@@ -1,0 +1,44 @@
+{
+  "phase": "S2-Dual",
+  "name": "Dual Self-Report Test",
+  "timestamp": "2025-12-01T02:01:53.698247",
+  "NEO_result": {
+    "AUC_ext": 1.0,
+    "AUC_mix": 1.0,
+    "delta_AUC": 0.0,
+    "p95_null": 0.0,
+    "passed": false,
+    "interpretation": "El self-report de NEO no aporta informaci\u00f3n adicional"
+  },
+  "EVA_result": {
+    "AUC_ext": 1.0,
+    "AUC_mix": 1.0,
+    "delta_AUC": 0.0,
+    "p95_null": 0.0,
+    "passed": false,
+    "interpretation": "El self-report de EVA no aporta informaci\u00f3n adicional"
+  },
+  "comparison": {
+    "ready": true,
+    "NEO": {
+      "report_variability": 0.018734476451450648,
+      "mode_correlation": 0.10472718151342779,
+      "n_reports": 400
+    },
+    "EVA": {
+      "report_variability": 0.027654091705745325,
+      "mode_correlation": NaN,
+      "n_reports": 400
+    }
+  },
+  "criteria": {
+    "reports_generated": true,
+    "neo_subjectivity": false,
+    "eva_subjectivity": false,
+    "at_least_one_passes": false,
+    "differentiated_reports": false
+  },
+  "go_status": "NO-GO",
+  "passed_criteria": 1,
+  "total_criteria": 5
+}

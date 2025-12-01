@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-12-01T03:06:21.986084",
+  "T": 3000,
+  "seed": 42,
+  "neo": {
+    "period": 130.43478260869566,
+    "interval": 38.28378378378378,
+    "n_crises": 75,
+    "resolved": 75,
+    "final_window": 55,
+    "final_attachment": 1.0
+  },
+  "eva": {
+    "period": 150.0,
+    "interval": 25.37719298245614,
+    "n_crises": 115,
+    "resolved": 115,
+    "final_window": 55,
+    "final_attachment": 0.5221740149612302
+  },
+  "endogenous_check": {
+    "final_window": 55,
+    "expected_period": 110,
+    "observed_period_neo": 130.43478260869566,
+    "observed_period_eva": 150.0
+  }
+}

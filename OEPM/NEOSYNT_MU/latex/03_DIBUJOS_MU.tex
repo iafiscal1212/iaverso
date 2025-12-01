@@ -1,0 +1,89 @@
+% 03_DIBUJOS_MU.tex - Dibujos para Modelo de Utilidad OEPM
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a-1b]{pdfx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries DIBUJOS}\\[1cm]
+{\large Dispositivo de control autónomo multi-agente\\
+con bus local y núcleo endógeno de seguridad (NEOSYNT)}\\[2cm]
+\end{center}
+
+% Figura 1
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../figuras/fig1_arquitectura.pdf}
+\caption{Arquitectura general del dispositivo NEOSYNT mostrando los módulos (100)-(170)}
+\end{figure}
+
+\clearpage
+
+% Figura 2
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../figuras/fig2_bus_buffers.pdf}
+\caption{Bus local (100) y buffers circulares (110): secuencia de envío y validación}
+\end{figure}
+
+\clearpage
+
+% Figura 3
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../figuras/fig3_nucleo_autonomo.pdf}
+\caption{Núcleo autónomo (130): actualización del vector I en simplex mediante mirror-descent}
+\end{figure}
+
+\clearpage
+
+% Figura 4
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../figuras/fig4_gate_consentimiento.pdf}
+\caption{Gate de consentimiento bilateral (140): entradas y lógica de decisión}
+\end{figure}
+
+\clearpage
+
+% Figura 5
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../figuras/fig5_watchdog_sandbox.pdf}
+\caption{Watchdog (150) y sandbox (160): diagrama de estados y condiciones}
+\end{figure}
+
+\clearpage
+
+% Figura 6
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../figuras/fig6_curvas_comparativas.pdf}
+\caption{Curvas comparativas: colapsos, latencia, estabilidad y robustez}
+\end{figure}
+
+\clearpage
+
+% Lista de referencias numéricas
+\section*{Lista de Referencias Numéricas}
+
+\begin{tabular}{ll}
+\textbf{(100)} & Bus local (UNIX socket) \\
+\textbf{(110)} & Buffers circulares \\
+\textbf{(120)} & Módulo de validación (checksum + log inmutable) \\
+\textbf{(130)} & Núcleo autónomo (vector $\mathbf{I}$, mirror-descent, ruido OU) \\
+\textbf{(140)} & Gate de consentimiento bilateral \\
+\textbf{(150)} & Watchdog de recursos \\
+\textbf{(160)} & Sandbox de evolución de código \\
+\textbf{(170)} & Planificador (colas/cache) \\
+\end{tabular}
+
+\end{document}

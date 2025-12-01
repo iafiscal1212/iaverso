@@ -1,0 +1,51 @@
+{
+  "total_steps": 1500,
+  "NEO": {
+    "mean_phi_squared": {
+      "phi_integration": 0.2651286210326775,
+      "phi_temporal": 0.7513174531405257,
+      "phi_cross": 0.4473741461746764,
+      "phi_modal": 0.5527199194595482,
+      "phi_depth": 0.7593952102198329
+    },
+    "mean_magnitude": 1.3141500764308645,
+    "mean_temperature": 0.34725568116878536,
+    "temperature_std": 0.042225663369400146,
+    "dominant_mode_distribution": {
+      "temporal": 45,
+      "depth": 55
+    },
+    "subjective_time": {
+      "total": 2775.982104719294,
+      "dilation_factor": 1.7829915198876276
+    }
+  },
+  "EVA": {
+    "mean_phi_squared": {
+      "phi_integration": 0.2771960038310057,
+      "phi_temporal": 0.7658400764332552,
+      "phi_cross": 0.4473741461746764,
+      "phi_modal": 0.5527561765498088,
+      "phi_depth": 0.7955963992577627
+    },
+    "mean_magnitude": 1.3468772187305094,
+    "mean_temperature": 0.3541279526756222,
+    "temperature_std": 0.052656271145911676,
+    "dominant_mode_distribution": {
+      "depth": 68,
+      "temporal": 32
+    },
+    "subjective_time": {
+      "total": 2762.2350615239043,
+      "dilation_factor": 1.760859821714167
+    }
+  },
+  "combined": {
+    "mean_entanglement": 0.984787979466575,
+    "max_entanglement": 0.9999961207580862,
+    "subjective_time_ratio": {
+      "NEO": 1.8506547364795294,
+      "EVA": 1.8414900410159363
+    }
+  }
+}
