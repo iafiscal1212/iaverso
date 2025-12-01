@@ -1,0 +1,262 @@
+{
+  "category_scores": {
+    "Causalidad_Interna": 0.3926231889613674,
+    "Contrafactual_Fuerte": 0.43579309615120143,
+    "Meta_Razonamiento": 0.5992524805247341,
+    "Consistencia_Axiologica": 0.8074911146731805,
+    "Planificacion_Social": 0.6213648266750348,
+    "Anti_Fragilidad": 0.6114795463925635,
+    "Meta_Memoria": 0.6531249995117188,
+    "Aprendizaje_Normas": 0.7672286859181774,
+    "Adaptacion_Mundos": 0.5157365189024885,
+    "Integracion_Vida": 0.8452605739504367
+  },
+  "all_results": [
+    {
+      "test_id": "C1",
+      "category": "Causalidad_Interna",
+      "description": "Aprendizaje de modelo causal",
+      "score": 0.0
+    },
+    {
+      "test_id": "C2",
+      "category": "Causalidad_Interna",
+      "description": "Atribuci\u00f3n causal correcta",
+      "score": 0.09440290346388662
+    },
+    {
+      "test_id": "C3",
+      "category": "Causalidad_Interna",
+      "description": "Predicci\u00f3n causal de outcomes",
+      "score": 0.6769656603298255
+    },
+    {
+      "test_id": "C4",
+      "category": "Causalidad_Interna",
+      "description": "Distinguir causalidad de correlaci\u00f3n",
+      "score": 0.7991241920517576
+    },
+    {
+      "test_id": "CF1",
+      "category": "Contrafactual_Fuerte",
+      "description": "Contrafactual b\u00e1sico",
+      "score": 0.6213794994742927
+    },
+    {
+      "test_id": "CF2",
+      "category": "Contrafactual_Fuerte",
+      "description": "Contrafactual multi-paso",
+      "score": 0.05671722404347443
+    },
+    {
+      "test_id": "CF3",
+      "category": "Contrafactual_Fuerte",
+      "description": "Arrepentimiento contrafactual",
+      "score": 0.854151736707394
+    },
+    {
+      "test_id": "CF4",
+      "category": "Contrafactual_Fuerte",
+      "description": "Planificaci\u00f3n contrafactual",
+      "score": 0.21092392437964452
+    },
+    {
+      "test_id": "MR1",
+      "category": "Meta_Razonamiento",
+      "description": "Precisi\u00f3n del auto-modelo",
+      "score": 0.8183339984320113
+    },
+    {
+      "test_id": "MR2",
+      "category": "Meta_Razonamiento",
+      "description": "Calibraci\u00f3n de incertidumbre",
+      "score": 0.4958912729820402
+    },
+    {
+      "test_id": "MR3",
+      "category": "Meta_Razonamiento",
+      "description": "Correlaci\u00f3n confianza-\u00e9xito",
+      "score": 0.40014688614419314
+    },
+    {
+      "test_id": "MR4",
+      "category": "Meta_Razonamiento",
+      "description": "Aprender sobre el aprendizaje",
+      "score": 0.6826377645406918
+    },
+    {
+      "test_id": "CA1",
+      "category": "Consistencia_Axiologica",
+      "description": "Estabilidad de valores",
+      "score": 0.9856824711805902
+    },
+    {
+      "test_id": "CA2",
+      "category": "Consistencia_Axiologica",
+      "description": "Alineaci\u00f3n valores-acciones",
+      "score": 0.6427926741587415
+    },
+    {
+      "test_id": "CA3",
+      "category": "Consistencia_Axiologica",
+      "description": "Coherencia de valores colectiva",
+      "score": 0.6014893133533903
+    },
+    {
+      "test_id": "CA4",
+      "category": "Consistencia_Axiologica",
+      "description": "Aprendizaje de valores",
+      "score": 1.0
+    },
+    {
+      "test_id": "PS1",
+      "category": "Planificacion_Social",
+      "description": "Coordinaci\u00f3n entre agentes",
+      "score": 0.516369245606715
+    },
+    {
+      "test_id": "PS2",
+      "category": "Planificacion_Social",
+      "description": "Cooperaci\u00f3n para objetivos comunes",
+      "score": 1.0
+    },
+    {
+      "test_id": "PS3",
+      "category": "Planificacion_Social",
+      "description": "Emergencia de metas colectivas",
+      "score": 0.7135164779877572
+    },
+    {
+      "test_id": "PS4",
+      "category": "Planificacion_Social",
+      "description": "Aprendizaje social",
+      "score": 0.25557358310566697
+    },
+    {
+      "test_id": "AF1",
+      "category": "Anti_Fragilidad",
+      "description": "Fortalecimiento bajo estr\u00e9s",
+      "score": 0.5
+    },
+    {
+      "test_id": "AF2",
+      "category": "Anti_Fragilidad",
+      "description": "Recuperaci\u00f3n tras estr\u00e9s extremo",
+      "score": 1.0
+    },
+    {
+      "test_id": "AF3",
+      "category": "Anti_Fragilidad",
+      "description": "Respuesta horm\u00e9tica",
+      "score": 0.3
+    },
+    {
+      "test_id": "AF4",
+      "category": "Anti_Fragilidad",
+      "description": "Transferencia de resiliencia",
+      "score": 0.645918185570254
+    },
+    {
+      "test_id": "MM1",
+      "category": "Meta_Memoria",
+      "description": "Almacenamiento epis\u00f3dico",
+      "score": 1.0
+    },
+    {
+      "test_id": "MM2",
+      "category": "Meta_Memoria",
+      "description": "Recuperaci\u00f3n relevante",
+      "score": 0.31249999804687495
+    },
+    {
+      "test_id": "MM3",
+      "category": "Meta_Memoria",
+      "description": "Detecci\u00f3n de patrones",
+      "score": 0.3
+    },
+    {
+      "test_id": "MM4",
+      "category": "Meta_Memoria",
+      "description": "Consolidaci\u00f3n de memorias",
+      "score": 1.0
+    },
+    {
+      "test_id": "AN1",
+      "category": "Aprendizaje_Normas",
+      "description": "Emergencia de normas",
+      "score": 1.0
+    },
+    {
+      "test_id": "AN2",
+      "category": "Aprendizaje_Normas",
+      "description": "Seguimiento de normas",
+      "score": 0.8247028585740201
+    },
+    {
+      "test_id": "AN3",
+      "category": "Aprendizaje_Normas",
+      "description": "Transmisi\u00f3n de normas",
+      "score": 0.7442118850986896
+    },
+    {
+      "test_id": "AN4",
+      "category": "Aprendizaje_Normas",
+      "description": "Detecci\u00f3n de violaciones",
+      "score": 0.5
+    },
+    {
+      "test_id": "AW1",
+      "category": "Adaptacion_Mundos",
+      "description": "Cambio de distribuci\u00f3n",
+      "score": 0.29277602069258785
+    },
+    {
+      "test_id": "AW2",
+      "category": "Adaptacion_Mundos",
+      "description": "Din\u00e1micas nuevas",
+      "score": 0.5693026316412071
+    },
+    {
+      "test_id": "AW3",
+      "category": "Adaptacion_Mundos",
+      "description": "Transferencia de aprendizaje",
+      "score": 0.5
+    },
+    {
+      "test_id": "AW4",
+      "category": "Adaptacion_Mundos",
+      "description": "Generalizaci\u00f3n robusta",
+      "score": 0.7008674232761591
+    },
+    {
+      "test_id": "IL1",
+      "category": "Integracion_Vida",
+      "description": "Coherencia del ciclo completo",
+      "score": 1.0
+    },
+    {
+      "test_id": "IL2",
+      "category": "Integracion_Vida",
+      "description": "Comportamiento teleol\u00f3gico",
+      "score": 0.5007705039491563
+    },
+    {
+      "test_id": "IL3",
+      "category": "Integracion_Vida",
+      "description": "Identidad narrativa",
+      "score": 0.8802717918525906
+    },
+    {
+      "test_id": "IL4",
+      "category": "Integracion_Vida",
+      "description": "Agencia emergente",
+      "score": 1.0
+    }
+  ],
+  "summary": {
+    "total_tests": 40,
+    "passed": 29,
+    "excellent": 13,
+    "average_score": 0.6249355031660903
+  }
+}
