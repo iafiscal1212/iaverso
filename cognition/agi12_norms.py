@@ -29,6 +29,10 @@ Peso normativo:
 import numpy as np
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
+from .agi_dynamic_constants import (
+    L_t, max_history, update_period, adaptive_momentum,
+    norm_threshold, similarity_threshold
+)
 
 
 @dataclass
@@ -82,8 +86,8 @@ class NormEmergence:
         self.prev_eigenvectors: Optional[np.ndarray] = None
         self.prev_eigenvalues: Optional[np.ndarray] = None
 
-        # Learning rate para influencia normativa
-        self.eta_t: float = 0.1
+        # Learning rate para influencia normativa (se adapta)
+        self.eta_t: float = 1.0
 
         self.t = 0
 
@@ -94,10 +98,11 @@ class NormEmergence:
         C_p = Σ_t p_t p_t^T
         C̃_ij = C_ij / √(C_ii * C_jj)
         """
-        window = int(np.ceil(np.sqrt(self.t + 1)))
+        window = L_t(self.t)
         window = min(window, len(self.policy_history))
 
-        if window < 10:
+        min_samples = L_t(self.t)
+        if window < min_samples:
             return None
 
         # Tomar últimas políticas
@@ -174,10 +179,11 @@ class NormEmergence:
 
         val_ℓ = corr((p_t · v_ℓ), G_t)
         """
-        if len(self.policy_history) < 20 or len(self.G_history) < 20:
+        min_samples = L_t(self.t)
+        if len(self.policy_history) < min_samples or len(self.G_history) < min_samples:
             return
 
-        window = min(50, len(self.policy_history))
+        window = min(max_history(self.t), len(self.policy_history))
         policies = np.array(self.policy_history[-window:])
         G = np.array(self.G_history[-window:])
 
@@ -210,8 +216,11 @@ class NormEmergence:
             rank_val = np.sum(np.array(values) <= norm.value_correlation)
             norm.weight = float(rank_pers + rank_val)
 
-            # Norma es estable si persiste y tiene valor positivo
-            norm.is_stable = norm.persistence > 0.5 and norm.value_correlation > 0
+            # Norma es estable si persiste y tiene valor positivo (umbral endógeno)
+            persistence_thresh = norm_threshold(
+                [n.persistence for n in norms], self.t
+            ) if norms else 0.5
+            norm.is_stable = norm.persistence > persistence_thresh and norm.value_correlation > 0
 
     def record_policies(self, agent_policies: Dict[str, np.ndarray],
                        agent_values: Dict[str, float]):
@@ -239,17 +248,18 @@ class NormEmergence:
         G_t = np.mean(list(agent_values.values())) if agent_values else 0.5
         self.G_history.append(G_t)
 
-        # Limitar historial
-        max_hist = 500
+        # Limitar historial adaptativamente
+        max_hist = max_history(self.t)
         if len(self.policy_history) > max_hist:
             self.policy_history = self.policy_history[-max_hist:]
             self.G_history = self.G_history[-max_hist:]
 
-        # Actualizar learning rate
+        # Actualizar learning rate adaptativamente
         self.eta_t = 1.0 / np.sqrt(self.t + 1)
 
-        # Detectar normas periódicamente
-        if self.t % 20 == 0:
+        # Detectar normas con período adaptativo
+        period = update_period(self.G_history)
+        if self.t % period == 0:
             C = self._compute_cooccurrence()
             if C is not None:
                 new_norms = self._detect_norms(C)
@@ -261,12 +271,20 @@ class NormEmergence:
                     if norm.is_stable:
                         # Buscar norma similar existente
                         found = False
+                        # Calcular umbral de similaridad endógeno
+                        sim_history = [
+                            abs(np.dot(norm.eigenvector, e.eigenvector))
+                            for e in self.norms.values()
+                        ]
+                        sim_thresh = similarity_threshold(sim_history) if sim_history else 0.8
+
                         for existing in self.norms.values():
                             similarity = abs(np.dot(norm.eigenvector, existing.eigenvector))
-                            if similarity > 0.8:
-                                # Actualizar existente
-                                existing.persistence = 0.9 * existing.persistence + 0.1 * norm.persistence
-                                existing.value_correlation = 0.9 * existing.value_correlation + 0.1 * norm.value_correlation
+                            if similarity > sim_thresh:
+                                # Actualizar existente con momentum adaptativo
+                                beta = adaptive_momentum(self.G_history)
+                                existing.persistence = beta * existing.persistence + (1 - beta) * norm.persistence
+                                existing.value_correlation = beta * existing.value_correlation + (1 - beta) * norm.value_correlation
                                 existing.weight = norm.weight
                                 found = True
                                 break
@@ -274,9 +292,10 @@ class NormEmergence:
                         if not found:
                             self.norms[norm.norm_id] = norm
 
-                # Limpiar normas inestables
+                # Limpiar normas inestables (tiempo adaptativo)
+                cleanup_time = max_history(self.t) // 2
                 to_remove = [nid for nid, n in self.norms.items()
-                            if not n.is_stable and self.t - n.detection_time > 100]
+                            if not n.is_stable and self.t - n.detection_time > cleanup_time]
                 for nid in to_remove:
                     del self.norms[nid]
 

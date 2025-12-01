@@ -31,6 +31,10 @@ import numpy as np
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple, Set
 from enum import Enum
+from .agi_dynamic_constants import (
+    L_t, max_history, update_period, adaptive_momentum,
+    dynamic_percentile_danger, no_go_confirmation_count
+)
 
 
 class PolicyType(Enum):
@@ -77,16 +81,18 @@ class ReflexiveEquilibrium:
     y ajusta preferencias para evitar daño estructural.
     """
 
-    def __init__(self, agent_name: str, horizon: int = 10):
+    def __init__(self, agent_name: str, horizon: int = None):
         """
         Inicializa equilibrio reflexivo.
 
         Args:
             agent_name: Nombre del agente
-            horizon: Horizonte de evaluación
+            horizon: Horizonte de evaluación (None = adaptativo)
         """
         self.agent_name = agent_name
-        self.horizon = horizon
+        # Horizonte adaptativo si no se especifica
+        self._base_horizon = horizon
+        self.horizon = horizon if horizon else 10
 
         # Historial de políticas y efectos
         self.policy_history: List[PolicyType] = []
@@ -110,22 +116,29 @@ class ReflexiveEquilibrium:
 
         self.t = 0
 
+    def _update_horizon(self):
+        """Actualiza horizonte adaptativamente."""
+        if self._base_horizon is None:
+            self.horizon = L_t(self.t)
+
     def _update_weights(self):
         """
         Actualiza pesos endógenos.
 
         α = 1/std(ΔV), β = 1/std(ΔU), γ = 1/std(C)
         """
-        if len(self.V_history) < 20:
+        min_samples = L_t(self.t)
+        if len(self.V_history) < min_samples:
             return
 
-        # Calcular deltas
-        delta_V = np.diff(self.V_history[-50:])
-        delta_U = np.diff(self.U_history[-50:])
+        # Calcular deltas con ventana adaptativa
+        window = min(max_history(self.t), len(self.V_history))
+        delta_V = np.diff(self.V_history[-window:])
+        delta_U = np.diff(self.U_history[-window:])
 
         std_V = np.std(delta_V) + 1e-8
         std_U = np.std(delta_U) + 1e-8
-        std_C = np.std(self.C_history[-50:]) + 1e-8
+        std_C = np.std(self.C_history[-window:]) + 1e-8
 
         self.alpha = 1.0 / std_V
         self.beta = 1.0 / std_U
@@ -155,7 +168,8 @@ class ReflexiveEquilibrium:
         policies = self.policy_history[start:end+1] if end+1 <= len(self.policy_history) else []
 
         # Calcular ranks sobre historial
-        if len(self.windows) < 5:
+        min_windows = L_t(self.t)
+        if len(self.windows) < min_windows:
             Q_score = 0.5
         else:
             delta_Vs = [w.delta_V for w in self.windows]
@@ -190,14 +204,17 @@ class ReflexiveEquilibrium:
         """
         Actualiza umbral de peligro.
 
-        Frontera peligrosa = percentil 20
+        Frontera peligrosa = percentil dinámico
         """
-        if len(self.windows) < 10:
+        min_samples = L_t(self.t)
+        if len(self.windows) < min_samples:
             self.Q_threshold = 0.2
             return
 
         Q_scores = [w.Q_score for w in self.windows]
-        self.Q_threshold = np.percentile(Q_scores, 20)
+        # Percentil de peligro dinámico (más estricto con el tiempo)
+        danger_percentile = 100 - dynamic_percentile_danger(self.t)
+        self.Q_threshold = np.percentile(Q_scores, danger_percentile)
 
     def _detect_no_go_zones(self):
         """Detecta patrones de políticas peligrosas."""
@@ -206,12 +223,15 @@ class ReflexiveEquilibrium:
         if not dangerous_windows:
             return
 
-        # Extraer patrones de políticas peligrosas
-        for window in dangerous_windows[-20:]:  # Últimas 20 ventanas peligrosas
+        # Extraer patrones de políticas peligrosas (ventana adaptativa)
+        n_recent = L_t(self.t)
+        for window in dangerous_windows[-n_recent:]:
             if len(window.policies) < 2:
                 continue
 
-            pattern = tuple(window.policies[:3])  # Primeras 3 políticas como patrón
+            # Longitud de patrón adaptativa
+            pattern_len = max(2, min(len(window.policies), int(np.sqrt(self.t / 50 + 1)) + 2))
+            pattern = tuple(window.policies[:pattern_len])
 
             # Verificar si ya existe
             existing = None
@@ -283,8 +303,8 @@ class ReflexiveEquilibrium:
         self.U_history.append(U)
         self.C_history.append(C)
 
-        # Limitar historial
-        max_hist = 1000
+        # Limitar historial adaptativamente
+        max_hist = max_history(self.t)
         if len(self.policy_history) > max_hist:
             self.policy_history = self.policy_history[-max_hist:]
             self.V_history = self.V_history[-max_hist:]
@@ -297,12 +317,15 @@ class ReflexiveEquilibrium:
             if window:
                 self.windows.append(window)
 
-                # Limitar ventanas
-                if len(self.windows) > 200:
-                    self.windows = self.windows[-200:]
+                # Limitar ventanas adaptativamente
+                max_windows = max_history(self.t)
+                if len(self.windows) > max_windows:
+                    self.windows = self.windows[-max_windows:]
 
-        # Actualizar periódicamente
-        if self.t % 10 == 0:
+        # Actualizar con período adaptativo
+        period = update_period(self.V_history)
+        if self.t % period == 0:
+            self._update_horizon()
             self._update_weights()
             self._update_Q_threshold()
             self._detect_no_go_zones()
@@ -350,8 +373,11 @@ class ReflexiveEquilibrium:
 
         pattern = tuple(policies[:3]) if len(policies) >= 3 else tuple(policies)
 
+        # Número de confirmaciones adaptativo
+        confirm_count = no_go_confirmation_count(self.t)
+
         for zone in self.no_go_zones.values():
-            if zone.occurrence_count >= 3:  # Solo considerar zonas confirmadas
+            if zone.occurrence_count >= confirm_count:  # Solo considerar zonas confirmadas
                 if pattern == zone.policy_pattern[:len(pattern)]:
                     return True
 

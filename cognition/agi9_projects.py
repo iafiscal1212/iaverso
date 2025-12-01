@@ -28,6 +28,10 @@ import numpy as np
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 from enum import Enum
+from .agi_dynamic_constants import (
+    L_t, max_history, update_period, adaptive_momentum,
+    compute_adaptive_percentile, similarity_threshold
+)
 
 
 class ProjectStatus(Enum):
@@ -108,22 +112,26 @@ class LongTermProjects:
 
     def _update_thresholds(self):
         """Actualiza umbrales endógenamente."""
-        if len(self.value_history) < 20:
+        min_samples = L_t(self.t)
+        if len(self.value_history) < min_samples:
             return
 
-        # Duración: percentil 75 de duraciones existentes
+        # Duración: percentil adaptativo de duraciones existentes
         if self.projects:
             durations = [p.duration for p in self.projects.values() if p.duration > 0]
             if durations:
-                self.duration_threshold = np.percentile(durations, 75)
+                self.duration_threshold = compute_adaptive_percentile(
+                    np.array(durations), self.t, mode='high'
+                )
 
-        # Coherencia: mediana
-        if len(self.coherence_history) > 10:
-            self.coherence_threshold = np.median(self.coherence_history[-50:])
+        # Coherencia: mediana adaptativa
+        window = min(len(self.coherence_history), max_history(self.t))
+        if len(self.coherence_history) > min_samples:
+            self.coherence_threshold = np.median(self.coherence_history[-window:])
 
-        # Valor: mediana
-        if len(self.value_history) > 10:
-            self.value_threshold = np.median(self.value_history[-50:])
+        # Valor: mediana adaptativa
+        if len(self.value_history) > min_samples:
+            self.value_threshold = np.median(self.value_history[-window:])
 
     def _detect_chains(self) -> List[List[int]]:
         """
@@ -131,28 +139,40 @@ class LongTermProjects:
 
         Usa coherencia temporal para agrupar episodios.
         """
-        if len(self.episode_sequence) < 5:
+        min_samples = L_t(self.t)
+        if len(self.episode_sequence) < min_samples:
             return []
 
         chains = []
         current_chain = [self.episode_sequence[0]]
+
+        # Calcular historial de similaridades para umbral endógeno
+        sim_history = []
+        for i in range(1, len(self.episode_sequence)):
+            ep = self.episode_sequence[i]
+            prev_ep = self.episode_sequence[i-1]
+            sim = 1.0 / (1.0 + abs(ep - prev_ep))
+            sim_history.append(sim)
+
+        sim_thresh = similarity_threshold(sim_history) if sim_history else 0.3
 
         for i in range(1, len(self.episode_sequence)):
             ep = self.episode_sequence[i]
             prev_ep = self.episode_sequence[i-1]
 
             # Coherencia simple: episodios cercanos en ID tienden a ser parte de la misma cadena
-            # (En implementación real, usaríamos embeddings)
             similarity = 1.0 / (1.0 + abs(ep - prev_ep))
 
-            if similarity > 0.3:
+            if similarity > sim_thresh:
                 current_chain.append(ep)
             else:
-                if len(current_chain) >= 3:
+                min_chain_len = max(3, int(np.sqrt(self.t / 10 + 1)))
+                if len(current_chain) >= min_chain_len:
                     chains.append(current_chain)
                 current_chain = [ep]
 
-        if len(current_chain) >= 3:
+        min_chain_len = max(3, int(np.sqrt(self.t / 10 + 1)))
+        if len(current_chain) >= min_chain_len:
             chains.append(current_chain)
 
         return chains
@@ -161,7 +181,8 @@ class LongTermProjects:
         """
         Convierte una cadena narrativa en proyecto si cumple criterios.
         """
-        if len(chain) < 3:
+        min_chain_len = max(3, int(np.sqrt(self.t / 10 + 1)))
+        if len(chain) < min_chain_len:
             return None
 
         # Calcular métricas de la cadena
@@ -239,11 +260,15 @@ class LongTermProjects:
         # Tiempo desde última actividad
         time_since_activity = self.t - project.last_activity
 
+        # Umbrales adaptativos para estado de proyecto
+        stall_threshold = max_history(self.t) // 5
+        abandon_threshold = max_history(self.t) // 2
+
         if project.progress >= 1.0:
             project.status = ProjectStatus.COMPLETED
-        elif time_since_activity > 100:  # Sin actividad por mucho tiempo
+        elif time_since_activity > stall_threshold:
             project.status = ProjectStatus.STALLED
-            if time_since_activity > 200:
+            if time_since_activity > abandon_threshold:
                 project.status = ProjectStatus.ABANDONED
         elif project.progress > 0:
             project.status = ProjectStatus.ACTIVE
@@ -298,8 +323,8 @@ class LongTermProjects:
         self.value_history.append(value)
         self.coherence_history.append(coherence)
 
-        # Limitar historial
-        max_hist = 500
+        # Limitar historial adaptativamente
+        max_hist = max_history(self.t)
         if len(self.episode_sequence) > max_hist:
             self.episode_sequence = self.episode_sequence[-max_hist:]
             self.value_history = self.value_history[-max_hist:]
@@ -316,8 +341,9 @@ class LongTermProjects:
                     ep.completion_time = self.t
                     project.last_activity = self.t
 
-        # Detectar nuevos proyectos periódicamente
-        if self.t % 25 == 0:
+        # Detectar nuevos proyectos con período adaptativo
+        period = update_period(self.value_history)
+        if self.t % period == 0:
             chains = self._detect_chains()
             for chain in chains:
                 # Verificar si ya existe proyecto similar
@@ -325,7 +351,9 @@ class LongTermProjects:
                 for project in self.projects.values():
                     existing_eps = set(ep.episode_id for ep in project.episodes)
                     overlap = len(existing_eps.intersection(set(chain))) / len(chain)
-                    if overlap > 0.5:
+                    # Umbral de overlap endógeno
+                    overlap_thresh = 1.0 / (1.0 + np.sqrt(self.t / 100 + 1))
+                    if overlap > overlap_thresh:
                         is_new = False
                         break
 

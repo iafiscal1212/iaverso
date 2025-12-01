@@ -21,6 +21,10 @@ import numpy as np
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 from enum import Enum
+from .agi_dynamic_constants import (
+    L_t, max_history, adaptive_momentum, update_period,
+    should_update, confidence_from_error
+)
 
 
 class CognitiveProcess(Enum):
@@ -77,9 +81,9 @@ class DynamicMetacognition:
             p: [] for p in CognitiveProcess
         }
 
-        # Scores acumulados
+        # Scores acumulados (inicializados neutralmente)
         self.process_scores: Dict[CognitiveProcess, float] = {
-            p: 0.5 for p in CognitiveProcess
+            p: 1.0 / len(CognitiveProcess) for p in CognitiveProcess
         }
 
         # Política actual
@@ -91,7 +95,8 @@ class DynamicMetacognition:
 
     def _zscore_normalize(self, value: float, history: List[float]) -> float:
         """Normaliza valor con z-score histórico."""
-        if len(history) < 10:
+        min_samples = L_t(self.t)
+        if len(history) < min_samples:
             return 0.0
 
         mu = np.mean(history)
@@ -130,11 +135,11 @@ class DynamicMetacognition:
         Calcula score de cada proceso: corr(M_t, I_t^p)
         """
         scores = {}
-        window = int(np.ceil(np.sqrt(self.t + 1)))
+        window = L_t(self.t)
 
         for process in CognitiveProcess:
             if len(self.process_history[process]) < window:
-                scores[process] = 0.5
+                scores[process] = 1.0 / len(CognitiveProcess)
                 continue
 
             # Obtener activaciones recientes
@@ -142,7 +147,7 @@ class DynamicMetacognition:
 
             # Construir M reciente
             if len(self.U_history) < window:
-                scores[process] = 0.5
+                scores[process] = 1.0 / len(CognitiveProcess)
                 continue
 
             M_recent = []
@@ -163,8 +168,9 @@ class DynamicMetacognition:
 
                 M_recent.append([dU, dV, -dC, coh, flow])
 
-            if len(M_recent) < 5:
-                scores[process] = 0.5
+            min_samples = L_t(self.t)
+            if len(M_recent) < min_samples:
+                scores[process] = 1.0 / len(CognitiveProcess)
                 continue
 
             M_arr = np.array(M_recent)
@@ -240,8 +246,8 @@ class DynamicMetacognition:
                 active_processes.get(process, False)
             )
 
-        # Limitar historiales
-        max_hist = 1000
+        # Limitar historiales adaptativamente
+        max_hist = max_history(self.t)
         if len(self.U_history) > max_hist:
             self.U_history = self.U_history[-max_hist:]
             self.V_history = self.V_history[-max_hist:]

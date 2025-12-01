@@ -26,6 +26,9 @@ import numpy as np
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 from enum import Enum
+from .agi_dynamic_constants import (
+    L_t, max_history, confidence_from_error, adaptive_learning_rate
+)
 
 
 class PredictionChannel(Enum):
@@ -89,8 +92,8 @@ class IntrospectiveUncertainty:
         self.global_uncertainty_history: List[float] = []
         self.confidence_history: List[float] = []
 
-        # Learning rate base
-        self.eta_base: float = 0.1
+        # Learning rate base (se adapta)
+        self.eta_base: float = 1.0
 
         self.t = 0
 
@@ -108,16 +111,16 @@ class IntrospectiveUncertainty:
         ch.actuals.append(actual)
         ch.errors.append(error)
 
-        # Limitar historial
-        max_hist = 200
+        # Limitar historial adaptativamente
+        max_hist = max_history(self.t)
         if len(ch.errors) > max_hist:
             ch.predictions = ch.predictions[-max_hist:]
             ch.actuals = ch.actuals[-max_hist:]
             ch.errors = ch.errors[-max_hist:]
 
-        # Calcular estadísticas sobre ventana
-        window = int(np.ceil(np.sqrt(len(ch.errors))))
-        window = max(5, min(window, len(ch.errors)))
+        # Calcular estadísticas sobre ventana adaptativa
+        window = L_t(len(ch.errors))
+        window = min(window, len(ch.errors))
 
         recent_errors = ch.errors[-window:]
         ch.mean_error = float(np.mean(recent_errors))
@@ -141,8 +144,9 @@ class IntrospectiveUncertainty:
 
         median_std = np.median(stds)
 
+        min_samples = L_t(self.t)
         for ch in self.channels.values():
-            if len(ch.errors) < 5:
+            if len(ch.errors) < min_samples:
                 ch.uncertainty = 0.5
                 ch.uncertainty_rank = 0.5
                 continue
@@ -167,8 +171,9 @@ class IntrospectiveUncertainty:
 
         self._update_channel(channel, prediction, actual)
 
-        # Recalcular incertidumbres
-        if self.t % 5 == 0:
+        # Recalcular incertidumbres con período adaptativo
+        min_samples = L_t(self.t)
+        if self.t % max(3, min_samples // 2) == 0:
             self._compute_uncertainties()
 
     def get_uncertainty_state(self) -> UncertaintyState:
@@ -198,23 +203,22 @@ class IntrospectiveUncertainty:
         # Confianza = 1 - incertidumbre
         confidence = 1.0 - global_uncertainty
 
-        # Registrar historial
+        # Registrar historial adaptativamente
         self.global_uncertainty_history.append(global_uncertainty)
         self.confidence_history.append(confidence)
 
-        if len(self.global_uncertainty_history) > 500:
-            self.global_uncertainty_history = self.global_uncertainty_history[-500:]
-            self.confidence_history = self.confidence_history[-500:]
+        max_hist = max_history(self.t)
+        if len(self.global_uncertainty_history) > max_hist:
+            self.global_uncertainty_history = self.global_uncertainty_history[-max_hist:]
+            self.confidence_history = self.confidence_history[-max_hist:]
 
         # Decidir explorar o explotar
         # Alta incertidumbre → explorar
         # Alta confianza → explotar
         should_explore = global_uncertainty > 0.5
 
-        # Pesos para learning rate
-        # η_explore = η_t · U_rank
-        # η_exploit = η_t · conf
-        eta_t = self.eta_base / np.sqrt(self.t + 1)
+        # Pesos para learning rate usando función endógena
+        eta_t = adaptive_learning_rate(self.t, 1.0)
         exploration_weight = eta_t * global_uncertainty
         exploitation_weight = eta_t * confidence
 
@@ -265,22 +269,27 @@ class IntrospectiveUncertainty:
         """
         ch = self.channels[channel]
 
-        if len(ch.errors) < 10:
+        min_samples = L_t(self.t)
+        if len(ch.errors) < min_samples:
             return True, 0.5  # Sin suficiente historial
 
         confidence = 1.0 - ch.uncertainty_rank
 
         # Verificar si predicción está en rango típico
-        if ch.predictions:
-            mean_pred = np.mean(ch.predictions[-50:])
-            std_pred = np.std(ch.predictions[-50:])
+        window = min(max_history(self.t), len(ch.predictions))
+        if ch.predictions and window > 0:
+            mean_pred = np.mean(ch.predictions[-window:])
+            std_pred = np.std(ch.predictions[-window:])
             z_score = abs(prediction - mean_pred) / (std_pred + 1e-8)
 
-            # Predicciones extremas tienen menos confianza
-            if z_score > 2:
+            # Umbral de z-score adaptativo (más permisivo al inicio)
+            z_threshold = 2.0 + 1.0 / np.sqrt(self.t + 1)
+            if z_score > z_threshold:
                 confidence *= 0.5
 
-        return confidence > 0.4, float(confidence)
+        # Umbral de confianza adaptativo
+        conf_threshold = 0.3 + 0.1 / np.sqrt(self.t + 1)
+        return confidence > conf_threshold, float(confidence)
 
     def get_statistics(self) -> Dict:
         """Obtiene estadísticas de incertidumbre."""

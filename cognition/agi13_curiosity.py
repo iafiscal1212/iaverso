@@ -25,6 +25,9 @@ Curiosidad por yo alternativo:
 import numpy as np
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
+from .agi_dynamic_constants import (
+    L_t, max_history, adaptive_momentum, update_period
+)
 
 
 @dataclass
@@ -58,16 +61,17 @@ class StructuralCuriosity:
     - Discrepancias entre yo actual y yos contrafactuales
     """
 
-    def __init__(self, agent_name: str, embedding_dim: int = 10):
+    def __init__(self, agent_name: str, embedding_dim: int = None):
         """
         Inicializa sistema de curiosidad.
 
         Args:
             agent_name: Nombre del agente
-            embedding_dim: Dimensión de embeddings
+            embedding_dim: Dimensión de embeddings (None = adaptativa)
         """
         self.agent_name = agent_name
-        self.embedding_dim = embedding_dim
+        self._base_embedding_dim = embedding_dim
+        self.embedding_dim = embedding_dim if embedding_dim else 10
 
         # Embeddings de episodios
         self.episode_embeddings: List[np.ndarray] = []
@@ -99,12 +103,14 @@ class StructuralCuriosity:
 
         σ² = var(||e_i - e_j||)
         """
-        if len(self.episode_embeddings) < 5:
+        min_samples = L_t(self.t)
+        if len(self.episode_embeddings) < min_samples:
             return 1.0
 
-        # Calcular todas las distancias
+        # Calcular todas las distancias con ventana adaptativa
         distances = []
-        embeddings = np.array(self.episode_embeddings[-100:])
+        window = min(max_history(self.t), len(self.episode_embeddings))
+        embeddings = np.array(self.episode_embeddings[-window:])
 
         for i in range(len(embeddings)):
             for j in range(i + 1, len(embeddings)):
@@ -123,11 +129,12 @@ class StructuralCuriosity:
         ρ_i = (1/k) Σ_{j∈N_k(i)} exp(-||e_i - e_j||² / σ²)
         k = ⌈√N_epi⌉
         """
-        if len(self.episode_embeddings) < 5:
+        min_samples = L_t(self.t)
+        if len(self.episode_embeddings) < min_samples:
             return 0.5
 
-        # k = sqrt(n_episodios)
-        k = max(2, int(np.ceil(np.sqrt(len(self.episode_embeddings)))))
+        # k = sqrt(n_episodios) - endógeno
+        k = L_t(len(self.episode_embeddings))
         k = min(k, len(self.episode_embeddings))
 
         sigma2 = self._compute_sigma()
@@ -164,7 +171,8 @@ class StructuralCuriosity:
         inv_density = 1.0 / density
 
         # Rankear contra historial
-        if len(self.densities) < 5:
+        min_samples = L_t(self.t)
+        if len(self.densities) < min_samples:
             return 0.5
 
         inv_densities = [1.0 / (d + 1e-8) for d in self.densities.values()]
@@ -178,11 +186,13 @@ class StructuralCuriosity:
 
         α = 1/std(C_space), β = 1/std(C_self)
         """
-        if len(self.spatial_curiosity_history) < 10:
+        min_samples = L_t(self.t)
+        if len(self.spatial_curiosity_history) < min_samples:
             return
 
-        std_space = np.std(self.spatial_curiosity_history[-50:]) + 1e-8
-        std_self = np.std(self.self_curiosity_history[-50:]) + 1e-8 if self.self_curiosity_history else 1.0
+        window = min(max_history(self.t), len(self.spatial_curiosity_history))
+        std_space = np.std(self.spatial_curiosity_history[-window:]) + 1e-8
+        std_self = np.std(self.self_curiosity_history[-window:]) + 1e-8 if self.self_curiosity_history else 1.0
 
         self.alpha = 1.0 / std_space
         self.beta = 1.0 / std_self
@@ -205,8 +215,8 @@ class StructuralCuriosity:
         self.episode_embeddings.append(embedding.copy())
         self.episode_ids.append(episode_id)
 
-        # Limitar historial
-        max_hist = 500
+        # Limitar historial adaptativamente
+        max_hist = max_history(self.t)
         if len(self.episode_embeddings) > max_hist:
             self.episode_embeddings = self.episode_embeddings[-max_hist:]
             self.episode_ids = self.episode_ids[-max_hist:]
@@ -232,8 +242,9 @@ class StructuralCuriosity:
             self.targets[self.next_target_id] = target
             self.next_target_id += 1
 
-            # Limitar objetivos
-            if len(self.targets) > 20:
+            # Limitar objetivos adaptativamente
+            max_targets = L_t(self.t)
+            if len(self.targets) > max_targets:
                 # Eliminar menos curiosos
                 sorted_targets = sorted(self.targets.values(),
                                         key=lambda t: t.curiosity_score)

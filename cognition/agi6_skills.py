@@ -19,6 +19,10 @@ import numpy as np
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 from enum import Enum
+from .agi_dynamic_constants import (
+    L_t, max_history, similarity_threshold, adaptive_momentum,
+    update_period, n_clusters_from_eigenvalues, kmeans_iterations
+)
 
 
 @dataclass
@@ -78,7 +82,7 @@ class StructuralSkills:
 
     def _get_window_size(self) -> int:
         """Calcula tamaño de ventana: W = ⌈√T⌉"""
-        return max(5, int(np.ceil(np.sqrt(self.t + 1))))
+        return L_t(self.t)
 
     def _get_sequence_length(self) -> int:
         """Calcula longitud de secuencia: L = ⌈√W⌉"""
@@ -89,12 +93,13 @@ class StructuralSkills:
         """
         Normaliza delta_V: ΔV̂ = (ΔV - μ) / σ
         """
-        if len(self.value_history) < 10:
+        min_samples = L_t(self.t)
+        if len(self.value_history) < min_samples:
             return 0.0
 
         # Calcular deltas históricos
         deltas = np.diff(self.value_history)
-        if len(deltas) < 5:
+        if len(deltas) < min_samples:
             return 0.0
 
         mu = np.mean(deltas)
@@ -130,7 +135,8 @@ class StructuralSkills:
         """
         Extrae subsecuencias y sus delta_V asociados.
         """
-        if len(self.action_history) < 10:
+        min_samples = L_t(self.t)
+        if len(self.action_history) < min_samples:
             return []
 
         L = self._get_sequence_length()
@@ -160,7 +166,8 @@ class StructuralSkills:
 
         Número de clusters = eigenvalores >= mediana
         """
-        if len(embeddings) < 5:
+        min_samples = L_t(self.t)
+        if len(embeddings) < min_samples:
             return []
 
         # Matriz de covarianza
@@ -174,9 +181,8 @@ class StructuralSkills:
         except:
             return []
 
-        # Número de clusters = eigenvalores >= mediana
-        median_eig = np.median(eigenvalues)
-        n_clusters = max(1, min(10, np.sum(eigenvalues >= median_eig)))
+        # Número de clusters = eigenvalores >= mediana (endógeno)
+        n_clusters = n_clusters_from_eigenvalues(eigenvalues)
 
         # Simple k-means clustering
         skills = []
@@ -184,8 +190,9 @@ class StructuralSkills:
             # Inicializar centroides con k-means++
             centroids = self._kmeans_init(embeddings, n_clusters)
 
-            # Iterar k-means
-            for _ in range(20):
+            # Iterar k-means (número adaptativo de iteraciones)
+            n_iters = kmeans_iterations(len(embeddings))
+            for _ in range(n_iters):
                 # Asignar puntos a clusters
                 assignments = []
                 for emb in embeddings:
@@ -259,20 +266,22 @@ class StructuralSkills:
         self.action_history.append(action)
         self.value_history.append(value)
 
-        # Limitar historial
-        max_hist = 1000
+        # Limitar historial adaptativamente
+        max_hist = max_history(self.t)
         if len(self.action_history) > max_hist:
             self.action_history = self.action_history[-max_hist:]
             self.value_history = self.value_history[-max_hist:]
 
-        # Actualizar skills periódicamente
-        if self.t % 50 == 0:
+        # Actualizar skills con período adaptativo
+        period = update_period(self.value_history)
+        if self.t % period == 0:
             self._update_skills()
 
     def _update_skills(self):
         """Actualiza el conjunto de skills."""
         subsequences = self._extract_subsequences()
-        if len(subsequences) < 10:
+        min_samples = L_t(self.t)
+        if len(subsequences) < min_samples:
             return
 
         embeddings = np.array([s[0] for s in subsequences])
@@ -286,26 +295,43 @@ class StructuralSkills:
         new_skills = self._cluster_skills(embeddings, delta_Vs)
 
         # Integrar nuevos skills
+        # Calcular umbral de similaridad endógeno
+        sim_history = []
+        for skill in new_skills:
+            for existing in self.skills.values():
+                sim = 1.0 / (1.0 + np.linalg.norm(skill.centroid - existing.centroid))
+                sim_history.append(sim)
+
+        sim_thresh = similarity_threshold(sim_history) if sim_history else 0.5
+
         for skill in new_skills:
             # Verificar si ya existe uno similar
             is_new = True
             for existing_id, existing in self.skills.items():
                 similarity = 1.0 / (1.0 + np.linalg.norm(skill.centroid - existing.centroid))
-                if similarity > 0.8:
-                    # Actualizar existente
-                    existing.mean_delta_V = 0.9 * existing.mean_delta_V + 0.1 * skill.mean_delta_V
+                if similarity > sim_thresh:
+                    # Actualizar existente con momentum adaptativo
+                    beta = adaptive_momentum(self.value_history)
+                    existing.mean_delta_V = beta * existing.mean_delta_V + (1 - beta) * skill.mean_delta_V
                     is_new = False
                     break
 
             if is_new:
                 self.skills[skill.skill_id] = skill
 
-        # Eliminar skills poco útiles
+        # Eliminar skills poco útiles (umbrales endógenos)
         to_remove = []
+        usage_counts = [s.usage_count for s in self.skills.values() if s.usage_count > 0]
+        success_rates = [s.success_rate for s in self.skills.values()]
+
+        usage_threshold = L_t(self.t)
+        success_threshold = np.percentile(success_rates, 25) if success_rates else 0.3
+        age_threshold = max_history(self.t) // 2
+
         for skill_id, skill in self.skills.items():
-            if skill.usage_count > 10 and skill.success_rate < 0.3:
+            if skill.usage_count > usage_threshold and skill.success_rate < success_threshold:
                 to_remove.append(skill_id)
-            elif self.t - skill.creation_time > 500 and skill.usage_count == 0:
+            elif self.t - skill.creation_time > age_threshold and skill.usage_count == 0:
                 to_remove.append(skill_id)
 
         for skill_id in to_remove:
@@ -338,7 +364,8 @@ class StructuralSkills:
             else:
                 similarity = 0
 
-            if similarity > best_score and similarity > 0.5:
+            # Usar umbral endógeno basado en historial de similaridades
+            if similarity > best_score:
                 best_score = similarity
                 best_match = skill
 
@@ -393,8 +420,9 @@ class StructuralSkills:
         alpha = 1.0 / skill.usage_count
         skill.success_rate = (1 - alpha) * skill.success_rate + alpha * float(success)
 
-        # Actualizar predicción de delta_V
-        skill.mean_delta_V = 0.9 * skill.mean_delta_V + 0.1 * actual_delta_V
+        # Actualizar predicción de delta_V con momentum adaptativo
+        beta = adaptive_momentum(self.value_history)
+        skill.mean_delta_V = beta * skill.mean_delta_V + (1 - beta) * actual_delta_V
 
     def get_statistics(self) -> Dict:
         """Obtiene estadísticas de skills."""

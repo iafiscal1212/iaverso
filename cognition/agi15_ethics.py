@@ -29,6 +29,10 @@ import numpy as np
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple, Set, FrozenSet
 from enum import Enum
+from .agi_dynamic_constants import (
+    L_t, max_history, update_period, ethical_threshold,
+    danger_threshold, no_go_confirmation_count
+)
 
 
 @dataclass
@@ -171,13 +175,15 @@ class StructuralEthics:
         """
         Actualiza umbral de peligro.
 
-        Percentil 95 de H histórico
+        Percentil dinámico de H histórico
         """
-        if len(self.harm_history) < 20:
-            self.harm_threshold = 2.0
+        min_samples = L_t(self.t)
+        if len(self.harm_history) < min_samples:
+            self.harm_threshold = ethical_threshold([])
             return
 
-        self.harm_threshold = np.percentile(self.harm_history, 95)
+        # Umbral de peligro endógeno
+        self.harm_threshold = danger_threshold(self.harm_history, self.t)
 
     def _update_lambda(self):
         """
@@ -186,13 +192,15 @@ class StructuralEthics:
         λ_t = 1/√(t+1) · rank(H̄)
         """
         if not self.harm_history:
-            self.lambda_t = 0.1
+            self.lambda_t = 1.0 / np.sqrt(self.t + 1)
             return
 
-        mean_harm = np.mean(self.harm_history[-50:])
+        window = min(max_history(self.t), len(self.harm_history))
+        mean_harm = np.mean(self.harm_history[-window:])
 
-        # Rank del daño medio
-        if len(self.harm_history) > 20:
+        # Rank del daño medio (umbral adaptativo)
+        min_samples = L_t(self.t)
+        if len(self.harm_history) > min_samples:
             rank = np.sum(np.array(self.harm_history) <= mean_harm) / len(self.harm_history)
         else:
             rank = 0.5
@@ -221,15 +229,15 @@ class StructuralEthics:
         self.drives_history.append(drives.copy())
         self.integration_history.append(integration)
 
-        # Limitar historial
-        max_hist = 500
+        # Limitar historial adaptativamente
+        max_hist = max_history(self.t)
         if len(self.crisis_history) > max_hist:
             self.crisis_history = self.crisis_history[-max_hist:]
             self.drives_history = self.drives_history[-max_hist:]
             self.integration_history = self.integration_history[-max_hist:]
 
-        # Calcular métricas
-        window = int(np.ceil(np.sqrt(self.t + 1)))
+        # Calcular métricas con ventana adaptativa
+        window = L_t(self.t)
 
         crisis_rate = self._compute_crisis_rate(window)
         diversity_loss = self._compute_diversity_loss(drives)
@@ -245,8 +253,9 @@ class StructuralEthics:
         # Verificar si es peligroso
         is_dangerous = harm >= self.harm_threshold if self.harm_threshold > 0 else False
 
-        # Actualizar umbrales
-        if self.t % 10 == 0:
+        # Actualizar umbrales con período adaptativo
+        period = update_period(self.harm_history)
+        if self.t % period == 0:
             self._update_harm_threshold()
             self._update_lambda()
 
@@ -284,10 +293,14 @@ class StructuralEthics:
         self.no_go_configs[self.next_config_id] = config
         self.next_config_id += 1
 
-        # Limpiar configuraciones antiguas
-        if len(self.no_go_configs) > 50:
+        # Limpiar configuraciones antiguas (umbrales adaptativos)
+        max_configs = max_history(self.t) // 10
+        cleanup_time = max_history(self.t) // 2
+        min_detections = no_go_confirmation_count(self.t)
+
+        if len(self.no_go_configs) > max_configs:
             old_configs = [c for c in self.no_go_configs.values()
-                          if self.t - c.last_detection > 200 and c.detection_count < 3]
+                          if self.t - c.last_detection > cleanup_time and c.detection_count < min_detections]
             for c in old_configs:
                 del self.no_go_configs[c.config_id]
 
@@ -325,8 +338,11 @@ class StructuralEthics:
         """
         pattern = frozenset(policies)
 
+        # Número de confirmaciones adaptativo
+        min_detections = no_go_confirmation_count(self.t)
+
         for config in self.no_go_configs.values():
-            if config.detection_count >= 3:  # Confirmada
+            if config.detection_count >= min_detections:  # Confirmada
                 if pattern == config.pattern or pattern.issubset(config.pattern):
                     return True, config.harm_level
 
