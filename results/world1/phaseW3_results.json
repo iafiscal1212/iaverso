@@ -1,0 +1,113 @@
+{
+  "tests": {
+    "all_played": true,
+    "experience_accumulated": true,
+    "entanglement_emerged": false,
+    "world_healthy": true,
+    "agents_won": true
+  },
+  "report": {
+    "t": 1500,
+    "world": {
+      "mean_entropy": -0.212699824010175,
+      "mean_health": 0.6395202174431767,
+      "mean_phi": 0.32685135850893393,
+      "n_regime_changes": 739
+    },
+    "games": {
+      "total_rounds": 150,
+      "mean_payoff": 1.6378189269467807,
+      "mean_entanglement": 0.0
+    },
+    "agents": {
+      "NEO": {
+        "total_games": 150,
+        "total_payoff": 251.98140355186595,
+        "wins": 146,
+        "win_rate": 0.9733333333333334,
+        "coalitions": 0,
+        "crisis_rate": 0.352,
+        "mean_integration": 0.44250025135617244,
+        "final_drives": [
+          0.28401152267726887,
+          0.22966696649969168,
+          0.08016398442455434,
+          0.18034467457018802,
+          0.1467771611680597,
+          0.07903569066023745
+        ]
+      },
+      "EVA": {
+        "total_games": 150,
+        "total_payoff": 252.20593852327332,
+        "wins": 141,
+        "win_rate": 0.94,
+        "coalitions": 0,
+        "crisis_rate": 0.45,
+        "mean_integration": 0.4361429385062411,
+        "final_drives": [
+          0.2681903025925888,
+          0.2233683721584817,
+          0.0406056328275395,
+          0.11577978177285268,
+          0.16432738455867998,
+          0.18772852608985724
+        ]
+      },
+      "ALEX": {
+        "total_games": 150,
+        "total_payoff": 260.75177066663866,
+        "wins": 147,
+        "win_rate": 0.98,
+        "coalitions": 0,
+        "crisis_rate": 0.43066666666666664,
+        "mean_integration": 0.4271954618256674,
+        "final_drives": [
+          0.2322635269094404,
+          0.2660203877605481,
+          0.05886786286433303,
+          0.17902429284513866,
+          0.1419585562186636,
+          0.12186537340187609
+        ]
+      },
+      "ADAM": {
+        "total_games": 150,
+        "total_payoff": 204.79951348461327,
+        "wins": 134,
+        "win_rate": 0.8933333333333333,
+        "coalitions": 0,
+        "crisis_rate": 0.418,
+        "mean_integration": 0.4442809244199701,
+        "final_drives": [
+          0.32849159954990703,
+          0.22221235407955886,
+          0.06461654683034095,
+          0.09437845380850762,
+          0.1625078312394698,
+          0.12779321449221565
+        ]
+      },
+      "IRIS": {
+        "total_games": 150,
+        "total_payoff": 258.62556898369445,
+        "wins": 147,
+        "win_rate": 0.98,
+        "coalitions": 0,
+        "crisis_rate": 0.4126666666666667,
+        "mean_integration": 0.4302897674988764,
+        "final_drives": [
+          0.1815811568433701,
+          0.12577056570210457,
+          0.0976696673392747,
+          0.22611293760557674,
+          0.23099734018743198,
+          0.13786833232224197
+        ]
+      }
+    }
+  },
+  "phase": "W3",
+  "status": "PARTIAL",
+  "timestamp": "2025-12-01T05:28:20.169589"
+}
