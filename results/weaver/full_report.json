@@ -1,0 +1,380 @@
+{
+  "timestamp": "2025-12-01T01:07:52.617985",
+  "global_state": {
+    "t": 200,
+    "phases": {
+      "R1": {
+        "go_status": false,
+        "criteria_passed": 0,
+        "criteria_total": 5,
+        "metrics": {}
+      },
+      "R2": {
+        "go_status": false,
+        "criteria_passed": 0,
+        "criteria_total": 5,
+        "metrics": {}
+      },
+      "R3": {
+        "go_status": false,
+        "criteria_passed": 0,
+        "criteria_total": 5,
+        "metrics": {}
+      },
+      "R4": {
+        "go_status": false,
+        "criteria_passed": 0,
+        "criteria_total": 5,
+        "metrics": {}
+      },
+      "R5": {
+        "go_status": false,
+        "criteria_passed": 0,
+        "criteria_total": 5,
+        "metrics": {}
+      },
+      "R6": {
+        "go_status": false,
+        "criteria_passed": 0,
+        "criteria_total": 5,
+        "metrics": {}
+      },
+      "R7": {
+        "go_status": false,
+        "criteria_passed": 0,
+        "criteria_total": 5,
+        "metrics": {}
+      },
+      "R8": {
+        "go_status": false,
+        "criteria_passed": 0,
+        "criteria_total": 5,
+        "metrics": {}
+      },
+      "R9": {
+        "go_status": false,
+        "criteria_passed": 0,
+        "criteria_total": 5,
+        "metrics": {}
+      },
+      "R10": {
+        "go_status": false,
+        "criteria_passed": 0,
+        "criteria_total": 5,
+        "metrics": {}
+      }
+    },
+    "system": {
+      "t": 200,
+      "phases_registered": 10,
+      "phases_go": 0,
+      "all_go": false,
+      "system_ready": true,
+      "S_mean": 0.976403447222934,
+      "S_std": 0.11309573998972534
+    },
+    "n_events": 0
+  },
+  "multiscale_views": {
+    "n_updates": 200,
+    "views": [
+      {
+        "scale": 0,
+        "window": 14,
+        "S_mean": 0.6936906693908881,
+        "S_std": 0.05105153926633772,
+        "S_trend": -0.008125397245987188,
+        "z_dispersion": 0.036588429120693385
+      },
+      {
+        "scale": 1,
+        "window": 28,
+        "S_mean": 0.7572159193369095,
+        "S_std": 0.09705706801909311,
+        "S_trend": -0.010475959441713714,
+        "z_dispersion": 0.06327700921730099
+      },
+      {
+        "scale": 2,
+        "window": 56,
+        "S_mean": 0.8392416045245931,
+        "S_std": 0.1134296020349998,
+        "S_trend": -0.00540575587846554,
+        "z_dispersion": 0.09153961926244082
+      }
+    ],
+    "dominant_scale": 2,
+    "cross_scale": {
+      "var_ratio_0_1": 0.5259950697902274,
+      "trend_diff_0_1": 0.0023505621957265257,
+      "disp_ratio_0_1": 0.5782262716470091,
+      "var_ratio_1_2": 0.8556590720396358,
+      "trend_diff_1_2": -0.005070203563248174,
+      "disp_ratio_1_2": 0.6912527026782586,
+      "trend_coherence": 0.7411105800138282
+    }
+  },
+  "phase_graph": {
+    "nodes": [
+      "R9",
+      "R10",
+      "R3",
+      "R2",
+      "R1",
+      "R4",
+      "R6",
+      "R8",
+      "R7",
+      "R5"
+    ],
+    "n_edges": 19,
+    "te_threshold": 0.003381246954501517,
+    "edges": {
+      "R9": [
+        "R3",
+        "R7",
+        "R8"
+      ],
+      "R10": [
+        "R7",
+        "R4"
+      ],
+      "R2": [
+        "R4",
+        "R6",
+        "R5"
+      ],
+      "R4": [
+        "R3",
+        "R2",
+        "R8"
+      ],
+      "R6": [
+        "R9",
+        "R7",
+        "R10",
+        "R8"
+      ],
+      "R5": [
+        "R3",
+        "R4",
+        "R6",
+        "R8"
+      ]
+    },
+    "centrality": {
+      "R9": 0.020696275442240633,
+      "R10": 0.020696275442240633,
+      "R3": 0.03564911426041331,
+      "R2": 0.025087210424157323,
+      "R1": 0.015000000000000003,
+      "R4": 0.03560191914408466,
+      "R6": 0.026806002081132384,
+      "R8": 0.04134538970265394,
+      "R7": 0.03535613721382775,
+      "R5": 0.022108042953511244
+    },
+    "cycles": [
+      [
+        "R4",
+        "R2",
+        "R4"
+      ],
+      [
+        "R10",
+        "R4",
+        "R2",
+        "R6",
+        "R10"
+      ],
+      [
+        "R4",
+        "R2",
+        "R5",
+        "R4"
+      ]
+    ]
+  },
+  "indices": {
+    "current": {
+      "MSI": 0.9595571304713659,
+      "SCI": 0.881279137280035,
+      "EGI": 0.6811249191501063
+    },
+    "history_length": 200,
+    "summary": {
+      "computed": true,
+      "MSI": 0.9595571304713659,
+      "SCI": 0.881279137280035,
+      "EGI": 0.6811249191501063,
+      "MSI_mean": 0.8564195983216986,
+      "SCI_mean": 0.8780731383870863,
+      "EGI_mean": 0.6868893415013434,
+      "trends": {
+        "MSI_trend": 0.0005010902663711732,
+        "SCI_trend": 3.27955754054249e-05,
+        "EGI_trend": -3.169208690963143e-05
+      }
+    }
+  },
+  "phase_order": [
+    "R1"
+  ],
+  "critical_phases": [
+    "R3",
+    "R4",
+    "R8"
+  ],
+  "recent_decisions": [
+    {
+      "t": 191,
+      "action": "reinforce_goals",
+      "reason": "Goals emergentes en declive",
+      "indices": {
+        "MSI": 0.9450971543353702,
+        "SCI": 0.8808890963054706,
+        "EGI": 0.6821076233980662
+      },
+      "trends": {
+        "MSI_trend": 0.00042517000874810673,
+        "SCI_trend": 3.3018056718684174e-05,
+        "EGI_trend": -2.8086384654747204e-05
+      }
+    },
+    {
+      "t": 192,
+      "action": "reinforce_goals",
+      "reason": "Goals emergentes en declive",
+      "indices": {
+        "MSI": 0.9467456592834953,
+        "SCI": 0.8808505454434545,
+        "EGI": 0.6820462875796323
+      },
+      "trends": {
+        "MSI_trend": 0.00043392473395032275,
+        "SCI_trend": 3.2977324795978036e-05,
+        "EGI_trend": -2.847477402615773e-05
+      }
+    },
+    {
+      "t": 193,
+      "action": "reinforce_goals",
+      "reason": "Goals emergentes en declive",
+      "indices": {
+        "MSI": 0.9483941859512274,
+        "SCI": 0.880875017306683,
+        "EGI": 0.6818997162758831
+      },
+      "trends": {
+        "MSI_trend": 0.000442604734729957,
+        "SCI_trend": 3.293648311432774e-05,
+        "EGI_trend": -2.887013830869074e-05
+      }
+    },
+    {
+      "t": 194,
+      "action": "reinforce_goals",
+      "reason": "Goals emergentes en declive",
+      "indices": {
+        "MSI": 0.950062453538021,
+        "SCI": 0.8810342282221522,
+        "EGI": 0.6818409239103382
+      },
+      "trends": {
+        "MSI_trend": 0.0004512134306248378,
+        "SCI_trend": 3.2916919287858864e-05,
+        "EGI_trend": -2.925814603622002e-05
+      }
+    },
+    {
+      "t": 195,
+      "action": "reinforce_goals",
+      "reason": "Goals emergentes en declive",
+      "indices": {
+        "MSI": 0.9516212312656781,
+        "SCI": 0.8810449710750892,
+        "EGI": 0.6817104173484615
+      },
+      "trends": {
+        "MSI_trend": 0.00045973381840250466,
+        "SCI_trend": 3.2894470267660344e-05,
+        "EGI_trend": -2.9650231458691835e-05
+      }
+    },
+    {
+      "t": 196,
+      "action": "reinforce_goals",
+      "reason": "Goals emergentes en declive",
+      "indices": {
+        "MSI": 0.9531452369207388,
+        "SCI": 0.881049819662827,
+        "EGI": 0.681555743188508
+      },
+      "trends": {
+        "MSI_trend": 0.00046816140542705025,
+        "SCI_trend": 3.2868343376819374e-05,
+        "EGI_trend": -3.0049863851692357e-05
+      }
+    },
+    {
+      "t": 197,
+      "action": "reinforce_goals",
+      "reason": "Goals emergentes en declive",
+      "indices": {
+        "MSI": 0.9547543165227833,
+        "SCI": 0.8810830828362238,
+        "EGI": 0.6813382700756937
+      },
+      "trends": {
+        "MSI_trend": 0.00047651040625559555,
+        "SCI_trend": 3.2843064924769984e-05,
+        "EGI_trend": -3.0466277555257524e-05
+      }
+    },
+    {
+      "t": 198,
+      "action": "reinforce_goals",
+      "reason": "Goals emergentes en declive",
+      "indices": {
+        "MSI": 0.9563645875233787,
+        "SCI": 0.8811075976969803,
+        "EGI": 0.681222550061597
+      },
+      "trends": {
+        "MSI_trend": 0.0004847815949067554,
+        "SCI_trend": 3.281727659772919e-05,
+        "EGI_trend": -3.088318162534281e-05
+      }
+    },
+    {
+      "t": 199,
+      "action": "reinforce_goals",
+      "reason": "Goals emergentes en declive",
+      "indices": {
+        "MSI": 0.9579851442580315,
+        "SCI": 0.8812201584542397,
+        "EGI": 0.6811462791973877
+      },
+      "trends": {
+        "MSI_trend": 0.0004929771171941168,
+        "SCI_trend": 3.2804279663055077e-05,
+        "EGI_trend": -3.129448378739527e-05
+      }
+    },
+    {
+      "t": 200,
+      "action": "reinforce_goals",
+      "reason": "Goals emergentes en declive",
+      "indices": {
+        "MSI": 0.9595571304713659,
+        "SCI": 0.881279137280035,
+        "EGI": 0.6811249191501063
+      },
+      "trends": {
+        "MSI_trend": 0.0005010902663711732,
+        "SCI_trend": 3.27955754054249e-05,
+        "EGI_trend": -3.169208690963143e-05
+      }
+    }
+  ]
+}
