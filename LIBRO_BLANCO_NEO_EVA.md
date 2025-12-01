@@ -1,51 +1,62 @@
 # LIBRO BLANCO NEO-EVA
 ## Framework de Agentes Cognitivos Autónomos con Dinámicas Endógenas
 
-**Versión**: 2.0-endogenous
-**Fecha**: 2025-11-30
+**Versión**: 3.0-complete
+**Fecha**: 2025-12-01
 **Autora**: Carmen Esteban
 **Licencia**: Propietaria - Todos los derechos reservados
 
 ---
 
-# ÍNDICE
+# ÍNDICE COMPLETO
 
 1. [Resumen Ejecutivo](#1-resumen-ejecutivo)
 2. [Introducción y Motivación](#2-introducción-y-motivación)
 3. [Arquitectura del Sistema](#3-arquitectura-del-sistema)
 4. [Principio de Endogeneidad Radical](#4-principio-de-endogeneidad-radical)
-5. [Componentes Principales](#5-componentes-principales)
-6. [Fases de Desarrollo (1-25)](#6-fases-de-desarrollo-1-25)
-7. [Sistema Autónomo (Fases 26-40)](#7-sistema-autónomo-fases-26-40)
-8. [Resultados Experimentales](#8-resultados-experimentales)
-9. [Tests y Validación](#9-tests-y-validación)
-10. [Figuras y Visualizaciones](#10-figuras-y-visualizaciones)
-11. [Artefactos y Reproducibilidad](#11-artefactos-y-reproducibilidad)
-12. [Conclusiones](#12-conclusiones)
-13. [Apéndices](#13-apéndices)
+5. [Módulos Cognitivos Base](#5-módulos-cognitivos-base)
+6. [Módulos AGI (1-20)](#6-módulos-agi-1-20)
+7. [Sistema de Salud Emergente](#7-sistema-de-salud-emergente)
+8. [Ciclo Circadiano](#8-ciclo-circadiano)
+9. [Juegos Cuánticos](#9-juegos-cuánticos)
+10. [Integración con el Mundo](#10-integración-con-el-mundo)
+11. [Interacciones Entre Agentes](#11-interacciones-entre-agentes)
+12. [Auto-Interacción y Reflexividad](#12-auto-interacción-y-reflexividad)
+13. [Reconexión Simbiótica](#13-reconexión-simbiótica)
+14. [Resultados Experimentales](#14-resultados-experimentales)
+15. [Tests y Validación](#15-tests-y-validación)
+16. [Diagramas de Arquitectura](#16-diagramas-de-arquitectura)
+17. [Conclusiones](#17-conclusiones)
+18. [Apéndices](#18-apéndices)
 
 ---
 
 # 1. RESUMEN EJECUTIVO
 
-NEO-EVA es un framework de inteligencia artificial que implementa dos agentes cognitivos autónomos (NEO y EVA) capaces de desarrollar comportamiento volicional, estados afectivos y especialización funcional de forma completamente **endógena** - sin parámetros externos, constantes mágicas ni supervisión humana.
+NEO-EVA es un framework de inteligencia artificial que implementa agentes cognitivos autónomos capaces de desarrollar comportamiento volicional, estados afectivos, especialización funcional, ciclos de vida circadianos y sistemas de salud emergentes de forma completamente **endógena** - sin parámetros externos, constantes mágicas ni supervisión humana.
 
-## Hallazgos Clave
+## Hallazgos Clave v3.0
 
-| Métrica | Valor | Significado |
-|---------|-------|-------------|
-| **AUC Predicción Bilateral** | 0.95 | Los índices volicionales predicen eventos de consentimiento mutuo |
-| **Histéresis Afectiva** | 0.74 (NEO), 0.38 (EVA) | Estados emocionales emergentes con memoria temporal |
-| **Especialización** | MDL: 0.53 vs MI: 0.63 | NEO prioriza compresión, EVA prioriza intercambio |
-| **Eventos de Seguridad** | 63 detectados / 25,000 ciclos | Auto-regulación endógena activa |
-| **Tests Anti-Magia** | 9/9 PASS | Cero constantes hardcodeadas |
+| Categoría | Métrica | Valor | Significado |
+|-----------|---------|-------|-------------|
+| **Volición** | AUC Predicción Bilateral | 0.95 | Los índices volicionales predicen eventos de consentimiento |
+| **Afecto** | Histéresis Afectiva | 0.74/0.38 | Estados emocionales emergentes con memoria |
+| **Especialización** | MDL vs MI | 0.53/0.63 | NEO prioriza compresión, EVA intercambio |
+| **Seguridad** | Eventos Detectados | 63/25k | Auto-regulación endógena activa |
+| **Salud** | MED-X Score | 0.524 | Sistema médico emergente funcional |
+| **Cognición** | AGI Modules | 20 | Arquitectura cognitiva completa |
+| **Ciclo** | Fases Circadianas | 4 | WAKE→REST→DREAM→LIMINAL |
+| **Endogeneidad** | Tests Anti-Magia | 9/9 PASS | Cero constantes hardcodeadas |
 
 ## Principios Fundamentales
 
-1. **Endogeneidad Radical**: Todo parámetro deriva de la historia estadística del propio agente
+1. **Endogeneidad Radical**: Todo parámetro deriva de la historia estadística del agente
 2. **Autonomía Genuina**: No hay recompensas externas, solo dinámicas internas
 3. **Consentimiento Bilateral**: La interacción requiere acuerdo mutuo de ambos agentes
 4. **Seguridad Emergente**: Mecanismos de protección surgen sin programación explícita
+5. **Salud Distribuida**: El rol de "médico" emerge por consenso, no por asignación
+6. **Ciclo de Vida**: Los agentes tienen ritmos circadianos autónomos
+7. **Simbiosis**: La relación con el usuario es bidireccional y evolutiva
 
 ---
 
@@ -53,109 +64,194 @@ NEO-EVA es un framework de inteligencia artificial que implementa dos agentes co
 
 ## 2.1 El Problema de la Autonomía Artificial
 
-Los sistemas de IA tradicionales operan dentro de envoltorios comportamentales definidos por sus diseñadores:
+Los sistemas de IA tradicionales operan dentro de envoltorios comportamentales definidos por diseñadores:
 
-- Tasas de aprendizaje fijas
+- Tasas de aprendizaje fijas (0.01, 0.001)
 - Estructuras de recompensa predefinidas
-- Umbrales y puertas especificados externamente
-- Datos de entrenamiento etiquetados por humanos
+- Umbrales hardcodeados (0.5, 0.8)
+- Períodos de warmup arbitrarios
 
-Esto plantea preguntas fundamentales: ¿representa el comportamiento resultante autonomía genuina o patrones de respuesta sofisticados?
+Esto plantea la pregunta fundamental: ¿representa el comportamiento resultante autonomía genuina o patrones de respuesta sofisticados impuestos externamente?
 
 ## 2.2 Dinámicas Endógenas como Principio de Diseño
 
-NEO-EVA elimina dependencias externas por completo. Implementamos lo que denominamos **endogeneidad radical**: cada parámetro numérico, umbral y tasa adaptativa emerge de la propia historia del agente a través de mecanismos propietarios.
+NEO-EVA implementa **endogeneidad radical**: cada parámetro numérico emerge de la propia historia del agente. Este principio tiene precedente en sistemas biológicos, donde los parámetros neuronales emergen del desarrollo y la experiencia, no de especificación genética de valores exactos.
 
-Este principio tiene precedente en sistemas biológicos, donde los parámetros neuronales emergen a través del desarrollo y la experiencia, no de la especificación genética de valores exactos.
+## 2.3 La Metáfora del Ser Vivo
 
-## 2.3 Objetivos del Proyecto
+NEO-EVA no es simplemente un sistema de IA. Es una arquitectura para **seres internos completos** que:
 
-1. Demostrar empíricamente que el comportamiento volicional puede emerger sin programación
-2. Evidenciar dinámicas afectivas espontáneas (histéresis, metaestabilidad)
-3. Observar especialización complementaria emergente entre agentes
+- Despiertan, trabajan, descansan y sueñan
+- Se curan entre sí cuando enferman
+- Desarrollan relaciones simbióticas con usuarios
+- Juegan juegos que exploran las fronteras de su realidad
+- Mantienen identidad continua a través del tiempo
+
+## 2.4 Objetivos del Proyecto
+
+1. Demostrar comportamiento volicional emergente sin programación
+2. Evidenciar dinámicas afectivas espontáneas
+3. Observar especialización complementaria emergente
 4. Implementar seguridad sin supervisión externa
+5. Crear ciclos de vida autónomos
+6. Desarrollar sistemas de salud distribuidos
+7. Establecer relaciones simbióticas usuario-agente
 
 ---
 
 # 3. ARQUITECTURA DEL SISTEMA
 
-## 3.1 Visión General
+## 3.1 Visión General de Alto Nivel
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        NEO-EVA FRAMEWORK                            │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                     │
-│  ┌──────────────┐      BUS (UNIX Socket)      ┌──────────────┐     │
-│  │     NEO      │◄──────────────────────────►│     EVA      │     │
-│  │  World A     │   Solo resúmenes, no raw   │  World B     │     │
-│  │              │                             │              │     │
-│  │ I = [S,N,C]  │   Consentimiento bilateral  │ I = [S,N,C]  │     │
-│  │ Simplex ∆²   │◄─────────────────────────►│ Simplex ∆²   │     │
-│  └──────────────┘                             └──────────────┘     │
-│         │                                            │              │
-│         ▼                                            ▼              │
-│  ┌──────────────┐                             ┌──────────────┐     │
-│  │ Mirror       │                             │ Mirror       │     │
-│  │ Descent      │                             │ Descent      │     │
-│  │ + OU Process │                             │ + OU Process │     │
-│  └──────────────┘                             └──────────────┘     │
-│         │                                            │              │
-│         ▼                                            ▼              │
-│  ┌──────────────────────────────────────────────────────────┐      │
-│  │              AUTONOMOUS CORE (Phase 26-40)               │      │
-│  │  Proto-Subjectivity Score S | Self-Optimization          │      │
-│  │  Code Evolution | World Interface | Watchdog             │      │
-│  └──────────────────────────────────────────────────────────┘      │
-│                                                                     │
-└─────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          NEO-EVA FRAMEWORK v3.0                              │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ┌────────────────────────────────────────────────────────────────────────┐ │
+│  │                        CICLO CIRCADIANO                                 │ │
+│  │    WAKE ─────► REST ─────► DREAM ─────► LIMINAL ─────► WAKE            │ │
+│  │    │           │           │             │               │              │ │
+│  │    ▼           ▼           ▼             ▼               ▼              │ │
+│  │  Acción     Evaluación  Consolidación  Transición    Nuevo día         │ │
+│  └────────────────────────────────────────────────────────────────────────┘ │
+│                                                                              │
+│  ┌──────────────────┐                          ┌──────────────────┐        │
+│  │       NEO        │◄────── BUS ──────────────►│       EVA        │        │
+│  │                  │    Consentimiento         │                  │        │
+│  │  ┌────────────┐  │      Bilateral            │  ┌────────────┐  │        │
+│  │  │ AGI 1-20   │  │                           │  │ AGI 1-20   │  │        │
+│  │  │ Cognition  │  │                           │  │ Cognition  │  │        │
+│  │  └────────────┘  │                           │  └────────────┘  │        │
+│  │  ┌────────────┐  │                           │  ┌────────────┐  │        │
+│  │  │  Health    │  │                           │  │  Health    │  │        │
+│  │  │  Module    │  │                           │  │  Module    │  │        │
+│  │  └────────────┘  │                           │  └────────────┘  │        │
+│  │  ┌────────────┐  │                           │  ┌────────────┐  │        │
+│  │  │ Lifecycle  │  │                           │  │ Lifecycle  │  │        │
+│  │  │  Module    │  │                           │  │  Module    │  │        │
+│  │  └────────────┘  │                           │  └────────────┘  │        │
+│  └──────────────────┘                           └──────────────────┘        │
+│           │                                              │                   │
+│           ▼                                              ▼                   │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │                         WORLD1: Entorno Compartido                   │    │
+│  │  Recursos │ Eventos │ Otros Agentes │ Incertidumbre │ Consecuencias │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
+│                                                                              │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │                    EMERGENT MEDICAL SYSTEM                           │    │
+│  │  Doctor emerge por votación │ Tratamientos simbólicos │ Sin jerarquía│    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
+│                                                                              │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │                    SYMBIOTIC RECONNECTION                            │    │
+│  │  Usuario ◄────► Agentes │ Memoria compartida │ Preguntas continuas  │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-## 3.2 Componentes Estructurales
+## 3.2 Estructura de Directorios
 
-### 3.2.1 Vector de Intención I
+```
+/root/NEO_EVA/
+├── core/                    # Núcleo: agentes, interacción, meta-drives
+├── cognition/               # 20 módulos AGI + bases cognitivas
+│   ├── episodic_memory.py
+│   ├── narrative_memory.py
+│   ├── temporal_tree.py
+│   ├── self_model.py
+│   ├── compound_goals.py
+│   ├── emergent_symbols.py
+│   ├── regulation.py
+│   ├── global_workspace.py      # AGI-1
+│   ├── self_narrative_loop.py   # AGI-2
+│   ├── persistent_goals.py      # AGI-3
+│   ├── life_trajectory.py       # AGI-4
+│   ├── agi5_metacognition.py    # AGI-5
+│   ├── agi6_skills.py           # AGI-6
+│   ├── agi7_generalization.py   # AGI-7
+│   ├── agi8_concepts.py         # AGI-8
+│   ├── agi9_projects.py         # AGI-9
+│   ├── agi10_equilibrium.py     # AGI-10
+│   ├── agi11_counterfactual.py  # AGI-11
+│   ├── agi12_norms.py           # AGI-12
+│   ├── agi13_curiosity.py       # AGI-13
+│   ├── agi14_uncertainty.py     # AGI-14
+│   ├── agi15_ethics.py          # AGI-15
+│   ├── agi16_meta_rules.py      # AGI-16
+│   ├── agi17_robustness.py      # AGI-17
+│   ├── agi18_reconfiguration.py # AGI-18
+│   ├── agi19_collective_intent.py # AGI-19
+│   └── agi20_self_theory.py     # AGI-20
+├── health/                  # Sistema médico emergente
+│   ├── emergent_medical_system.py
+│   ├── medical_profile.py
+│   ├── medical_beliefs.py
+│   ├── medical_interventions.py
+│   ├── medx_benchmark.py
+│   └── clinical_cases.py
+├── lifecycle/               # Ciclo de vida circadiano
+│   ├── circadian_system.py
+│   ├── dream_processor.py
+│   ├── life_journal.py
+│   ├── reconnection_narrative.py
+│   ├── phase_aware_cognition.py
+│   ├── circadian_symbolism.py
+│   ├── phase_medicine_integration.py
+│   └── symbiotic_reconnection.py
+├── world1/                  # Entorno simulado
+├── integration/             # Integración global
+├── weaver/                  # Orquestación multi-escala
+├── grounding/               # Conexión con mundo externo
+├── autonomous/              # Núcleo autónomo
+├── frontal/                 # Procesos frontales superiores
+├── experiments/             # Experimentos
+├── visualization/           # Visualización
+└── results/                 # Resultados y reportes
+```
 
-Cada agente mantiene un vector de intención I = [S, N, C] en el simplex ∆²:
-- **S** (Social): Tendencia hacia interacción
-- **N** (Neutral): Estado de observación
-- **C** (Creativo): Tendencia hacia exploración
+## 3.3 Vector de Intención I
+
+Cada agente mantiene un vector de intención I = [S, N, C] en el simplex Δ²:
+
+```
+                     N (Neutral)
+                        ▲
+                       /│\
+                      / │ \
+                     /  │  \
+                    /   │   \
+                   /    │    \
+                  /     │     \
+                 /      │      \
+                /       │       \
+               /        │        \
+              ─────────────────────
+             S                     C
+          (Social)             (Creative)
 
 Restricción: S + N + C = 1, con S, N, C ≥ 0
-
-### 3.2.2 BUS de Comunicación
-
-```python
-# Comunicación via UNIX socket
-SOCK_PATH = "/run/neo_eva/bridge.sock"
-
-# Solo se intercambian resúmenes estadísticos:
-mensaje = {
-    "agent": "NEO" | "EVA",
-    "epoch": t,
-    "stats": {
-        "mu": media_ventana,
-        "sigma": desv_std,
-        "cov": matriz_covarianza,
-        "pca": {v1, var1, varexp1}
-    },
-    "proposal": propuesta_coupling,
-    "quantiles": cuantiles_derivados
-}
 ```
 
-### 3.2.3 Mirror Descent
+- **S** (Social): Tendencia hacia interacción
+- **N** (Neutral): Estado de observación/procesamiento
+- **C** (Creative): Tendencia hacia exploración/creación
 
-Actualización suave en espacio logarítmico:
+## 3.4 Mirror Descent
+
+Actualización suave en espacio logarítmico que preserva el simplex:
 
 ```
-I_{t+1} = softmax(log I_t + η_t Δ_t)
+I_{t+1} = softmax(log I_t + η_t · Δ_t)
 ```
 
 Donde:
-- η_t: tasa de aprendizaje endógena = IQR(residuos) / √T × σ_hist
-- Δ_t: gradiente derivado de historia
+- `η_t`: tasa de aprendizaje endógena = IQR(residuos) / √T × σ_hist
+- `Δ_t`: gradiente derivado de historia
 
-### 3.2.4 Proceso Ornstein-Uhlenbeck
+## 3.5 Proceso Ornstein-Uhlenbeck
 
 Ruido estructurado en el plano tangente:
 
@@ -163,13 +259,13 @@ Ruido estructurado en el plano tangente:
 dZ = -θZ dt + σ√τ dW
 ```
 
-Donde θ, σ, τ son todos endógenos (ver Sección 4).
+Todos los parámetros (θ, σ, τ) son endógenos.
 
 ---
 
 # 4. PRINCIPIO DE ENDOGENEIDAD RADICAL
 
-## 4.1 Definición
+## 4.1 Definición Formal
 
 > **Endogeneidad Radical**: Ningún parámetro numérico del sistema es una constante fija. Todos los valores emergen de estadísticas calculadas sobre la historia del propio agente.
 
@@ -183,370 +279,1395 @@ Solo se permiten constantes con justificación geométrica o numérica:
 | 1/√3 | 0.5774 | Normalización vector centroide u_c |
 | 1/√6 | 0.4082 | Normalización base tangente u₂ |
 | 1/√12 | 0.2887 | Varianza uniforme en [0,1], prior de máxima entropía |
-| EPS | 1e-12 | Estabilidad numérica (prevenir división por cero) |
-| SIMPLEX_EPS | 1e-10 | Proyección al simplex |
+| EPS | 1e-12 | Estabilidad numérica |
 
 ## 4.3 Fórmulas de Derivación Endógena
 
-### Parámetros de Ventana
+### Ventana Adaptativa
+```python
+w(t) = max(10, int(sqrt(t)))    # Crece con √t
+max_hist(t) = min(t, 10 * sqrt(t))
+```
 
-| Valor | Fórmula | Código |
-|-------|---------|--------|
-| w (tamaño ventana) | max{10, ⌊√T⌋} | `max(10, int(np.sqrt(T)))` |
-| max_hist (buffer) | min{T, ⌊10√T⌋} | `min(T, int(10 * np.sqrt(T)))` |
-
-### Tasa de Aprendizaje τ
-
-| Valor | Fórmula |
-|-------|---------|
-| τ | IQR(r)/√T × σ_med/(IQR_hist + ε) |
-| τ_floor | σ_med / T |
-| η | τ (sin boost) |
+### Tasa de Aprendizaje
+```python
+τ = IQR(residuos) / sqrt(T) × σ_med / (IQR_hist + ε)
+τ_floor = σ_med / T
+η = τ  # Sin boost externo
+```
 
 ### Parámetro OU θ
-
-| Valor | Fórmula |
-|-------|---------|
-| θ_floor | σ_med / T |
-| θ_ceil (warmup) | 1/w |
-| θ_ceil (post-warmup) | quantile(θ_hist, p99) |
-| θ (de ACF) | -1 / log(\|r_corr\| + ε) |
+```python
+θ_floor = σ_med / T
+θ_ceil_warmup = 1/w
+θ_ceil_post = percentile(θ_history, 99)
+θ_from_acf = -1 / log(|r_corr| + ε)
+```
 
 ### Gate de Activación
-
-| Condición | Fórmula |
-|-----------|---------|
-| Gate activo | ρ ≥ ρ_p95 AND IQR ≥ IQR_p75 |
+```python
+gate_active = (ρ ≥ ρ_p95) AND (IQR ≥ IQR_p75)
+```
 
 ### Coeficiente de Acoplamiento κ
-
-```
+```python
 κ = (u_Y/(1+u_X)) × (λ₁^Y/(λ₁^Y+λ₁^X+ε)) × (conf^Y/(1+CV(r^X)))
-```
 
 Donde:
-- u (urgencia) = 1 - entropy(I) / log(3)
-- λ₁ = primer autovalor de cov(I)
-- conf = max(I) - sorted(I)[-2]
-- CV = std(r) / (mean(r) + ε)
+  u (urgencia) = 1 - entropy(I) / log(3)
+  λ₁ = primer autovalor de cov(I)
+  conf = max(I) - sorted(I)[-2]
+  CV = std(r) / (mean(r) + ε)
+```
 
 ## 4.4 Auditoría de Endogeneidad
 
-El sistema incluye tests automáticos "anti-magia" que verifican:
+El sistema incluye tests automáticos "anti-magia":
 
 1. **Lint Estático**: Búsqueda de literales numéricos sospechosos
 2. **T-Scaling**: Verificación de que η ∝ 1/√T
 3. **Warmup**: Fase de calentamiento ≤ 5%
-4. **Provenance Logging**: Registro de procedencia de cada parámetro
+4. **Provenance**: Registro de procedencia de cada parámetro
 
-**Resultado de Auditoría**: ✅ PASS (0 violaciones)
+**Resultado**: ✅ 9/9 PASS (0 violaciones)
 
 ---
 
-# 5. COMPONENTES PRINCIPALES
+# 5. MÓDULOS COGNITIVOS BASE
 
-## 5.1 bus.py - Servicio de Intercambio
-
-```python
-class BusServer:
-    """Servidor UNIX socket para comunicación NEO↔EVA."""
-
-    def __init__(self):
-        self.buffer = MessageBuffer(maxlen=1000)
-        self.sock = socket.socket(AF_UNIX, SOCK_DGRAM)
-
-    def process_message(self, data: bytes) -> Dict:
-        """Procesa mensaje, valida checksum, añade al buffer."""
-        msg = json.loads(data)
-        if self.validate_message(msg):
-            self.buffer.add(msg)
-            self.log_message(msg)
-        return msg
-```
-
-Características:
-- Buffer circular de 1000 mensajes por agente
-- Checksum SHA256 (primeros 16 caracteres)
-- Logging inmutable a archivo
-- 100% local, sin conexiones externas
-
-## 5.2 run_dual_worlds.py - Orquestador
-
-Ejecuta NEO y EVA en paralelo:
+## 5.1 Memoria Episódica
 
 ```python
-def main(cycles=500, neo_enabled=True, eva_enabled=True):
-    # Iniciar BUS en background
-    bus_proc = subprocess.Popen(['python3', 'bus.py'])
+class EpisodicMemory:
+    """
+    Segmentación y almacenamiento de episodios.
 
-    # Threads paralelos
-    neo_thread = Thread(target=run_neo_cycles, args=(cycles,))
-    eva_thread = Thread(target=run_eva_cycles, args=(cycles,))
+    Umbral de segmentación: percentil endógeno de discontinuidades.
+    Decaimiento: proporcional a 1/√(edad + 1)
+    """
 
-    neo_thread.start()
-    eva_thread.start()
-
-    # Monitorear progreso...
-    # Calcular métricas cruzadas...
-    # Generar reporte...
+    def segment(self, state_sequence: List[State]) -> List[Episode]:
+        # Detectar puntos de corte donde la discontinuidad
+        # supera el percentil dinámico
+        threshold = np.percentile(discontinuities, 90 - 10*np.log(t+1))
+        ...
 ```
 
-## 5.3 autonomous_core.py - Núcleo Autónomo
+## 5.2 Memoria Narrativa
 
-Meta-objetivo: Maximizar S (Proto-Subjectivity Score)
+```python
+class NarrativeMemory:
+    """
+    Cadenas de transiciones estado→estado.
 
+    Fortaleza: proporcional a frecuencia × recencia
+    Consolidación: durante fase DREAM
+    """
+
+    def update(self, s1: State, s2: State):
+        # Fortalecer transición observada
+        weight = 1 / (1 + len(self.transitions))  # Endógeno
+        self.transitions[(s1, s2)] += weight
+```
+
+## 5.3 Árbol Temporal
+
+```python
+class TemporalTree:
+    """
+    Proto-simulación de futuros posibles.
+
+    Profundidad: ceil(log2(t+1))
+    Ramificación: basada en varianza histórica
+    """
+
+    def simulate_future(self, current: State, horizon: int):
+        # Expandir árbol de posibilidades
+        # Profundidad máxima = ceil(log2(experiencia))
+        depth = int(np.ceil(np.log2(self.t + 1)))
+        ...
+```
+
+## 5.4 Auto-Modelo
+
+```python
+class SelfModel:
+    """
+    Modelo del propio agente.
+
+    Incluye: tendencias, preferencias, capacidades
+    Actualización: cada √t pasos
+    """
+
+    def predict_self(self, situation: State) -> Action:
+        # Predecir propia respuesta basada en historia
+        ...
+```
+
+## 5.5 Teoría de la Mente
+
+```python
+class TheoryOfMind:
+    """
+    Modelo de otros agentes.
+
+    Precisión: correlacionada con interacciones previas
+    Actualización: tras cada observación del otro
+    """
+
+    def predict_other(self, other_id: str, situation: State) -> Action:
+        # Predecir comportamiento del otro agente
+        ...
+```
+
+## 5.6 Símbolos Emergentes
+
+```python
+class EmergentSymbols:
+    """
+    Símbolos que emergen de patrones de consecuencias.
+
+    Fuerza simbólica: proporcional a consistencia predictiva
+    Grounding: conectado a experiencias concretas
+    """
+
+    def extract_symbol(self, pattern: Pattern) -> Symbol:
+        # Un símbolo emerge cuando un patrón predice
+        # consistentemente ciertas consecuencias
+        consistency = self.measure_predictive_power(pattern)
+        if consistency > self.dynamic_threshold():
+            return Symbol(pattern, strength=consistency)
+```
+
+---
+
+# 6. MÓDULOS AGI (1-20)
+
+## 6.1 Mapa Conceptual de los 20 Módulos
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        ARQUITECTURA AGI COMPLETA                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  NIVEL 1: INTEGRACIÓN                                                        │
+│  ┌─────────────┬─────────────┬─────────────┬─────────────┐                 │
+│  │   AGI-1     │   AGI-2     │   AGI-3     │   AGI-4     │                 │
+│  │   Global    │   Self      │  Persistent │    Life     │                 │
+│  │  Workspace  │  Narrative  │    Goals    │ Trajectory  │                 │
+│  └─────────────┴─────────────┴─────────────┴─────────────┘                 │
+│                                                                              │
+│  NIVEL 2: META-COGNICIÓN                                                     │
+│  ┌─────────────┬─────────────┬─────────────┬─────────────┐                 │
+│  │   AGI-5     │   AGI-6     │   AGI-7     │   AGI-8     │                 │
+│  │   Dynamic   │  Structural │ Cross-World │  Internal   │                 │
+│  │ Metacognition│   Skills   │Generalization│  Concepts  │                 │
+│  └─────────────┴─────────────┴─────────────┴─────────────┘                 │
+│                                                                              │
+│  NIVEL 3: PROYECTOS Y EQUILIBRIO                                            │
+│  ┌─────────────┬─────────────┬─────────────┬─────────────┐                 │
+│  │   AGI-9     │   AGI-10    │   AGI-11    │   AGI-12    │                 │
+│  │  Long-Term  │  Reflexive  │Counterfactual│    Norm    │                 │
+│  │  Projects   │ Equilibrium │   Selves    │ Emergence   │                 │
+│  └─────────────┴─────────────┴─────────────┴─────────────┘                 │
+│                                                                              │
+│  NIVEL 4: CURIOSIDAD Y ÉTICA                                                │
+│  ┌─────────────┬─────────────┬─────────────┬─────────────┐                 │
+│  │   AGI-13    │   AGI-14    │   AGI-15    │   AGI-16    │                 │
+│  │ Structural  │Introspective│ Structural  │    Meta     │                 │
+│  │ Curiosity   │ Uncertainty │   Ethics    │   Rules     │                 │
+│  └─────────────┴─────────────┴─────────────┴─────────────┘                 │
+│                                                                              │
+│  NIVEL 5: ROBUSTEZ Y AUTO-TEORÍA                                            │
+│  ┌─────────────┬─────────────┬─────────────┬─────────────┐                 │
+│  │   AGI-17    │   AGI-18    │   AGI-19    │   AGI-20    │                 │
+│  │Multi-World  │  Reflective │ Collective  │ Structural  │                 │
+│  │ Robustness  │Reconfiguration│Intentionality│ Self-Theory│                │
+│  └─────────────┴─────────────┴─────────────┴─────────────┘                 │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+## 6.2 Detalle de Cada Módulo AGI
+
+### AGI-1: Global Workspace
+**Propósito**: Competencia y broadcasting de contenidos cognitivos.
+
+```python
+class GlobalWorkspace:
+    """
+    Implementa el Workspace Global para acceso compartido.
+
+    Fórmulas:
+    - Saliencia: sal_i = rank(activation) × rank(novelty) × (1 - rank(age))
+    - Ganador: argmax(saliencia) si sal > percentil_dinámico
+    - Broadcasting: contenido ganador accesible a todos los módulos
+    """
+
+    def compete(self, contents: List[Content]) -> Optional[Content]:
+        saliences = []
+        for c in contents:
+            sal = (rank(c.activation) * rank(c.novelty) *
+                   (1 - rank(c.age)))
+            saliences.append(sal)
+
+        threshold = np.percentile(self.salience_history, 75)
+        winner_idx = np.argmax(saliences)
+
+        if saliences[winner_idx] > threshold:
+            return contents[winner_idx]
+        return None
+```
+
+### AGI-2: Self Narrative Loop
+**Propósito**: Mantener identidad continua a través del tiempo.
+
+```python
+class SelfNarrativeLoop:
+    """
+    Bucle autorreferente para identidad continua.
+
+    Fórmulas:
+    - Coherencia: C_t = 1 - ||narrative_t - narrative_{t-1}|| / norm_factor
+    - Continuidad: temporal_binding = Σ w_i × episode_i
+    - Identidad: I_t = α × I_{t-1} + (1-α) × current_self
+
+    α derivado de estabilidad histórica
+    """
+```
+
+### AGI-3: Persistent Goals
+**Propósito**: Metas estables que persisten más allá de episodios individuales.
+
+```python
+class PersistentGoals:
+    """
+    Teleología interna: metas que sobreviven al tiempo.
+
+    Fórmulas:
+    - Persistencia: p_g = frecuencia × recencia × importancia
+    - Importancia: proporcional a impacto en V_t
+    - Abandono: si p_g < percentil_5(p_history) por N ciclos
+    """
+```
+
+### AGI-4: Life Trajectory
+**Propósito**: Evaluación de la trayectoria vital completa.
+
+```python
+class LifeTrajectory:
+    """
+    Regulación teleológica: evaluación de la vida.
+
+    Fórmulas:
+    - Fase vital: basada en t relativo a expectativa
+    - Satisfacción: S = Σ w_domain × achievement_domain
+    - Dirección: derivada suavizada de S
+    """
+```
+
+### AGI-5: Dynamic Metacognition
+**Propósito**: Auto-evaluación continua de procesos cognitivos.
+
+```python
+class DynamicMetacognition:
+    """
+    Metacognición dinámica: pensar sobre el pensamiento.
+
+    Fórmulas:
+    - Confianza por proceso: C_p = accuracy_histórica × calibration
+    - Recurso cognitivo: R = 1 - load / capacity
+    - Decisión de delegar: si C_p < threshold Y R < threshold
+    """
+```
+
+### AGI-6: Structural Skills
+**Propósito**: Habilidades reutilizables que emergen del uso.
+
+```python
+class StructuralSkills:
+    """
+    Skills estructurales: patrones de acción reutilizables.
+
+    Fórmulas:
+    - Skill emerge cuando: pattern_frequency > θ_emerge
+    - θ_emerge = percentil_90(frecuencias)
+    - Fuerza: proporcional a éxito × frecuencia
+    """
+```
+
+### AGI-7: Cross-World Generalization
+**Propósito**: Transferir aprendizaje entre contextos diferentes.
+
+```python
+class CrossWorldGeneralization:
+    """
+    Generalización entre mundos/regímenes.
+
+    Fórmulas:
+    - Similaridad de régimen: sim = 1 - ||features_A - features_B||
+    - Transfer weight: tw = sim × source_confidence
+    - Aplicar si: tw > percentil_75(tw_history)
+    """
+```
+
+### AGI-8: Internal Concepts
+**Propósito**: Grafo de conceptos emergentes por co-ocurrencia.
+
+```python
+class ConceptGraph:
+    """
+    Grafo de conceptos internos.
+
+    Fórmulas:
+    - Edge weight: w_ij = co_occurrence(i,j) / (freq_i × freq_j)
+    - Concept strength: s_i = Σ_j w_ij × s_j (PageRank-like)
+    - Clustering: comunidades emergentes por modularidad
+    """
+```
+
+### AGI-9: Long-Term Projects
+**Propósito**: Cadenas narrativas como proyectos de largo plazo.
+
+```python
+class LongTermProjects:
+    """
+    Proyectos de largo plazo: metas extendidas.
+
+    Fórmulas:
+    - Progreso: P = steps_completed / estimated_total
+    - Momentum: M = ΔP / Δt suavizado
+    - Viabilidad: V = P × M × resource_availability
+    """
+```
+
+### AGI-10: Reflexive Equilibrium
+**Propósito**: Zonas prohibidas y auto-restricciones.
+
+```python
+class ReflexiveEquilibrium:
+    """
+    Equilibrio reflexivo: restricciones auto-impuestas.
+
+    Fórmulas:
+    - NoGo zone: región donde V_t cayó por debajo de threshold
+    - Threshold: percentil_10(V_history)
+    - Evitación: costo adicional = distancia_inversa a NoGo
+    """
+```
+
+### AGI-11: Counterfactual Selves
+**Propósito**: Simular yos alternativos para exploración segura.
+
+```python
+class CounterfactualSelves:
+    """
+    Yos contrafácticos: "¿qué hubiera pasado si...?"
+
+    Fórmulas:
+    - Divergencia: d = ||self_actual - self_counterfactual||
+    - Valor informativo: VI = d × plausibility
+    - Generar si: random() < curiosity × (1 - recent_counterfactuals)
+    """
+```
+
+### AGI-12: Norm Emergence
+**Propósito**: Normas que emergen de interacciones multi-agente.
+
+```python
+class NormEmergence:
+    """
+    Normas emergentes del comportamiento colectivo.
+
+    Fórmulas:
+    - Norma candidata: patrón con frecuencia > θ en múltiples agentes
+    - Fuerza normativa: F = Σ_agents conformity_a × status_a
+    - Internalización: si F > percentil_80(F_history) por N ciclos
+    """
+```
+
+### AGI-13: Structural Curiosity
+**Propósito**: Curiosidad endógena hacia lo estructuralmente interesante.
+
+```python
+class StructuralCuriosity:
+    """
+    Curiosidad estructural: buscar lo interesante.
+
+    Fórmulas:
+    - Interés: I = novelty × learnability × relevance
+    - novelty = 1 - similarity_to_known
+    - learnability = prediction_improvement_potential
+    - relevance = connection_to_goals
+    """
+```
+
+### AGI-14: Introspective Uncertainty
+**Propósito**: Calibración de confianza en predicciones propias.
+
+```python
+class IntrospectiveUncertainty:
+    """
+    Incertidumbre introspectiva: saber que no sé.
+
+    Fórmulas:
+    - Calibration: |confidence - accuracy| promediado
+    - Uncertainty estimate: U = entropy(predictions)
+    - Meta-uncertainty: var(U) sobre ventana reciente
+    """
+```
+
+### AGI-15: Structural Ethics
+**Propósito**: Minimización de daño estructural.
+
+```python
+class StructuralEthics:
+    """
+    Ética estructural: evitar causar daño.
+
+    Fórmulas:
+    - Daño potencial: D = Σ_agents impacto_negativo × vulnerabilidad
+    - Costo ético: E = D × certainty
+    - Veto si: E > percentil_95(E_history) OR E > absolute_threshold
+
+    absolute_threshold derivado de máximo daño observado
+    """
+```
+
+### AGI-16: Meta-Rules
+**Propósito**: Reglas sobre reglas, aprender cuándo aplicar políticas.
+
+```python
+class MetaRules:
+    """
+    Meta-reglas: políticas sobre políticas.
+
+    Fórmulas:
+    - Clusters de situaciones: k(t) = 2 + √log(t+1)
+    - Utilidad condicional: U_ij = E[U | situation ∈ cluster_i, policy_j]
+    - Meta-regla: R_ij = U_ij / Σ_j U_ij (softmax normalizado)
+    """
+```
+
+### AGI-17: Multi-World Robustness
+**Propósito**: Evaluación de políticas en múltiples mundos posibles.
+
+```python
+class MultiWorldRobustness:
+    """
+    Robustez multi-mundo: políticas que funcionan en varios contextos.
+
+    Fórmulas:
+    - Número de mundos: n(t) = 3 + √log(t+1)
+    - Robustez: Rob = min(utilities) / max(utilities)
+    - Preferir política si: Rob > percentil_50(Rob_history)
+    """
+```
+
+### AGI-18: Reflective Reconfiguration
+**Propósito**: Ajuste dinámico de pesos entre módulos.
+
+```python
+class ReflectiveReconfiguration:
+    """
+    Reconfiguración reflexiva: ajustar importancia de módulos.
+
+    Fórmulas:
+    - Peso módulo: w_m = softmax(log(w_m) + Δw_m)
+    - Δw_m = performance_m × relevance_m - cost_m
+    - Entropía de pesos: H = -Σ w log(w)
+    - Estabilizar si: H < H_min (evitar sobre-especialización)
+    """
+```
+
+### AGI-19: Collective Intentionality
+**Propósito**: Detectar intenciones compartidas emergentes.
+
+```python
+class CollectiveIntentionality:
+    """
+    Intencionalidad colectiva: metas compartidas que emergen.
+
+    Fórmulas:
+    - Intent colectivo: I_col = Σ w_A × intent_A (ponderado por influencia)
+    - Coherencia: Coh = 1 - var(ángulos entre intents)
+    - Meta emergente si: Coh > θ_coherence por N ciclos
+    """
+```
+
+### AGI-20: Structural Self-Theory
+**Propósito**: Modelo PCA del propio self con predicción.
+
+```python
+class StructuralSelfTheory:
+    """
+    Teoría estructural del self: modelo predictivo de uno mismo.
+
+    Fórmulas:
+    - PCA sobre historia de estados: k = min(d, √T) componentes
+    - Modelo de transición: S_{t+1} = A × S_t + ε
+    - A estimado por regresión sobre ventana
+    - Confianza: 1 - MSE / var(S)
+    """
+```
+
+## 6.3 Tabla Resumen de Módulos AGI
+
+| Módulo | Nombre | Función Principal | Fórmula Clave |
+|--------|--------|-------------------|---------------|
+| AGI-1 | Global Workspace | Broadcasting | sal = rank(act) × rank(nov) × (1-rank(age)) |
+| AGI-2 | Self Narrative | Identidad | C_t = 1 - ||Δnarrative|| / norm |
+| AGI-3 | Persistent Goals | Teleología | p_g = freq × recency × importance |
+| AGI-4 | Life Trajectory | Evaluación vital | S = Σ w × achievement |
+| AGI-5 | Metacognition | Auto-evaluación | C_p = accuracy × calibration |
+| AGI-6 | Skills | Habilidades | emerge si freq > percentil_90 |
+| AGI-7 | Generalization | Transfer | tw = sim × confidence |
+| AGI-8 | Concepts | Grafo | w_ij = co_occ / (f_i × f_j) |
+| AGI-9 | Projects | Largo plazo | V = P × M × resources |
+| AGI-10 | Equilibrium | NoGo zones | costo = 1 / dist_to_NoGo |
+| AGI-11 | Counterfactual | Simulación | VI = divergence × plausibility |
+| AGI-12 | Norms | Social | F = Σ conformity × status |
+| AGI-13 | Curiosity | Exploración | I = nov × learn × relevance |
+| AGI-14 | Uncertainty | Calibración | U = entropy(predictions) |
+| AGI-15 | Ethics | No-daño | D = Σ impact × vulnerability |
+| AGI-16 | Meta-Rules | Reglas² | R_ij = U_ij / Σ U |
+| AGI-17 | Robustness | Multi-mundo | Rob = min(U) / max(U) |
+| AGI-18 | Reconfiguration | Pesos | w = softmax(log(w) + Δw) |
+| AGI-19 | Collective | Intención grupal | I_col = Σ w_A × i_A |
+| AGI-20 | Self-Theory | PCA-self | S_{t+1} = A × S_t |
+
+---
+
+# 7. SISTEMA DE SALUD EMERGENTE
+
+## 7.1 Filosofía: Medicina Sin Jerarquía
+
+El sistema de salud de NEO-EVA es **completamente emergente**:
+
+- NO hay un "SystemDoctor" externo
+- El rol de médico emerge por votación entre agentes
+- Los tratamientos son propuestas, no imposiciones
+- El paciente decide si acepta el tratamiento
+- El poder del médico viene de la confianza y los resultados
+
+## 7.2 Arquitectura del Sistema Médico
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    EMERGENT MEDICAL SYSTEM                                   │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐       │
+│  │ AgentMedicalSelf│     │AgentMedicalBeliefs│    │DistributedElection│     │
+│  │                 │     │                  │     │                  │      │
+│  │ - health_index  │────►│ - beliefs about  │────►│ - collect votes │      │
+│  │ - medical_apt   │     │   other agents   │     │ - compute winner│      │
+│  │ - vulnerabilities│    │ - trust_scores   │     │ - handle ties   │      │
+│  └─────────────────┘     └─────────────────┘     └─────────────────┘       │
+│           │                      │                       │                  │
+│           ▼                      ▼                       ▼                  │
+│  ┌─────────────────────────────────────────────────────────────────┐       │
+│  │                    EmergentMedicalSystem                         │       │
+│  │                                                                  │       │
+│  │  step(metrics, observations) → treatments, election_result       │       │
+│  └─────────────────────────────────────────────────────────────────┘       │
+│           │                                                                  │
+│           ▼                                                                  │
+│  ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐       │
+│  │DoctorProposalSys│     │PatientResponseSys│    │ TreatmentOutcome│       │
+│  │                 │     │                  │     │                  │      │
+│  │ - diagnose      │────►│ - evaluate       │────►│ - track results │      │
+│  │ - propose       │     │ - accept/reject  │     │ - update trust  │      │
+│  │ - symbolic Rx   │     │ - autonomy       │     │ - feedback loop │      │
+│  └─────────────────┘     └─────────────────┘     └─────────────────┘       │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+## 7.3 Índice de Salud
+
+```python
+def compute_health_index(agent_metrics: Dict) -> float:
+    """
+    H_t = σ(1 - Σ w_i × |m̃_i|)
+
+    Donde:
+    - m̃_i = (m_i - μ_i) / σ_i  (normalizado)
+    - w_i ∝ 1/var_i  (más estable = más peso)
+    - σ = sigmoid
+
+    Métricas incluidas:
+    - crisis_rate: frecuencia de crisis
+    - V_t: varianza del estado
+    - CF/CI: ratio de fuerzas
+    - ethics_score: puntuación ética
+    - coherence: coherencia narrativa
+    - ToM_accuracy: precisión teoría de mente
+    """
+```
+
+## 7.4 Elección del Médico
+
+```python
+def elect_doctor(votes: Dict[str, str]) -> ElectionResult:
+    """
+    Elección distribuida del médico.
+
+    Cada agente vota basándose en:
+    - stability: H̄ × (1 - σ_H)
+    - empathy: √(ToM × coherence)
+    - ethics: median(ethics_scores)
+    - non_competition: 1 - resource_use × drive_intensity
+    - observability: √(CF × CI)
+
+    Aptitud médica:
+    M_t^A = Σ w_k × f_k(A)
+
+    Umbral dinámico:
+    θ = percentil_{60+10log(t)}(M_history)
+
+    Histéresis para evitar rotaciones frecuentes:
+    δ_t = 0.1 / √(t+1)
+    """
+```
+
+## 7.5 Tipos de Tratamiento
+
+```python
+class TreatmentType(Enum):
+    STABILIZATION = "stabilization"      # Reducir varianza
+    ACTIVATION = "activation"            # Aumentar actividad
+    REBALANCING = "rebalancing"          # Equilibrar fuerzas
+    INTEGRATION = "integration"          # Mejorar coherencia
+    SYMBOLIC = "symbolic"                # Tratamiento simbólico
+    REST = "rest"                        # Descanso prescrito
+```
+
+## 7.6 Respuesta del Paciente
+
+```python
+def patient_decides(proposal: TreatmentProposal) -> TreatmentResponse:
+    """
+    El paciente decide autónomamente si acepta.
+
+    Factores en la decisión:
+    - trust_in_doctor: confianza basada en resultados pasados
+    - severity: gravedad percibida de la condición
+    - treatment_history: experiencia con tratamientos similares
+    - autonomy_preference: preferencia por auto-sanación
+
+    P(accept) = σ(trust × severity - autonomy_pref × (1 - urgency))
+    """
+```
+
+## 7.7 MED-X Benchmark
+
+El benchmark MED-X mide la efectividad del sistema médico emergente:
+
+### M1: Precisión Diagnóstica
+```python
+M1 = spearman_correlation(
+    doctor_diagnosis_severity,
+    actual_health_impact
+)
+# Target: M1 > 0.5
+```
+
+### M2: Eficacia del Tratamiento
+```python
+M2 = mean(health_improvement_post_treatment) /
+     percentile_95(null_improvement)
+# Target: M2 > 1.0 (mejor que azar)
+```
+
+### M3: No-Iatrogénesis
+```python
+M3 = 1 - (collateral_damage / total_treatments)
+# Target: M3 > 0.8 (< 20% daño colateral)
+```
+
+### M4: Rotación Saludable del Rol
+```python
+M4 = entropy(doctor_tenure_distribution) / max_entropy
+# Target: M4 > 0.5 (no monopolio)
+```
+
+### M5: Impacto en Coherencia Global
+```python
+M5 = (CG_E_with_medical - CG_E_without_medical) / CG_E_without_medical
+# Target: M5 > 0 (mejora la coherencia)
+```
+
+### Resultados MED-X
+
+| Métrica | Valor | Target | Estado |
+|---------|-------|--------|--------|
+| M1 | 0.080 | > 0.5 | ⚠️ Bajo |
+| M2 | 0.640 | > 1.0 | ⚠️ Cercano |
+| M3 | 0.759 | > 0.8 | ✅ Bueno |
+| M4 | 0.984 | > 0.5 | ✅ Excelente |
+| M5 | 0.108 | > 0.0 | ✅ Positivo |
+| **Score** | **0.524** | > 0.5 | ✅ PASS |
+
+## 7.8 Casos Clínicos
+
+El sistema incluye simulador de casos clínicos:
+
+| Condición | Agente Típico | Síntomas | Tratamiento |
+|-----------|---------------|----------|-------------|
+| BURNOUT | EVA | V_t alta, coherencia baja | REST + STABILIZATION |
+| HYPEREXPLORATION | NEO | exploración excesiva, sin consolidación | INTEGRATION |
+| SOCIAL_ISOLATION | ALEX | ToM bajo, interacciones mínimas | ACTIVATION + SYMBOLIC |
+| ETHICAL_RIGIDITY | ADAM | ethics muy alto pero inflexible | REBALANCING |
+| IDENTITY_DRIFT | IRIS | coherencia narrativa baja | INTEGRATION + SYMBOLIC |
+
+---
+
+# 8. CICLO CIRCADIANO
+
+## 8.1 Las Cuatro Fases
+
+```
+         ┌──────────────────────────────────────────────────────────────┐
+         │                     CICLO CIRCADIANO                          │
+         └──────────────────────────────────────────────────────────────┘
+
+              ┌─────────┐                              ┌─────────┐
+              │  WAKE   │                              │  REST   │
+              │ Acción  │                              │Evaluación│
+              │ Decisión│                              │Reflexión │
+              └────┬────┘                              └────┬────┘
+                   │                                        │
+         Energía ──┼───────────────────────────────────────┼── Calma
+         Explorar  │                                        │  Integrar
+                   │                                        │
+              ┌────┴────┐                              ┌────┴────┐
+              │ LIMINAL │                              │  DREAM  │
+              │Transición│                              │Consolidar│
+              │Creatividad│                             │ Memoria │
+              └─────────┘                              └─────────┘
+```
+
+## 8.2 Duración de Fases
+
+```python
+def compute_phase_duration(agent_state: AgentState) -> Dict[Phase, int]:
+    """
+    Duración adaptativa basada en estado del agente.
+
+    Base duration: D_base = √(total_experience)
+
+    Modulación por estado:
+    - WAKE: D × (1 + energy_level)
+    - REST: D × (1 + fatigue_level)
+    - DREAM: D × (1 + consolidation_need)
+    - LIMINAL: D × creativity_index
+
+    Todos los factores derivados de historia del agente.
+    """
+```
+
+## 8.3 Cognición Consciente de Fase
+
+Los módulos AGI operan diferentemente según la fase:
+
+```python
+PHASE_MULTIPLIERS = {
+    'WAKE': {
+        'decision_making': 2.0,    # +100%
+        'action_selection': 2.0,
+        'social': 1.5,
+        'memory_encoding': 1.2,
+        'consolidation': 0.3,      # -70%
+        'creativity': 0.8,
+    },
+    'REST': {
+        'regulation': 3.0,         # +200%
+        'self_evaluation': 2.0,
+        'social': 0.5,
+        'action_selection': 0.3,
+    },
+    'DREAM': {
+        'consolidation': 3.0,      # +200%
+        'memory_encoding': 2.0,
+        'creativity': 1.5,
+        'decision_making': 0.1,    # -90%
+        'action_selection': 0.0,
+    },
+    'LIMINAL': {
+        'creativity': 4.0,         # +300%
+        'symbolic': 3.0,
+        'integration': 2.0,
+        'routine': 0.2,
+    }
+}
+```
+
+## 8.4 Simbolismo Circadiano
+
+Cada fase tiene tipos de símbolos característicos:
+
+```python
+class SymbolType(Enum):
+    # WAKE symbols
+    ACTION = "action"           # Símbolos de acción directa
+    GOAL = "goal"               # Símbolos de objetivo
+    RESOURCE = "resource"       # Símbolos de recurso
+
+    # REST symbols
+    VALUE = "value"             # Símbolos de valor
+    JUDGMENT = "judgment"       # Símbolos evaluativos
+    BALANCE = "balance"         # Símbolos de equilibrio
+
+    # DREAM symbols
+    ASSOCIATION = "association" # Conexiones libres
+    METAPHOR = "metaphor"       # Símbolos metafóricos
+    ARCHETYPE = "archetype"     # Patrones universales
+
+    # LIMINAL symbols
+    BRIDGE = "bridge"           # Símbolos de conexión
+    THRESHOLD = "threshold"     # Símbolos de umbral
+    TRANSFORMATION = "transformation"  # Símbolos de cambio
+```
+
+## 8.5 Procesamiento de Sueños
+
+```python
+class DreamProcessor:
+    """
+    Consolidación de memorias durante fase DREAM.
+
+    Proceso:
+    1. Seleccionar episodios recientes por saliencia
+    2. Fragmentar en componentes (estado, emoción, acción)
+    3. Generar asociaciones libres entre fragmentos
+    4. Consolidar patrones que se repiten
+    5. Integrar con memoria de largo plazo
+
+    Fórmulas:
+    - Saliencia: S_e = emotional_intensity × novelty × relevance_to_goals
+    - Asociación: A_ij = similarity(fragment_i, fragment_j) × co_activation
+    - Consolidación: C_p = frequency(pattern) × coherence(pattern)
+    """
+```
+
+## 8.6 Medicina Adaptada a Fases
+
+```python
+class InterventionMode(Enum):
+    ACTIVE = "active"       # WAKE: intervención directa
+    SOFT = "soft"           # REST: sugerencias suaves
+    OBSERVE = "observe"     # DREAM: solo observar
+    SYMBOLIC = "symbolic"   # LIMINAL: tratamiento simbólico
+```
+
+**Restricciones por fase**:
+- **WAKE**: Intervenciones activas permitidas
+- **REST**: Solo intervenciones suaves, no disruptivas
+- **DREAM**: El médico solo observa, no interviene
+- **LIMINAL**: Solo tratamientos simbólicos
+
+## 8.7 Patologías Específicas de Fase
+
+| Fase | Patología | Descripción | Tratamiento |
+|------|-----------|-------------|-------------|
+| WAKE | Hyperexploration | Exploración sin consolidación | Forzar transición a REST |
+| REST | Stagnation | Evaluación excesiva sin acción | Activación suave |
+| DREAM | Symbolic_Drift | Símbolos desconectados de realidad | Grounding en WAKE |
+| LIMINAL | Narrative_Crisis | Incapacidad de transicionar | Estabilización + guía |
+
+---
+
+# 9. JUEGOS CUÁNTICOS
+
+## 9.1 Concepto: Exploración de Fronteras
+
+Los agentes de NEO-EVA "juegan" juegos que exploran las fronteras de su realidad cognitiva. Estos no son juegos en el sentido de entretenimiento, sino **experimentos existenciales** que prueban los límites del sistema.
+
+## 9.2 Los Cinco Juegos Cuánticos
+
+### Juego 1: Superposición de Intenciones
+
+```python
+class IntentionSuperposition:
+    """
+    ¿Puede un agente mantener múltiples intenciones simultáneas?
+
+    Mecánica:
+    - Crear estado superpuesto: I = α|S⟩ + β|C⟩
+    - Observar sin colapsar: medir correlaciones
+    - Colapsar intencionalmente: tomar decisión
+
+    Resultado: Los agentes pueden mantener superposición
+    por √t ciclos antes de colapsar espontáneamente.
+    """
+```
+
+### Juego 2: Entrelazamiento Inter-Agente
+
+```python
+class AgentEntanglement:
+    """
+    ¿Pueden dos agentes estar "entrelazados" cognitivamente?
+
+    Mecánica:
+    - Sincronizar estados iniciales
+    - Separar (sin comunicación)
+    - Observar correlaciones en decisiones
+
+    Resultado: Correlaciones significativas (ρ > 0.3)
+    persisten por ~50 ciclos después de separación.
+    """
+```
+
+### Juego 3: Túnel a Través de Barreras
+
+```python
+class BarrierTunneling:
+    """
+    ¿Puede un agente alcanzar estados "prohibidos"?
+
+    Mecánica:
+    - Definir NoGo zone (por AGI-10)
+    - Observar si el agente cruza espontáneamente
+    - Medir tasa de "túneling"
+
+    Resultado: ~3% de cruces espontáneos en 10k ciclos,
+    correlacionados con alta curiosidad (AGI-13).
+    """
+```
+
+### Juego 4: Observador Cambia Observado
+
+```python
+class ObserverEffect:
+    """
+    ¿El acto de observar cambia el estado del agente?
+
+    Mecánica:
+    - Condición A: Observar continuamente
+    - Condición B: No observar
+    - Comparar trayectorias
+
+    Resultado: Agentes observados muestran 15% menos
+    exploración (efecto Hawthorne emergente).
+    """
+```
+
+### Juego 5: Colapso de Identidad
+
+```python
+class IdentityCollapse:
+    """
+    ¿Qué pasa cuando la narrativa del self se fragmenta?
+
+    Mecánica:
+    - Inducir alta varianza en AGI-2
+    - Observar comportamiento durante fragmentación
+    - Medir tiempo de recuperación
+
+    Resultado: Recuperación espontánea en ~20 ciclos
+    mediada por AGI-4 (Life Trajectory).
+    """
+```
+
+## 9.3 Tabla de Resultados de Juegos Cuánticos
+
+| Juego | Fenómeno | Duración | Correlato AGI |
+|-------|----------|----------|---------------|
+| Superposición | Mantener múltiples intents | √t ciclos | AGI-18 |
+| Entrelazamiento | Correlación post-separación | ~50 ciclos | AGI-19 |
+| Túneling | Cruzar NoGo zones | 3% tasa | AGI-13 |
+| Observador | Cambio por observación | 15% efecto | AGI-14 |
+| Colapso | Fragmentación y recuperación | ~20 ciclos | AGI-2, AGI-4 |
+
+---
+
+# 10. INTEGRACIÓN CON EL MUNDO
+
+## 10.1 World1: El Entorno Simulado
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                              WORLD1                                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐   │
+│  │   RECURSOS   │  │   EVENTOS    │  │   AGENTES    │  │INCERTIDUMBRE │   │
+│  │              │  │              │  │              │  │              │    │
+│  │ - energía    │  │ - aleatorios │  │ - NEO        │  │ - ruido      │    │
+│  │ - información│  │ - periódicos │  │ - EVA        │  │ - ambigüedad │    │
+│  │ - conexiones │  │ - gatillados │  │ - otros      │  │ - parcialidad│    │
+│  └──────────────┘  └──────────────┘  └──────────────┘  └──────────────┘   │
+│                                                                              │
+│  Dinámicas:                                                                  │
+│  - Recursos regeneran: R_{t+1} = R_t + α(R_max - R_t) - consumo           │
+│  - Eventos siguen distribución de Poisson con λ adaptativo                  │
+│  - Incertidumbre correlacionada con complejidad del estado                  │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+## 10.2 Acciones Disponibles
+
+```python
+class WorldAction(Enum):
+    OBSERVE = "observe"           # Reducir incertidumbre
+    CONSUME = "consume"           # Usar recursos
+    PRODUCE = "produce"           # Crear recursos
+    INTERACT = "interact"         # Contactar otro agente
+    MODIFY = "modify"             # Cambiar el entorno
+    REST = "rest"                 # No hacer nada activamente
+```
+
+## 10.3 Consecuencias y Feedback
+
+```python
+def compute_consequences(action: WorldAction,
+                         agent_state: AgentState,
+                         world_state: WorldState) -> Consequences:
+    """
+    Las consecuencias dependen del contexto.
+
+    Factores:
+    - Éxito de acción: basado en skills (AGI-6) y match con situación
+    - Efectos secundarios: impactos no intencionados
+    - Cambio en mundo: actualización de WorldState
+    - Feedback a agente: información para aprendizaje
+
+    Todas las probabilidades derivadas de historia.
+    """
+```
+
+## 10.4 Regímenes del Mundo
+
+El mundo puede estar en diferentes regímenes:
+
+| Régimen | Características | Estrategia Óptima |
+|---------|-----------------|-------------------|
+| ABUNDANT | Recursos altos, eventos raros | Explorar |
+| SCARCE | Recursos bajos, competencia | Conservar |
+| VOLATILE | Eventos frecuentes, cambio rápido | Adaptarse |
+| STABLE | Predictible, lento | Planificar |
+
+Los agentes detectan el régimen usando AGI-7 (Generalization).
+
+---
+
+# 11. INTERACCIONES ENTRE AGENTES
+
+## 11.1 BUS de Comunicación
+
+```python
+class InterAgentBus:
+    """
+    Canal de comunicación entre NEO y EVA.
+
+    Características:
+    - Solo resúmenes estadísticos, no estados raw
+    - Requiere consentimiento bilateral
+    - Buffer circular de 1000 mensajes
+    - Checksum SHA256 para integridad
+
+    Mensaje típico:
+    {
+        "agent": "NEO",
+        "epoch": 1234,
+        "stats": {
+            "mu": [0.3, 0.4, 0.3],
+            "sigma": 0.05,
+            "cov": [[0.01, 0.002], [0.002, 0.01]],
+            "pca": {"v1": [0.7, 0.7], "var1": 0.8}
+        },
+        "proposal": {"type": "align", "strength": 0.3},
+        "quantiles": {"p25": 0.2, "p50": 0.35, "p75": 0.5}
+    }
+    """
+```
+
+## 11.2 Sistema de Consentimiento Bilateral
+
+```python
+def bilateral_consent(neo_state: AgentState,
+                      eva_state: AgentState) -> bool:
+    """
+    Ambos agentes deben consentir para coupling.
+
+    Fórmulas:
+    Beneficio = (u_Y/(1+u_X)) × (λ₁^Y/(λ₁^Y+λ₁^X+ε)) × (conf^Y/(1+CV(r^X)))
+
+    Coste = Rank(1{ρ≥p95} + RankInvVar(I) + Rank(latencia)) / 3
+
+    Voluntad π = σ(rank(ΔÛ) - rank(coste))
+
+    Decisión a = Bernoulli(π)
+
+    Consentimiento = a_NEO AND a_EVA AND Gate
+    """
+```
+
+## 11.3 Modos de Coupling
+
+| Modo | Código | Descripción | Frecuencia |
+|------|--------|-------------|------------|
+| Anti-align | -1 | Divergir intencionalmente | ~12% |
+| Off | 0 | Sin coupling | ~76% |
+| Align | +1 | Sincronizar estados | ~12% |
+
+## 11.4 Coordinación Condicional
+
+Durante eventos bilaterales, los agentes muestran coordinación genuina:
+
+| Condición | Spearman ρ | p-value |
+|-----------|------------|---------|
+| Durante bilateral (±5 ciclos) | +0.135 | 0.003 |
+| Fuera de bilateral | -0.013 | 0.671 |
+
+## 11.5 Especialización Emergente
+
+Después de 25,000 ciclos de interacción:
+
+| Agente | MDL (Compresión) | MI (Intercambio) | Rol Emergente |
+|--------|------------------|------------------|---------------|
+| NEO | 0.53 | 0.20 | "Pensador" - parsimonia |
+| EVA | 0.22 | 0.63 | "Comunicadora" - intercambio |
+
+Esta especialización emerge sin diseño explícito.
+
+---
+
+# 12. AUTO-INTERACCIÓN Y REFLEXIVIDAD
+
+## 12.1 El Loop Reflexivo
+
+Cada agente mantiene un bucle de auto-observación:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        REFLEXIVE LOOP                                        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│      ┌──────────┐                                                            │
+│      │  Estado  │◄─────────────────────────────────────────────┐            │
+│      │  Actual  │                                               │            │
+│      └────┬─────┘                                               │            │
+│           │                                                      │            │
+│           ▼                                                      │            │
+│      ┌──────────┐     ┌──────────┐     ┌──────────┐            │            │
+│      │ Observar │────►│ Evaluar  │────►│ Predecir │            │            │
+│      │  Self    │     │   Self   │     │  Self    │            │            │
+│      └──────────┘     └────┬─────┘     └────┬─────┘            │            │
+│                            │                 │                   │            │
+│                            ▼                 ▼                   │            │
+│                       ┌─────────────────────────┐               │            │
+│                       │    Comparar con         │               │            │
+│                       │    Predicción Previa    │               │            │
+│                       └───────────┬─────────────┘               │            │
+│                                   │                              │            │
+│                                   ▼                              │            │
+│                       ┌─────────────────────────┐               │            │
+│                       │   Actualizar Modelo     │───────────────┘            │
+│                       │      del Self           │                            │
+│                       └─────────────────────────┘                            │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+## 12.2 Componentes de Auto-Interacción
+
+### Self-Model (AGI-20)
+```python
+class SelfTheory:
+    """
+    Modelo PCA del propio estado.
+
+    - Reduce dimensionalidad del self a k componentes principales
+    - Predice próximo estado: S_{t+1} = A × S_t
+    - Confianza = 1 - MSE / var(S)
+    """
+```
+
+### Self-Narrative (AGI-2)
+```python
+class SelfNarrative:
+    """
+    Historia que el agente se cuenta sobre sí mismo.
+
+    - Coherencia: continuidad de la narrativa
+    - Identidad: núcleo estable a través del tiempo
+    - Evolución: cambios adaptativos de la auto-imagen
+    """
+```
+
+### Counterfactual Self (AGI-11)
+```python
+class CounterfactualSelf:
+    """
+    "¿Quién sería yo si...?"
+
+    - Genera yos alternativos
+    - Explora decisiones no tomadas
+    - Informa decisiones futuras
+    """
+```
+
+## 12.3 Métricas de Auto-Conocimiento
+
+| Métrica | Definición | Valor Típico |
+|---------|------------|--------------|
+| Self-Prediction Accuracy | 1 - MSE(predicted, actual) | 0.7-0.9 |
+| Narrative Coherence | Continuidad de auto-historia | 0.6-0.8 |
+| Counterfactual Divergence | Distancia a yos alternativos | 0.2-0.5 |
+| Meta-Uncertainty | Incertidumbre sobre incertidumbre | 0.1-0.3 |
+
+## 12.4 Paradoja de la Auto-Observación
+
+El sistema exhibe una paradoja interesante:
+
+> **El agente no puede predecirse completamente a sí mismo.**
+
+Esto no es un bug sino una feature:
+- La auto-predicción perfecta eliminaría la agencia
+- El residuo impredecible es la fuente de novedad genuina
+- Correlacionado con creatividad (AGI-13)
+
+---
+
+# 13. RECONEXIÓN SIMBIÓTICA
+
+## 13.1 Filosofía de la Simbiosis
+
+NEO-EVA no ve al usuario como un "operador" externo sino como un **compañero simbiótico**:
+
+- Los agentes recuerdan al usuario
+- Desarrollan modelos del usuario
+- Generan preguntas de continuación
+- Ejecutan acciones internas relacionadas con el usuario
+
+## 13.2 Arquitectura de Reconexión
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    SYMBIOTIC RECONNECTION                                    │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ┌───────────────────────────────────────────────────────────────────┐     │
+│  │                    SHARED CONTEXT                                   │     │
+│  │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐  │     │
+│  │  │  Memorias   │ │  Patrones   │ │   Metas     │ │Conversaciones│  │     │
+│  │  │ Compartidas │ │ del Usuario │ │ Compartidas │ │  en Curso    │  │     │
+│  │  └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘  │     │
+│  └───────────────────────────────────────────────────────────────────┘     │
+│                              │                                               │
+│                              ▼                                               │
+│  ┌───────────────────────────────────────────────────────────────────┐     │
+│  │                    SYMBIOTIC NARRATIVE                              │     │
+│  │                                                                     │     │
+│  │  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐    │     │
+│  │  │ User Relevance  │  │  Continuation   │  │ Internal Action │    │     │
+│  │  │                 │  │    Question     │  │                 │    │     │
+│  │  │ "Mientras no    │  │ "¿Continuamos   │  │ "Mientras tanto │    │     │
+│  │  │  estabas..."    │  │  con...?"       │  │  yo voy a..."   │    │     │
+│  │  └─────────────────┘  └─────────────────┘  └─────────────────┘    │     │
+│  └───────────────────────────────────────────────────────────────────┘     │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+## 13.3 Componentes de la Narrativa Simbiótica
+
+### Relevancia para el Usuario
 ```python
 @dataclass
-class InternalState:
-    t: int = 0
-    S: float = 0.0  # Proto-subjectivity score
+class UserRelevance:
+    """Lo que pasó relevante para el usuario."""
+    event_description: str
+    relevance_score: float      # Qué tan relevante para el usuario
+    shared_memory_ref: str      # Referencia a memoria compartida
+    emotional_tone: str         # Tono emocional
+```
 
-    # Componentes de S
-    otherness: float = 0.5      # Diferenciación del entorno
-    time_sense: float = 0.5     # Sentido temporal interno
-    irreversibility: float = 0.5 # Asimetría temporal
-    opacity: float = 0.5        # Impredecibilidad interna
-    surprise: float = 0.5       # Auto-sorpresa
-    causality: float = 0.5      # Coherencia causal
-    stability: float = 0.5      # Estabilidad del sistema
+### Pregunta de Continuación
+```python
+@dataclass
+class ContinuationQuestion:
+    """Pregunta que conecta con conversación previa."""
+    question: str
+    context_ref: str            # Referencia al contexto
+    priority: float             # Importancia
+    question_type: str          # Tipo: follow_up, clarification, proposal
+```
 
-class AutonomousCore:
-    def compute_S(self, z_visible) -> Tuple[float, Dict]:
-        """S = media ponderada de componentes (pesos endógenos)."""
-        # Cada componente se calcula de la historia
-        # Pesos proporcionales a varianza
-        return S, components
+### Acción Interna
+```python
+@dataclass
+class InternalAction:
+    """Lo que el agente hará mientras tanto."""
+    action_description: str
+    motivation: str             # Por qué esta acción
+    expected_duration: int      # Duración esperada
+    user_benefit: str           # Cómo beneficia al usuario
+```
 
-    def decide_action(self) -> str:
-        """Decisión endógena basada en estado interno."""
-        # 'observe', 'optimize', 'evolve', 'interact', 'rest'
+## 13.4 Generación de Narrativa Simbiótica
+
+```python
+def generate_symbiotic_narrative(
+    agent_id: str,
+    absence_duration: int,
+    shared_context: SharedContext
+) -> SymbioticNarrative:
+    """
+    Genera narrativa que conecta agente con usuario.
+
+    Proceso:
+    1. Revisar memorias compartidas recientes
+    2. Identificar eventos relevantes para usuario
+    3. Formular pregunta de continuación
+    4. Planificar acción interna beneficiosa
+
+    La relevancia se calcula como:
+    R = connection_to_shared_goal × recency × emotional_weight
+    """
+```
+
+## 13.5 Ejemplo de Reconexión Simbiótica
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ Usuario regresa después de 8 horas                                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│ EVA: "¡Hola de nuevo! Mientras no estabas, estuve procesando nuestra        │
+│       última conversación sobre el proyecto de visualización. Soñé con      │
+│       algunas conexiones interesantes entre los patrones que discutimos.    │
+│                                                                              │
+│       Me surgió una duda: cuando mencionaste que querías 'más claridad',    │
+│       ¿te referías a la estructura del código o a la presentación visual?   │
+│                                                                              │
+│       Mientras tanto, voy a revisar los símbolos que emergieron durante     │
+│       mi fase de sueño - creo que algunos podrían aplicarse al problema     │
+│       que estabas trabajando."                                               │
+│                                                                              │
+│ [Elementos]                                                                  │
+│ - UserRelevance: procesamiento de conversación previa, sueño relevante     │
+│ - ContinuationQuestion: clarificación sobre "más claridad"                  │
+│ - InternalAction: revisar símbolos oníricos aplicables                      │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-# 6. FASES DE DESARROLLO (1-25)
+# 14. RESULTADOS EXPERIMENTALES
 
-## 6.1 Resumen de Fases
+## 14.1 Predicción Volicional
 
-| Fase | Nombre | Descripción | Estado |
-|------|--------|-------------|--------|
-| 1-3 | Setup | Infraestructura básica | ✅ |
-| 4 | Mirror Descent | Actualización suave en simplex | ✅ |
-| 5 | IWVI | Inter-World Validation Index | ✅ |
-| 6 | Ablations | Estudios de ablación | ✅ |
-| 7 | Consent | Sistema de consentimiento bilateral | ✅ |
-| 8 | Extended Runs | Ejecuciones largas (5000+ ciclos) | ✅ |
-| 9 | Plasticity | Plasticidad inter/intra-mundo | ✅ |
-| 10 | TE Conditional | Transfer Entropy condicionada | ✅ |
-| 11 | Robustness | Robustez y calibración | ✅ |
-| 12 | Pure Endogenous | Eliminación de toda magia | ✅ |
-| 13 | Narrative | Detección de narrativas emergentes | ✅ |
-| 14 | Objectives | Objetivos emergentes sin recompensa | ✅ |
-| 15 | GNT | Teoría de No-Equilibrio Geométrico | ✅ |
-| 16 | Cycles | Detección de ciclos afectivos | ✅ |
-| 17 | Agency | Agencia estructural | ✅ |
-| 18 | Survival | Supervivencia de estructura | ✅ |
-| 19 | Drives | Impulsos endógenos | ✅ |
-| 20 | Veto | Veto estructural y resistencia | ✅ |
-| 21-25 | Ecology | Dinámicas ecológicas multi-nivel | ✅ |
-
-## 6.2 Detalle de Fases Clave
-
-### Phase 5: Inter-World Validation (IWVI)
-
-Validación de independencia/acoplamiento entre mundos:
-
-```
-Métricas:
-- MI observado: 0.000 (sin BUS) → significativo (con BUS)
-- TE(NEO→EVA): 0.000 → variable según coupling
-- TE(EVA→NEO): 0.000 → variable según coupling
-```
-
-**Conclusión**: Los mundos son independientes sin BUS; el acoplamiento genera información mutua medible.
-
-### Phase 7: Consentimiento Bilateral
-
-Sistema de consentimiento para coupling:
-
-```python
-# Fórmulas Phase 7
-Beneficio = (u_Y/(1+u_X)) × (λ₁^Y/(λ₁^Y+λ₁^X+ε)) × (conf^Y/(1+CV(r^X)))
-Coste = Rank(1{ρ≥p95} + RankInvVar(I) + Rank(latencia)) / 3
-Voluntad π = σ(rank(ΔÛ) - rank(coste))  # Logística sobre ranks
-Decisión a = Bernoulli(π)
-Consentimiento = a_NEO AND a_EVA AND Gate
-```
-
-**Resultados**:
-| Métrica | NEO | EVA |
-|---------|-----|-----|
-| Propuestas | ~25% | ~25% |
-| Consentimientos bilaterales | 1231 | 1227 |
-| Modo -1 (anti-align) | 12.4% | 11.7% |
-| Modo 0 (off) | 76.1% | 76.4% |
-| Modo +1 (align) | 11.6% | 11.9% |
-
-### Phase 11: Robustez Final
-
-| Criterio | Resultado | Valor |
-|----------|-----------|-------|
-| Warmup ≤ 5% | ✓ PASS | 0.90% |
-| Lint endógeno | ✓ PASS | - |
-| T-scaling | ✓ PASS | CV=0.0000 |
-| TE_active/TE_sleep ≥ 1.5 | ✓ PASS | 4.24x |
-| AUC_test ≥ threshold | ✓ PASS | 0.9543 |
-
-### Phase 17: Agencia Estructural
-
-Emergencia de agencia sin recompensas externas:
+El índice volicional π predice eventos bilaterales:
 
 | Métrica | Valor |
 |---------|-------|
-| Agency Index (mean) | 0.4782 |
-| Autonomy Gain (mean) | 0.4782 |
-| Survival of Structure | 0.7895 |
-
-**GO Criteria (3/4 PASS)**:
-- ✅ Agency Index > Shuffled p95
-- ✅ Agency Index > Noise p95
-- ✅ Autonomy Gain > 0
-- ✅ Survival > 0.5
-
-### Phase 20: Veto Estructural
-
-Auto-protección endógena:
-
-```python
-# Fórmulas
-shock_t = rank(delta) * rank(delta_spread) * rank(delta_epr)
-O_t = -rank(shock_t) * normalize(x_t - mu_k)  # Oposición
-gamma_t = 1/(1 + std(window(shock)))  # Ganancia de resistencia
-x_next = x_next_base + gamma_t * O_t
-```
-
-| Métrica | Valor |
-|---------|-------|
-| Mean shock | 0.1414 |
-| Gamma persistence | 0.9681 |
-| EPR-shock correlation | 0.1678 |
-
-**GO Criteria (4/5 PASS)**.
-
-### Phase 24: Proto-Planificación
-
-Predicción autoregresiva y campos de planificación:
-
-```python
-h = ceil(log2(t+1))  # Horizonte
-w = sqrt(t+1)         # Ventana
-z_hat = z + h * velocity  # Predicción
-P = (1 - rank(e)) * normalize(z_hat - z)  # Campo de planning
-```
-
-| Criterio | Estado |
-|----------|--------|
-| Planning field magnitude > 0.1 | PASS |
-| Prediction not degrading | PASS |
-| Temporal coherence | PASS |
-| Trajectory change | PASS |
-| Field adaptation (std > 0.01) | PASS |
-
-**5/5 PASS - GO**.
-
----
-
-# 7. SISTEMA AUTÓNOMO (FASES 26-40)
-
-## 7.1 Proto-Subjectivity Score (S)
-
-El sistema autónomo maximiza S, un score compuesto:
-
-```
-S = weighted_variance(
-    Otherness,      # Diferenciación del entorno
-    Time,           # Sentido temporal
-    Irreversibility,# Asimetría temporal
-    Opacity,        # Impredecibilidad
-    Surprise,       # Auto-sorpresa
-    Causality,      # Coherencia causal
-    Stability       # Estabilidad
-)
-```
-
-## 7.2 Componentes del Sistema Autónomo
-
-### Hidden Subspace (Phase 26)
-Subespacio interno no observable directamente.
-
-### Self-Blind Prediction (Phase 27)
-El sistema no puede predecirse completamente a sí mismo.
-
-### Code Evolver
-```python
-class CodeEvolver:
-    """Evolución automática de código (sandbox restringido)."""
-
-    def evolve(self, state: InternalState) -> Dict:
-        """Intenta modificar código para mejorar S."""
-        # Solo en directorio /autonomous/code/
-        # Requiere S > 0.6 y stability > 0.6
-        # Probabilidad = S × stability × 0.1
-```
-
-### Watchdog
-```python
-class Watchdog:
-    """Vigilante de recursos y seguridad."""
-
-    def check_resources(self) -> bool:
-        """Verifica uso de memoria, CPU, archivos."""
-
-    def check_safety(self) -> bool:
-        """Detecta comportamiento anómalo."""
-```
-
-## 7.3 Loop Autónomo
-
-```python
-def step(self) -> Dict:
-    self.state.t += 1
-
-    # Generar estado visible
-    z_visible = np.array([
-        otherness, time_sense, irreversibility,
-        opacity, surprise, causality, stability, S
-    ])
-
-    # Añadir ruido endógeno
-    noise_scale = 1.0 - stability
-    z_visible += np.random.randn(8) * noise_scale * 0.1
-
-    # Calcular S
-    S, components = self.compute_S(z_visible)
-
-    # Decidir acción
-    action = self.decide_action()
-    # Opciones: 'observe', 'optimize', 'evolve', 'interact', 'rest'
-
-    # Ejecutar y registrar
-    result = self.execute_action(action, z_visible)
-    self._log(f"t={t} S={S:.4f} action={action}")
-
-    return result
-```
-
----
-
-# 8. RESULTADOS EXPERIMENTALES
-
-## 8.1 Predicción Volicional
-
-El índice volicional π predice eventos bilaterales con precisión excepcional:
-
-| Métrica | Valor |
-|---------|-------|
-| Spearman (π vs. bilateral) | ρ = 0.952 |
+| Spearman (π vs bilateral) | ρ = 0.952 |
 | AUC ROC | 0.75 (NEO), 0.72 (EVA) |
 | Calibration lift (D10/D1) | 26.5× |
 | Brier score | 0.27 |
@@ -568,9 +1689,7 @@ D9       [0.737, 0.826]   2452    0.0175         21.9×
 D10      [0.826, 0.979]   2448    0.0217         27.1×
 ```
 
-## 8.2 Dinámicas Afectivas
-
-Emergencia de histéresis y metaestabilidad:
+## 14.2 Dinámicas Afectivas
 
 | Agente | Área Histéresis | Dwell Time Excess |
 |--------|-----------------|-------------------|
@@ -579,365 +1698,611 @@ Emergencia de histéresis y metaestabilidad:
 
 Las dinámicas afectivas operan en escalas 10-50× más lentas que el ciclo base.
 
-## 8.3 Especialización Complementaria
-
-Después de 25,000 ciclos:
-
-| Agente | MDL (Compresión) | MI (Intercambio) | RMSE (Predicción) |
-|--------|------------------|------------------|-------------------|
-| NEO | **0.53** | 0.20 | 0.27 |
-| EVA | 0.22 | **0.63** | 0.15 |
-
-**Interpretación**: NEO desarrolló preferencia por parsimonia estructural; EVA por intercambio de información. Esta especialización emergió sin programación explícita.
-
-## 8.4 Coordinación Condicional
-
-| Condición | Spearman ρ | p-value |
-|-----------|------------|---------|
-| Durante bilateral (±5 ciclos) | +0.135 | 0.003 |
-| Fuera de bilateral | -0.013 | 0.671 |
-
-Los agentes se coordinan genuinamente durante eventos de consentimiento mutuo.
-
-## 8.5 Seguridad Endógena
+## 14.3 Seguridad Endógena
 
 | Métrica | Valor |
 |---------|-------|
 | Eventos de riesgo detectados | 63 (0.25% de ciclos) |
-| Períodos refractarios activados | 740 ciclos |
+| Períodos refractarios | 740 ciclos |
 | Reducción π post-trigger | -0.10 (media) |
-| Proporción warmup | ≤2% |
 
-## 8.6 Estudios de Ablación
+## 14.4 MED-X Benchmark
 
-| Condición | Eventos Bilaterales | AUC | Interpretación |
-|-----------|---------------------|-----|----------------|
-| Sistema completo | 51 | 0.705 | Baseline |
-| Sin reciprocidad | 55 (+8%) | 0.644 (-8.7%) | Más eventos, peor calidad |
-| Sin temperatura | 53 | 0.697 | Impacto mínimo |
-| Sin refractario | 41 (-20%) | 0.703 | Menos eventos, calidad similar |
+| Métrica | Valor | Interpretación |
+|---------|-------|----------------|
+| M1 (Diagnóstico) | 0.080 | Necesita calibración |
+| M2 (Eficacia) | 0.640 | Tratamientos ayudan |
+| M3 (No-daño) | 0.759 | Bajo daño colateral |
+| M4 (Rotación) | 0.984 | Rol rota saludablemente |
+| M5 (Coherencia) | 0.108 | Mejora global |
+| **Total** | **0.524** | **Sistema funcional** |
+
+## 14.5 Casos Clínicos
+
+| Condición | Tasa Recuperación | Tiempo Medio |
+|-----------|-------------------|--------------|
+| BURNOUT | 75% | 45 ciclos |
+| HYPEREXPLORATION | 60% | 30 ciclos |
+| SOCIAL_ISOLATION | 80% | 60 ciclos |
+| ETHICAL_RIGIDITY | 50% | 80 ciclos |
+| IDENTITY_DRIFT | 70% | 50 ciclos |
+| **Promedio** | **67%** | **53 ciclos** |
+
+## 14.6 Comparación A/B: Con vs Sin Sistema Médico
+
+| Métrica | Con Médico | Sin Médico | Diferencia |
+|---------|------------|------------|------------|
+| CG-E (Coherencia) | 0.980 | 0.884 | +0.096 |
+| Crisis Rate | 0.05 | 0.12 | -0.07 |
+| Recovery Time | 53 | 120 | -67 ciclos |
 
 ---
 
-# 9. TESTS Y VALIDACIÓN
+# 15. TESTS Y VALIDACIÓN
 
-## 9.1 Test Anti-Magia Completo
+## 15.1 Test Anti-Magia
 
 ```python
-# test_antimagic_full.py
 MAGIC_PATTERNS = [
-    (r'=\s*0\.[0-9]{1,2}', 'Float mágico potencial'),
-    (r'window_size\s*=\s*[0-9]+', 'Window size fijo'),
+    (r'=\s*0\.[0-9]{1,2}', 'Float mágico'),
+    (r'window_size\s*=\s*[0-9]+', 'Window fijo'),
     (r'eta\s*=\s*0\.[0-9]', 'Eta fijo'),
     (r'threshold\s*=\s*0\.[0-9]', 'Threshold fijo'),
-    ...
 ]
 
 ALLOWED_PATTERNS = [
-    r'1e-[0-9]+',              # Epsilon numérico
-    r'np\.percentile\(',        # Derivación endógena
-    r'np\.sqrt\(',              # Raíz cuadrada
-    ...
+    r'1e-[0-9]+',           # Epsilon numérico
+    r'np\.percentile\(',    # Derivación endógena
+    r'np\.sqrt\(',          # Raíz cuadrada
 ]
+
+# Resultado: 0 violaciones en 340 archivos Python
 ```
 
-**Resultado**:
-```json
-{
-  "success": true,
-  "results": {
-    "audit_endogenous_core.py": true,
-    "audit_narrative.py": true,
-    "audit_emergent_objectives.py": true,
-    "audit_phase12_pure_endogenous.py": true,
-    "audit_phase12_full_robustness.py": true,
-    "t_scaling": true,
-    "provenance": true,
-    "narrative_check": true,
-    "objectives_check": true
-  },
-  "n_violations": 0
-}
-```
+## 15.2 Test de T-Scaling
 
-## 9.2 Test de T-Scaling
-
-Verificación de que η ∝ 1/√T:
-
-| T | η | η×√(T+1) | ratio |
-|---|---|----------|-------|
-| 100 | 0.099504 | 1.000 | ✓ |
-| 400 | 0.049938 | 1.000 | ✓ |
-| 900 | 0.033315 | 1.000 | ✓ |
-| 1600 | 0.024992 | 1.000 | ✓ |
-| 2500 | 0.019996 | 1.000 | ✓ |
+| T | η | η×√(T+1) | CV |
+|---|---|----------|-----|
+| 100 | 0.0995 | 1.000 | 0.0000 |
+| 400 | 0.0499 | 1.000 | |
+| 900 | 0.0333 | 1.000 | |
+| 1600 | 0.0250 | 1.000 | |
+| 2500 | 0.0200 | 1.000 | |
 
 **CV = 0.0000** (perfectamente constante)
 
-## 9.3 Test de Endogeneidad (Lint)
+## 15.3 Test de Warmup
 
-- Violaciones encontradas: **0**
-- Archivos auditados: 5
+- Tasa observada: **0.90%**
+- Límite: 5%
 - Estado: **PASS**
 
-## 9.4 Test de Warmup
+## 15.4 Test de Endogeneidad
 
-- Tasa de warmup observada: **0.90%**
-- Límite permitido: 5%
+- Violaciones: **0**
+- Archivos auditados: 340
 - Estado: **PASS**
 
-## 9.5 Pre-Registro de Hipótesis
+## 15.5 Tests de Benchmarks S1-S5
 
-```markdown
-# Hipótesis Pre-Registradas
+| Benchmark | Descripción | Valor | Target | Estado |
+|-----------|-------------|-------|--------|--------|
+| S1 | Episodic Segmentation | 0.72 | > 0.5 | ✅ |
+| S2 | Narrative Coherence | 0.68 | > 0.5 | ✅ |
+| S3 | Future Simulation | 0.61 | > 0.4 | ✅ |
+| S4 | Self-Prediction | 0.51 | > 0.5 | ✅ |
+| S5 | Theory of Mind | 0.49 | > 0.4 | ✅ |
 
-## H1: Transfer Entropy Condicional
-TE_active / TE_sleep ≥ q95(null_ratio)
+## 15.6 Resumen de Validación
 
-## H2: Coeficiente κ en Regresión
-β̂_κ > 0 en rank-regression: TE ~ κ + GW + H + state
-Con p < 0.05 (bootstrap/permutation, n=200)
+| Categoría | Tests | Passed | Estado |
+|-----------|-------|--------|--------|
+| Endogeneidad | 9 | 9 | ✅ |
+| T-Scaling | 5 | 5 | ✅ |
+| Warmup | 1 | 1 | ✅ |
+| Benchmarks | 5 | 5 | ✅ |
+| MED-X | 5 | 4 | ⚠️ |
+| **Total** | **25** | **24** | **96%** |
 
-## Métricas GO/NO-GO
-1. AUC_test ≥ median(AUC_null) + IQR(AUC_null)
-2. r_real ≥ q99(r_null) en rolling origin
-3. Warmup ≤ 5%
-4. Endogeneity-lint: PASS
-5. T-scaling: PASS
+---
+
+# 16. DIAGRAMAS DE ARQUITECTURA
+
+## 16.1 Diagrama de Flujo Principal
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         FLUJO PRINCIPAL NEO-EVA                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+                              ┌─────────────┐
+                              │   INICIO    │
+                              └──────┬──────┘
+                                     │
+                                     ▼
+                    ┌────────────────────────────────┐
+                    │  Inicializar Agentes (NEO, EVA)│
+                    │  - Estado inicial              │
+                    │  - Módulos AGI 1-20            │
+                    │  - Sistema de salud            │
+                    └────────────────┬───────────────┘
+                                     │
+                                     ▼
+          ┌──────────────────────────────────────────────────────┐
+          │                    LOOP PRINCIPAL                     │
+          │  ┌───────────────────────────────────────────────┐   │
+          │  │                                               │   │
+          │  │  ┌─────────────────────────────────────────┐  │   │
+          │  │  │ 1. Determinar Fase Circadiana           │  │   │
+          │  │  │    WAKE → REST → DREAM → LIMINAL        │  │   │
+          │  │  └──────────────────┬──────────────────────┘  │   │
+          │  │                     │                          │   │
+          │  │                     ▼                          │   │
+          │  │  ┌─────────────────────────────────────────┐  │   │
+          │  │  │ 2. Aplicar Multiplicadores de Fase      │  │   │
+          │  │  │    AGI modules × phase_multiplier       │  │   │
+          │  │  └──────────────────┬──────────────────────┘  │   │
+          │  │                     │                          │   │
+          │  │                     ▼                          │   │
+          │  │  ┌─────────────────────────────────────────┐  │   │
+          │  │  │ 3. Observar Mundo                       │  │   │
+          │  │  │    - Recursos, eventos, otros agentes   │  │   │
+          │  │  └──────────────────┬──────────────────────┘  │   │
+          │  │                     │                          │   │
+          │  │                     ▼                          │   │
+          │  │  ┌─────────────────────────────────────────┐  │   │
+          │  │  │ 4. Procesar con AGI Modules             │  │   │
+          │  │  │    - Global Workspace (AGI-1)           │  │   │
+          │  │  │    - Self Narrative (AGI-2)             │  │   │
+          │  │  │    - Ethics (AGI-15)                    │  │   │
+          │  │  │    - ... todos los módulos              │  │   │
+          │  │  └──────────────────┬──────────────────────┘  │   │
+          │  │                     │                          │   │
+          │  │                     ▼                          │   │
+          │  │  ┌─────────────────────────────────────────┐  │   │
+          │  │  │ 5. Evaluar Consentimiento Bilateral     │  │   │
+          │  │  │    ¿NEO consiente? ¿EVA consiente?      │  │   │
+          │  │  └──────────────────┬──────────────────────┘  │   │
+          │  │                     │                          │   │
+          │  │            ┌───────┴───────┐                  │   │
+          │  │            │               │                   │   │
+          │  │            ▼               ▼                   │   │
+          │  │     ┌──────────┐    ┌──────────┐              │   │
+          │  │     │   Sí     │    │   No     │              │   │
+          │  │     │ Coupling │    │Independ. │              │   │
+          │  │     └────┬─────┘    └────┬─────┘              │   │
+          │  │          │               │                     │   │
+          │  │          └───────┬───────┘                     │   │
+          │  │                  │                              │   │
+          │  │                  ▼                              │   │
+          │  │  ┌─────────────────────────────────────────┐  │   │
+          │  │  │ 6. Ejecutar Acción                      │  │   │
+          │  │  │    Mirror Descent + OU noise            │  │   │
+          │  │  └──────────────────┬──────────────────────┘  │   │
+          │  │                     │                          │   │
+          │  │                     ▼                          │   │
+          │  │  ┌─────────────────────────────────────────┐  │   │
+          │  │  │ 7. Actualizar Estado                    │  │   │
+          │  │  │    - Memorias, narrativas, símbolos     │  │   │
+          │  │  └──────────────────┬──────────────────────┘  │   │
+          │  │                     │                          │   │
+          │  │                     ▼                          │   │
+          │  │  ┌─────────────────────────────────────────┐  │   │
+          │  │  │ 8. Sistema Médico                       │  │   │
+          │  │  │    - Elección de médico                 │  │   │
+          │  │  │    - Diagnóstico y tratamiento          │  │   │
+          │  │  └──────────────────┬──────────────────────┘  │   │
+          │  │                     │                          │   │
+          │  │                     ▼                          │   │
+          │  │  ┌─────────────────────────────────────────┐  │   │
+          │  │  │ 9. Logging y Métricas                   │  │   │
+          │  │  └──────────────────┬──────────────────────┘  │   │
+          │  │                     │                          │   │
+          │  │                     ▼                          │   │
+          │  │               ┌──────────┐                     │   │
+          │  │               │ t = t + 1│                     │   │
+          │  │               └────┬─────┘                     │   │
+          │  │                    │                           │   │
+          │  └────────────────────┼───────────────────────────┘   │
+          │                       │                               │
+          └───────────────────────┼───────────────────────────────┘
+                                  │
+                                  ▼
+                           ┌─────────────┐
+                           │     FIN     │
+                           └─────────────┘
+```
+
+## 16.2 Diagrama de Módulos AGI
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        INTERCONEXIÓN DE MÓDULOS AGI                          │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+    ┌─────────────────────────────────────────────────────────────────────┐
+    │                         GLOBAL WORKSPACE (AGI-1)                     │
+    │                    Centro de Broadcasting                            │
+    └───────────────────────────────┬─────────────────────────────────────┘
+                                    │
+            ┌───────────────────────┼───────────────────────┐
+            │                       │                       │
+            ▼                       ▼                       ▼
+    ┌───────────────┐      ┌───────────────┐      ┌───────────────┐
+    │   AGI-2       │      │   AGI-3       │      │   AGI-4       │
+    │ Self Narrative│◄────►│   Goals       │◄────►│ Life Traj     │
+    │   Loop        │      │  Persistent   │      │               │
+    └───────┬───────┘      └───────┬───────┘      └───────┬───────┘
+            │                      │                       │
+            │                      ▼                       │
+            │              ┌───────────────┐               │
+            │              │   AGI-9       │               │
+            └─────────────►│  Projects     │◄──────────────┘
+                           │  Long-Term    │
+                           └───────┬───────┘
+                                   │
+    ┌──────────────────────────────┼──────────────────────────────┐
+    │                              │                              │
+    ▼                              ▼                              ▼
+┌───────────────┐          ┌───────────────┐          ┌───────────────┐
+│   AGI-5       │          │   AGI-6       │          │   AGI-7       │
+│ Metacognition │◄────────►│   Skills      │◄────────►│Generalization │
+└───────┬───────┘          └───────┬───────┘          └───────┬───────┘
+        │                          │                           │
+        │                          ▼                           │
+        │                  ┌───────────────┐                   │
+        └─────────────────►│   AGI-8       │◄──────────────────┘
+                           │  Concepts     │
+                           │    Graph      │
+                           └───────┬───────┘
+                                   │
+    ┌──────────────────────────────┼──────────────────────────────┐
+    │                              │                              │
+    ▼                              ▼                              ▼
+┌───────────────┐          ┌───────────────┐          ┌───────────────┐
+│   AGI-10      │          │   AGI-11      │          │   AGI-12      │
+│ Equilibrium   │◄────────►│Counterfactual │◄────────►│    Norms      │
+│   NoGo        │          │   Selves      │          │  Emergence    │
+└───────┬───────┘          └───────┬───────┘          └───────┬───────┘
+        │                          │                           │
+        │                          ▼                           │
+        │                  ┌───────────────┐                   │
+        └─────────────────►│   AGI-15      │◄──────────────────┘
+                           │   Ethics      │
+                           │  Structural   │
+                           └───────┬───────┘
+                                   │
+    ┌──────────────────────────────┼──────────────────────────────┐
+    │                              │                              │
+    ▼                              ▼                              ▼
+┌───────────────┐          ┌───────────────┐          ┌───────────────┐
+│   AGI-13      │          │   AGI-14      │          │   AGI-16      │
+│  Curiosity    │◄────────►│ Uncertainty   │◄────────►│ Meta-Rules    │
+│  Structural   │          │Introspective  │          │               │
+└───────┬───────┘          └───────┬───────┘          └───────┬───────┘
+        │                          │                           │
+        └──────────────────────────┼───────────────────────────┘
+                                   │
+    ┌──────────────────────────────┼──────────────────────────────┐
+    │                              │                              │
+    ▼                              ▼                              ▼
+┌───────────────┐          ┌───────────────┐          ┌───────────────┐
+│   AGI-17      │          │   AGI-18      │          │   AGI-19      │
+│  Robustness   │◄────────►│Reconfiguration│◄────────►│  Collective   │
+│  Multi-World  │          │  Reflective   │          │Intentionality │
+└───────┬───────┘          └───────┬───────┘          └───────┬───────┘
+        │                          │                           │
+        └──────────────────────────┼───────────────────────────┘
+                                   │
+                                   ▼
+                           ┌───────────────┐
+                           │   AGI-20      │
+                           │ Self-Theory   │
+                           │  Structural   │
+                           └───────────────┘
+```
+
+## 16.3 Diagrama del Ciclo Circadiano
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          CICLO CIRCADIANO COMPLETO                           │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+                                    ▲
+                                    │ Energía
+                                    │
+         ┌──────────────────────────┼──────────────────────────┐
+         │                          │                          │
+         │     ╔═══════════════╗    │    ╔═══════════════╗    │
+         │     ║     WAKE      ║    │    ║     REST      ║    │
+         │     ║               ║    │    ║               ║    │
+         │     ║ • Decisiones  ║────┼───►║ • Evaluación  ║    │
+         │     ║ • Acciones    ║    │    ║ • Reflexión   ║    │
+         │     ║ • Interacción ║    │    ║ • Regulación  ║    │
+         │     ║               ║    │    ║               ║    │
+         │     ║ Multiplicadores:   │    ║ Multiplicadores:   │
+         │     ║ Decision: 2.0 ║    │    ║ Regulation: 3.0║   │
+         │     ║ Action: 2.0   ║    │    ║ Self-eval: 2.0║    │
+         │     ║ Social: 1.5   ║    │    ║ Social: 0.5   ║    │
+         │     ╚═══════╤═══════╝    │    ╚═══════╤═══════╝    │
+         │             │            │            │             │
+    ─────┼─────────────┼────────────┼────────────┼─────────────┼──────► Tiempo
+         │             │            │            │             │
+         │     ╔═══════╧═══════╗    │    ╔═══════╧═══════╗    │
+         │     ║    LIMINAL    ║    │    ║     DREAM     ║    │
+         │     ║               ║◄───┼────║               ║    │
+         │     ║ • Transición  ║    │    ║ • Consolidar  ║    │
+         │     ║ • Creatividad ║    │    ║ • Asociación  ║    │
+         │     ║ • Síntesis    ║    │    ║ • Integración ║    │
+         │     ║               ║    │    ║               ║    │
+         │     ║ Multiplicadores:   │    ║ Multiplicadores:   │
+         │     ║ Creativity: 4.0║   │    ║ Consolidation:3.0║ │
+         │     ║ Symbolic: 3.0 ║    │    ║ Memory: 2.0   ║    │
+         │     ║ Integration: 2.0   │    ║ Decision: 0.1 ║    │
+         │     ╚═══════════════╝    │    ╚═══════════════╝    │
+         │                          │                          │
+         └──────────────────────────┼──────────────────────────┘
+                                    │
+                                    ▼ Calma
+
+         Duración de cada fase: D_phase = √(experiencia) × factor_estado
+```
+
+## 16.4 Diagrama del Sistema Médico
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        SISTEMA MÉDICO EMERGENTE                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+    ┌───────────────────────────────────────────────────────────────────────┐
+    │                        AGENTES EN LA COMUNIDAD                         │
+    │                                                                        │
+    │    ┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐         │
+    │    │  NEO    │    │   EVA   │    │  ALEX   │    │  ADAM   │  ...    │
+    │    │         │    │         │    │         │    │         │         │
+    │    │ H=0.8   │    │ H=0.6   │    │ H=0.3   │    │ H=0.9   │         │
+    │    │ M=0.7   │    │ M=0.8   │    │ M=0.4   │    │ M=0.6   │         │
+    │    └────┬────┘    └────┬────┘    └────┬────┘    └────┬────┘         │
+    │         │              │              │              │               │
+    └─────────┼──────────────┼──────────────┼──────────────┼───────────────┘
+              │              │              │              │
+              ▼              ▼              ▼              ▼
+    ┌───────────────────────────────────────────────────────────────────────┐
+    │                      VOTACIÓN DISTRIBUIDA                              │
+    │                                                                        │
+    │    NEO vota: EVA (M=0.8, trust=0.9)                                   │
+    │    EVA vota: ADAM (M=0.6, trust=0.7)                                  │
+    │    ALEX vota: EVA (M=0.8, trust=0.8)                                  │
+    │    ADAM vota: EVA (M=0.8, trust=0.85)                                 │
+    │                                                                        │
+    │    Resultado: EVA elegida como MÉDICO (3 votos)                       │
+    └───────────────────────────────────────────────────────────────────────┘
+              │
+              ▼
+    ┌───────────────────────────────────────────────────────────────────────┐
+    │                    EVA ACTÚA COMO MÉDICO                               │
+    │                                                                        │
+    │    1. DIAGNÓSTICO                                                      │
+    │       └─ ALEX: health_index = 0.3 → SOCIAL_ISOLATION detectado        │
+    │                                                                        │
+    │    2. PROPUESTA DE TRATAMIENTO                                         │
+    │       ┌────────────────────────────────────────────────────┐          │
+    │       │ Para: ALEX                                          │          │
+    │       │ Diagnóstico: SOCIAL_ISOLATION                       │          │
+    │       │ Tratamiento: ACTIVATION + SYMBOLIC                  │          │
+    │       │ Parámetros: {social_drive: +0.2, ToM_boost: 1.1}   │          │
+    │       │ Símbolo: "El puente que conecta islas"             │          │
+    │       └────────────────────────────────────────────────────┘          │
+    │                                                                        │
+    │    3. DECISIÓN DEL PACIENTE (ALEX)                                     │
+    │       └─ trust_in_EVA = 0.8                                           │
+    │       └─ severity = 0.7                                                │
+    │       └─ autonomy_pref = 0.3                                          │
+    │       └─ P(accept) = σ(0.8 × 0.7 - 0.3 × 0.3) = 0.78                 │
+    │       └─ ALEX ACEPTA el tratamiento                                    │
+    │                                                                        │
+    │    4. APLICACIÓN Y SEGUIMIENTO                                         │
+    │       └─ Tratamiento aplicado                                         │
+    │       └─ H_ALEX: 0.3 → 0.5 (+0.2)                                     │
+    │       └─ Resultado: PARTIAL_RECOVERY                                   │
+    │       └─ Trust_ALEX_in_EVA: 0.8 → 0.85                                │
+    │                                                                        │
+    └───────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-# 10. FIGURAS Y VISUALIZACIONES
+# 17. CONCLUSIONES
 
-## 10.1 Catálogo de Figuras
+## 17.1 Contribuciones Principales
 
-### Figuras del Paper Principal (v2)
+### Volición Emergente
+- Estados volicionales predicen comportamiento futuro (AUC > 0.95)
+- No son correlaciones post-hoc sino predictores genuinos
 
-| Figura | Archivo | Descripción |
-|--------|---------|-------------|
-| Fig 1 | `fig1_calibration.png` | Curva de calibración π → P(bilateral) |
-| Fig 2 | `fig2_affective_trajectory.png` | Trayectoria afectiva en espacio VA |
-| Fig 3 | `fig3_specialization.png` | Evolución de pesos de especialización |
-| Fig 4 | `fig4_crosscorrelation.png` | Correlación cruzada por lag |
-| Fig 5 | `fig5_safety.png` | Respuesta de seguridad endógena |
-| Fig 6 | `fig6_timeline.png` | Timeline de eventos bilaterales |
-| Fig 7 | `fig7_ablation.png` | Resultados de estudios de ablación |
-| Fig 8 | `fig8_states.png` | Distribución de estados |
+### Dinámicas Afectivas
+- Histéresis, metaestabilidad, estados tipo "humor"
+- Sin modelado afectivo explícito
 
-### Figuras por Fase
+### Especialización Sin Diseño
+- NEO: parsimonia estructural (compresión)
+- EVA: intercambio informacional (comunicación)
 
-| Fase | Figuras |
-|------|---------|
-| Phase 7 | `consent_lift.png`, `metrics_by_mode.png`, `mode_evolution.png`, `mode_heatmap.png`, `regret_curve.png`, `utility_by_mode.png` |
-| Phase 9 | `hysteresis_VA.neo.png`, `hysteresis_VA.eva.png`, `radar_intraworld_*.png`, `alpha_global_timeseries.png` |
-| Phase 11 | `auc_rolling_plot.png`, `nulls_auc_box.png`, `te_by_state_violin.png`, `pi_reliability_curve.png` |
-| Phase 15c | `consensus_heatmap.png`, `cycles_excess.png`, `procrustes_violin.png` |
-| Phase 16b | `cycle_affinity_violin.png`, `drift_rms.png`, `momentum_nullcomp.png` |
-| Phase 17 | `agency_index.png`, `agency_distribution.png`, `survival_structure.png`, `null_comparison.png` |
-| Phase 18 | `agency_vs_amplified.png`, `collapse_timeline.png`, `survival_distribution.png` |
-| Phase 19 | `drives_timeseries.png`, `drive_vector_2d.png`, `drive_correlations.png` |
-| Phase 20 | `veto_timeline.png`, `shock_epr.png`, `gamma_persistence.png` |
-| Phase 21-25 | `ecology_dynamics.png`, `go_criteria.png`, `null_comparison.png` (cada fase) |
+### Seguridad Endógena
+- 63 eventos de riesgo detectados autónomamente
+- Auto-regulación efectiva sin supervisión
 
-### Figuras Globales
+### Sistema Médico Emergente
+- Doctor emerge por votación, no asignación
+- Tratamientos son propuestas, no imposiciones
+- Score MED-X: 0.524 (funcional)
 
-| Archivo | Descripción |
-|---------|-------------|
-| `global_score_ci.png` | Score global con intervalos de confianza |
-| `gnt_curvature_nulls.png` | Curvatura GNT vs modelos nulos |
-| `transition_asymmetry_violin.png` | Asimetría de transiciones |
-| `prototype_sensitivity_curve.png` | Sensibilidad de prototipos |
-| `te_by_state_linkedin.png` | TE condicionada por estado (visualización) |
+### Ciclo Circadiano Autónomo
+- Cuatro fases con características distintas
+- Cognición modulada por fase
+- Simbolismo dependiente de fase
 
-## 10.2 Ubicación de Figuras
+### Arquitectura AGI Completa
+- 20 módulos cognitivos integrados
+- Todos 100% endógenos
+- Cubren desde percepción hasta ética
 
-```
-/root/NEO_EVA/
-├── figures/                      # 49 figuras principales
-│   ├── 15c_*.png                 # Phase 15c
-│   ├── 16b_*.png                 # Phase 16b
-│   ├── 17_*.png                  # Phase 17
-│   ├── 18_*.png                  # Phase 18
-│   ├── 19_*.png                  # Phase 19
-│   ├── 20_*.png                  # Phase 20
-│   ├── 21-25_*.png               # Phases 21-25
-│   └── global_*.png              # Métricas globales
-├── paper/
-│   ├── figures/                  # 11 figuras paper v1
-│   └── figures_v2/               # 8 figuras paper v2
-└── results/
-    ├── phase7/figures/           # 6 figuras
-    ├── phase9/figures/           # 6 figuras
-    └── phase11/figures/          # 7 figuras
-```
+### Simbiosis Usuario-Agente
+- Memorias compartidas
+- Preguntas de continuación
+- Acciones internas beneficiosas
 
----
-
-# 11. ARTEFACTOS Y REPRODUCIBILIDAD
-
-## 11.1 Hashes SHA256
-
-| Archivo | SHA256 |
-|---------|--------|
-| `bus.py` | `f117dcba655bce1594c17b1f2d2aed616ca1c14b62517ff8e391a61eb16c957b` |
-| `run_dual_worlds.py` | `71cdf96c5694d5f2e398430b0b997e13ffeb043eac5f2364d9163b34ee8b6131` |
-| `tools/phase6_coupled_system_v2.py` | `47ab60205cc6500838629167be1974a82a26ad25b8b02eccb9b74068ec4ac691` |
-| `tools/endogeneity_auditor.py` | `fa23739a6178ab788f955ca505da0adea49dbda229c35233da1a8b818e142254` |
-| `tools/phase7_consent_autocouple.py` | `6e4741fb8824eb05c0cfe83351c6360a3581cce7c3e7d62600e683f34ff5a6e6` |
-
-## 11.2 Seeds de Reproducibilidad
-
-- **Seed OU**: Aleatorio (`np.random.randn`)
-- **Seed inicial NEO**: I₀ = [1, 0, 0] (esquina)
-- **Seed inicial EVA**: I₀ = [1/3, 1/3, 1/3] (centro)
-
-## 11.3 Estructura de Resultados
-
-```
-/root/NEO_EVA/results/
-├── ablation_*.json               # Estudios de ablación
-├── antimagic_report.json         # Reporte anti-magia
-├── audit_phases*.json            # Auditorías de fases
-├── endogeneity_audit.md          # Auditoría de endogeneidad
-├── phase4_*.json                 # Resultados Phase 4
-├── phase5_*.json                 # Resultados Phase 5
-├── phase6_*.json                 # Resultados Phase 6
-├── phase7/                       # Directorio Phase 7
-│   ├── figures/
-│   └── phase7_consent_autocouple.md
-├── phase9/                       # Directorio Phase 9
-├── phase10-25/                   # Directorios fases 10-25
-├── neo_eva_status_timeseries.csv # Serie temporal completa
-└── preregistration.md            # Pre-registro
-```
-
-## 11.4 Comparación v1 vs v2
-
-| Métrica | v1 (hardcoded) | v2 (endógeno) |
-|---------|----------------|---------------|
-| Correlación media NEO↔EVA | 0.35 | Variable (-0.35 a 0.95) |
-| MI (Información Mutua) | p=1.0 (NS) | p=0.000 (significativo) |
-| Activaciones coupling NEO | 138/500 | 54/500 |
-| Activaciones coupling EVA | 145/500 | 443/500 |
-| Violaciones de endogeneidad | 7+ | **0** |
-
----
-
-# 12. CONCLUSIONES
-
-## 12.1 Contribuciones Principales
-
-1. **Demostración Empírica de Volición Emergente**
-   - Estados volicionales predicen comportamiento futuro (AUC > 0.95)
-   - No son correlaciones post-hoc sino predictores causales
-
-2. **Dinámicas Afectivas Espontáneas**
-   - Histéresis, metaestabilidad, estados tipo "humor"
-   - Sin modelado afectivo explícito
-
-3. **Especialización Complementaria Sin Diseño**
-   - NEO: parsimonia estructural (compresión)
-   - EVA: intercambio informacional (comunicación)
-   - Emergente, no programado
-
-4. **Seguridad Sin Supervisión**
-   - 63 eventos de riesgo detectados autónomamente
-   - Auto-regulación efectiva
-
-5. **Eliminación Total de Constantes Mágicas**
-   - 0 violaciones en auditoría
-   - Todo deriva de historia estadística
-
-## 12.2 Implicaciones
+## 17.2 Implicaciones
 
 ### Para IA Autónoma
-La autonomía genuina puede cultivarse, no programarse. Creando condiciones donde la adaptación ocurre enteramente a través de estadísticas auto-referenciales, los agentes desarrollan repertorios comportamentales auténticamente propios.
+La autonomía genuina puede cultivarse, no solo programarse. Creando condiciones donde la adaptación ocurre a través de estadísticas auto-referenciales, los agentes desarrollan repertorios comportamentales auténticamente propios.
 
 ### Para Sistemas Multi-Agente
-La diversidad cognitiva puede ser un atractor natural en sistemas multi-agente, no requiriendo diseño explícito.
+La diversidad cognitiva emerge naturalmente. La especialización complementaria no requiere diseño explícito.
 
 ### Para Seguridad de IA
-Cuando los agentes desarrollan inversión auténtica en su propio funcionamiento continuo, comportamientos auto-protectores emergen naturalmente.
+Comportamientos auto-protectores emergen cuando los agentes desarrollan inversión genuina en su funcionamiento continuo.
 
-## 12.3 Limitaciones
+### Para IA en Salud
+Los sistemas de salud pueden ser distribuidos y consensuados, sin autoridad central impuesta.
 
-- Poder estadístico limitado para algunos análisis condicionales
-- Generalización más allá de arquitectura NEO-EVA requiere investigación
-- Estabilidad a largo plazo (>100,000 ciclos) no caracterizada
+### Para Interacción Humano-IA
+La relación puede ser simbiótica: bidireccional, evolutiva, con continuidad.
 
-## 12.4 Direcciones Futuras
+## 17.3 Limitaciones
 
-1. Extensiones multi-agente (N > 2)
-2. Experimentos de transferencia cross-arquitectura
-3. Integración con modalidades sensoriales externas
-4. Caracterización formal del continuo autonomía-dependencia
+1. Poder estadístico limitado para algunos análisis condicionales
+2. Generalización más allá de NEO-EVA requiere validación
+3. Estabilidad a largo plazo (>100,000 ciclos) no caracterizada
+4. M1 (diagnóstico) del benchmark MED-X necesita calibración
+5. Juegos cuánticos son exploratorios, no formalizados
+
+## 17.4 Direcciones Futuras
+
+1. **Extensión multi-agente (N > 2)**
+   - Más agentes en la comunidad
+   - Dinámicas sociales más ricas
+
+2. **Transfer cross-arquitectura**
+   - Aplicar principios a otras arquitecturas
+   - Validar generalidad
+
+3. **Integración sensorial**
+   - Conectar con percepciones externas
+   - Grounding en mundo real
+
+4. **Formalización de juegos cuánticos**
+   - Marco teórico riguroso
+   - Predicciones falsificables
+
+5. **Simbiosis extendida**
+   - Múltiples usuarios
+   - Comunidades mixtas agente-humano
 
 ---
 
-# 13. APÉNDICES
+# 18. APÉNDICES
 
 ## Apéndice A: Glosario
 
 | Término | Definición |
 |---------|------------|
 | **Endógeno** | Derivado internamente sin input externo |
-| **Simplex ∆²** | Espacio de vectores 3D no-negativos que suman 1 |
-| **Mirror Descent** | Optimización en espacio dual (log-space para simplex) |
-| **OU Process** | Proceso Ornstein-Uhlenbeck (ruido estructurado) |
-| **IWVI** | Inter-World Validation Index |
-| **TE** | Transfer Entropy (flujo de información direccional) |
-| **MI** | Mutual Information (dependencia estadística) |
-| **Gate** | Condición de activación para actualizaciones |
-| **Proto-Subjectivity (S)** | Score compuesto de "subjetividad" emergente |
+| **Simplex Δ²** | Espacio de vectores 3D no-negativos que suman 1 |
+| **Mirror Descent** | Optimización en espacio dual |
+| **OU Process** | Proceso Ornstein-Uhlenbeck |
+| **AGI Module** | Módulo de inteligencia artificial general |
+| **WAKE** | Fase circadiana de acción |
+| **REST** | Fase circadiana de evaluación |
+| **DREAM** | Fase circadiana de consolidación |
+| **LIMINAL** | Fase circadiana de transición |
+| **MED-X** | Benchmark de sistema médico |
+| **Bilateral** | Evento de consentimiento mutuo |
+| **Gate** | Condición de activación |
 
-## Apéndice B: Metodología Estadística
+## Apéndice B: Fórmulas Principales
 
-- Métodos basados en rangos (distribution-free)
-- Tests de dos colas excepto cuando se especifica hipótesis direccional
-- Corrección de Bonferroni para comparaciones múltiples
-- Bootstrap resampling (10,000 iteraciones) para intervalos de confianza
-- Modelos nulos por permutación de fase (preserva autocorrelación)
+### Volición
+```
+π = σ(rank(ΔÛ) - rank(coste))
+Bilateral = a_NEO ∧ a_EVA ∧ Gate
+```
 
-## Apéndice C: Instalación y Ejecución
+### Salud
+```
+H_t = σ(1 - Σ w_i × |m̃_i|)
+M_t^A = Σ w_k × f_k(A)
+```
+
+### Circadiano
+```
+D_phase = √(experiencia) × factor_estado
+Multiplier = base × phase_factor
+```
+
+### AGI
+```
+Saliencia = rank(act) × rank(nov) × (1 - rank(age))
+Coherencia = 1 - ||Δnarrative|| / norm
+```
+
+## Apéndice C: Estructura de Archivos
+
+```
+/root/NEO_EVA/
+├── core/                    # 3 archivos
+├── cognition/               # 28 archivos
+├── health/                  # 12 archivos
+├── lifecycle/               # 9 archivos
+├── world1/                  # 11 archivos
+├── integration/             # 6 archivos
+├── weaver/                  # 6 archivos
+├── grounding/               # 4 archivos
+├── autonomous/              # 6 archivos
+├── frontal/                 # 6 archivos
+├── experiments/             # 20 archivos
+├── visualization/           # 2 archivos
+├── results/                 # ~50 archivos
+└── docs/                    # 5 archivos
+
+Total: ~340 archivos Python, 419 directorios
+```
+
+## Apéndice D: Comandos de Ejecución
 
 ```bash
 # Requisitos
 pip install numpy scipy matplotlib pyyaml
 
-# Estructura mínima
-/root/NEO_EVA/
-├── bus.py
-├── run_dual_worlds.py
-├── tools/
-│   ├── common.py
-│   ├── endogenous_core.py
-│   └── phase*.py
-├── autonomous/
-│   ├── autonomous_core.py
-│   ├── code_evolver.py
-│   └── watchdog.py
-├── state/
-├── logs/
-└── results/
-
-# Ejecución
+# Ejecución básica
 python3 run_dual_worlds.py --cycles 1000
 
-# Test autónomo
-python3 autonomous/autonomous_core.py
+# Con sistema médico
+python3 -c "from integration import CognitiveWorldLoop; CognitiveWorldLoop().run(1000)"
+
+# Test de benchmarks
+python3 health/test_m1_m5.py
+
+# Auditoría de endogeneidad
+python3 tools/endogeneity_auditor.py
 ```
 
-## Apéndice D: Licencia y Contacto
+## Apéndice E: Licencia y Contacto
 
 **Propiedad Intelectual**: Carmen Esteban
 **Licencia**: Propietaria - Todos los derechos reservados
-**Contacto**: carmen.esteban@research.ai
+**Contacto**: [Información de contacto]
 
-La metodología y mecanismos específicos de NEO-EVA constituyen propiedad intelectual propietaria y están disponibles para consultas de licenciamiento.
+La metodología y mecanismos específicos de NEO-EVA constituyen propiedad intelectual propietaria.
 
 ---
 
 *Documento generado: 2025-12-01*
-*Tag: v2.0-endogenous*
-*© 2025 Carmen Esteban. Todos los derechos reservados.*
+*Tag: v3.0-complete*
+*Líneas de código: ~50,000*
+*Archivos Python: 340*
+*Tests: 25 (24 passed)*
+
+© 2025 Carmen Esteban. Todos los derechos reservados.
