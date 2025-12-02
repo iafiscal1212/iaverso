@@ -59,7 +59,7 @@ from .reconnection_narrative import (
 # Phase-Aware Cognition
 from .phase_aware_cognition import (
     PhaseMultipliers,
-    CognitiveModulation,
+    CognitiveModuleState,
     PhaseAwareCognition,
 )
 
@@ -67,9 +67,8 @@ from .phase_aware_cognition import (
 from .circadian_symbolism import (
     SymbolType,
     CircadianSymbol,
-    PhaseSymbolProfile,
-    DreamSymbol,
-    LiminalSymbol,
+    SymbolicDream,
+    SymbolicTransition,
     CircadianSymbolism,
 )
 
@@ -77,18 +76,19 @@ from .circadian_symbolism import (
 from .phase_medicine_integration import (
     PhasePathology,
     InterventionMode,
+    PhaseAwarePathology,
     PhaseAwareTreatment,
-    PhaseHealthState,
+    MedicalObservation,
     PhaseMedicineIntegration,
 )
 
 # Symbiotic Reconnection
 from .symbiotic_reconnection import (
-    UserRelevance,
-    ContinuationQuestion,
-    InternalAction,
+    ReconnectionAction,
+    UserPattern,
+    SharedMemory,
+    SymbioticElement,
     SymbioticNarrative,
-    SharedContext,
     SymbioticReconnection,
 )
 
@@ -117,26 +117,26 @@ __all__ = [
     'ReconnectionNarrativeGenerator',
     # Phase-Aware Cognition
     'PhaseMultipliers',
-    'CognitiveModulation',
+    'CognitiveModuleState',
     'PhaseAwareCognition',
     # Circadian Symbolism
     'SymbolType',
     'CircadianSymbol',
-    'PhaseSymbolProfile',
-    'DreamSymbol',
-    'LiminalSymbol',
+    'SymbolicDream',
+    'SymbolicTransition',
     'CircadianSymbolism',
     # Phase-Medicine Integration
     'PhasePathology',
     'InterventionMode',
+    'PhaseAwarePathology',
     'PhaseAwareTreatment',
-    'PhaseHealthState',
+    'MedicalObservation',
     'PhaseMedicineIntegration',
     # Symbiotic Reconnection
-    'UserRelevance',
-    'ContinuationQuestion',
-    'InternalAction',
+    'ReconnectionAction',
+    'UserPattern',
+    'SharedMemory',
+    'SymbioticElement',
     'SymbioticNarrative',
-    'SharedContext',
     'SymbioticReconnection',
 ]
