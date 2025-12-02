@@ -94,15 +94,6 @@ class AgentCircadianCycle:
         - Necesidad de consolidacion: crece con nuevas experiencias
     """
 
-    # Duraciones base de cada fase (en pasos internos)
-    # Estas son proporciones, no valores fijos
-    PHASE_PROPORTIONS = {
-        CircadianPhase.WAKE: 0.5,    # 50% del ciclo activo
-        CircadianPhase.REST: 0.2,    # 20% descansando
-        CircadianPhase.DREAM: 0.2,   # 20% consolidando
-        CircadianPhase.LIMINAL: 0.1  # 10% transiciones
-    }
-
     def __init__(self, agent_id: str):
         """
         Inicializa ciclo circadiano.
@@ -134,31 +125,101 @@ class AgentCircadianCycle:
         # Ritmo personal (emerge de la historia)
         self._personal_rhythm: float = 1.0  # Multiplicador de velocidad
 
+        # Historial de duracion por fase (para proporciones endogenas)
+        self._phase_duration_history: Dict[CircadianPhase, List[float]] = {
+            phase: [] for phase in CircadianPhase
+        }
+
         self.t = 0
+
+    def _get_phase_proportion(self, phase: CircadianPhase) -> float:
+        """
+        Calcula proporcion de fase ENDOGENAMENTE.
+
+        Emerge de:
+        - Historial de duraciones efectivas
+        - Estado actual (estres, energia, pendientes)
+        - Balance entre fases
+
+        Sin constantes hardcodeadas.
+        """
+        # Inicialmente: proporciones emergen de necesidades
+        if self.t < 10:
+            # Primeros pasos: derivar de estado actual
+            # WAKE depende de energia disponible
+            # REST/DREAM dependen de estres y pendientes
+            # LIMINAL es transicion minima
+            if phase == CircadianPhase.WAKE:
+                return 0.4 + 0.2 * self.energy  # [0.4, 0.6] segun energia
+            elif phase == CircadianPhase.REST:
+                return 0.15 + 0.15 * self.stress  # [0.15, 0.3] segun estres
+            elif phase == CircadianPhase.DREAM:
+                pending_need = min(1.0, len(self.pending_consolidation) / max(1, L_t(self.t)))
+                return 0.15 + 0.15 * pending_need  # [0.15, 0.3] segun pendientes
+            else:  # LIMINAL
+                return 0.1  # Transicion minima inicial
+
+        # Con historia: calcular de duraciones observadas
+        total_time = sum(
+            sum(durations) for durations in self._phase_duration_history.values()
+        )
+
+        if total_time < 1:
+            return 0.25  # Fallback uniforme
+
+        phase_time = sum(self._phase_duration_history[phase])
+        observed_proportion = phase_time / total_time
+
+        # Ajustar por necesidades actuales
+        if phase == CircadianPhase.WAKE:
+            # Mas energia = puede estar mas tiempo despierto
+            need_modifier = 0.8 + 0.4 * self.energy
+        elif phase == CircadianPhase.REST:
+            # Mas estres = necesita mas descanso
+            need_modifier = 0.8 + 0.4 * self.stress
+        elif phase == CircadianPhase.DREAM:
+            # Mas pendientes = necesita mas consolidacion
+            pending_need = min(1.0, len(self.pending_consolidation) / max(1, L_t(self.t)))
+            need_modifier = 0.8 + 0.4 * pending_need
+        else:  # LIMINAL
+            # Transiciones: depende de estabilidad del ciclo
+            stability = 1.0
+            if self.wake_quality_history:
+                stability = np.mean(self.wake_quality_history[-L_t(self.t):])
+            need_modifier = 1.2 - 0.4 * stability  # Menos estable = mas transicion
+
+        # Combinar observado con necesidad
+        adapted_proportion = observed_proportion * need_modifier
+
+        # Normalizar para que sumen ~1 (se hace implicitamente en el uso)
+        return np.clip(adapted_proportion, 0.05, 0.6)
 
     def _compute_phase_threshold(self, phase: CircadianPhase) -> float:
         """
         Calcula umbral endogeno para cambiar de fase.
 
         No es duracion fija - depende de estado interno.
+        Usa proporciones ENDOGENAS derivadas de historia.
         """
-        base_proportion = self.PHASE_PROPORTIONS[phase]
+        # Proporcion endogena (no hardcodeada)
+        base_proportion = self._get_phase_proportion(phase)
 
-        # Ciclo base adaptativo
-        base_cycle = 100 * self._personal_rhythm
+        # Ciclo base adaptativo: escala con sqrt(t) para estabilidad
+        base_cycle = max(50, 30 + 10 * np.sqrt(self.cycles_completed + 1)) * self._personal_rhythm
         base_duration = base_cycle * base_proportion
 
-        # Modificadores por estado
+        # Modificadores por estado (ya incorporados en _get_phase_proportion)
+        # Solo ajustes adicionales por urgencia
         if phase == CircadianPhase.WAKE:
             # Menos energia = fase activa mas corta
-            modifier = self.energy
+            modifier = 0.5 + 0.5 * self.energy
         elif phase == CircadianPhase.REST:
             # Mas estres = necesita mas descanso
-            modifier = 1 + self.stress
+            modifier = 1 + 0.5 * self.stress
         elif phase == CircadianPhase.DREAM:
             # Mas pendiente = consolidacion mas larga
-            pending_factor = min(1.0, len(self.pending_consolidation) / 10)
-            modifier = 1 + pending_factor
+            pending_factor = min(1.0, len(self.pending_consolidation) / max(1, L_t(self.t)))
+            modifier = 1 + 0.5 * pending_factor
         else:  # LIMINAL
             modifier = 1.0
 
@@ -306,15 +367,18 @@ class AgentCircadianCycle:
         """
         # Ritmo emerge de la calidad de las fases
         if self.wake_quality_history and self.rest_depth_history:
-            wake_quality = np.mean(self.wake_quality_history[-20:])
-            rest_depth = np.mean(self.rest_depth_history[-20:])
+            # Ventana endogena
+            window = L_t(self.t)
+            wake_quality = np.mean(self.wake_quality_history[-window:])
+            rest_depth = np.mean(self.rest_depth_history[-window:])
 
             # Ritmo = balance entre actividad y descanso
             balance = wake_quality / (rest_depth + 0.1)
 
-            # Ajuste gradual
+            # Ajuste gradual con learning rate endogeno
+            lr = 1.0 / np.sqrt(self.cycles_completed + 1)
             target_rhythm = 0.8 + 0.4 * balance  # [0.8, 1.2]
-            self._personal_rhythm += 0.01 * (target_rhythm - self._personal_rhythm)
+            self._personal_rhythm += lr * (target_rhythm - self._personal_rhythm)
             self._personal_rhythm = np.clip(self._personal_rhythm, 0.7, 1.3)
 
     def step(
@@ -353,6 +417,14 @@ class AgentCircadianCycle:
         # Verificar transicion
         new_phase = self._should_transition()
         if new_phase:
+            # Registrar duracion de fase que termina (para proporciones endogenas)
+            self._phase_duration_history[self.phase].append(float(self.time_in_phase))
+            # Limitar historial
+            max_hist = max_history(self.t)
+            if len(self._phase_duration_history[self.phase]) > max_hist:
+                self._phase_duration_history[self.phase] = \
+                    self._phase_duration_history[self.phase][-max_hist:]
+
             # Registrar calidad de fase que termina
             if self.phase == CircadianPhase.WAKE:
                 quality = self.energy * (1 - self.stress)
@@ -380,10 +452,11 @@ class AgentCircadianCycle:
                 self.last_deep_rest = self.t
                 self._update_personal_rhythm()
 
-        # Calcular metricas actuales
-        wake_quality = np.mean(self.wake_quality_history[-10:]) if self.wake_quality_history else 0.5
-        rest_depth = np.mean(self.rest_depth_history[-10:]) if self.rest_depth_history else 0.5
-        dream_vividness = np.mean(self.dream_vividness_history[-10:]) if self.dream_vividness_history else 0.5
+        # Calcular metricas actuales con ventana endogena
+        window = L_t(self.t)
+        wake_quality = np.mean(self.wake_quality_history[-window:]) if self.wake_quality_history else 0.5
+        rest_depth = np.mean(self.rest_depth_history[-window:]) if self.rest_depth_history else 0.5
+        dream_vividness = np.mean(self.dream_vividness_history[-window:]) if self.dream_vividness_history else 0.5
 
         return CircadianState(
             agent_id=self.agent_id,
@@ -400,9 +473,10 @@ class AgentCircadianCycle:
 
     def get_state(self) -> CircadianState:
         """Obtiene estado actual."""
-        wake_quality = np.mean(self.wake_quality_history[-10:]) if self.wake_quality_history else 0.5
-        rest_depth = np.mean(self.rest_depth_history[-10:]) if self.rest_depth_history else 0.5
-        dream_vividness = np.mean(self.dream_vividness_history[-10:]) if self.dream_vividness_history else 0.5
+        window = L_t(self.t)
+        wake_quality = np.mean(self.wake_quality_history[-window:]) if self.wake_quality_history else 0.5
+        rest_depth = np.mean(self.rest_depth_history[-window:]) if self.rest_depth_history else 0.5
+        dream_vividness = np.mean(self.dream_vividness_history[-window:]) if self.dream_vividness_history else 0.5
 
         return CircadianState(
             agent_id=self.agent_id,

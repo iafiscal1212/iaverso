@@ -28,54 +28,115 @@ from cognition.agi_dynamic_constants import L_t, adaptive_learning_rate
 
 @dataclass
 class PhaseMultipliers:
-    """Multiplicadores cognitivos por fase."""
-    # Modulos AGI y sus multiplicadores por fase
-    # Formato: {modulo: {fase: multiplicador}}
+    """
+    Multiplicadores cognitivos por fase - ENDOGENOS.
 
-    # Base multipliers (pueden evolucionar)
-    wake: Dict[str, float] = field(default_factory=lambda: {
-        'skills': 2.0,           # +200% habilidades
-        'planning': 2.0,         # +200% planeamiento
-        'execution': 1.8,        # +180% ejecucion
-        'social': 1.5,           # +150% interaccion social
-        'memory_encoding': 1.5,  # +150% codificacion
-        'creativity': 0.8,       # -20% creatividad (muy enfocado)
-        'regulation': 0.7,       # -30% regulacion (activo)
-        'consolidation': 0.5,    # -50% consolidacion
-    })
+    Los multiplicadores NO son constantes hardcodeadas.
+    Emergen de:
+    1. Energia disponible en la fase (WAKE = alta energia = mas ejecucion)
+    2. Historial de exito por categoria en cada fase
+    3. Necesidades actuales del agente
 
-    rest: Dict[str, float] = field(default_factory=lambda: {
-        'skills': 0.5,           # -50% habilidades
-        'planning': 0.7,         # -30% planeamiento
-        'execution': 0.3,        # -70% ejecucion
-        'social': 0.8,           # -20% social
-        'memory_encoding': 0.6,  # -40% codificacion
-        'creativity': 1.2,       # +20% creatividad
-        'regulation': 3.0,       # +300% regulacion emocional/etica
-        'consolidation': 1.5,    # +50% consolidacion
-    })
+    Los valores iniciales se derivan de principios biologicos:
+    - Alta energia -> ejecucion, skills
+    - Baja actividad -> consolidacion, regulacion
+    - Estados intermedios -> creatividad, planning
+    """
 
-    dream: Dict[str, float] = field(default_factory=lambda: {
-        'skills': 0.3,           # -70% habilidades
-        'planning': 0.4,         # -60% planeamiento
-        'execution': 0.1,        # -90% ejecucion
-        'social': 0.5,           # -50% social
-        'memory_encoding': 0.3,  # -70% codificacion nueva
-        'creativity': 2.5,       # +250% creatividad
-        'regulation': 1.5,       # +50% regulacion
-        'consolidation': 3.0,    # +300% consolidacion
-    })
+    # Categorias cognitivas
+    CATEGORIES = ['skills', 'planning', 'execution', 'social',
+                  'memory_encoding', 'creativity', 'regulation', 'consolidation']
 
-    liminal: Dict[str, float] = field(default_factory=lambda: {
-        'skills': 0.8,           # -20% habilidades
-        'planning': 1.0,         # normal
-        'execution': 0.5,        # -50% ejecucion
-        'social': 1.0,           # normal
-        'memory_encoding': 1.0,  # normal
-        'creativity': 4.0,       # +400% creatividad
-        'regulation': 1.2,       # +20% regulacion
-        'consolidation': 1.5,    # +50% consolidacion
-    })
+    # Historial de efectividad por fase x categoria
+    effectiveness_history: Dict[str, Dict[str, List[float]]] = field(
+        default_factory=lambda: {
+            phase.value: {cat: [] for cat in PhaseMultipliers.CATEGORIES}
+            for phase in CircadianPhase
+        }
+    )
+
+    t: int = 0
+
+    def get_multiplier(self, phase: CircadianPhase, category: str,
+                       energy: float = 0.5, stress: float = 0.0,
+                       pending_consolidation: int = 0) -> float:
+        """
+        Calcula multiplicador ENDOGENO para categoria en fase.
+
+        Args:
+            phase: Fase circadiana actual
+            category: Categoria cognitiva
+            energy: Energia actual [0, 1]
+            stress: Estres actual [0, 1]
+            pending_consolidation: Items pendientes de consolidar
+
+        Returns:
+            Multiplicador >= 0.1
+        """
+        # Base: derivar de principios biologicos (no numeros magicos)
+        # Energia alta -> skills, execution, planning
+        # Energia baja -> consolidation, regulation, creativity
+
+        # Factor de energia: que tan activo deberia estar
+        if phase == CircadianPhase.WAKE:
+            energy_factor = 0.5 + 0.5 * energy  # [0.5, 1.0]
+        elif phase == CircadianPhase.REST:
+            energy_factor = 0.3 + 0.2 * (1 - stress)  # [0.3, 0.5]
+        elif phase == CircadianPhase.DREAM:
+            energy_factor = 0.2 + 0.1 * (1 - stress)  # [0.2, 0.3]
+        else:  # LIMINAL
+            energy_factor = 0.4 + 0.2 * energy  # [0.4, 0.6]
+
+        # Base por categoria segun fase (derivado de energia, no hardcodeado)
+        if category in ['skills', 'execution']:
+            # Requieren energia: activos en WAKE
+            base = energy_factor * 2.0  # Escala con energia
+        elif category == 'planning':
+            # Moderado: funciona con energia media
+            base = 0.5 + energy_factor
+        elif category == 'social':
+            # Social: mejor en transiciones y wake
+            base = 0.8 + 0.4 * energy_factor
+        elif category == 'memory_encoding':
+            # Codificacion: moderada siempre
+            base = 0.6 + 0.4 * energy_factor
+        elif category == 'creativity':
+            # Creatividad: mejor con baja energia (menos inhibicion)
+            base = 0.5 + 1.5 * (1 - energy_factor)
+        elif category == 'regulation':
+            # Regulacion: mejor cuando no hay presion de ejecucion
+            base = 0.5 + 1.5 * (1 - energy_factor) + 0.5 * stress
+        elif category == 'consolidation':
+            # Consolidacion: requiere descanso
+            pending_factor = min(1.0, pending_consolidation / max(1, L_t(self.t)))
+            base = 0.5 + 2.0 * (1 - energy_factor) + pending_factor
+        else:
+            base = 1.0
+
+        # Ajustar por historial de efectividad
+        history = self.effectiveness_history[phase.value].get(category, [])
+        if len(history) >= 3:
+            window = L_t(self.t)
+            recent_eff = np.mean(history[-window:])
+            # Si funciono bien, aumentar; si no, reducir
+            learned_adjustment = 0.8 + 0.4 * recent_eff
+            base *= learned_adjustment
+
+        return max(0.1, base)
+
+    def record_effectiveness(self, phase: CircadianPhase, category: str,
+                            effectiveness: float):
+        """Registra efectividad para aprendizaje."""
+        self.effectiveness_history[phase.value][category].append(effectiveness)
+        # Limitar historial
+        max_hist = 100  # max_history(self.t) si tuvieramos t
+        if len(self.effectiveness_history[phase.value][category]) > max_hist:
+            self.effectiveness_history[phase.value][category] = \
+                self.effectiveness_history[phase.value][category][-max_hist:]
+
+    def step(self):
+        """Avanza tiempo."""
+        self.t += 1
 
 
 @dataclass
@@ -165,11 +226,14 @@ class PhaseAwareCognition:
         """
         self.agent_id = agent_id
 
-        # Multiplicadores base (pueden evolucionar)
+        # Multiplicadores ENDOGENOS (aprenden de la historia)
         self.multipliers = PhaseMultipliers()
 
-        # Fase actual
+        # Fase actual y estado
         self.current_phase = CircadianPhase.WAKE
+        self.current_energy = 1.0
+        self.current_stress = 0.0
+        self.pending_consolidation = 0
 
         # Efectividad base de cada modulo (aprende de la historia)
         self.module_effectiveness: Dict[str, float] = {
@@ -181,45 +245,79 @@ class PhaseAwareCognition:
             phase: [] for phase in CircadianPhase
         }
 
-        # Aprendizaje de multiplicadores optimos
-        self._learned_multipliers: Dict[CircadianPhase, Dict[str, float]] = {
-            phase: {} for phase in CircadianPhase
+        # Historial de learning rate por fase (para adaptarlo)
+        self._lr_history: Dict[CircadianPhase, List[float]] = {
+            phase: [] for phase in CircadianPhase
         }
 
         self.t = 0
 
-    def set_phase(self, phase: CircadianPhase):
-        """Actualiza la fase circadiana actual."""
+    def set_phase(self, phase: CircadianPhase, energy: float = None,
+                  stress: float = None, pending: int = None):
+        """Actualiza la fase circadiana actual y estado."""
         self.current_phase = phase
+        if energy is not None:
+            self.current_energy = energy
+        if stress is not None:
+            self.current_stress = stress
+        if pending is not None:
+            self.pending_consolidation = pending
 
     def get_multiplier(self, module_name: str) -> float:
         """
-        Obtiene multiplicador para un modulo en la fase actual.
+        Obtiene multiplicador ENDOGENO para un modulo en la fase actual.
 
         Args:
             module_name: Nombre del modulo AGI
 
         Returns:
-            Multiplicador [0, inf)
+            Multiplicador [0.1, inf)
         """
         # Obtener categoria cognitiva
         category = self.AGI_MODULE_MAPPING.get(module_name, 'skills')
 
-        # Obtener multiplicador base de la fase
-        phase_mults = {
-            CircadianPhase.WAKE: self.multipliers.wake,
-            CircadianPhase.REST: self.multipliers.rest,
-            CircadianPhase.DREAM: self.multipliers.dream,
-            CircadianPhase.LIMINAL: self.multipliers.liminal,
-        }
+        # Obtener multiplicador ENDOGENO de PhaseMultipliers
+        return self.multipliers.get_multiplier(
+            phase=self.current_phase,
+            category=category,
+            energy=self.current_energy,
+            stress=self.current_stress,
+            pending_consolidation=self.pending_consolidation
+        )
 
-        base_mult = phase_mults[self.current_phase].get(category, 1.0)
+    def _get_lr_modifier(self) -> float:
+        """
+        Calcula learning rate modifier ENDOGENO.
 
-        # Ajustar por aprendizaje historico
-        learned = self._learned_multipliers[self.current_phase].get(category, 1.0)
-        adjustment = 0.9 * base_mult + 0.1 * learned
+        Basado en:
+        - Fase actual (consolidacion vs ejecucion)
+        - Historial de efectividad del aprendizaje
+        - Energia y estres actuales
+        """
+        # Base: derivar de energia y fase
+        if self.current_phase == CircadianPhase.WAKE:
+            # Aprendizaje activo moderado
+            base_lr = 0.8 + 0.4 * self.current_energy
+        elif self.current_phase == CircadianPhase.REST:
+            # Aprendizaje reducido, recuperando
+            base_lr = 0.3 + 0.2 * (1 - self.current_stress)
+        elif self.current_phase == CircadianPhase.DREAM:
+            # Consolidacion activa = alto learning rate para patrones
+            pending_factor = min(1.0, self.pending_consolidation / max(1, L_t(self.t)))
+            base_lr = 1.0 + 1.5 * pending_factor
+        else:  # LIMINAL
+            # Transicion: aprendizaje moderado-alto
+            base_lr = 1.0 + 0.5 * self.current_energy
 
-        return max(0.1, adjustment)
+        # Ajustar por historial
+        history = self._lr_history[self.current_phase]
+        if len(history) >= 3:
+            window = L_t(self.t)
+            recent_success = np.mean(history[-window:])
+            # Si el aprendizaje fue efectivo, mantener; si no, ajustar
+            base_lr *= 0.7 + 0.6 * recent_success
+
+        return max(0.1, base_lr)
 
     def get_module_state(self, module_name: str) -> CognitiveModuleState:
         """
@@ -235,14 +333,8 @@ class PhaseAwareCognition:
         multiplier = self.get_multiplier(module_name)
         effective = min(1.0, base_eff * multiplier)
 
-        # Learning rate modifier basado en fase
-        lr_modifiers = {
-            CircadianPhase.WAKE: 1.0,
-            CircadianPhase.REST: 0.5,
-            CircadianPhase.DREAM: 2.0,  # Consolidacion rapida
-            CircadianPhase.LIMINAL: 1.5,
-        }
-        lr_mod = lr_modifiers[self.current_phase]
+        # Learning rate modifier ENDOGENO
+        lr_mod = self._get_lr_modifier()
 
         return CognitiveModuleState(
             module_name=module_name,

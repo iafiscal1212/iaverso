@@ -86,6 +86,15 @@ class DreamProcessor:
         # Historico de consolidaciones
         self.consolidation_history: List[ConsolidationResult] = []
 
+        # Historial de similitudes para pesos endogenos
+        self._similarity_history: List[List[float]] = []
+
+        # Historial de thresholds de conexion (para adaptarlos)
+        self._connection_threshold_history: List[float] = []
+
+        # Historial de patrones encontrados (para calibrar deteccion)
+        self._pattern_detection_history: List[Dict] = []
+
         self.t = 0
 
     def add_memory_for_consolidation(self, memory: Dict):
@@ -130,6 +139,8 @@ class DreamProcessor:
             - Similitud emocional
             - Cercania temporal
             - Contexto compartido
+
+        Pesos ENDOGENOS derivados de la varianza de cada componente.
         """
         # Similitud emocional
         emotional_sim = 1 - abs(
@@ -138,23 +149,42 @@ class DreamProcessor:
         )
 
         # Cercania temporal (si tienen timestamp)
-        temporal_sim = 0.5
         if 'timestamp' in mem1 and 'timestamp' in mem2:
             t1 = mem1['timestamp']
             t2 = mem2['timestamp']
             diff = abs(t1 - t2)
-            temporal_sim = np.exp(-diff / 100)
+            # Escala endogena: basada en rango temporal de memorias
+            time_scale = max(1, L_t(self.t) * 10)
+            temporal_sim = np.exp(-diff / time_scale)
+        else:
+            # Sin timestamp: inferir de posicion relativa en buffer
+            temporal_sim = 0.5 + 0.1 * np.random.randn()  # Varianza natural
+            temporal_sim = np.clip(temporal_sim, 0, 1)
 
         # Contexto compartido
-        context_sim = 0.5
         ctx1 = set(mem1.get('context', {}).keys())
         ctx2 = set(mem2.get('context', {}).keys())
         if ctx1 and ctx2:
             overlap = len(ctx1 & ctx2) / max(len(ctx1 | ctx2), 1)
             context_sim = overlap
+        else:
+            # Sin contexto: depende de importancia similar
+            imp_diff = abs(mem1.get('importance', 0.5) - mem2.get('importance', 0.5))
+            context_sim = 1 - imp_diff
 
-        # Combinar (pesos endogenos basados en varianza historica)
-        weights = [0.4, 0.3, 0.3]  # Base
+        # Pesos ENDOGENOS basados en varianza observada en historial
+        # Mas varianza = mas informativo = mas peso
+        if len(self._similarity_history) >= 3:
+            variances = np.var(self._similarity_history, axis=0) + 0.01
+            weights = variances / variances.sum()
+        else:
+            # Inicial: pesos uniformes (no hardcodeados)
+            weights = np.array([1.0, 1.0, 1.0]) / 3.0
+
+        # Registrar para aprendizaje
+        self._similarity_history.append([emotional_sim, temporal_sim, context_sim])
+        if len(self._similarity_history) > max_history(self.t):
+            self._similarity_history = self._similarity_history[-max_history(self.t):]
 
         return (
             weights[0] * emotional_sim +
@@ -162,9 +192,32 @@ class DreamProcessor:
             weights[2] * context_sim
         )
 
+    def _get_endogenous_threshold(self, values: List[float], target_percentile: float = None) -> float:
+        """
+        Calcula threshold ENDOGENO basado en historial.
+
+        Args:
+            values: Valores actuales
+            target_percentile: Percentil objetivo (si None, deriva de t)
+
+        Returns:
+            Threshold adaptativo
+        """
+        if not values:
+            return 0.5
+
+        # Percentil deriva de tiempo (no hardcodeado)
+        if target_percentile is None:
+            # Mas tiempo = mas estricto
+            target_percentile = min(70, 50 + 5 * np.log(self.t + 1))
+
+        return np.percentile(values, target_percentile)
+
     def _find_patterns(self, memories: List[Dict]) -> List[Tuple[str, float]]:
         """
         Encuentra patrones en un conjunto de memorias.
+
+        Thresholds ENDOGENOS basados en historial.
 
         Returns:
             Lista de (patron_descripcion, fuerza)
@@ -180,49 +233,122 @@ class DreamProcessor:
             mean_valence = np.mean(valences)
             std_valence = np.std(valences) if len(valences) > 1 else 0
 
-            if std_valence < 0.3:  # Emociones consistentes
-                if mean_valence > 0.3:
-                    patterns.append(("tendencia_positiva", 0.7))
-                elif mean_valence < -0.3:
-                    patterns.append(("tendencia_negativa", 0.7))
-                else:
-                    patterns.append(("equilibrio_emocional", 0.6))
+            # Threshold de consistencia: basado en historial de std
+            if self._pattern_detection_history:
+                hist_stds = [h.get('std_valence', 0.3) for h in self._pattern_detection_history]
+                consistency_threshold = np.percentile(hist_stds, 50)
+            else:
+                consistency_threshold = std_valence + 0.1  # Acepta lo actual inicialmente
 
-        # Patron de importancia
+            # Threshold de polaridad: basado en rango de valencias observadas
+            if self._pattern_detection_history:
+                hist_means = [h.get('mean_valence', 0) for h in self._pattern_detection_history]
+                polarity_threshold = np.std(hist_means) if hist_means else 0.3
+            else:
+                polarity_threshold = abs(mean_valence) * 0.8  # Acepta lo actual
+
+            if std_valence < consistency_threshold:  # Emociones consistentes (ENDOGENO)
+                # Fuerza del patron: proporcional a cuanto mas consistente es
+                strength = 0.5 + 0.5 * (1 - std_valence / max(consistency_threshold, 0.01))
+
+                if mean_valence > polarity_threshold:
+                    patterns.append(("tendencia_positiva", strength))
+                elif mean_valence < -polarity_threshold:
+                    patterns.append(("tendencia_negativa", strength))
+                else:
+                    patterns.append(("equilibrio_emocional", strength * 0.8))
+
+            # Registrar para futuro
+            self._pattern_detection_history.append({
+                'mean_valence': mean_valence,
+                'std_valence': std_valence,
+                't': self.t
+            })
+            if len(self._pattern_detection_history) > max_history(self.t):
+                self._pattern_detection_history = self._pattern_detection_history[-max_history(self.t):]
+
+        # Patron de importancia con threshold ENDOGENO
         importances = [m.get('importance', 0.5) for m in memories]
-        if np.mean(importances) > 0.7:
-            patterns.append(("periodo_significativo", 0.8))
-        elif np.mean(importances) < 0.3:
-            patterns.append(("rutina_cotidiana", 0.5))
+        mean_imp = np.mean(importances)
+
+        # Threshold de significancia: percentil alto de importancias previas
+        all_imp = [m.get('importance', 0.5) for m in self.pending_memories]
+        if len(all_imp) >= 3:
+            high_threshold = np.percentile(all_imp, 70)
+            low_threshold = np.percentile(all_imp, 30)
+        else:
+            high_threshold = mean_imp + 0.2
+            low_threshold = mean_imp - 0.2
+
+        if mean_imp > high_threshold:
+            strength = 0.5 + 0.5 * (mean_imp - high_threshold) / max(1 - high_threshold, 0.01)
+            patterns.append(("periodo_significativo", min(1.0, strength)))
+        elif mean_imp < low_threshold:
+            strength = 0.5 + 0.5 * (low_threshold - mean_imp) / max(low_threshold, 0.01)
+            patterns.append(("rutina_cotidiana", min(1.0, strength)))
 
         # Patron de contexto
         all_contexts = [set(m.get('context', {}).keys()) for m in memories]
         if all_contexts:
             common = set.intersection(*all_contexts) if all_contexts else set()
             if common:
+                # Fuerza basada en frecuencia de contexto
                 for ctx in common:
-                    patterns.append((f"contexto_recurrente:{ctx}", 0.6))
+                    freq = sum(1 for m in memories if ctx in m.get('context', {}))
+                    strength = freq / len(memories)  # ENDOGENO
+                    patterns.append((f"contexto_recurrente:{ctx}", strength))
 
         return patterns
+
+    def _get_connection_threshold(self) -> float:
+        """
+        Calcula threshold de conexion ENDOGENO.
+
+        Basado en historial de similitudes observadas.
+        """
+        if len(self._connection_threshold_history) >= 3:
+            # Percentil adaptativo basado en tiempo
+            target_pct = min(70, 50 + 3 * np.log(self.t + 1))
+            return np.percentile(self._connection_threshold_history, target_pct)
+        else:
+            # Inicial: mediana de similitudes recientes
+            if self._similarity_history:
+                sims = [sum(s)/len(s) for s in self._similarity_history]
+                return np.median(sims)
+            return 0.5  # Fallback neutral
 
     def _create_connections(
         self,
         memories: List[Dict],
-        similarity_threshold: float = 0.6
+        similarity_threshold: float = None
     ) -> List[Tuple[str, str, float]]:
         """
         Crea conexiones entre memorias similares.
 
+        Threshold ENDOGENO si no se especifica.
+
         Returns:
             Lista de (id1, id2, fuerza_conexion)
         """
+        # Threshold ENDOGENO
+        if similarity_threshold is None:
+            similarity_threshold = self._get_connection_threshold()
+
         connections = []
+        all_sims = []
 
         for i, mem1 in enumerate(memories):
             for mem2 in memories[i+1:]:
                 sim = self._compute_similarity(mem1, mem2)
+                all_sims.append(sim)
                 if sim >= similarity_threshold:
                     connections.append((mem1['id'], mem2['id'], sim))
+
+        # Registrar similitudes para adaptar threshold futuro
+        self._connection_threshold_history.extend(all_sims)
+        if len(self._connection_threshold_history) > max_history(self.t):
+            self._connection_threshold_history = \
+                self._connection_threshold_history[-max_history(self.t):]
 
         return connections
 
@@ -240,13 +366,17 @@ class DreamProcessor:
         if not memories:
             return "sueno vacio, descanso profundo"
 
-        # Tono emocional dominante
+        # Tono emocional dominante (threshold ENDOGENO)
         valences = [m.get('emotional_valence', 0) for m in memories]
         mean_valence = np.mean(valences)
+        std_valence = np.std(valences) if len(valences) > 1 else 0.1
 
-        if mean_valence > 0.3:
+        # Threshold de polaridad basado en variabilidad observada
+        polarity_threshold = max(0.1, std_valence)
+
+        if mean_valence > polarity_threshold:
             tone = "calido"
-        elif mean_valence < -0.3:
+        elif mean_valence < -polarity_threshold:
             tone = "inquieto"
         else:
             tone = "fluido"

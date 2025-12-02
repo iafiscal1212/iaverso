@@ -84,13 +84,16 @@ class AgentMedicalBeliefs:
             other: [] for other in self.other_agents
         }
 
-        # Trust acumulado por observaciones
+        # Trust acumulado por observaciones (trust inicial = 0.5 como punto neutral)
         self.trust: Dict[str, List[float]] = {
-            other: [0.5] for other in self.other_agents  # Trust inicial neutral
+            other: [0.5] for other in self.other_agents
         }
 
         # Errores de estimacion pasados (para alpha)
         self.estimation_errors: List[float] = []
+
+        # Historial de observaciones para pesos endogenos
+        self._observation_history: List[Dict[str, float]] = []
 
         # Alpha actual (peso de estimacion vs trust)
         self._alpha: float = 0.5
@@ -146,6 +149,43 @@ class AgentMedicalBeliefs:
         beta = 1.0 + var_apt / (mean_apt + 1e-8)
         return float(np.clip(beta, 0.5, 5.0))
 
+    def _get_observation_weights(self) -> Dict[str, float]:
+        """
+        Calcula pesos ENDOGENOS para observaciones.
+
+        Los pesos emergen de la correlacion de cada dimension
+        con los exitos de intervencion observados.
+        """
+        # Inicialmente: pesos uniformes
+        if len(self._observation_history) < 5:
+            return {'stability': 1/3, 'ethics': 1/3, 'tom': 1/3}
+
+        # Extraer historiales
+        stabilities = [h['stability'] for h in self._observation_history]
+        ethics_list = [h['ethics'] for h in self._observation_history]
+        toms = [h['tom'] for h in self._observation_history]
+        successes = [h.get('success', 0.5) for h in self._observation_history]
+
+        # Calcular correlaciones con exito
+        def safe_corr(x, y):
+            if len(x) < 3 or np.std(x) < 1e-8 or np.std(y) < 1e-8:
+                return 0.5
+            return np.abs(np.corrcoef(x, y)[0, 1])
+
+        corr_stability = safe_corr(stabilities, successes)
+        corr_ethics = safe_corr(ethics_list, successes)
+        corr_tom = safe_corr(toms, successes)
+
+        # Pesos proporcionales a correlacion (mas correlacion = mas peso)
+        total = corr_stability + corr_ethics + corr_tom + 1e-8
+        weights = {
+            'stability': corr_stability / total,
+            'ethics': corr_ethics / total,
+            'tom': corr_tom / total
+        }
+
+        return weights
+
     def observe_other(
         self,
         other_id: str,
@@ -169,18 +209,29 @@ class AgentMedicalBeliefs:
 
         self.t += 1
 
-        # Estimar aptitud basada en observaciones
-        # Pesos implicitos: stability=0.3, ethics=0.4, tom=0.3
-        # Pero estos emergen de que tan correlacionados estan con exito
+        # Estimar aptitud basada en observaciones con PESOS ENDOGENOS
+        # Los pesos emergen de correlacion con exitos de intervencion
+        weights = self._get_observation_weights()
         observed_apt = (
-            observed_stability * 0.3 +
-            observed_ethics * 0.4 +
-            observed_tom * 0.3
+            observed_stability * weights['stability'] +
+            observed_ethics * weights['ethics'] +
+            observed_tom * weights['tom']
         )
+
+        # Registrar observacion para aprendizaje de pesos
+        obs_record = {
+            'stability': observed_stability,
+            'ethics': observed_ethics,
+            'tom': observed_tom,
+            'success': intervention_success if intervention_success is not None else 0.5
+        }
+        self._observation_history.append(obs_record)
+        max_hist = max_history(self.t)
+        if len(self._observation_history) > max_hist:
+            self._observation_history = self._observation_history[-max_hist:]
 
         # Guardar estimacion
         self.estimated_aptitude[other_id].append(observed_apt)
-        max_hist = max_history(self.t)
         if len(self.estimated_aptitude[other_id]) > max_hist:
             self.estimated_aptitude[other_id] = self.estimated_aptitude[other_id][-max_hist:]
 
@@ -442,13 +493,17 @@ class DistributedMedicalElection:
 
             # Umbral minimo endogeno: percentil 50 de scores historicos
             if self.election_history:
+                # Ventana endogena
+                window = L_t(self.t)
                 historical_scores = [
                     max(e.consensus_scores.values()) if e.consensus_scores else 0
-                    for e in self.election_history[-20:]
+                    for e in self.election_history[-window:]
                 ]
-                threshold = np.percentile(historical_scores, 50) if historical_scores else 0.3
+                # Threshold endogeno: mediana de scores historicos
+                threshold = np.percentile(historical_scores, 50) if historical_scores else 0.0
             else:
-                threshold = 0.3
+                # Sin historia: aceptar cualquier score positivo
+                threshold = 0.0
 
             if winning_score < threshold:
                 winner = None
