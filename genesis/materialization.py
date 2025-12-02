@@ -202,8 +202,9 @@ class Materializer:
             mean_norm = np.mean([np.linalg.norm(o.form) for o in prev_objects])
             dist_factor = 1 + min_dist / (mean_norm + self.eps)
         else:
-            # Primera materialización: costo base
-            dist_factor = 1.5
+            # Primera materialización: factor = 1 + 1/2 (entre 1 y 2)
+            # Endógeno: punto medio del rango [1, 2]
+            dist_factor = 1 + 1 / 2
 
         cost = base * (1 + complexity) * novelty_factor * dist_factor
 
@@ -264,6 +265,7 @@ class Materializer:
         Determina el tipo de objeto basado en la idea.
 
         Basado en las características de la estructura.
+        Umbrales endógenos: tercios (1/3, 2/3) y mitad (1/2).
         """
         struct = idea.structure
 
@@ -276,15 +278,22 @@ class Materializer:
         symmetry = 1 - np.linalg.norm(struct - struct.T) / (np.linalg.norm(struct) + self.eps)
 
         # Sparsity → link
-        nonzero_ratio = np.count_nonzero(np.abs(struct) > 0.1) / struct.size
+        # Umbral endógeno: percentil basado en estadística de la estructura
+        abs_struct = np.abs(struct)
+        sparsity_threshold = np.percentile(abs_struct, 50)  # Mediana
+        nonzero_ratio = np.count_nonzero(abs_struct > sparsity_threshold) / struct.size
 
-        if nonzero_ratio < 0.2:
+        # Umbrales endógenos basados en tercios
+        LOW = 1 / 3    # ~0.33
+        HIGH = 2 / 3   # ~0.67
+
+        if nonzero_ratio < LOW:
             return ObjectType.LINK
-        elif diag_ratio > 0.7:
+        elif diag_ratio > HIGH:
             return ObjectType.STRUCTURE
-        elif symmetry > 0.8:
+        elif symmetry > HIGH:
             return ObjectType.PATTERN
-        elif idea.coherence > 0.8:
+        elif idea.coherence > HIGH:
             return ObjectType.FIELD
         else:
             return ObjectType.ARTIFACT

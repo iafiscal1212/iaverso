@@ -238,51 +238,59 @@ class CreativePerception:
         Determina el tipo de percepción, intensidad y valencia.
 
         Basado en la combinación de similitud, novedad y distancia.
+        Umbrales endógenos basados en la mediana (1/2) y tercios (1/3, 2/3).
+        Valencia escalada por la métrica dominante en cada caso.
         """
         # Cercanía normalizada (más cerca = más intenso)
         closeness = 1.0 / (1.0 + distance)
 
+        # Umbrales endógenos: mediana y tercios
+        HIGH = 2 / 3  # Umbral alto
+        MID = 1 / 2   # Umbral medio
+        LOW = 1 / 3   # Umbral bajo
+
+        # Valencia endógena: proporcional a la métrica dominante
         # Combinaciones que determinan el tipo
-        if similarity_to_self > 0.8 and novelty < 0.3:
+        if similarity_to_self > HIGH and novelty < LOW:
             # Muy similar y no novel: resonancia
             ptype = PerceptionType.RESONANCE
             intensity = similarity_to_self * closeness
-            valence = 0.7  # Positivo
+            valence = similarity_to_self  # Valencia = similitud
 
-        elif novelty > 0.7 and similarity_to_self > 0.4:
+        elif novelty > HIGH and similarity_to_self > LOW:
             # Muy novel pero algo similar: inspiración
             ptype = PerceptionType.INSPIRATION
             intensity = novelty * closeness
-            valence = 0.9  # Muy positivo
+            valence = (novelty + similarity_to_self) / 2  # Promedio de ambas
 
-        elif novelty > 0.7 and similarity_to_self < 0.3:
+        elif novelty > HIGH and similarity_to_self < LOW:
             # Muy novel y muy diferente: curiosidad o tensión
-            if closeness > 0.5:
+            if closeness > MID:
                 ptype = PerceptionType.TENSION
                 intensity = novelty * closeness
-                valence = -0.3  # Ligeramente negativo
+                valence = similarity_to_self - MID  # Negativo si muy diferente
             else:
                 ptype = PerceptionType.CURIOSITY
-                intensity = novelty * 0.5
-                valence = 0.3  # Ligeramente positivo
+                intensity = novelty * MID
+                valence = novelty * LOW  # Valencia proporcional a novedad
 
-        elif similarity_to_self > 0.5:
+        elif similarity_to_self > MID:
             # Similar: atracción
             ptype = PerceptionType.ATTRACTION
             intensity = similarity_to_self * closeness
-            valence = 0.5
+            valence = similarity_to_self  # Valencia = similitud
 
-        elif similarity_to_self < 0.3 and novelty < 0.3:
+        elif similarity_to_self < LOW and novelty < LOW:
             # Ni similar ni novel: indiferencia
             ptype = PerceptionType.INDIFFERENCE
-            intensity = 0.1
-            valence = 0.0
+            intensity = (similarity_to_self + novelty) / 2  # Promedio de ambas (bajo)
+            valence = 0.0  # Neutral
 
         else:
             # Caso general: curiosidad
             ptype = PerceptionType.CURIOSITY
             intensity = (novelty + closeness) / 2
-            valence = 0.2
+            valence = novelty * LOW  # Valencia proporcional a novedad
 
         return ptype, float(intensity), float(valence)
 
@@ -298,21 +306,26 @@ class CreativePerception:
         - Es novel pero no alienante
         - Resuena algo con la identidad
         - Activa algo en el estado actual
+
+        100% endógeno: pesos por 1/K donde K = número de tipos.
         """
         if perceived.perception_type == PerceptionType.INDIFFERENCE:
             return 0.0
 
         # Base: novedad × similitud (máximo en el punto medio)
+        # 4 = 2² garantiza máximo de 1 cuando novelty=similarity=0.5
         base = 4 * perceived.novelty_for_me * perceived.similarity_to_self
 
-        # Bonus por tipo de percepción
+        # Bonus endógeno por tipo de percepción
+        # Ordenados por cuánto inspiran (peso = rango / K)
+        K = len(PerceptionType)  # 6 tipos
         type_bonus = {
-            PerceptionType.INSPIRATION: 0.5,
-            PerceptionType.CURIOSITY: 0.3,
-            PerceptionType.RESONANCE: 0.2,
-            PerceptionType.ATTRACTION: 0.1,
-            PerceptionType.TENSION: 0.15,  # La tensión también puede inspirar
-            PerceptionType.INDIFFERENCE: 0.0
+            PerceptionType.INSPIRATION: 5 / K,    # Máximo
+            PerceptionType.CURIOSITY: 4 / K,
+            PerceptionType.RESONANCE: 3 / K,
+            PerceptionType.TENSION: 2 / K,        # La tensión también puede inspirar
+            PerceptionType.ATTRACTION: 1 / K,
+            PerceptionType.INDIFFERENCE: 0 / K    # Mínimo
         }
 
         bonus = type_bonus.get(perceived.perception_type, 0)
@@ -326,9 +339,10 @@ class CreativePerception:
         if np.isnan(activation):
             activation = 0
 
-        activation = (activation + 1) / 2  # Normalizar
+        activation = (activation + 1) / 2  # Normalizar a [0, 1]
 
-        potential = base + bonus + 0.2 * activation
+        # Peso de activación = 1/3 (uno de tres componentes)
+        potential = base + bonus + activation / 3
 
         return float(np.clip(potential, 0, 1))
 
@@ -340,6 +354,7 @@ class CreativePerception:
         Calcula la urgencia de interactuar con el objeto.
 
         Basada en intensidad, valencia y distancia.
+        100% endógeno.
         """
         # Intensidad alta + valencia no neutral = urgencia
         urge = perceived.intensity * abs(perceived.valence)
@@ -348,13 +363,16 @@ class CreativePerception:
         closeness = 1.0 / (1.0 + perceived.distance)
         urge *= (1 + closeness)
 
-        # Tipos que generan más urgencia
+        # Tipos que generan más urgencia: multiplicador endógeno
+        # Boost = 1 + 1/K para tipos activos (3 de 6 tipos)
+        K = len(PerceptionType)  # 6 tipos
+        boost_factor = 1 + 1 / K  # ~1.17
         if perceived.perception_type in [
             PerceptionType.INSPIRATION,
             PerceptionType.TENSION,
             PerceptionType.ATTRACTION
         ]:
-            urge *= 1.3
+            urge *= boost_factor
 
         return float(np.clip(urge, 0, 1))
 

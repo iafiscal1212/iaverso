@@ -244,6 +244,7 @@ class IdeaField:
         Detecta el tipo de idea según su origen.
 
         Basado puramente en las características observables.
+        Umbrales endógenos: múltiplos de σ (1σ, 2σ) y fracciones (1/2, 2/3).
         """
         history = self._state_history[agent_id]
 
@@ -256,17 +257,29 @@ class IdeaField:
 
         delta_ratio = delta / (mean_delta + self.eps)
 
+        # Umbrales endógenos
+        # Para delta_ratio: 1/2 = bajo cambio, 2 = alto cambio (simétrico en escala log)
+        # Para novelty: 1σ = mínimo, 2σ = alto (estadístico)
+        # Para coherence: tercios (1/2, 2/3)
+
+        DELTA_LOW = 1 / 2   # Poco cambio
+        DELTA_HIGH = 2      # Gran cambio (inverso de LOW)
+        NOVELTY_HIGH = 2    # 2σ
+        NOVELTY_MID = 3 / 2 # 1.5σ
+        COHERENCE_MID = 1 / 2
+        COHERENCE_HIGH = 2 / 3
+
         # Clasificación endógena
-        if delta_ratio < 0.5 and novelty > 1.5:
+        if delta_ratio < DELTA_LOW and novelty > NOVELTY_MID:
             # Poco cambio pero muy novel: síntesis interna
             return IdeaType.SYNTHESIS
-        elif delta_ratio > 2.0 and coherence > 0.7:
+        elif delta_ratio > DELTA_HIGH and coherence > COHERENCE_HIGH:
             # Gran cambio coherente: resolución de tensión
             return IdeaType.TENSION
-        elif novelty > 2.0 and coherence > 0.5:
+        elif novelty > NOVELTY_HIGH and coherence > COHERENCE_MID:
             # Muy novel y coherente: espontánea
             return IdeaType.SPONTANEOUS
-        elif coherence > 0.8:
+        elif coherence > COHERENCE_HIGH:
             # Muy coherente: resonancia entre componentes
             return IdeaType.RESONANCE
         else:
