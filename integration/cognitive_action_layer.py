@@ -29,6 +29,12 @@ from cognition.agi_dynamic_constants import (
     to_simplex, softmax, normalized_entropy, confidence_from_error
 )
 
+# Importar StructuralEthics para medición de deformación estructural
+from consciousness.structural_ethics import (
+    StructuralEthics, StructuralMetrics,
+    create_metrics_from_agents, predict_metrics_after_action
+)
+
 
 def endogenous_context_dim(n_agents: int) -> int:
     """
@@ -93,6 +99,8 @@ class CognitiveDecision:
     robustness_bonus: float = 0.0 # Bonus por robustez
     collective_alignment: float = 0.0  # Alineación con intención colectiva
     t: int = 0
+    # StructuralEthics: impacto estructural (informativo, NO normativo)
+    structural_impact: float = 0.0  # ΔH_struct de la transición
 
 
 @dataclass
@@ -180,6 +188,11 @@ class CognitiveActionLayer:
         self.robustness_system: Optional[MultiWorldRobustness] = None
         self.collective_intent: Optional[CollectiveIntentionality] = None
 
+        # StructuralEthics: medición de deformación estructural
+        # NO bloquea acciones, NO impone reglas, solo mide
+        self.structural_ethics: Optional[StructuralEthics] = None
+        self._current_structural_metrics: Optional[StructuralMetrics] = None
+
         # Estado interno
         self.current_goal: Optional[np.ndarray] = None
         self.goal_history: List[np.ndarray] = []
@@ -205,7 +218,8 @@ class CognitiveActionLayer:
     def connect_modules(self, self_model=None, tom_system=None,
                        ethics_module=None, planning_module=None,
                        curiosity_module=None, norm_system=None,
-                       robustness_system=None, collective_intent=None):
+                       robustness_system=None, collective_intent=None,
+                       structural_ethics=None):
         """
         Conecta módulos cognitivos externos.
 
@@ -218,6 +232,7 @@ class CognitiveActionLayer:
             norm_system: NormSystem (AGI-12)
             robustness_system: MultiWorldRobustness (AGI-17) - compartido
             collective_intent: CollectiveIntentionality (AGI-19) - compartido
+            structural_ethics: StructuralEthics - sistema de medición estructural (compartido)
         """
         self.self_model = self_model
         self.tom_system = tom_system
@@ -228,6 +243,8 @@ class CognitiveActionLayer:
         # Sistemas compartidos AGI-17 y AGI-19
         self.robustness_system = robustness_system
         self.collective_intent = collective_intent
+        # StructuralEthics: medición de deformación estructural (compartido)
+        self.structural_ethics = structural_ethics
 
     def set_goal(self, goal: np.ndarray):
         """Establece meta actual."""
@@ -329,7 +346,6 @@ class CognitiveActionLayer:
             return float(1.0 - min(1.0, magnitude / (magnitude + 1)))  # Sigmoid suave
 
         # Con módulo: usar evaluación estructural
-        # TODO: Integrar con StructuralEthics
         return self.ethics_module.evaluate(action_candidate, state, others)
 
     def _compute_goal_alignment(self, action_candidate: np.ndarray,
@@ -479,6 +495,95 @@ class CognitiveActionLayer:
         return self.collective_intent.get_alignment_bonus(
             self.agent_name, action_expanded
         )
+
+    def _compute_structural_impact(
+        self,
+        action_candidate: np.ndarray,
+        state: Dict,
+        others: Dict[str, Dict]
+    ) -> float:
+        """
+        Calcula impacto estructural de una acción candidata.
+
+        IMPORTANTE:
+        - Solo devuelve el impacto numérico
+        - NO toma decisiones por el agente
+        - NO bloquea ni favorece acciones
+        - El agente decide libremente qué hacer con esta información
+
+        Args:
+            action_candidate: Acción candidata
+            state: Estado actual
+            others: Estados de otros agentes
+
+        Returns:
+            impact: ΔH_struct
+                > 0: transición estructuralmente conservadora
+                < 0: transición estructuralmente disruptiva
+        """
+        if self.structural_ethics is None:
+            return 0.0
+
+        if self._current_structural_metrics is None:
+            return 0.0
+
+        # Estimar métricas después de la acción
+        # Construcción de impactos desde la acción
+        action_mag = np.linalg.norm(action_candidate)
+
+        # Impacto estimado en coherencia (acciones grandes pueden desestabilizar)
+        impact_coherence = -action_mag / 10  # Estimación conservadora
+
+        # Impacto en delta (diferencia estado-identidad)
+        impact_delta = action_mag / 20
+
+        # Impacto en identidad (acciones disruptivas cambian identidad)
+        impact_identity = 0  # Las acciones normales no cambian identidad directamente
+
+        action_dict = {
+            'impact_coherence': impact_coherence,
+            'impact_delta': impact_delta,
+            'impact_identity': impact_identity
+        }
+
+        # Predecir métricas después de la acción
+        predicted_metrics = predict_metrics_after_action(
+            self._current_structural_metrics,
+            action_dict,
+            agent_idx=0  # Índice del agente actual
+        )
+
+        # Calcular impacto estructural
+        impact, _, _ = self.structural_ethics.evaluate_transition(
+            self._current_structural_metrics,
+            predicted_metrics
+        )
+
+        return impact
+
+    def update_structural_metrics(self, agentes: List[Any]) -> None:
+        """
+        Actualiza métricas estructurales del sistema.
+
+        Debe llamarse antes de decide() para tener métricas actualizadas.
+
+        Args:
+            agentes: Lista de agentes del sistema
+        """
+        if self.structural_ethics is None:
+            return
+
+        # Crear diccionario de estado desde agentes
+        state_dict = create_metrics_from_agents(agentes)
+
+        # Calcular métricas
+        metrics = self.structural_ethics.compute_metrics_from_state(state_dict)
+
+        # Actualizar historial
+        self.structural_ethics.update_history(metrics)
+
+        # Guardar métricas actuales
+        self._current_structural_metrics = metrics
 
     def _update_context(self, state: Dict):
         """
@@ -651,7 +756,13 @@ class CognitiveActionLayer:
             # 8. Collective Intent (AGI-19): alineación colectiva
             collective_alignment = self._get_collective_alignment(candidate)
 
+            # 9. StructuralEthics: impacto estructural (informativo, NO normativo)
+            # El impacto es una señal más, el agente decide libremente
+            structural_impact = self._compute_structural_impact(candidate, state, others)
+
             # Score compuesto (ponderado por module_weights de AGI-18)
+            # NOTA: structural_impact NO se usa para filtrar o bloquear
+            # Solo se pasa al agente como información adicional
             score = (
                 self.module_weights['self_model'] * sm_confidence +
                 self.module_weights['tom'] * (1 - np.mean(list(tom_anticipation.values()))) +
@@ -659,9 +770,10 @@ class CognitiveActionLayer:
                 self.module_weights['planning'] * (goal_alignment + 1) / 2 +
                 self.module_weights['curiosity'] * curiosity_bonus +
                 self.module_weights['norms'] * norm_compliance +
-                self.module_weights.get('robustness', 0.7) * robustness_bonus +
-                self.module_weights.get('collective_intent', 0.6) * collective_alignment
+                self.module_weights.get('robustness', 1/len(self.module_names)) * robustness_bonus +
+                self.module_weights.get('collective_intent', 1/len(self.module_names)) * collective_alignment
             )
+            # structural_impact NO participa en el score - solo es informativo
 
             if score > best_score:
                 best_score = score
@@ -674,25 +786,29 @@ class CognitiveActionLayer:
                     'curiosity_bonus': curiosity_bonus,
                     'norm_compliance': norm_compliance,
                     'robustness_bonus': robustness_bonus,
-                    'collective_alignment': collective_alignment
+                    'collective_alignment': collective_alignment,
+                    'structural_impact': structural_impact  # Información, no control
                 }
 
-        # Construir decisión con contribuciones AGI-16 a AGI-19
+        # Construir decisión con contribuciones AGI-16 a AGI-19 y StructuralEthics
         decision = CognitiveDecision(
             agent_name=self.agent_name,
             direction=best_candidate,
             magnitude=float(np.linalg.norm(best_candidate)),
-            confidence=best_eval.get('confidence', 0.5),
+            confidence=best_eval.get('confidence', 1/2),
             target_agent=None,
             goal_alignment=best_eval.get('goal_alignment', 0.0),
-            ethical_score=best_eval.get('ethical_score', 0.8),
-            curiosity_bonus=best_eval.get('curiosity_bonus', 0.5),
+            ethical_score=best_eval.get('ethical_score', 1/2),
+            curiosity_bonus=best_eval.get('curiosity_bonus', 1/2),
             tom_anticipation=best_eval.get('tom_anticipation', {}),
             reasoning=self._generate_reasoning(best_eval),
             meta_rule_policy=self.current_policy,
             robustness_bonus=best_eval.get('robustness_bonus', 0.0),
             collective_alignment=best_eval.get('collective_alignment', 0.0),
-            t=self.t
+            t=self.t,
+            # StructuralEthics: impacto estructural (informativo, NO normativo)
+            # > 0: conservador/estabilizador, < 0: disruptivo/deformante
+            structural_impact=best_eval.get('structural_impact', 0.0)
         )
 
         # Guardar en historial
@@ -737,9 +853,17 @@ class CognitiveActionLayer:
             parts.append("robusto")
 
         # AGI-19: colectivo (umbral endógeno)
-        coll_threshold = low_threshold * 0.8
+        coll_threshold = low_threshold * 4/5
         if evaluation.get('collective_alignment', 0) > coll_threshold:
             parts.append("alineado-colectivo")
+
+        # StructuralEthics: impacto estructural (solo informativo)
+        # NO influye en la decisión, solo describe
+        struct_impact = evaluation.get('structural_impact', 0)
+        if struct_impact > low_threshold / 2:
+            parts.append("estruct:conservador")
+        elif struct_impact < -low_threshold / 2:
+            parts.append("estruct:disruptivo")
 
         return "; ".join(parts) if parts else "decisión estándar"
 
@@ -879,6 +1003,9 @@ class CognitiveActionLayer:
             'config_entropy': reconfig_stats.get('configuration_entropy', 0),
             'most_weighted_module': reconfig_stats.get('most_weighted', ''),
             # AGI-17 y AGI-19 se obtienen del sistema compartido
+            # StructuralEthics: estadísticas de impacto estructural
+            'structural_ethics_stats': self.structural_ethics.get_statistics() if self.structural_ethics else {},
+            'last_structural_impact': self.decision_history[-1].structural_impact if self.decision_history else 0
         }
 
 

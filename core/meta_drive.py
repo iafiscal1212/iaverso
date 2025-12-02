@@ -109,42 +109,47 @@ class MetaDrive:
         self.t = 0
 
     def _compute_learning_rate(self) -> float:
-        """η(t) = 1/√(t+1)"""
-        return 1.0 / np.sqrt(self.t + 1)
+        """η(t) = 1/√(t+1) - endógeno, depende solo del tiempo"""
+        return 1 / np.sqrt(self.t + 1)
 
     def _compute_entropy_component(self, z: np.ndarray) -> float:
         """c_1: Entropía normalizada."""
-        z_safe = np.clip(z, 1e-10, 1.0)
+        EPS = np.finfo(float).eps
+        z_safe = np.clip(z, EPS, 1)
         z_norm = z_safe / z_safe.sum()
         H = -np.sum(z_norm * np.log(z_norm))
         H_max = np.log(len(z))
-        return H / H_max if H_max > 0 else 0.5
+        # Punto medio por simetría si H_max = 0
+        return H / H_max if H_max > 0 else 1/2
 
     def _compute_neg_surprise_component(self, surprise: float) -> float:
         """c_2: Negativo de sorpresa (normalizado)."""
         if self.surprise_history:
-            max_surprise = max(self.surprise_history) + 1e-10
-            return 1.0 - surprise / max_surprise
-        return 0.5
+            max_surprise = max(self.surprise_history) + np.finfo(float).eps
+            return 1 - surprise / max_surprise
+        # Punto medio por simetría
+        return 1/2
 
     def _compute_novelty_component(self, z: np.ndarray) -> float:
         """c_3: Distancia al centroide histórico."""
         if len(self.z_history) < 10:
-            return 0.5
+            # Punto medio por simetría
+            return 1/2
 
         centroid = np.mean(self.z_history[-20:], axis=0)
         dist = np.linalg.norm(z - centroid)
 
         # Normalizar por distancia típica
         typical_dists = [np.linalg.norm(zh - centroid) for zh in self.z_history[-20:]]
-        typical = np.mean(typical_dists) + 1e-10
+        typical = np.mean(typical_dists) + np.finfo(float).eps
 
-        return min(dist / typical, 1.0)
+        return min(dist / typical, 1)
 
     def _compute_stability_component(self, z: np.ndarray) -> float:
         """c_4: Inverso de varianza reciente."""
         if len(self.z_history) < 5:
-            return 0.5
+            # Punto medio por simetría
+            return 1/2
 
         recent = np.array(self.z_history[-5:])
         variance = np.var(recent)
@@ -153,19 +158,21 @@ class MetaDrive:
         if len(self.z_history) > 20:
             all_vars = [np.var(self.z_history[i:i+5])
                        for i in range(len(self.z_history)-5)]
-            max_var = max(all_vars) + 1e-10
-            return 1.0 - variance / max_var
+            max_var = max(all_vars) + np.finfo(float).eps
+            return 1 - variance / max_var
 
-        return 1.0 / (1.0 + variance * 10)
+        # Factor endógeno: dimension del vector
+        return 1 / (1 + variance * len(z))
 
     def _compute_integration_component(self, z: np.ndarray) -> float:
         """c_5: Correlación media entre dimensiones."""
         if len(self.z_history) < 10:
-            return 0.5
+            # Punto medio por simetría
+            return 1/2
 
         recent = np.array(self.z_history[-10:])
         if recent.shape[1] < 2:
-            return 0.5
+            return 1/2
 
         corr = np.corrcoef(recent.T)
         mask = ~np.eye(len(z), dtype=bool)
@@ -173,7 +180,7 @@ class MetaDrive:
         correlations = correlations[~np.isnan(correlations)]
 
         if len(correlations) == 0:
-            return 0.5
+            return 1/2
 
         return float(np.mean(np.abs(correlations)))
 
@@ -181,10 +188,11 @@ class MetaDrive:
                                       other_z: Optional[np.ndarray]) -> float:
         """c_6: Distancia al otro agente."""
         if other_z is None:
-            return 0.5
+            # Punto medio por simetría
+            return 1/2
 
         dist = np.linalg.norm(z - other_z)
-        max_dist = np.sqrt(len(z))  # Máximo teórico
+        max_dist = np.sqrt(len(z))  # Máximo teórico geométrico
 
         return dist / max_dist
 
@@ -209,10 +217,11 @@ class MetaDrive:
         """
         # Normalizar surprise
         if self.surprise_history:
-            max_s = max(self.surprise_history) + 1e-10
+            max_s = max(self.surprise_history) + np.finfo(float).eps
             norm_surprise = surprise / max_s
         else:
-            norm_surprise = 0.5
+            # Punto medio por simetría
+            norm_surprise = 1/2
 
         return -norm_surprise + integration
 
@@ -250,7 +259,8 @@ class MetaDrive:
         self.weights = self.weights + eta * gradients
 
         # Mantener positivos
-        self.weights = np.clip(self.weights, 0.01, 10.0)
+        # Límites endógenos: 1/K mínimo, K máximo (donde K = número de componentes)
+        self.weights = np.clip(self.weights, 1/self.K, self.K)
 
         # Normalizar
         self.weights = self.weights / self.weights.sum()
@@ -297,7 +307,7 @@ class MetaDrive:
         self.weight_history.append(self.weights.copy())
 
         # Entropía de pesos (diversidad)
-        w_safe = np.clip(self.weights, 1e-10, 1.0)
+        w_safe = np.clip(self.weights, np.finfo(float).eps, 1)
         weights_entropy = -np.sum(w_safe * np.log(w_safe))
 
         # Crear estado
@@ -402,8 +412,9 @@ class DualMetaDrive:
             'NEO': neo_summary,
             'EVA': eva_summary,
             'weight_divergence': self._compute_weight_divergence(),
-            'drives_converged': self._compute_weight_divergence() < 0.1,
-            'drives_diverged': self._compute_weight_divergence() > 0.5
+            # Umbrales endógenos basados en 1/K y 1-1/K
+            'drives_converged': self._compute_weight_divergence() < 1/self.neo_drive.K,
+            'drives_diverged': self._compute_weight_divergence() > 1 - 1/self.neo_drive.K
         }
 
 
