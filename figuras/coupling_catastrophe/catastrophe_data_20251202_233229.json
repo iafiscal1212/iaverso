@@ -1,0 +1,187 @@
+{
+  "timestamp": "2025-12-02T23:32:29.945527",
+  "critical_coupling": 0.06973684210526315,
+  "critical_era": "Pre-internet",
+  "results": [
+    {
+      "coupling": 0.05,
+      "era": "Pre-internet",
+      "n_coalitions": 2.0,
+      "polarization": 0.03764569057086714,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.08947368421052632,
+      "era": "Pre-internet",
+      "n_coalitions": 2.0,
+      "polarization": 0.043089770646199656,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.12894736842105264,
+      "era": "Web 1.0",
+      "n_coalitions": 2.0,
+      "polarization": 0.04860204961804234,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.16842105263157894,
+      "era": "Web 1.0",
+      "n_coalitions": 2.0,
+      "polarization": 0.05415791454301464,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.20789473684210524,
+      "era": "Facebook 2008",
+      "n_coalitions": 2.0,
+      "polarization": 0.05969723217988903,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.24736842105263157,
+      "era": "Facebook 2008",
+      "n_coalitions": 2.0,
+      "polarization": 0.06531085397569288,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.2868421052631579,
+      "era": "Facebook 2008",
+      "n_coalitions": 2.0,
+      "polarization": 0.07092796096491445,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.32631578947368417,
+      "era": "Facebook 2008",
+      "n_coalitions": 2.0,
+      "polarization": 0.07664306902789793,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.3657894736842105,
+      "era": "Twitter/Instagram",
+      "n_coalitions": 2.0,
+      "polarization": 0.08231353948207511,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.4052631578947368,
+      "era": "Twitter/Instagram",
+      "n_coalitions": 2.0,
+      "polarization": 0.08804486160819046,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.44473684210526315,
+      "era": "Twitter/Instagram",
+      "n_coalitions": 2.0,
+      "polarization": 0.09377285150121113,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.4842105263157894,
+      "era": "Twitter/Instagram",
+      "n_coalitions": 2.0,
+      "polarization": 0.09954216866786623,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.5236842105263158,
+      "era": "TikTok/Algoritmos",
+      "n_coalitions": 2.0,
+      "polarization": 0.10536009901145049,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.5631578947368421,
+      "era": "TikTok/Algoritmos",
+      "n_coalitions": 2.0,
+      "polarization": 0.11119511891133316,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.6026315789473684,
+      "era": "TikTok/Algoritmos",
+      "n_coalitions": 2.0,
+      "polarization": 0.11706107803976806,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.6421052631578947,
+      "era": "TikTok/Algoritmos",
+      "n_coalitions": 2.0,
+      "polarization": 0.12290763334130513,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.6815789473684211,
+      "era": "TikTok/Algoritmos",
+      "n_coalitions": 2.0,
+      "polarization": 0.12880785676693862,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.7210526315789474,
+      "era": "Metaverso/Futuro",
+      "n_coalitions": 2.0,
+      "polarization": 0.13472182365410046,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.7605263157894737,
+      "era": "Metaverso/Futuro",
+      "n_coalitions": 2.0,
+      "polarization": 0.14062539877630734,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    },
+    {
+      "coupling": 0.8,
+      "era": "Metaverso/Futuro",
+      "n_coalitions": 2.0,
+      "polarization": 0.14656288168706547,
+      "cascade_freq": 1.0,
+      "diversity_health": 0.7333333333333334,
+      "chaos_index": 0.5
+    }
+  ]
+}
