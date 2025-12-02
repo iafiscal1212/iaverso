@@ -1,0 +1,325 @@
+======================================================================
+AUDITORÍA COMPLETA: ARTEFACTOS PREEXISTENTES EN NEO_EVA
+======================================================================
+Fecha: 2025-12-02
+Auditor: Sistema automatizado
+======================================================================
+
+RESUMEN EJECUTIVO
+======================================================================
+
+Se detectaron los siguientes artefactos que causan series IDÉNTICAS entre
+agentes, invalidando el análisis de correlaciones inter-agente:
+
+  CRÍTICO:
+  ├── psi_norm: TODAS las series idénticas (max_diff = 0.0)
+  ├── H_narr: TODAS las series idénticas (max_diff = 0.0)
+  ├── Q_coherence: TODAS las series idénticas (max_diff = 0.0)
+  └── CE (parcial): NEO-NEO y EVA-EVA idénticas
+
+  ORIGEN DE LOS ARTEFACTOS:
+  1. Estado inicial uniforme idéntico para todos
+  2. Estímulo compartido sin variabilidad por agente
+  3. Q-Field retorna valor global, no por-agente
+  4. Ausencia de ruido individual endógeno
+
+======================================================================
+1. ANÁLISIS DETALLADO: core/agents.py
+======================================================================
+
+ARTEFACTO 1.1: Estado inicial uniforme
+--------------------------------------
+Archivo: /root/NEO_EVA/core/agents.py
+Líneas: 64-65
+
+  self.z_visible = np.ones(dim_visible) / dim_visible
+  self.z_hidden = np.ones(dim_hidden) / dim_hidden
+
+PROBLEMA: Todos los agentes del mismo tipo (NEO o EVA) empiezan con
+  z_visible = [0.16666667, 0.16666667, 0.16666667, ...]
+
+CONSECUENCIA: Con el mismo estímulo, evolucionan de forma idéntica.
+
+SOLUCIÓN REQUERIDA: Inicialización endógena con variabilidad por agente.
+
+
+ARTEFACTO 1.2: np.random sin seed por agente
+--------------------------------------------
+Archivo: /root/NEO_EVA/core/agents.py
+Líneas: 272, 410
+
+  action = action + np.random.randn(self.dim_visible) * noise_scale
+
+PROBLEMA: Se usa np.random global, no un RNG por agente.
+CONSECUENCIA: Con el mismo seed global, todos generan el mismo ruido.
+
+SOLUCIÓN REQUERIDA: Cada agente debe tener su propio RNG con seed único.
+
+
+======================================================================
+2. ANÁLISIS DETALLADO: omega/q_field.py
+======================================================================
+
+ARTEFACTO 2.1: get_statistics() solo retorna valores globales
+-------------------------------------------------------------
+Archivo: /root/NEO_EVA/omega/q_field.py
+Líneas: 405-419
+
+  def get_statistics(self) -> Dict[str, Any]:
+      ...
+      return {
+          **field_state,
+          'K': self._K,
+          'total_states_recorded': ...,
+          'n_interferences': ...,
+          'coherence_threshold': ...,
+          'energy_threshold': ...
+      }
+
+PROBLEMA: No hay claves como 'A0_coherence', 'A1_coherence'.
+  Solo hay 'mean_coherence' que es el PROMEDIO de todos.
+
+CONSECUENCIA: En las simulaciones, se asigna 'mean_coherence' a TODOS:
+
+  for name in agent_names:
+      agent_q = q_stats.get(f'{name}_coherence',
+                           q_stats.get('mean_coherence', 0.5))
+                           # ↑ SIEMPRE cae en fallback
+
+RESULTADO: Q_coherence_i(t) = Q_coherence_j(t) ∀ i,j (idénticas)
+
+SOLUCIÓN REQUERIDA: get_statistics() debe incluir valores POR AGENTE.
+
+
+ARTEFACTO 2.2: Coherencia calculada desde historial global
+----------------------------------------------------------
+Archivo: /root/NEO_EVA/omega/q_field.py
+Líneas: 155-207
+
+La función _compute_coherence() sí usa el agent_id, PERO:
+  - Los historiales self._coherence_history y self._energy_history son GLOBALES
+  - No hay self._coherence_history[agent_id]
+
+PROBLEMA: El historial de estadísticas mezcla todos los agentes.
+
+SOLUCIÓN REQUERIDA: Historiales separados por agente.
+
+
+======================================================================
+3. ANÁLISIS DETALLADO: cognition/complex_field.py
+======================================================================
+
+ARTEFACTO 3.1: ComplexState tiene historial propio (CORRECTO)
+-------------------------------------------------------------
+Archivo: /root/NEO_EVA/cognition/complex_field.py
+
+  @dataclass
+  class ComplexState:
+      psi: Optional[np.ndarray] = None
+      history_real: List[np.ndarray] = field(default_factory=list)
+      history_ce: List[float] = field(default_factory=list)
+      ...
+
+ANÁLISIS: Cada ComplexState tiene SU PROPIO historial.
+  ✓ CORRECTO si se crea un ComplexState POR AGENTE.
+  ✗ INCORRECTO si se comparte la misma instancia.
+
+VERIFICACIÓN REQUERIDA: En las simulaciones, ¿se crea un ComplexState
+  por agente o se reutiliza la misma instancia?
+
+
+ARTEFACTO 3.2: get_statistics() opera sobre ComplexState individual
+-------------------------------------------------------------------
+Archivo: /root/NEO_EVA/cognition/complex_field.py
+Líneas: 526-560
+
+  def get_statistics(self, cs: ComplexState) -> Dict[str, Any]:
+      ...
+      if cs.psi is not None:
+          stats['psi_norm'] = float(np.linalg.norm(cs.psi))
+          stats['coherence'] = self.get_coherence(cs)
+          ...
+
+ANÁLISIS: El método recibe ComplexState como parámetro.
+  ✓ CORRECTO en diseño.
+  ✗ El problema está en CÓMO SE USA en las simulaciones.
+
+DIAGNÓSTICO: El módulo está bien diseñado, el problema está en el
+  código de simulación que NO usa ComplexState por separado.
+
+
+======================================================================
+4. ANÁLISIS DETALLADO: consciousness/coherence.py
+======================================================================
+
+ARTEFACTO 4.1: SistemaCoherenciaMultiagente (CORRECTO en diseño)
+----------------------------------------------------------------
+Archivo: /root/NEO_EVA/consciousness/coherence.py
+Líneas: 396-452
+
+  class SistemaCoherenciaMultiagente:
+      def __init__(self):
+          self._coherencias: Dict[str, CoherenciaExistencial] = {}
+
+      def registrar_agente(self, agent_id: str, identidad: ...):
+          if agent_id not in self._coherencias:
+              self._coherencias[agent_id] = CoherenciaExistencial(identidad)
+
+ANÁLISIS: El sistema de coherencia SÍ crea instancias separadas por agente.
+  ✓ CORRECTO en diseño.
+
+VERIFICACIÓN: ¿Las simulaciones USAN este sistema o calculan CE directamente?
+
+
+======================================================================
+5. ANÁLISIS DE SCRIPTS DE SIMULACIÓN
+======================================================================
+
+ARTEFACTO 5.1: Scripts usan estímulo compartido sin variabilidad
+----------------------------------------------------------------
+Archivos: /root/NEO_EVA/scripts/phase_a_collective_bias_analysis.py
+          /root/NEO_EVA/scripts/phase_d_null_models.py
+          y otros
+
+Patrón detectado:
+
+  for t in range(n_steps):
+      stimulus = rng.uniform(0, 1, dim)  # UN estímulo para TODOS
+
+      for name in agent_names:
+          coupled_stimulus = stimulus + 0.1 * coupling  # Mismo estímulo base
+          response = agent.step(coupled_stimulus)
+          ...
+
+PROBLEMA: Todos los agentes reciben el MISMO estímulo en cada paso.
+  Con estado inicial idéntico + estímulo idéntico + fórmula idéntica:
+  → Series idénticas
+
+SOLUCIÓN: Añadir ruido ENDÓGENO INDIVIDUAL por agente.
+
+
+ARTEFACTO 5.2: Q_coherence asignado desde valor global
+------------------------------------------------------
+Archivos: Todos los scripts de simulación
+
+Patrón detectado:
+
+  q_stats = q_field.get_statistics()
+  for name in agent_names:
+      agent_q = q_stats.get(f'{name}_coherence',
+                           q_stats.get('mean_coherence', 0.5))
+      # ↑ Siempre usa mean_coherence (global)
+      agent_metrics[name].Q_coherence.append(agent_q)
+
+PROBLEMA: Q_coherence es IDÉNTICO para todos los agentes.
+
+SOLUCIÓN: Calcular Q_coherence POR AGENTE desde su estado individual.
+
+
+ARTEFACTO 5.3: psi_norm calculado desde z_visible (que es idéntico)
+-------------------------------------------------------------------
+Patrón detectado:
+
+  for name in agent_names:
+      state = agent.get_state()
+      psi_norm[name].append(np.linalg.norm(state.z_visible))
+
+PROBLEMA: Si z_visible es idéntico entre agentes → psi_norm es idéntico.
+
+ORIGEN: Estado inicial idéntico + estímulo idéntico + misma fórmula.
+
+
+ARTEFACTO 5.4: H_narr calculado desde state.S (que es idéntico)
+---------------------------------------------------------------
+Patrón detectado:
+
+  for name in agent_names:
+      state = agent.get_state()
+      H_narr[name].append(state.S)
+
+PROBLEMA: state.S = _compute_entropy(z_visible)
+  Si z_visible es idéntico → state.S es idéntico → H_narr es idéntico.
+
+
+======================================================================
+6. VERIFICACIÓN CON DATOS REALES
+======================================================================
+
+PRUEBA REALIZADA: audit_correlations.py
+
+RESULTADOS:
+-----------
+  psi_norm:
+    A0 vs A1: identical=True, max_diff=0.0000000000
+    A0 vs A2: identical=True, max_diff=0.0000000000
+    A0 vs A3: identical=True, max_diff=0.0000000000
+    A0 vs A4: identical=True, max_diff=0.0000000000
+    → TODAS IDÉNTICAS
+
+  H_narr:
+    A0 vs A1: identical=True, max_diff=0.0000000000
+    A0 vs A2: identical=True, max_diff=0.0000000000
+    → TODAS IDÉNTICAS
+
+  Q_coherence:
+    A0 vs A1: identical=True, max_diff=0.0000000000
+    A0 vs A2: identical=True, max_diff=0.0000000000
+    → TODAS IDÉNTICAS (valor global asignado a todos)
+
+  CE:
+    A0 vs A1: identical=False, max_diff=0.3714253573  ✓ DISTINTO
+    A0 vs A2: identical=True  (mismo tipo: NEO)
+    A1 vs A3: identical=True  (mismo tipo: EVA)
+    → PARCIALMENTE DISTINTO (NEO ≠ EVA, pero NEO = NEO y EVA = EVA)
+
+
+======================================================================
+7. LISTA COMPLETA DE ARCHIVOS AFECTADOS
+======================================================================
+
+MÓDULOS CORE:
+  [X] /root/NEO_EVA/core/agents.py
+      - Líneas 64-65: Estado inicial uniforme
+      - Líneas 272, 410: np.random global
+
+  [X] /root/NEO_EVA/omega/q_field.py
+      - Líneas 83-84: Historial global
+      - Líneas 405-419: get_statistics() sin valores por agente
+
+  [ ] /root/NEO_EVA/cognition/complex_field.py
+      - Diseño correcto, problema en uso
+
+  [ ] /root/NEO_EVA/consciousness/coherence.py
+      - Diseño correcto para multiagente
+
+SCRIPTS DE SIMULACIÓN:
+  [X] /root/NEO_EVA/scripts/phase_a_collective_bias_analysis.py
+  [X] /root/NEO_EVA/scripts/phase_b_quantum_collective_bias.py
+  [X] /root/NEO_EVA/scripts/phase_d_null_models.py
+  [X] /root/NEO_EVA/scripts/simulation_12h_report.py
+
+
+======================================================================
+8. CORRECCIONES REQUERIDAS (RESUMEN)
+======================================================================
+
+PRIORIDAD ALTA:
+1. Agentes: Añadir RNG individual por agente con seed único
+2. Agentes: Inicialización con variabilidad endógena individual
+3. Q-Field: Añadir get_agent_coherence(agent_id) y/o incluir en stats
+4. Simulaciones: Añadir ruido endógeno individual por agente
+
+PRIORIDAD MEDIA:
+5. Q-Field: Historial separado por agente
+6. Simulaciones: Calcular Q_coherence desde estado individual
+7. Tests: Crear test_metric_uniqueness.py
+8. Tests: Crear test_no_shared_arrays.py
+
+PRIORIDAD BAJA:
+9. Logging: Sistema de logs por agente separado
+10. Documentación: Actualizar para reflejar correcciones
+
+
+======================================================================
+FIN DEL INFORME DE AUDITORÍA
+======================================================================

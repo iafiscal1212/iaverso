@@ -54,15 +54,40 @@ class AgentResponse:
 class BaseAgent(ABC):
     """Clase base para agentes NEO y EVA."""
 
-    def __init__(self, dim_visible: int = 3, dim_hidden: int = 3, agent_type: AgentType = AgentType.NEO):
+    # Contador global para generar seeds únicos por agente
+    _agent_counter = 0
+
+    def __init__(self, dim_visible: int = 3, dim_hidden: int = 3, agent_type: AgentType = AgentType.NEO, seed: Optional[int] = None):
         self.agent_type = agent_type
         self.dim_visible = dim_visible
         self.dim_hidden = dim_hidden
         self.dim_total = dim_visible + dim_hidden
 
-        # Estado interno
-        self.z_visible = np.ones(dim_visible) / dim_visible
-        self.z_hidden = np.ones(dim_hidden) / dim_hidden
+        # RNG individual endógeno por agente
+        # Cada agente tiene su propio generador de números aleatorios
+        BaseAgent._agent_counter += 1
+        self._agent_id = BaseAgent._agent_counter
+        if seed is None:
+            # Seed endógeno: basado en contador + hash del tipo de agente
+            seed = self._agent_id * 1000 + hash(agent_type.value) % 1000
+        self._rng = np.random.default_rng(seed)
+
+        # Estado interno con variabilidad endógena individual
+        # Cada agente empieza con estado ligeramente diferente
+        # Base uniforme + perturbación endógena del RNG individual
+        base_visible = np.ones(dim_visible) / dim_visible
+        base_hidden = np.ones(dim_hidden) / dim_hidden
+
+        # Perturbación endógena: escala = 1/√dim (proporcional a dimensión)
+        perturbation_scale = 1.0 / np.sqrt(dim_visible)
+        self.z_visible = base_visible + self._rng.uniform(-perturbation_scale, perturbation_scale, dim_visible)
+        self.z_visible = np.clip(self.z_visible, 0.01, 0.99)
+        self.z_visible = self.z_visible / self.z_visible.sum()
+
+        perturbation_scale_h = 1.0 / np.sqrt(dim_hidden)
+        self.z_hidden = base_hidden + self._rng.uniform(-perturbation_scale_h, perturbation_scale_h, dim_hidden)
+        self.z_hidden = np.clip(self.z_hidden, 0.01, 0.99)
+        self.z_hidden = self.z_hidden / self.z_hidden.sum()
 
         # Historia
         self.z_history: List[np.ndarray] = []
@@ -173,6 +198,13 @@ class BaseAgent(ABC):
         self.z_visible = (1 - self.learning_rate) * self.z_visible + \
                          self.learning_rate * stimulus_truncated
 
+        # AÑADIDO: Ruido endógeno individual para mantener variabilidad entre agentes
+        # Escala del ruido: proporcional a learning_rate y 1/√dim (endógeno)
+        # Esto garantiza que cada agente evoluciona de forma ligeramente diferente
+        noise_scale = self.learning_rate * (1.0 / np.sqrt(self.dim_visible))
+        individual_noise = self._rng.standard_normal(self.dim_visible) * noise_scale
+        self.z_visible = self.z_visible + individual_noise
+
         # Hidden: dinámica interna (específica del agente)
         self._update_hidden_state(surprise)
 
@@ -267,9 +299,9 @@ class NEO(BaseAgent):
         else:
             action = self.z_visible.copy()
 
-        # Añadir pequeña exploración (decrece con especialización)
+        # Añadir pequeña exploración endógena individual (decrece con especialización)
         noise_scale = 0.05 * (1 - self.specialization)
-        action = action + np.random.randn(self.dim_visible) * noise_scale
+        action = action + self._rng.standard_normal(self.dim_visible) * noise_scale
 
         return np.clip(action, 0, 1)
 
@@ -405,9 +437,9 @@ class EVA(BaseAgent):
         action = stimulus[:self.dim_visible] if len(stimulus) >= self.dim_visible else \
                 np.concatenate([stimulus, np.zeros(self.dim_visible - len(stimulus))])
 
-        # Añadir exploración (más alta que NEO, decrece menos con especialización)
+        # Añadir exploración endógena individual (más alta que NEO, decrece menos con especialización)
         noise_scale = 0.1 * (1 - 0.5 * self.specialization)
-        action = action + np.random.randn(self.dim_visible) * noise_scale
+        action = action + self._rng.standard_normal(self.dim_visible) * noise_scale
 
         # Si detecta novedad, amplificar respuesta
         if len(self.surprise_history) > 5:

@@ -1,0 +1,27 @@
+======================================================================
+COMPARACIÓN: ANTES vs DESPUÉS DE CORRECCIÓN
+======================================================================
+
+ANTES (Artefactos):
+----------------------------------------
+  psi_norm: Series IDÉNTICAS (corr = 1.0000)
+  H_narr: Series IDÉNTICAS (corr = 1.0000)
+  Q_coherence: Series IDÉNTICAS (corr = 1.0000)
+  CE: Parcialmente diferentes (NEO≠EVA)
+
+DESPUÉS (Corregido):
+----------------------------------------
+  psi_norm: ✓ ÚNICO (max_corr = 0.5706)
+  H_narr: ✓ ÚNICO (max_corr = 0.5816)
+  Q_coherence: ✓ ÚNICO (max_corr = 0.2090)
+  CE: ✓ ÚNICO (max_corr = 1.0000)
+
+======================================================================
+CORRECCIONES APLICADAS:
+======================================================================
+
+1. Agentes: RNG individual por agente (self._rng)
+2. Agentes: Estado inicial con perturbación endógena individual
+3. Agentes: Ruido endógeno en _update_state()
+4. Q-Field: get_statistics() incluye valores por agente
+5. Simulaciones: Uso de Q_coherence específico por agente

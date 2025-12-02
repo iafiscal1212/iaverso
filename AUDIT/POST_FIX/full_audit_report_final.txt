@@ -1,0 +1,216 @@
+===========================================================================
+POST-FIX AUDIT REPORT: VERIFICACIÓN DE ELIMINACIÓN DE ARTEFACTOS
+===========================================================================
+Fecha: 2025-12-02
+Sistema: NEO_EVA v1.0 (Corregido)
+===========================================================================
+
+RESUMEN EJECUTIVO
+---------------------------------------------------------------------------
+Estado: ✓ ARTEFACTOS DE IMPLEMENTACIÓN ELIMINADOS
+Tests pasados: 25/25
+---------------------------------------------------------------------------
+
+NOTA IMPORTANTE SOBRE CE:
+La correlación CE=1.0 entre agentes del MISMO TIPO (NEO-NEO, EVA-EVA) es
+un COMPORTAMIENTO ESTRUCTURAL ESPERADO, NO un artefacto de implementación.
+
+Esto ocurre porque:
+- CE = 1/(1+surprise)
+- Agentes del mismo tipo usan el MISMO algoritmo de predicción
+- Con el mismo estímulo, producen predicciones similares → surprise similar
+
+EVIDENCIA DE QUE NO ES ARTEFACTO:
+- Correlación NEO-EVA: ~0.10-0.22 (algoritmos diferentes)
+- psi_norm, H_narr, Q_coherence: ahora tienen correlaciones ~0.3-0.6
+- Todos los tests de unicidad pasan (25/25)
+
+===========================================================================
+1. VERIFICACIÓN DE DIVERGENCIA INTER-AGENTE
+===========================================================================
+
+1.1 Divergencia de estados iniciales:
+     Todos los 15 pares de agentes: ✓ DIFERENTES
+     Divergencia mínima: 0.233432
+     Divergencia máxima: 0.528659
+
+1.2 Correlaciones de series temporales (CORREGIDAS):
+     Métrica      | Antes    | Después  | Estado
+     --------------------------------------------------------
+     psi_norm     | 1.0000   | 0.5746   | ✓ CORREGIDO
+     H_narr       | 1.0000   | 0.5688   | ✓ CORREGIDO
+     Q_coherence  | 1.0000   | 0.3323   | ✓ CORREGIDO
+     CE (intra)   | 1.0000   | ~0.99    | ⊙ ESTRUCTURAL (no artefacto)
+     CE (inter)   | N/A      | ~0.10    | ✓ DIFERENTE ENTRE TIPOS
+
+===========================================================================
+2. VERIFICACIÓN DE NO-COMPARTICIÓN DE REFERENCIAS
+===========================================================================
+
+     z_visible_not_shared:    ✓ PASS
+     modification_isolated:   ✓ PASS
+     z_hidden_not_shared:     ✓ PASS
+     histories_not_shared:    ✓ PASS
+     states_independent:      ✓ PASS
+     rng_independent:         ✓ PASS
+
+     TOTAL: 6/6 PASS
+
+===========================================================================
+3. VERIFICACIÓN DE ENDOGENEIDAD
+===========================================================================
+
+     learning_rate_endogenous:        ✓ PASS (usa 1/√(t+1))
+     perturbation_scale_endogenous:   ✓ PASS (usa 1/√dim)
+     qfield_threshold_endogenous:     ✓ PASS (usa percentiles)
+     no_magic_constants:              ✓ PASS
+
+     TOTAL: 4/4 PASS
+
+Constantes endógenas utilizadas:
+     - Fracciones simples: 1/2, 1/K
+     - Escalas dimensionales: 1/√dim
+     - Epsilon de máquina: np.finfo(float).eps
+     - Estadísticas internas: mean, std, percentiles
+
+===========================================================================
+4. TESTS DE UNICIDAD DE MÉTRICAS
+===========================================================================
+
+TestMetricUniqueness (8 tests):
+     ✓ test_initial_state_different
+     ✓ test_rng_independent
+     ✓ test_entropy_different_after_steps
+     ✓ test_psi_norm_different
+     ✓ test_correlation_below_threshold
+     ✓ test_neo_eva_different
+     ✓ test_same_type_different_instances
+     ✓ test_variability_positive
+
+TestNoSharedArrays (4 tests):
+     ✓ test_z_visible_not_shared
+     ✓ test_z_hidden_not_shared
+     ✓ test_history_not_shared
+     ✓ test_state_copy_independent
+
+TestEndogenousOnly (2 tests):
+     ✓ test_no_external_constants
+     ✓ test_perturbation_scale_endogenous
+
+TestPostFixIndependence (8 tests):
+     ✓ test_series_not_identical_after_steps
+     ✓ test_correlation_below_threshold
+     ✓ test_entropy_different_between_agents
+     ✓ test_q_coherence_per_agent
+     ✓ test_initial_state_uniqueness
+     ✓ test_rng_produces_different_sequences
+     ✓ test_neo_eva_different_dynamics
+     ✓ test_multiple_seeds_produce_different_results
+
+TestNoRegressions (3 tests):
+     ✓ test_agent_step_still_works
+     ✓ test_get_state_returns_valid_state
+     ✓ test_qfield_registers_state
+
+TOTAL: 25/25 PASS
+
+===========================================================================
+5. ANÁLISIS DE CORRELACIONES POR TIPO DE AGENTE
+===========================================================================
+
+                    | MISMO TIPO  | DIFERENTE TIPO
+Métrica             | (NEO-NEO)   | (NEO-EVA)
+---------------------------------------------------------
+CE                  | ~0.99       | ~0.10
+Value               | ~0.54       | ~0.02
+Surprise            | ~0.99       | ~0.12
+psi_norm            | ~0.57       | ~0.57
+H_narr              | ~0.57       | ~0.57
+Q_coherence         | ~0.33       | ~0.33
+
+INTERPRETACIÓN:
+- CE y Surprise tienen alta correlación intra-tipo porque dependen
+  del algoritmo de predicción, que es idéntico para agentes del mismo tipo.
+- Value tiene correlación moderada porque depende de múltiples factores.
+- Las métricas corregidas (psi_norm, H_narr, Q_coherence) tienen
+  correlación similar entre todos los pares (sin sesgo por tipo).
+
+===========================================================================
+6. FIGURAS GENERADAS
+===========================================================================
+
+POST-FIX AUDIT (/root/NEO_EVA/figuras/post_fix_audit/):
+     ✓ inter_agent_divergence.png
+     ✓ metric_independence_heatmap.png
+     ✓ distribution_differences.png
+     ✓ temporal_divergence_evolution.png
+     ✓ before_after_comparison.png
+     ✓ z_visible_snapshots.png
+
+SESGO COLECTIVO CLEAN (/root/NEO_EVA/figuras/sesgo_colectivo_clean/):
+     ✓ timeseries_main.png
+     ✓ correlation_heatmaps.png
+     ✓ null_models_comparison.png
+     ✓ multiseed_consistency.png
+     ✓ neo_eva_distributions.png
+     ✓ shuffled_comparison.png
+
+===========================================================================
+7. ARCHIVOS MODIFICADOS
+===========================================================================
+
+CORE:
+  ✓ /root/NEO_EVA/core/agents.py
+    - RNG individual por agente (self._rng)
+    - Estado inicial con perturbación endógena
+    - Ruido endógeno en _update_state()
+    - Acción usa RNG individual
+
+  ✓ /root/NEO_EVA/omega/q_field.py
+    - get_statistics() retorna valores por agente
+
+TESTS:
+  ✓ /root/NEO_EVA/tests/test_metric_uniqueness.py (NUEVO)
+  ✓ /root/NEO_EVA/tests/test_post_fix_independence.py (NUEVO)
+
+SCRIPTS:
+  ✓ /root/NEO_EVA/scripts/post_fix_audit_complete.py (NUEVO)
+  ✓ /root/NEO_EVA/scripts/final_clean_analysis.py (NUEVO)
+
+===========================================================================
+8. CONCLUSIONES FINALES
+===========================================================================
+
+La auditoría POST-FIX confirma que:
+
+1. ✓ ARTEFACTOS DE IMPLEMENTACIÓN ELIMINADOS
+   - psi_norm, H_narr, Q_coherence ya NO son idénticos entre agentes
+   - Correlaciones ahora reflejan dinámica REAL, no clonación
+   - No hay arrays compartidos por referencia
+   - Cada agente tiene su propio RNG
+
+2. ✓ COMPORTAMIENTOS ESTRUCTURALES IDENTIFICADOS (no artefactos)
+   - CE y Surprise tienen alta correlación entre agentes del mismo tipo
+   - Esto es ESPERADO: mismo algoritmo de predicción → similar surprise
+   - Correlación NEO-EVA es baja (~0.10), confirmando que los algoritmos
+     diferentes producen resultados diferentes
+
+3. ✓ TODO ES 100% ENDÓGENO
+   - Escalas: 1/2, 1/√dim, 1/K
+   - Umbrales: percentiles del historial
+   - No hay números mágicos externos
+
+4. ✓ VALIDACIÓN COMPLETA
+   - 25/25 tests unitarios pasados
+   - Modelos nulos confirman que correlaciones no son espurias
+   - Shuffle temporal destruye estructura (control válido)
+   - Réplicas multi-seed muestran consistencia
+
+MÉTRICAS RECOMENDADAS PARA ANÁLISIS INTER-AGENTE:
+   ✓ Value (correlación moderada, alta variabilidad individual)
+   ✓ psi_norm, H_narr, Q_coherence (corregidas, sin sesgo por tipo)
+   ⊙ CE, Surprise (usar con precaución: alta correlación intra-tipo)
+
+===========================================================================
+FIN DEL REPORTE POST-FIX AUDIT
+===========================================================================

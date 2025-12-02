@@ -122,6 +122,10 @@ class ExistentialTension(ExistentialLayer):
             return 'crisis'
         return 'healthy'
 
+    def calcular(self, observaciones: Dict[str, Any]) -> float:
+        """Alias para compute."""
+        return self.compute(observaciones)
+
     def compute(self, observations: Dict[str, Any]) -> float:
         """
         Calcula tension existencial.

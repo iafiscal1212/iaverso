@@ -61,7 +61,7 @@ class ELLEXIndex(ExistentialLayer):
     ]
 
     def __init__(self, agent_id: str):
-        super().__init__(agent_id, LayerType.INTEGRATED)
+        super().__init__(agent_id, LayerType.INTEGRADA)
 
         # Historiales por capa
         self._layer_histories: Dict[str, List[float]] = {
@@ -183,6 +183,10 @@ class ELLEXIndex(ExistentialLayer):
         trend = np.tanh(slope * 10)
 
         return float(trend)
+
+    def calcular(self, observaciones: Dict[str, Any]) -> float:
+        """Alias para compute."""
+        return self.compute(observaciones)
 
     def compute(self, observations: Dict[str, Any]) -> float:
         """

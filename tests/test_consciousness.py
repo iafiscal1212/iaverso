@@ -24,10 +24,10 @@ def test_identidad():
     atractor = np.zeros(dim)
     atractor[0] = 1.0  # Primer eje canónico
 
-    for t in range(50):
+    for t in range(100):
         # Estado = atractor escalado + ruido decreciente ortogonal
         escala = 2.0 + 0.5 * np.sin(t * 0.1)  # Variación en magnitud pero dirección constante
-        ruido = np.random.randn(dim) * (0.5 / (t + 1))
+        ruido = np.random.randn(dim) * (0.3 / (t + 1))  # Ruido menor
         S = atractor * escala + ruido
         identidad.observar_estado(S)
 

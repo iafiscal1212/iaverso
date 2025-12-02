@@ -45,7 +45,7 @@ class HealthEquilibrium(ExistentialLayer):
     """
 
     def __init__(self, agent_id: str):
-        super().__init__(agent_id, LayerType.HEALTH)
+        super().__init__(agent_id, LayerType.SALUD)
 
         # Historiales por componente
         self._diagnosis_history: List[float] = []
@@ -90,6 +90,10 @@ class HealthEquilibrium(ExistentialLayer):
             return 0.5
 
         return float(np.mean(recoveries))
+
+    def calcular(self, observaciones: Dict[str, Any]) -> float:
+        """Alias para compute."""
+        return self.compute(observaciones)
 
     def compute(self, observations: Dict[str, Any]) -> float:
         """

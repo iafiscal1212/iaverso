@@ -1,0 +1,102 @@
+===========================================================================
+POST-FIX AUDIT REPORT: VERIFICACIÓN DE ELIMINACIÓN DE ARTEFACTOS
+===========================================================================
+Fecha: 2025-12-02 22:20:32
+Sistema: NEO_EVA
+===========================================================================
+
+RESUMEN EJECUTIVO
+---------------------------------------------------------------------------
+Estado: ✗ ARTEFACTOS RESTANTES
+Tests pasados: 13/14
+
+===========================================================================
+1. VERIFICACIÓN DE DIVERGENCIA INTER-AGENTE
+===========================================================================
+
+1.1 Divergencia de estados iniciales:
+     Par 0: 0.284443 ✓ Diferentes
+     Par 1: 0.419659 ✓ Diferentes
+     Par 2: 0.366658 ✓ Diferentes
+     Par 3: 0.343425 ✓ Diferentes
+     Par 4: 0.413302 ✓ Diferentes
+     Par 5: 0.330638 ✓ Diferentes
+     Par 6: 0.390693 ✓ Diferentes
+     Par 7: 0.233432 ✓ Diferentes
+     Par 8: 0.271539 ✓ Diferentes
+     Par 9: 0.416592 ✓ Diferentes
+     Par 10: 0.460631 ✓ Diferentes
+     Par 11: 0.470089 ✓ Diferentes
+     Par 12: 0.409585 ✓ Diferentes
+     Par 13: 0.528659 ✓ Diferentes
+     Par 14: 0.266267 ✓ Diferentes
+
+1.2 Correlaciones de series temporales:
+     psi_norm: max_corr = 0.5746 ✓ OK
+     H_narr: max_corr = 0.5688 ✓ OK
+     Q_coherence: max_corr = 0.3323 ✓ OK
+     CE: max_corr = 1.0000 ✗ ARTEFACTO
+
+===========================================================================
+2. VERIFICACIÓN DE NO-COMPARTICIÓN DE REFERENCIAS
+===========================================================================
+
+     z_visible_not_shared: ✓ PASS
+     modification_isolated: ✓ PASS
+     z_hidden_not_shared: ✓ PASS
+     histories_not_shared: ✓ PASS
+     states_independent: ✓ PASS
+     rng_independent: ✓ PASS
+
+===========================================================================
+3. VERIFICACIÓN DE ENDOGENEIDAD
+===========================================================================
+
+     learning_rate_endogenous: ✓ PASS
+     perturbation_scale_endogenous: ✓ PASS
+     qfield_threshold_endogenous: ✓ PASS
+     no_magic_constants: ✓ PASS
+
+Constantes endógenas usadas:
+     - Fracciones simples: 1/2, 1/K
+     - Escalas dimensionales: 1/√dim
+     - Epsilon de máquina: np.finfo(float).eps
+     - Estadísticas internas: mean, std, percentiles
+
+===========================================================================
+4. COMPARACIÓN ESTADÍSTICA ANTES/DESPUÉS
+===========================================================================
+
+Tabla de correlaciones máximas:
+------------------------------------------------------------
+Métrica         ANTES           DESPUÉS         Estado         
+------------------------------------------------------------
+psi_norm        1.0000          0.5746          ✓ CORREGIDO    
+H_narr          1.0000          0.5688          ✓ CORREGIDO    
+Q_coherence     1.0000          0.3323          ✓ CORREGIDO    
+CE              1.0000          1.0000          ✗ ARTEFACTO    
+------------------------------------------------------------
+
+===========================================================================
+5. FIGURAS GENERADAS
+===========================================================================
+
+Directorio: /root/NEO_EVA/figuras/post_fix_audit/
+
+     ✓ inter_agent_divergence.png
+     ✓ metric_independence_heatmap.png
+     ✓ distribution_differences.png
+     ✓ temporal_divergence_evolution.png
+     ✓ before_after_comparison.png
+     ✓ z_visible_snapshots.png
+
+===========================================================================
+6. CONCLUSIONES
+===========================================================================
+
+⚠️  ATENCIÓN: Se detectaron problemas pendientes.
+Revisar los tests que fallaron.
+
+===========================================================================
+FIN DEL REPORTE POST-FIX AUDIT
+===========================================================================

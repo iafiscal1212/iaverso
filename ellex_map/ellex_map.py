@@ -84,7 +84,7 @@ class IdentityLayer(ExistentialLayer):
     """
 
     def __init__(self, agent_id: str):
-        super().__init__(agent_id, LayerType.IDENTITY)
+        super().__init__(agent_id, LayerType.IDENTIDAD)
 
         self._core_values_history: List[Dict[str, float]] = []
         self._narrative_history: List[str] = []
@@ -163,6 +163,10 @@ class IdentityLayer(ExistentialLayer):
             consistency = 1.0
 
         return float(np.clip(consistency, 0, 1))
+
+    def calcular(self, observaciones: Dict[str, Any]) -> float:
+        """Alias para compute."""
+        return self.compute(observaciones)
 
     def compute(self, observations: Dict[str, Any]) -> float:
         """

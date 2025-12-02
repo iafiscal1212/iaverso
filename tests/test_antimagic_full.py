@@ -250,7 +250,7 @@ def audit_file(filepath: str) -> List[Dict]:
     return violations
 
 
-def test_file_endogenous(filepath: str, name: str) -> Tuple[bool, List[Dict]]:
+def check_file_endogenous(filepath: str, name: str) -> Tuple[bool, List[Dict]]:
     """Testea que un archivo sea endógeno."""
     print(f"\n  Auditando {name}...")
 
@@ -454,7 +454,7 @@ def run_all_tests():
     all_violations = []
     for filepath, name in files_to_audit:
         if os.path.exists(filepath):
-            passed, violations = test_file_endogenous(filepath, name)
+            passed, violations = check_file_endogenous(filepath, name)
             results[f'audit_{name}'] = passed
             all_violations.extend(violations)
         else:

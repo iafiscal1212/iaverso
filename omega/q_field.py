@@ -403,13 +403,13 @@ class QField:
         }
 
     def get_statistics(self) -> Dict[str, Any]:
-        """Retorna estadísticas del sistema Q-Field."""
+        """Retorna estadísticas del sistema Q-Field, incluyendo valores por agente."""
         field_state = self.get_field_state()
 
         # Historial de interferencias
         n_interferences = sum(len(i) for i in self._interferences.values())
 
-        return {
+        stats = {
             **field_state,
             'K': self._K,
             'total_states_recorded': sum(len(s) for s in self._q_states.values()),
@@ -417,3 +417,13 @@ class QField:
             'coherence_threshold': self.get_coherence_threshold(),
             'energy_threshold': self.get_energy_threshold()
         }
+
+        # AÑADIDO: Coherencia y energía POR AGENTE
+        # Cada agente tiene su propio valor, no el promedio global
+        for agent_id, agent_states in self._q_states.items():
+            if agent_states:
+                latest = agent_states[-1]
+                stats[f'{agent_id}_coherence'] = latest.coherence
+                stats[f'{agent_id}_energy'] = latest.superposition_energy
+
+        return stats

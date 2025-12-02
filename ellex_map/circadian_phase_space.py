@@ -44,7 +44,7 @@ class CircadianPhaseSpace(ExistentialLayer):
     """
 
     def __init__(self, agent_id: str):
-        super().__init__(agent_id, LayerType.PHASE)
+        super().__init__(agent_id, LayerType.FASE)
 
         # Historiales
         self._phase_counts: Dict[str, int] = {
@@ -132,6 +132,10 @@ class CircadianPhaseSpace(ExistentialLayer):
             else:
                 efficacy[phase] = 0.5
         return efficacy
+
+    def calcular(self, observaciones: Dict[str, Any]) -> float:
+        """Alias para compute."""
+        return self.compute(observaciones)
 
     def compute(self, observations: Dict[str, Any]) -> float:
         """

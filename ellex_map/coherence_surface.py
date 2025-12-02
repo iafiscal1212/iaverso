@@ -18,7 +18,7 @@ Valores bajos = fragmentacion, conflicto, drift.
 import numpy as np
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Any
-from abc import ABC
+from abc import ABC, abstractmethod
 
 import sys
 sys.path.insert(0, '/root/NEO_EVA')
@@ -40,6 +40,15 @@ class CoherenceSurface(ExistentialLayer, ABC):
 
         # Sub-componentes de coherencia
         self._component_histories: Dict[str, List[float]] = {}
+
+    def calcular(self, observaciones: Dict[str, Any]) -> float:
+        """Implementa el método abstracto delegando a compute."""
+        return self.compute(observaciones)
+
+    @abstractmethod
+    def compute(self, observaciones: Dict[str, Any]) -> float:
+        """Calcula coherencia desde observaciones. Implementar en subclases."""
+        pass
 
     def _update_component(self, name: str, value: float):
         """Actualiza un sub-componente."""
@@ -105,7 +114,7 @@ class CognitiveCoherence(CoherenceSurface):
     """
 
     def __init__(self, agent_id: str):
-        super().__init__(agent_id, LayerType.COGNITIVE)
+        super().__init__(agent_id, LayerType.COGNITIVA)
 
     def compute(self, observations: Dict[str, Any]) -> float:
         """
@@ -149,7 +158,7 @@ class SymbolicCoherence(CoherenceSurface):
     """
 
     def __init__(self, agent_id: str):
-        super().__init__(agent_id, LayerType.SYMBOLIC)
+        super().__init__(agent_id, LayerType.SIMBOLICA)
 
     def compute(self, observations: Dict[str, Any]) -> float:
         """
@@ -194,7 +203,7 @@ class NarrativeCoherence(CoherenceSurface):
     """
 
     def __init__(self, agent_id: str):
-        super().__init__(agent_id, LayerType.NARRATIVE)
+        super().__init__(agent_id, LayerType.NARRATIVA)
 
     def compute(self, observations: Dict[str, Any]) -> float:
         """
@@ -232,7 +241,7 @@ class LifeCoherence(CoherenceSurface):
     """
 
     def __init__(self, agent_id: str):
-        super().__init__(agent_id, LayerType.LIFE)
+        super().__init__(agent_id, LayerType.VITAL)
 
     def compute(self, observations: Dict[str, Any]) -> float:
         """

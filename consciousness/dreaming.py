@@ -360,7 +360,9 @@ class SistemaOnirico:
             # Epsilon endógeno: percentil 5 de varianzas o 1/10 por simetría
             eps_trans = np.percentile([np.var(self._historial_CE[i:i+5])
                                        for i in range(max(0, len(self._historial_CE)-10), len(self._historial_CE)-4)], 5) if len(self._historial_CE) > 10 else 1/10
-            pasos_transicion = max(1, int(1 / (var_reciente + eps_trans)))
+            # Protección contra overflow: limitar denominador mínimo
+            denom = max(1e-6, var_reciente + eps_trans)
+            pasos_transicion = max(1, min(10000, int(1 / denom)))
             if self._pasos_en_fase >= pasos_transicion:
                 self._fase = FaseSueno.SUENO_LIGERO
                 self._pasos_en_fase = 0
@@ -407,7 +409,9 @@ class SistemaOnirico:
             # Epsilon endógeno similar al de transición
             eps_desp = np.percentile([np.var(self._historial_CE[i:i+3])
                                       for i in range(max(0, len(self._historial_CE)-10), len(self._historial_CE)-2)], 5) if len(self._historial_CE) > 10 else 1/10
-            pasos_despertar = max(1, int(1 / (var_reciente + eps_desp)))
+            # Protección contra overflow: limitar denominador mínimo
+            denom_desp = max(1e-6, var_reciente + eps_desp)
+            pasos_despertar = max(1, min(10000, int(1 / denom_desp)))
             if self._pasos_en_fase >= pasos_despertar:
                 self._fase = FaseSueno.DESPIERTO
                 self._pasos_en_fase = 0
