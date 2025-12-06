@@ -1,0 +1,11 @@
+name,symbol,value,type
+π (pi),π,3.141592653589793,transcendental
+e (Euler),e,2.718281828459045,transcendental
+φ (golden ratio),φ,1.618033988749895,algebraic
+γ (Euler-Mascheroni),γ,0.5772156649015329,unknown
+√2,√2,1.4142135623730951,algebraic
+Feigenbaum δ,δ,4.66920160910299,chaos
+Feigenbaum α,α,2.5029078750958926,chaos
+Catalan,G,0.915965594177219,unknown
+Apéry,ζ(3),1.2020569031595942,irrational
+Khinchin,K,2.6854520010653062,unknown

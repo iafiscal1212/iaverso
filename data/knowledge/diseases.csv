@@ -1,0 +1,11 @@
+name,type,deaths_per_year,treatable
+Cancer,Neoplasm,10000000,Partially
+Heart Disease,Cardiovascular,9000000,Partially
+Stroke,Cardiovascular,6000000,Partially
+Diabetes,Metabolic,2000000,Yes
+Alzheimer,Neurological,2000000,No
+COVID-19,Infectious,1000000,Partially
+Malaria,Infectious,600000,Yes
+HIV/AIDS,Infectious,700000,Yes
+Tuberculosis,Infectious,1500000,Yes
+Depression,Mental,800000,Partially

@@ -1,0 +1,19 @@
+name,type,charge,mass_MeV,spin
+up,quark,0.6666666666666666,2.2,0.5
+down,quark,-0.3333333333333333,4.7,0.5
+charm,quark,0.6666666666666666,1275.0,0.5
+strange,quark,-0.3333333333333333,95.0,0.5
+top,quark,0.6666666666666666,173000.0,0.5
+bottom,quark,-0.3333333333333333,4180.0,0.5
+electron,lepton,-1.0,0.511,0.5
+muon,lepton,-1.0,105.7,0.5
+tau,lepton,-1.0,1777.0,0.5
+electron neutrino,lepton,0.0,2.2e-06,0.5
+muon neutrino,lepton,0.0,0.00017,0.5
+tau neutrino,lepton,0.0,0.0155,0.5
+photon,boson,0.0,0.0,1.0
+W+,boson,1.0,80379.0,1.0
+W-,boson,-1.0,80379.0,1.0
+Z,boson,0.0,91188.0,1.0
+gluon,boson,0.0,0.0,1.0
+Higgs,boson,0.0,125250.0,0.0

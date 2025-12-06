@@ -1,0 +1,11 @@
+name,kingdom,class,order,genome_Mb
+Homo sapiens,Animalia,Mammalia,Primates,3200.0
+Pan troglodytes,Animalia,Mammalia,Primates,3300.0
+Mus musculus,Animalia,Mammalia,Rodentia,2700.0
+Drosophila melanogaster,Animalia,Insecta,Diptera,180.0
+Caenorhabditis elegans,Animalia,Chromadorea,Rhabditida,100.0
+Escherichia coli,Bacteria,Gammaproteobacteria,Enterobacterales,4.6
+Saccharomyces cerevisiae,Fungi,Saccharomycetes,Saccharomycetales,12.0
+Arabidopsis thaliana,Plantae,Magnoliopsida,Brassicales,135.0
+SARS-CoV-2,Virus,Riboviria,Nidovirales,0.03
+Tardigrade,Animalia,Eutardigrada,Parachela,75.0

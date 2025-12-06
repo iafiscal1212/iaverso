@@ -1,0 +1,11 @@
+name,field,millennium,prize_usd
+Riemann Hypothesis,Number Theory,True,1000000
+P vs NP,Complexity Theory,True,1000000
+Navier-Stokes,PDEs,True,1000000
+Yang-Mills,Quantum Field Theory,True,1000000
+Birch-Swinnerton-Dyer,Number Theory,True,1000000
+Hodge Conjecture,Algebraic Geometry,True,1000000
+Goldbach Conjecture,Number Theory,False,0
+Twin Prime Conjecture,Number Theory,False,0
+Collatz Conjecture,Number Theory,False,0
+ABC Conjecture,Number Theory,False,0

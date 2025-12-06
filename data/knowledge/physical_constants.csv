@@ -1,0 +1,11 @@
+name,symbol,value,unit,exact
+Speed of light,c,299792458.0,m/s,True
+Planck constant,h,6.62607015e-34,J·s,True
+Gravitational constant,G,6.6743e-11,m³/(kg·s²),False
+Elementary charge,e,1.602176634e-19,C,True
+Boltzmann constant,k,1.380649e-23,J/K,True
+Avogadro number,Nₐ,6.02214076e+23,mol⁻¹,True
+Fine structure,α,0.0072973525693,,False
+Electron mass,mₑ,9.1093837015e-31,kg,False
+Proton mass,mₚ,1.67262192369e-27,kg,False
+Vacuum permittivity,ε₀,8.8541878128e-12,F/m,False
