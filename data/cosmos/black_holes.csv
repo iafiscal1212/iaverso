@@ -1,0 +1,9 @@
+name,mass_solar,type,host,distance,first_image,companion,note,outbursts,redshift
+Sagittarius A*,4150000.0,SMBH,Milky Way,26k ly,,,,,
+M87*,6500000000.0,SMBH,M87,,True,,,,
+Cygnus X-1,21.0,Stellar,,,,HDE 226868,,,
+TON 618,66000000000.0,SMBH,,,,,One of largest known,,
+Phoenix A*,100000000000.0,SMBH,,,,,Possibly largest known,,
+GW150914,62.0,Merger,,,,,First GW detection,,
+V404 Cygni,9.0,Stellar,,,,,,True,
+S5 0014+81,40000000000.0,SMBH,,,,,,,3.366

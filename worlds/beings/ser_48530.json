@@ -32,24 +32,24 @@
   "body": {
     "hunger": 100,
     "thirst": 100,
-    "energy": 17.275201962389655,
-    "warmth": 35.95588201410334,
+    "energy": 19.285536375799346,
+    "warmth": 56.4627233375699,
     "health": 100,
     "pain": 0,
     "pleasure": 0,
-    "age": 714.0,
-    "x": -166.14111808823884,
-    "y": -32.05236710469947
+    "age": 952.0,
+    "x": -118.91451247997529,
+    "y": -42.29255531455885
   },
   "emotions": {
     "fear": 0,
-    "joy": 0.22955555130684402,
-    "sadness": 0.016243452633244632,
+    "joy": 0.3377132180466197,
+    "sadness": 0,
     "anger": 0,
     "love": 1,
-    "loneliness": 0.8956897063804797,
+    "loneliness": 1,
     "anxiety": 0,
-    "peace": 1,
+    "peace": 1.1,
     "trust": 0.3651858465499731
   },
   "memory": {
@@ -194,7 +194,7 @@
       },
       "ser_89796": {
         "first_met": 388,
-        "times_met": 80,
+        "times_met": 85,
         "trust": 0.5,
         "feelings": "neutral",
         "memories": [
@@ -245,14 +245,14 @@
   },
   "mind": {
     "thought_stream": [
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Pienso mucho...",
+      "Conozco a ser_88281...",
       "Conozco a ser_36673...",
       "Conozco a ser_13555...",
       "Conozco a ser_89796...",
       "Me gusta buscar_patrones...",
-      "Estoy agotado...",
-      "Siento algo c\u00e1lido por alguien...",
-      "Estoy agotado...",
-      "Siento algo c\u00e1lido por alguien...",
       "Estoy agotado...",
       "Siento algo c\u00e1lido por alguien...",
       "Estoy agotado...",

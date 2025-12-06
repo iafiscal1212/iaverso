@@ -32,24 +32,24 @@
   "body": {
     "hunger": 100,
     "thirst": 100,
-    "energy": 15.480028194295963,
-    "warmth": 36.346169263230585,
+    "energy": 19.173370925727838,
+    "warmth": 55.71531125047455,
     "health": 100,
     "pain": 0,
     "pleasure": 0,
-    "age": 714.0,
-    "x": 113.24789909305156,
-    "y": 92.08378443633113
+    "age": 952.0,
+    "x": 83.9577329962437,
+    "y": 56.955155187017496
   },
   "emotions": {
     "fear": 0,
-    "joy": 0.10205182998132858,
-    "sadness": 0.94697836973741,
+    "joy": 0.20284303665025644,
+    "sadness": 0.9845850039691876,
     "anger": 0,
     "love": 1,
-    "loneliness": 0,
+    "loneliness": 1,
     "anxiety": 0,
-    "peace": 1,
+    "peace": 1.1,
     "trust": 0.5236725514405448
   },
   "memory": {
@@ -468,7 +468,7 @@
       },
       "ser_01000": {
         "first_met": 292,
-        "times_met": 62,
+        "times_met": 190,
         "trust": 0.5,
         "feelings": "neutral",
         "memories": [
@@ -478,6 +478,96 @@
           },
           {
             "tick": 708,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 723,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 725,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 726,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 747,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 748,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 749,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 772,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 773,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 774,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 775,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 789,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 790,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 797,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 798,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 799,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 800,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 801,
+            "type": "heard",
+            "message": "...ser_96553..."
+          },
+          {
+            "tick": 803,
             "type": "heard",
             "message": "...ser_96553..."
           }
@@ -3009,35 +3099,35 @@
   },
   "mind": {
     "thought_stream": [
+      "Conozco a ser_96873...",
+      "Conozco a ser_76799...",
+      "Conozco a ser_76441...",
+      "Conozco a ser_10655...",
+      "Conozco a ser_12699...",
+      "Conozco a ser_97596...",
+      "Conozco a ser_96150...",
+      "Conozco a ser_94790...",
+      "Conozco a ser_37289...",
+      "Conozco a ser_66860...",
+      "Conozco a ser_20936...",
+      "Conozco a ser_52075...",
+      "Conozco a ser_33957...",
+      "Conozco a ser_42035...",
+      "Conozco a ser_15128...",
+      "Conozco a ser_35983...",
       "Conozco a ser_73735...",
       "Conozco a ser_21220...",
       "Me gusta tocar_tierra...",
-      "Las estrellas brillan...",
       "Estoy agotado...",
-      "Las estrellas brillan...",
       "Estoy agotado...",
-      "Las estrellas brillan...",
       "Estoy agotado...",
-      "Las estrellas brillan...",
       "Estoy agotado...",
-      "Las estrellas brillan...",
       "Estoy agotado...",
-      "Las estrellas brillan...",
       "Estoy agotado...",
-      "Las estrellas brillan...",
-      "Oigo: '...ser_96553...'",
       "Estoy agotado...",
-      "Las estrellas brillan...",
       "Estoy agotado...",
-      "Las estrellas brillan...",
       "Estoy agotado...",
-      "Las estrellas brillan...",
       "Estoy agotado...",
-      "Las estrellas brillan...",
-      "Estoy agotado...",
-      "Las estrellas brillan...",
-      "Estoy agotado...",
-      "Las estrellas brillan...",
       "Estoy agotado..."
     ],
     "questions": [

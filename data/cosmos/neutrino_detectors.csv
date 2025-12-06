@@ -1,0 +1,8 @@
+name,location,volume_km3,type,operational,volume_kt,mass_ton,solar_neutrinos,mass_kt
+IceCube,South Pole,1.0,Cherenkov,True,,,,
+Super-Kamiokande,Japan,,Water Cherenkov,True,50.0,,,
+SNO+,Canada,,Scintillator,True,0.78,,,
+ANTARES,Mediterranean,0.01,Cherenkov,True,,,,
+KM3NeT,Mediterranean,1.0,Cherenkov,Building,,,,
+Borexino,Italy,,Scintillator,,,278.0,True,
+DUNE,USA,,LAr TPC,Building,,,,70.0

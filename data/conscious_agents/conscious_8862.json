@@ -1,0 +1,70 @@
+{
+  "energy": 67.99999999999997,
+  "age": 200,
+  "action_values": {
+    "0": -2.03125,
+    "1": 0.5,
+    "2": -0.3,
+    "3": -0.8461538461538461
+  },
+  "action_counts": {
+    "0": 32,
+    "1": 122,
+    "2": 20,
+    "3": 26
+  },
+  "near_death_count": 0,
+  "moments_of_confusion": 1,
+  "moments_of_clarity": 18,
+  "thought_history": [
+    "Voy a probar EXPLOTAR.",
+    "Voy a probar EXPLOTAR.",
+    "Siempre elijo EXPLOTAR...",
+    "Voy a probar EXPLORAR.",
+    "EXPLORAR fue un error.",
+    "Voy a probar EXPLOTAR.",
+    "Voy a probar ARRIESGAR.",
+    "ARRIESGAR fue un error.",
+    "Voy a probar EXPLOTAR.",
+    "Voy a probar DESCANSAR.",
+    "Siempre elijo EXPLOTAR...",
+    "Siempre elijo EXPLOTAR...",
+    "Siempre elijo EXPLOTAR...",
+    "Siempre elijo EXPLOTAR...",
+    "Siempre elijo EXPLOTAR...",
+    "Siempre elijo EXPLOTAR...",
+    "Voy a probar EXPLORAR.",
+    "EXPLORAR fue un error.",
+    "Han pasado 200 momentos.",
+    "Empiezo a entender c\u00f3mo funciona esto."
+  ],
+  "question_history": [
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfAlguna vez encontrar\u00e9 respuestas?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfHacia d\u00f3nde voy?",
+    "\u00bfPor qu\u00e9 hago cosas que s\u00e9 que me da\u00f1an?"
+  ],
+  "unexplained_experiences": [
+    {
+      "age": 200,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed EXPLORAR aunque s\u00e9 que no funciona"
+    }
+  ]
+}

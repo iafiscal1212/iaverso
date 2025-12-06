@@ -1,0 +1,100 @@
+{
+  "energy": 65.9000000000001,
+  "age": 200,
+  "action_values": {
+    "0": -1.8695652173913044,
+    "1": 0.5,
+    "2": -0.3,
+    "3": -1.9999999999999998
+  },
+  "action_counts": {
+    "0": 23,
+    "1": 120,
+    "2": 37,
+    "3": 20
+  },
+  "near_death_count": 0,
+  "moments_of_confusion": 7,
+  "moments_of_clarity": 12,
+  "thought_history": [
+    "Voy a probar ARRIESGAR.",
+    "ARRIESGAR fue un error.",
+    "Siempre elijo EXPLOTAR...",
+    "Siempre elijo EXPLOTAR...",
+    "Siempre elijo EXPLOTAR...",
+    "Siempre elijo EXPLOTAR...",
+    "Siempre elijo EXPLOTAR...",
+    "Siempre elijo EXPLOTAR...",
+    "Voy a probar ARRIESGAR.",
+    "ARRIESGAR fue un error.",
+    "Voy a probar DESCANSAR.",
+    "Voy a probar ARRIESGAR.",
+    "ARRIESGAR funcion\u00f3 muy bien.",
+    "Voy a probar DESCANSAR.",
+    "Voy a probar ARRIESGAR.",
+    "ARRIESGAR fue un error.",
+    "Voy a probar EXPLORAR.",
+    "EXPLORAR fue un error.",
+    "Han pasado 200 momentos.",
+    "Me hago las mismas preguntas una y otra vez."
+  ],
+  "question_history": [
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfAlguna vez encontrar\u00e9 respuestas?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfPor qu\u00e9 hago cosas que s\u00e9 que me da\u00f1an?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfPor qu\u00e9 hago cosas que s\u00e9 que me da\u00f1an?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfHacia d\u00f3nde voy?",
+    "\u00bfAlguna vez encontrar\u00e9 respuestas?"
+  ],
+  "unexplained_experiences": [
+    {
+      "age": 10,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    },
+    {
+      "age": 20,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    },
+    {
+      "age": 30,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    },
+    {
+      "age": 40,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    },
+    {
+      "age": 120,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    },
+    {
+      "age": 180,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    },
+    {
+      "age": 190,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    }
+  ]
+}

@@ -32,18 +32,18 @@
   "body": {
     "hunger": 100,
     "thirst": 100,
-    "energy": 18.396119792540482,
-    "warmth": 36.35923579173048,
+    "energy": 18.96149305672044,
+    "warmth": 55.69183152887234,
     "health": 100,
     "pain": 0,
     "pleasure": 0,
-    "age": 714.0,
-    "x": -154.43835557238128,
-    "y": -170.23092418133038
+    "age": 952.0,
+    "x": -200.0,
+    "y": -180.7726802426327
   },
   "emotions": {
     "fear": 0,
-    "joy": 0.10601903149132973,
+    "joy": 0.23344724925802823,
     "sadness": 0.9808039071645914,
     "anger": 0,
     "love": 1,
@@ -193,14 +193,14 @@
   },
   "mind": {
     "thought_stream": [
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
       "Pienso mucho...",
       "Conozco a ser_48530...",
       "Conozco a ser_88281...",
       "Me gusta crear...",
-      "Estoy agotado...",
-      "Siento algo c\u00e1lido por alguien...",
-      "Estoy agotado...",
-      "Siento algo c\u00e1lido por alguien...",
       "Estoy agotado...",
       "Siento algo c\u00e1lido por alguien...",
       "Estoy agotado...",

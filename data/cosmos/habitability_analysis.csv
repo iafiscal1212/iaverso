@@ -1,0 +1,1001 @@
+name,host,score,habitable,reasons,warnings,temp,radius,mass,distance_pc
+Kepler-296 f,Kepler-296,100,True,"['Temperatura ideal (274K)', 'Tamaño rocoso (1.80 R⊕)', 'Masa terrestre (3.9 M⊕)', 'Órbita estable (63 días)']",['Enana roja (posible radiación)'],274.0,1.8,3.89,167.0
+Kepler-560 b,Kepler-560,90,True,"['Temperatura ideal (298K)', 'Tamaño rocoso (1.72 R⊕)', 'Masa terrestre (3.6 M⊕)']",['Enana roja (posible radiación)'],298.0,1.72,3.61,109.308
+Kepler-445 d,Kepler-445,90,True,"['Temperatura ideal (305K)', 'Tamaño rocoso (1.25 R⊕)', 'Masa terrestre (2.1 M⊕)']",['Enana roja (posible radiación)'],305.0,1.25,2.1,127.201
+Kepler-442 b,Kepler-442,90,True,"['Temperatura habitable (241K)', 'Tamaño rocoso (1.34 R⊕)', 'Masa terrestre (2.4 M⊕)', 'Órbita estable (112 días)', 'Estrella tipo solar']",[],241.0,1.34,2.36,365.965
+Kepler-1549 b,Kepler-1549,80,True,"['Temperatura ideal (286K)', 'Masa terrestre (7.1 M⊕)', 'Órbita estable (215 días)', 'Estrella tipo solar']",['Posible gigante gaseoso (2.57 R⊕)'],286.0,2.57,7.13,803.052
+Kepler-220 e,Kepler-220,80,True,"['Temperatura habitable (341K)', 'Tamaño rocoso (1.33 R⊕)', 'Masa terrestre (2.3 M⊕)', 'Estrella tipo solar']",[],341.0,1.33,2.33,171.109
+Kepler-437 b,Kepler-437,80,True,"['Temperatura ideal (308K)', 'Masa terrestre (5.2 M⊕)', 'Órbita estable (67 días)', 'Estrella tipo solar']",['Posible gigante gaseoso (2.14 R⊕)'],308.0,2.14,5.22,304.0
+Kepler-298 d,Kepler-298,80,True,"['Temperatura ideal (277K)', 'Masa terrestre (6.8 M⊕)', 'Órbita estable (77 días)', 'Estrella tipo solar']",['Posible gigante gaseoso (2.50 R⊕)'],277.0,2.5,6.8,518.204
+Kepler-331 d,Kepler-331,80,True,"['Temperatura habitable (346K)', 'Tamaño rocoso (1.64 R⊕)', 'Masa terrestre (3.3 M⊕)', 'Estrella tipo solar']",[],346.0,1.64,3.33,580.119
+Kepler-436 b,Kepler-436,80,True,"['Temperatura ideal (322K)', 'Masa terrestre (7.9 M⊕)', 'Órbita estable (64 días)', 'Estrella tipo solar']",['Posible gigante gaseoso (2.73 R⊕)'],322.0,2.73,7.9,588.867
+Kepler-169 f,Kepler-169,80,True,"['Temperatura ideal (321K)', 'Masa terrestre (7.2 M⊕)', 'Órbita estable (87 días)', 'Estrella tipo solar']",['Posible gigante gaseoso (2.58 R⊕)'],321.0,2.58,7.18,406.529
+Kepler-249 d,Kepler-249,70,True,"['Temperatura habitable (332K)', 'Tamaño rocoso (1.57 R⊕)', 'Masa terrestre (3.1 M⊕)']",['Enana roja (posible radiación)'],332.0,1.57,3.09,190.401
+Kepler-441 b,Kepler-441,70,True,"['Tamaño rocoso (1.64 R⊕)', 'Masa terrestre (3.3 M⊕)', 'Órbita estable (207 días)', 'Estrella tipo solar']",['Temperatura extrema (189K)'],189.0,1.64,3.33,268.003
+Kepler-267 d,Kepler-267,70,True,"['Temperatura ideal (301K)', 'Masa terrestre (5.8 M⊕)', 'Estrella tipo solar']",['Posible gigante gaseoso (2.27 R⊕)'],301.0,2.27,5.77,264.993
+Kepler-149 c,Kepler-149,70,True,"['Tamaño rocoso (1.61 R⊕)', 'Masa terrestre (3.2 M⊕)', 'Órbita estable (55 días)', 'Estrella tipo solar']",['Temperatura extrema (436K)'],436.0,1.61,3.22,571.034
+Kepler-430 c,Kepler-430,70,True,"['Tamaño rocoso (1.75 R⊕)', 'Masa terrestre (3.7 M⊕)', 'Órbita estable (111 días)', 'Estrella tipo solar']",['Temperatura extrema (458K)'],458.0,1.75,3.71,917.477
+Kepler-130 d,Kepler-130,70,True,"['Tamaño rocoso (1.64 R⊕)', 'Masa terrestre (3.3 M⊕)', 'Órbita estable (88 días)', 'Estrella tipo solar']",['Temperatura extrema (451K)'],451.0,1.64,3.33,316.663
+Kepler-403 c,Kepler-403,70,True,"['Tamaño rocoso (1.75 R⊕)', 'Masa terrestre (3.7 M⊕)', 'Órbita estable (54 días)', 'Estrella tipo solar']",['Temperatura extrema (604K)'],604.0,1.75,3.71,840.269
+Kepler-296 e,Kepler-296,70,True,"['Temperatura habitable (337K)', 'Tamaño rocoso (1.53 R⊕)', 'Masa terrestre (3.0 M⊕)']",['Enana roja (posible radiación)'],337.0,1.53,2.96,167.0
+Kepler-84 d,Kepler-84,60,True,"['Tamaño rocoso (1.38 R⊕)', 'Masa terrestre (2.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1254K)'],1254.0,1.38,2.48,1023.9
+Kepler-352 b,Kepler-352,60,True,"['Tamaño rocoso (0.86 R⊕)', 'Masa terrestre (0.6 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (694K)'],694.0,0.86,0.566,252.733
+Kepler-124 b,Kepler-124,60,True,"['Tamaño rocoso (0.73 R⊕)', 'Masa terrestre (0.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (892K)'],892.0,0.73,0.315,420.046
+Kepler-1841 b,Kepler-1841,60,True,"['Tamaño rocoso (1.49 R⊕)', 'Masa terrestre (2.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (542K)'],542.0,1.48912557,2.82,631.7
+Kepler-1858 b,Kepler-1858,60,True,"['Temperatura habitable (330K)', 'Masa terrestre (6.4 M⊕)', 'Órbita estable (88 días)', 'Estrella tipo solar']",['Posible gigante gaseoso (2.42 R⊕)'],330.0,2.42168247,6.44,833.055
+Kepler-392 c,Kepler-392,60,True,"['Tamaño rocoso (1.10 R⊕)', 'Masa terrestre (1.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (901K)'],901.0,1.1,1.37,681.428
+Kepler-363 b,Kepler-363,60,True,"['Tamaño rocoso (1.16 R⊕)', 'Masa terrestre (1.6 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1347K)'],1347.0,1.16,1.65,762.596
+Kepler-399 b,Kepler-399,60,True,"['Tamaño rocoso (0.96 R⊕)', 'Masa terrestre (0.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (773K)'],773.0,0.96,0.84,740.537
+Kepler-379 b,Kepler-379,60,True,"['Tamaño rocoso (1.66 R⊕)', 'Masa terrestre (3.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (775K)'],775.0,1.66,3.39,731.274
+Kepler-319 b,Kepler-319,60,True,"['Tamaño rocoso (1.63 R⊕)', 'Masa terrestre (3.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1023K)'],1023.0,1.63,3.29,503.436
+Kepler-398 c,Kepler-398,60,True,"['Tamaño rocoso (1.01 R⊕)', 'Masa terrestre (1.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (536K)'],536.0,1.01,1.01,177.355
+Kepler-373 c,Kepler-373,60,True,"['Tamaño rocoso (1.24 R⊕)', 'Masa terrestre (2.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (729K)'],729.0,1.24,2.07,1090.45
+Kepler-190 c,Kepler-190,60,True,"['Tamaño rocoso (1.46 R⊕)', 'Masa terrestre (2.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (948K)'],948.0,1.46,2.73,433.387
+Kepler-207 c,Kepler-207,60,True,"['Tamaño rocoso (1.50 R⊕)', 'Masa terrestre (2.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1556K)'],1556.0,1.5,2.86,875.519
+Kepler-224 b,Kepler-224,60,True,"['Tamaño rocoso (1.39 R⊕)', 'Masa terrestre (2.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (937K)'],937.0,1.39,2.51,782.088
+Kepler-137 b,Kepler-137,60,True,"['Tamaño rocoso (1.47 R⊕)', 'Masa terrestre (2.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (742K)'],742.0,1.47,2.76,302.979
+Kepler-228 b,Kepler-228,60,True,"['Tamaño rocoso (1.53 R⊕)', 'Masa terrestre (3.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1360K)'],1360.0,1.53,2.96,1644.61
+Kepler-250 b,Kepler-250,60,True,"['Tamaño rocoso (1.13 R⊕)', 'Masa terrestre (1.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (938K)'],938.0,1.13,1.51,760.585
+Kepler-390 c,Kepler-390,60,True,"['Tamaño rocoso (0.79 R⊕)', 'Masa terrestre (0.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (630K)'],630.0,0.79,0.418,435.277
+Kepler-49 e,Kepler-49,60,True,"['Tamaño rocoso (1.56 R⊕)', 'Masa terrestre (1.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (371K)'],371.0,1.56,1.03815,311.222
+Kepler-140 b,Kepler-140,60,True,"['Tamaño rocoso (1.61 R⊕)', 'Masa terrestre (3.2 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1301K)'],1301.0,1.61,3.22,583.859
+KOI-351 c,KOI-351,60,True,"['Tamaño rocoso (1.19 R⊕)', 'Masa terrestre (1.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (987K)'],987.0,1.19,1.81,848.254
+Kepler-62 c,Kepler-62,60,True,"['Tamaño rocoso (0.54 R⊕)', 'Masa terrestre (4.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (578K)'],578.0,0.54,4.0,300.874
+Kepler-62 b,Kepler-62,60,True,"['Tamaño rocoso (1.31 R⊕)', 'Masa terrestre (9.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (750K)'],750.0,1.31,9.0,300.874
+HD 40307 g,HD 40307,60,True,"['Temperatura habitable (255K)', 'Masa terrestre (7.1 M⊕)', 'Órbita estable (198 días)', 'Estrella tipo solar']",['Posible gigante gaseoso (2.56 R⊕)'],255.0,2.56,7.1,12.9363
+Kepler-1783 b,Kepler-1783,60,True,"['Tamaño rocoso (1.32 R⊕)', 'Masa terrestre (2.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1088K)'],1088.0,1.31946731,2.3,264.078
+Kepler-595 c,Kepler-595,60,True,"['Tamaño rocoso (1.01 R⊕)', 'Masa terrestre (3.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (679K)'],679.0,1.009,3.3,643.009
+Kepler-1690 b,Kepler-1690,60,True,"['Temperatura habitable (267K)', 'Masa terrestre (8.3 M⊕)', 'Órbita estable (235 días)', 'Estrella tipo solar']",['Posible gigante gaseoso (2.81 R⊕)'],267.0,2.81109223,8.3,703.789
+Kepler-1693 b,Kepler-1693,60,True,"['Tamaño rocoso (1.29 R⊕)', 'Masa terrestre (2.2 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (807K)'],807.0,1.28938413,2.21,760.065
+HD 136352 b,HD 136352,60,True,"['Tamaño rocoso (1.66 R⊕)', 'Masa terrestre (4.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (905K)'],905.0,1.664,4.72,14.682
+Kepler-150 b,Kepler-150,60,True,"['Tamaño rocoso (1.25 R⊕)', 'Masa terrestre (2.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1131K)'],1131.0,1.25,2.1,891.092
+Kepler-414 b,Kepler-414,60,True,"['Tamaño rocoso (1.71 R⊕)', 'Masa terrestre (3.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1024K)'],1024.0,1.71,3.5,413.46
+Kepler-348 c,Kepler-348,60,True,"['Tamaño rocoso (1.33 R⊕)', 'Masa terrestre (2.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (888K)'],888.0,1.33,2.33,570.783
+Kepler-188 b,Kepler-188,60,True,"['Tamaño rocoso (1.68 R⊕)', 'Masa terrestre (3.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1463K)'],1463.0,1.68,3.46,968.544
+Kepler-126 b,Kepler-126,60,True,"['Tamaño rocoso (1.52 R⊕)', 'Masa terrestre (4.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1009K)'],1009.0,1.52,4.11726105,237.401
+Kepler-62 e,Kepler-62,60,True,"['Temperatura habitable (270K)', 'Tamaño rocoso (1.61 R⊕)', 'Órbita estable (122 días)', 'Estrella tipo solar']",['Super-Tierra pesada (36.0 M⊕)'],270.0,1.61,36.0,300.874
+Kepler-128 b,Kepler-128,60,True,"['Tamaño rocoso (1.42 R⊕)', 'Masa terrestre (3.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (968K)'],968.0,1.421,3.79,396.379
+DMPP-1 d,DMPP-1,60,True,"['Tamaño rocoso (1.65 R⊕)', 'Masa terrestre (3.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1632K)'],1632.0,1.65,3.35,62.5388
+Kepler-114 c,Kepler-114,60,True,"['Tamaño rocoso (1.60 R⊕)', 'Masa terrestre (2.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (507K)'],507.0,1.6,2.8,259.533
+Kepler-394 b,Kepler-394,60,True,"['Tamaño rocoso (1.60 R⊕)', 'Masa terrestre (3.2 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1035K)'],1035.0,1.6,3.19,1058.72
+Kepler-189 b,Kepler-189,60,True,"['Tamaño rocoso (1.21 R⊕)', 'Masa terrestre (1.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (678K)'],678.0,1.21,1.92,591.534
+Kepler-185 b,Kepler-185,60,True,"['Tamaño rocoso (1.17 R⊕)', 'Masa terrestre (1.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1237K)'],1237.0,1.17,1.71,466.735
+Kepler-288 b,Kepler-288,60,True,"['Tamaño rocoso (1.67 R⊕)', 'Masa terrestre (3.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1197K)'],1197.0,1.67,3.43,1194.15
+Kepler-114 b,Kepler-114,60,True,"['Tamaño rocoso (1.26 R⊕)', 'Masa terrestre (1.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (586K)'],586.0,1.26,1.09,259.533
+Kepler-169 c,Kepler-169,60,True,"['Tamaño rocoso (1.21 R⊕)', 'Masa terrestre (1.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (776K)'],776.0,1.21,1.92,406.529
+Kepler-141 c,Kepler-141,60,True,"['Tamaño rocoso (1.41 R⊕)', 'Masa terrestre (2.6 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (738K)'],738.0,1.41,2.57,301.183
+Kepler-173 b,Kepler-173,60,True,"['Tamaño rocoso (1.29 R⊕)', 'Masa terrestre (2.2 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1179K)'],1179.0,1.29,2.21,833.165
+Kepler-180 b,Kepler-180,60,True,"['Tamaño rocoso (1.50 R⊕)', 'Masa terrestre (2.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (781K)'],781.0,1.5,2.86,695.65
+Kepler-360 b,Kepler-360,60,True,"['Tamaño rocoso (1.65 R⊕)', 'Masa terrestre (3.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1116K)'],1116.0,1.65,3.36,876.044
+Kepler-148 b,Kepler-148,60,True,"['Tamaño rocoso (1.80 R⊕)', 'Masa terrestre (3.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1284K)'],1284.0,1.8,3.89,791.163
+Kepler-334 c,Kepler-334,60,True,"['Tamaño rocoso (1.43 R⊕)', 'Masa terrestre (2.6 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (822K)'],822.0,1.43,2.63,426.59
+Kepler-282 c,Kepler-282,60,True,"['Tamaño rocoso (1.20 R⊕)', 'Masa terrestre (1.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (717K)'],717.0,1.2,1.87,1337.61
+Kepler-59 b,Kepler-59,60,True,"['Tamaño rocoso (1.10 R⊕)', 'Masa terrestre (4.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (864K)'],864.0,1.1,4.1,1163.22
+Kepler-20 e,Kepler-20,60,True,"['Tamaño rocoso (0.82 R⊕)', 'Masa terrestre (0.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1004K)'],1004.0,0.821,0.76,282.563
+Kepler-398 b,Kepler-398,60,True,"['Tamaño rocoso (0.93 R⊕)', 'Masa terrestre (0.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (755K)'],755.0,0.93,0.749,177.355
+Kepler-247 b,Kepler-247,60,True,"['Tamaño rocoso (1.64 R⊕)', 'Masa terrestre (3.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (970K)'],970.0,1.64,3.33,663.711
+Kepler-301 d,Kepler-301,60,True,"['Tamaño rocoso (1.75 R⊕)', 'Masa terrestre (3.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (725K)'],725.0,1.75,3.71,719.166
+Kepler-301 c,Kepler-301,60,True,"['Tamaño rocoso (1.35 R⊕)', 'Masa terrestre (2.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (989K)'],989.0,1.35,2.39,719.166
+Kepler-191 b,Kepler-191,60,True,"['Tamaño rocoso (1.34 R⊕)', 'Masa terrestre (2.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (722K)'],722.0,1.34,2.36,594.464
+Kepler-208 e,Kepler-208,60,True,"['Tamaño rocoso (1.48 R⊕)', 'Masa terrestre (2.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (880K)'],880.0,1.48,2.79,775.328
+Kepler-81 d,Kepler-81,60,True,"['Tamaño rocoso (1.21 R⊕)', 'Masa terrestre (1.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (418K)'],418.0,1.21,1.92,348.291
+Kepler-197 e,Kepler-197,60,True,"['Tamaño rocoso (0.91 R⊕)', 'Masa terrestre (0.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (691K)'],691.0,0.91,0.693,330.575
+Kepler-200 c,Kepler-200,60,True,"['Tamaño rocoso (1.59 R⊕)', 'Masa terrestre (3.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (806K)'],806.0,1.59,3.15,665.912
+Kepler-65 d,Kepler-65,60,True,"['Tamaño rocoso (1.52 R⊕)', 'Masa terrestre (4.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1117K)'],1117.0,1.52,4.14,303.728
+Kepler-1905 b,Kepler-1905,60,True,"['Tamaño rocoso (1.45 R⊕)', 'Masa terrestre (2.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1212K)'],1212.0,1.4460734,2.69,1051.53
+Kepler-282 b,Kepler-282,60,True,"['Tamaño rocoso (1.01 R⊕)', 'Masa terrestre (1.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (817K)'],817.0,1.01,1.01,1337.61
+Kepler-220 d,Kepler-220,60,True,"['Tamaño rocoso (0.98 R⊕)', 'Masa terrestre (0.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (401K)'],401.0,0.98,0.904,171.109
+Kepler-316 c,Kepler-316,60,True,"['Tamaño rocoso (1.16 R⊕)', 'Masa terrestre (1.6 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (577K)'],577.0,1.16,1.65,384.938
+Kepler-208 c,Kepler-208,60,True,"['Tamaño rocoso (1.39 R⊕)', 'Masa terrestre (2.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1141K)'],1141.0,1.39,2.51,775.328
+Kepler-132 d,Kepler-132,60,True,"['Tamaño rocoso (1.55 R⊕)', 'Masa terrestre (3.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (758K)'],758.0,1.55,3.02,349.549
+Kepler-147 b,Kepler-147,60,True,"['Tamaño rocoso (1.53 R⊕)', 'Masa terrestre (3.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (953K)'],953.0,1.53,2.96,1042.02
+Kepler-390 b,Kepler-390,60,True,"['Tamaño rocoso (0.82 R⊕)', 'Masa terrestre (0.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (786K)'],786.0,0.82,0.477,435.277
+Kepler-123 c,Kepler-123,60,True,"['Tamaño rocoso (1.48 R⊕)', 'Masa terrestre (2.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (706K)'],706.0,1.48,2.79,1021.66
+Kepler-389 b,Kepler-389,60,True,"['Tamaño rocoso (1.51 R⊕)', 'Masa terrestre (2.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1047K)'],1047.0,1.51,2.89,816.559
+Kepler-402 d,Kepler-402,60,True,"['Tamaño rocoso (1.38 R⊕)', 'Masa terrestre (2.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1006K)'],1006.0,1.38,2.48,625.339
+Kepler-144 b,Kepler-144,60,True,"['Tamaño rocoso (1.33 R⊕)', 'Masa terrestre (2.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1253K)'],1253.0,1.33,2.33,384.917
+K2-138 b,K2-138,60,True,"['Tamaño rocoso (1.51 R⊕)', 'Masa terrestre (3.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1157K)'],1157.0,1.51,3.1,202.585
+Kepler-332 d,Kepler-332,60,True,"['Tamaño rocoso (1.18 R⊕)', 'Masa terrestre (1.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (427K)'],427.0,1.18,1.76,344.19
+Kepler-186 f,Kepler-186,60,True,"['Tamaño rocoso (1.17 R⊕)', 'Masa terrestre (1.7 M⊕)', 'Órbita estable (130 días)']","['Temperatura extrema (177K)', 'Enana roja (posible radiación)']",177.0,1.17,1.71,177.594
+Kepler-376 c,Kepler-376,60,True,"['Tamaño rocoso (1.79 R⊕)', 'Masa terrestre (3.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (873K)'],873.0,1.79,3.86,923.067
+Kepler-348 b,Kepler-348,60,True,"['Tamaño rocoso (1.52 R⊕)', 'Masa terrestre (2.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1196K)'],1196.0,1.52,2.92,570.783
+Kepler-388 b,Kepler-388,60,True,"['Tamaño rocoso (0.81 R⊕)', 'Masa terrestre (0.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (830K)'],830.0,0.81,0.457,425.0
+Kepler-226 d,Kepler-226,60,True,"['Tamaño rocoso (1.22 R⊕)', 'Masa terrestre (2.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (800K)'],800.0,1.22,1.98,980.138
+Kepler-383 b,Kepler-383,60,True,"['Tamaño rocoso (1.32 R⊕)', 'Masa terrestre (2.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (545K)'],545.0,1.32,2.3,470.0
+Kepler-286 d,Kepler-286,60,True,"['Tamaño rocoso (1.33 R⊕)', 'Masa terrestre (2.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (919K)'],919.0,1.33,2.33,1226.85
+Kepler-204 c,Kepler-204,60,True,"['Tamaño rocoso (1.79 R⊕)', 'Masa terrestre (3.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (683K)'],683.0,1.79,3.86,686.723
+Kepler-1149 b,Kepler-1149,60,True,"['Tamaño rocoso (1.44 R⊕)', 'Masa terrestre (2.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1128K)'],1128.0,1.44,2.67,1217.73
+Kepler-1506 b,Kepler-1506,60,True,"['Tamaño rocoso (1.32 R⊕)', 'Masa terrestre (2.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (783K)'],783.0,1.32,2.3,2366.02
+HD 3167 b,HD 3167,60,True,"['Tamaño rocoso (1.67 R⊕)', 'Masa terrestre (5.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1774K)'],1774.0,1.67,4.97,47.2899
+Kepler-1581 b,Kepler-1581,60,True,"['Tamaño rocoso (0.80 R⊕)', 'Masa terrestre (0.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1108K)'],1108.0,0.8,0.437,493.175
+Kepler-373 b,Kepler-373,60,True,"['Tamaño rocoso (1.36 R⊕)', 'Masa terrestre (2.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1054K)'],1054.0,1.36,2.42,1090.45
+Kepler-404 b,Kepler-404,60,True,"['Tamaño rocoso (1.27 R⊕)', 'Masa terrestre (2.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (730K)'],730.0,1.27,2.15,812.524
+Kepler-387 b,Kepler-387,60,True,"['Tamaño rocoso (1.03 R⊕)', 'Masa terrestre (1.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (994K)'],994.0,1.03,1.08,801.052
+Kepler-366 b,Kepler-366,60,True,"['Tamaño rocoso (1.46 R⊕)', 'Masa terrestre (2.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1326K)'],1326.0,1.46,2.73,1856.28
+Kepler-141 b,Kepler-141,60,True,"['Tamaño rocoso (0.69 R⊕)', 'Masa terrestre (0.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (968K)'],968.0,0.69,0.257,301.183
+Kepler-400 b,Kepler-400,60,True,"['Tamaño rocoso (1.65 R⊕)', 'Masa terrestre (3.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (939K)'],939.0,1.65,3.36,845.97
+Kepler-320 b,Kepler-320,60,True,"['Tamaño rocoso (1.14 R⊕)', 'Masa terrestre (1.6 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1292K)'],1292.0,1.14,1.55,826.613
+Kepler-1167 b,Kepler-1167,60,True,"['Tamaño rocoso (1.71 R⊕)', 'Masa terrestre (3.6 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1419K)'],1419.0,1.71,3.57,820.905
+Kepler-386 c,Kepler-386,60,True,"['Tamaño rocoso (1.58 R⊕)', 'Masa terrestre (3.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (513K)'],513.0,1.58,3.12,882.462
+Kepler-1243 b,Kepler-1243,60,True,"['Tamaño rocoso (1.75 R⊕)', 'Masa terrestre (3.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (690K)'],690.0,1.75,3.71,758.17
+Kepler-1298 b,Kepler-1298,60,True,"['Tamaño rocoso (1.31 R⊕)', 'Masa terrestre (2.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1373K)'],1373.0,1.31,2.27,544.163
+Kepler-106 b,Kepler-106,60,True,"['Tamaño rocoso (0.82 R⊕)', 'Masa terrestre (5.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1021K)'],1021.0,0.82,5.3,444.322
+Kepler-100 d,Kepler-100,60,True,"['Tamaño rocoso (1.61 R⊕)', 'Masa terrestre (3.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (670K)'],670.0,1.61,3.0,304.645
+Kepler-106 d,Kepler-106,60,True,"['Tamaño rocoso (0.95 R⊕)', 'Masa terrestre (8.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (649K)'],649.0,0.95,8.1,444.322
+Kepler-131 c,Kepler-131,60,True,"['Tamaño rocoso (0.84 R⊕)', 'Masa terrestre (8.2 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (615K)'],615.0,0.84,8.25,228.678
+Kepler-274 b,Kepler-274,60,True,"['Tamaño rocoso (1.54 R⊕)', 'Masa terrestre (3.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (961K)'],961.0,1.54,2.99,1333.62
+Kepler-312 b,Kepler-312,60,True,"['Tamaño rocoso (1.29 R⊕)', 'Masa terrestre (2.2 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1685K)'],1685.0,1.29,2.21,797.72
+Kepler-374 d,Kepler-374,60,True,"['Tamaño rocoso (1.31 R⊕)', 'Masa terrestre (2.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1272K)'],1272.0,1.31,2.27,1265.61
+Kepler-46 d,Kepler-46,60,True,"['Tamaño rocoso (1.64 R⊕)', 'Masa terrestre (3.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (845K)'],845.0,1.64,3.33,777.06
+Kepler-256 b,Kepler-256,60,True,"['Tamaño rocoso (1.59 R⊕)', 'Masa terrestre (3.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1681K)'],1681.0,1.59,3.15,1026.43
+Kepler-375 b,Kepler-375,60,True,"['Tamaño rocoso (1.45 R⊕)', 'Masa terrestre (2.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (851K)'],851.0,1.45,2.7,1238.81
+Kepler-246 c,Kepler-246,60,True,"['Tamaño rocoso (1.50 R⊕)', 'Masa terrestre (2.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (667K)'],667.0,1.5,2.86,626.078
+Kepler-376 b,Kepler-376,60,True,"['Tamaño rocoso (1.07 R⊕)', 'Masa terrestre (1.2 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1242K)'],1242.0,1.07,1.24,923.067
+Kepler-380 c,Kepler-380,60,True,"['Tamaño rocoso (1.27 R⊕)', 'Masa terrestre (2.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1056K)'],1056.0,1.27,2.15,813.713
+Kepler-252 b,Kepler-252,60,True,"['Tamaño rocoso (1.23 R⊕)', 'Masa terrestre (2.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (587K)'],587.0,1.23,2.04,379.424
+Kepler-1130 b,Kepler-1130,60,True,"['Tamaño rocoso (0.80 R⊕)', 'Masa terrestre (0.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (904K)'],904.0,0.8,0.437,249.343
+Kepler-1213 b,Kepler-1213,60,True,"['Tamaño rocoso (1.19 R⊕)', 'Masa terrestre (1.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1156K)'],1156.0,1.19,1.81,807.812
+Kepler-1020 b,Kepler-1020,60,True,"['Temperatura habitable (325K)', 'Masa terrestre (5.8 M⊕)', 'Órbita estable (97 días)', 'Estrella tipo solar']",['Posible gigante gaseoso (2.28 R⊕)'],325.0,2.28,5.82,415.358
+Kepler-1074 b,Kepler-1074,60,True,"['Tamaño rocoso (1.25 R⊕)', 'Masa terrestre (2.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (568K)'],568.0,1.25,2.1,250.817
+Kepler-1278 b,Kepler-1278,60,True,"['Tamaño rocoso (1.01 R⊕)', 'Masa terrestre (1.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1213K)'],1213.0,1.01,1.01,889.426
+Kepler-1275 b,Kepler-1275,60,True,"['Tamaño rocoso (1.48 R⊕)', 'Masa terrestre (2.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1368K)'],1368.0,1.48,2.79,1153.98
+Kepler-1288 b,Kepler-1288,60,True,"['Tamaño rocoso (1.12 R⊕)', 'Masa terrestre (1.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (2017K)'],2017.0,1.12,1.46,814.078
+Kepler-1245 b,Kepler-1245,60,True,"['Tamaño rocoso (1.44 R⊕)', 'Masa terrestre (2.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1043K)'],1043.0,1.44,2.67,805.936
+Kepler-1421 b,Kepler-1421,60,True,"['Tamaño rocoso (0.93 R⊕)', 'Masa terrestre (0.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1209K)'],1209.0,0.93,0.749,783.401
+Kepler-953 c,Kepler-953,60,True,"['Tamaño rocoso (1.19 R⊕)', 'Masa terrestre (1.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (873K)'],873.0,1.19,1.81,258.893
+Kepler-273 b,Kepler-273,60,True,"['Tamaño rocoso (1.50 R⊕)', 'Masa terrestre (2.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1209K)'],1209.0,1.5,2.86,713.964
+Kepler-1200 b,Kepler-1200,60,True,"['Tamaño rocoso (1.06 R⊕)', 'Masa terrestre (1.2 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1174K)'],1174.0,1.06,1.2,588.715
+Kepler-306 b,Kepler-306,60,True,"['Tamaño rocoso (1.52 R⊕)', 'Masa terrestre (2.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (830K)'],830.0,1.52,2.92,775.679
+Kepler-381 c,Kepler-381,60,True,"['Tamaño rocoso (1.12 R⊕)', 'Masa terrestre (1.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1180K)'],1180.0,1.12,1.46,267.323
+Kepler-197 c,Kepler-197,60,True,"['Tamaño rocoso (1.23 R⊕)', 'Masa terrestre (5.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (930K)'],930.0,1.23,5.3,330.575
+Kepler-215 c,Kepler-215,60,True,"['Tamaño rocoso (1.77 R⊕)', 'Masa terrestre (3.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (675K)'],675.0,1.77,3.78,485.997
+Kepler-1339 b,Kepler-1339,60,True,"['Tamaño rocoso (0.71 R⊕)', 'Masa terrestre (0.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1642K)'],1642.0,0.71,0.285,371.049
+Kepler-220 c,Kepler-220,60,True,"['Tamaño rocoso (1.57 R⊕)', 'Masa terrestre (3.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (586K)'],586.0,1.57,3.09,171.109
+Kepler-365 c,Kepler-365,60,True,"['Tamaño rocoso (1.64 R⊕)', 'Masa terrestre (3.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (729K)'],729.0,1.64,3.33,1038.99
+Kepler-181 b,Kepler-181,60,True,"['Tamaño rocoso (1.27 R⊕)', 'Masa terrestre (2.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1041K)'],1041.0,1.27,2.15,609.283
+Kepler-285 b,Kepler-285,60,True,"['Tamaño rocoso (1.34 R⊕)', 'Masa terrestre (2.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1131K)'],1131.0,1.34,2.36,824.31
+Kepler-286 c,Kepler-286,60,True,"['Tamaño rocoso (1.37 R⊕)', 'Masa terrestre (2.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1098K)'],1098.0,1.37,2.45,1226.85
+Kepler-309 b,Kepler-309,60,True,"['Tamaño rocoso (1.56 R⊕)', 'Masa terrestre (3.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (531K)'],531.0,1.56,3.05,544.568
+Kepler-197 d,Kepler-197,60,True,"['Tamaño rocoso (1.22 R⊕)', 'Masa terrestre (2.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (810K)'],810.0,1.22,1.98,330.575
+Kepler-255 b,Kepler-255,60,True,"['Tamaño rocoso (1.55 R⊕)', 'Masa terrestre (3.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (971K)'],971.0,1.55,3.02,1052.53
+Kepler-1398 c,Kepler-1398,60,True,"['Tamaño rocoso (1.03 R⊕)', 'Masa terrestre (1.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1324K)'],1324.0,1.03,1.08,852.204
+Kepler-402 c,Kepler-402,60,True,"['Tamaño rocoso (1.56 R⊕)', 'Masa terrestre (3.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1140K)'],1140.0,1.56,3.05,625.339
+Kepler-208 b,Kepler-208,60,True,"['Tamaño rocoso (1.63 R⊕)', 'Masa terrestre (3.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1379K)'],1379.0,1.63,3.29,775.328
+Kepler-179 b,Kepler-179,60,True,"['Tamaño rocoso (1.64 R⊕)', 'Masa terrestre (3.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1075K)'],1075.0,1.64,3.33,605.68
+Kepler-157 b,Kepler-157,60,True,"['Tamaño rocoso (1.32 R⊕)', 'Masa terrestre (2.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1546K)'],1546.0,1.32,2.3,773.713
+Kepler-341 c,Kepler-341,60,True,"['Tamaño rocoso (1.70 R⊕)', 'Masa terrestre (3.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (940K)'],940.0,1.7,3.53,1047.03
+Kepler-1471 b,Kepler-1471,60,True,"['Tamaño rocoso (1.41 R⊕)', 'Masa terrestre (2.6 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1238K)'],1238.0,1.41,2.57,978.678
+Kepler-387 c,Kepler-387,60,True,"['Tamaño rocoso (0.89 R⊕)', 'Masa terrestre (0.6 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (826K)'],826.0,0.89,0.64,801.052
+Kepler-134 c,Kepler-134,60,True,"['Tamaño rocoso (1.26 R⊕)', 'Masa terrestre (2.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (892K)'],892.0,1.26,2.13,334.797
+Kepler-333 c,Kepler-333,60,True,"['Tamaño rocoso (1.11 R⊕)', 'Masa terrestre (1.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (386K)'],386.0,1.11,1.41,324.413
+Kepler-383 c,Kepler-383,60,True,"['Tamaño rocoso (1.24 R⊕)', 'Masa terrestre (2.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (406K)'],406.0,1.24,2.07,470.0
+Kepler-295 b,Kepler-295,60,True,"['Tamaño rocoso (1.22 R⊕)', 'Masa terrestre (2.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (741K)'],741.0,1.22,1.98,1699.19
+Kepler-381 b,Kepler-381,60,True,"['Tamaño rocoso (0.99 R⊕)', 'Masa terrestre (0.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1576K)'],1576.0,0.99,0.937,267.323
+Kepler-336 b,Kepler-336,60,True,"['Tamaño rocoso (1.02 R⊕)', 'Masa terrestre (1.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1625K)'],1625.0,1.02,1.04,768.86
+Kepler-334 d,Kepler-334,60,True,"['Tamaño rocoso (1.41 R⊕)', 'Masa terrestre (2.6 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (656K)'],656.0,1.41,2.57,426.59
+Kepler-440 b,Kepler-440,60,True,"['Temperatura habitable (229K)', 'Masa terrestre (4.1 M⊕)', 'Órbita estable (101 días)', 'Estrella tipo solar']",['Posible gigante gaseoso (1.86 R⊕)'],229.0,1.86,4.12,301.03
+Kepler-174 c,Kepler-174,60,True,"['Tamaño rocoso (1.49 R⊕)', 'Masa terrestre (2.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (377K)'],377.0,1.49,2.83,384.757
+Kepler-205 b,Kepler-205,60,True,"['Tamaño rocoso (1.51 R⊕)', 'Masa terrestre (2.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (757K)'],757.0,1.51,2.89,159.72
+Kepler-393 c,Kepler-393,60,True,"['Tamaño rocoso (1.33 R⊕)', 'Masa terrestre (2.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (901K)'],901.0,1.33,2.33,881.404
+Kepler-205 c,Kepler-205,60,True,"['Tamaño rocoso (1.64 R⊕)', 'Masa terrestre (3.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (389K)'],389.0,1.64,3.33,159.72
+Kepler-338 e,Kepler-338,60,True,"['Tamaño rocoso (1.56 R⊕)', 'Masa terrestre (8.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1143K)'],1143.0,1.56,8.5,552.798
+Kepler-124 d,Kepler-124,60,True,"['Tamaño rocoso (1.11 R⊕)', 'Masa terrestre (1.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (428K)'],428.0,1.11,1.41,420.046
+Kepler-240 b,Kepler-240,60,True,"['Tamaño rocoso (1.37 R⊕)', 'Masa terrestre (2.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (864K)'],864.0,1.37,2.45,746.927
+Kepler-202 b,Kepler-202,60,True,"['Tamaño rocoso (1.63 R⊕)', 'Masa terrestre (3.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (802K)'],802.0,1.63,3.29,285.111
+Kepler-361 b,Kepler-361,60,True,"['Tamaño rocoso (1.45 R⊕)', 'Masa terrestre (2.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1060K)'],1060.0,1.45,2.7,930.32
+Kepler-362 b,Kepler-362,60,True,"['Tamaño rocoso (0.88 R⊕)', 'Masa terrestre (0.6 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (838K)'],838.0,0.88,0.615,1090.51
+Kepler-101 c,Kepler-101,60,True,"['Tamaño rocoso (1.25 R⊕)', 'Masa terrestre (3.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1413K)'],1413.0,1.25,3.78,927.981
+Kepler-444 e,Kepler-444,60,True,"['Tamaño rocoso (0.55 R⊕)', 'Masa terrestre (0.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (727K)'],727.0,0.546,0.1,36.4396
+Kepler-444 d,Kepler-444,60,True,"['Tamaño rocoso (0.53 R⊕)', 'Masa terrestre (0.2 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (783K)'],783.0,0.53,0.2,36.4396
+Kepler-337 b,Kepler-337,60,True,"['Tamaño rocoso (1.54 R⊕)', 'Masa terrestre (3.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1458K)'],1458.0,1.54,2.99,677.975
+Kepler-292 c,Kepler-292,60,True,"['Tamaño rocoso (1.47 R⊕)', 'Masa terrestre (2.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1001K)'],1001.0,1.47,2.76,1056.48
+Kepler-311 c,Kepler-311,60,True,"['Tamaño rocoso (1.43 R⊕)', 'Masa terrestre (2.6 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (744K)'],744.0,1.43,2.63,778.654
+Kepler-444 f,Kepler-444,60,True,"['Tamaño rocoso (0.74 R⊕)', 'Masa terrestre (0.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (673K)'],673.0,0.741,0.332,36.4396
+Kepler-269 c,Kepler-269,60,True,"['Tamaño rocoso (1.69 R⊕)', 'Masa terrestre (3.5 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (875K)'],875.0,1.69,3.5,2257.32
+Kepler-164 b,Kepler-164,60,True,"['Tamaño rocoso (1.41 R⊕)', 'Masa terrestre (2.6 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1141K)'],1141.0,1.41,2.57,890.758
+Kepler-395 b,Kepler-395,60,True,"['Tamaño rocoso (1.03 R⊕)', 'Masa terrestre (1.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (576K)'],576.0,1.03,1.08,421.382
+Kepler-339 c,Kepler-339,60,True,"['Tamaño rocoso (1.15 R⊕)', 'Masa terrestre (7.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (914K)'],914.0,1.15,7.3,616.637
+Kepler-174 d,Kepler-174,60,True,"['Temperatura habitable (212K)', 'Masa terrestre (5.4 M⊕)', 'Órbita estable (247 días)', 'Estrella tipo solar']",['Posible gigante gaseoso (2.19 R⊕)'],212.0,2.19,5.43,384.757
+Kepler-152 c,Kepler-152,60,True,"['Temperatura habitable (326K)', 'Masa terrestre (6.3 M⊕)', 'Órbita estable (88 días)', 'Estrella tipo solar']",['Posible gigante gaseoso (2.39 R⊕)'],326.0,2.39,6.3,441.09
+Kepler-206 d,Kepler-206,60,True,"['Tamaño rocoso (1.19 R⊕)', 'Masa terrestre (1.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (681K)'],681.0,1.19,1.81,594.447
+Kepler-431 d,Kepler-431,60,True,"['Tamaño rocoso (1.11 R⊕)', 'Masa terrestre (1.4 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (856K)'],856.0,1.11,1.41,486.546
+Kepler-431 c,Kepler-431,60,True,"['Tamaño rocoso (0.67 R⊕)', 'Masa terrestre (0.2 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (951K)'],951.0,0.668,0.229,486.546
+Kepler-347 c,Kepler-347,60,True,"['Tamaño rocoso (1.75 R⊕)', 'Masa terrestre (3.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (705K)'],705.0,1.75,3.71,1298.88
+Kepler-190 b,Kepler-190,60,True,"['Tamaño rocoso (1.56 R⊕)', 'Masa terrestre (3.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1166K)'],1166.0,1.56,3.05,433.387
+Kepler-85 e,Kepler-85,60,True,"['Tamaño rocoso (1.27 R⊕)', 'Masa terrestre (0.6 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (559K)'],559.0,1.27,0.6,765.025
+Kepler-55 e,Kepler-55,60,True,"['Tamaño rocoso (1.55 R⊕)', 'Masa terrestre (3.0 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (728K)'],728.0,1.55,3.02,578.796
+Kepler-310 b,Kepler-310,60,True,"['Tamaño rocoso (1.19 R⊕)', 'Masa terrestre (1.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (665K)'],665.0,1.19,1.81,602.268
+Kepler-286 e,Kepler-286,60,True,"['Tamaño rocoso (1.77 R⊕)', 'Masa terrestre (3.8 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (539K)'],539.0,1.77,3.78,1226.85
+Kepler-356 b,Kepler-356,60,True,"['Tamaño rocoso (1.57 R⊕)', 'Masa terrestre (3.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1294K)'],1294.0,1.57,3.09,707.559
+Kepler-354 d,Kepler-354,60,True,"['Tamaño rocoso (1.24 R⊕)', 'Masa terrestre (2.1 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (451K)'],451.0,1.24,2.07,554.064
+Kepler-378 c,Kepler-378,60,True,"['Tamaño rocoso (0.70 R⊕)', 'Masa terrestre (0.3 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (414K)'],414.0,0.7,0.271,152.094
+Kepler-33 b,Kepler-33,60,True,"['Tamaño rocoso (1.74 R⊕)', 'Masa terrestre (3.7 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1336K)'],1336.0,1.74,3.68,1209.16
+Kepler-11 b,Kepler-11,60,True,"['Tamaño rocoso (1.80 R⊕)', 'Masa terrestre (1.9 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (849K)'],849.0,1.8,1.9,646.346
+HD 63433 d,HD 63433,60,True,"['Tamaño rocoso (1.07 R⊕)', 'Masa terrestre (1.2 M⊕)', 'Estrella tipo solar']",['Temperatura extrema (1040K)'],1040.0,1.073,1.25,22.4035
+PSR B1257+12 d,PSR B1257+12,60,True,"['Tamaño rocoso (1.80 R⊕)', 'Masa terrestre (3.9 M⊕)', 'Órbita estable (98 días)']",['Temperatura desconocida'],,1.8,3.9,600.0
+MOA-2007-BLG-192L b,MOA-2007-BLG-192L,50,True,"['Tamaño rocoso (1.63 R⊕)', 'Masa terrestre (3.3 M⊕)']",['Temperatura desconocida'],,1.63,3.3,1000.0
+Kepler-353 c,Kepler-353,50,True,"['Tamaño rocoso (1.38 R⊕)', 'Masa terrestre (2.5 M⊕)']","['Temperatura extrema (472K)', 'Enana roja (posible radiación)']",472.0,1.38,2.48,384.694
+KOI-55 c,KOI-55,50,True,"['Tamaño rocoso (0.87 R⊕)', 'Masa terrestre (0.7 M⊕)']","['Temperatura desconocida', 'Estrella muy caliente (vida corta)']",,0.867,0.655,1231.02
+SPECULOOS-3 b,SPECULOOS-3,50,True,"['Tamaño rocoso (0.98 R⊕)', 'Masa terrestre (0.9 M⊕)']",['Temperatura extrema (553K)'],553.0,0.977,0.894,
+Kepler-372 d,Kepler-372,50,True,"['Tamaño rocoso (1.69 R⊕)', 'Masa terrestre (3.5 M⊕)']",['Temperatura extrema (660K)'],660.0,1.69,3.5,1493.95
+KIC 5437945 b,KIC 5437945,50,True,"['Temperatura ideal (308K)', 'Órbita estable (441 días)', 'Estrella tipo solar']","['Posible gigante gaseoso (6.40 R⊕)', 'Super-Tierra pesada (33.6 M⊕)']",308.0,6.4,33.6,1274.01
+TOI-833 b,TOI-833,50,True,"['Tamaño rocoso (1.27 R⊕)', 'Masa terrestre (2.1 M⊕)']","['Temperatura extrema (1118K)', 'Enana roja (posible radiación)']",1118.0,1.27,2.15,41.7148
+Kepler-446 d,Kepler-446,50,True,"['Tamaño rocoso (1.35 R⊕)', 'Masa terrestre (2.4 M⊕)']","['Temperatura extrema (436K)', 'Enana roja (posible radiación)']",436.0,1.35,2.39,96.339
+Kepler-249 c,Kepler-249,50,True,"['Tamaño rocoso (1.51 R⊕)', 'Masa terrestre (2.9 M⊕)']","['Temperatura extrema (429K)', 'Enana roja (posible radiación)']",429.0,1.51,2.89,190.401
+Kepler-30 d,Kepler-30,50,True,"['Temperatura ideal (308K)', 'Órbita estable (143 días)', 'Estrella tipo solar']","['Posible gigante gaseoso (8.80 R⊕)', 'Super-Tierra pesada (23.1 M⊕)']",308.0,8.8,23.1,914.221
+Kepler-327 d,Kepler-327,50,True,"['Tamaño rocoso (1.73 R⊕)', 'Masa terrestre (3.6 M⊕)']","['Temperatura extrema (387K)', 'Enana roja (posible radiación)']",387.0,1.73,3.64,241.987
+Kepler-353 b,Kepler-353,50,True,"['Tamaño rocoso (0.89 R⊕)', 'Masa terrestre (0.6 M⊕)']","['Temperatura extrema (534K)', 'Enana roja (posible radiación)']",534.0,0.89,0.64,384.694
+Kepler-315 c,Kepler-315,50,True,"['Temperatura ideal (291K)', 'Órbita estable (265 días)', 'Estrella tipo solar']","['Posible gigante gaseoso (4.15 R⊕)', 'Super-Tierra pesada (16.1 M⊕)']",291.0,4.15,16.1,1160.63
+Kepler-372 b,Kepler-372,50,True,"['Tamaño rocoso (1.36 R⊕)', 'Masa terrestre (2.4 M⊕)']",['Temperatura extrema (1081K)'],1081.0,1.36,2.42,1493.95
+GJ 367 b,GJ 367,50,True,"['Tamaño rocoso (0.70 R⊕)', 'Masa terrestre (0.6 M⊕)']","['Temperatura extrema (1365K)', 'Enana roja (posible radiación)']",1365.0,0.699,0.633,9.41263
+Kepler-186 b,Kepler-186,50,True,"['Tamaño rocoso (1.07 R⊕)', 'Masa terrestre (1.2 M⊕)']","['Temperatura extrema (571K)', 'Enana roja (posible radiación)']",571.0,1.07,1.24,177.594
+Kepler-1735 b,Kepler-1735,50,True,"['Tamaño rocoso (1.19 R⊕)', 'Masa terrestre (1.8 M⊕)']","['Temperatura extrema (502K)', 'Enana roja (posible radiación)']",502.0,1.19429134,1.84,245.303
+Kepler-186 d,Kepler-186,50,True,"['Tamaño rocoso (1.40 R⊕)', 'Masa terrestre (2.5 M⊕)']","['Temperatura extrema (379K)', 'Enana roja (posible radiación)']",379.0,1.4,2.54,177.594
+Kepler-445 b,Kepler-445,50,True,"['Tamaño rocoso (1.58 R⊕)', 'Masa terrestre (3.1 M⊕)']","['Temperatura extrema (401K)', 'Enana roja (posible radiación)']",401.0,1.58,3.12,127.201
+GJ 357 b,GJ 357,50,True,"['Tamaño rocoso (1.20 R⊕)', 'Masa terrestre (1.8 M⊕)']","['Temperatura extrema (518K)', 'Enana roja (posible radiación)']",518.0,1.2,1.84,9.44181
+GJ 357 c,GJ 357,50,True,"['Tamaño rocoso (1.66 R⊕)', 'Masa terrestre (3.4 M⊕)']","['Temperatura extrema (401K)', 'Enana roja (posible radiación)']",401.2,1.66,3.4,9.44181
+GJ 357 d,GJ 357,50,True,"['Temperatura habitable (220K)', 'Masa terrestre (6.1 M⊕)', 'Órbita estable (56 días)']","['Posible gigante gaseoso (2.34 R⊕)', 'Enana roja (posible radiación)']",219.6,2.34,6.1,9.44181
+Kepler-225 b,Kepler-225,50,True,"['Tamaño rocoso (1.20 R⊕)', 'Masa terrestre (1.9 M⊕)']","['Temperatura extrema (579K)', 'Enana roja (posible radiación)']",579.0,1.2,1.87,561.101
+Kepler-327 b,Kepler-327,50,True,"['Tamaño rocoso (1.11 R⊕)', 'Masa terrestre (1.4 M⊕)']","['Temperatura extrema (682K)', 'Enana roja (posible radiación)']",682.0,1.11,1.41,241.987
+Kepler-236 b,Kepler-236,50,True,"['Tamaño rocoso (1.57 R⊕)', 'Masa terrestre (3.1 M⊕)']","['Temperatura extrema (469K)', 'Enana roja (posible radiación)']",469.0,1.57,3.09,288.763
+TOI-6086 b,TOI-6086,50,True,"['Tamaño rocoso (1.18 R⊕)', 'Masa terrestre (1.8 M⊕)']","['Temperatura extrema (634K)', 'Enana roja (posible radiación)']",634.0,1.18,1.76,31.4566
+GJ 667 C f,GJ 667 C,50,True,"['Tamaño rocoso (1.45 R⊕)', 'Masa terrestre (2.7 M⊕)']","['Temperatura desconocida', 'Enana roja (posible radiación)']",,1.45,2.7,7.24396
+Kepler-369 c,Kepler-369,50,True,"['Tamaño rocoso (1.41 R⊕)', 'Masa terrestre (2.6 M⊕)']","['Temperatura extrema (391K)', 'Enana roja (posible radiación)']",391.0,1.41,2.57,214.0
+GJ 667 C c,GJ 667 C,50,True,"['Tamaño rocoso (1.77 R⊕)', 'Masa terrestre (3.8 M⊕)']","['Temperatura desconocida', 'Enana roja (posible radiación)']",,1.77,3.8,7.24396
+Kepler-149 d,Kepler-149,50,True,"['Temperatura ideal (306K)', 'Órbita estable (160 días)', 'Estrella tipo solar']","['Posible gigante gaseoso (3.96 R⊕)', 'Super-Tierra pesada (14.9 M⊕)']",306.0,3.96,14.9,571.034
+TOI-270 b,TOI-270,50,True,"['Tamaño rocoso (1.28 R⊕)', 'Masa terrestre (1.5 M⊕)']","['Temperatura extrema (600K)', 'Enana roja (posible radiación)']",600.0,1.28,1.48,22.4793
+Kepler-303 b,Kepler-303,50,True,"['Tamaño rocoso (0.89 R⊕)', 'Masa terrestre (0.6 M⊕)']","['Temperatura extrema (802K)', 'Enana roja (posible radiación)']",802.0,0.89,0.64,209.738
+KOI-55 b,KOI-55,50,True,"['Tamaño rocoso (0.76 R⊕)', 'Masa terrestre (0.4 M⊕)']","['Temperatura desconocida', 'Estrella muy caliente (vida corta)']",,0.759,0.44,1231.02
+Kepler-303 c,Kepler-303,50,True,"['Tamaño rocoso (1.14 R⊕)', 'Masa terrestre (1.6 M⊕)']","['Temperatura extrema (521K)', 'Enana roja (posible radiación)']",521.0,1.14,1.55,209.738
+Kepler-1849 b,Kepler-1849,40,False,"['Masa terrestre (6.3 M⊕)', 'Órbita estable (57 días)', 'Estrella tipo solar']","['Temperatura extrema (355K)', 'Posible gigante gaseoso (2.39 R⊕)']",355.0,2.38685349,6.29,631.884
+HD 40307 f,HD 40307,40,False,"['Masa terrestre (5.2 M⊕)', 'Órbita estable (52 días)', 'Estrella tipo solar']","['Temperatura extrema (398K)', 'Posible gigante gaseoso (2.13 R⊕)']",398.0,2.13,5.2,12.9363
+Kepler-359 c,Kepler-359,40,False,"['Masa terrestre (2.9 M⊕)', 'Órbita estable (58 días)', 'Estrella tipo solar']","['Temperatura extrema (512K)', 'Posible gigante gaseoso (4.30 R⊕)']",512.0,4.3,2.9,1443.21
+Kepler-239 c,Kepler-239,40,False,"['Masa terrestre (6.8 M⊕)', 'Órbita estable (56 días)', 'Estrella tipo solar']","['Temperatura extrema (366K)', 'Posible gigante gaseoso (2.51 R⊕)']",366.0,2.51,6.85,648.109
+Kepler-324 c,Kepler-324,40,False,"['Masa terrestre (6.2 M⊕)', 'Órbita estable (52 días)', 'Estrella tipo solar']","['Temperatura extrema (410K)', 'Posible gigante gaseoso (3.15 R⊕)']",410.0,3.15,6.2,501.574
+Kepler-359 d,Kepler-359,40,False,"['Masa terrestre (2.7 M⊕)', 'Órbita estable (77 días)', 'Estrella tipo solar']","['Temperatura extrema (464K)', 'Posible gigante gaseoso (4.01 R⊕)']",464.0,4.01,2.7,1443.21
+Kepler-358 c,Kepler-358,40,False,"['Masa terrestre (8.5 M⊕)', 'Órbita estable (83 días)', 'Estrella tipo solar']","['Temperatura extrema (411K)', 'Posible gigante gaseoso (2.85 R⊕)']",411.0,2.85,8.5,1101.1
+KIC 8540376 c,KOI-7892,40,False,"['Masa terrestre (6.3 M⊕)', 'Órbita estable (75 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (2.40 R⊕)']",,2.4,6.35,1072.3
+Kepler-79 e,Kepler-79,40,False,"['Masa terrestre (4.1 M⊕)', 'Órbita estable (81 días)', 'Estrella tipo solar']","['Temperatura extrema (511K)', 'Posible gigante gaseoso (3.49 R⊕)']",511.0,3.49,4.1,1020.72
+Kepler-445 c,Kepler-445,40,False,"['Temperatura habitable (341K)', 'Masa terrestre (6.8 M⊕)']","['Posible gigante gaseoso (2.51 R⊕)', 'Enana roja (posible radiación)']",341.0,2.51,6.85,127.201
+Kepler-230 c,Kepler-230,40,False,"['Masa terrestre (4.8 M⊕)', 'Órbita estable (92 días)', 'Estrella tipo solar']","['Temperatura extrema (359K)', 'Posible gigante gaseoso (2.04 R⊕)']",359.0,2.04,4.82,740.754
+HD 3167 e,HD 3167,40,False,"['Masa terrestre (8.4 M⊕)', 'Órbita estable (97 días)', 'Estrella tipo solar']","['Temperatura extrema (375K)', 'Posible gigante gaseoso (2.83 R⊕)']",374.8,2.83,8.41,47.2899
+Kepler-344 c,Kepler-344,40,False,"['Masa terrestre (9.0 M⊕)', 'Órbita estable (126 días)', 'Estrella tipo solar']","['Temperatura extrema (360K)', 'Posible gigante gaseoso (2.95 R⊕)']",360.0,2.95,9.01,1002.94
+Kepler-1101 b,Kepler-1101,40,False,"['Masa terrestre (6.7 M⊕)', 'Órbita estable (81 días)', 'Estrella tipo solar']","['Temperatura extrema (393K)', 'Posible gigante gaseoso (2.47 R⊕)']",393.0,2.47,6.66,742.473
+Kepler-265 e,Kepler-265,40,False,"['Masa terrestre (7.2 M⊕)', 'Órbita estable (68 días)', 'Estrella tipo solar']","['Temperatura extrema (476K)', 'Posible gigante gaseoso (2.59 R⊕)']",476.0,2.59,7.22,1280.25
+HIP 41378 f,HIP 41378,40,False,"['Temperatura ideal (294K)', 'Estrella tipo solar']","['Posible gigante gaseoso (9.20 R⊕)', 'Super-Tierra pesada (12.0 M⊕)']",294.0,9.2,12.0,106.289
+Kepler-310 d,Kepler-310,40,False,"['Masa terrestre (7.0 M⊕)', 'Órbita estable (93 días)', 'Estrella tipo solar']","['Temperatura extrema (353K)', 'Posible gigante gaseoso (2.47 R⊕)']",353.0,2.47,7.0,602.268
+Kepler-154 c,Kepler-154,40,False,"['Masa terrestre (9.0 M⊕)', 'Órbita estable (62 días)', 'Estrella tipo solar']","['Temperatura extrema (454K)', 'Posible gigante gaseoso (2.95 R⊕)']",454.0,2.95,9.01,915.212
+Kepler-194 d,Kepler-194,40,False,"['Masa terrestre (6.3 M⊕)', 'Órbita estable (53 días)', 'Estrella tipo solar']","['Temperatura extrema (562K)', 'Posible gigante gaseoso (2.40 R⊕)']",562.0,2.4,6.35,1097.97
+KOI-351 e,KOI-351,40,False,"['Masa terrestre (7.6 M⊕)', 'Órbita estable (92 días)', 'Estrella tipo solar']","['Temperatura extrema (450K)', 'Posible gigante gaseoso (2.66 R⊕)']",450.0,2.66,7.56,848.254
+Kepler-379 c,Kepler-379,40,False,"['Masa terrestre (5.9 M⊕)', 'Órbita estable (63 días)', 'Estrella tipo solar']","['Temperatura extrema (530K)', 'Posible gigante gaseoso (2.29 R⊕)']",530.0,2.29,5.86,731.274
+Kepler-122 f,Kepler-122,40,False,"['Tamaño rocoso (1.75 R⊕)', 'Órbita estable (56 días)', 'Estrella tipo solar']","['Temperatura extrema (543K)', 'Super-Tierra pesada (36.0 M⊕)']",543.0,1.75,36.0,1027.45
+Kepler-51 c,Kepler-51,40,False,"['Masa terrestre (4.0 M⊕)', 'Órbita estable (85 días)', 'Estrella tipo solar']","['Temperatura extrema (439K)', 'Posible gigante gaseoso (9.00 R⊕)']",439.0,9.0,4.0,783.831
+Kepler-321 c,Kepler-321,30,False,"['Masa terrestre (6.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (752K)', 'Posible gigante gaseoso (2.32 R⊕)']",752.0,2.32,5.99,384.542
+Kepler-241 b,Kepler-241,30,False,"['Masa terrestre (6.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (562K)', 'Posible gigante gaseoso (2.33 R⊕)']",562.0,2.33,6.04,512.0
+Kepler-363 d,Kepler-363,30,False,"['Masa terrestre (4.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (905K)', 'Posible gigante gaseoso (2.05 R⊕)']",905.0,2.05,4.86,762.596
+Kepler-232 b,Kepler-232,30,False,"['Masa terrestre (9.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1104K)', 'Posible gigante gaseoso (3.08 R⊕)']",1104.0,3.08,9.69,1349.13
+Kepler-233 b,Kepler-233,30,False,"['Masa terrestre (6.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (751K)', 'Posible gigante gaseoso (2.43 R⊕)']",751.0,2.43,6.48,856.417
+Kepler-171 c,Kepler-171,30,False,"['Masa terrestre (7.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (752K)', 'Posible gigante gaseoso (2.56 R⊕)']",752.0,2.56,7.08,863.855
+Kepler-319 c,Kepler-319,30,False,"['Masa terrestre (7.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (876K)', 'Posible gigante gaseoso (2.63 R⊕)']",876.0,2.63,7.41,503.436
+Kepler-342 b,Kepler-342,30,False,"['Masa terrestre (5.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (905K)', 'Posible gigante gaseoso (2.25 R⊕)']",905.0,2.25,5.69,781.611
+Kepler-354 b,Kepler-354,30,False,"['Masa terrestre (4.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (741K)', 'Posible gigante gaseoso (1.84 R⊕)']",741.0,1.84,4.04,554.064
+Kepler-178 c,Kepler-178,30,False,"['Masa terrestre (8.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (656K)', 'Posible gigante gaseoso (2.88 R⊕)']",656.0,2.88,8.65,716.025
+Kepler-346 b,Kepler-346,30,False,"['Masa terrestre (7.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1008K)', 'Posible gigante gaseoso (2.66 R⊕)']",1008.0,2.66,7.56,984.105
+Kepler-133 c,Kepler-133,30,False,"['Masa terrestre (8.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (663K)', 'Posible gigante gaseoso (2.84 R⊕)']",663.0,2.84,8.45,653.6
+Kepler-375 c,Kepler-375,30,False,"['Masa terrestre (7.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (720K)', 'Posible gigante gaseoso (2.65 R⊕)']",720.0,2.65,7.51,1238.81
+Kepler-356 c,Kepler-356,30,False,"['Masa terrestre (3.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (913K)', 'Posible gigante gaseoso (1.81 R⊕)']",913.0,1.81,3.93,707.559
+Kepler-143 b,Kepler-143,30,False,"['Masa terrestre (6.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (838K)', 'Posible gigante gaseoso (2.41 R⊕)']",838.0,2.41,6.39,809.467
+Kepler-118 b,Kepler-118,30,False,"['Masa terrestre (4.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (784K)', 'Posible gigante gaseoso (1.96 R⊕)']",784.0,1.96,4.5,574.228
+Kepler-243 c,Kepler-243,30,False,"['Masa terrestre (4.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (559K)', 'Posible gigante gaseoso (1.99 R⊕)']",559.0,1.99,4.62,693.86
+Kepler-417 c,Kepler-417,30,False,"['Masa terrestre (7.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (616K)', 'Posible gigante gaseoso (2.69 R⊕)']",616.0,2.69,7.7,973.989
+Kepler-112 c,Kepler-112,30,False,"['Masa terrestre (6.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (538K)', 'Posible gigante gaseoso (2.40 R⊕)']",538.0,2.4,6.35,513.206
+Kepler-137 c,Kepler-137,30,False,"['Masa terrestre (4.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (568K)', 'Posible gigante gaseoso (1.88 R⊕)']",568.0,1.88,4.19,302.979
+K2-138 d,K2-138,30,False,"['Masa terrestre (7.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (888K)', 'Posible gigante gaseoso (2.39 R⊕)']",888.0,2.39,7.92,202.585
+Kepler-313 b,Kepler-313,30,False,"['Masa terrestre (6.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (883K)', 'Posible gigante gaseoso (2.53 R⊕)']",883.0,2.53,6.94,1079.39524871
+HD 3167 d,HD 3167,30,False,"['Masa terrestre (4.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (860K)', 'Posible gigante gaseoso (1.92 R⊕)']",859.5,1.92,4.33,47.2899
+K2-138 f,K2-138,30,False,"['Masa terrestre (1.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (653K)', 'Posible gigante gaseoso (2.90 R⊕)']",653.0,2.904,1.63,202.585
+Kepler-122 d,Kepler-122,30,False,"['Masa terrestre (5.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (747K)', 'Posible gigante gaseoso (2.20 R⊕)']",747.0,2.2,5.48,1027.45
+Kepler-151 c,Kepler-151,30,False,"['Masa terrestre (5.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (544K)', 'Posible gigante gaseoso (2.09 R⊕)']",544.0,2.09,5.02,649.919
+Kepler-377 c,Kepler-377,30,False,"['Masa terrestre (4.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (677K)', 'Posible gigante gaseoso (2.06 R⊕)']",677.0,2.06,4.9,823.804
+Kepler-1208 b,Kepler-1208,30,False,"['Masa terrestre (6.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (665K)', 'Posible gigante gaseoso (2.32 R⊕)']",665.0,2.32,5.99,825.176
+Kepler-224 e,Kepler-224,30,False,"['Masa terrestre (4.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (517K)', 'Posible gigante gaseoso (1.97 R⊕)']",517.0,1.97,4.54,782.088
+Kepler-330 c,Kepler-330,30,False,"['Masa terrestre (4.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (573K)', 'Posible gigante gaseoso (1.95 R⊕)']",573.0,1.95,4.46,717.527
+Kepler-254 c,Kepler-254,30,False,"['Masa terrestre (3.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (787K)', 'Posible gigante gaseoso (2.15 R⊕)']",787.0,2.15,3.2,1389.48
+Kepler-498 b,Kepler-498,30,False,"['Masa terrestre (9.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (931K)', 'Posible gigante gaseoso (3.03 R⊕)']",931.0,3.03,9.43,938.844
+Kepler-169 e,Kepler-169,30,False,"['Masa terrestre (5.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (595K)', 'Posible gigante gaseoso (2.20 R⊕)']",595.0,2.2,5.48,406.529
+Kepler-174 b,Kepler-174,30,False,"['Masa terrestre (4.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (553K)', 'Posible gigante gaseoso (1.96 R⊕)']",553.0,1.96,4.5,384.757
+Kepler-151 b,Kepler-151,30,False,"['Masa terrestre (9.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (639K)', 'Posible gigante gaseoso (3.06 R⊕)']",639.0,3.06,9.59,649.919
+K2-138 c,K2-138,30,False,"['Masa terrestre (6.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1012K)', 'Posible gigante gaseoso (2.30 R⊕)']",1012.0,2.299,6.31,202.585
+Kepler-65 c,Kepler-65,30,False,"['Masa terrestre (5.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1246K)', 'Posible gigante gaseoso (2.58 R⊕)']",1246.0,2.58,5.4,303.728
+Kepler-304 c,Kepler-304,30,False,"['Masa terrestre (5.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (746K)', 'Posible gigante gaseoso (2.17 R⊕)']",746.0,2.17,5.35,434.684
+Kepler-304 d,Kepler-304,30,False,"['Masa terrestre (8.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (611K)', 'Posible gigante gaseoso (2.75 R⊕)']",611.0,2.75,8.0,434.684
+Kepler-33 f,Kepler-33,30,False,"['Masa terrestre (9.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (691K)', 'Posible gigante gaseoso (4.46 R⊕)']",691.0,4.46,9.6,1209.16
+Kepler-351 b,Kepler-351,30,False,"['Masa terrestre (4.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (498K)', 'Posible gigante gaseoso (3.06 R⊕)']",498.0,3.06,4.8,1083.91
+Kepler-217 c,Kepler-217,30,False,"['Masa terrestre (4.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1208K)', 'Posible gigante gaseoso (1.85 R⊕)']",1208.0,1.85,4.08,1104.64
+Kepler-84 e,Kepler-84,30,False,"['Masa terrestre (7.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (672K)', 'Posible gigante gaseoso (2.60 R⊕)']",672.0,2.6,7.27,1023.9
+Kepler-306 e,Kepler-306,30,False,"['Masa terrestre (5.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (390K)', 'Posible gigante gaseoso (2.27 R⊕)']",390.0,2.27,5.77,775.679
+Kepler-346 c,Kepler-346,30,False,"['Masa terrestre (9.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (654K)', 'Posible gigante gaseoso (3.07 R⊕)']",654.0,3.07,9.64,984.105
+TOI-238 c,TOI-238,30,False,"['Masa terrestre (6.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (696K)', 'Posible gigante gaseoso (2.18 R⊕)']",696.0,2.18,6.7,80.5407
+BD+05 4868 A b,BD+05 4868 A,30,False,"['Masa terrestre (6.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1820K)', 'Tamaño desconocido']",1820.0,,6.2,43.5687
+HD 17156 b,HD 17156,30,False,"['Tamaño rocoso (1.09 R⊕)', 'Estrella tipo solar']","['Temperatura extrema (888K)', 'Super-Tierra pesada (1036.1 M⊕)']",888.0,1.094,1036.12060682,78.0863
+Kepler-142 d,Kepler-142,30,False,"['Masa terrestre (5.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (582K)', 'Posible gigante gaseoso (2.16 R⊕)']",582.0,2.16,5.31,548.686
+Kepler-142 b,Kepler-142,30,False,"['Masa terrestre (4.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1597K)', 'Posible gigante gaseoso (1.99 R⊕)']",1597.0,1.99,4.62,548.686
+Kepler-313 c,Kepler-313,30,False,"['Masa terrestre (7.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (683K)', 'Posible gigante gaseoso (2.57 R⊕)']",683.0,2.57,7.13,1079.39524871
+GJ 3021 b,GJ 3021,30,False,"['Temperatura habitable (350K)', 'Órbita estable (134 días)', 'Estrella tipo solar']","['Posible gigante gaseoso (13.10 R⊕)', 'Super-Tierra pesada (1071.0 M⊕)']",350.0,13.1,1071.04,17.5559
+TOI-1794 b,TOI-1794,30,False,"['Masa terrestre (8.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (993K)', 'Posible gigante gaseoso (3.30 R⊕)']",992.91,3.29701268,8.7,155.791
+Kepler-253 c,Kepler-253,30,False,"['Masa terrestre (7.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (680K)', 'Posible gigante gaseoso (2.65 R⊕)']",680.0,2.65,7.51,838.595
+Kepler-343 c,Kepler-343,30,False,"['Masa terrestre (4.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (746K)', 'Posible gigante gaseoso (2.02 R⊕)']",746.0,2.02,4.74,927.193
+Kepler-158 c,Kepler-158,30,False,"['Masa terrestre (4.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (418K)', 'Posible gigante gaseoso (1.90 R⊕)']",418.0,1.9,4.27,315.177
+Kepler-252 c,Kepler-252,30,False,"['Masa terrestre (5.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (499K)', 'Posible gigante gaseoso (2.15 R⊕)']",499.0,2.15,5.27,379.424
+Kepler-200 b,Kepler-200,30,False,"['Masa terrestre (5.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (854K)', 'Posible gigante gaseoso (2.13 R⊕)']",854.0,2.13,5.18,665.912
+HD 1461 c,HD 1461,30,False,"['Masa terrestre (5.6 M⊕)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (2.23 R⊕)']",,2.23,5.59,23.4534
+Kepler-449 b,Kepler-449,30,False,"['Masa terrestre (4.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (917K)', 'Posible gigante gaseoso (2.06 R⊕)']",917.0,2.056,4.88,241.949
+Kepler-949 c,Kepler-949,30,False,"['Masa terrestre (9.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (582K)', 'Posible gigante gaseoso (2.97 R⊕)']",582.0,2.97,9.11,486.105
+Kepler-299 e,Kepler-299,30,False,"['Masa terrestre (4.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (534K)', 'Posible gigante gaseoso (1.87 R⊕)']",534.0,1.87,4.16,1052.24
+KOI-94 b,KOI-94,30,False,"['Tamaño rocoso (1.71 R⊕)', 'Estrella tipo solar']","['Temperatura extrema (1486K)', 'Super-Tierra pesada (10.5 M⊕)']",1486.0,1.71,10.5,477.052
+Kepler-109 c,Kepler-109,30,False,"['Masa terrestre (8.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (859K)', 'Posible gigante gaseoso (2.65 R⊕)']",859.0,2.65,8.2,474.861
+Kepler-405 b,Kepler-405,30,False,"['Masa terrestre (5.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (785K)', 'Posible gigante gaseoso (2.08 R⊕)']",785.0,2.08,4.98,1065.08
+Kepler-81 c,Kepler-81,30,False,"['Masa terrestre (4.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (502K)', 'Posible gigante gaseoso (2.37 R⊕)']",502.0,2.37,4.3,348.291
+Kepler-60 c,Kepler-60,30,False,"['Masa terrestre (3.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1023K)', 'Posible gigante gaseoso (1.90 R⊕)']",1023.0,1.9,3.85,1025.1
+Kepler-79 c,Kepler-79,30,False,"['Masa terrestre (5.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (734K)', 'Posible gigante gaseoso (3.72 R⊕)']",734.0,3.72,5.9,1020.72
+Kepler-1723 b,Kepler-1723,30,False,"['Masa terrestre (8.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (568K)', 'Posible gigante gaseoso (2.88 R⊕)']",568.0,2.88046569,8.65,811.278
+Kepler-69 b,Kepler-69,30,False,"['Masa terrestre (5.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (779K)', 'Posible gigante gaseoso (2.24 R⊕)']",779.0,2.24,5.65,730.625
+Kepler-136 c,Kepler-136,30,False,"['Masa terrestre (4.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (847K)', 'Posible gigante gaseoso (1.99 R⊕)']",847.0,1.99,4.62,420.818
+Kepler-299 d,Kepler-299,30,False,"['Masa terrestre (4.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (729K)', 'Posible gigante gaseoso (1.86 R⊕)']",729.0,1.86,4.12,1052.24
+Kepler-337 c,Kepler-337,30,False,"['Masa terrestre (4.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1017K)', 'Posible gigante gaseoso (2.05 R⊕)']",1017.0,2.05,4.86,677.975
+Kepler-191 c,Kepler-191,30,False,"['Masa terrestre (4.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (596K)', 'Posible gigante gaseoso (1.86 R⊕)']",596.0,1.86,4.12,594.464
+Kepler-1878 b,Kepler-1878,30,False,"['Masa terrestre (8.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1063K)', 'Posible gigante gaseoso (2.92 R⊕)']",1063.0,2.92019781,8.86,1494.3
+Kepler-291 c,Kepler-291,30,False,"['Masa terrestre (4.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1035K)', 'Posible gigante gaseoso (1.88 R⊕)']",1035.0,1.88,4.19,1786.48
+Kepler-326 b,Kepler-326,30,False,"['Tamaño rocoso (1.52 R⊕)', 'Estrella tipo solar']","['Temperatura extrema (1127K)', 'Super-Tierra pesada (44.6 M⊕)']",1127.0,1.52,44.6,487.675
+Kepler-198 b,Kepler-198,30,False,"['Masa terrestre (8.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (655K)', 'Posible gigante gaseoso (2.82 R⊕)']",655.0,2.82,8.35,495.358
+Kepler-319 d,Kepler-319,30,False,"['Masa terrestre (5.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (528K)', 'Posible gigante gaseoso (2.29 R⊕)']",528.0,2.29,5.86,503.436
+Kepler-360 c,Kepler-360,30,False,"['Masa terrestre (5.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (860K)', 'Posible gigante gaseoso (2.10 R⊕)']",860.0,2.1,5.06,876.044
+Kepler-235 b,Kepler-235,30,False,"['Masa terrestre (5.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (731K)', 'Posible gigante gaseoso (2.23 R⊕)']",731.0,2.23,5.6,428.018
+Kepler-59 c,Kepler-59,30,False,"['Masa terrestre (3.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (752K)', 'Posible gigante gaseoso (1.98 R⊕)']",752.0,1.98,3.81,1163.22
+Kepler-50 c,Kepler-50,30,False,"['Masa terrestre (8.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1125K)', 'Posible gigante gaseoso (2.17 R⊕)']",1125.0,2.17,8.2,250.11
+EPIC 212297394 c,EPIC 212297394,30,False,"['Masa terrestre (5.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (866K)', 'Posible gigante gaseoso (2.27 R⊕)']",866.0,2.27,5.77,418.395
+Kepler-1839 b,Kepler-1839,30,False,"['Masa terrestre (4.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1049K)', 'Posible gigante gaseoso (1.95 R⊕)']",1049.0,1.9493759,4.46,1136.6
+Kepler-1870 b,Kepler-1870,30,False,"['Masa terrestre (5.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1046K)', 'Posible gigante gaseoso (2.10 R⊕)']",1046.0,2.10143764,5.07,407.216
+TOI-431 d,TOI-431,30,False,"['Masa terrestre (9.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (633K)', 'Posible gigante gaseoso (3.29 R⊕)']",633.0,3.29,9.9,32.5686
+Kepler-298 c,Kepler-298,30,False,"['Masa terrestre (4.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (416K)', 'Posible gigante gaseoso (1.93 R⊕)']",416.0,1.93,4.38,518.204
+Kepler-150 d,Kepler-150,30,False,"['Masa terrestre (8.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (734K)', 'Posible gigante gaseoso (2.79 R⊕)']",734.0,2.79,8.2,891.092
+Kepler-263 c,Kepler-263,30,False,"['Masa terrestre (6.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (386K)', 'Posible gigante gaseoso (2.47 R⊕)']",386.0,2.47,6.66,754.747
+Kepler-280 c,Kepler-280,30,False,"['Masa terrestre (4.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1088K)', 'Posible gigante gaseoso (2.01 R⊕)']",1088.0,2.01,4.7,780.361
+Kepler-450 d,Kepler-450,30,False,"['Tamaño rocoso (0.84 R⊕)', 'Estrella tipo solar']","['Temperatura extrema (1199K)', 'Super-Tierra pesada (17.6 M⊕)']",1199.0,0.837,17.6,455.982
+Kepler-415 c,Kepler-415,30,False,"['Masa terrestre (4.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (543K)', 'Posible gigante gaseoso (2.01 R⊕)']",543.0,2.01,4.7,530.487
+Kepler-272 c,Kepler-272,30,False,"['Tamaño rocoso (1.79 R⊕)', 'Estrella tipo solar']","['Temperatura extrema (947K)', 'Super-Tierra pesada (97.8 M⊕)']",947.0,1.79,97.8,889.608
+Kepler-338 c,Kepler-338,30,False,"['Masa terrestre (6.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (831K)', 'Posible gigante gaseoso (2.34 R⊕)']",831.0,2.34,6.08,552.798
+Kepler-248 b,Kepler-248,30,False,"['Masa terrestre (9.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (819K)', 'Posible gigante gaseoso (3.02 R⊕)']",819.0,3.02,9.38,738.792
+Kepler-184 c,Kepler-184,30,False,"['Masa terrestre (8.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (630K)', 'Posible gigante gaseoso (1.97 R⊕)']",630.0,1.97,8.8,610.326
+Kepler-256 c,Kepler-256,30,False,"['Masa terrestre (5.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1315K)', 'Posible gigante gaseoso (2.15 R⊕)']",1315.0,2.15,5.27,1026.43
+Kepler-154 b,Kepler-154,30,False,"['Masa terrestre (5.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (561K)', 'Posible gigante gaseoso (2.26 R⊕)']",561.0,2.26,5.73,915.212
+Kepler-196 c,Kepler-196,30,False,"['Masa terrestre (5.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (407K)', 'Posible gigante gaseoso (2.24 R⊕)']",407.0,2.24,5.65,451.312
+Kepler-192 b,Kepler-192,30,False,"['Masa terrestre (8.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (803K)', 'Posible gigante gaseoso (2.74 R⊕)']",803.0,2.74,7.95,651.674
+Kepler-214 c,Kepler-214,30,False,"['Masa terrestre (5.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (619K)', 'Posible gigante gaseoso (2.13 R⊕)']",619.0,2.13,5.18,1208.44
+Kepler-449 c,Kepler-449,30,False,"['Masa terrestre (8.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (661K)', 'Posible gigante gaseoso (2.76 R⊕)']",661.0,2.764,8.07,241.949
+Kepler-218 c,Kepler-218,30,False,"['Masa terrestre (10.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (500K)', 'Posible gigante gaseoso (3.14 R⊕)']",500.0,3.14,10.0,656.38
+K2-17 b,K2-17,30,False,"['Masa terrestre (5.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (487K)', 'Posible gigante gaseoso (2.23 R⊕)']",487.0,2.23,5.6,125.106
+K2-15 b,K2-15,30,False,"['Masa terrestre (6.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (676K)', 'Posible gigante gaseoso (2.48 R⊕)']",676.0,2.48,6.71,493.992
+K2-13 b,K2-13,30,False,"['Masa terrestre (4.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (511K)', 'Posible gigante gaseoso (1.89 R⊕)']",511.0,1.89,4.23,342.394
+Kepler-251 d,Kepler-251,30,False,"['Masa terrestre (8.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (536K)', 'Posible gigante gaseoso (2.77 R⊕)']",536.0,2.77,8.1,924.625
+Kepler-217 b,Kepler-217,30,False,"['Masa terrestre (5.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1413K)', 'Posible gigante gaseoso (2.23 R⊕)']",1413.0,2.23,5.6,1104.64
+Kepler-172 b,Kepler-172,30,False,"['Masa terrestre (6.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1256K)', 'Posible gigante gaseoso (2.35 R⊕)']",1256.0,2.35,6.12,828.592
+Kepler-256 d,Kepler-256,30,False,"['Masa terrestre (6.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1097K)', 'Posible gigante gaseoso (2.48 R⊕)']",1097.0,2.48,6.71,1026.43
+Kepler-288 c,Kepler-288,30,False,"['Masa terrestre (8.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (815K)', 'Posible gigante gaseoso (2.85 R⊕)']",815.0,2.85,8.5,1194.15
+Kepler-300 c,Kepler-300,30,False,"['Masa terrestre (5.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (516K)', 'Posible gigante gaseoso (2.25 R⊕)']",516.0,2.25,5.69,1098.45
+Kepler-269 b,Kepler-269,30,False,"['Masa terrestre (6.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1007K)', 'Posible gigante gaseoso (2.47 R⊕)']",1007.0,2.47,6.66,2257.32
+Kepler-130 c,Kepler-130,30,False,"['Masa terrestre (8.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (683K)', 'Posible gigante gaseoso (2.90 R⊕)']",683.0,2.9,8.75,316.663
+Kepler-415 b,Kepler-415,30,False,"['Tamaño rocoso (1.21 R⊕)', 'Estrella tipo solar']","['Temperatura extrema (694K)', 'Super-Tierra pesada (119.9 M⊕)']",694.0,1.21,119.9,530.487
+Kepler-242 c,Kepler-242,30,False,"['Masa terrestre (4.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (613K)', 'Posible gigante gaseoso (2.00 R⊕)']",613.0,2.0,4.66,600.241
+Kepler-291 b,Kepler-291,30,False,"['Masa terrestre (5.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1212K)', 'Posible gigante gaseoso (2.16 R⊕)']",1212.0,2.16,5.31,1786.48
+Kepler-170 c,Kepler-170,30,False,"['Masa terrestre (8.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (702K)', 'Posible gigante gaseoso (2.86 R⊕)']",702.0,2.86,8.55,738.657
+Kepler-1983 b,Kepler-1983,30,False,"['Masa terrestre (6.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (807K)', 'Posible gigante gaseoso (2.33 R⊕)']",807.0,2.33,6.04,424.428
+61 Vir b,61 Vir,30,False,"['Masa terrestre (5.1 M⊕)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (2.11 R⊕)']",,2.11,5.1,8.50332
+Kepler-11 d,Kepler-11,30,False,"['Masa terrestre (7.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (653K)', 'Posible gigante gaseoso (3.12 R⊕)']",653.0,3.12,7.3,646.346
+Kepler-11 c,Kepler-11,30,False,"['Masa terrestre (2.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (786K)', 'Posible gigante gaseoso (2.87 R⊕)']",786.0,2.87,2.9,646.346
+Kepler-11 e,Kepler-11,30,False,"['Masa terrestre (8.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (582K)', 'Posible gigante gaseoso (4.19 R⊕)']",582.0,4.19,8.0,646.346
+Kepler-11 f,Kepler-11,30,False,"['Masa terrestre (2.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (513K)', 'Posible gigante gaseoso (2.49 R⊕)']",513.0,2.49,2.0,646.346
+HD 1461 b,HD 1461,30,False,"['Masa terrestre (6.4 M⊕)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (2.42 R⊕)']",,2.42,6.44,23.4534
+Kepler-33 e,Kepler-33,30,False,"['Masa terrestre (5.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (752K)', 'Posible gigante gaseoso (4.02 R⊕)']",752.0,4.02,5.57,1209.16
+Kepler-308 c,Kepler-308,30,False,"['Masa terrestre (5.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (714K)', 'Posible gigante gaseoso (2.16 R⊕)']",714.0,2.16,5.31,1335.92
+Kepler-357 c,Kepler-357,30,False,"['Masa terrestre (7.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (576K)', 'Posible gigante gaseoso (2.67 R⊕)']",576.0,2.67,7.61,688.573
+WASP-41 c,WASP-41,30,False,"['Temperatura habitable (241K)', 'Órbita estable (421 días)', 'Estrella tipo solar']","['Posible gigante gaseoso (13.10 R⊕)', 'Super-Tierra pesada (1010.7 M⊕)']",241.0,13.1,1010.6994,163.371
+Kepler-33 d,Kepler-33,30,False,"['Masa terrestre (3.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (853K)', 'Posible gigante gaseoso (5.35 R⊕)']",853.0,5.35,3.91,1209.16
+Kepler-342 d,Kepler-342,30,False,"['Masa terrestre (6.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (658K)', 'Posible gigante gaseoso (2.49 R⊕)']",658.0,2.49,6.76,781.611
+Kepler-244 c,Kepler-244,30,False,"['Masa terrestre (4.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (791K)', 'Posible gigante gaseoso (2.05 R⊕)']",791.0,2.05,4.86,1036.49
+Kepler-221 d,Kepler-221,30,False,"['Masa terrestre (3.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (712K)', 'Posible gigante gaseoso (2.73 R⊕)']",712.0,2.73,3.61,385.231
+Kepler-33 c,Kepler-33,30,False,"['Masa terrestre (0.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1009K)', 'Posible gigante gaseoso (3.20 R⊕)']",1009.0,3.2,0.39,1209.16
+Kepler-18 b,Kepler-18,30,False,"['Masa terrestre (6.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1165K)', 'Posible gigante gaseoso (2.00 R⊕)']",1165.0,2.0,6.9,433.047
+K2-138 g,K2-138,30,False,"['Masa terrestre (4.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (445K)', 'Posible gigante gaseoso (3.01 R⊕)']",445.0,3.013,4.32,202.585
+TOI-178 e,TOI-178,30,False,"['Masa terrestre (3.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (600K)', 'Posible gigante gaseoso (2.30 R⊕)']",600.0,2.301,3.48,62.699
+TOI-178 g,TOI-178,30,False,"['Masa terrestre (4.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (470K)', 'Posible gigante gaseoso (2.94 R⊕)']",470.0,2.939,4.4,62.699
+Kepler-1600 c,Kepler-1600,30,False,"['Masa terrestre (4.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (786K)', 'Posible gigante gaseoso (1.94 R⊕)']",786.0,1.94206512,4.43,1030.81
+K2-335 b,K2-335,30,False,"['Masa terrestre (5.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (949K)', 'Posible gigante gaseoso (2.21 R⊕)']",949.0,2.21,5.52,557.993
+TOI-1136 c,TOI-1136,30,False,"['Masa terrestre (6.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1062K)', 'Posible gigante gaseoso (2.88 R⊕)']",1062.0,2.879,6.32,84.5362
+TOI-283 b,TOI-283,30,False,"['Masa terrestre (6.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (661K)', 'Posible gigante gaseoso (2.34 R⊕)']",661.0,2.34,6.54,82.7013
+Kepler-251 c,Kepler-251,30,False,"['Masa terrestre (8.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (655K)', 'Posible gigante gaseoso (2.77 R⊕)']",655.0,2.77,8.1,924.625
+Kepler-272 d,Kepler-272,30,False,"['Masa terrestre (5.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (777K)', 'Posible gigante gaseoso (2.25 R⊕)']",777.0,2.25,5.69,889.608
+Kepler-171 d,Kepler-171,30,False,"['Masa terrestre (4.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (497K)', 'Posible gigante gaseoso (1.89 R⊕)']",497.0,1.89,4.23,863.855
+Kepler-339 d,Kepler-339,30,False,"['Tamaño rocoso (1.17 R⊕)', 'Estrella tipo solar']","['Temperatura extrema (796K)', 'Super-Tierra pesada (14.7 M⊕)']",796.0,1.17,14.7,616.637
+Kepler-265 b,Kepler-265,30,False,"['Masa terrestre (4.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1022K)', 'Posible gigante gaseoso (1.86 R⊕)']",1022.0,1.86,4.12,1280.25
+Kepler-150 e,Kepler-150,30,False,"['Masa terrestre (9.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (544K)', 'Posible gigante gaseoso (3.12 R⊕)']",544.0,3.12,9.91,891.092
+Kepler-198 c,Kepler-198,30,False,"['Masa terrestre (6.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (465K)', 'Posible gigante gaseoso (2.47 R⊕)']",465.0,2.47,6.66,495.358
+Kepler-250 d,Kepler-250,30,False,"['Masa terrestre (5.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (579K)', 'Posible gigante gaseoso (2.18 R⊕)']",579.0,2.18,5.39,760.585
+Kepler-209 c,Kepler-209,30,False,"['Masa terrestre (9.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (486K)', 'Posible gigante gaseoso (3.10 R⊕)']",486.0,3.1,9.8,576.946
+Kepler-142 c,Kepler-142,30,False,"['Masa terrestre (8.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1201K)', 'Posible gigante gaseoso (2.86 R⊕)']",1201.0,2.86,8.55,548.686
+Kepler-325 c,Kepler-325,30,False,"['Masa terrestre (7.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (721K)', 'Posible gigante gaseoso (2.54 R⊕)']",721.0,2.54,6.99,823.242
+Kepler-254 d,Kepler-254,30,False,"['Masa terrestre (6.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (686K)', 'Posible gigante gaseoso (2.50 R⊕)']",686.0,2.5,6.8,1389.48
+Kepler-181 c,Kepler-181,30,False,"['Masa terrestre (4.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (937K)', 'Posible gigante gaseoso (1.99 R⊕)']",937.0,1.99,4.62,609.283
+Kepler-166 b,Kepler-166,30,False,"['Masa terrestre (5.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (772K)', 'Posible gigante gaseoso (2.27 R⊕)']",772.0,2.27,5.77,603.53
+Kepler-212 c,Kepler-212,30,False,"['Masa terrestre (8.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (664K)', 'Posible gigante gaseoso (2.74 R⊕)']",664.0,2.74,7.95,687.194
+Kepler-211 c,Kepler-211,30,False,"['Tamaño rocoso (1.29 R⊕)', 'Estrella tipo solar']","['Temperatura extrema (841K)', 'Super-Tierra pesada (18.3 M⊕)']",841.0,1.29,18.3,309.353
+Kepler-153 b,Kepler-153,30,False,"['Masa terrestre (8.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (621K)', 'Posible gigante gaseoso (2.92 R⊕)']",621.0,2.92,8.85,459.368
+Kepler-161 b,Kepler-161,30,False,"['Masa terrestre (2.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (868K)', 'Posible gigante gaseoso (2.12 R⊕)']",868.0,2.12,2.63,434.632
+Kepler-237 c,Kepler-237,30,False,"['Masa terrestre (5.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (687K)', 'Posible gigante gaseoso (2.08 R⊕)']",687.0,2.08,4.98,657.822
+Kepler-1241 b,Kepler-1241,30,False,"['Masa terrestre (7.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (612K)', 'Posible gigante gaseoso (2.63 R⊕)']",612.0,2.63,7.41,968.722
+Kepler-338 d,Kepler-338,30,False,"['Masa terrestre (9.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (680K)', 'Posible gigante gaseoso (3.00 R⊕)']",680.0,3.0,9.27,552.798
+Kepler-293 b,Kepler-293,30,False,"['Masa terrestre (9.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (657K)', 'Posible gigante gaseoso (3.07 R⊕)']",657.0,3.07,9.64,974.633
+Kepler-266 b,Kepler-266,30,False,"['Masa terrestre (6.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1066K)', 'Posible gigante gaseoso (2.48 R⊕)']",1066.0,2.48,6.71,1370.79
+Kepler-158 b,Kepler-158,30,False,"['Masa terrestre (5.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (500K)', 'Posible gigante gaseoso (2.12 R⊕)']",500.0,2.12,5.14,315.177
+Kepler-343 b,Kepler-343,30,False,"['Masa terrestre (6.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1024K)', 'Posible gigante gaseoso (2.41 R⊕)']",1024.0,2.41,6.39,927.193
+Kepler-292 d,Kepler-292,30,False,"['Masa terrestre (5.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (808K)', 'Posible gigante gaseoso (2.23 R⊕)']",808.0,2.23,5.6,1056.48
+Kepler-261 b,Kepler-261,30,False,"['Masa terrestre (5.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (672K)', 'Posible gigante gaseoso (2.18 R⊕)']",672.0,2.18,5.39,317.499
+Kepler-371 b,Kepler-371,30,False,"['Masa terrestre (4.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (554K)', 'Posible gigante gaseoso (1.89 R⊕)']",554.0,1.89,4.23,813.192
+Kepler-104 c,Kepler-104,30,False,"['Masa terrestre (7.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (668K)', 'Posible gigante gaseoso (3.13 R⊕)']",668.0,3.13,7.14430805,400.785
+Kepler-314 c,Kepler-314,30,False,"['Masa terrestre (8.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (890K)', 'Posible gigante gaseoso (2.90 R⊕)']",890.0,2.9,8.75,268.881
+K2-59 b,K2-59,30,False,"['Masa terrestre (6.4 M⊕)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (2.41 R⊕)']",,2.41,6.39,311.313
+Kepler-1176 b,Kepler-1176,30,False,"['Masa terrestre (6.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (595K)', 'Posible gigante gaseoso (2.45 R⊕)']",595.0,2.45,6.57,864.699
+K2-62 c,K2-62,30,False,"['Masa terrestre (4.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (495K)', 'Posible gigante gaseoso (1.99 R⊕)']",495.0,1.99,4.62,112.467
+Kepler-626 b,Kepler-626,30,False,"['Masa terrestre (5.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (784K)', 'Posible gigante gaseoso (2.29 R⊕)']",784.0,2.29,5.86,635.643
+Kepler-1458 b,Kepler-1458,30,False,"['Masa terrestre (8.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (493K)', 'Posible gigante gaseoso (2.76 R⊕)']",493.0,2.76,8.05,544.45
+Kepler-571 b,Kepler-571,30,False,"['Masa terrestre (7.5 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (978K)', 'Posible gigante gaseoso (2.64 R⊕)']",978.0,2.64,7.46,723.875
+Kepler-135 b,Kepler-135,30,False,"['Masa terrestre (3.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1209K)', 'Posible gigante gaseoso (1.81 R⊕)']",1209.0,1.81,3.93,621.855
+Kepler-121 c,Kepler-121,30,False,"['Masa terrestre (5.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (425K)', 'Posible gigante gaseoso (2.27 R⊕)']",425.0,2.27,5.77,510.523
+Kepler-259 c,Kepler-259,30,False,"['Masa terrestre (7.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (530K)', 'Posible gigante gaseoso (2.70 R⊕)']",530.0,2.7,7.75,1002.14
+Kepler-216 b,Kepler-216,30,False,"['Masa terrestre (6.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1069K)', 'Posible gigante gaseoso (2.35 R⊕)']",1069.0,2.35,6.12,1187.47
+Kepler-115 c,Kepler-115,30,False,"['Masa terrestre (7.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (960K)', 'Posible gigante gaseoso (2.60 R⊕)']",960.0,2.6,7.27,623.609
+Kepler-246 b,Kepler-246,30,False,"['Masa terrestre (6.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (896K)', 'Posible gigante gaseoso (2.34 R⊕)']",896.0,2.34,6.08,626.078
+Kepler-163 c,Kepler-163,30,False,"['Masa terrestre (5.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (648K)', 'Posible gigante gaseoso (2.26 R⊕)']",648.0,2.26,5.73,689.814
+Kepler-221 c,Kepler-221,30,False,"['Masa terrestre (9.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (860K)', 'Posible gigante gaseoso (2.93 R⊕)']",860.0,2.93,9.3,385.231
+Kepler-1118 b,Kepler-1118,30,False,"['Masa terrestre (8.0 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (502K)', 'Posible gigante gaseoso (2.74 R⊕)']",502.0,2.74,7.95,888.325
+Kepler-1121 b,Kepler-1121,30,False,"['Masa terrestre (4.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1008K)', 'Posible gigante gaseoso (1.91 R⊕)']",1008.0,1.91,4.31,482.047
+Kepler-919 b,Kepler-919,30,False,"['Masa terrestre (5.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (869K)', 'Posible gigante gaseoso (2.25 R⊕)']",869.0,2.25,5.69,1119.87
+Kepler-694 b,Kepler-694,30,False,"['Masa terrestre (8.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (914K)', 'Posible gigante gaseoso (2.80 R⊕)']",914.0,2.8,8.25,1023.06
+K2-8 c,K2-8,30,False,"['Masa terrestre (6.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (801K)', 'Posible gigante gaseoso (2.41 R⊕)']",801.0,2.41,6.39,403.513
+Kepler-196 b,Kepler-196,30,False,"['Masa terrestre (4.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (536K)', 'Posible gigante gaseoso (1.90 R⊕)']",536.0,1.9,4.27,451.312
+Kepler-192 c,Kepler-192,30,False,"['Masa terrestre (8.2 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (623K)', 'Posible gigante gaseoso (2.79 R⊕)']",623.0,2.79,8.2,651.674
+Kepler-193 b,Kepler-193,30,False,"['Masa terrestre (6.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (979K)', 'Posible gigante gaseoso (2.39 R⊕)']",979.0,2.39,6.3,1009.1
+Kepler-214 b,Kepler-214,30,False,"['Masa terrestre (7.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (758K)', 'Posible gigante gaseoso (2.61 R⊕)']",758.0,2.61,7.32,1208.44
+Kepler-179 c,Kepler-179,30,False,"['Masa terrestre (4.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (810K)', 'Posible gigante gaseoso (2.00 R⊕)']",810.0,2.0,4.66,605.68
+Kepler-275 b,Kepler-275,30,False,"['Masa terrestre (6.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (1015K)', 'Posible gigante gaseoso (2.34 R⊕)']",1015.0,2.34,6.08,2034.25
+Kepler-166 c,Kepler-166,30,False,"['Masa terrestre (6.3 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (468K)', 'Posible gigante gaseoso (2.38 R⊕)']",468.0,2.38,6.26,603.53
+Kepler-184 d,Kepler-184,30,False,"['Masa terrestre (6.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (559K)', 'Posible gigante gaseoso (2.49 R⊕)']",559.0,2.49,6.76,610.326
+Kepler-306 c,Kepler-306,30,False,"['Masa terrestre (6.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (716K)', 'Posible gigante gaseoso (2.35 R⊕)']",716.0,2.35,6.12,775.679
+Kepler-165 c,Kepler-165,30,False,"['Masa terrestre (5.6 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (581K)', 'Posible gigante gaseoso (2.23 R⊕)']",581.0,2.23,5.6,560.885
+Kepler-226 b,Kepler-226,30,False,"['Tamaño rocoso (1.55 R⊕)', 'Estrella tipo solar']","['Temperatura extrema (1018K)', 'Super-Tierra pesada (24.0 M⊕)']",1018.0,1.55,24.0,980.138
+Kepler-260 b,Kepler-260,30,False,"['Masa terrestre (4.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (782K)', 'Posible gigante gaseoso (2.01 R⊕)']",782.0,2.01,4.7,627.365
+Kepler-654 b,Kepler-654,30,False,"['Masa terrestre (4.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (831K)', 'Posible gigante gaseoso (2.07 R⊕)']",831.0,2.07,4.94,974.124
+Kepler-641 b,Kepler-641,30,False,"['Masa terrestre (4.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (926K)', 'Posible gigante gaseoso (1.85 R⊕)']",926.0,1.85,4.08,969.918
+Kepler-1129 b,Kepler-1129,30,False,"['Masa terrestre (9.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (737K)', 'Posible gigante gaseoso (2.96 R⊕)']",737.0,2.96,9.06,1183.88
+Kepler-948 b,Kepler-948,30,False,"['Masa terrestre (4.1 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (841K)', 'Posible gigante gaseoso (1.85 R⊕)']",841.0,1.85,4.08,868.017
+Kepler-579 b,Kepler-579,30,False,"['Masa terrestre (4.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (730K)', 'Posible gigante gaseoso (2.00 R⊕)']",730.0,2.0,4.66,530.765
+Kepler-945 b,Kepler-945,30,False,"['Masa terrestre (7.4 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (616K)', 'Posible gigante gaseoso (2.63 R⊕)']",616.0,2.63,7.41,1651.25
+Kepler-199 b,Kepler-199,30,False,"['Masa terrestre (9.8 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (595K)', 'Posible gigante gaseoso (3.11 R⊕)']",595.0,3.11,9.85,521.054
+Kepler-48 d,Kepler-48,30,False,"['Masa terrestre (7.9 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (448K)', 'Posible gigante gaseoso (2.04 R⊕)']",448.0,2.04,7.93,306.738
+Kepler-284 b,Kepler-284,30,False,"['Masa terrestre (5.7 M⊕)', 'Estrella tipo solar']","['Temperatura extrema (686K)', 'Posible gigante gaseoso (2.24 R⊕)']",686.0,2.24,5.65,1031.95
+GJ 3341 b,GJ 3341,20,False,['Masa terrestre (6.6 M⊕)'],"['Temperatura desconocida', 'Posible gigante gaseoso (2.46 R⊕)', 'Enana roja (posible radiación)']",,2.46,6.6,23.619
+TOI-1801 b,TOI-1801,20,False,['Masa terrestre (5.7 M⊕)'],"['Temperatura extrema (494K)', 'Posible gigante gaseoso (2.08 R⊕)', 'Enana roja (posible radiación)']",493.7,2.079,5.738,30.6796
+KMT-2017-BLG-0428L b,KMT-2017-BLG-0428L,20,False,['Masa terrestre (5.6 M⊕)'],"['Temperatura desconocida', 'Posible gigante gaseoso (2.23 R⊕)']",,2.23,5.59,5400.0
+GJ 1214 b,GJ 1214,20,False,['Masa terrestre (8.4 M⊕)'],"['Temperatura extrema (567K)', 'Posible gigante gaseoso (2.73 R⊕)', 'Enana roja (posible radiación)']",567.0,2.733,8.41,14.6427
+K2-26 b,K2-26,20,False,['Masa terrestre (7.6 M⊕)'],"['Temperatura extrema (430K)', 'Posible gigante gaseoso (2.67 R⊕)', 'Enana roja (posible radiación)']",430.0,2.67,7.61,99.0504
+Kepler-372 c,Kepler-372,20,False,['Masa terrestre (5.0 M⊕)'],"['Temperatura extrema (755K)', 'Posible gigante gaseoso (2.09 R⊕)']",755.0,2.09,5.02,1493.95
+Kepler-125 b,Kepler-125,20,False,['Masa terrestre (6.2 M⊕)'],"['Temperatura extrema (590K)', 'Posible gigante gaseoso (2.37 R⊕)', 'Enana roja (posible radiación)']",590.0,2.37,6.21,183.365
+GJ 3634 b,GJ 3634,20,False,['Masa terrestre (8.4 M⊕)'],"['Temperatura desconocida', 'Posible gigante gaseoso (2.83 R⊕)', 'Enana roja (posible radiación)']",,2.83,8.4,20.3779
+Kepler-296 d,Kepler-296,20,False,['Masa terrestre (5.0 M⊕)'],"['Temperatura extrema (403K)', 'Posible gigante gaseoso (2.09 R⊕)', 'Enana roja (posible radiación)']",403.0,2.09,5.02,167.0
+Kepler-296 c,Kepler-296,20,False,['Masa terrestre (4.7 M⊕)'],"['Temperatura extrema (606K)', 'Posible gigante gaseoso (2.00 R⊕)', 'Enana roja (posible radiación)']",606.0,2.0,4.66,167.0
+Kepler-1704 b,Kepler-1704,20,False,"['Temperatura habitable (254K)', 'Estrella tipo solar']","['Posible gigante gaseoso (11.95 R⊕)', 'Super-Tierra pesada (1322.2 M⊕)']",253.8,11.94877343,1322.16617312,835.455
+TOI-756 b,TOI-756,20,False,['Masa terrestre (9.8 M⊕)'],"['Temperatura extrema (934K)', 'Posible gigante gaseoso (2.81 R⊕)', 'Enana roja (posible radiación)']",934.0,2.81,9.83,86.1759
+GJ 163 c,GJ 163,20,False,['Masa terrestre (6.8 M⊕)'],"['Temperatura desconocida', 'Posible gigante gaseoso (2.50 R⊕)', 'Enana roja (posible radiación)']",,2.5,6.8,15.1285
+Kepler-42 c,Kepler-42,20,False,['Tamaño rocoso (0.73 R⊕)'],"['Temperatura extrema (720K)', 'Super-Tierra pesada (60.3 M⊕)', 'Enana roja (posible radiación)']",720.0,0.73,60.337,40.0595
+GJ 876 d,GJ 876,20,False,['Masa terrestre (6.8 M⊕)'],"['Temperatura desconocida', 'Posible gigante gaseoso (2.51 R⊕)', 'Enana roja (posible radiación)']",,2.51,6.83,4.67517
+Kepler-32 f,Kepler-32,20,False,['Tamaño rocoso (0.82 R⊕)'],"['Temperatura extrema (1026K)', 'Super-Tierra pesada (969.2 M⊕)', 'Enana roja (posible radiación)']",1026.0,0.82,969.228,323.847
+OGLE-2005-BLG-390L b,OGLE-2005-BLG-390L,20,False,['Masa terrestre (5.5 M⊕)'],"['Temperatura extrema (50K)', 'Posible gigante gaseoso (2.21 R⊕)']",50.0,2.21,5.5,6600.0
+TOI-269 b,TOI-269,20,False,['Masa terrestre (8.8 M⊕)'],"['Temperatura extrema (531K)', 'Posible gigante gaseoso (2.77 R⊕)', 'Enana roja (posible radiación)']",531.0,2.77,8.8,57.0225
+GJ 3082 b,GJ 3082,20,False,['Masa terrestre (8.2 M⊕)'],"['Temperatura desconocida', 'Posible gigante gaseoso (2.79 R⊕)', 'Enana roja (posible radiación)']",,2.79,8.2,16.6186
+GJ 667 C b,GJ 667 C,20,False,['Masa terrestre (5.7 M⊕)'],"['Temperatura desconocida', 'Posible gigante gaseoso (2.25 R⊕)', 'Enana roja (posible radiación)']",,2.25,5.68,7.24396
+Kepler-444 b,Kepler-444,10,False,['Estrella tipo solar'],"['Temperatura extrema (938K)', 'Muy pequeño (0.40 R⊕)']",938.0,0.403,0.0374,36.4396
+Kepler-432 b,Kepler-432,10,False,"['Órbita estable (53 días)', 'Estrella tipo solar']","['Temperatura extrema (812K)', 'Posible gigante gaseoso (12.83 R⊕)', 'Super-Tierra pesada (1719.5 M⊕)']",812.0,12.834305,1719.4603,848.023
+BD-08 2823 c,BD-08 2823,10,False,"['Órbita estable (238 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (12.50 R⊕)', 'Super-Tierra pesada (104.0 M⊕)']",,12.5,104.0,41.3342
+Kepler-1442 b,Kepler-1442,10,False,"['Órbita estable (81 días)', 'Estrella tipo solar']","['Temperatura extrema (522K)', 'Posible gigante gaseoso (3.93 R⊕)', 'Super-Tierra pesada (14.7 M⊕)']",522.0,3.93,14.7,608.68
+KOI-1257 b,KOI-1257,10,False,"['Órbita estable (87 días)', 'Estrella tipo solar']","['Temperatura extrema (511K)', 'Posible gigante gaseoso (10.54 R⊕)', 'Super-Tierra pesada (460.8 M⊕)']",511.0,10.54,460.83,656.0
+BD+20 2457 b,BD+20 2457,10,False,"['Órbita estable (380 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (12.10 R⊕)', 'Super-Tierra pesada (6807.6 M⊕)']",,12.1,6807.63,1539.71
+gam1 Leo b,gam1 Leo,10,False,"['Órbita estable (428 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (12.50 R⊕)', 'Super-Tierra pesada (2790.4 M⊕)']",,12.5,2790.43,39.8883
+HD 205739 b,HD 205739,10,False,"['Órbita estable (280 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.60 R⊕)', 'Super-Tierra pesada (435.4 M⊕)']",,13.6,435.41,92.5087
+HD 220842 b,HD 220842,10,False,"['Órbita estable (218 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.10 R⊕)', 'Super-Tierra pesada (1010.7 M⊕)']",,13.1,1010.6994,64.6498
+Kepler-700 b,Kepler-700,10,False,"['Órbita estable (81 días)', 'Estrella tipo solar']","['Temperatura extrema (452K)', 'Posible gigante gaseoso (5.99 R⊕)', 'Super-Tierra pesada (30.0 M⊕)']",452.0,5.99,30.0,1491.76
+Kepler-38 b,Kepler-38,10,False,"['Órbita estable (106 días)', 'Estrella tipo solar']","['Temperatura extrema (475K)', 'Posible gigante gaseoso (4.30 R⊕)', 'Super-Tierra pesada (122.0 M⊕)']",475.0,4.3,122.0,1174.59
+HIP 57274 d,HIP 57274,10,False,"['Órbita estable (432 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (14.20 R⊕)', 'Super-Tierra pesada (167.4 M⊕)']",,14.2,167.4,25.8618
+Kepler-453 b,Kepler-453,10,False,"['Órbita estable (241 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (6.20 R⊕)', 'Super-Tierra pesada (16.0 M⊕)']",,6.204,16.0,442.846
+Kepler-937 b,Kepler-937,10,False,"['Órbita estable (68 días)', 'Estrella tipo solar']","['Temperatura extrema (495K)', 'Posible gigante gaseoso (3.72 R⊕)', 'Super-Tierra pesada (13.4 M⊕)']",495.0,3.72,13.4,1571.46
+TOI-5542 b,TOI-5542,10,False,"['Órbita estable (75 días)', 'Estrella tipo solar']","['Temperatura extrema (441K)', 'Posible gigante gaseoso (11.31 R⊕)', 'Super-Tierra pesada (419.5 M⊕)']",441.0,11.30986153,419.53349724,348.849
+Kepler-424 c,Kepler-424,10,False,"['Órbita estable (223 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (12.70 R⊕)', 'Super-Tierra pesada (2215.2 M⊕)']",,12.7,2215.18,698.646
+Kepler-46 c,Kepler-46,10,False,"['Órbita estable (57 días)', 'Estrella tipo solar']","['Temperatura extrema (455K)', 'Posible gigante gaseoso (13.50 R⊕)', 'Super-Tierra pesada (119.5 M⊕)']",455.0,13.5,119.499,777.06
+XO-2 S c,XO-2 S,10,False,"['Órbita estable (121 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.60 R⊕)', 'Super-Tierra pesada (435.4 M⊕)']",,13.6,435.409,151.398
+Kepler-32 d,Kepler-32,10,False,['Temperatura habitable (328K)'],"['Posible gigante gaseoso (2.70 R⊕)', 'Super-Tierra pesada (39.9 M⊕)', 'Enana roja (posible radiación)']",328.0,2.7,39.9089,323.847
+HD 67087 b,HD 67087,10,False,"['Órbita estable (352 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.10 R⊕)', 'Super-Tierra pesada (973.0 M⊕)']",,13.1,973.0,76.5217
+HD 155358 c,HD 155358,10,False,"['Órbita estable (392 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.90 R⊕)', 'Super-Tierra pesada (261.0 M⊕)']",,13.9,261.0,43.6197
+HD 219134 g,HD 219134,10,False,"['Órbita estable (94 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (3.28 R⊕)', 'Super-Tierra pesada (10.8 M⊕)']",,3.28,10.80622,6.53127
+HIP 107773 b,HIP 107773,10,False,"['Órbita estable (144 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.40 R⊕)', 'Super-Tierra pesada (629.3 M⊕)']",,13.4,629.3034,105.18
+61 Vir d,61 Vir,10,False,"['Órbita estable (123 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (5.11 R⊕)', 'Super-Tierra pesada (22.9 M⊕)']",,5.11,22.9,8.50332
+HD 156279 b,HD 156279,10,False,"['Órbita estable (133 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (12.50 R⊕)', 'Super-Tierra pesada (2997.8 M⊕)']",,12.5,2997.75753482,36.1945
+HD 233604 b,HD 233604,10,False,"['Órbita estable (192 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (12.70 R⊕)', 'Super-Tierra pesada (2089.6 M⊕)']",,12.7,2089.644,847.058
+HD 192310 b,HD 192310,10,False,"['Órbita estable (75 días)', 'Estrella tipo solar']","['Temperatura extrema (355K)', 'Posible gigante gaseoso (4.27 R⊕)', 'Super-Tierra pesada (16.9 M⊕)']",355.0,4.27,16.9,8.79687
+91 Aqr b,91 Aqr,10,False,"['Órbita estable (181 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.10 R⊕)', 'Super-Tierra pesada (1017.0 M⊕)']",,13.1,1017.0,44.0304
+HD 199509 b,HD 199509,10,False,"['Órbita estable (100 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (7.43 R⊕)', 'Super-Tierra pesada (43.2 M⊕)']",,7.43,43.22466335,24.3056
+HIP 63242 b,HIP 63242,10,False,"['Órbita estable (125 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (12.50 R⊕)', 'Super-Tierra pesada (2917.6 M⊕)']",,12.5,2917.56,156.456
+Kepler-35 b,Kepler-35,10,False,"['Órbita estable (131 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (8.16 R⊕)', 'Super-Tierra pesada (40.4 M⊕)']",,8.16,40.363,1819.17
+Kepler-16 b,Kepler-16,10,False,"['Órbita estable (229 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (8.45 R⊕)', 'Super-Tierra pesada (105.8 M⊕)']",,8.4493,105.833,75.0852
+Kepler-1752 b,Kepler-1752,10,False,"['Órbita estable (56 días)', 'Estrella tipo solar']","['Temperatura extrema (419K)', 'Posible gigante gaseoso (4.54 R⊕)', 'Super-Tierra pesada (18.7 M⊕)']",419.0,4.54060463,18.7,962.888
+Kepler-238 f,Kepler-238,10,False,"['Órbita estable (50 días)', 'Estrella tipo solar']","['Temperatura extrema (568K)', 'Posible gigante gaseoso (2.00 R⊕)', 'Super-Tierra pesada (13.5 M⊕)']",568.0,2.0,13.5,1798.75
+Kepler-87 b,Kepler-87,10,False,"['Órbita estable (115 días)', 'Estrella tipo solar']","['Temperatura extrema (478K)', 'Posible gigante gaseoso (13.49 R⊕)', 'Super-Tierra pesada (324.2 M⊕)']",478.0,13.49,324.2,1232.9
+HD 177830 c,HD 177830,10,False,"['Órbita estable (111 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (7.87 R⊕)', 'Super-Tierra pesada (47.7 M⊕)']",,7.87,47.6725,62.7674
+HD 12484 b,HD 12484,10,False,"['Órbita estable (59 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.20 R⊕)', 'Super-Tierra pesada (947.1 M⊕)']",,13.2,947.1334,48.3367
+HD 102365 b,HD 102365,10,False,"['Órbita estable (122 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (4.14 R⊕)', 'Super-Tierra pesada (16.0 M⊕)']",,4.14,16.0,9.2894
+alf Ari b,alf Ari,10,False,"['Órbita estable (381 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.40 R⊕)', 'Super-Tierra pesada (572.1 M⊕)']",,13.4,572.07,20.21019
+HD 148164 b,HD 148164,10,False,"['Órbita estable (329 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.70 R⊕)', 'Super-Tierra pesada (390.9 M⊕)']",,13.7,390.9309,77.1971
+Kepler-396 c,Kepler-396,10,False,"['Órbita estable (89 días)', 'Estrella tipo solar']","['Temperatura extrema (390K)', 'Posible gigante gaseoso (5.30 R⊕)', 'Super-Tierra pesada (17.9 M⊕)']",390.0,5.3,17.9,223.757
+Kepler-11 g,Kepler-11,10,False,"['Órbita estable (118 días)', 'Estrella tipo solar']","['Temperatura extrema (376K)', 'Posible gigante gaseoso (3.33 R⊕)', 'Super-Tierra pesada (25.0 M⊕)']",376.0,3.33,25.0,646.346
+HD 10180 f,HD 10180,10,False,"['Órbita estable (123 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (5.24 R⊕)', 'Super-Tierra pesada (23.9 M⊕)']",,5.24,23.9,38.9607
+BD-06 1339 c,BD-06 1339,10,False,"['Órbita estable (126 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (8.38 R⊕)', 'Super-Tierra pesada (53.0 M⊕)']",,8.38,53.0,20.2695
+WD 0806-661 b,WD 0806-661,10,False,['Temperatura habitable (340K)'],"['Posible gigante gaseoso (12.60 R⊕)', 'Super-Tierra pesada (2542.6 M⊕)', 'Estrella muy caliente (vida corta)']",340.0,12.6,2542.627256,19.2444
+HD 66141 b,HD 66141,10,False,"['Órbita estable (480 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (12.80 R⊕)', 'Super-Tierra pesada (1906.9 M⊕)']",,12.8,1906.9,68.1509
+BD+15 2375 b,BD+15 2375,10,False,"['Órbita estable (153 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.80 R⊕)', 'Super-Tierra pesada (337.2 M⊕)']",,13.8,337.21763,768.045
+HD 5583 b,HD 5583,10,False,"['Órbita estable (139 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (12.80 R⊕)', 'Super-Tierra pesada (1837.1 M⊕)']",,12.8,1837.0574,219.216
+HIP 109384 b,HIP 109384,10,False,"['Órbita estable (499 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.50 R⊕)', 'Super-Tierra pesada (495.8 M⊕)']",,13.5,495.8148,58.9582
+HD 21411 b,HD 21411,10,False,"['Órbita estable (84 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (9.52 R⊕)', 'Super-Tierra pesada (65.9 M⊕)']",,9.52,65.9,29.1328
+Kepler-368 c,Kepler-368,10,False,"['Órbita estable (72 días)', 'Estrella tipo solar']","['Temperatura extrema (575K)', 'Posible gigante gaseoso (3.88 R⊕)', 'Super-Tierra pesada (14.3 M⊕)']",575.0,3.88,14.3,770.978
+Kepler-419 b,Kepler-419,10,False,"['Órbita estable (70 días)', 'Estrella tipo solar']","['Temperatura extrema (613K)', 'Posible gigante gaseoso (10.80 R⊕)', 'Super-Tierra pesada (794.5 M⊕)']",613.0,10.8,794.5,1011.36
+Kepler-199 c,Kepler-199,10,False,"['Órbita estable (67 días)', 'Estrella tipo solar']","['Temperatura extrema (420K)', 'Posible gigante gaseoso (3.25 R⊕)', 'Super-Tierra pesada (10.6 M⊕)']",420.0,3.25,10.6,521.054
+Kepler-413 b,Kepler-413,10,False,"['Órbita estable (66 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (4.35 R⊕)', 'Super-Tierra pesada (67.0 M⊕)']",,4.347,67.0,847.536
+HD 168443 b,HD 168443,10,False,"['Órbita estable (58 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (12.60 R⊕)', 'Super-Tierra pesada (2424.4 M⊕)']",,12.6,2424.3950886,39.6245
+HD 80606 b,HD 80606,10,False,"['Órbita estable (111 días)', 'Estrella tipo solar']","['Temperatura extrema (405K)', 'Posible gigante gaseoso (11.57 R⊕)', 'Super-Tierra pesada (1323.5 M⊕)']",405.0,11.56766808,1323.46926959,66.4711
+HD 82943 c,HD 82943,10,False,"['Órbita estable (220 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.40 R⊕)', 'Super-Tierra pesada (622.6 M⊕)']",,13.4,622.603,27.5902
+Kepler-31 d,Kepler-31,10,False,"['Órbita estable (88 días)', 'Estrella tipo solar']","['Temperatura extrema (484K)', 'Posible gigante gaseoso (3.90 R⊕)', 'Super-Tierra pesada (2161.2 M⊕)']",484.0,3.9,2161.244,1664.64
+HD 82943 b,HD 82943,10,False,"['Órbita estable (441 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.50 R⊕)', 'Super-Tierra pesada (534.2 M⊕)']",,13.5,534.25,27.5902
+ups And c,ups And,10,False,"['Órbita estable (241 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (12.30 R⊕)', 'Super-Tierra pesada (4443.2 M⊕)']",,12.3,4443.24112986,13.4054
+HD 114783 b,HD 114783,10,False,"['Órbita estable (494 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.70 R⊕)', 'Super-Tierra pesada (349.6 M⊕)']",,13.7,349.6,21.0628
+Kepler-126 d,Kepler-126,10,False,"['Órbita estable (100 días)', 'Estrella tipo solar']","['Temperatura extrema (475K)', 'Posible gigante gaseoso (2.50 R⊕)', 'Super-Tierra pesada (54.6 M⊕)']",475.0,2.5,54.59018723,237.401
+Kepler-297 c,Kepler-297,10,False,"['Órbita estable (75 días)', 'Estrella tipo solar']","['Temperatura extrema (409K)', 'Posible gigante gaseoso (6.54 R⊕)', 'Super-Tierra pesada (42.1 M⊕)']",409.0,6.54,42.1,692.14
+HD 216770 b,HD 216770,10,False,"['Órbita estable (118 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (14.10 R⊕)', 'Super-Tierra pesada (181.2 M⊕)']",,14.1,181.1631,36.6625
+HD 37605 b,HD 37605,10,False,"['Órbita estable (55 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.20 R⊕)', 'Super-Tierra pesada (855.0 M⊕)']",,13.2,854.9627,46.7864
+HD 221287 b,HD 221287,10,False,"['Órbita estable (456 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.10 R⊕)', 'Super-Tierra pesada (982.0 M⊕)']",,13.1,982.05,55.9231
+Kepler-268 c,Kepler-268,10,False,"['Órbita estable (83 días)', 'Estrella tipo solar']","['Temperatura extrema (471K)', 'Posible gigante gaseoso (3.38 R⊕)', 'Super-Tierra pesada (11.4 M⊕)']",471.0,3.38,11.4,851.87
+Kepler-351 c,Kepler-351,10,False,"['Órbita estable (57 días)', 'Estrella tipo solar']","['Temperatura extrema (431K)', 'Posible gigante gaseoso (3.19 R⊕)', 'Super-Tierra pesada (11.1 M⊕)']",431.0,3.19,11.1,1083.91
+Kepler-444 c,Kepler-444,10,False,['Estrella tipo solar'],"['Temperatura extrema (868K)', 'Muy pequeño (0.50 R⊕)']",868.0,0.497,0.0793,36.4396
+HD 19994 b,HD 19994,10,False,"['Órbita estable (466 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.60 R⊕)', 'Super-Tierra pesada (435.4 M⊕)']",,13.6,435.41,22.5242
+HD 102888 b,HD 102888,10,False,"['Órbita estable (252 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (12.80 R⊕)', 'Super-Tierra pesada (1808.4 M⊕)']",,12.8,1808.44363583,126.484
+HD 33564 b,HD 33564,10,False,"['Órbita estable (388 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (12.50 R⊕)', 'Super-Tierra pesada (2892.1 M⊕)']",,12.5,2892.1,20.9531
+HD 27442 b,HD 27442,10,False,"['Órbita estable (428 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.50 R⊕)', 'Super-Tierra pesada (495.8 M⊕)']",,13.5,495.8,18.2704
+Kepler-178 d,Kepler-178,10,False,"['Órbita estable (97 días)', 'Estrella tipo solar']","['Temperatura extrema (392K)', 'Posible gigante gaseoso (3.95 R⊕)', 'Super-Tierra pesada (14.8 M⊕)']",392.0,3.95,14.8,716.025
+HD 12661 b,HD 12661,10,False,"['Órbita estable (263 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.30 R⊕)', 'Super-Tierra pesada (772.3 M⊕)']",,13.3,772.3269,37.8478
+HD 73526 c,HD 73526,10,False,"['Órbita estable (379 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.30 R⊕)', 'Super-Tierra pesada (715.1 M⊕)']",,13.3,715.09,97.2396
+HD 69830 d,HD 69830,10,False,"['Órbita estable (197 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (4.45 R⊕)', 'Super-Tierra pesada (18.1 M⊕)']",,4.45,18.1,12.5591
+Kepler-418 b,Kepler-418,10,False,"['Órbita estable (87 días)', 'Estrella tipo solar']","['Temperatura extrema (434K)', 'Posible gigante gaseoso (13.45 R⊕)', 'Super-Tierra pesada (349.6 M⊕)']",434.0,13.45,349.6112477,1002.53
+HIP 14810 c,HIP 14810,10,False,"['Órbita estable (148 días)', 'Estrella tipo solar']","['Temperatura desconocida', 'Posible gigante gaseoso (13.60 R⊕)', 'Super-Tierra pesada (416.4 M⊕)']",,13.6,416.3573,50.48
+Kepler-14 b,Kepler-14,0,False,['Estrella tipo solar'],"['Temperatura extrema (1605K)', 'Posible gigante gaseoso (12.73 R⊕)', 'Super-Tierra pesada (2669.7 M⊕)']",1605.0,12.733,2669.66,798.0
+MOA-2009-BLG-266L b,MOA-2009-BLG-266L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (3.21 R⊕)', 'Super-Tierra pesada (10.4 M⊕)']",,3.21,10.4,3040.0
+Kepler-15 b,Kepler-15,0,False,['Estrella tipo solar'],"['Temperatura extrema (1251K)', 'Posible gigante gaseoso (10.76 R⊕)', 'Super-Tierra pesada (209.8 M⊕)']",1251.0,10.76,209.76,739.412
+Kepler-17 b,Kepler-17,0,False,['Estrella tipo solar'],"['Temperatura extrema (1570K)', 'Posible gigante gaseoso (14.68 R⊕)', 'Super-Tierra pesada (778.6 M⊕)']",1570.0,14.68,778.65,720.753
+CoRoT-18 b,CoRoT-18,0,False,['Estrella tipo solar'],"['Temperatura extrema (1550K)', 'Posible gigante gaseoso (14.68 R⊕)', 'Super-Tierra pesada (1102.8 M⊕)']",1550.0,14.68,1102.82,764.889
+HR 8799 e,HR 8799,0,False,[],"['Temperatura extrema (1150K)', 'Posible gigante gaseoso (13.11 R⊕)', 'Super-Tierra pesada (3178.3 M⊕)', 'Estrella muy caliente (vida corta)']",1150.0,13.11453,3178.3,41.2441
+WASP-155 b,WASP-155,0,False,['Estrella tipo solar'],"['Temperatura extrema (1468K)', 'Posible gigante gaseoso (13.45 R⊕)', 'Super-Tierra pesada (276.8 M⊕)']",1468.0,13.45077684,276.8285425,399.63
+HD 113538 b,HD 113538,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.20 R⊕)', 'Super-Tierra pesada (114.4 M⊕)']",,13.2,114.41,16.2817
+HD 113538 c,HD 113538,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.80 R⊕)', 'Super-Tierra pesada (295.6 M⊕)']",,13.8,295.57,16.2817
+HD 10180 d,HD 10180,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (3295.9 M⊕)']",,,3295.88058059,38.9607
+Kepler-8 b,Kepler-8,0,False,['Estrella tipo solar'],"['Temperatura extrema (1680K)', 'Posible gigante gaseoso (15.87 R⊕)', 'Super-Tierra pesada (187.5 M⊕)']",1680.0,15.871944,187.5197,1021.87
+HD 10180 c,HD 10180,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (2741.6 M⊕)']",,,2741.58783878,38.9607
+HIP 78530 b,HIP 78530,0,False,[],"['Temperatura extrema (2700K)', 'Posible gigante gaseoso (12.00 R⊕)', 'Super-Tierra pesada (7300.0 M⊕)', 'Estrella muy caliente (vida corta)']",2700.0,12.0,7300.0,136.759
+WASP-8 b,WASP-8,0,False,['Estrella tipo solar'],"['Temperatura extrema (1059K)', 'Posible gigante gaseoso (12.67 R⊕)', 'Super-Tierra pesada (807.3 M⊕)']",1059.0,12.66617,807.2882,89.9606
+TOI-756 c,TOI-756,0,False,['Órbita estable (149 días)'],"['Temperatura extrema (194K)', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (1287.2 M⊕)', 'Enana roja (posible radiación)']",194.0,13.0,1287.20504835,86.1759
+24 Sex c,24 Sex,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.90 R⊕)', 'Super-Tierra pesada (273.3 M⊕)']",,13.9,273.32,72.0691
+HD 10180 e,HD 10180,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (5.39 R⊕)', 'Super-Tierra pesada (25.1 M⊕)']",,5.39,25.1,38.9607
+HAT-P-17 c,HAT-P-17,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.10 R⊕)', 'Super-Tierra pesada (1080.6 M⊕)']",,13.1,1080.6,92.3831
+HIP 67522 c,HIP 67522,0,False,['Estrella tipo solar'],"['Temperatura extrema (917K)', 'Posible gigante gaseoso (7.94 R⊕)', 'Super-Tierra pesada (48.3 M⊕)']",917.0,7.93595834,48.3,127.28
+OGLE-2017-BLG-0640L b,OGLE-2017-BLG-0640L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (13.50 R⊕)', 'Super-Tierra pesada (514.9 M⊕)']",,13.5,514.88201934,6630.0
+Ross 458 c,Ross 458,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (14.01 R⊕)', 'Super-Tierra pesada (1907.0 M⊕)', 'Enana roja (posible radiación)']",,14.01125,1906.98,11.5094
+WASP-23 b,WASP-23,0,False,['Estrella tipo solar'],"['Temperatura extrema (1077K)', 'Posible gigante gaseoso (10.78 R⊕)', 'Super-Tierra pesada (280.9 M⊕)']",1076.55,10.783,280.95,207.49
+Kepler-40 b,Kepler-40,0,False,[],"['Temperatura extrema (1620K)', 'Posible gigante gaseoso (13.11 R⊕)', 'Super-Tierra pesada (699.2 M⊕)']",1620.0,13.11,699.2,2305.01
+NN Ser c,NN Ser,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (12.60 R⊕)', 'Super-Tierra pesada (2329.6 M⊕)', 'Estrella muy caliente (vida corta)']",,12.6,2329.6,515.818
+TOI-6016 b,TOI-6016,0,False,['Estrella tipo solar'],"['Temperatura extrema (1890K)', 'Posible gigante gaseoso (13.67 R⊕)', 'Super-Tierra pesada (371.9 M⊕)']",1890.0,13.67495645,371.85923619,364.715
+WASP-29 b,WASP-29,0,False,['Estrella tipo solar'],"['Temperatura extrema (970K)', 'Posible gigante gaseoso (8.63 R⊕)', 'Super-Tierra pesada (73.1 M⊕)']",970.0,8.63093,73.1009,87.5953
+HD 22781 b,HD 22781,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.30 R⊕)', 'Super-Tierra pesada (4338.2 M⊕)']",,12.3,4338.2,32.6034
+MOA-2009-BLG-387L b,MOA-2009-BLG-387L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (13.20 R⊕)', 'Super-Tierra pesada (830.0 M⊕)']",,13.2,830.0,5690.0
+Kepler-31 b,Kepler-31,0,False,['Estrella tipo solar'],"['Temperatura extrema (781K)', 'Posible gigante gaseoso (5.50 R⊕)', 'Super-Tierra pesada (36.7 M⊕)']",781.0,5.5,36.7418,1664.64
+HD 222237 b,HD 222237,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.80 R⊕)', 'Super-Tierra pesada (1649.5 M⊕)']",,12.8,1649.52943233,11.4469
+HD 10180 g,HD 10180,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (3375.3 M⊕)']",,,3375.33768234,38.9607
+WASP-43 b,WASP-43,0,False,['Estrella tipo solar'],"['Temperatura extrema (1427K)', 'Posible gigante gaseoso (10.42 R⊕)', 'Super-Tierra pesada (565.7 M⊕)']",1426.7,10.424,565.714,86.7467
+CoRoT-17 b,CoRoT-17,0,False,['Estrella tipo solar'],"['Temperatura extrema (1626K)', 'Posible gigante gaseoso (11.43 R⊕)', 'Super-Tierra pesada (772.3 M⊕)']",1626.0,11.43,772.29,1176.12
+HD 132563 b,HD 132563,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.60 R⊕)', 'Super-Tierra pesada (473.5 M⊕)']",,13.6,473.547,105.155
+HD 192310 c,HD 192310,0,False,['Estrella tipo solar'],"['Temperatura extrema (185K)', 'Posible gigante gaseoso (5.25 R⊕)', 'Super-Tierra pesada (24.0 M⊕)']",185.0,5.25,24.0,8.79687
+HD 72659 b,HD 72659,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.20 R⊕)', 'Super-Tierra pesada (949.7 M⊕)']",,13.2,949.67128012,51.8949
+HD 10180 h,HD 10180,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (9.40 R⊕)', 'Super-Tierra pesada (64.4 M⊕)']",,9.4,64.4,38.9607
+Kepler-27 c,Kepler-27,0,False,['Estrella tipo solar'],"['Temperatura extrema (481K)', 'Posible gigante gaseoso (4.90 R⊕)', 'Super-Tierra pesada (4385.9 M⊕)']",481.0,4.9,4385.87,1044.36
+Kepler-27 b,Kepler-27,0,False,['Estrella tipo solar'],"['Temperatura extrema (610K)', 'Posible gigante gaseoso (4.00 R⊕)', 'Super-Tierra pesada (2895.3 M⊕)']",610.0,4.0,2895.31,1044.36
+HD 27894 b,HD 27894,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (14.10 R⊕)', 'Super-Tierra pesada (196.7 M⊕)']",,14.1,196.73578393,43.8214
+Kepler-31 c,Kepler-31,0,False,['Estrella tipo solar'],"['Temperatura extrema (615K)', 'Posible gigante gaseoso (5.30 R⊕)', 'Super-Tierra pesada (1493.7 M⊕)']",615.0,5.3,1493.7,1664.64
+Kepler-32 c,Kepler-32,0,False,[],"['Temperatura extrema (451K)', 'Posible gigante gaseoso (2.00 R⊕)', 'Super-Tierra pesada (158.9 M⊕)', 'Enana roja (posible radiación)']",451.0,2.0,158.9,323.847
+Kepler-53 b,Kepler-53,0,False,['Estrella tipo solar'],"['Temperatura extrema (701K)', 'Posible gigante gaseoso (2.89 R⊕)', 'Super-Tierra pesada (111.0 M⊕)']",701.0,2.89,111.0,1366.07
+Kepler-52 c,Kepler-52,0,False,['Estrella tipo solar'],"['Temperatura extrema (433K)', 'Posible gigante gaseoso (1.84 R⊕)', 'Super-Tierra pesada (45.4 M⊕)']",433.0,1.84,45.4,321.542
+Kepler-55 b,Kepler-55,0,False,['Estrella tipo solar'],"['Temperatura extrema (400K)', 'Posible gigante gaseoso (2.43 R⊕)', 'Super-Tierra pesada (43.0 M⊕)']",400.0,2.43,43.0,578.796
+WASP-80 b,WASP-80,0,False,['Estrella tipo solar'],"['Temperatura extrema (825K)', 'Posible gigante gaseoso (11.20 R⊕)', 'Super-Tierra pesada (171.0 M⊕)']",825.0,11.197791,170.99254,49.7876
+HIP 57274 c,HIP 57274,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (14.20 R⊕)', 'Super-Tierra pesada (130.0 M⊕)']",,14.2,130.0,25.8618
+HD 217107 c,HD 217107,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.90 R⊕)', 'Super-Tierra pesada (1430.2 M⊕)']",,12.9,1430.2278315,20.0619
+HD 183263 b,HD 183263,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.10 R⊕)', 'Super-Tierra pesada (1103.2 M⊕)']",,13.1,1103.1824007,54.1955
+Kepler-43 b,Kepler-43,0,False,['Estrella tipo solar'],"['Temperatura extrema (1620K)', 'Posible gigante gaseoso (13.66 R⊕)', 'Super-Tierra pesada (1026.6 M⊕)']",1620.0,13.663771,1026.5909,1005.84
+KOI-13 b,KOI-13,0,False,[],"['Temperatura extrema (2550K)', 'Posible gigante gaseoso (16.95 R⊕)', 'Super-Tierra pesada (2949.5 M⊕)', 'Estrella muy caliente (vida corta)']",2550.0,16.948008,2949.4624,519.096
+Qatar-2 b,Qatar-2,0,False,['Estrella tipo solar'],"['Temperatura extrema (1344K)', 'Posible gigante gaseoso (14.06 R⊕)', 'Super-Tierra pesada (792.6 M⊕)']",1344.0,14.056,792.635,181.374
+Kepler-44 b,Kepler-44,0,False,['Estrella tipo solar'],"['Temperatura extrema (1544K)', 'Posible gigante gaseoso (12.22 R⊕)', 'Super-Tierra pesada (317.8 M⊕)']",1544.0,12.22,317.82,1188.0
+Kepler-41 b,Kepler-41,0,False,['Estrella tipo solar'],"['Temperatura extrema (1790K)', 'Posible gigante gaseoso (14.46 R⊕)', 'Super-Tierra pesada (178.0 M⊕)']",1790.0,14.46,177.98,1093.08
+HD 106270 b,HD 106270,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.40 R⊕)', 'Super-Tierra pesada (3623.2 M⊕)']",,12.4,3623.2438398,93.808
+HD 204941 b,HD 204941,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (10.10 R⊕)', 'Super-Tierra pesada (73.1 M⊕)']",,10.1,73.1009,28.7165
+HD 7199 b,HD 7199,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (3639.1 M⊕)']",,,3639.13526015,36.1531
+HIP 57274 b,HIP 57274,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (3359.4 M⊕)']",,,3359.44626199,25.8618
+GJ 508.2 b,GJ 508.2,0,False,[],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (588.0 M⊕)', 'Enana roja (posible radiación)']",,,587.98255295,16.6374
+WASP-59 b,WASP-59,0,False,['Estrella tipo solar'],"['Temperatura extrema (670K)', 'Posible gigante gaseoso (8.69 R⊕)', 'Super-Tierra pesada (274.3 M⊕)']",670.0,8.687,274.276,115.936
+MOA-2010-BLG-073L b,MOA-2010-BLG-073L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (12.40 R⊕)', 'Super-Tierra pesada (3500.0 M⊕)']",,12.4,3500.0,2800.0
+WASP-39 b,WASP-39,0,False,['Estrella tipo solar'],"['Temperatura extrema (1166K)', 'Posible gigante gaseoso (14.34 R⊕)', 'Super-Tierra pesada (89.3 M⊕)']",1166.0,14.336311,89.31023,213.982
+OGLE-TR-111 b,OGLE-TR-111,0,False,['Estrella tipo solar'],"['Temperatura extrema (1019K)', 'Posible gigante gaseoso (11.42 R⊕)', 'Super-Tierra pesada (174.8 M⊕)']",1019.0,11.421971,174.799,1068.33
+OGLE-TR-10 b,OGLE-TR-10,0,False,['Estrella tipo solar'],"['Temperatura extrema (1702K)', 'Posible gigante gaseoso (14.01 R⊕)', 'Super-Tierra pesada (197.0 M⊕)']",1702.0,14.011,197.046,1344.97
+Kepler-18 d,Kepler-18,0,False,['Estrella tipo solar'],"['Temperatura extrema (720K)', 'Posible gigante gaseoso (6.98 R⊕)', 'Super-Tierra pesada (16.4 M⊕)']",720.0,6.98,16.4,433.047
+CoRoT-19 b,CoRoT-19,0,False,['Estrella tipo solar'],"['Temperatura extrema (2000K)', 'Posible gigante gaseoso (14.46 R⊕)', 'Super-Tierra pesada (352.8 M⊕)']",2000.0,14.46,352.78,790.663
+HAT-P-37 b,HAT-P-37,0,False,['Estrella tipo solar'],"['Temperatura extrema (1271K)', 'Posible gigante gaseoso (13.20 R⊕)', 'Super-Tierra pesada (371.5 M⊕)']",1271.0,13.204,371.528,390.594
+CoRoT-23 b,CoRoT-23,0,False,['Estrella tipo solar'],"['Temperatura extrema (1660K)', 'Posible gigante gaseoso (11.77 R⊕)', 'Super-Tierra pesada (889.9 M⊕)']",1660.0,11.77,889.9,1060.97
+WASP-31 b,WASP-31,0,False,['Estrella tipo solar'],"['Temperatura extrema (1424K)', 'Posible gigante gaseoso (17.36 R⊕)', 'Super-Tierra pesada (151.9 M⊕)']",1423.7,17.363,151.916,383.829
+55 Cnc c,55 Cnc,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (8.51 R⊕)', 'Super-Tierra pesada (54.5 M⊕)']",,8.51,54.4738,12.5855
+GJ 436 b,GJ 436,0,False,[],"['Temperatura extrema (686K)', 'Posible gigante gaseoso (4.17 R⊕)', 'Super-Tierra pesada (22.1 M⊕)', 'Enana roja (posible radiación)']",686.0,4.17,22.1,9.75321
+HAT-P-28 b,HAT-P-28,0,False,['Estrella tipo solar'],"['Temperatura extrema (1384K)', 'Posible gigante gaseoso (13.59 R⊕)', 'Super-Tierra pesada (199.0 M⊕)']",1384.0,13.585,198.953,401.319
+UZ For b,UZ For,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (2002.2 M⊕)']",,,2002.2,239.60387482
+HIP 5158 c,HIP 5158,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.20 R⊕)', 'Super-Tierra pesada (4780.2 M⊕)']",,12.2,4780.1632,51.6026
+HIP 14810 b,HIP 14810,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (1239.5 M⊕)']",,13.0,1239.537,50.48
+UZ For c,UZ For,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (2447.2 M⊕)']",,,2447.2,239.60387482
+HD 107148 b,HD 107148,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (9.60 R⊕)', 'Super-Tierra pesada (66.7 M⊕)']",,9.6,66.741,49.4156
+HD 79498 b,HD 79498,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.60 R⊕)', 'Super-Tierra pesada (425.9 M⊕)']",,13.6,425.8922,48.9489
+CFBDSIR J145829+101343 b,CFBDSIR J145829+101343,0,False,[],"['Temperatura extrema (370K)', 'Posible gigante gaseoso (12.40 R⊕)', 'Super-Tierra pesada (3337.1 M⊕)']",370.0,12.4,3337.1,23.1
+HAT-P-27 b,HAT-P-27,0,False,['Estrella tipo solar'],"['Temperatura extrema (1092K)', 'Posible gigante gaseoso (11.43 R⊕)', 'Super-Tierra pesada (197.1 M⊕)']",1091.99,11.43,197.05,199.173
+HD 62364 c,HD 62364,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.00 R⊕)', 'Super-Tierra pesada (7923.5 M⊕)']",,12.0,7923.46218651,53.112
+HD 62364 b,HD 62364,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.10 R⊕)', 'Super-Tierra pesada (5965.6 M⊕)']",,12.1,5965.63919939,53.112
+OGLE-2018-BLG-0298L b,OGLE-2018-BLG-0298L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (7.56 R⊕)', 'Super-Tierra pesada (44.5 M⊕)']",,7.56,44.49597698,6540.0
+HD 105618 b,HD 105618,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (5.44 R⊕)', 'Super-Tierra pesada (25.4 M⊕)']",,5.44,25.42627256,70.0837
+HD 16905 b,HD 16905,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.40 R⊕)', 'Super-Tierra pesada (3591.5 M⊕)']",,12.4,3591.4609991,39.7401
+Kepler-1740 b,Kepler-1740,0,False,['Estrella tipo solar'],"['Temperatura extrema (858K)', 'Posible gigante gaseoso (3.32 R⊕)', 'Super-Tierra pesada (11.0 M⊕)']",858.0,3.32321414,11.0,1061.77
+OGLE-2017-BLG-1099L b,OGLE-2017-BLG-1099L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (13.10 R⊕)', 'Super-Tierra pesada (959.8 M⊕)']",,13.1,959.84178914,7250.0
+HU Aqr AB b,HU Aqr,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.80 R⊕)', 'Super-Tierra pesada (1875.2 M⊕)']",,12.8,1875.197,192.19807871
+HD 29985 b,HD 29985,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.80 R⊕)', 'Super-Tierra pesada (1739.5 M⊕)']",,12.8,1739.47487151,31.2707
+HD 11506 d,HD 11506,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.30 R⊕)', 'Super-Tierra pesada (4068.2 M⊕)']",,12.3,4068.2036096,51.261
+HD 72659 c,HD 72659,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.10 R⊕)', 'Super-Tierra pesada (5977.1 M⊕)']",,12.1,5977.08102204,51.8949
+TrES-2 b,TrES-2,0,False,['Estrella tipo solar'],"['Temperatura extrema (1466K)', 'Posible gigante gaseoso (15.24 R⊕)', 'Super-Tierra pesada (473.6 M⊕)']",1466.0,15.24424,473.5667,215.32
+HD 168863 b,HD 168863,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.70 R⊕)', 'Super-Tierra pesada (2154.9 M⊕)']",,12.7,2154.87659946,39.8979
+HAT-P-11 b,HAT-P-11,0,False,['Estrella tipo solar'],"['Temperatura extrema (838K)', 'Posible gigante gaseoso (4.36 R⊕)', 'Super-Tierra pesada (25.0 M⊕)']",838.0,4.36,25.0,37.7647
+HR 8799 d,HR 8799,0,False,[],"['Temperatura extrema (1300K)', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (3000.0 M⊕)', 'Estrella muy caliente (vida corta)']",1300.0,13.0,3000.0,41.2441
+WASP-7 b,WASP-7,0,False,['Estrella tipo solar'],"['Temperatura extrema (1487K)', 'Posible gigante gaseoso (14.91 R⊕)', 'Super-Tierra pesada (305.1 M⊕)']",1487.0,14.90797,305.1168,162.303
+HD 11964 c,HD 11964,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (5.38 R⊕)', 'Super-Tierra pesada (25.0 M⊕)']",,5.38,25.0,33.5369
+FU Tau b,FU Tau,0,False,[],"['Temperatura extrema (2375K)', 'Posible gigante gaseoso (12.20 R⊕)', 'Super-Tierra pesada (5085.3 M⊕)']",2375.0,12.2,5085.28,133.4950466
+HD 240210 b,HD 240210,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.80 R⊕)', 'Super-Tierra pesada (1655.8 M⊕)']",,12.8,1655.82,372.405
+CoRoT-13 b,CoRoT-13,0,False,['Estrella tipo solar'],"['Temperatura extrema (1700K)', 'Posible gigante gaseoso (9.92 R⊕)', 'Super-Tierra pesada (415.7 M⊕)']",1700.0,9.92,415.704,1148.93
+HAT-P-1 b,HAT-P-1,0,False,['Estrella tipo solar'],"['Temperatura extrema (1322K)', 'Posible gigante gaseoso (14.78 R⊕)', 'Super-Tierra pesada (166.9 M⊕)']",1322.0,14.784671,166.86075,158.979
+HD 187123 c,HD 187123,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.20 R⊕)', 'Super-Tierra pesada (912.2 M⊕)']",,13.2,912.16752809,45.9548
+WASP-5 b,WASP-5,0,False,['Estrella tipo solar'],"['Temperatura extrema (1706K)', 'Posible gigante gaseoso (12.18 R⊕)', 'Super-Tierra pesada (502.1 M⊕)']",1706.0,12.184,502.15,309.137
+OGLE-2006-BLG-109L b,OGLE-2006-BLG-109L,0,False,[],"['Temperatura extrema (82K)', 'Posible gigante gaseoso (14.00 R⊕)', 'Super-Tierra pesada (231.0 M⊕)']",82.0,14.0,231.0,1510.0
+HD 179079 b,HD 179079,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (4195.3 M⊕)']",,,4195.3349724,69.7116
+HD 181433 b,HD 181433,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (1708.6 M⊕)']",,,1708.64551603,26.8762
+Lupus-TR-3 b,Lupus-TR-3,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (9.98 R⊕)', 'Super-Tierra pesada (257.4 M⊕)']",,9.976,257.431,773.409
+HD 181433 c,HD 181433,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (2207.0 M⊕)']",,,2207.00045821,26.8762
+HD 181433 d,HD 181433,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.20 R⊕)', 'Super-Tierra pesada (858.1 M⊕)']",,13.2,858.1366989,26.8762
+HD 7924 b,HD 7924,0,False,['Estrella tipo solar'],"['Temperatura extrema (826K)', 'Tamaño desconocido', 'Super-Tierra pesada (2058.3 M⊕)']",825.9,,2058.25676373,16.9922
+USco CTIO 108 b,USco CTIO 108,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (12.30 R⊕)', 'Super-Tierra pesada (4449.6 M⊕)']",,12.3,4449.62,144.019
+HD 183263 c,HD 183263,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.50 R⊕)', 'Super-Tierra pesada (2959.0 M⊕)']",,12.5,2958.98246917,54.1955
+CoRoT-5 b,CoRoT-5,0,False,['Estrella tipo solar'],"['Temperatura extrema (1438K)', 'Posible gigante gaseoso (15.56 R⊕)', 'Super-Tierra pesada (148.4 M⊕)']",1438.0,15.558,148.42,882.472
+CHXR 73 b,CHXR 73,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (12.30 R⊕)', 'Super-Tierra pesada (3994.5 M⊕)', 'Enana roja (posible radiación)']",,12.3,3994.486,190.374
+HD 224693 b,HD 224693,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (14.00 R⊕)', 'Super-Tierra pesada (222.5 M⊕)']",,14.0,222.481,93.5015
+HD 33283 b,HD 33283,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.50 R⊕)', 'Super-Tierra pesada (104.6 M⊕)']",,12.5,104.56607,89.8623
+HAT-P-7 b,HAT-P-7,0,False,['Estrella tipo solar'],"['Temperatura extrema (2733K)', 'Posible gigante gaseoso (16.93 R⊕)', 'Super-Tierra pesada (584.8 M⊕)']",2733.0,16.92559,584.8072,341.079
+CoRoT-3 b,CoRoT-3,0,False,[],"['Temperatura extrema (1695K)', 'Posible gigante gaseoso (11.32 R⊕)', 'Super-Tierra pesada (6883.9 M⊕)']",1695.0,11.32,6883.91,768.771
+HD 24040 b,HD 24040,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.90 R⊕)', 'Super-Tierra pesada (1589.1 M⊕)']",,12.9,1589.142035,46.6224
+HD 16417 b,HD 16417,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (5.00 R⊕)', 'Super-Tierra pesada (22.1 M⊕)']",,5.0,22.1,25.3936
+GJ 832 b,GJ 832,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (13.80 R⊕)', 'Super-Tierra pesada (314.7 M⊕)', 'Enana roja (posible radiación)']",,13.8,314.65012293,4.96435
+HD 45652 b,HD 45652,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (14.30 R⊕)', 'Super-Tierra pesada (137.6 M⊕)']",,14.3,137.62039,34.8541
+HD 47186 c,HD 47186,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (111.4 M⊕)']",,13.0,111.42,37.4574
+HN Peg b,HN Peg,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (11.78 R⊕)', 'Super-Tierra pesada (6991.6 M⊕)']",,11.7768,6991.57,18.1186
+WASP-10 b,WASP-10,0,False,['Estrella tipo solar'],"['Temperatura extrema (1370K)', 'Posible gigante gaseoso (12.11 R⊕)', 'Super-Tierra pesada (1001.1 M⊕)']",1370.0,12.106,1001.12,140.998
+TOI-4201 b,TOI-4201,0,False,[],"['Temperatura extrema (725K)', 'Posible gigante gaseoso (13.67 R⊕)', 'Super-Tierra pesada (788.2 M⊕)', 'Enana roja (posible radiación)']",725.0,13.67495645,788.21444936,189.011
+SWEEPS-11 b,SWEEPS-11,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (12.67 R⊕)', 'Super-Tierra pesada (3082.8 M⊕)']",,12.666,3082.82,8500.0
+V0391 Peg b,V0391 Peg,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (13.10 R⊕)', 'Super-Tierra pesada (1017.1 M⊕)', 'Estrella muy caliente (vida corta)']",,13.1,1017.056,1195.98
+WASP-1 b,WASP-1,0,False,['Estrella tipo solar'],"['Temperatura extrema (1812K)', 'Posible gigante gaseoso (16.62 R⊕)', 'Super-Tierra pesada (271.4 M⊕)']",1812.0,16.623,271.415,393.072
+OGLE-TR-211 b,OGLE-TR-211,0,False,['Estrella tipo solar'],"['Temperatura extrema (1686K)', 'Posible gigante gaseoso (15.24 R⊕)', 'Super-Tierra pesada (327.4 M⊕)']",1686.0,15.244,327.351,1515.26
+TrES-3 b,TrES-3,0,False,['Estrella tipo solar'],"['Temperatura extrema (1638K)', 'Posible gigante gaseoso (14.97 R⊕)', 'Super-Tierra pesada (607.0 M⊕)']",1638.0,14.975,607.03,231.337
+GJ 674 b,GJ 674,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (3.33 R⊕)', 'Super-Tierra pesada (11.1 M⊕)', 'Enana roja (posible radiación)']",,3.33,11.09,4.54896
+HAT-P-4 b,HAT-P-4,0,False,['Estrella tipo solar'],"['Temperatura extrema (1686K)', 'Posible gigante gaseoso (14.28 R⊕)', 'Super-Tierra pesada (213.3 M⊕)']",1686.0,14.28,213.255,320.451
+HD 89839 b,HD 89839,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.90 R⊕)', 'Super-Tierra pesada (1592.3 M⊕)']",,12.9,1592.32031907,57.3063
+HD 108202 b,HD 108202,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.10 R⊕)', 'Super-Tierra pesada (953.5 M⊕)']",,13.1,953.485221,38.6846
+HD 154345 b,HD 154345,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.70 R⊕)', 'Super-Tierra pesada (378.2 M⊕)']",,13.7,378.21580433,18.284
+BD-210397 b,BD-210397,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (14.00 R⊕)', 'Super-Tierra pesada (214.0 M⊕)']",,14.0,214.0,23.7324
+OGLE-2005-BLG-169L b,OGLE-2005-BLG-169L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (3.84 R⊕)', 'Super-Tierra pesada (14.1 M⊕)']",,3.84,14.1,4100.0
+1RXS J160929.1-210524 b,1RXS J160929.1-210524,0,False,['Estrella tipo solar'],"['Temperatura extrema (1700K)', 'Posible gigante gaseoso (18.65 R⊕)', 'Super-Tierra pesada (3000.0 M⊕)']",1700.0,18.647,3000.0,139.135
+HD 40307 b,HD 40307,0,False,['Estrella tipo solar'],"['Temperatura extrema (910K)', 'Tamaño desconocido', 'Super-Tierra pesada (1189.0 M⊕)']",910.0,,1188.99607059,12.9363
+HD 68988 b,HD 68988,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.40 R⊕)', 'Super-Tierra pesada (626.1 M⊕)']",,13.4,626.1251,60.8447
+HD 40307 c,HD 40307,0,False,['Estrella tipo solar'],"['Temperatura extrema (696K)', 'Tamaño desconocido', 'Super-Tierra pesada (1868.5 M⊕)']",696.0,,1868.51320475,12.9363
+HD 47536 b,HD 47536,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.60 R⊕)', 'Super-Tierra pesada (2330.0 M⊕)']",,12.6,2330.0,122.536
+HD 40307 d,HD 40307,0,False,['Estrella tipo solar'],"['Temperatura extrema (541K)', 'Tamaño desconocido', 'Super-Tierra pesada (1775.4 M⊕)']",541.0,,1775.3894815,12.9363
+HD 87883 b,HD 87883,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.70 R⊕)', 'Super-Tierra pesada (2005.5 M⊕)']",,12.7,2005.49724817,18.2912
+DP Leo b,DP Leo,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (12.70 R⊕)', 'Super-Tierra pesada (1995.9 M⊕)', 'Estrella muy caliente (vida corta)']",,12.7,1995.88832,305.684
+WASP-17 b,WASP-17,0,False,[],"['Temperatura extrema (1755K)', 'Posible gigante gaseoso (20.96 R⊕)', 'Super-Tierra pesada (247.9 M⊕)']",1755.0,20.96083,247.9074,405.908
+HD 190984 b,HD 190984,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (1137.8 M⊕)']",,13.0,1137.82569706,148.187
+HD 129445 b,HD 129445,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.30 R⊕)', 'Super-Tierra pesada (797.7 M⊕)']",,13.3,797.74930157,67.4386
+2MASS J04414489+2301513 b,2MASS J04414489+2301513,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (12.60 R⊕)', 'Super-Tierra pesada (2383.6 M⊕)']",,12.6,2383.6,120.42398696
+CoRoT-2 b,CoRoT-2,0,False,['Estrella tipo solar'],"['Temperatura extrema (1521K)', 'Posible gigante gaseoso (16.43 R⊕)', 'Super-Tierra pesada (1102.8 M⊕)']",1521.0,16.432,1102.82,213.283
+HD 168746 b,HD 168746,0,False,['Estrella tipo solar'],"['Temperatura extrema (900K)', 'Posible gigante gaseoso (11.10 R⊕)', 'Super-Tierra pesada (85.8 M⊕)']",900.0,11.1,85.8141,41.5681
+HAT-P-16 b,HAT-P-16,0,False,['Estrella tipo solar'],"['Temperatura extrema (1626K)', 'Posible gigante gaseoso (14.45 R⊕)', 'Super-Tierra pesada (1332.6 M⊕)']",1626.0,14.448,1332.605,226.637
+CoRoT-8 b,CoRoT-8,0,False,['Estrella tipo solar'],"['Temperatura extrema (870K)', 'Posible gigante gaseoso (6.39 R⊕)', 'Super-Tierra pesada (69.9 M⊕)']",870.0,6.39,69.92,322.037
+HD 12661 c,HD 12661,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.20 R⊕)', 'Super-Tierra pesada (899.5 M⊕)']",,13.2,899.45439181,37.8478
+CoRoT-11 b,CoRoT-11,0,False,['Estrella tipo solar'],"['Temperatura extrema (1657K)', 'Posible gigante gaseoso (16.03 R⊕)', 'Super-Tierra pesada (740.5 M⊕)']",1657.0,16.03,740.51,655.037
+CoRoT-12 b,CoRoT-12,0,False,['Estrella tipo solar'],"['Temperatura extrema (1442K)', 'Posible gigante gaseoso (16.14 R⊕)', 'Super-Tierra pesada (291.4 M⊕)']",1442.0,16.14,291.438,1126.37
+CoRoT-14 b,CoRoT-14,0,False,['Estrella tipo solar'],"['Temperatura extrema (1952K)', 'Posible gigante gaseoso (12.22 R⊕)', 'Super-Tierra pesada (2415.4 M⊕)']",1952.0,12.22,2415.4,1744.6
+HAT-P-22 b,HAT-P-22,0,False,['Estrella tipo solar'],"['Temperatura extrema (1463K)', 'Posible gigante gaseoso (12.89 R⊕)', 'Super-Tierra pesada (785.0 M⊕)']",1463.0,12.89035,785.0401,81.7647
+GJ 876 e,GJ 876,0,False,['Órbita estable (124 días)'],"['Temperatura desconocida', 'Posible gigante gaseoso (3.92 R⊕)', 'Super-Tierra pesada (14.6 M⊕)', 'Enana roja (posible radiación)']",,3.92,14.6,4.67517
+HD 8535 b,HD 8535,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (14.00 R⊕)', 'Super-Tierra pesada (216.1 M⊕)']",,14.0,216.1244,55.4401
+HD 141937 b,HD 141937,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (11.90 R⊕)', 'Super-Tierra pesada (8714.9 M⊕)']",,11.9,8714.85491994,33.3622
+HAT-P-18 b,HAT-P-18,0,False,['Estrella tipo solar'],"['Temperatura extrema (852K)', 'Posible gigante gaseoso (11.15 R⊕)', 'Super-Tierra pesada (62.6 M⊕)']",852.0,11.153,62.61,161.4
+WASP-21 b,WASP-21,0,False,['Estrella tipo solar'],"['Temperatura extrema (1340K)', 'Posible gigante gaseoso (11.99 R⊕)', 'Super-Tierra pesada (95.3 M⊕)']",1340.0,11.99,95.345,258.426
+HR 8799 c,HR 8799,0,False,[],"['Temperatura extrema (1200K)', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (3000.0 M⊕)', 'Estrella muy caliente (vida corta)']",1200.0,13.0,3000.0,41.2441
+BD-210397 c,BD-210397,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.90 R⊕)', 'Super-Tierra pesada (1525.6 M⊕)']",,12.9,1525.5763536,23.7324
+47 UMa d,47 UMa,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.50 R⊕)', 'Super-Tierra pesada (521.2 M⊕)']",,13.5,521.22,13.7967
+MOA-2008-BLG-310L b,MOA-2008-BLG-310L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (5.18 R⊕)', 'Super-Tierra pesada (23.4 M⊕)']",,5.18,23.4,7700.0
+CoRoT-6 b,CoRoT-6,0,False,['Estrella tipo solar'],"['Temperatura extrema (1017K)', 'Posible gigante gaseoso (13.07 R⊕)', 'Super-Tierra pesada (940.7 M⊕)']",1017.0,13.068,940.74,645.294
+HAT-P-2 b,HAT-P-2,0,False,['Estrella tipo solar'],"['Temperatura extrema (1540K)', 'Posible gigante gaseoso (10.66 R⊕)', 'Super-Tierra pesada (2866.8 M⊕)']",1540.0,10.659759,2866.81223114,127.774
+GJ 179 b,GJ 179,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (13.80 R⊕)', 'Super-Tierra pesada (301.9 M⊕)', 'Enana roja (posible radiación)']",,13.8,301.93698665,12.356
+Kepler-4 b,Kepler-4,0,False,['Estrella tipo solar'],"['Temperatura extrema (1650K)', 'Posible gigante gaseoso (4.00 R⊕)', 'Super-Tierra pesada (24.5 M⊕)']",1650.0,4.002,24.472,487.916
+HD 9446 b,HD 9446,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (14.00 R⊕)', 'Super-Tierra pesada (222.5 M⊕)']",,14.0,222.472,50.3503
+61 Vir c,61 Vir,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (4.46 R⊕)', 'Super-Tierra pesada (18.2 M⊕)']",,4.46,18.2,8.50332
+HD 134987 c,HD 134987,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.90 R⊕)', 'Super-Tierra pesada (260.0 M⊕)']",,13.9,260.0,26.1804
+HD 70573 b,HD 70573,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.80 R⊕)', 'Super-Tierra pesada (1900.0 M⊕)']",,12.8,1900.0,59.182
+HD 215497 c,HD 215497,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (111.2 M⊕)']",,13.0,111.23994245,40.5468
+HIP 79431 b,HIP 79431,0,False,['Órbita estable (112 días)'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.40 R⊕)', 'Super-Tierra pesada (667.4 M⊕)', 'Enana roja (posible radiación)']",,13.4,667.415,14.5324
+HD 148156 b,HD 148156,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.90 R⊕)', 'Super-Tierra pesada (270.1 M⊕)']",,13.9,270.144,57.1289
+2MASS J12073346-3932539 b,2MASS J12073346-3932539,0,False,[],"['Temperatura extrema (1250K)', 'Posible gigante gaseoso (12.90 R⊕)', 'Super-Tierra pesada (1589.2 M⊕)']",1250.0,12.9,1589.15,64.308
+HAT-P-12 b,HAT-P-12,0,False,['Estrella tipo solar'],"['Temperatura extrema (963K)', 'Posible gigante gaseoso (10.75 R⊕)', 'Super-Tierra pesada (67.1 M⊕)']",963.0,10.749,67.059,142.751
+HD 156411 b,HD 156411,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (14.00 R⊕)', 'Super-Tierra pesada (235.2 M⊕)']",,14.0,235.18,56.8655
+47 UMa c,47 UMa,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (14.20 R⊕)', 'Super-Tierra pesada (171.6 M⊕)']",,14.2,171.621,13.7967
+WASP-19 b,WASP-19,0,False,['Estrella tipo solar'],"['Temperatura extrema (2113K)', 'Posible gigante gaseoso (15.86 R⊕)', 'Super-Tierra pesada (366.8 M⊕)']",2113.0,15.86070769,366.77398168,268.325
+HD 90156 b,HD 90156,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (4.43 R⊕)', 'Super-Tierra pesada (18.0 M⊕)']",,4.43,17.98,21.9496
+Kepler-5 b,Kepler-5,0,False,['Estrella tipo solar'],"['Temperatura extrema (1750K)', 'Posible gigante gaseoso (15.98 R⊕)', 'Super-Tierra pesada (670.9 M⊕)']",1750.0,15.984034,670.93913,899.777
+BD-08 2823 b,BD-08 2823,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (2948.5 M⊕)']",,,2948.49413174,41.3342
+HD 125595 b,HD 125595,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (3531.1 M⊕)']",,,3531.07360177,28.1989
+HD 215497 b,HD 215497,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (1588.8 M⊕)']",,,1588.82420659,40.5468
+HD 110014 b,HD 110014,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.40 R⊕)', 'Super-Tierra pesada (3524.6 M⊕)']",,12.4,3524.59,100.758
+Kepler-428 b,Kepler-428,0,False,['Estrella tipo solar'],"['Temperatura extrema (1070K)', 'Posible gigante gaseoso (12.11 R⊕)', 'Super-Tierra pesada (403.6 M⊕)']",1070.0,12.11,403.63,686.284
+Kepler-245 d,Kepler-245,0,False,['Estrella tipo solar'],"['Temperatura extrema (445K)', 'Posible gigante gaseoso (3.03 R⊕)', 'Super-Tierra pesada (21.6 M⊕)']",445.0,3.03,21.6,861.527
+Kepler-254 b,Kepler-254,0,False,['Estrella tipo solar'],"['Temperatura extrema (1013K)', 'Posible gigante gaseoso (3.87 R⊕)', 'Super-Tierra pesada (14.3 M⊕)']",1013.0,3.87,14.3,1389.48
+Kepler-257 c,Kepler-257,0,False,['Estrella tipo solar'],"['Temperatura extrema (881K)', 'Posible gigante gaseoso (5.41 R⊕)', 'Super-Tierra pesada (25.2 M⊕)']",881.0,5.41,25.2,780.256
+WASP-83 b,WASP-83,0,False,['Estrella tipo solar'],"['Temperatura extrema (1120K)', 'Posible gigante gaseoso (11.66 R⊕)', 'Super-Tierra pesada (95.3 M⊕)']",1120.0,11.65736,95.349,271.103
+KIC 3558849 b,KIC 3558849,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (6.90 R⊕)', 'Super-Tierra pesada (38.1 M⊕)']",,6.9,38.1,1215.7
+Kepler-447 b,Kepler-447,0,False,['Estrella tipo solar'],"['Temperatura extrema (882K)', 'Posible gigante gaseoso (18.49 R⊕)', 'Super-Tierra pesada (435.4 M⊕)']",882.0,18.49,435.41,268.041
+WASP-89 b,WASP-89,0,False,['Estrella tipo solar'],"['Temperatura extrema (1120K)', 'Posible gigante gaseoso (11.66 R⊕)', 'Super-Tierra pesada (1875.2 M⊕)']",1120.0,11.65736,1875.197,290.946
+KIC 8540376 b,KOI-7892,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (4.10 R⊕)', 'Super-Tierra pesada (15.8 M⊕)']",,4.1,15.8,1072.3
+WASP-20 b,WASP-20,0,False,['Estrella tipo solar'],"['Temperatura extrema (1379K)', 'Posible gigante gaseoso (16.39 R⊕)', 'Super-Tierra pesada (98.8 M⊕)']",1379.0,16.388,98.841,211.877
+K2-14 b,K2-14,0,False,[],"['Temperatura extrema (488K)', 'Posible gigante gaseoso (4.81 R⊕)', 'Super-Tierra pesada (20.7 M⊕)', 'Enana roja (posible radiación)']",488.0,4.81,20.7,364.048
+KIC 10525077 b,KIC 10525077,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (5.50 R⊕)', 'Super-Tierra pesada (25.9 M⊕)']",,5.5,25.9,1461.15
+Kepler-253 d,Kepler-253,0,False,['Estrella tipo solar'],"['Temperatura extrema (563K)', 'Posible gigante gaseoso (3.17 R⊕)', 'Super-Tierra pesada (10.2 M⊕)']",563.0,3.17,10.2,838.595
+OGLE-2005-BLG-071L b,OGLE-2005-BLG-071L,0,False,[],"['Temperatura extrema (55K)', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (1200.0 M⊕)']",55.0,13.0,1200.0,3200.0
+Kepler-425 b,Kepler-425,0,False,['Estrella tipo solar'],"['Temperatura extrema (1070K)', 'Posible gigante gaseoso (10.96 R⊕)', 'Super-Tierra pesada (79.5 M⊕)']",1070.0,10.962,79.45,646.647
+Kepler-93 c,Kepler-93,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (954.0 M⊕)']",,,954.0,95.9115
+Kepler-188 c,Kepler-188,0,False,['Estrella tipo solar'],"['Temperatura extrema (1025K)', 'Posible gigante gaseoso (3.19 R⊕)', 'Super-Tierra pesada (10.3 M⊕)']",1025.0,3.19,10.3,968.544
+Kepler-421 b,Kepler-421,0,False,['Estrella tipo solar'],"['Temperatura extrema (185K)', 'Posible gigante gaseoso (4.16 R⊕)', 'Super-Tierra pesada (16.1 M⊕)']",185.0,4.16,16.1,348.558
+WASP-104 b,WASP-104,0,False,['Estrella tipo solar'],"['Temperatura extrema (1516K)', 'Posible gigante gaseoso (12.74 R⊕)', 'Super-Tierra pesada (404.3 M⊕)']",1516.0,12.745,404.263,185.932
+HATS-13 b,HATS-13,0,False,['Estrella tipo solar'],"['Temperatura extrema (1244K)', 'Posible gigante gaseoso (13.59 R⊕)', 'Super-Tierra pesada (172.6 M⊕)']",1244.0,13.585308,172.58169,421.855
+HD 33844 c,HD 33844,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.50 R⊕)', 'Super-Tierra pesada (556.2 M⊕)']",,13.5,556.2025,105.779
+HD 32963 b,HD 32963,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.40 R⊕)', 'Super-Tierra pesada (657.9 M⊕)']",,13.4,657.90480249,38.0786
+OGLE-2012-BLG-0563L b,OGLE-2012-BLG-0563L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (13.60 R⊕)', 'Super-Tierra pesada (120.0 M⊕)']",,13.6,120.0,1300.0
+HATS-14 b,HATS-14,0,False,['Estrella tipo solar'],"['Temperatura extrema (1276K)', 'Posible gigante gaseoso (11.65 R⊕)', 'Super-Tierra pesada (340.4 M⊕)']",1276.0,11.646151,340.39593,513.011
+KELT-6 c,KELT-6,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (1179.1 M⊕)']",,13.0,1179.1493,240.726
+HAT-P-54 b,HAT-P-54,0,False,['Estrella tipo solar'],"['Temperatura extrema (818K)', 'Posible gigante gaseoso (10.58 R⊕)', 'Super-Tierra pesada (241.6 M⊕)']",818.0,10.581296,241.5508,143.651
+CoRoT-28 b,CoRoT-28,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (10.70 R⊕)', 'Super-Tierra pesada (153.8 M⊕)']",,10.704595,153.82972,766.183
+WASP-70 A b,WASP-70 A,0,False,['Estrella tipo solar'],"['Temperatura extrema (1387K)', 'Posible gigante gaseoso (13.05 R⊕)', 'Super-Tierra pesada (187.5 M⊕)']",1387.0,13.047,187.512,222.355
+Kepler-698 b,Kepler-698,0,False,['Estrella tipo solar'],"['Temperatura extrema (727K)', 'Posible gigante gaseoso (3.68 R⊕)', 'Super-Tierra pesada (13.1 M⊕)']",727.0,3.68,13.1,1995.57
+Kepler-207 d,Kepler-207,0,False,['Estrella tipo solar'],"['Temperatura extrema (1254K)', 'Posible gigante gaseoso (3.31 R⊕)', 'Super-Tierra pesada (11.0 M⊕)']",1254.0,3.31,11.0,875.519
+Kepler-245 b,Kepler-245,0,False,['Estrella tipo solar'],"['Temperatura extrema (753K)', 'Posible gigante gaseoso (2.57 R⊕)', 'Super-Tierra pesada (146.8 M⊕)']",753.0,2.57,146.78,861.527
+WASP-103 b,WASP-103,0,False,['Estrella tipo solar'],"['Temperatura extrema (2508K)', 'Posible gigante gaseoso (17.13 R⊕)', 'Super-Tierra pesada (473.5 M⊕)']",2508.0,17.127,473.547,375.647
+Kepler-226 c,Kepler-226,0,False,['Estrella tipo solar'],"['Temperatura extrema (919K)', 'Posible gigante gaseoso (2.27 R⊕)', 'Super-Tierra pesada (45.2 M⊕)']",919.0,2.27,45.2,980.138
+Kepler-113 b,Kepler-113,0,False,['Estrella tipo solar'],"['Temperatura extrema (775K)', 'Posible gigante gaseoso (1.82 R⊕)', 'Super-Tierra pesada (11.7 M⊕)']",775.0,1.82,11.7,262.351
+KELT-15 b,KELT-15,0,False,['Estrella tipo solar'],"['Temperatura extrema (1642K)', 'Posible gigante gaseoso (19.50 R⊕)', 'Super-Tierra pesada (416.4 M⊕)']",1642.0,19.50366,416.3573,324.683
+Kepler-682 b,Kepler-682,0,False,['Estrella tipo solar'],"['Temperatura extrema (753K)', 'Posible gigante gaseoso (7.37 R⊕)', 'Super-Tierra pesada (42.6 M⊕)']",753.0,7.37,42.6,1979.25
+Kepler-472 b,Kepler-472,0,False,['Estrella tipo solar'],"['Temperatura extrema (876K)', 'Posible gigante gaseoso (3.22 R⊕)', 'Super-Tierra pesada (10.5 M⊕)']",876.0,3.22,10.5,306.602
+WASP-138 b,WASP-138,0,False,['Estrella tipo solar'],"['Temperatura extrema (1590K)', 'Posible gigante gaseoso (12.22 R⊕)', 'Super-Tierra pesada (387.8 M⊕)']",1590.0,12.21781,387.7526,414.234
+Kepler-595 b,Kepler-595,0,False,['Estrella tipo solar'],"['Temperatura extrema (535K)', 'Posible gigante gaseoso (3.71 R⊕)', 'Super-Tierra pesada (17.4 M⊕)']",535.0,3.708,17.4,643.009
+Kepler-871 b,Kepler-871,0,False,['Estrella tipo solar'],"['Temperatura extrema (640K)', 'Posible gigante gaseoso (3.74 R⊕)', 'Super-Tierra pesada (13.5 M⊕)']",640.0,3.74,13.5,1976.05
+Kepler-696 b,Kepler-696,0,False,['Estrella tipo solar'],"['Temperatura extrema (1234K)', 'Posible gigante gaseoso (6.14 R⊕)', 'Super-Tierra pesada (31.3 M⊕)']",1234.0,6.14,31.3,1416.44
+Kepler-427 b,Kepler-427,0,False,['Estrella tipo solar'],"['Temperatura extrema (1100K)', 'Posible gigante gaseoso (13.79 R⊕)', 'Super-Tierra pesada (92.2 M⊕)']",1100.0,13.79,92.17,1017.8
+Kepler-94 c,Kepler-94,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.50 R⊕)', 'Super-Tierra pesada (3126.0 M⊕)']",,12.5,3126.0,191.904
+Kepler-424 b,Kepler-424,0,False,['Estrella tipo solar'],"['Temperatura extrema (1116K)', 'Posible gigante gaseoso (9.98 R⊕)', 'Super-Tierra pesada (327.4 M⊕)']",1116.0,9.98,327.35,698.646
+Kepler-426 b,Kepler-426,0,False,['Estrella tipo solar'],"['Temperatura extrema (1300K)', 'Posible gigante gaseoso (12.22 R⊕)', 'Super-Tierra pesada (108.1 M⊕)']",1300.0,12.22,108.06,843.695
+Kepler-720 b,Kepler-720,0,False,['Estrella tipo solar'],"['Temperatura extrema (1162K)', 'Posible gigante gaseoso (8.41 R⊕)', 'Super-Tierra pesada (53.4 M⊕)']",1162.0,8.41,53.4,1065.37
+Kepler-620 b,Kepler-620,0,False,['Estrella tipo solar'],"['Temperatura extrema (849K)', 'Posible gigante gaseoso (3.32 R⊕)', 'Super-Tierra pesada (11.0 M⊕)']",849.0,3.32,11.0,1355.28
+HD 95872 b,HD 95872,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (1188.7 M⊕)']",,13.0,1188.6842,72.2195
+K2-10 b,K2-10,0,False,['Estrella tipo solar'],"['Temperatura extrema (649K)', 'Posible gigante gaseoso (3.77 R⊕)', 'Super-Tierra pesada (25.2 M⊕)']",649.0,3.773,25.2,272.36
+K2-25 b,K2-25,0,False,[],"['Temperatura extrema (494K)', 'Posible gigante gaseoso (3.44 R⊕)', 'Super-Tierra pesada (24.5 M⊕)', 'Enana roja (posible radiación)']",494.0,3.44,24.5,44.9565
+HD 1605 c,HD 1605,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (1150.5 M⊕)']",,13.0,1150.5446,88.8047
+51 Eri b,51 Eri,0,False,[],"['Temperatura extrema (700K)', 'Tamaño desconocido', 'Super-Tierra pesada (3464.3 M⊕)', 'Estrella muy caliente (vida corta)']",700.0,,3464.3296363,29.7575
+KELT-7 b,KELT-7,0,False,[],"['Temperatura extrema (2048K)', 'Posible gigante gaseoso (17.93 R⊕)', 'Super-Tierra pesada (441.8 M⊕)']",2048.0,17.9344,441.7837,136.681
+Kepler-97 c,Kepler-97,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (344.0 M⊕)']",,,344.0,400.907
+Kepler-407 c,Kepler-407,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.30 R⊕)', 'Super-Tierra pesada (4000.0 M⊕)']",,12.3,4000.0,338.368
+Kepler-677 b,Kepler-677,0,False,['Estrella tipo solar'],"['Temperatura extrema (1015K)', 'Posible gigante gaseoso (5.38 R⊕)', 'Super-Tierra pesada (25.0 M⊕)']",1015.0,5.38,25.0,1954.08
+Kepler-264 b,Kepler-264,0,False,['Estrella tipo solar'],"['Temperatura extrema (772K)', 'Posible gigante gaseoso (3.33 R⊕)', 'Super-Tierra pesada (11.1 M⊕)']",772.0,3.33,11.1,942.173
+Kepler-279 b,Kepler-279,0,False,['Estrella tipo solar'],"['Temperatura extrema (1104K)', 'Posible gigante gaseoso (3.62 R⊕)', 'Super-Tierra pesada (4180.9 M⊕)']",1104.0,3.62,4180.93,1037.4
+Kepler-148 c,Kepler-148,0,False,['Estrella tipo solar'],"['Temperatura extrema (957K)', 'Posible gigante gaseoso (3.60 R⊕)', 'Super-Tierra pesada (12.6 M⊕)']",957.0,3.6,12.6,791.163
+Kepler-414 c,Kepler-414,0,False,['Estrella tipo solar'],"['Temperatura extrema (890K)', 'Posible gigante gaseoso (3.01 R⊕)', 'Super-Tierra pesada (29.9 M⊕)']",890.0,3.01,29.9,413.46
+HD 168443 c,HD 168443,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.20 R⊕)', 'Super-Tierra pesada (5500.3 M⊕)']",,12.2,5500.33841154,39.6245
+HD 46375 b,HD 46375,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (10.00 R⊕)', 'Super-Tierra pesada (71.8 M⊕)']",,10.0,71.8,29.5529
+ups And d,ups And,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.50 R⊕)', 'Super-Tierra pesada (3257.7 M⊕)']",,12.5,3257.74117175,13.4054
+Kepler-58 d,Kepler-58,0,False,['Estrella tipo solar'],"['Temperatura extrema (583K)', 'Posible gigante gaseoso (2.94 R⊕)', 'Super-Tierra pesada (245.3 M⊕)']",583.0,2.94,245.343,969.252
+Kepler-350 b,Kepler-350,0,False,['Estrella tipo solar'],"['Temperatura extrema (1037K)', 'Posible gigante gaseoso (1.85 R⊕)', 'Super-Tierra pesada (16.9 M⊕)']",1037.0,1.85,16.9,956.859
+Kepler-146 b,Kepler-146,0,False,['Estrella tipo solar'],"['Temperatura extrema (639K)', 'Posible gigante gaseoso (3.71 R⊕)', 'Super-Tierra pesada (13.3 M⊕)']",639.0,3.71,13.3,716.797
+Kepler-238 c,Kepler-238,0,False,['Estrella tipo solar'],"['Temperatura extrema (1146K)', 'Posible gigante gaseoso (2.39 R⊕)', 'Super-Tierra pesada (152.5 M⊕)']",1146.0,2.39,152.522,1798.75
+Kepler-281 b,Kepler-281,0,False,['Estrella tipo solar'],"['Temperatura extrema (694K)', 'Posible gigante gaseoso (2.82 R⊕)', 'Super-Tierra pesada (324.0 M⊕)']",694.0,2.82,324.0,1745.45
+Kepler-349 b,Kepler-349,0,False,['Estrella tipo solar'],"['Temperatura extrema (972K)', 'Posible gigante gaseoso (1.90 R⊕)', 'Super-Tierra pesada (94.5 M⊕)']",972.0,1.9,94.5,940.724
+Kepler-435 b,Kepler-435,0,False,['Estrella tipo solar'],"['Temperatura extrema (1729K)', 'Posible gigante gaseoso (22.31 R⊕)', 'Super-Tierra pesada (267.0 M⊕)']",1729.0,22.31,266.97,1418.77
+Kepler-338 b,Kepler-338,0,False,['Estrella tipo solar'],"['Temperatura extrema (1005K)', 'Posible gigante gaseoso (2.44 R⊕)', 'Super-Tierra pesada (30.6 M⊕)']",1005.0,2.44,30.6,552.798
+HD 143811 AB b,HD 143811 A,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (15.69 R⊕)', 'Super-Tierra pesada (1938.8 M⊕)']",,15.69257298,1938.7532827,136.608
+HD 45350 b,HD 45350,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.50 R⊕)', 'Super-Tierra pesada (568.9 M⊕)']",,13.5,568.89,46.8733
+OGLE-TR-113 b,OGLE-TR-113,0,False,['Estrella tipo solar'],"['Temperatura extrema (1342K)', 'Posible gigante gaseoso (12.25 R⊕)', 'Super-Tierra pesada (400.4 M⊕)']",1342.0,12.251,400.449,566.459
+HD 147513 b,HD 147513,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.70 R⊕)', 'Super-Tierra pesada (385.0 M⊕)']",,13.7,385.0,12.9032
+HD 217107 b,HD 217107,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.60 R⊕)', 'Super-Tierra pesada (413.2 M⊕)']",,13.6,413.179,20.0619
+HD 187123 b,HD 187123,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (14.20 R⊕)', 'Super-Tierra pesada (166.2 M⊕)']",,14.2,166.218,45.9548
+GJ 876 b,GJ 876,0,False,['Órbita estable (61 días)'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.30 R⊕)', 'Super-Tierra pesada (723.2 M⊕)', 'Enana roja (posible radiación)']",,13.3,723.2235,4.67517
+47 UMa b,47 UMa,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.20 R⊕)', 'Super-Tierra pesada (804.1 M⊕)']",,13.2,804.08,13.7967
+PSR B1257+12 b,PSR B1257+12,0,False,[],"['Temperatura desconocida', 'Muy pequeño (0.34 R⊕)']",,0.338,0.02,600.0
+TOI-2719 b,TOI-2719,0,False,['Estrella tipo solar'],"['Temperatura extrema (1710K)', 'Posible gigante gaseoso (5.98 R⊕)', 'Super-Tierra pesada (29.9 M⊕)']",1710.0,5.98,29.9,588.368
+GQ Lup b,GQ Lup,0,False,['Estrella tipo solar'],"['Temperatura extrema (2650K)', 'Posible gigante gaseoso (33.60 R⊕)', 'Super-Tierra pesada (6356.0 M⊕)']",2650.0,33.6,6356.0,151.169
+HD 69830 c,HD 69830,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (3.46 R⊕)', 'Super-Tierra pesada (11.8 M⊕)']",,3.46,11.8,12.5591
+Kepler-244 d,Kepler-244,0,False,['Estrella tipo solar'],"['Temperatura extrema (622K)', 'Posible gigante gaseoso (2.31 R⊕)', 'Super-Tierra pesada (15.2 M⊕)']",622.0,2.31,15.2,1036.49
+Kepler-434 b,Kepler-434,0,False,['Estrella tipo solar'],"['Temperatura extrema (1000K)', 'Posible gigante gaseoso (12.67 R⊕)', 'Super-Tierra pesada (909.0 M⊕)']",1000.0,12.67,908.96,1222.54
+Kepler-433 b,Kepler-433,0,False,['Estrella tipo solar'],"['Temperatura extrema (1776K)', 'Posible gigante gaseoso (16.25 R⊕)', 'Super-Tierra pesada (896.2 M⊕)']",1776.0,16.25,896.24,1878.31
+HATS-8 b,HATS-8,0,False,['Estrella tipo solar'],"['Temperatura extrema (1324K)', 'Posible gigante gaseoso (9.79 R⊕)', 'Super-Tierra pesada (43.9 M⊕)']",1324.0,9.785457,43.86054,794.637
+HD 219134 h,HD 219134,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.70 R⊕)', 'Super-Tierra pesada (108.1 M⊕)']",,12.7,108.0622,6.53127
+WASP-82 b,WASP-82,0,False,['Estrella tipo solar'],"['Temperatura extrema (2190K)', 'Posible gigante gaseoso (18.16 R⊕)', 'Super-Tierra pesada (371.9 M⊕)']",2190.0,18.15858,371.8611,275.664
+Kepler-122 c,Kepler-122,0,False,['Estrella tipo solar'],"['Temperatura extrema (897K)', 'Posible gigante gaseoso (5.87 R⊕)', 'Super-Tierra pesada (29.0 M⊕)']",897.0,5.87,29.0,1027.45
+Kepler-234 c,Kepler-234,0,False,['Estrella tipo solar'],"['Temperatura extrema (1025K)', 'Posible gigante gaseoso (3.51 R⊕)', 'Super-Tierra pesada (12.1 M⊕)']",1025.0,3.51,12.1,1733.1
+2MASS J02192210-3925225 b,2MASS J02192210-3925225,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (16.14 R⊕)', 'Super-Tierra pesada (4417.8 M⊕)', 'Enana roja (posible radiación)']",,16.14096,4417.837,40.08964117
+HATS-6 b,HATS-6,0,False,[],"['Temperatura extrema (713K)', 'Posible gigante gaseoso (11.19 R⊕)', 'Super-Tierra pesada (101.4 M⊕)', 'Enana roja (posible radiación)']",712.8,11.186582,101.38777,169.318
+Kepler-450 c,Kepler-450,0,False,['Estrella tipo solar'],"['Temperatura extrema (944K)', 'Posible gigante gaseoso (2.62 R⊕)', 'Super-Tierra pesada (12.5 M⊕)']",944.0,2.62,12.5,455.982
+HAT-P-50 b,HAT-P-50,0,False,['Estrella tipo solar'],"['Temperatura extrema (1862K)', 'Posible gigante gaseoso (14.44 R⊕)', 'Super-Tierra pesada (429.1 M⊕)']",1862.0,14.437192,429.0705,515.458
+OGLE-2008-BLG-355L b,OGLE-2008-BLG-355L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (12.90 R⊕)', 'Super-Tierra pesada (1500.0 M⊕)']",,12.9,1500.0,6800.0
+Kepler-297 b,Kepler-297,0,False,['Estrella tipo solar'],"['Temperatura extrema (509K)', 'Posible gigante gaseoso (2.87 R⊕)', 'Super-Tierra pesada (48.5 M⊕)']",509.0,2.87,48.5,692.14
+Kepler-108 b,Kepler-108,0,False,['Estrella tipo solar'],"['Temperatura extrema (669K)', 'Posible gigante gaseoso (8.65 R⊕)', 'Super-Tierra pesada (56.0 M⊕)']",669.0,8.65,56.0,338.732
+Kepler-405 c,Kepler-405,0,False,['Estrella tipo solar'],"['Temperatura extrema (557K)', 'Posible gigante gaseoso (4.66 R⊕)', 'Super-Tierra pesada (19.6 M⊕)']",557.0,4.66,19.6,1065.08
+Kepler-258 c,Kepler-258,0,False,['Estrella tipo solar'],"['Temperatura extrema (470K)', 'Posible gigante gaseoso (3.61 R⊕)', 'Super-Tierra pesada (12.7 M⊕)']",470.0,3.61,12.7,575.988
+WASP-96 b,WASP-96,0,False,['Estrella tipo solar'],"['Temperatura extrema (1285K)', 'Posible gigante gaseoso (13.45 R⊕)', 'Super-Tierra pesada (152.6 M⊕)']",1285.0,13.45,152.55,352.464
+Kepler-419 c,Kepler-419,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.60 R⊕)', 'Super-Tierra pesada (2320.1 M⊕)']",,12.6,2320.1,1011.36
+HD 154857 c,HD 154857,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.20 R⊕)', 'Super-Tierra pesada (820.0 M⊕)']",,13.2,819.97,63.4482
+GU Psc b,GU Psc,0,False,['Estrella tipo solar'],"['Temperatura extrema (1050K)', 'Posible gigante gaseoso (14.18 R⊕)', 'Super-Tierra pesada (3591.3 M⊕)']",1050.0,14.179,3591.3,47.5501
+HAT-P-44 b,HAT-P-44,0,False,['Estrella tipo solar'],"['Temperatura extrema (1108K)', 'Posible gigante gaseoso (13.92 R⊕)', 'Super-Tierra pesada (111.9 M⊕)']",1108.0,13.922,111.871,347.85
+HAT-P-44 c,HAT-P-44,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (1271.3 M⊕)']",,13.0,1271.3,347.85
+HATS-5 b,HATS-5,0,False,['Estrella tipo solar'],"['Temperatura extrema (1025K)', 'Posible gigante gaseoso (10.22 R⊕)', 'Super-Tierra pesada (75.3 M⊕)']",1025.0,10.223,75.323,246.384
+Kepler-317 b,Kepler-317,0,False,['Estrella tipo solar'],"['Temperatura extrema (976K)', 'Posible gigante gaseoso (2.09 R⊕)', 'Super-Tierra pesada (109.8 M⊕)']",976.0,2.09,109.8,940.584
+Kepler-312 c,Kepler-312,0,False,['Estrella tipo solar'],"['Temperatura extrema (754K)', 'Posible gigante gaseoso (3.15 R⊕)', 'Super-Tierra pesada (10.1 M⊕)']",754.0,3.15,10.1,797.72
+Kepler-368 b,Kepler-368,0,False,['Estrella tipo solar'],"['Temperatura extrema (800K)', 'Posible gigante gaseoso (3.26 R⊕)', 'Super-Tierra pesada (10.7 M⊕)']",800.0,3.26,10.7,770.978
+Kepler-119 b,Kepler-119,0,False,['Estrella tipo solar'],"['Temperatura extrema (1213K)', 'Posible gigante gaseoso (3.60 R⊕)', 'Super-Tierra pesada (12.6 M⊕)']",1213.0,3.6,12.6,701.996
+Kepler-222 c,Kepler-222,0,False,['Estrella tipo solar'],"['Temperatura extrema (734K)', 'Posible gigante gaseoso (4.64 R⊕)', 'Super-Tierra pesada (19.4 M⊕)']",734.0,4.64,19.4,758.854
+Kepler-287 c,Kepler-287,0,False,['Estrella tipo solar'],"['Temperatura extrema (513K)', 'Posible gigante gaseoso (3.26 R⊕)', 'Super-Tierra pesada (66.0 M⊕)']",513.0,3.26,66.0,835.86
+OGLE-2017-BLG-0406L b,OGLE-2017-BLG-0406L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (14.20 R⊕)', 'Super-Tierra pesada (130.0 M⊕)']",,14.2,130.0,5200.0
+HIP 38594 c,HIP 38594,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (7.94 R⊕)', 'Super-Tierra pesada (48.4 M⊕)']",,7.94,48.4,17.7886
+HIP 65 A b,HIP 65 A,0,False,['Estrella tipo solar'],"['Temperatura extrema (1411K)', 'Posible gigante gaseoso (22.75 R⊕)', 'Super-Tierra pesada (1021.2 M⊕)']",1411.0,22.75427,1021.18779,61.7856
+HD 221416 b,HD 221416,0,False,['Estrella tipo solar'],"['Temperatura extrema (789K)', 'Posible gigante gaseoso (9.17 R⊕)', 'Super-Tierra pesada (60.5 M⊕)']",789.15,9.17,60.5,95.5483
+Kepler-79 b,Kepler-79,0,False,['Estrella tipo solar'],"['Temperatura extrema (929K)', 'Posible gigante gaseoso (3.47 R⊕)', 'Super-Tierra pesada (10.9 M⊕)']",929.0,3.47,10.9,1020.72
+HAT-P-39 b,HAT-P-39,0,False,['Estrella tipo solar'],"['Temperatura extrema (1752K)', 'Posible gigante gaseoso (17.61 R⊕)', 'Super-Tierra pesada (190.4 M⊕)']",1752.0,17.609,190.372,697.004
+Kepler-46 b,Kepler-46,0,False,['Estrella tipo solar'],"['Temperatura extrema (543K)', 'Posible gigante gaseoso (9.06 R⊕)', 'Super-Tierra pesada (1907.0 M⊕)']",543.0,9.057,1907.0,777.06
+Kepler-52 b,Kepler-52,0,False,['Estrella tipo solar'],"['Temperatura extrema (553K)', 'Posible gigante gaseoso (2.10 R⊕)', 'Super-Tierra pesada (135.0 M⊕)']",553.0,2.1,135.0,321.542
+Kepler-58 b,Kepler-58,0,False,['Estrella tipo solar'],"['Temperatura extrema (920K)', 'Posible gigante gaseoso (2.78 R⊕)', 'Super-Tierra pesada (35.5 M⊕)']",920.0,2.78,35.5,969.252
+2MASS J01225093-2439505 b,2MASS J01225093-2439505,0,False,[],"['Temperatura extrema (1600K)', 'Posible gigante gaseoso (11.21 R⊕)', 'Super-Tierra pesada (7786.5 M⊕)', 'Enana roja (posible radiación)']",1600.0,11.209,7786.5,33.8281
+Kepler-63 b,Kepler-63,0,False,['Estrella tipo solar'],"['Temperatura extrema (791K)', 'Posible gigante gaseoso (6.11 R⊕)', 'Super-Tierra pesada (120.0 M⊕)']",791.0,6.11,120.0,194.033
+ROXs 42 B b,ROXs 42 B,0,False,[],"['Temperatura extrema (1975K)', 'Posible gigante gaseoso (12.50 R⊕)', 'Super-Tierra pesada (2860.0 M⊕)', 'Enana roja (posible radiación)']",1975.0,12.5,2860.0,143.59
+CoRoT-26 b,CoRoT-26,0,False,['Estrella tipo solar'],"['Temperatura extrema (1600K)', 'Posible gigante gaseoso (14.12 R⊕)', 'Super-Tierra pesada (165.3 M⊕)']",1600.0,14.12,165.26,1045.18
+Kepler-1515 b,Kepler-1515,0,False,['Órbita estable (214 días)'],"['Temperatura extrema (380K)', 'Posible gigante gaseoso (9.55 R⊕)', 'Super-Tierra pesada (66.2 M⊕)']",380.0,9.55,66.2,539.321
+GJ 163 b,GJ 163,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (3.25 R⊕)', 'Super-Tierra pesada (10.6 M⊕)', 'Enana roja (posible radiación)']",,3.25,10.6,15.1285
+GJ 163 d,GJ 163,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (5.92 R⊕)', 'Super-Tierra pesada (29.4 M⊕)', 'Enana roja (posible radiación)']",,5.92,29.4,15.1285
+DENIS-P J082303.1-491201 b,DENIS-P J082303.1-491201,0,False,['Órbita estable (246 días)'],"['Temperatura desconocida', 'Posible gigante gaseoso (11.90 R⊕)', 'Super-Tierra pesada (9057.8 M⊕)']",,11.9,9057.77,20.77
+HD 103774 b,HD 103774,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.30 R⊕)', 'Super-Tierra pesada (116.0 M⊕)']",,13.3,116.0,56.4089
+HD 109271 b,HD 109271,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (4.31 R⊕)', 'Super-Tierra pesada (17.2 M⊕)']",,4.31,17.162,55.8716
+WASP-63 b,WASP-63,0,False,['Estrella tipo solar'],"['Temperatura extrema (1470K)', 'Posible gigante gaseoso (15.80 R⊕)', 'Super-Tierra pesada (117.6 M⊕)']",1469.91,15.80469,117.5971,290.684
+HD 37605 c,HD 37605,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.10 R⊕)', 'Super-Tierra pesada (1013.9 M⊕)']",,13.1,1013.8777,46.7864
+Kepler-350 d,Kepler-350,0,False,['Estrella tipo solar'],"['Temperatura extrema (782K)', 'Posible gigante gaseoso (2.80 R⊕)', 'Super-Tierra pesada (14.9 M⊕)']",782.0,2.8,14.9,956.859
+WASP-65 b,WASP-65,0,False,['Estrella tipo solar'],"['Temperatura extrema (1480K)', 'Posible gigante gaseoso (12.46 R⊕)', 'Super-Tierra pesada (492.6 M⊕)']",1480.0,12.464,492.62,273.703
+Kepler-145 c,Kepler-145,0,False,['Estrella tipo solar'],"['Temperatura extrema (709K)', 'Posible gigante gaseoso (4.32 R⊕)', 'Super-Tierra pesada (79.4 M⊕)']",709.0,4.32,79.4,566.85
+Kepler-328 b,Kepler-328,0,False,['Estrella tipo solar'],"['Temperatura extrema (602K)', 'Posible gigante gaseoso (2.30 R⊕)', 'Super-Tierra pesada (28.5 M⊕)']",602.0,2.3,28.5,2213.19
+KOI-94 c,KOI-94,0,False,['Estrella tipo solar'],"['Temperatura extrema (1012K)', 'Posible gigante gaseoso (4.32 R⊕)', 'Super-Tierra pesada (15.6 M⊕)']",1012.0,4.32,15.6,477.052
+HD 95086 b,HD 95086,0,False,[],"['Temperatura extrema (1000K)', 'Posible gigante gaseoso (12.90 R⊕)', 'Super-Tierra pesada (1589.0 M⊕)', 'Estrella muy caliente (vida corta)']",1000.0,12.9,1589.0,86.2279
+CoRoT-25 b,CoRoT-25,0,False,['Estrella tipo solar'],"['Temperatura extrema (1330K)', 'Posible gigante gaseoso (12.11 R⊕)', 'Super-Tierra pesada (85.8 M⊕)']",1330.0,12.11,85.81,1103.48
+KELT-1 b,KELT-1,0,False,[],"['Temperatura extrema (2361K)', 'Posible gigante gaseoso (12.44 R⊕)', 'Super-Tierra pesada (8654.1 M⊕)']",2361.0,12.442,8654.15,268.43
+HATS-1 b,HATS-1,0,False,['Estrella tipo solar'],"['Temperatura extrema (1359K)', 'Posible gigante gaseoso (14.59 R⊕)', 'Super-Tierra pesada (589.5 M⊕)']",1359.0,14.594,589.55,283.971
+MOA-2010-BLG-477L b,MOA-2010-BLG-477L,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.60 R⊕)', 'Super-Tierra pesada (480.0 M⊕)']",,13.6,480.0,2300.0
+HD 166724 b,HD 166724,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (1207.7 M⊕)']",,13.0,1207.7479466,45.1342
+BD+20 274 b,BD+20 274,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (1334.9 M⊕)']",,13.0,1334.886,1322.51
+HD 219415 b,HD 219415,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.80 R⊕)', 'Super-Tierra pesada (317.8 M⊕)']",,13.8,317.83,165.184
+HD 150706 b,HD 150706,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.30 R⊕)', 'Super-Tierra pesada (772.3 M⊕)']",,13.3,772.32302901,28.2697
+OGLE-2011-BLG-0251L b,OGLE-2011-BLG-0251L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (14.20 R⊕)', 'Super-Tierra pesada (170.0 M⊕)']",,14.2,170.0,2570.0
+GJ 3470 b,GJ 3470,0,False,[],"['Temperatura extrema (594K)', 'Posible gigante gaseoso (4.57 R⊕)', 'Super-Tierra pesada (13.9 M⊕)', 'Enana roja (posible radiación)']",593.5,4.57,13.9,29.4214
+Kepler-58 c,Kepler-58,0,False,['Estrella tipo solar'],"['Temperatura extrema (799K)', 'Posible gigante gaseoso (2.86 R⊕)', 'Super-Tierra pesada (53.0 M⊕)']",799.0,2.86,53.0,969.252
+HD 197037 b,HD 197037,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.90 R⊕)', 'Super-Tierra pesada (251.0 M⊕)']",,13.9,251.0,33.1944
+RR Cae b,RR Cae,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (1334.9 M⊕)', 'Enana roja (posible radiación)']",,13.0,1334.886,21.1916
+HAT-P-42 b,HAT-P-42,0,False,['Estrella tipo solar'],"['Temperatura extrema (1428K)', 'Posible gigante gaseoso (14.35 R⊕)', 'Super-Tierra pesada (331.8 M⊕)']",1428.0,14.348,331.801,405.238
+HIP 67522 b,HIP 67522,0,False,['Estrella tipo solar'],"['Temperatura extrema (1175K)', 'Posible gigante gaseoso (9.99 R⊕)', 'Super-Tierra pesada (71.4 M⊕)']",1175.0,9.9872018,71.4,127.28
+Kepler-56 b,Kepler-56,0,False,['Estrella tipo solar'],"['Temperatura extrema (1378K)', 'Posible gigante gaseoso (6.51 R⊕)', 'Super-Tierra pesada (22.1 M⊕)']",1378.0,6.51,22.1,912.994
+HD 220074 b,HD 220074,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (12.20 R⊕)', 'Super-Tierra pesada (5288.7 M⊕)', 'Enana roja (posible radiación)']",,12.2,5288.6912,324.54
+HD 66428 c,HD 66428,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.50 R⊕)', 'Super-Tierra pesada (560.6 M⊕)']",,13.5,560.64930995,53.2817
+HD 68988 c,HD 68988,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.20 R⊕)', 'Super-Tierra pesada (4777.0 M⊕)']",,12.2,4776.96095721,60.8447
+HD 24040 c,HD 24040,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (9.35 R⊕)', 'Super-Tierra pesada (63.9 M⊕)']",,9.35,63.88350981,46.6224
+HIP 56640 b,HIP 56640,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.70 R⊕)', 'Super-Tierra pesada (2151.7 M⊕)']",,12.7,2151.69831539,122.324
+TOI-1260 c,TOI-1260,0,False,['Estrella tipo solar'],"['Temperatura extrema (651K)', 'Posible gigante gaseoso (2.76 R⊕)', 'Super-Tierra pesada (13.2 M⊕)']",651.0,2.76,13.2,73.5977
+WTS-1 b,WTS-1,0,False,['Estrella tipo solar'],"['Temperatura extrema (1500K)', 'Posible gigante gaseoso (16.70 R⊕)', 'Super-Tierra pesada (1274.4 M⊕)']",1500.0,16.7,1274.44,2346.01
+HD 208527 b,HD 208527,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.50 R⊕)', 'Super-Tierra pesada (3146.4 M⊕)']",,12.5,3146.4,312.202
+MOA-bin-1L b,MOA-bin-1L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (1200.0 M⊕)']",,13.0,1200.0,5100.0
+WASP-62 b,WASP-62,0,False,['Estrella tipo solar'],"['Temperatura extrema (1475K)', 'Posible gigante gaseoso (14.80 R⊕)', 'Super-Tierra pesada (165.3 M⊕)']",1475.3,14.79588,165.2716,175.631
+NGTS-10 b,NGTS-10,0,False,['Estrella tipo solar'],"['Temperatura extrema (1332K)', 'Posible gigante gaseoso (13.51 R⊕)', 'Super-Tierra pesada (687.1 M⊕)']",1332.0,13.506845,687.14846,324.69865036
+HD 63433 c,HD 63433,0,False,['Estrella tipo solar'],"['Temperatura extrema (679K)', 'Posible gigante gaseoso (2.69 R⊕)', 'Super-Tierra pesada (15.5 M⊕)']",678.92,2.692,15.539,22.4035
+HD 63433 b,HD 63433,0,False,['Estrella tipo solar'],"['Temperatura extrema (967K)', 'Posible gigante gaseoso (2.14 R⊕)', 'Super-Tierra pesada (21.8 M⊕)']",967.11,2.14,21.755,22.4035
+Kepler-56 c,Kepler-56,0,False,['Estrella tipo solar'],"['Temperatura extrema (1087K)', 'Posible gigante gaseoso (9.80 R⊕)', 'Super-Tierra pesada (181.0 M⊕)']",1087.0,9.8,181.0,912.994
+BD-06 1339 b,BD-06 1339,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (1523.0 M⊕)']",,,1523.03372634,20.2695
+Kepler-76 b,Kepler-76,0,False,['Estrella tipo solar'],"['Temperatura extrema (2140K)', 'Posible gigante gaseoso (15.24 R⊕)', 'Super-Tierra pesada (638.8 M⊕)']",2140.0,15.24424,638.8383,822.96
+Kepler-91 b,Kepler-91,0,False,['Estrella tipo solar'],"['Temperatura extrema (2040K)', 'Posible gigante gaseoso (15.32 R⊕)', 'Super-Tierra pesada (257.4 M⊕)']",2040.0,15.322703,257.4423,1294.69
+Kepler-75 b,Kepler-75,0,False,['Estrella tipo solar'],"['Temperatura extrema (767K)', 'Posible gigante gaseoso (11.77 R⊕)', 'Super-Tierra pesada (3209.9 M⊕)']",767.0,11.77,3209.9,835.356
+Kepler-276 d,Kepler-276,0,False,['Estrella tipo solar'],"['Temperatura extrema (489K)', 'Posible gigante gaseoso (2.80 R⊕)', 'Super-Tierra pesada (16.3 M⊕)']",489.0,2.8,16.3,1144.86
+Kepler-1321 b,Kepler-1321,0,False,['Estrella tipo solar'],"['Temperatura extrema (408K)', 'Posible gigante gaseoso (4.92 R⊕)', 'Super-Tierra pesada (21.5 M⊕)']",408.0,4.92,21.5,769.146
+Kepler-644 b,Kepler-644,0,False,[],"['Temperatura extrema (1655K)', 'Posible gigante gaseoso (3.15 R⊕)', 'Super-Tierra pesada (10.1 M⊕)']",1655.0,3.15,10.1,1318.05
+Kepler-231 c,Kepler-231,0,False,[],"['Temperatura extrema (393K)', 'Posible gigante gaseoso (1.93 R⊕)', 'Super-Tierra pesada (24.1 M⊕)', 'Enana roja (posible radiación)']",393.0,1.93,24.1,316.618
+HD 148164 c,HD 148164,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.80 R⊕)', 'Super-Tierra pesada (1640.0 M⊕)']",,12.8,1640.0028,77.1971
+HD 215152 c,HD 215152,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (468.8 M⊕)']",,,468.79690033,21.5974
+OGLE-2016-BLG-1266L b,OGLE-2016-BLG-1266L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (12.40 R⊕)', 'Super-Tierra pesada (3813.9 M⊕)']",,12.4,3813.940884,3080.0
+K2-194 b,K2-194,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (3.64 R⊕)', 'Super-Tierra pesada (12.9 M⊕)']",,3.64229858,12.9,629.51
+OGLE-2013-BLG-1761L b,OGLE-2013-BLG-1761L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (13.20 R⊕)', 'Super-Tierra pesada (860.0 M⊕)']",,13.2,860.0,6900.0
+MOA-2008-BLG-379L b,MOA-2008-BLG-379L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (13.00 R⊕)', 'Super-Tierra pesada (1300.0 M⊕)']",,13.0,1300.0,3300.0
+HAT-P-11 c,HAT-P-11,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.20 R⊕)', 'Super-Tierra pesada (851.8 M⊕)']",,13.2,851.78013076,37.7647
+K2-138 e,K2-138,0,False,['Estrella tipo solar'],"['Temperatura extrema (757K)', 'Posible gigante gaseoso (3.39 R⊕)', 'Super-Tierra pesada (13.0 M⊕)']",757.0,3.39,12.97,202.585
+WASP-53 b,WASP-53,0,False,['Estrella tipo solar'],"['Temperatura extrema (1053K)', 'Posible gigante gaseoso (12.04 R⊕)', 'Super-Tierra pesada (677.6 M⊕)']",1053.0,12.038466,677.61356,201.338
+HD 27894 c,HD 27894,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (8.24 R⊕)', 'Super-Tierra pesada (51.5 M⊕)']",,8.24,51.48846,43.8214
+HD 27894 d,HD 27894,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.70 R⊕)', 'Super-Tierra pesada (2063.7 M⊕)']",,12.7,2063.65984665,43.8214
+HIP 65407 b,HIP 65407,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (14.30 R⊕)', 'Super-Tierra pesada (136.0 M⊕)']",,14.3,136.03124,61.7804
+Kepler-247 c,Kepler-247,0,False,['Estrella tipo solar'],"['Temperatura extrema (686K)', 'Posible gigante gaseoso (4.09 R⊕)', 'Super-Tierra pesada (15.7 M⊕)']",686.0,4.09,15.7,663.711
+Kepler-228 d,Kepler-228,0,False,['Estrella tipo solar'],"['Temperatura extrema (835K)', 'Posible gigante gaseoso (4.04 R⊕)', 'Super-Tierra pesada (15.4 M⊕)']",835.0,4.04,15.4,1644.61
+Kepler-230 b,Kepler-230,0,False,['Estrella tipo solar'],"['Temperatura extrema (506K)', 'Posible gigante gaseoso (4.26 R⊕)', 'Super-Tierra pesada (16.8 M⊕)']",506.0,4.26,16.8,740.754
+Kepler-817 b,Kepler-817,0,False,['Estrella tipo solar'],"['Temperatura extrema (1124K)', 'Posible gigante gaseoso (9.03 R⊕)', 'Super-Tierra pesada (60.2 M⊕)']",1124.0,9.03,60.2,1484.46
+K2-39 b,K2-39,0,False,['Estrella tipo solar'],"['Temperatura extrema (1670K)', 'Posible gigante gaseoso (6.28 R⊕)', 'Super-Tierra pesada (28.6 M⊕)']",1670.0,6.27704,28.6047,307.47
+Kepler-1068 b,Kepler-1068,0,False,['Estrella tipo solar'],"['Temperatura extrema (702K)', 'Posible gigante gaseoso (3.63 R⊕)', 'Super-Tierra pesada (12.8 M⊕)']",702.0,3.63,12.8,1473.61
+HD 3167 c,HD 3167,0,False,['Estrella tipo solar'],"['Temperatura extrema (564K)', 'Posible gigante gaseoso (3.00 R⊕)', 'Super-Tierra pesada (11.1 M⊕)']",564.0,3.0,11.13,47.2899
+HD 215152 b,HD 215152,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Tamaño desconocido', 'Super-Tierra pesada (565.4 M⊕)']",,,565.41673605,21.5974
+HD 13908 b,HD 13908,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.90 R⊕)', 'Super-Tierra pesada (274.9 M⊕)']",,13.9,274.91,79.5515
+HD 13908 c,HD 13908,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.80 R⊕)', 'Super-Tierra pesada (1630.4 M⊕)']",,12.8,1630.4,79.5515
+HD 159243 b,HD 159243,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.70 R⊕)', 'Super-Tierra pesada (359.1 M⊕)']",,13.7,359.13,73.3055
+HD 106906 b,HD 106906,0,False,[],"['Temperatura extrema (1800K)', 'Posible gigante gaseoso (12.40 R⊕)', 'Super-Tierra pesada (3496.0 M⊕)']",1800.0,12.4,3496.0,103.029
+Kepler-282 d,Kepler-282,0,False,['Estrella tipo solar'],"['Temperatura extrema (588K)', 'Posible gigante gaseoso (2.46 R⊕)', 'Super-Tierra pesada (61.0 M⊕)']",588.0,2.46,61.0,1337.61
+Kepler-276 c,Kepler-276,0,False,['Estrella tipo solar'],"['Temperatura extrema (563K)', 'Posible gigante gaseoso (2.90 R⊕)', 'Super-Tierra pesada (16.6 M⊕)']",563.0,2.9,16.6,1144.86
+Kepler-305 b,Kepler-305,0,False,['Estrella tipo solar'],"['Temperatura extrema (836K)', 'Posible gigante gaseoso (3.60 R⊕)', 'Super-Tierra pesada (10.5 M⊕)']",836.0,3.6,10.5,868.477
+HD 221420 b,HD 221420,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.00 R⊕)', 'Super-Tierra pesada (7278.3 M⊕)']",,12.0,7278.2705203,31.1415
+KMT-2016-BLG-1836L b,KMT-2016-BLG-1836L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (13.30 R⊕)', 'Super-Tierra pesada (700.0 M⊕)']",,13.3,700.0,7100.0
+HD 181234 b,HD 181234,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.50 R⊕)', 'Super-Tierra pesada (2980.9 M⊕)']",,12.5,2980.91262925,47.7458
+NGTS-4 b,NGTS-4,0,False,['Estrella tipo solar'],"['Temperatura extrema (1650K)', 'Posible gigante gaseoso (3.18 R⊕)', 'Super-Tierra pesada (20.6 M⊕)']",1650.0,3.18,20.6,280.555
+KMT-2017-BLG-1146L b,KMT-2017-BLG-1146L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (14.00 R⊕)', 'Super-Tierra pesada (230.0 M⊕)']",,14.0,230.0,6500.0
+HD 45184 b,HD 45184,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (3.52 R⊕)', 'Super-Tierra pesada (12.2 M⊕)']",,3.52,12.19,21.9532
+Kepler-129 b,Kepler-129,0,False,['Estrella tipo solar'],"['Temperatura extrema (910K)', 'Posible gigante gaseoso (2.40 R⊕)', 'Super-Tierra pesada (20.0 M⊕)']",910.0,2.4,20.0,408.845
+HD 114783 c,HD 114783,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.40 R⊕)', 'Super-Tierra pesada (603.9 M⊕)']",,13.4,603.8739733,21.0628
+HD 55696 b,HD 55696,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.90 R⊕)', 'Super-Tierra pesada (1357.1 M⊕)']",,12.9,1357.12729789,77.9693
+Kepler-77 b,Kepler-77,0,False,['Estrella tipo solar'],"['Temperatura extrema (1440K)', 'Posible gigante gaseoso (10.76 R⊕)', 'Super-Tierra pesada (136.7 M⊕)']",1440.0,10.761,136.661,639.411
+Kepler-92 b,Kepler-92,0,False,['Estrella tipo solar'],"['Temperatura extrema (975K)', 'Posible gigante gaseoso (3.51 R⊕)', 'Super-Tierra pesada (64.3 M⊕)']",975.0,3.51,64.3,477.992
+HATS-3 b,HATS-3,0,False,['Estrella tipo solar'],"['Temperatura extrema (1648K)', 'Posible gigante gaseoso (15.48 R⊕)', 'Super-Tierra pesada (340.4 M⊕)']",1648.0,15.48,340.382,411.211
+POTS-1 b,POTS-1,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (10.55 R⊕)', 'Super-Tierra pesada (734.2 M⊕)']",,10.548,734.16,747.959
+HD 30669 b,HD 30669,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (14.30 R⊕)', 'Super-Tierra pesada (149.4 M⊕)']",,14.3,149.37,58.0844
+HD 108341 b,HD 108341,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.30 R⊕)', 'Super-Tierra pesada (715.1 M⊕)']",,13.3,715.11391575,48.9102
+HD 103720 b,HD 103720,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (14.10 R⊕)', 'Super-Tierra pesada (197.0 M⊕)']",,14.1,197.046,45.5352
+OGLE-2008-BLG-092L b,OGLE-2008-BLG-092L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (8.74 R⊕)', 'Super-Tierra pesada (57.0 M⊕)']",,8.74,57.0,8100.0
+MOA-2011-BLG-262L b,MOA-2011-BLG-262L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (4.29 R⊕)', 'Super-Tierra pesada (17.0 M⊕)']",,4.29,17.0,7200.0
+Kepler-104 b,Kepler-104,0,False,['Estrella tipo solar'],"['Temperatura extrema (852K)', 'Posible gigante gaseoso (3.10 R⊕)', 'Super-Tierra pesada (19.6 M⊕)']",852.0,3.1,19.6,400.785
+OGLE-2013-BLG-0102L b,OGLE-2013-BLG-0102L,0,False,[],"['Temperatura desconocida', 'Posible gigante gaseoso (12.30 R⊕)', 'Super-Tierra pesada (4100.0 M⊕)']",,12.3,4100.0,3040.0
+HD 10442 b,HD 10442,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (13.60 R⊕)', 'Super-Tierra pesada (472.6 M⊕)']",,13.6,472.61321,135.374
+HD 156279 c,HD 156279,0,False,['Estrella tipo solar'],"['Temperatura desconocida', 'Posible gigante gaseoso (12.50 R⊕)', 'Super-Tierra pesada (3098.8 M⊕)']",,12.5,3098.82696825,36.1945

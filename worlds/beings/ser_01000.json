@@ -32,14 +32,14 @@
   "body": {
     "hunger": 100,
     "thirst": 100,
-    "energy": 17.01153957188687,
-    "warmth": 35.225940601220294,
+    "energy": 17.048719429182356,
+    "warmth": 58.328497350836756,
     "health": 100,
     "pain": 0,
     "pleasure": 0,
-    "age": 714.0,
-    "x": 117.21952069742483,
-    "y": 121.8872619324674
+    "age": 952.0,
+    "x": 161.0349479555004,
+    "y": 61.235570770703376
   },
   "emotions": {
     "fear": 0,
@@ -47,7 +47,7 @@
     "sadness": 0.9857604868527512,
     "anger": 0,
     "love": 1,
-    "loneliness": 0,
+    "loneliness": 1,
     "anxiety": 0,
     "peace": 1,
     "trust": 0.5743287252392067
@@ -101,24 +101,10 @@
       },
       "ser_96553": {
         "first_met": 292,
-        "times_met": 61,
+        "times_met": 185,
         "trust": 0.5,
         "feelings": "neutral",
         "memories": [
-          {
-            "tick": 292,
-            "type": "first_sight"
-          },
-          {
-            "tick": 705,
-            "type": "heard",
-            "message": "...ser_01000..."
-          },
-          {
-            "tick": 707,
-            "type": "heard",
-            "message": "...ser_01000..."
-          },
           {
             "tick": 708,
             "type": "heard",
@@ -126,6 +112,96 @@
           },
           {
             "tick": 712,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 722,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 724,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 725,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 746,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 747,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 748,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 772,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 773,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 774,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 775,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 788,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 789,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 796,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 797,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 798,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 799,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 800,
+            "type": "heard",
+            "message": "...ser_01000..."
+          },
+          {
+            "tick": 802,
             "type": "heard",
             "message": "...ser_01000..."
           }
@@ -137,21 +213,14 @@
   },
   "mind": {
     "thought_stream": [
-      "Estoy agotado...",
       "Siento algo c\u00e1lido por alguien...",
       "Estoy agotado...",
       "Siento algo c\u00e1lido por alguien...",
-      "Estoy agotado...",
-      "Siento algo c\u00e1lido por alguien...",
-      "Oigo: '...ser_01000...'",
-      "Estoy agotado...",
-      "Siento algo c\u00e1lido por alguien...",
-      "Estoy agotado...",
-      "Siento algo c\u00e1lido por alguien...",
-      "Oigo: '...ser_01000...'",
-      "Estoy agotado...",
-      "Siento algo c\u00e1lido por alguien...",
-      "Oigo: '...ser_01000...'",
+      "Pienso mucho...",
+      "Conozco a ser_83475...",
+      "Conozco a ser_85269...",
+      "Conozco a ser_96553...",
+      "Me gusta buscar_patrones...",
       "Estoy agotado...",
       "Siento algo c\u00e1lido por alguien...",
       "Estoy agotado...",
@@ -160,7 +229,14 @@
       "Siento algo c\u00e1lido por alguien...",
       "Estoy agotado...",
       "Siento algo c\u00e1lido por alguien...",
-      "Oigo: '...ser_01000...'",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
       "Estoy agotado...",
       "Siento algo c\u00e1lido por alguien...",
       "Estoy agotado...",

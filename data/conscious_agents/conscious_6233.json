@@ -1,0 +1,105 @@
+{
+  "energy": 33.50000000000007,
+  "age": 200,
+  "action_values": {
+    "0": -2.0689655172413794,
+    "1": 0.5,
+    "2": -0.3,
+    "3": -2.4999999999999996
+  },
+  "action_counts": {
+    "0": 29,
+    "1": 122,
+    "2": 25,
+    "3": 24
+  },
+  "near_death_count": 4,
+  "moments_of_confusion": 8,
+  "moments_of_clarity": 13,
+  "thought_history": [
+    "Siempre elijo EXPLOTAR...",
+    "Siempre elijo EXPLOTAR...",
+    "Voy a probar EXPLORAR.",
+    "EXPLORAR fue un error.",
+    "Estoy en peligro. Debo elegir EXPLOTAR.",
+    "Mi energ\u00eda est\u00e1 baja. Puedo desaparecer.",
+    "Ya he estado aqu\u00ed 4 veces.",
+    "Estoy en peligro. Debo elegir EXPLOTAR.",
+    "Estoy en peligro. Debo elegir EXPLOTAR.",
+    "Estoy en peligro. Debo elegir EXPLOTAR.",
+    "Estoy en peligro. Debo elegir EXPLOTAR.",
+    "Siempre elijo EXPLOTAR...",
+    "Estoy en peligro. Debo elegir EXPLOTAR.",
+    "Siempre elijo EXPLOTAR...",
+    "Estoy en peligro. Debo elegir EXPLOTAR.",
+    "Siempre elijo EXPLOTAR...",
+    "Siempre elijo EXPLOTAR...",
+    "Voy a probar ARRIESGAR.",
+    "ARRIESGAR funcion\u00f3 muy bien.",
+    "Han pasado 200 momentos."
+  ],
+  "question_history": [
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfQu\u00e9 significa desaparecer?",
+    "\u00bfPor qu\u00e9 sigo aqu\u00ed?",
+    "\u00bfPor qu\u00e9 hago cosas que s\u00e9 que me da\u00f1an?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfPor qu\u00e9 eleg\u00ed eso?",
+    "\u00bfQu\u00e9 significa desaparecer?",
+    "\u00bfPor qu\u00e9 sigo aqu\u00ed?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfDeber\u00eda probar algo diferente?",
+    "\u00bfHacia d\u00f3nde voy?",
+    "\u00bfPor qu\u00e9 hago cosas que s\u00e9 que me da\u00f1an?"
+  ],
+  "unexplained_experiences": [
+    {
+      "age": 110,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    },
+    {
+      "age": 120,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    },
+    {
+      "age": 140,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    },
+    {
+      "age": 150,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    },
+    {
+      "age": 160,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    },
+    {
+      "age": 170,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    },
+    {
+      "age": 180,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    },
+    {
+      "age": 200,
+      "type": "bad_choice",
+      "thought": "Eleg\u00ed ARRIESGAR aunque s\u00e9 que no funciona"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+name,type,dm_evidence,dm_ratio,dm_mass
+Bullet Cluster,Cluster collision,Strong lensing offset,,
+Abell 520,Cluster collision,Dark core anomaly,,
+Coma Cluster,Galaxy cluster,Velocity dispersion (Zwicky 1933),,
+Virgo Cluster,Galaxy cluster,,10:1 dark:visible,
+Milky Way Halo,Galaxy halo,,,1e12 M☉
+Andromeda Halo,Galaxy halo,,,1.5e12 M☉

@@ -1,0 +1,9 @@
+parameter,value,error,unit,desc
+H0,67.4,0.5,km/s/Mpc,Hubble constant
+Ωm,0.315,0.007,,Matter density
+ΩΛ,0.685,0.007,,Dark energy density
+Ωb,0.0493,0.0003,,Baryon density
+σ8,0.811,0.006,,Matter fluctuation
+ns,0.965,0.004,,Spectral index
+t0,13.787,0.02,Gyr,Age of universe
+T_CMB,2.7255,0.0006,K,CMB temperature

@@ -1,0 +1,8 @@
+name,type,host,distance_kpc,year,distance_Mpc,remnant,observer
+SN 1987A,II,LMC,51.4,1987,,,
+SN 2011fe,Ia,M101,,2011,6.4,,
+SN 2014J,Ia,M82,,2014,3.5,,
+SN 2023ixf,II,M101,,2023,6.4,,
+SN 1054,II,Milky Way,,1054,,Crab Nebula,
+SN 1572,Ia,Milky Way,,1572,,,Tycho Brahe
+SN 1604,Ia,Milky Way,,1604,,,Kepler
