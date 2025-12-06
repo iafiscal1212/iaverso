@@ -1,0 +1,154 @@
+{
+  "id": "ser_84227",
+  "alive": true,
+  "birth_tick": 0,
+  "death_tick": null,
+  "cause_of_death": null,
+  "dna": {
+    "metabolism": 0.9621034201630725,
+    "pain_sensitivity": 0.8332596965833372,
+    "energy_capacity": 1.0632675819621262,
+    "warmth_tolerance": 0.8038249727325139,
+    "recovery_rate": 0.8588414342730037,
+    "baseline_anxiety": 0.3432107917702125,
+    "baseline_joy": 0.39025911159425236,
+    "emotional_intensity": 0.6569085818195299,
+    "emotional_stability": 0.6911076782596637,
+    "sociability": 0.686444708460842,
+    "empathy": 0.9359624292987485,
+    "trust_default": 0.4837056107478538,
+    "curiosity": 0.3772093395425662,
+    "introspection": 0.31543891865791074,
+    "risk_tolerance": 0.3740941539549337,
+    "resilience": 0.4973246665556833,
+    "death_awareness": 0.40835508880722726,
+    "pattern_seeking": 0.45495329379596194,
+    "sky_gazing": 0.9926574034256292,
+    "earth_grounding": 0.16242131587148784,
+    "mystical_sense": 0.5206847359157128,
+    "analytical_mind": 0.6936802283490137,
+    "creative_spirit": 0.7100316187850444
+  },
+  "body": {
+    "hunger": 40.830639659971766,
+    "thirst": 44.57931596738688,
+    "energy": 19.289657983692617,
+    "warmth": 44.011580798148835,
+    "health": 100,
+    "pain": 0,
+    "pleasure": 0,
+    "age": 500.0,
+    "x": -74.08267379661838,
+    "y": 33.983846584082066
+  },
+  "emotions": {
+    "fear": 0,
+    "joy": 0.10401200601415234,
+    "sadness": 0.9861778464348068,
+    "anger": 0,
+    "love": 0.0,
+    "loneliness": 0.7048287753618376,
+    "anxiety": 0.9406816634484341,
+    "peace": 1.1,
+    "trust": 0.4837056107478538
+  },
+  "memory": {
+    "long_term": [],
+    "others": {
+      "ser_56088": {
+        "first_met": 491,
+        "times_met": 9,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 491,
+            "type": "first_sight"
+          }
+        ]
+      }
+    },
+    "traumas": [],
+    "happy_memories": []
+  },
+  "mind": {
+    "thought_stream": [
+      "Estoy agotado...",
+      "Pienso mucho...",
+      "Me gusta analizar...",
+      "Tengo sed...",
+      "Estoy agotado...",
+      "Tengo sed...",
+      "Estoy agotado...",
+      "Tengo sed...",
+      "Estoy agotado...",
+      "Tengo sed...",
+      "Estoy agotado...",
+      "Tengo sed...",
+      "Estoy agotado...",
+      "Siento que puedo desaparecer...",
+      "Encontr\u00e9 agua...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Veo a alguien... (ser_56088)",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado..."
+    ],
+    "questions": [
+      "\u00bfQu\u00e9 soy?",
+      "\u00bfD\u00f3nde estoy?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfHay alguien m\u00e1s?",
+      "\u00bfQui\u00e9n soy?",
+      "\u00bfQu\u00e9 hay despu\u00e9s de esto?"
+    ],
+    "desires": [
+      "compa\u00f1\u00eda",
+      "descansar"
+    ],
+    "fears": [
+      "dejar de existir"
+    ],
+    "self_concept": [
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar"
+    ],
+    "beliefs": {},
+    "likes": {
+      "analizar": [
+        0.30578804432359785,
+        3
+      ],
+      "buscar_patrones": [
+        0.1476996479013376,
+        1
+      ],
+      "observar_cielo": [
+        0.24322297564339615,
+        1
+      ],
+      "crear": [
+        0.22338577254599498,
+        2
+      ]
+    }
+  }
+}

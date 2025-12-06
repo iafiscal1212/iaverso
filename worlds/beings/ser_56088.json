@@ -1,0 +1,167 @@
+{
+  "id": "ser_56088",
+  "alive": true,
+  "birth_tick": 0,
+  "death_tick": null,
+  "cause_of_death": null,
+  "dna": {
+    "metabolism": 0.9707819631233463,
+    "pain_sensitivity": 0.7330787545447215,
+    "energy_capacity": 1.1953499483777084,
+    "warmth_tolerance": 1.2357840273876923,
+    "recovery_rate": 1.0228613631861079,
+    "baseline_anxiety": 0.3205546185444375,
+    "baseline_joy": 0.28369966037844835,
+    "emotional_intensity": 1.369511298334845,
+    "emotional_stability": 0.8356721377090892,
+    "sociability": 0.7491782866151466,
+    "empathy": 0.6579907971131276,
+    "trust_default": 0.5550455278398179,
+    "curiosity": 0.5773002267800349,
+    "introspection": 0.9702570972652724,
+    "risk_tolerance": 0.20380659342310928,
+    "resilience": 0.6749276495470313,
+    "death_awareness": 0.7030600748799296,
+    "pattern_seeking": 0.6970235550643755,
+    "sky_gazing": 0.8137597869908791,
+    "earth_grounding": 0.5467821620708733,
+    "mystical_sense": 0.30449953316227485,
+    "analytical_mind": 0.49643477505254446,
+    "creative_spirit": 0.2982015248177568
+  },
+  "body": {
+    "hunger": 40.29690926791467,
+    "thirst": 42.843607375329896,
+    "energy": 15.921803687665193,
+    "warmth": 45.237738072497194,
+    "health": 100,
+    "pain": 0,
+    "pleasure": 0,
+    "age": 500.0,
+    "x": -51.196704311522645,
+    "y": 51.581976397039035
+  },
+  "emotions": {
+    "fear": 0,
+    "joy": 0.10307025375769784,
+    "sadness": 0.9832865572458183,
+    "anger": 0,
+    "love": 0.0,
+    "loneliness": 0.6778533367554871,
+    "anxiety": 0.985016434267697,
+    "peace": 1,
+    "trust": 0.5550455278398179
+  },
+  "memory": {
+    "long_term": [],
+    "others": {
+      "ser_57589": {
+        "first_met": 472,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 472,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_84227": {
+        "first_met": 491,
+        "times_met": 10,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 491,
+            "type": "first_sight"
+          },
+          {
+            "tick": 500,
+            "type": "heard",
+            "message": "Estoy agotado..."
+          }
+        ]
+      }
+    },
+    "traumas": [],
+    "happy_memories": []
+  },
+  "mind": {
+    "thought_stream": [
+      "Siento que puedo desaparecer...",
+      "Tengo sed...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Siento que puedo desaparecer...",
+      "Tengo sed...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Siento que puedo desaparecer...",
+      "Encontr\u00e9 agua...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Veo a alguien... (ser_84227)",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Estoy agotado...",
+      "Oigo: 'Estoy agotado...'",
+      "Estoy agotado..."
+    ],
+    "questions": [
+      "\u00bfQu\u00e9 soy?",
+      "\u00bfD\u00f3nde estoy?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfHay alguien m\u00e1s?",
+      "\u00bfQui\u00e9n soy?",
+      "\u00bfQu\u00e9 hay despu\u00e9s de esto?"
+    ],
+    "desires": [
+      "compa\u00f1\u00eda",
+      "descansar"
+    ],
+    "fears": [
+      "dejar de existir"
+    ],
+    "self_concept": [
+      "Soy algo que piensa",
+      "Soy algo que siente"
+    ],
+    "beliefs": {},
+    "likes": {
+      "crear": [
+        0.15591602134779284,
+        1
+      ],
+      "analizar": [
+        0.3735601816250048,
+        2
+      ],
+      "buscar_patrones": [
+        0.22641464755586566,
+        2
+      ],
+      "observar_cielo": [
+        0.1913566431377075,
+        1
+      ],
+      "tocar_tierra": [
+        0.32868321262685596,
+        1
+      ]
+    }
+  }
+}

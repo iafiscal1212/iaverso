@@ -1,0 +1,3086 @@
+{
+  "id": "ser_96553",
+  "alive": true,
+  "birth_tick": 0,
+  "death_tick": null,
+  "cause_of_death": null,
+  "dna": {
+    "metabolism": 0.9392154888354598,
+    "pain_sensitivity": 1.112994898690706,
+    "energy_capacity": 1.0330513895916666,
+    "warmth_tolerance": 1.266710934892929,
+    "recovery_rate": 0.9432214490816748,
+    "baseline_anxiety": 0.02439531666537742,
+    "baseline_joy": 0.23310609858265674,
+    "emotional_intensity": 0.631742568197511,
+    "emotional_stability": 0.7707498015406188,
+    "sociability": 0.7746175920047689,
+    "empathy": 0.8620740856752322,
+    "trust_default": 0.5236725514405448,
+    "curiosity": 0.9990168288050538,
+    "introspection": 0.7546879307911413,
+    "risk_tolerance": 0.3558541552739183,
+    "resilience": 0.4216589399946629,
+    "death_awareness": 0.34064325614420077,
+    "pattern_seeking": 0.9758128628117968,
+    "sky_gazing": 0.6922903193114731,
+    "earth_grounding": 0.7110450816827452,
+    "mystical_sense": 0.11261919235103285,
+    "analytical_mind": 0.43145516496247444,
+    "creative_spirit": 0.9300222043956463
+  },
+  "body": {
+    "hunger": 100,
+    "thirst": 100,
+    "energy": 15.480028194295963,
+    "warmth": 36.346169263230585,
+    "health": 100,
+    "pain": 0,
+    "pleasure": 0,
+    "age": 714.0,
+    "x": 113.24789909305156,
+    "y": 92.08378443633113
+  },
+  "emotions": {
+    "fear": 0,
+    "joy": 0.10205182998132858,
+    "sadness": 0.94697836973741,
+    "anger": 0,
+    "love": 1,
+    "loneliness": 0,
+    "anxiety": 0,
+    "peace": 1,
+    "trust": 0.5236725514405448
+  },
+  "memory": {
+    "long_term": [],
+    "others": {
+      "ser_09277": {
+        "first_met": 1,
+        "times_met": 34,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 1,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_88281": {
+        "first_met": 5,
+        "times_met": 81,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 5,
+            "type": "first_sight"
+          },
+          {
+            "tick": 85,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_13555": {
+        "first_met": 87,
+        "times_met": 30,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 87,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_83475": {
+        "first_met": 138,
+        "times_met": 85,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 138,
+            "type": "first_sight"
+          },
+          {
+            "tick": 282,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 286,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_99361": {
+        "first_met": 140,
+        "times_met": 25,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 140,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_39004": {
+        "first_met": 146,
+        "times_met": 17,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 146,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_44468": {
+        "first_met": 206,
+        "times_met": 78,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 206,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_03069": {
+        "first_met": 206,
+        "times_met": 78,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 206,
+            "type": "first_sight"
+          },
+          {
+            "tick": 286,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_07142": {
+        "first_met": 215,
+        "times_met": 90,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 215,
+            "type": "first_sight"
+          },
+          {
+            "tick": 282,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 283,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 285,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 286,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 287,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_18489": {
+        "first_met": 247,
+        "times_met": 69,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 247,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_71722": {
+        "first_met": 254,
+        "times_met": 77,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 254,
+            "type": "first_sight"
+          },
+          {
+            "tick": 286,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 308,
+            "type": "heard",
+            "message": "Estoy agotado..."
+          }
+        ]
+      },
+      "ser_14968": {
+        "first_met": 254,
+        "times_met": 90,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 254,
+            "type": "first_sight"
+          },
+          {
+            "tick": 282,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 283,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 286,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_45801": {
+        "first_met": 255,
+        "times_met": 74,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 255,
+            "type": "first_sight"
+          },
+          {
+            "tick": 282,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_11461": {
+        "first_met": 259,
+        "times_met": 87,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 259,
+            "type": "first_sight"
+          },
+          {
+            "tick": 282,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 283,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 285,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 286,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_28629": {
+        "first_met": 260,
+        "times_met": 85,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 260,
+            "type": "first_sight"
+          },
+          {
+            "tick": 282,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 283,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 286,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_27994": {
+        "first_met": 260,
+        "times_met": 83,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 260,
+            "type": "first_sight"
+          },
+          {
+            "tick": 282,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_54451": {
+        "first_met": 263,
+        "times_met": 80,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 263,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_85269": {
+        "first_met": 264,
+        "times_met": 79,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 264,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_22599": {
+        "first_met": 264,
+        "times_met": 83,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 264,
+            "type": "first_sight"
+          },
+          {
+            "tick": 279,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 282,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 283,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 286,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_03954": {
+        "first_met": 276,
+        "times_met": 73,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 276,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_36983": {
+        "first_met": 279,
+        "times_met": 67,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 279,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_35507": {
+        "first_met": 285,
+        "times_met": 59,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 285,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_16470": {
+        "first_met": 291,
+        "times_met": 59,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 291,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_01000": {
+        "first_met": 292,
+        "times_met": 62,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 292,
+            "type": "first_sight"
+          },
+          {
+            "tick": 708,
+            "type": "heard",
+            "message": "...ser_96553..."
+          }
+        ]
+      },
+      "ser_75535": {
+        "first_met": 296,
+        "times_met": 68,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 296,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_57679": {
+        "first_met": 301,
+        "times_met": 36,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 301,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_02119": {
+        "first_met": 302,
+        "times_met": 50,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 302,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_24103": {
+        "first_met": 305,
+        "times_met": 50,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 305,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_67162": {
+        "first_met": 308,
+        "times_met": 37,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 308,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_55817": {
+        "first_met": 309,
+        "times_met": 16,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 309,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_23297": {
+        "first_met": 312,
+        "times_met": 38,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 312,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_42461": {
+        "first_met": 312,
+        "times_met": 33,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 312,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_57761": {
+        "first_met": 316,
+        "times_met": 67,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 316,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_77172": {
+        "first_met": 316,
+        "times_met": 36,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 316,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_06037": {
+        "first_met": 318,
+        "times_met": 12,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 318,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_85318": {
+        "first_met": 318,
+        "times_met": 35,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 318,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_25489": {
+        "first_met": 320,
+        "times_met": 26,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 320,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_27316": {
+        "first_met": 323,
+        "times_met": 43,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 323,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_71012": {
+        "first_met": 323,
+        "times_met": 40,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 323,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_37222": {
+        "first_met": 330,
+        "times_met": 31,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 330,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_43706": {
+        "first_met": 331,
+        "times_met": 42,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 331,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_51158": {
+        "first_met": 331,
+        "times_met": 40,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 331,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_91433": {
+        "first_met": 334,
+        "times_met": 40,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 334,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_80833": {
+        "first_met": 334,
+        "times_met": 38,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 334,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_24934": {
+        "first_met": 335,
+        "times_met": 25,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 335,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_07670": {
+        "first_met": 335,
+        "times_met": 26,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 335,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_54069": {
+        "first_met": 335,
+        "times_met": 25,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 335,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_18326": {
+        "first_met": 335,
+        "times_met": 27,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 335,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_06631": {
+        "first_met": 336,
+        "times_met": 22,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 336,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_94422": {
+        "first_met": 336,
+        "times_met": 23,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 336,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_09781": {
+        "first_met": 336,
+        "times_met": 25,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 336,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_80700": {
+        "first_met": 336,
+        "times_met": 29,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 336,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_35383": {
+        "first_met": 337,
+        "times_met": 25,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 337,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_60198": {
+        "first_met": 339,
+        "times_met": 27,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 339,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_56133": {
+        "first_met": 339,
+        "times_met": 22,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 339,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_61606": {
+        "first_met": 339,
+        "times_met": 21,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 339,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_46035": {
+        "first_met": 342,
+        "times_met": 19,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 342,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_96873": {
+        "first_met": 343,
+        "times_met": 22,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 343,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_76799": {
+        "first_met": 343,
+        "times_met": 20,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 343,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_76441": {
+        "first_met": 343,
+        "times_met": 32,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 343,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_10655": {
+        "first_met": 343,
+        "times_met": 24,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 343,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_18066": {
+        "first_met": 344,
+        "times_met": 8,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 344,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_12699": {
+        "first_met": 344,
+        "times_met": 28,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 344,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_97596": {
+        "first_met": 344,
+        "times_met": 21,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 344,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_96150": {
+        "first_met": 346,
+        "times_met": 31,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 346,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_84131": {
+        "first_met": 347,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 347,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_94790": {
+        "first_met": 348,
+        "times_met": 14,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 348,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_37289": {
+        "first_met": 348,
+        "times_met": 17,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 348,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_32397": {
+        "first_met": 349,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 349,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_66860": {
+        "first_met": 349,
+        "times_met": 16,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 349,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_20936": {
+        "first_met": 351,
+        "times_met": 16,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 351,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_52075": {
+        "first_met": 353,
+        "times_met": 22,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 353,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_33957": {
+        "first_met": 354,
+        "times_met": 14,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 354,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_82193": {
+        "first_met": 355,
+        "times_met": 8,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 355,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_34578": {
+        "first_met": 355,
+        "times_met": 5,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 355,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_42035": {
+        "first_met": 355,
+        "times_met": 20,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 355,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_11820": {
+        "first_met": 355,
+        "times_met": 8,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 355,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_15128": {
+        "first_met": 356,
+        "times_met": 12,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 356,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_35983": {
+        "first_met": 356,
+        "times_met": 22,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 356,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_98216": {
+        "first_met": 359,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 359,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_73735": {
+        "first_met": 359,
+        "times_met": 16,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 359,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_14795": {
+        "first_met": 361,
+        "times_met": 10,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 361,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_13295": {
+        "first_met": 362,
+        "times_met": 9,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 362,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_55179": {
+        "first_met": 365,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 365,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_66684": {
+        "first_met": 365,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 365,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_78404": {
+        "first_met": 365,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 365,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_06126": {
+        "first_met": 365,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 365,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_97375": {
+        "first_met": 365,
+        "times_met": 8,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 365,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_50818": {
+        "first_met": 365,
+        "times_met": 6,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 365,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_37653": {
+        "first_met": 365,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 365,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_54642": {
+        "first_met": 365,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 365,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_18666": {
+        "first_met": 366,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 366,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_98036": {
+        "first_met": 367,
+        "times_met": 6,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 367,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_18215": {
+        "first_met": 367,
+        "times_met": 5,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 367,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_32982": {
+        "first_met": 368,
+        "times_met": 7,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 368,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_92143": {
+        "first_met": 369,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 369,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_41450": {
+        "first_met": 369,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 369,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_67955": {
+        "first_met": 371,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 371,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_21220": {
+        "first_met": 440,
+        "times_met": 11,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 440,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_05378": {
+        "first_met": 470,
+        "times_met": 8,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 470,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_52597": {
+        "first_met": 470,
+        "times_met": 8,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 470,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_52000": {
+        "first_met": 470,
+        "times_met": 7,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 470,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_36992": {
+        "first_met": 470,
+        "times_met": 5,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 470,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_51363": {
+        "first_met": 470,
+        "times_met": 5,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 470,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_74715": {
+        "first_met": 470,
+        "times_met": 7,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 470,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_61473": {
+        "first_met": 470,
+        "times_met": 5,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 470,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_81883": {
+        "first_met": 470,
+        "times_met": 5,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 470,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_22527": {
+        "first_met": 470,
+        "times_met": 5,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 470,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_84217": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_27516": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_24236": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_89518": {
+        "first_met": 532,
+        "times_met": 6,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_50164": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_53256": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_06396": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_54026": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_72716": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_60352": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_37875": {
+        "first_met": 532,
+        "times_met": 6,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_50615": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_62547": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_00925": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_93355": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_17420": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_54313": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_58296": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_86222": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_08151": {
+        "first_met": 532,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_66343": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_77816": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_18651": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_27513": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_42244": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_36036": {
+        "first_met": 532,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_60574": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_12089": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_05952": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_51484": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_80968": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_98881": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_01116": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_36504": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_97220": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_32343": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_00261": {
+        "first_met": 532,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_63463": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_67786": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_52044": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_63157": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_70631": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_96646": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_76458": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_72733": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_91885": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_02468": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_02499": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_97323": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_47609": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_26714": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_24428": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_67025": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_11827": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_62563": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_28604": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_18112": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_48608": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_27318": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_36952": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_62464": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_57538": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_63819": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_91722": {
+        "first_met": 532,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_91288": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_62770": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_20102": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_56418": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_75866": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_99882": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_67323": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_52418": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_66125": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_09427": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_29931": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_74794": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_09136": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_02441": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_23339": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_16209": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_93936": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_44909": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_42096": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_88427": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_53517": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_07632": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_45727": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_30818": {
+        "first_met": 532,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_43277": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_97130": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_21748": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_66118": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_32625": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_87188": {
+        "first_met": 532,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_46133": {
+        "first_met": 532,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 532,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_08579": {
+        "first_met": 534,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 534,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_85568": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_65473": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_63293": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_75644": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_54903": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_92135": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_39211": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_27541": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_13751": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_86452": {
+        "first_met": 561,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_56495": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_76180": {
+        "first_met": 561,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_99629": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_93665": {
+        "first_met": 561,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_23245": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_91769": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_55730": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_25066": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_45838": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_72507": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_73286": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_94951": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_07081": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_18910": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_67066": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_76539": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_94272": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_50685": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_64119": {
+        "first_met": 561,
+        "times_met": 2,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 561,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_37212": {
+        "first_met": 562,
+        "times_met": 1,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 562,
+            "type": "first_sight"
+          }
+        ]
+      }
+    },
+    "traumas": [],
+    "happy_memories": []
+  },
+  "mind": {
+    "thought_stream": [
+      "Conozco a ser_73735...",
+      "Conozco a ser_21220...",
+      "Me gusta tocar_tierra...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Oigo: '...ser_96553...'",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado..."
+    ],
+    "questions": [
+      "\u00bfQu\u00e9 soy?",
+      "\u00bfD\u00f3nde estoy?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfQui\u00e9n soy?",
+      "\u00bfSomos iguales?"
+    ],
+    "desires": [
+      "descansar"
+    ],
+    "fears": [],
+    "self_concept": [
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra"
+    ],
+    "beliefs": {},
+    "likes": {
+      "buscar_patrones": [
+        0.36468774768559314,
+        2
+      ],
+      "tocar_tierra": [
+        0.3424760570735943,
+        4
+      ],
+      "observar_cielo": [
+        0.41313770027042485,
+        2
+      ],
+      "analizar": [
+        0.5288483033934197,
+        1
+      ]
+    }
+  }
+}

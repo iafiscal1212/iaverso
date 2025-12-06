@@ -1,0 +1,616 @@
+{
+  "id": "being_12614",
+  "alive": true,
+  "body": {
+    "energy": 610.2000000000002,
+    "pain": 0,
+    "pleasure": 0.14999999999999913,
+    "fatigue": 0.7999999999999999,
+    "x": -17.479705994516877,
+    "y": -31.236882560150562
+  },
+  "mind": {
+    "thoughts": [
+      "Pienso mucho...",
+      "Tengo m\u00e1s preguntas que respuestas...",
+      "Oigo: '...no estoy solo...'",
+      "He visto a being_44793 muchas veces...",
+      "Pienso mucho...",
+      "Tengo m\u00e1s preguntas que respuestas...",
+      "Oigo: '...no estoy solo...'",
+      "He visto a being_44793 muchas veces...",
+      "Pienso mucho...",
+      "Tengo m\u00e1s preguntas que respuestas...",
+      "Oigo: '\u00bfQu\u00e9 quiero?'",
+      "He visto a being_44793 muchas veces...",
+      "Pienso mucho...",
+      "Tengo m\u00e1s preguntas que respuestas...",
+      "Oigo: '\u00bfQu\u00e9 quiero?'",
+      "He visto a being_44793 muchas veces...",
+      "Pienso mucho...",
+      "Tengo m\u00e1s preguntas que respuestas...",
+      "Oigo: '...no estoy solo...'",
+      "He visto a being_44793 muchas veces...",
+      "Pienso mucho...",
+      "Tengo m\u00e1s preguntas que respuestas...",
+      "Oigo: '...no estoy solo...'",
+      "He visto a being_44793 muchas veces...",
+      "Pienso mucho...",
+      "Tengo m\u00e1s preguntas que respuestas...",
+      "Oigo: '...no estoy solo...'",
+      "He visto a being_44793 muchas veces...",
+      "Pienso mucho...",
+      "Tengo m\u00e1s preguntas que respuestas...",
+      "Oigo: '...no estoy solo...'",
+      "He visto a being_44793 muchas veces...",
+      "Pienso mucho...",
+      "Tengo m\u00e1s preguntas que respuestas...",
+      "Oigo: '...no estoy solo...'",
+      "He visto a being_44793 muchas veces...",
+      "Pienso mucho...",
+      "Tengo m\u00e1s preguntas que respuestas...",
+      "Oigo: '\u00bfQu\u00e9 quiero?'",
+      "He visto a being_44793 muchas veces...",
+      "Pienso mucho...",
+      "Tengo m\u00e1s preguntas que respuestas...",
+      "Oigo: '...no estoy solo...'",
+      "He visto a being_44793 muchas veces...",
+      "Pienso mucho...",
+      "Tengo m\u00e1s preguntas que respuestas...",
+      "Oigo: '...no estoy solo...'",
+      "He visto a being_44793 muchas veces...",
+      "Pienso mucho...",
+      "Tengo m\u00e1s preguntas que respuestas..."
+    ],
+    "questions": [
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos parecidos?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos parecidos?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos parecidos?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos parecidos?",
+      "\u00bfQu\u00e9 soy?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos parecidos?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos parecidos?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos parecidos?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos parecidos?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos parecidos?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos parecidos?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos parecidos?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos parecidos?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos parecidos?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos parecidos?",
+      "\u00bfQu\u00e9 quiero?"
+    ],
+    "memories": [
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...duele..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...duele..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...duele..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...duele..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "\u00bfQu\u00e9 quiero?"
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_44793",
+        "message": "...no estoy solo..."
+      }
+    ],
+    "known_others": {
+      "being_44793": {
+        "first_seen": 0,
+        "times_seen": 500,
+        "trust": 0.5
+      }
+    },
+    "mood": 0.5755451025694465,
+    "clarity": 0.1
+  },
+  "soul": {
+    "birth_tick": 0,
+    "death_tick": null,
+    "defining_moments": [],
+    "unanswered": [],
+    "desires": []
+  }
+}

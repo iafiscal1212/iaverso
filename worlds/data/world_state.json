@@ -1,0 +1,202 @@
+{
+  "tick": 500,
+  "epoch": 0,
+  "temperature": 44.43980610018269,
+  "resources": 46.227638911831804,
+  "danger_level": 0,
+  "births": 10,
+  "deaths": 0,
+  "total_lived_moments": 5000,
+  "events": [
+    {
+      "tick": 0,
+      "type": "birth",
+      "being": "being_93057"
+    },
+    {
+      "tick": 0,
+      "type": "birth",
+      "being": "being_01851"
+    },
+    {
+      "tick": 0,
+      "type": "birth",
+      "being": "being_46125"
+    },
+    {
+      "tick": 0,
+      "type": "birth",
+      "being": "being_96714"
+    },
+    {
+      "tick": 0,
+      "type": "birth",
+      "being": "being_12614"
+    },
+    {
+      "tick": 0,
+      "type": "birth",
+      "being": "being_59537"
+    },
+    {
+      "tick": 0,
+      "type": "birth",
+      "being": "being_39756"
+    },
+    {
+      "tick": 0,
+      "type": "birth",
+      "being": "being_76431"
+    },
+    {
+      "tick": 0,
+      "type": "birth",
+      "being": "being_44793"
+    },
+    {
+      "tick": 0,
+      "type": "birth",
+      "being": "being_23421"
+    },
+    {
+      "tick": 10,
+      "type": "danger",
+      "level": 0.59883479737318
+    },
+    {
+      "tick": 18,
+      "type": "danger",
+      "level": 0.8650042203210941
+    },
+    {
+      "tick": 24,
+      "type": "danger",
+      "level": 0.8392990630948987
+    },
+    {
+      "tick": 52,
+      "type": "danger",
+      "level": 0.8245320663098525
+    },
+    {
+      "tick": 61,
+      "type": "danger",
+      "level": 0.680649274422829
+    },
+    {
+      "tick": 82,
+      "type": "danger",
+      "level": 0.825981121183528
+    },
+    {
+      "tick": 103,
+      "type": "danger",
+      "level": 0.6590716050981311
+    },
+    {
+      "tick": 113,
+      "type": "danger",
+      "level": 0.6876938161893363
+    },
+    {
+      "tick": 129,
+      "type": "danger",
+      "level": 0.8601490353580257
+    },
+    {
+      "tick": 148,
+      "type": "danger",
+      "level": 0.8388263169215135
+    },
+    {
+      "tick": 176,
+      "type": "danger",
+      "level": 0.7091960395005986
+    },
+    {
+      "tick": 191,
+      "type": "danger",
+      "level": 0.4713317946792922
+    },
+    {
+      "tick": 197,
+      "type": "danger",
+      "level": 0.47027565337513977
+    },
+    {
+      "tick": 205,
+      "type": "danger",
+      "level": 0.5524568637521513
+    },
+    {
+      "tick": 222,
+      "type": "danger",
+      "level": 0.7179643441684485
+    },
+    {
+      "tick": 254,
+      "type": "danger",
+      "level": 0.6007293382477801
+    },
+    {
+      "tick": 270,
+      "type": "danger",
+      "level": 0.5755054362078995
+    },
+    {
+      "tick": 275,
+      "type": "danger",
+      "level": 0.4121064558007993
+    },
+    {
+      "tick": 282,
+      "type": "danger",
+      "level": 0.460373204023504
+    },
+    {
+      "tick": 285,
+      "type": "danger",
+      "level": 0.3667365144105727
+    },
+    {
+      "tick": 299,
+      "type": "danger",
+      "level": 0.5411884503715857
+    },
+    {
+      "tick": 326,
+      "type": "danger",
+      "level": 0.32546788218733597
+    },
+    {
+      "tick": 350,
+      "type": "danger",
+      "level": 0.6757473079615042
+    },
+    {
+      "tick": 367,
+      "type": "danger",
+      "level": 0.3109378452637484
+    },
+    {
+      "tick": 372,
+      "type": "danger",
+      "level": 0.8098648914486477
+    },
+    {
+      "tick": 384,
+      "type": "danger",
+      "level": 0.5842472219463963
+    },
+    {
+      "tick": 389,
+      "type": "danger",
+      "level": 0.7129615498057592
+    },
+    {
+      "tick": 475,
+      "type": "danger",
+      "level": 0.8574248290509223
+    }
+  ]
+}

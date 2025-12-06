@@ -1,0 +1,4818 @@
+{
+  "id": "ser_89796",
+  "alive": true,
+  "birth_tick": 0,
+  "death_tick": null,
+  "cause_of_death": null,
+  "dna": {
+    "metabolism": 0.7735834764781174,
+    "pain_sensitivity": 0.6104957238379208,
+    "energy_capacity": 1.0287656539616983,
+    "warmth_tolerance": 0.7399835985881714,
+    "recovery_rate": 1.1303417089532575,
+    "baseline_anxiety": 0.11396863565432619,
+    "baseline_joy": 0.46990254670771003,
+    "emotional_intensity": 1.3382168718575496,
+    "emotional_stability": 0.516109184212568,
+    "sociability": 0.34764027545427656,
+    "empathy": 0.4896251755343851,
+    "trust_default": 0.322547591820802,
+    "curiosity": 0.553024503606866,
+    "introspection": 0.5037188384799104,
+    "risk_tolerance": 0.21962651763956456,
+    "resilience": 0.8423933797082408,
+    "death_awareness": 0.46219222363023116,
+    "pattern_seeking": 0.2056196475564187,
+    "sky_gazing": 0.7874192998638896,
+    "earth_grounding": 0.54571107512995,
+    "mystical_sense": 0.9117436832876736,
+    "analytical_mind": 0.47993871896473633,
+    "creative_spirit": 0.26469251949502476
+  },
+  "body": {
+    "hunger": 100,
+    "thirst": 100,
+    "energy": 16.732279558925352,
+    "warmth": 35.177826839418266,
+    "health": 100,
+    "pain": 0,
+    "pleasure": 0,
+    "age": 714.0,
+    "x": -112.442377657027,
+    "y": 10.68863649764323
+  },
+  "emotions": {
+    "fear": 0,
+    "joy": 0.10381820203238935,
+    "sadness": 0.9896778163157487,
+    "anger": 0,
+    "love": 1,
+    "loneliness": 0.810001841808464,
+    "anxiety": 0.009151165729835237,
+    "peace": 1,
+    "trust": 0.322547591820802
+  },
+  "memory": {
+    "long_term": [],
+    "others": {
+      "ser_13555": {
+        "first_met": 69,
+        "times_met": 321,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 360,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_09277": {
+        "first_met": 108,
+        "times_met": 302,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 343,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_99361": {
+        "first_met": 160,
+        "times_met": 304,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 343,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_39004": {
+        "first_met": 160,
+        "times_met": 304,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 343,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...ser_89796..."
+          }
+        ]
+      },
+      "ser_93012": {
+        "first_met": 187,
+        "times_met": 255,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 337,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 338,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 339,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 340,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 341,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 342,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 360,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_65961": {
+        "first_met": 201,
+        "times_met": 188,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 201,
+            "type": "first_sight"
+          },
+          {
+            "tick": 249,
+            "type": "heard",
+            "message": "Oigo: 'Existo.'"
+          },
+          {
+            "tick": 256,
+            "type": "heard",
+            "message": "Oigo: '...estoy bien...'"
+          },
+          {
+            "tick": 260,
+            "type": "heard",
+            "message": "Veo a alguien... (ser_03218)"
+          },
+          {
+            "tick": 270,
+            "type": "heard",
+            "message": "Busco conexiones..."
+          },
+          {
+            "tick": 333,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 334,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 335,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 336,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 337,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 338,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 339,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 340,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 341,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 342,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_80428": {
+        "first_met": 211,
+        "times_met": 236,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 335,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 336,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 337,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 338,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 339,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 340,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 341,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 342,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 343,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_04779": {
+        "first_met": 229,
+        "times_met": 228,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 343,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_85524": {
+        "first_met": 229,
+        "times_met": 244,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 343,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_76266": {
+        "first_met": 235,
+        "times_met": 248,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 343,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_51158": {
+        "first_met": 240,
+        "times_met": 224,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 343,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...ser_89796..."
+          }
+        ]
+      },
+      "ser_44829": {
+        "first_met": 248,
+        "times_met": 244,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 363,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 364,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 365,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 373,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 374,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 375,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 376,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 377,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 381,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 382,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 383,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 384,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 385,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_15813": {
+        "first_met": 252,
+        "times_met": 195,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 252,
+            "type": "first_sight"
+          },
+          {
+            "tick": 262,
+            "type": "heard",
+            "message": "Conozco a ser_44829..."
+          },
+          {
+            "tick": 264,
+            "type": "heard",
+            "message": "Veo a alguien... (ser_12773)"
+          },
+          {
+            "tick": 324,
+            "type": "heard",
+            "message": "Oigo: 'Existo.'"
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "Intento entender..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 360,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_49738": {
+        "first_met": 256,
+        "times_met": 188,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 335,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 336,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 337,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 338,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 339,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 340,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 341,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 342,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 343,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...ser_89796..."
+          }
+        ]
+      },
+      "ser_03218": {
+        "first_met": 259,
+        "times_met": 204,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 343,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_88896": {
+        "first_met": 262,
+        "times_met": 214,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 360,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 361,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 362,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 363,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 364,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 385,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_12773": {
+        "first_met": 263,
+        "times_met": 179,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 263,
+            "type": "first_sight"
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "Veo a alguien... (ser_50606)"
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "Oigo: 'Existo.'"
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 385,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_76492": {
+        "first_met": 269,
+        "times_met": 186,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 338,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 339,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 340,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 341,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 342,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_88281": {
+        "first_met": 270,
+        "times_met": 14,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 270,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_98954": {
+        "first_met": 270,
+        "times_met": 210,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 364,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 365,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 373,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 374,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 375,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 376,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 377,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 381,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 382,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 383,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 384,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 385,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 386,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_23180": {
+        "first_met": 274,
+        "times_met": 178,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 343,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...ser_89796..."
+          }
+        ]
+      },
+      "ser_66329": {
+        "first_met": 275,
+        "times_met": 158,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 335,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 336,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 337,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 338,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 339,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 340,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 341,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 342,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 343,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...ser_89796..."
+          }
+        ]
+      },
+      "ser_69588": {
+        "first_met": 276,
+        "times_met": 212,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 363,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 364,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 365,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 373,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 374,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 375,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 376,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 377,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 381,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 382,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 383,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 384,
+            "type": "heard",
+            "message": "...estoy bien..."
+          },
+          {
+            "tick": 385,
+            "type": "heard",
+            "message": "...estoy bien..."
+          }
+        ]
+      },
+      "ser_23162": {
+        "first_met": 281,
+        "times_met": 202,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 364,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 365,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 373,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 374,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 375,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 376,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 377,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 381,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 382,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 383,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 384,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 385,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 386,
+            "type": "heard",
+            "message": "...ser_89796..."
+          }
+        ]
+      },
+      "ser_00883": {
+        "first_met": 284,
+        "times_met": 158,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 340,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 341,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 342,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 343,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...ser_89796..."
+          }
+        ]
+      },
+      "ser_43139": {
+        "first_met": 286,
+        "times_met": 168,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 333,
+            "type": "heard",
+            "message": "Oigo: '...ser_89796...'"
+          },
+          {
+            "tick": 338,
+            "type": "heard",
+            "message": "Veo a alguien... (ser_35383)"
+          },
+          {
+            "tick": 340,
+            "type": "heard",
+            "message": "Veo a alguien... (ser_61606)"
+          },
+          {
+            "tick": 341,
+            "type": "heard",
+            "message": "Veo a alguien... (ser_18066)"
+          },
+          {
+            "tick": 342,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...ser_89796..."
+          }
+        ]
+      },
+      "ser_85638": {
+        "first_met": 289,
+        "times_met": 161,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 339,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 340,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 341,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 342,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 360,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 370,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "...ser_89796..."
+          }
+        ]
+      },
+      "ser_74238": {
+        "first_met": 293,
+        "times_met": 144,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 293,
+            "type": "first_sight"
+          },
+          {
+            "tick": 324,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 361,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_31930": {
+        "first_met": 296,
+        "times_met": 141,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 296,
+            "type": "first_sight"
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_45461": {
+        "first_met": 299,
+        "times_met": 134,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 299,
+            "type": "first_sight"
+          },
+          {
+            "tick": 335,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_74202": {
+        "first_met": 303,
+        "times_met": 121,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 303,
+            "type": "first_sight"
+          },
+          {
+            "tick": 342,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 353,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_63070": {
+        "first_met": 307,
+        "times_met": 114,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 307,
+            "type": "first_sight"
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_80649": {
+        "first_met": 311,
+        "times_met": 112,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 311,
+            "type": "first_sight"
+          },
+          {
+            "tick": 333,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 342,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_29932": {
+        "first_met": 312,
+        "times_met": 127,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 312,
+            "type": "first_sight"
+          },
+          {
+            "tick": 332,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 341,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_69029": {
+        "first_met": 316,
+        "times_met": 122,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 316,
+            "type": "first_sight"
+          },
+          {
+            "tick": 317,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 358,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 359,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_83346": {
+        "first_met": 318,
+        "times_met": 84,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 318,
+            "type": "first_sight"
+          },
+          {
+            "tick": 336,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_80196": {
+        "first_met": 322,
+        "times_met": 115,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 322,
+            "type": "first_sight"
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 354,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_48684": {
+        "first_met": 324,
+        "times_met": 109,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 324,
+            "type": "first_sight"
+          },
+          {
+            "tick": 336,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 339,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_96903": {
+        "first_met": 325,
+        "times_met": 97,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 325,
+            "type": "first_sight"
+          },
+          {
+            "tick": 350,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_16618": {
+        "first_met": 327,
+        "times_met": 88,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 327,
+            "type": "first_sight"
+          },
+          {
+            "tick": 341,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_81454": {
+        "first_met": 330,
+        "times_met": 93,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 330,
+            "type": "first_sight"
+          },
+          {
+            "tick": 332,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 340,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 342,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_52707": {
+        "first_met": 330,
+        "times_met": 113,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 330,
+            "type": "first_sight"
+          },
+          {
+            "tick": 333,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 338,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 339,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 348,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 358,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 372,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_14198": {
+        "first_met": 333,
+        "times_met": 101,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 333,
+            "type": "first_sight"
+          },
+          {
+            "tick": 339,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_03080": {
+        "first_met": 335,
+        "times_met": 86,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 335,
+            "type": "first_sight"
+          },
+          {
+            "tick": 340,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_42082": {
+        "first_met": 336,
+        "times_met": 102,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 336,
+            "type": "first_sight"
+          },
+          {
+            "tick": 341,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 345,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 346,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_88014": {
+        "first_met": 338,
+        "times_met": 84,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 338,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_87174": {
+        "first_met": 339,
+        "times_met": 62,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 339,
+            "type": "first_sight"
+          },
+          {
+            "tick": 342,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_86972": {
+        "first_met": 341,
+        "times_met": 61,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 341,
+            "type": "first_sight"
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_68295": {
+        "first_met": 341,
+        "times_met": 78,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 341,
+            "type": "first_sight"
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_13420": {
+        "first_met": 341,
+        "times_met": 96,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 341,
+            "type": "first_sight"
+          },
+          {
+            "tick": 344,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 355,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_43015": {
+        "first_met": 342,
+        "times_met": 60,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 342,
+            "type": "first_sight"
+          },
+          {
+            "tick": 352,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_66581": {
+        "first_met": 344,
+        "times_met": 88,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 344,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_69888": {
+        "first_met": 346,
+        "times_met": 71,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 346,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_25586": {
+        "first_met": 346,
+        "times_met": 69,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 346,
+            "type": "first_sight"
+          },
+          {
+            "tick": 351,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_50606": {
+        "first_met": 346,
+        "times_met": 85,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 346,
+            "type": "first_sight"
+          },
+          {
+            "tick": 347,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_23566": {
+        "first_met": 349,
+        "times_met": 84,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 349,
+            "type": "first_sight"
+          },
+          {
+            "tick": 356,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_85991": {
+        "first_met": 351,
+        "times_met": 63,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 351,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_37632": {
+        "first_met": 353,
+        "times_met": 68,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 353,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_66766": {
+        "first_met": 353,
+        "times_met": 65,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 353,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_00651": {
+        "first_met": 355,
+        "times_met": 78,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 355,
+            "type": "first_sight"
+          },
+          {
+            "tick": 366,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_45271": {
+        "first_met": 355,
+        "times_met": 46,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 355,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_68041": {
+        "first_met": 358,
+        "times_met": 76,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 358,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_82144": {
+        "first_met": 358,
+        "times_met": 74,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 358,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_04158": {
+        "first_met": 360,
+        "times_met": 75,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 360,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_00994": {
+        "first_met": 360,
+        "times_met": 76,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 360,
+            "type": "first_sight"
+          },
+          {
+            "tick": 360,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_82294": {
+        "first_met": 362,
+        "times_met": 56,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 362,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_44899": {
+        "first_met": 362,
+        "times_met": 71,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 362,
+            "type": "first_sight"
+          },
+          {
+            "tick": 367,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_21322": {
+        "first_met": 364,
+        "times_met": 81,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 364,
+            "type": "first_sight"
+          },
+          {
+            "tick": 364,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 368,
+            "type": "heard",
+            "message": "Existo."
+          },
+          {
+            "tick": 369,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_67338": {
+        "first_met": 365,
+        "times_met": 36,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 365,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_23435": {
+        "first_met": 365,
+        "times_met": 78,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 365,
+            "type": "first_sight"
+          },
+          {
+            "tick": 382,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_12636": {
+        "first_met": 367,
+        "times_met": 68,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 367,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_18588": {
+        "first_met": 367,
+        "times_met": 56,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 367,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_24814": {
+        "first_met": 369,
+        "times_met": 49,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 369,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_33544": {
+        "first_met": 370,
+        "times_met": 66,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 370,
+            "type": "first_sight"
+          },
+          {
+            "tick": 371,
+            "type": "heard",
+            "message": "Existo."
+          }
+        ]
+      },
+      "ser_00667": {
+        "first_met": 371,
+        "times_met": 40,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 371,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_03402": {
+        "first_met": 372,
+        "times_met": 45,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 372,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_74672": {
+        "first_met": 372,
+        "times_met": 63,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 372,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_63591": {
+        "first_met": 374,
+        "times_met": 58,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 374,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_11209": {
+        "first_met": 375,
+        "times_met": 55,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 375,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_33995": {
+        "first_met": 376,
+        "times_met": 44,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 376,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_91748": {
+        "first_met": 377,
+        "times_met": 41,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 377,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_05970": {
+        "first_met": 379,
+        "times_met": 43,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 379,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_49912": {
+        "first_met": 379,
+        "times_met": 63,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 379,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_11764": {
+        "first_met": 380,
+        "times_met": 52,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 380,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_80512": {
+        "first_met": 381,
+        "times_met": 51,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 381,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_32425": {
+        "first_met": 381,
+        "times_met": 41,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 381,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_12268": {
+        "first_met": 382,
+        "times_met": 17,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 382,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_63969": {
+        "first_met": 383,
+        "times_met": 59,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 383,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_33494": {
+        "first_met": 383,
+        "times_met": 59,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 383,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_10862": {
+        "first_met": 383,
+        "times_met": 38,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 383,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_58072": {
+        "first_met": 384,
+        "times_met": 17,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 384,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_80033": {
+        "first_met": 385,
+        "times_met": 45,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 385,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_27235": {
+        "first_met": 386,
+        "times_met": 35,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 386,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_93431": {
+        "first_met": 386,
+        "times_met": 46,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 386,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_79660": {
+        "first_met": 387,
+        "times_met": 48,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 387,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_88361": {
+        "first_met": 388,
+        "times_met": 30,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 388,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_44466": {
+        "first_met": 388,
+        "times_met": 47,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 388,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_25648": {
+        "first_met": 388,
+        "times_met": 47,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 388,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_48530": {
+        "first_met": 389,
+        "times_met": 78,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 389,
+            "type": "first_sight"
+          },
+          {
+            "tick": 548,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 560,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 561,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 569,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 570,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 571,
+            "type": "heard",
+            "message": "...ser_89796..."
+          },
+          {
+            "tick": 572,
+            "type": "heard",
+            "message": "...ser_89796..."
+          }
+        ]
+      },
+      "ser_26820": {
+        "first_met": 389,
+        "times_met": 46,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 389,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_73964": {
+        "first_met": 390,
+        "times_met": 27,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 390,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_84752": {
+        "first_met": 391,
+        "times_met": 31,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 391,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_76248": {
+        "first_met": 392,
+        "times_met": 37,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 392,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_11083": {
+        "first_met": 393,
+        "times_met": 29,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 393,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_37502": {
+        "first_met": 394,
+        "times_met": 23,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 394,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_01483": {
+        "first_met": 394,
+        "times_met": 36,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 394,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_66449": {
+        "first_met": 394,
+        "times_met": 34,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 394,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_58851": {
+        "first_met": 396,
+        "times_met": 36,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 396,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_11239": {
+        "first_met": 396,
+        "times_met": 24,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 396,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_30844": {
+        "first_met": 397,
+        "times_met": 35,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 397,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_76659": {
+        "first_met": 397,
+        "times_met": 45,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 397,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_65394": {
+        "first_met": 397,
+        "times_met": 38,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 397,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_50045": {
+        "first_met": 400,
+        "times_met": 34,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 400,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_80123": {
+        "first_met": 400,
+        "times_met": 35,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 400,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_28684": {
+        "first_met": 401,
+        "times_met": 10,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 401,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_22713": {
+        "first_met": 401,
+        "times_met": 12,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 401,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_43163": {
+        "first_met": 401,
+        "times_met": 23,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 401,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_61723": {
+        "first_met": 401,
+        "times_met": 34,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 401,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_64669": {
+        "first_met": 403,
+        "times_met": 19,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 403,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_00793": {
+        "first_met": 404,
+        "times_met": 7,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 404,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_56401": {
+        "first_met": 404,
+        "times_met": 18,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 404,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_75606": {
+        "first_met": 405,
+        "times_met": 32,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 405,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_96729": {
+        "first_met": 406,
+        "times_met": 28,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 406,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_09481": {
+        "first_met": 407,
+        "times_met": 15,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 407,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_92404": {
+        "first_met": 408,
+        "times_met": 34,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 408,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_89358": {
+        "first_met": 408,
+        "times_met": 24,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 408,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_77164": {
+        "first_met": 409,
+        "times_met": 33,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 409,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_54373": {
+        "first_met": 409,
+        "times_met": 15,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 409,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_55245": {
+        "first_met": 410,
+        "times_met": 11,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 410,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_49914": {
+        "first_met": 412,
+        "times_met": 30,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 412,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_60195": {
+        "first_met": 413,
+        "times_met": 21,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 413,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_35744": {
+        "first_met": 413,
+        "times_met": 21,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 413,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_45535": {
+        "first_met": 414,
+        "times_met": 28,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 414,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_90234": {
+        "first_met": 414,
+        "times_met": 20,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 414,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_69791": {
+        "first_met": 417,
+        "times_met": 25,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 417,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_92889": {
+        "first_met": 418,
+        "times_met": 13,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 418,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_36391": {
+        "first_met": 419,
+        "times_met": 12,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 419,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_34348": {
+        "first_met": 419,
+        "times_met": 12,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 419,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_67112": {
+        "first_met": 419,
+        "times_met": 12,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 419,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_96999": {
+        "first_met": 419,
+        "times_met": 12,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 419,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_81634": {
+        "first_met": 420,
+        "times_met": 9,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 420,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_77318": {
+        "first_met": 421,
+        "times_met": 11,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 421,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_99365": {
+        "first_met": 422,
+        "times_met": 12,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 422,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_40077": {
+        "first_met": 422,
+        "times_met": 13,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 422,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_43783": {
+        "first_met": 423,
+        "times_met": 19,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 423,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_69984": {
+        "first_met": 426,
+        "times_met": 9,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 426,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_99680": {
+        "first_met": 427,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 427,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_89360": {
+        "first_met": 427,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 427,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_86759": {
+        "first_met": 429,
+        "times_met": 13,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 429,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_05082": {
+        "first_met": 429,
+        "times_met": 5,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 429,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_77466": {
+        "first_met": 432,
+        "times_met": 10,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 432,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_69529": {
+        "first_met": 432,
+        "times_met": 5,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 432,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_08045": {
+        "first_met": 433,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 433,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_59129": {
+        "first_met": 433,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 433,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_34258": {
+        "first_met": 434,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 434,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_62737": {
+        "first_met": 436,
+        "times_met": 6,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 436,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_91454": {
+        "first_met": 437,
+        "times_met": 11,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 437,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_88972": {
+        "first_met": 438,
+        "times_met": 4,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 438,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_76597": {
+        "first_met": 439,
+        "times_met": 3,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 439,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_20921": {
+        "first_met": 447,
+        "times_met": 9,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 447,
+            "type": "first_sight"
+          }
+        ]
+      }
+    },
+    "traumas": [],
+    "happy_memories": []
+  },
+  "mind": {
+    "thought_stream": [
+      "Conozco a ser_43783...",
+      "Conozco a ser_86759...",
+      "Conozco a ser_91454...",
+      "Me gusta tocar_tierra...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado...",
+      "Las estrellas brillan...",
+      "Estoy agotado..."
+    ],
+    "questions": [
+      "\u00bfQu\u00e9 soy?",
+      "\u00bfD\u00f3nde estoy?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfQui\u00e9n soy?",
+      "\u00bfHay alguien m\u00e1s?",
+      "\u00bfSomos iguales?"
+    ],
+    "desires": [
+      "compa\u00f1\u00eda",
+      "descansar"
+    ],
+    "fears": [],
+    "self_concept": [
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra",
+      "Disfruto tocar_tierra"
+    ],
+    "beliefs": {},
+    "likes": {
+      "observar_cielo": [
+        0.3837862949388047,
+        6
+      ],
+      "buscar_patrones": [
+        0.4424458570077248,
+        1
+      ],
+      "tocar_tierra": [
+        0.45089213580409515,
+        4
+      ],
+      "crear": [
+        0.35593691581683506,
+        2
+      ]
+    }
+  }
+}

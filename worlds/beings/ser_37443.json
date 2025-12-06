@@ -1,0 +1,165 @@
+{
+  "id": "ser_37443",
+  "alive": true,
+  "birth_tick": 0,
+  "death_tick": null,
+  "cause_of_death": null,
+  "dna": {
+    "metabolism": 0.9642634014823096,
+    "pain_sensitivity": 0.9875569751684258,
+    "energy_capacity": 1.125687705890203,
+    "warmth_tolerance": 0.8313170032649582,
+    "recovery_rate": 1.031185383281274,
+    "baseline_anxiety": 0.13403111303057877,
+    "baseline_joy": 0.45887184041370926,
+    "emotional_intensity": 0.8227364921868765,
+    "emotional_stability": 0.7161691067542455,
+    "sociability": 0.3347804974578306,
+    "empathy": 0.4415090203545306,
+    "trust_default": 0.5043020407173269,
+    "curiosity": 0.9119823333537393,
+    "introspection": 0.565251556022313,
+    "risk_tolerance": 0.7673769197412161,
+    "resilience": 0.4589114052407816,
+    "death_awareness": 0.7427651418901049,
+    "pattern_seeking": 0.22693745953915637,
+    "sky_gazing": 0.9356678456849823,
+    "earth_grounding": 0.3971677348969409,
+    "mystical_sense": 0.14201745218253212,
+    "analytical_mind": 0.8864773731926479,
+    "creative_spirit": 0.5199085159806992
+  },
+  "body": {
+    "hunger": 40.69780080883746,
+    "thirst": 44.14731970353881,
+    "energy": 15.073659851769008,
+    "warmth": 44.08944388008309,
+    "health": 100,
+    "pain": 0,
+    "pleasure": 0,
+    "age": 500.0,
+    "x": -129.23139526192168,
+    "y": -131.136516708353
+  },
+  "emotions": {
+    "fear": 0,
+    "joy": 0.10514025850776677,
+    "sadness": 0.9856766178649151,
+    "anger": 0,
+    "love": 0.0,
+    "loneliness": 1,
+    "anxiety": 0.9794118130865258,
+    "peace": 1,
+    "trust": 0.5043020407173269
+  },
+  "memory": {
+    "long_term": [],
+    "others": {
+      "ser_34205": {
+        "first_met": 1,
+        "times_met": 93,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 1,
+            "type": "first_sight"
+          },
+          {
+            "tick": 162,
+            "type": "heard",
+            "message": "Me gusta analizar..."
+          },
+          {
+            "tick": 173,
+            "type": "heard",
+            "message": "Estoy agotado..."
+          }
+        ]
+      }
+    },
+    "traumas": [],
+    "happy_memories": []
+  },
+  "mind": {
+    "thought_stream": [
+      "Siento que puedo desaparecer...",
+      "Encontr\u00e9 agua...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo..."
+    ],
+    "questions": [
+      "\u00bfQu\u00e9 soy?",
+      "\u00bfD\u00f3nde estoy?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos iguales?",
+      "\u00bfQui\u00e9n soy?",
+      "\u00bfHay alguien m\u00e1s?",
+      "\u00bfQu\u00e9 hay despu\u00e9s de esto?"
+    ],
+    "desires": [
+      "descansar",
+      "compa\u00f1\u00eda"
+    ],
+    "fears": [
+      "dejar de existir"
+    ],
+    "self_concept": [
+      "Disfruto crear",
+      "Disfruto crear",
+      "Disfruto crear",
+      "Disfruto crear",
+      "Disfruto crear",
+      "Disfruto crear",
+      "Disfruto crear",
+      "Disfruto crear",
+      "Disfruto crear",
+      "Disfruto crear"
+    ],
+    "beliefs": {},
+    "likes": {
+      "observar_cielo": [
+        0.23638069479569135,
+        6
+      ],
+      "analizar": [
+        0.31948586761174574,
+        6
+      ],
+      "crear": [
+        0.45381538090387463,
+        4
+      ],
+      "buscar_patrones": [
+        0.5809221279592429,
+        2
+      ]
+    }
+  }
+}

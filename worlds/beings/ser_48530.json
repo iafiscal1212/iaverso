@@ -1,0 +1,326 @@
+{
+  "id": "ser_48530",
+  "alive": true,
+  "birth_tick": 0,
+  "death_tick": null,
+  "cause_of_death": null,
+  "dna": {
+    "metabolism": 1.1153291089619808,
+    "pain_sensitivity": 1.0310232504908332,
+    "energy_capacity": 0.9482113290036835,
+    "warmth_tolerance": 1.1283818492364701,
+    "recovery_rate": 1.171903498521124,
+    "baseline_anxiety": 0.35998631119451363,
+    "baseline_joy": 0.49681702776852577,
+    "emotional_intensity": 0.6191909611165745,
+    "emotional_stability": 0.8746129752501568,
+    "sociability": 0.3963228789294152,
+    "empathy": 0.7974456082395305,
+    "trust_default": 0.3651858465499731,
+    "curiosity": 0.7580043238988334,
+    "introspection": 0.6697812746450207,
+    "risk_tolerance": 0.3936182737068626,
+    "resilience": 0.7125895775345257,
+    "death_awareness": 0.5547744070402554,
+    "pattern_seeking": 0.601454924844704,
+    "sky_gazing": 0.24890769414006453,
+    "earth_grounding": 0.9994246616251895,
+    "mystical_sense": 0.49451535997691276,
+    "analytical_mind": 0.5418145289871401,
+    "creative_spirit": 0.6362284760268319
+  },
+  "body": {
+    "hunger": 100,
+    "thirst": 100,
+    "energy": 17.275201962389655,
+    "warmth": 35.95588201410334,
+    "health": 100,
+    "pain": 0,
+    "pleasure": 0,
+    "age": 714.0,
+    "x": -166.14111808823884,
+    "y": -32.05236710469947
+  },
+  "emotions": {
+    "fear": 0,
+    "joy": 0.22955555130684402,
+    "sadness": 0.016243452633244632,
+    "anger": 0,
+    "love": 1,
+    "loneliness": 0.8956897063804797,
+    "anxiety": 0,
+    "peace": 1,
+    "trust": 0.3651858465499731
+  },
+  "memory": {
+    "long_term": [],
+    "others": {
+      "ser_88281": {
+        "first_met": 1,
+        "times_met": 81,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 1,
+            "type": "first_sight"
+          },
+          {
+            "tick": 134,
+            "type": "heard",
+            "message": "Estoy agotado..."
+          }
+        ]
+      },
+      "ser_36673": {
+        "first_met": 1,
+        "times_met": 167,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 156,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 157,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 158,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 159,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 160,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 161,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 162,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 163,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 164,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 165,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 328,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 330,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 331,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 332,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 333,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 334,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 335,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 338,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 341,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 343,
+            "type": "heard",
+            "message": "...ser_48530..."
+          }
+        ]
+      },
+      "ser_13555": {
+        "first_met": 14,
+        "times_met": 15,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 14,
+            "type": "first_sight"
+          }
+        ]
+      },
+      "ser_89796": {
+        "first_met": 388,
+        "times_met": 80,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 388,
+            "type": "first_sight"
+          },
+          {
+            "tick": 548,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 560,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 568,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 569,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 570,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 571,
+            "type": "heard",
+            "message": "...ser_48530..."
+          },
+          {
+            "tick": 572,
+            "type": "heard",
+            "message": "...ser_48530..."
+          }
+        ]
+      }
+    },
+    "traumas": [],
+    "happy_memories": []
+  },
+  "mind": {
+    "thought_stream": [
+      "Conozco a ser_36673...",
+      "Conozco a ser_13555...",
+      "Conozco a ser_89796...",
+      "Me gusta buscar_patrones...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien...",
+      "Estoy agotado...",
+      "Siento algo c\u00e1lido por alguien..."
+    ],
+    "questions": [
+      "\u00bfQu\u00e9 soy?",
+      "\u00bfD\u00f3nde estoy?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos iguales?",
+      "\u00bfQui\u00e9n soy?"
+    ],
+    "desires": [
+      "descansar"
+    ],
+    "fears": [],
+    "self_concept": [
+      "Disfruto buscar_patrones",
+      "Disfruto buscar_patrones",
+      "Disfruto buscar_patrones",
+      "Disfruto buscar_patrones",
+      "Disfruto buscar_patrones",
+      "Disfruto buscar_patrones",
+      "Disfruto buscar_patrones",
+      "Disfruto buscar_patrones",
+      "Disfruto buscar_patrones",
+      "Disfruto buscar_patrones"
+    ],
+    "beliefs": {},
+    "likes": {
+      "buscar_patrones": [
+        0.37347765885127915,
+        4
+      ],
+      "observar_cielo": [
+        0.31457985621166545,
+        1
+      ],
+      "tocar_tierra": [
+        0.33181881815033326,
+        3
+      ],
+      "analizar": [
+        0.39711315844570466,
+        2
+      ],
+      "crear": [
+        0.411652407636973,
+        2
+      ]
+    }
+  }
+}

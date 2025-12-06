@@ -1,0 +1,169 @@
+{
+  "id": "ser_34205",
+  "alive": true,
+  "birth_tick": 0,
+  "death_tick": null,
+  "cause_of_death": null,
+  "dna": {
+    "metabolism": 0.988256732817507,
+    "pain_sensitivity": 1.0944832263149138,
+    "energy_capacity": 1.0753691704604318,
+    "warmth_tolerance": 0.8248855015378851,
+    "recovery_rate": 1.0022367457511339,
+    "baseline_anxiety": 0.3509999671411099,
+    "baseline_joy": 0.45061016303883855,
+    "emotional_intensity": 1.2197210519936208,
+    "emotional_stability": 0.7265271593682912,
+    "sociability": 0.5617371504499391,
+    "empathy": 0.868474520237789,
+    "trust_default": 0.6930318660696692,
+    "curiosity": 0.39582054741404665,
+    "introspection": 0.49134177321796346,
+    "risk_tolerance": 0.32846779781950425,
+    "resilience": 0.8459348479842271,
+    "death_awareness": 0.722192202645372,
+    "pattern_seeking": 0.6215862386810502,
+    "sky_gazing": 0.5909292520505511,
+    "earth_grounding": 0.7146769958668443,
+    "mystical_sense": 0.9963221254203503,
+    "analytical_mind": 0.7015405268576702,
+    "creative_spirit": 0.5756763618369032
+  },
+  "body": {
+    "hunger": 39.222210931722614,
+    "thirst": 39.34865343649737,
+    "energy": 16.97432671824909,
+    "warmth": 44.07122017988975,
+    "health": 100,
+    "pain": 0,
+    "pleasure": 0,
+    "age": 500.0,
+    "x": -9.69450773332609,
+    "y": -167.75291738089186
+  },
+  "emotions": {
+    "fear": 0,
+    "joy": 0.10509455611596522,
+    "sadness": 0.9854694568126342,
+    "anger": 0,
+    "love": 0.0,
+    "loneliness": 1,
+    "anxiety": 0.9887652569910013,
+    "peace": 1,
+    "trust": 0.6930318660696692
+  },
+  "memory": {
+    "long_term": [],
+    "others": {
+      "ser_37443": {
+        "first_met": 1,
+        "times_met": 92,
+        "trust": 0.5,
+        "feelings": "neutral",
+        "memories": [
+          {
+            "tick": 1,
+            "type": "first_sight"
+          },
+          {
+            "tick": 172,
+            "type": "heard",
+            "message": "Estoy agotado..."
+          },
+          {
+            "tick": 173,
+            "type": "heard",
+            "message": "Estoy agotado..."
+          }
+        ]
+      }
+    },
+    "traumas": [],
+    "happy_memories": []
+  },
+  "mind": {
+    "thought_stream": [
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo...",
+      "Estoy agotado...",
+      "Me siento solo..."
+    ],
+    "questions": [
+      "\u00bfQu\u00e9 soy?",
+      "\u00bfD\u00f3nde estoy?",
+      "\u00bfQu\u00e9 quiero?",
+      "\u00bfSomos iguales?",
+      "\u00bfQui\u00e9n soy?",
+      "\u00bfHay alguien m\u00e1s?",
+      "\u00bfQu\u00e9 hay despu\u00e9s de esto?"
+    ],
+    "desires": [
+      "descansar",
+      "compa\u00f1\u00eda"
+    ],
+    "fears": [
+      "dejar de existir"
+    ],
+    "self_concept": [
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar",
+      "Disfruto analizar"
+    ],
+    "beliefs": {},
+    "likes": {
+      "observar_cielo": [
+        0.3494558157224508,
+        4
+      ],
+      "buscar_patrones": [
+        0.3164995866298073,
+        3
+      ],
+      "tocar_tierra": [
+        0.40507704330174943,
+        5
+      ],
+      "crear": [
+        0.4537471155337852,
+        1
+      ],
+      "analizar": [
+        0.44572357423895925,
+        8
+      ]
+    }
+  }
+}
