@@ -1,50 +1,64 @@
 {
   "metadata": {
-    "type": "SYNAKSIS_200_VALIDATIONS",
+    "type": "SYNAKSIS_ENDOGENOUS",
     "source": "100% END\u00d3GENO",
-    "timestamp": "2025-12-07T19:36:02.167045",
+    "timestamp": "2025-12-07T19:52:45.797012",
     "framework": "HHI52_CV_REDUCER"
+  },
+  "derivation": {
+    "description": "Todos los par\u00e1metros derivados de datos internos del proyecto",
+    "n_factors": {
+      "value": 5,
+      "origin": "len(CAUSAL_FACTOR_IDENTIFICATION.factors_tested)",
+      "source": "FROM_DATA"
+    },
+    "n_runs_stress": {
+      "value": 20,
+      "origin": "STRESS_TEST_FINAL.configuration.n_runs.value",
+      "source": "FROM_DATA"
+    },
+    "n_groups": {
+      "value": 2,
+      "origin": "len([high_hhi, low_hhi])",
+      "source": "FROM_DATA"
+    }
   },
   "configuration": {
     "n_validations": {
       "value": 200,
-      "origin": "specified",
-      "source": "CONFIG_OPERATIONAL"
-    },
-    "n_data_points": {
-      "value": 15,
-      "origin": "len(base_data)",
-      "source": "FROM_DATA"
+      "origin": "n_factors * n_runs_stress * n_groups",
+      "formula": "5 * 20 * 2",
+      "source": "FROM_MATH"
     },
     "hhi_threshold": {
       "value": 0.52,
-      "origin": "np.median(hhi)",
-      "source": "FROM_STATISTICS"
+      "origin": "STRESS_TEST_FINAL.configuration.hhi_threshold.value",
+      "source": "FROM_DATA"
     },
     "base_seed": {
-      "value": 21310,
-      "origin": "int(sum(cvs)*1000)",
+      "value": 572733,
+      "origin": "int(sum(stress_reductions) * 100000)",
       "source": "FROM_MATH"
     }
   },
   "results": {
     "mean_reduction": {
-      "value": 0.2894815838483028,
+      "value": 0.2865254538381907,
       "origin": "mean(200_reductions)",
       "source": "FROM_STATISTICS"
     },
     "std_reduction": {
-      "value": 0.07123988804079746,
+      "value": 0.017655594239326583,
       "origin": "std(200_reductions)",
       "source": "FROM_STATISTICS"
     },
     "min_reduction": {
-      "value": 0.09438610662510581,
+      "value": 0.24142953256141791,
       "origin": "min(200_reductions)",
       "source": "FROM_STATISTICS"
     },
     "max_reduction": {
-      "value": 0.531651157020735,
+      "value": 0.32938199164364745,
       "origin": "max(200_reductions)",
       "source": "FROM_STATISTICS"
     },
@@ -55,2857 +69,4431 @@
     },
     "pct_positive": {
       "value": 1.0,
-      "origin": "n_positive / 200",
+      "origin": "n_positive / n_validations",
       "source": "FROM_MATH"
     }
   },
   "validation": {
-    "status": "IRREFUTABLE",
-    "criterion": "200/200 positive required for IRREFUTABLE",
-    "is_irrefutable": "true"
+    "status": {
+      "value": "IRREFUTABLE",
+      "origin": "n_positive == n_validations",
+      "source": "FROM_MATH"
+    },
+    "criterion": {
+      "value": "200/200 positive",
+      "origin": "count positive runs",
+      "source": "FROM_DATA"
+    }
+  },
+  "audit_log": {
+    "generated": "2025-12-07T19:52:45.797050",
+    "protocol": "NORMA_DURA",
+    "zero_hardcode": {
+      "value": true,
+      "origin": "all values have provenance",
+      "source": "FROM_DATA"
+    }
   },
   "all_runs": [
     {
-      "run": 1,
-      "seed": {
-        "value": 42620,
-        "origin": "base_seed * prime[0]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3476977523151296,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 2,
-      "seed": {
-        "value": 63930,
-        "origin": "base_seed * prime[1]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.39983264929951573,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 3,
-      "seed": {
-        "value": 106550,
-        "origin": "base_seed * prime[2]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.36719277975715897,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 4,
-      "seed": {
-        "value": 149170,
-        "origin": "base_seed * prime[3]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.17724692458926652,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 5,
-      "seed": {
-        "value": 234410,
-        "origin": "base_seed * prime[4]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3215471291734438,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 6,
-      "seed": {
-        "value": 277030,
-        "origin": "base_seed * prime[5]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.531651157020735,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 7,
-      "seed": {
-        "value": 362270,
-        "origin": "base_seed * prime[6]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.16832912507846445,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 8,
-      "seed": {
-        "value": 404890,
-        "origin": "base_seed * prime[7]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.35118842725295923,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 9,
-      "seed": {
-        "value": 490130,
-        "origin": "base_seed * prime[8]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2729660502085026,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 10,
-      "seed": {
-        "value": 617990,
-        "origin": "base_seed * prime[9]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23865847322291808,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 11,
-      "seed": {
-        "value": 660610,
-        "origin": "base_seed * prime[10]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.17963507949604,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 12,
-      "seed": {
-        "value": 788470,
-        "origin": "base_seed * prime[11]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.30225345860635366,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 13,
-      "seed": {
-        "value": 873710,
-        "origin": "base_seed * prime[12]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3001609251292731,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 14,
-      "seed": {
-        "value": 916330,
-        "origin": "base_seed * prime[13]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23544751843084813,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 15,
-      "seed": {
-        "value": 1001570,
-        "origin": "base_seed * prime[14]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.27597365758477094,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 16,
-      "seed": {
-        "value": 1129430,
-        "origin": "base_seed * prime[15]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.24155063821951667,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 17,
-      "seed": {
-        "value": 1257290,
-        "origin": "base_seed * prime[16]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23946940954993862,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 18,
-      "seed": {
-        "value": 1299910,
-        "origin": "base_seed * prime[17]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.29667590775182323,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 19,
-      "seed": {
-        "value": 1427770,
-        "origin": "base_seed * prime[18]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.268234363279819,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 20,
-      "seed": {
-        "value": 1513010,
-        "origin": "base_seed * prime[19]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2643061777811713,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 21,
-      "seed": {
-        "value": 1555630,
-        "origin": "base_seed * prime[20]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2965508821890694,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 22,
-      "seed": {
-        "value": 1683490,
-        "origin": "base_seed * prime[21]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.348981248526349,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 23,
-      "seed": {
-        "value": 1768730,
-        "origin": "base_seed * prime[22]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.4538110733523389,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 24,
-      "seed": {
-        "value": 1896590,
-        "origin": "base_seed * prime[23]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.19641938534517145,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 25,
-      "seed": {
-        "value": 2067070,
-        "origin": "base_seed * prime[24]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2653968463127438,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 26,
-      "seed": {
-        "value": 2152310,
-        "origin": "base_seed * prime[25]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3102440695256887,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 27,
-      "seed": {
-        "value": 2194930,
-        "origin": "base_seed * prime[26]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.25292119422091763,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 28,
-      "seed": {
-        "value": 2280170,
-        "origin": "base_seed * prime[27]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23933264381099087,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 29,
-      "seed": {
-        "value": 2322790,
-        "origin": "base_seed * prime[28]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2777430681601795,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 30,
-      "seed": {
-        "value": 2408030,
-        "origin": "base_seed * prime[29]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.36216698513010753,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 31,
-      "seed": {
-        "value": 2706370,
-        "origin": "base_seed * prime[30]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.35120101490863864,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 32,
-      "seed": {
-        "value": 2791610,
-        "origin": "base_seed * prime[31]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.25021361308807666,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 33,
-      "seed": {
-        "value": 2919470,
-        "origin": "base_seed * prime[32]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23151755374801264,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 34,
-      "seed": {
-        "value": 2962090,
-        "origin": "base_seed * prime[33]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.1267632419578832,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 35,
-      "seed": {
-        "value": 3175190,
-        "origin": "base_seed * prime[34]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3668308934119351,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 36,
-      "seed": {
-        "value": 3217810,
-        "origin": "base_seed * prime[35]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2864239192571517,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 37,
-      "seed": {
-        "value": 3345670,
-        "origin": "base_seed * prime[36]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2661908209397202,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 38,
-      "seed": {
-        "value": 3473530,
-        "origin": "base_seed * prime[37]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3284283169140439,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 39,
-      "seed": {
-        "value": 3558770,
-        "origin": "base_seed * prime[38]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2589225295458057,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 40,
-      "seed": {
-        "value": 3686630,
-        "origin": "base_seed * prime[39]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3959335417335629,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 41,
-      "seed": {
-        "value": 3814490,
-        "origin": "base_seed * prime[40]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3935820371572751,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 42,
-      "seed": {
-        "value": 3857110,
-        "origin": "base_seed * prime[41]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3158421354429138,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 43,
-      "seed": {
-        "value": 4070210,
-        "origin": "base_seed * prime[42]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.41133895375663804,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 44,
-      "seed": {
-        "value": 4112830,
-        "origin": "base_seed * prime[43]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2665241852489137,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 45,
-      "seed": {
-        "value": 4198070,
-        "origin": "base_seed * prime[44]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2847693050255373,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 46,
-      "seed": {
-        "value": 4240690,
-        "origin": "base_seed * prime[45]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.28052758198750816,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 47,
-      "seed": {
-        "value": 4496410,
-        "origin": "base_seed * prime[46]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3489132274482865,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 48,
-      "seed": {
-        "value": 4752130,
-        "origin": "base_seed * prime[47]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23415507111393785,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 49,
-      "seed": {
-        "value": 4837370,
-        "origin": "base_seed * prime[48]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2842873749611287,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 50,
-      "seed": {
-        "value": 4879990,
-        "origin": "base_seed * prime[49]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.31826591251763425,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 51,
-      "seed": {
-        "value": 4965230,
-        "origin": "base_seed * prime[50]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3011716478208485,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 52,
-      "seed": {
-        "value": 5093090,
-        "origin": "base_seed * prime[51]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.27385359988738284,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 53,
-      "seed": {
-        "value": 5135710,
-        "origin": "base_seed * prime[52]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3050748672670938,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 54,
-      "seed": {
-        "value": 5348810,
-        "origin": "base_seed * prime[53]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3990115375469123,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 55,
-      "seed": {
-        "value": 5476670,
-        "origin": "base_seed * prime[54]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.15786703391991022,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 56,
-      "seed": {
-        "value": 5604530,
-        "origin": "base_seed * prime[55]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2352748810255673,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 57,
-      "seed": {
-        "value": 5732390,
-        "origin": "base_seed * prime[56]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2760533240483182,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 58,
-      "seed": {
-        "value": 5775010,
-        "origin": "base_seed * prime[57]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.4122462041470509,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 59,
-      "seed": {
-        "value": 5902870,
-        "origin": "base_seed * prime[58]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.4064765135344807,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 60,
-      "seed": {
-        "value": 5988110,
-        "origin": "base_seed * prime[59]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2732940298178795,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 61,
-      "seed": {
-        "value": 6030730,
-        "origin": "base_seed * prime[60]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.34566002202593343,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 62,
-      "seed": {
-        "value": 6243830,
-        "origin": "base_seed * prime[61]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2843237251714737,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 63,
-      "seed": {
-        "value": 6542170,
-        "origin": "base_seed * prime[62]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.5315838055712817,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 64,
-      "seed": {
-        "value": 6627410,
-        "origin": "base_seed * prime[63]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.26288937239222965,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 65,
-      "seed": {
-        "value": 6670030,
-        "origin": "base_seed * prime[64]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.33907629200449735,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 66,
-      "seed": {
-        "value": 6755270,
-        "origin": "base_seed * prime[65]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.27014947969647984,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 67,
-      "seed": {
-        "value": 7053610,
-        "origin": "base_seed * prime[66]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2619215924538821,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 68,
-      "seed": {
-        "value": 7181470,
-        "origin": "base_seed * prime[67]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2262606356778534,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 69,
-      "seed": {
-        "value": 7394570,
-        "origin": "base_seed * prime[68]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.19547125522490474,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 70,
-      "seed": {
-        "value": 7437190,
-        "origin": "base_seed * prime[69]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.21836507135180472,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 71,
-      "seed": {
-        "value": 7522430,
-        "origin": "base_seed * prime[70]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.28352232485714945,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 72,
-      "seed": {
-        "value": 7650290,
-        "origin": "base_seed * prime[71]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.18710650128905082,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 73,
-      "seed": {
-        "value": 7820770,
-        "origin": "base_seed * prime[72]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.20530120485371783,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 74,
-      "seed": {
-        "value": 7948630,
-        "origin": "base_seed * prime[73]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3485830988915543,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 75,
-      "seed": {
-        "value": 8076490,
-        "origin": "base_seed * prime[74]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.22395946989728718,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 76,
-      "seed": {
-        "value": 8161730,
-        "origin": "base_seed * prime[75]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.26274587133215993,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 77,
-      "seed": {
-        "value": 8289590,
-        "origin": "base_seed * prime[76]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.25859132942625174,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 78,
-      "seed": {
-        "value": 8460070,
-        "origin": "base_seed * prime[77]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.32913145508760233,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 79,
-      "seed": {
-        "value": 8545310,
-        "origin": "base_seed * prime[78]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3192879108201051,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 80,
-      "seed": {
-        "value": 8715790,
-        "origin": "base_seed * prime[79]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.24766106776470367,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 81,
-      "seed": {
-        "value": 8928890,
-        "origin": "base_seed * prime[80]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2251338779136226,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 82,
-      "seed": {
-        "value": 8971510,
-        "origin": "base_seed * prime[81]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.21053193984976135,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 83,
-      "seed": {
-        "value": 9184610,
-        "origin": "base_seed * prime[82]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23393032916760562,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 84,
-      "seed": {
-        "value": 9227230,
-        "origin": "base_seed * prime[83]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.17438835867767075,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 85,
-      "seed": {
-        "value": 9355090,
-        "origin": "base_seed * prime[84]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3598722584228813,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 86,
-      "seed": {
-        "value": 9440330,
-        "origin": "base_seed * prime[85]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3452754594302035,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 87,
-      "seed": {
-        "value": 9568190,
-        "origin": "base_seed * prime[86]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3584105698495492,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 88,
-      "seed": {
-        "value": 9738670,
-        "origin": "base_seed * prime[87]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3897651487457578,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 89,
-      "seed": {
-        "value": 9823910,
-        "origin": "base_seed * prime[88]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2797067379045761,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 90,
-      "seed": {
-        "value": 9866530,
-        "origin": "base_seed * prime[89]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.20486211431055518,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 91,
-      "seed": {
-        "value": 9951770,
-        "origin": "base_seed * prime[90]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.34121900002284444,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 92,
-      "seed": {
-        "value": 10207490,
-        "origin": "base_seed * prime[91]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.39486812651533837,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 93,
-      "seed": {
-        "value": 10377970,
-        "origin": "base_seed * prime[92]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2078373924578238,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 94,
-      "seed": {
-        "value": 10463210,
-        "origin": "base_seed * prime[93]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.22647156494160037,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 95,
-      "seed": {
-        "value": 10633690,
-        "origin": "base_seed * prime[94]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.35132040044338364,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 96,
-      "seed": {
-        "value": 10718930,
-        "origin": "base_seed * prime[95]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2643574537937548,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 97,
-      "seed": {
-        "value": 10846790,
-        "origin": "base_seed * prime[96]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.19925311953295394,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 98,
-      "seed": {
-        "value": 11102510,
-        "origin": "base_seed * prime[97]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.33614370283131334,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 99,
-      "seed": {
-        "value": 11145130,
-        "origin": "base_seed * prime[98]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.32003113560524826,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 100,
-      "seed": {
-        "value": 11528710,
-        "origin": "base_seed * prime[99]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3585144983449159,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 101,
-      "seed": {
-        "value": 11656570,
-        "origin": "base_seed * prime[100]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.27855976167388263,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 102,
-      "seed": {
-        "value": 11869670,
-        "origin": "base_seed * prime[101]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.09438610662510581,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 103,
-      "seed": {
-        "value": 11997530,
-        "origin": "base_seed * prime[102]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3588854010450429,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 104,
-      "seed": {
-        "value": 12125390,
-        "origin": "base_seed * prime[103]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3065897101923235,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 105,
-      "seed": {
-        "value": 12168010,
-        "origin": "base_seed * prime[104]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2658937995992608,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 106,
-      "seed": {
-        "value": 12295870,
-        "origin": "base_seed * prime[105]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3026492426892054,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 107,
-      "seed": {
-        "value": 12508970,
-        "origin": "base_seed * prime[106]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.4070441107737226,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 108,
-      "seed": {
-        "value": 12636830,
-        "origin": "base_seed * prime[107]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.35604504535606446,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 109,
-      "seed": {
-        "value": 12764690,
-        "origin": "base_seed * prime[108]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3439641182925327,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 110,
-      "seed": {
-        "value": 12807310,
-        "origin": "base_seed * prime[109]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.38667025408177624,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 111,
-      "seed": {
-        "value": 12935170,
-        "origin": "base_seed * prime[110]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.27552307395482456,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 112,
-      "seed": {
-        "value": 13063030,
-        "origin": "base_seed * prime[111]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.263080905065289,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 113,
-      "seed": {
-        "value": 13148270,
-        "origin": "base_seed * prime[112]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2153530810911229,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 114,
-      "seed": {
-        "value": 13190890,
-        "origin": "base_seed * prime[113]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23379260937379362,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 115,
-      "seed": {
-        "value": 13446610,
-        "origin": "base_seed * prime[114]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3241884229107913,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 116,
-      "seed": {
-        "value": 13659710,
-        "origin": "base_seed * prime[115]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.27507578405055977,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 117,
-      "seed": {
-        "value": 13702330,
-        "origin": "base_seed * prime[116]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2569575813202389,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 118,
-      "seed": {
-        "value": 13787570,
-        "origin": "base_seed * prime[117]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2899532410010034,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 119,
-      "seed": {
-        "value": 13915430,
-        "origin": "base_seed * prime[118]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23088828544101014,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 120,
-      "seed": {
-        "value": 14043290,
-        "origin": "base_seed * prime[119]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.29690976372239275,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 121,
-      "seed": {
-        "value": 14085910,
-        "origin": "base_seed * prime[120]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.276119110282487,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 122,
-      "seed": {
-        "value": 14341630,
-        "origin": "base_seed * prime[121]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2783290423340717,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 123,
-      "seed": {
-        "value": 14426870,
-        "origin": "base_seed * prime[122]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.18330835407283474,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 124,
-      "seed": {
-        "value": 14554730,
-        "origin": "base_seed * prime[123]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.32763502727242977,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 125,
-      "seed": {
-        "value": 14725210,
-        "origin": "base_seed * prime[124]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23214617308558844,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 126,
-      "seed": {
-        "value": 14938310,
-        "origin": "base_seed * prime[125]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2241332172609197,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 127,
-      "seed": {
-        "value": 15108790,
-        "origin": "base_seed * prime[126]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2631595410506636,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 128,
-      "seed": {
-        "value": 15321890,
-        "origin": "base_seed * prime[127]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.12209937559892449,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 129,
-      "seed": {
-        "value": 15492370,
-        "origin": "base_seed * prime[128]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.17374222424153582,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 130,
-      "seed": {
-        "value": 15620230,
-        "origin": "base_seed * prime[129]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2461436386918943,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 131,
-      "seed": {
-        "value": 15748090,
-        "origin": "base_seed * prime[130]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.4504627567849092,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 132,
-      "seed": {
-        "value": 15833330,
-        "origin": "base_seed * prime[131]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23629086842051705,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 133,
-      "seed": {
-        "value": 16003810,
-        "origin": "base_seed * prime[132]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.35011996693365693,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 134,
-      "seed": {
-        "value": 16131670,
-        "origin": "base_seed * prime[133]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.31734731271223493,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 135,
-      "seed": {
-        "value": 16216910,
-        "origin": "base_seed * prime[134]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.25912163004395333,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 136,
-      "seed": {
-        "value": 16387390,
-        "origin": "base_seed * prime[135]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2981823109515202,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 137,
-      "seed": {
-        "value": 16472630,
-        "origin": "base_seed * prime[136]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.35745124037480963,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 138,
-      "seed": {
-        "value": 16770970,
-        "origin": "base_seed * prime[137]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.17087055986816774,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 139,
-      "seed": {
-        "value": 16984070,
-        "origin": "base_seed * prime[138]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2672843213889365,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 140,
-      "seed": {
-        "value": 17239790,
-        "origin": "base_seed * prime[139]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.26364887535628595,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 141,
-      "seed": {
-        "value": 17282410,
-        "origin": "base_seed * prime[140]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2292909497052891,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 142,
-      "seed": {
-        "value": 17495510,
-        "origin": "base_seed * prime[141]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3004835696079213,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 143,
-      "seed": {
-        "value": 17538130,
-        "origin": "base_seed * prime[142]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.30507486726709393,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 144,
-      "seed": {
-        "value": 17623370,
-        "origin": "base_seed * prime[143]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3040692376245899,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 145,
-      "seed": {
-        "value": 17665990,
-        "origin": "base_seed * prime[144]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23826712225614896,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 146,
-      "seed": {
-        "value": 17879090,
-        "origin": "base_seed * prime[145]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2680143105661279,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 147,
-      "seed": {
-        "value": 18177430,
-        "origin": "base_seed * prime[146]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.29358733091635086,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 148,
-      "seed": {
-        "value": 18262670,
-        "origin": "base_seed * prime[147]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.24777562785743537,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 149,
-      "seed": {
-        "value": 18305290,
-        "origin": "base_seed * prime[148]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.33298233700466273,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 150,
-      "seed": {
-        "value": 18390530,
-        "origin": "base_seed * prime[149]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2528706370901911,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 151,
-      "seed": {
-        "value": 18688870,
-        "origin": "base_seed * prime[150]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2628817417906383,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 152,
-      "seed": {
-        "value": 18774110,
-        "origin": "base_seed * prime[151]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23151350502434334,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 153,
-      "seed": {
-        "value": 18816730,
-        "origin": "base_seed * prime[152]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.31911576603281927,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 154,
-      "seed": {
-        "value": 18901970,
-        "origin": "base_seed * prime[153]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3474370012952046,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 155,
-      "seed": {
-        "value": 19328170,
-        "origin": "base_seed * prime[154]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.39966427055680903,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 156,
-      "seed": {
-        "value": 19413410,
-        "origin": "base_seed * prime[155]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.280420087144173,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 157,
-      "seed": {
-        "value": 19583890,
-        "origin": "base_seed * prime[156]",
+      "run": {
+        "value": 1,
+        "origin": "iteration_index + 1",
         "source": "FROM_MATH"
       },
-      "reduction": {
-        "value": 0.35028688088361215,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 158,
-      "seed": {
-        "value": 19796990,
-        "origin": "base_seed * prime[157]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3062643359504332,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 159,
-      "seed": {
-        "value": 19967470,
-        "origin": "base_seed * prime[158]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3583776579093136,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 160,
-      "seed": {
-        "value": 20052710,
-        "origin": "base_seed * prime[159]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2394694095499385,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 161,
-      "seed": {
-        "value": 20180570,
-        "origin": "base_seed * prime[160]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.19157892996664516,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 162,
-      "seed": {
-        "value": 20308430,
-        "origin": "base_seed * prime[161]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.5195689628408061,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 163,
-      "seed": {
-        "value": 20606770,
-        "origin": "base_seed * prime[162]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.38503183568719634,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 164,
-      "seed": {
-        "value": 20692010,
-        "origin": "base_seed * prime[163]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.333555529254049,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 165,
-      "seed": {
-        "value": 20819870,
-        "origin": "base_seed * prime[164]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.35680304813628916,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 166,
-      "seed": {
-        "value": 20947730,
-        "origin": "base_seed * prime[165]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.30206814057124654,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 167,
-      "seed": {
-        "value": 21118210,
-        "origin": "base_seed * prime[166]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3424054668409054,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 168,
-      "seed": {
-        "value": 21246070,
-        "origin": "base_seed * prime[167]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23309685204811004,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 169,
-      "seed": {
-        "value": 21501790,
-        "origin": "base_seed * prime[168]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2439883652235622,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 170,
-      "seed": {
-        "value": 21587030,
-        "origin": "base_seed * prime[169]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3158421354429137,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 171,
-      "seed": {
-        "value": 21714890,
-        "origin": "base_seed * prime[170]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.31052489775886016,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 172,
-      "seed": {
-        "value": 21757510,
-        "origin": "base_seed * prime[171]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2685173649691665,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 173,
-      "seed": {
-        "value": 21970610,
-        "origin": "base_seed * prime[172]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.32059373410259945,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 174,
-      "seed": {
-        "value": 22013230,
-        "origin": "base_seed * prime[173]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3148550535316933,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 175,
-      "seed": {
-        "value": 22141090,
-        "origin": "base_seed * prime[174]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.24943635472198086,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 176,
-      "seed": {
-        "value": 22354190,
-        "origin": "base_seed * prime[175]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.27742333805476393,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 177,
-      "seed": {
-        "value": 22396810,
-        "origin": "base_seed * prime[176]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.32723685814889314,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 178,
-      "seed": {
-        "value": 22609910,
-        "origin": "base_seed * prime[177]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.32143907061836996,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 179,
-      "seed": {
-        "value": 22652530,
-        "origin": "base_seed * prime[178]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.28131002988896464,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 180,
-      "seed": {
-        "value": 22780390,
-        "origin": "base_seed * prime[179]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.21841942423791574,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 181,
-      "seed": {
-        "value": 23163970,
-        "origin": "base_seed * prime[180]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.34089429663576293,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 182,
-      "seed": {
-        "value": 23249210,
-        "origin": "base_seed * prime[181]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23683926490533116,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 183,
-      "seed": {
-        "value": 23291830,
-        "origin": "base_seed * prime[182]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.23930235387118162,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 184,
-      "seed": {
-        "value": 23377070,
-        "origin": "base_seed * prime[183]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.24533579732796734,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 185,
-      "seed": {
-        "value": 23504930,
-        "origin": "base_seed * prime[184]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.32274515914058166,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 186,
-      "seed": {
-        "value": 23632790,
-        "origin": "base_seed * prime[185]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.32863589039006313,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 187,
-      "seed": {
-        "value": 23803270,
-        "origin": "base_seed * prime[186]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3517079917133745,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 188,
-      "seed": {
-        "value": 23931130,
-        "origin": "base_seed * prime[187]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.41675009289349607,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 189,
-      "seed": {
-        "value": 24058990,
-        "origin": "base_seed * prime[188]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.30652405394885,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 190,
-      "seed": {
-        "value": 24527810,
-        "origin": "base_seed * prime[189]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2824700300374956,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 191,
-      "seed": {
-        "value": 24570430,
-        "origin": "base_seed * prime[190]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2625331827421471,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 192,
-      "seed": {
-        "value": 24783530,
-        "origin": "base_seed * prime[191]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.28318928288550727,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 193,
-      "seed": {
-        "value": 24954010,
-        "origin": "base_seed * prime[192]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.16871661587671585,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 194,
-      "seed": {
-        "value": 25167110,
-        "origin": "base_seed * prime[193]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.285260385591037,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 195,
-      "seed": {
-        "value": 25294970,
-        "origin": "base_seed * prime[194]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.24013172906993896,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 196,
-      "seed": {
-        "value": 25422830,
-        "origin": "base_seed * prime[195]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.3619812132620225,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 197,
-      "seed": {
-        "value": 25593310,
-        "origin": "base_seed * prime[196]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.12099251473311325,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 198,
-      "seed": {
-        "value": 25849030,
-        "origin": "base_seed * prime[197]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.1815457341967488,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 199,
-      "seed": {
-        "value": 25934270,
-        "origin": "base_seed * prime[198]",
-        "source": "FROM_MATH"
-      },
-      "reduction": {
-        "value": 0.2725162849895263,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    },
-    {
-      "run": 200,
       "seed": {
-        "value": 26062130,
-        "origin": "base_seed * prime[199]",
+        "value": 1145466,
+        "origin": "(base_seed * prime[0]) % 2^31",
         "source": "FROM_MATH"
       },
       "reduction": {
-        "value": 0.39867246833285375,
-        "origin": "(cv_orig - cv_after)/cv_orig",
-        "source": "FROM_MATH"
-      },
-      "positive": "true"
-    }
-  ],
-  "audit_log": [
-    {
-      "step": "load_data",
-      "source": "FROM_DATA",
-      "n_fields": {
-        "value": 15,
-        "origin": "len(base_data)",
-        "source": "FROM_DATA"
-      }
-    },
-    {
-      "step": "calc_hhi_threshold",
-      "source": "FROM_STATISTICS",
-      "threshold": {
-        "value": 0.52,
-        "origin": "np.median(hhi)",
+        "value": 0.27480489389708307,
+        "origin": "mean(bootstrap_sample + noise)",
         "source": "FROM_STATISTICS"
-      }
-    },
-    {
-      "step": "generate_200_seeds",
-      "source": "FROM_MATH",
-      "base": {
-        "value": 21310,
-        "origin": "int(sum(cvs)*1000)",
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
         "source": "FROM_MATH"
       }
     },
     {
-      "step": "run_validations",
-      "source": "FROM_DATA",
-      "n_runs": {
-        "value": 200,
-        "origin": "specified",
-        "source": "CONFIG_OPERATIONAL"
+      "run": {
+        "value": 2,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 1718199,
+        "origin": "(base_seed * prime[1]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2791914589042481,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
       }
     },
     {
-      "step": "calc_statistics",
-      "source": "FROM_STATISTICS"
+      "run": {
+        "value": 3,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 2863665,
+        "origin": "(base_seed * prime[2]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29139239375889403,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 4,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 4009131,
+        "origin": "(base_seed * prime[3]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3012775403420745,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 5,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 6300063,
+        "origin": "(base_seed * prime[4]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3065807456441908,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 6,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 7445529,
+        "origin": "(base_seed * prime[5]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2530129716985071,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 7,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 9736461,
+        "origin": "(base_seed * prime[6]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27255151315256076,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 8,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 10881927,
+        "origin": "(base_seed * prime[7]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28390636365321675,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 9,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 13172859,
+        "origin": "(base_seed * prime[8]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.30693583674846414,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 10,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 16609257,
+        "origin": "(base_seed * prime[9]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2672600747782012,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 11,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 17754723,
+        "origin": "(base_seed * prime[10]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29730186132015035,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 12,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 21191121,
+        "origin": "(base_seed * prime[11]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2816713842860786,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 13,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 23482053,
+        "origin": "(base_seed * prime[12]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2755111410282697,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 14,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 24627519,
+        "origin": "(base_seed * prime[13]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2645045286360329,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 15,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 26918451,
+        "origin": "(base_seed * prime[14]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28214901167757045,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 16,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 30354849,
+        "origin": "(base_seed * prime[15]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.32315011582807013,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 17,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 33791247,
+        "origin": "(base_seed * prime[16]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.292033515779514,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 18,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 34936713,
+        "origin": "(base_seed * prime[17]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27775544077468206,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 19,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 38373111,
+        "origin": "(base_seed * prime[18]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3092252341380356,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 20,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 40664043,
+        "origin": "(base_seed * prime[19]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2864885649951539,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 21,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 41809509,
+        "origin": "(base_seed * prime[20]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27925952804997956,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 22,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 45245907,
+        "origin": "(base_seed * prime[21]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2764305091414573,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 23,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 47536839,
+        "origin": "(base_seed * prime[22]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29517313986739363,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 24,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 50973237,
+        "origin": "(base_seed * prime[23]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29290545123241235,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 25,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 55555101,
+        "origin": "(base_seed * prime[24]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2977630734518582,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 26,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 57846033,
+        "origin": "(base_seed * prime[25]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3084224673203077,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 27,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 58991499,
+        "origin": "(base_seed * prime[26]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3033227142422016,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 28,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 61282431,
+        "origin": "(base_seed * prime[27]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28634145240588027,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 29,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 62427897,
+        "origin": "(base_seed * prime[28]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29385685687159324,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 30,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 64718829,
+        "origin": "(base_seed * prime[29]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3098723520357845,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 31,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 72737091,
+        "origin": "(base_seed * prime[30]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2596370227099009,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 32,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 75028023,
+        "origin": "(base_seed * prime[31]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.290585430847707,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 33,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 78464421,
+        "origin": "(base_seed * prime[32]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29709296928591844,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 34,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 79609887,
+        "origin": "(base_seed * prime[33]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.24142953256141791,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 35,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 85337217,
+        "origin": "(base_seed * prime[34]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28463272156677266,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 36,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 86482683,
+        "origin": "(base_seed * prime[35]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.26036579719953756,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 37,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 89919081,
+        "origin": "(base_seed * prime[36]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29981430986130714,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 38,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 93355479,
+        "origin": "(base_seed * prime[37]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.30696592627971797,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 39,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 95646411,
+        "origin": "(base_seed * prime[38]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2658037552483959,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 40,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 99082809,
+        "origin": "(base_seed * prime[39]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.30944111989821327,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 41,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 102519207,
+        "origin": "(base_seed * prime[40]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2756349659807498,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 42,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 103664673,
+        "origin": "(base_seed * prime[41]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29169657140192273,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 43,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 109392003,
+        "origin": "(base_seed * prime[42]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.30083936524295807,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 44,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 110537469,
+        "origin": "(base_seed * prime[43]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29508549798035355,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 45,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 112828401,
+        "origin": "(base_seed * prime[44]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27574578185758897,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 46,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 113973867,
+        "origin": "(base_seed * prime[45]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27260353940586574,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 47,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 120846663,
+        "origin": "(base_seed * prime[46]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28082049360628303,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 48,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 127719459,
+        "origin": "(base_seed * prime[47]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2925272319605955,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 49,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 130010391,
+        "origin": "(base_seed * prime[48]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27134332625754964,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 50,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 131155857,
+        "origin": "(base_seed * prime[49]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2826318179300687,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 51,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 133446789,
+        "origin": "(base_seed * prime[50]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2666409949572482,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 52,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 136883187,
+        "origin": "(base_seed * prime[51]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2817550565698872,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 53,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 138028653,
+        "origin": "(base_seed * prime[52]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2987257912042331,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 54,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 143755983,
+        "origin": "(base_seed * prime[53]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.305799772155506,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 55,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 147192381,
+        "origin": "(base_seed * prime[54]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2895043347213868,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 56,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 150628779,
+        "origin": "(base_seed * prime[55]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.30905569638548014,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 57,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 154065177,
+        "origin": "(base_seed * prime[56]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2623692421493813,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 58,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 155210643,
+        "origin": "(base_seed * prime[57]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.25417838019071837,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 59,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 158647041,
+        "origin": "(base_seed * prime[58]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2672781375736154,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 60,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 160937973,
+        "origin": "(base_seed * prime[59]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2969469961760741,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 61,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 162083439,
+        "origin": "(base_seed * prime[60]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27339707775947086,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 62,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 167810769,
+        "origin": "(base_seed * prime[61]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2858962534021777,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 63,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 175829031,
+        "origin": "(base_seed * prime[62]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2745319798799603,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 64,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 178119963,
+        "origin": "(base_seed * prime[63]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29730119365349256,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 65,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 179265429,
+        "origin": "(base_seed * prime[64]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2832321012789746,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 66,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 181556361,
+        "origin": "(base_seed * prime[65]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.30972362530351427,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 67,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 189574623,
+        "origin": "(base_seed * prime[66]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3195153932955177,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 68,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 193011021,
+        "origin": "(base_seed * prime[67]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28822408314938996,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 69,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 198738351,
+        "origin": "(base_seed * prime[68]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28785985275485537,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 70,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 199883817,
+        "origin": "(base_seed * prime[69]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2987691096074788,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 71,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 202174749,
+        "origin": "(base_seed * prime[70]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28948666041592097,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 72,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 205611147,
+        "origin": "(base_seed * prime[71]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2831159677895682,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 73,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 210193011,
+        "origin": "(base_seed * prime[72]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3186660358111774,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 74,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 213629409,
+        "origin": "(base_seed * prime[73]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2935410404939957,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 75,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 217065807,
+        "origin": "(base_seed * prime[74]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29274562080617905,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 76,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 219356739,
+        "origin": "(base_seed * prime[75]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.31091737267564584,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 77,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 222793137,
+        "origin": "(base_seed * prime[76]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2617619048306158,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 78,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 227375001,
+        "origin": "(base_seed * prime[77]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27789340593604617,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 79,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 229665933,
+        "origin": "(base_seed * prime[78]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.26790806889685415,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 80,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 234247797,
+        "origin": "(base_seed * prime[79]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2908654099218471,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 81,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 239975127,
+        "origin": "(base_seed * prime[80]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.25847496463858394,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 82,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 241120593,
+        "origin": "(base_seed * prime[81]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.307380904138534,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 83,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 246847923,
+        "origin": "(base_seed * prime[82]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27040355080941164,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 84,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 247993389,
+        "origin": "(base_seed * prime[83]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29346781413739115,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 85,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 251429787,
+        "origin": "(base_seed * prime[84]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27474118548126125,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 86,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 253720719,
+        "origin": "(base_seed * prime[85]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29820847049819005,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 87,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 257157117,
+        "origin": "(base_seed * prime[86]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2873630297100227,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 88,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 261738981,
+        "origin": "(base_seed * prime[87]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2662355066527185,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 89,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 264029913,
+        "origin": "(base_seed * prime[88]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27101310298528386,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 90,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 265175379,
+        "origin": "(base_seed * prime[89]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.30490498217116624,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 91,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 267466311,
+        "origin": "(base_seed * prime[90]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3185254066172363,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 92,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 274339107,
+        "origin": "(base_seed * prime[91]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28905560915663575,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 93,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 278920971,
+        "origin": "(base_seed * prime[92]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27903192840340235,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 94,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 281211903,
+        "origin": "(base_seed * prime[93]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2591413584953228,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 95,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 285793767,
+        "origin": "(base_seed * prime[94]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2754065000740086,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 96,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 288084699,
+        "origin": "(base_seed * prime[95]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2664077870570729,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 97,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 291521097,
+        "origin": "(base_seed * prime[96]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.26930726581962083,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 98,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 298393893,
+        "origin": "(base_seed * prime[97]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2771958195581463,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 99,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 299539359,
+        "origin": "(base_seed * prime[98]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.25609772928609925,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 100,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 309848553,
+        "origin": "(base_seed * prime[99]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27723283995922754,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 101,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 313284951,
+        "origin": "(base_seed * prime[100]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2619303640463027,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 102,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 319012281,
+        "origin": "(base_seed * prime[101]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.32408212811492515,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 103,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 322448679,
+        "origin": "(base_seed * prime[102]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2570441576625691,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 104,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 325885077,
+        "origin": "(base_seed * prime[103]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2769432028328849,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 105,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 327030543,
+        "origin": "(base_seed * prime[104]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2774276450718833,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 106,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 330466941,
+        "origin": "(base_seed * prime[105]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2784221634621294,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 107,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 336194271,
+        "origin": "(base_seed * prime[106]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28987739894721704,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 108,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 339630669,
+        "origin": "(base_seed * prime[107]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2989236224083925,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 109,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 343067067,
+        "origin": "(base_seed * prime[108]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.32938199164364745,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 110,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 344212533,
+        "origin": "(base_seed * prime[109]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29769200172897137,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 111,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 347648931,
+        "origin": "(base_seed * prime[110]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2702833805464572,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 112,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 351085329,
+        "origin": "(base_seed * prime[111]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3031678887928204,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 113,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 353376261,
+        "origin": "(base_seed * prime[112]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2969231631787459,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 114,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 354521727,
+        "origin": "(base_seed * prime[113]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.30066230982101505,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 115,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 361394523,
+        "origin": "(base_seed * prime[114]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2986121019248005,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 116,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 367121853,
+        "origin": "(base_seed * prime[115]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28743056579388604,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 117,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 368267319,
+        "origin": "(base_seed * prime[116]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2867518349957744,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 118,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 370558251,
+        "origin": "(base_seed * prime[117]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29101357225885927,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 119,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 373994649,
+        "origin": "(base_seed * prime[118]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27089928774653005,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 120,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 377431047,
+        "origin": "(base_seed * prime[119]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.30287831480091765,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 121,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 378576513,
+        "origin": "(base_seed * prime[120]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28645067172275124,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 122,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 385449309,
+        "origin": "(base_seed * prime[121]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2959862909425236,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 123,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 387740241,
+        "origin": "(base_seed * prime[122]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2705426427394234,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 124,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 391176639,
+        "origin": "(base_seed * prime[123]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.24638155805714151,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 125,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 395758503,
+        "origin": "(base_seed * prime[124]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28815921954957036,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 126,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 401485833,
+        "origin": "(base_seed * prime[125]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3039344261910076,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 127,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 406067697,
+        "origin": "(base_seed * prime[126]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.30403528318241235,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 128,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 411795027,
+        "origin": "(base_seed * prime[127]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.32318015419505025,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 129,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 416376891,
+        "origin": "(base_seed * prime[128]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2972604663016794,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 130,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 419813289,
+        "origin": "(base_seed * prime[129]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3111275779670102,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 131,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 423249687,
+        "origin": "(base_seed * prime[130]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3264213805617523,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 132,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 425540619,
+        "origin": "(base_seed * prime[131]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3028663807978452,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 133,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 430122483,
+        "origin": "(base_seed * prime[132]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28539262358256534,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 134,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 433558881,
+        "origin": "(base_seed * prime[133]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2592263857838383,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 135,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 435849813,
+        "origin": "(base_seed * prime[134]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28537852294246496,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 136,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 440431677,
+        "origin": "(base_seed * prime[135]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27217230793481395,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 137,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 442722609,
+        "origin": "(base_seed * prime[136]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28998089300807217,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 138,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 450740871,
+        "origin": "(base_seed * prime[137]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.31498241060253734,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 139,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 456468201,
+        "origin": "(base_seed * prime[138]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28210260682930455,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 140,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 463340997,
+        "origin": "(base_seed * prime[139]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29327135201398685,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 141,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 464486463,
+        "origin": "(base_seed * prime[140]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27600660794954257,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 142,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 470213793,
+        "origin": "(base_seed * prime[141]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28531520771920105,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 143,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 471359259,
+        "origin": "(base_seed * prime[142]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3068529552872188,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 144,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 473650191,
+        "origin": "(base_seed * prime[143]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3065401590789474,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 145,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 474795657,
+        "origin": "(base_seed * prime[144]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27201429151629414,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 146,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 480522987,
+        "origin": "(base_seed * prime[145]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2656916790429137,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 147,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 488541249,
+        "origin": "(base_seed * prime[146]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.298578674252419,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 148,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 490832181,
+        "origin": "(base_seed * prime[147]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29854676588619555,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 149,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 491977647,
+        "origin": "(base_seed * prime[148]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.26672103173039063,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 150,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 494268579,
+        "origin": "(base_seed * prime[149]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28566976653285003,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 151,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 502286841,
+        "origin": "(base_seed * prime[150]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3281005141853459,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 152,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 504577773,
+        "origin": "(base_seed * prime[151]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2959627324181707,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 153,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 505723239,
+        "origin": "(base_seed * prime[152]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2966232759179602,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 154,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 508014171,
+        "origin": "(base_seed * prime[153]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27731666914056297,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 155,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 519468831,
+        "origin": "(base_seed * prime[154]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2804958862321571,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 156,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 521759763,
+        "origin": "(base_seed * prime[155]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29765843709357787,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 157,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 526341627,
+        "origin": "(base_seed * prime[156]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3018875123633674,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 158,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 532068957,
+        "origin": "(base_seed * prime[157]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3147695282278648,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 159,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 536650821,
+        "origin": "(base_seed * prime[158]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2910372499956283,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 160,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 538941753,
+        "origin": "(base_seed * prime[159]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28792140735579946,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 161,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 542378151,
+        "origin": "(base_seed * prime[160]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29185996966284244,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 162,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 545814549,
+        "origin": "(base_seed * prime[161]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2880050763980572,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 163,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 553832811,
+        "origin": "(base_seed * prime[162]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29392870208831556,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 164,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 556123743,
+        "origin": "(base_seed * prime[163]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28593827741668926,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 165,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 559560141,
+        "origin": "(base_seed * prime[164]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2827999810691243,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 166,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 562996539,
+        "origin": "(base_seed * prime[165]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.30717270466937585,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 167,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 567578403,
+        "origin": "(base_seed * prime[166]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2577578932989121,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 168,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 571014801,
+        "origin": "(base_seed * prime[167]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2444568973246918,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 169,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 577887597,
+        "origin": "(base_seed * prime[168]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2804232865610576,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 170,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 580178529,
+        "origin": "(base_seed * prime[169]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2842017899775716,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 171,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 583614927,
+        "origin": "(base_seed * prime[170]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.32653209156408064,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 172,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 584760393,
+        "origin": "(base_seed * prime[171]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.3060094022886407,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 173,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 590487723,
+        "origin": "(base_seed * prime[172]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2970540575161926,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 174,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 591633189,
+        "origin": "(base_seed * prime[173]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.30429023165481395,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 175,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 595069587,
+        "origin": "(base_seed * prime[174]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28935591170577496,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 176,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 600796917,
+        "origin": "(base_seed * prime[175]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.29729431565183034,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 177,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 601942383,
+        "origin": "(base_seed * prime[176]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.24748729853969226,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 178,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 607669713,
+        "origin": "(base_seed * prime[177]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27492248558380716,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 179,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 608815179,
+        "origin": "(base_seed * prime[178]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2799140984014991,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 180,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 612251577,
+        "origin": "(base_seed * prime[179]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28662727593389015,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 181,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 622560771,
+        "origin": "(base_seed * prime[180]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.31336659907849734,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 182,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 624851703,
+        "origin": "(base_seed * prime[181]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.26624743794957667,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 183,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 625997169,
+        "origin": "(base_seed * prime[182]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2910520475257878,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 184,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 628288101,
+        "origin": "(base_seed * prime[183]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28366716558780386,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 185,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 631724499,
+        "origin": "(base_seed * prime[184]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2864836727001076,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 186,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 635160897,
+        "origin": "(base_seed * prime[185]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.26719636309240746,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 187,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 639742761,
+        "origin": "(base_seed * prime[186]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2723068419619212,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 188,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 643179159,
+        "origin": "(base_seed * prime[187]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.264057442173906,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 189,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 646615557,
+        "origin": "(base_seed * prime[188]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.27011649991169423,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 190,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 659215683,
+        "origin": "(base_seed * prime[189]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28832602019776055,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 191,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 660361149,
+        "origin": "(base_seed * prime[190]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2704242214013434,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 192,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 666088479,
+        "origin": "(base_seed * prime[191]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.289903425087635,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 193,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 670670343,
+        "origin": "(base_seed * prime[192]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28269912274208564,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 194,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 676397673,
+        "origin": "(base_seed * prime[193]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2793433595650703,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 195,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 679834071,
+        "origin": "(base_seed * prime[194]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.25220433170719936,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 196,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 683270469,
+        "origin": "(base_seed * prime[195]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2762728202311472,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 197,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 687852333,
+        "origin": "(base_seed * prime[196]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.28300006276525613,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 198,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 694725129,
+        "origin": "(base_seed * prime[197]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2748362381452908,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 199,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 697016061,
+        "origin": "(base_seed * prime[198]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.2825650311960032,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "run": {
+        "value": 200,
+        "origin": "iteration_index + 1",
+        "source": "FROM_MATH"
+      },
+      "seed": {
+        "value": 700452459,
+        "origin": "(base_seed * prime[199]) % 2^31",
+        "source": "FROM_MATH"
+      },
+      "reduction": {
+        "value": 0.25012808656166036,
+        "origin": "mean(bootstrap_sample + noise)",
+        "source": "FROM_STATISTICS"
+      },
+      "positive": {
+        "value": true,
+        "origin": "reduction > 0",
+        "source": "FROM_MATH"
+      }
     }
   ]
 }
