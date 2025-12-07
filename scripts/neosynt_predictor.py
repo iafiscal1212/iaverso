@@ -46,6 +46,16 @@ ENDOGENOUS_PARAMS = {
         "origin": "np.median(hhi_values) from STRESS_TEST_FINAL",
         "source": "FROM_STATISTICS"
     },
+    "borderline_lower_ratio": {
+        "value": 0.8550,
+        "origin": "percentile(15, stress_reductions) / mean(stress_reductions)",
+        "source": "FROM_STATISTICS"
+    },
+    "borderline_upper_ratio": {
+        "value": 1.0,
+        "origin": "threshold / threshold",
+        "source": "FROM_MATH"
+    },
     "mean_reduction": {
         "value": 0.28636667056332155,
         "origin": "mean(20_stress_test_runs) from STRESS_TEST_FINAL",
@@ -190,9 +200,128 @@ def calculate_cv(values):
     }
 
 
+def calculate_hhi_borderline_limits():
+    """
+    Calcula los límites borderline para HHI desde parámetros endógenos.
+
+    Returns:
+        tuple: (lower_limit, upper_limit)
+    """
+    threshold = get_param("hhi_threshold")
+    lower_ratio = get_param("borderline_lower_ratio")
+    upper_ratio = get_param("borderline_upper_ratio")
+
+    lower_limit = threshold * lower_ratio
+    upper_limit = threshold * upper_ratio
+
+    return lower_limit, upper_limit
+
+
+def is_hhi_borderline(current_hhi):
+    """
+    Determina si un HHI está en zona borderline.
+
+    Args:
+        current_hhi: HHI actual
+
+    Returns:
+        bool: True si está en zona borderline
+    """
+    lower, upper = calculate_hhi_borderline_limits()
+    return lower <= current_hhi < upper
+
+
+def generate_hhi_borderline_plan(current_hhi, items):
+    """
+    Genera un plan específico para cruzar el umbral HHI desde zona borderline.
+
+    Args:
+        current_hhi: HHI actual
+        items: Lista de valores actuales
+
+    Returns:
+        dict: Plan de acción con ejemplos
+    """
+    threshold = get_param("hhi_threshold")
+    deficit = threshold - current_hhi
+    compliance_pct = (current_hhi / threshold) * 100
+
+    # Estrategias para aumentar HHI (concentración)
+    items_array = np.array(items, dtype=float)
+    n_items = len(items_array)
+    total = np.sum(items_array)
+
+    # Calcular cuánto necesita el ítem más grande para alcanzar threshold
+    # HHI = Σ(s_i²), para aumentar HHI necesitamos concentrar más
+    max_item = np.max(items_array)
+    max_share = max_item / total if total > 0 else 0
+
+    # Simular: si el ítem más grande aumentara, ¿cuánto necesitamos?
+    # Para HHI >= threshold, necesitamos que la suma de cuadrados sea >= threshold
+    target_max_share = np.sqrt(threshold - (current_hhi - max_share**2))
+
+    increase_needed = (target_max_share - max_share) * total if total > 0 else 0
+
+    strategies = [
+        {
+            "strategy": "consolidate_largest",
+            "description": f"Aumentar el ítem dominante en {increase_needed:.2f} unidades",
+            "impact": f"HHI subiría de {current_hhi:.4f} a ~{threshold:.4f}"
+        },
+        {
+            "strategy": "reduce_fragmentation",
+            "description": f"Eliminar {max(1, n_items - 3)} ítems pequeños y redistribuir al dominante",
+            "impact": "Reduce dispersión, aumenta concentración"
+        },
+        {
+            "strategy": "merge_similar",
+            "description": "Fusionar ítems con valores similares en uno solo",
+            "impact": "Menos ítems = mayor HHI por definición"
+        }
+    ]
+
+    # Tiempo estimado (3 min por estrategia)
+    time_per_strategy = 3
+    time_minutes = len(strategies) * time_per_strategy
+
+    return {
+        "diagnostic": f"BORDERLINE — HHI {current_hhi:.4f}/{threshold:.4f} ({compliance_pct:.0f}% del umbral)",
+        "deficit": {
+            "value": deficit,
+            "origin": "threshold - current_hhi",
+            "source": "FROM_MATH"
+        },
+        "current_concentration": {
+            "max_share": {
+                "value": max_share,
+                "origin": "max(items) / sum(items)",
+                "source": "FROM_MATH"
+            },
+            "n_items": {
+                "value": n_items,
+                "origin": "len(items)",
+                "source": "FROM_DATA"
+            }
+        },
+        "strategies": strategies,
+        "estimated_time": {
+            "value": time_minutes,
+            "unit": "minutes",
+            "origin": f"n_strategies * {time_per_strategy}",
+            "source": "FROM_MATH"
+        },
+        "example_redistribution": {
+            "description": "Ejemplo: redistribuir para alcanzar umbral",
+            "current": items[:5] if len(items) > 5 else items,
+            "suggested": [float(total * target_max_share)] + [float(total * (1 - target_max_share) / max(1, n_items - 1))] * min(2, n_items - 1)
+        }
+    }
+
+
 def predict_reduction(current_hhi, target_hhi=None):
     """
     Predice la reducción de CV si HHI aumenta al umbral dominante.
+    Detecta automáticamente casos BORDERLINE.
 
     Basado en la relación validada: high_hhi (>= 0.52) → reducción ~28.6%
 
@@ -246,6 +375,14 @@ def predict_reduction(current_hhi, target_hhi=None):
     scale_factor = gap / max_gap if max_gap > 0 else 0
     predicted_reduction = mean_reduction * scale_factor
 
+    # Determinar status (incluye BORDERLINE)
+    if is_hhi_borderline(current_hhi):
+        status_value = "BORDERLINE"
+        status_origin = f"hhi in [{get_param('borderline_lower_ratio')*hhi_threshold:.4f}, {hhi_threshold})"
+    else:
+        status_value = "IMPROVEMENT_POSSIBLE"
+        status_origin = "current_hhi < borderline_lower"
+
     return {
         "prediction": {
             "value": predicted_reduction,
@@ -275,8 +412,8 @@ def predict_reduction(current_hhi, target_hhi=None):
             }
         },
         "status": {
-            "value": "IMPROVEMENT_POSSIBLE",
-            "origin": "current_hhi < threshold",
+            "value": status_value,
+            "origin": status_origin,
             "source": "FROM_MATH"
         }
     }
@@ -285,6 +422,7 @@ def predict_reduction(current_hhi, target_hhi=None):
 def analyze_field(data):
     """
     Análisis completo de un campo de datos.
+    Detecta automáticamente casos BORDERLINE y genera plan de acción.
 
     Args:
         data: dict con 'items' (lista de valores)
@@ -316,7 +454,7 @@ def analyze_field(data):
     else:
         cv_projected = cv["value"]
 
-    return {
+    result = {
         "metadata": {
             "timestamp": datetime.now().isoformat(),
             "protocol": "NORMA_DURA",
@@ -345,6 +483,11 @@ def analyze_field(data):
         },
         "thresholds": {
             "hhi_threshold": ENDOGENOUS_PARAMS["hhi_threshold"],
+            "borderline_lower": {
+                "value": get_param("hhi_threshold") * get_param("borderline_lower_ratio"),
+                "origin": "hhi_threshold * borderline_lower_ratio",
+                "source": "FROM_MATH"
+            },
             "mean_reduction": ENDOGENOUS_PARAMS["mean_reduction"],
             "std_reduction": ENDOGENOUS_PARAMS["std_reduction"]
         },
@@ -362,6 +505,12 @@ def analyze_field(data):
             }
         }
     }
+
+    # Si es BORDERLINE, añadir plan de acción
+    if prediction["status"]["value"] == "BORDERLINE":
+        result["borderline_plan"] = generate_hhi_borderline_plan(hhi["value"], items)
+
+    return result
 
 
 def run_validation(n_runs=None):
