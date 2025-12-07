@@ -973,19 +973,58 @@ def validate_multiple_files(filepaths: List[Path]) -> List[Dict]:
     return results
 
 
+def get_default_validation_files() -> List[Path]:
+    """Retorna lista de archivos de validación por defecto."""
+    # Detectar directorio base del script
+    script_dir = Path(__file__).parent.parent  # NEO_EVA/
+
+    default_files = [
+        # NEO_EVA
+        script_dir / "results" / "synaksis_200_validations.json",
+        script_dir / "results" / "STRESS_TEST_FINAL.json",
+        script_dir / "results" / "CAUSAL_FRAMEWORK_MINIMAL.json",
+        # NEOSYNT
+        Path("/root/NEOSYNT/results/scaling_brain_v4_results.json"),
+        Path("/root/NEOSYNT/results/cerebro_experiments_results.json"),
+        Path("/root/NEOSYNT/experiments/multiagent_results.json"),
+        # SYNAKSIS_LAB
+        Path("/root/SYNAKSIS_LAB/reports/evidence/hurricanes/complete_analysis.json"),
+        Path("/root/SYNAKSIS_LAB/reports/evidence/cosmic_rays/full_analysis.json"),
+        Path("/root/SYNAKSIS_LAB/reports/evidence/block_x/block_x_all_domains.json"),
+    ]
+
+    # Filtrar solo los que existen
+    return [f for f in default_files if f.exists()]
+
+
 def main():
     """Punto de entrada principal."""
     if len(sys.argv) < 2:
-        print(__doc__)
-        print("\nUso:")
-        print("  python synaksis_lab.py experimento.json")
-        print("  python synaksis_lab.py directorio/")
-        print("  python synaksis_lab.py archivo1.json archivo2.json ...")
-        print("  python synaksis_lab.py experimento.json --mark")
-        print("  python synaksis_lab.py experimento.json --report")
-        print("  python synaksis_lab.py --status")
-        print("  python synaksis_lab.py --batch archivo1.json archivo2.json ...")
-        return 0
+        # Sin argumentos: ejecutar validación de archivos por defecto
+        default_files = get_default_validation_files()
+
+        if default_files:
+            print(__doc__)
+            print(f"\n🔍 Ejecutando validación automática de {len(default_files)} archivos...\n")
+            results = validate_multiple_files(default_files)
+            stats = print_detailed_summary(results)
+
+            if stats["chaotic"] > 0:
+                return 1
+            elif stats["borderline"] > 0:
+                return 2
+            return 0
+        else:
+            print(__doc__)
+            print("\nUso:")
+            print("  python synaksis_lab.py experimento.json")
+            print("  python synaksis_lab.py directorio/")
+            print("  python synaksis_lab.py archivo1.json archivo2.json ...")
+            print("  python synaksis_lab.py experimento.json --mark")
+            print("  python synaksis_lab.py experimento.json --report")
+            print("  python synaksis_lab.py --status")
+            print("  python synaksis_lab.py --batch archivo1.json archivo2.json ...")
+            return 0
 
     args = sys.argv[1:]
 
