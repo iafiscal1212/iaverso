@@ -793,6 +793,186 @@ def print_status():
     print("=" * 70)
 
 
+def print_summary_table(results: List[Dict], title: str = "RESUMEN"):
+    """Imprime tabla resumen de múltiples validaciones."""
+    print(f"\n{'═' * 90}")
+    print(f"  {title}")
+    print(f"{'═' * 90}")
+
+    # Header
+    print(f"\n  {'Archivo':<40} {'Estado':<12} {'NORMA':<10} {'SYNAKSIS':<10} {'NEOSYNT':<10}")
+    print(f"  {'-' * 40} {'-' * 12} {'-' * 10} {'-' * 10} {'-' * 10}")
+
+    # Rows
+    validated = 0
+    borderline = 0
+    chaotic = 0
+
+    for r in results:
+        if "error" in r:
+            filename = Path(r['file']).name[:38]
+            print(f"  {filename:<40} {'ERROR':<12} {'-':<10} {'-':<10} {'-':<10}")
+            continue
+
+        filename = Path(r['file']).name
+        if len(filename) > 38:
+            filename = filename[:35] + "..."
+
+        status = r['unified_status']
+        status_icon = {"VALIDADO": "✓ VALIDADO", "BORDERLINE": "⚠ BORDER", "CAÓTICO": "✗ CAÓTICO"}.get(status, status)
+
+        # NORMA DURA
+        nd = r['frameworks'].get('norma_dura', {})
+        nd_val = nd.get('provenance_count', {}).get('value', 0)
+        nd_thresh = nd.get('threshold', 94)
+        nd_status = nd.get('status', 'N/A')
+        nd_icon = {"VALID": "✓", "BORDERLINE": "⚠", "INVALID": "✗"}.get(nd_status, "-")
+        nd_str = f"{nd_icon} {nd_val}/{nd_thresh}"
+
+        # SYNAKSIS
+        syn = r['frameworks'].get('synaksis', {})
+        syn_val = syn.get('string_count', {}).get('value', 0)
+        syn_thresh = syn.get('threshold', 114)
+        syn_status = syn.get('status', 'N/A')
+        syn_icon = {"VALID": "✓", "BORDERLINE": "⚠", "INVALID": "✗"}.get(syn_status, "-")
+        syn_str = f"{syn_icon} {syn_val}/{syn_thresh}"
+
+        # NEOSYNT
+        neo = r['frameworks'].get('neosynt', {})
+        neo_status = neo.get('status', 'N/A')
+        if neo_status != 'N/A':
+            neo_hhi = neo.get('hhi', {}).get('value', 0)
+            neo_thresh = neo.get('threshold', 0.52)
+            neo_icon = {"VALID": "✓", "BORDERLINE": "⚠", "INVALID": "✗"}.get(neo_status, "-")
+            neo_str = f"{neo_icon} {neo_hhi:.2f}"
+        else:
+            neo_str = "- N/A"
+
+        print(f"  {filename:<40} {status_icon:<12} {nd_str:<10} {syn_str:<10} {neo_str:<10}")
+
+        if status == "VALIDADO":
+            validated += 1
+        elif status == "BORDERLINE":
+            borderline += 1
+        else:
+            chaotic += 1
+
+    # Totales
+    total = len(results)
+    print(f"  {'-' * 40} {'-' * 12} {'-' * 10} {'-' * 10} {'-' * 10}")
+    print(f"  {'TOTAL':<40} {total:<12}")
+
+    # Estadísticas
+    print(f"\n{'─' * 90}")
+    print("  ESTADÍSTICAS")
+    print(f"{'─' * 90}")
+
+    pct_val = (validated / total * 100) if total > 0 else 0
+    pct_bor = (borderline / total * 100) if total > 0 else 0
+    pct_cha = (chaotic / total * 100) if total > 0 else 0
+
+    # Barra visual
+    bar_width = 50
+    bar_val = int(bar_width * validated / total) if total > 0 else 0
+    bar_bor = int(bar_width * borderline / total) if total > 0 else 0
+    bar_cha = bar_width - bar_val - bar_bor
+
+    print(f"\n  ✓ VALIDADO:   {validated:>3} ({pct_val:>5.1f}%)  {'█' * bar_val}")
+    print(f"  ⚠ BORDERLINE: {borderline:>3} ({pct_bor:>5.1f}%)  {'▒' * bar_bor}")
+    print(f"  ✗ CAÓTICO:    {chaotic:>3} ({pct_cha:>5.1f}%)  {'░' * bar_cha}")
+
+    # Umbrales de referencia
+    print(f"\n{'─' * 90}")
+    print("  UMBRALES DE REFERENCIA")
+    print(f"{'─' * 90}")
+    print(f"  NORMA DURA:  ≥{get_param('norma_dura', 'provenance_threshold')} proveniencias | Borderline: ≥{int(get_param('norma_dura', 'provenance_threshold') * get_param('norma_dura', 'borderline_lower_ratio'))}")
+    print(f"  SYNAKSIS:    ≥{get_param('synaksis', 'string_threshold')} strings      | Borderline: ≥{int(get_param('synaksis', 'string_threshold') * get_param('synaksis', 'borderline_lower_ratio'))}")
+    print(f"  NEOSYNT:     HHI ≥{get_param('neosynt', 'hhi_threshold')}       | Borderline: ≥{get_param('neosynt', 'hhi_threshold') * get_param('neosynt', 'borderline_lower_ratio'):.4f}")
+
+    print(f"\n{'═' * 90}")
+    print("  NORMA DURA: ZERO HARDCODING")
+    print(f"{'═' * 90}\n")
+
+    return {"validated": validated, "borderline": borderline, "chaotic": chaotic, "total": total}
+
+
+def print_detailed_summary(results: List[Dict]):
+    """Imprime resumen detallado con desglose por estado."""
+    stats = print_summary_table(results, "RESUMEN GLOBAL DE VALIDACIÓN")
+
+    # Desglose por estado
+    validated_files = [r for r in results if r.get('unified_status') == 'VALIDADO']
+    borderline_files = [r for r in results if r.get('unified_status') == 'BORDERLINE']
+    chaotic_files = [r for r in results if r.get('unified_status') == 'CAÓTICO']
+
+    if validated_files:
+        print(f"\n{'─' * 90}")
+        print("  ✓ ARCHIVOS VALIDADOS")
+        print(f"{'─' * 90}")
+        for r in validated_files:
+            filename = Path(r['file']).name
+            nd = r['frameworks']['norma_dura']['provenance_count']['value']
+            syn = r['frameworks']['synaksis']['string_count']['value']
+            neo = r['frameworks'].get('neosynt', {})
+            neo_str = f"HHI={neo['hhi']['value']:.2f}" if neo.get('status') != 'N/A' else "N/A"
+            print(f"    • {filename}")
+            print(f"      Prov: {nd} | Strings: {syn} | {neo_str}")
+
+    if borderline_files:
+        print(f"\n{'─' * 90}")
+        print("  ⚠ ARCHIVOS BORDERLINE (necesitan mejoras)")
+        print(f"{'─' * 90}")
+        for r in borderline_files:
+            filename = Path(r['file']).name
+            print(f"\n    • {filename}")
+
+            # Mostrar qué falta
+            nd = r['frameworks']['norma_dura']
+            if nd['status'] != 'VALID':
+                deficit = nd['threshold'] - nd['provenance_count']['value']
+                print(f"      [NORMA DURA] Faltan {deficit} proveniencias")
+
+            syn = r['frameworks']['synaksis']
+            if syn['status'] != 'VALID':
+                deficit = syn['threshold'] - syn['string_count']['value']
+                print(f"      [SYNAKSIS] Faltan {deficit} strings")
+
+            neo = r['frameworks'].get('neosynt', {})
+            if neo.get('status') not in ['VALID', 'N/A']:
+                hhi = neo['hhi']['value']
+                thresh = neo['threshold']
+                print(f"      [NEOSYNT] HHI={hhi:.4f} < {thresh} (necesita consolidación)")
+
+    if chaotic_files:
+        print(f"\n{'─' * 90}")
+        print("  ✗ ARCHIVOS CAÓTICOS (requieren trabajo significativo)")
+        print(f"{'─' * 90}")
+        for r in chaotic_files:
+            filename = Path(r['file']).name
+            nd = r['frameworks']['norma_dura']
+            syn = r['frameworks']['synaksis']
+            print(f"    • {filename}")
+            print(f"      Prov: {nd['provenance_count']['value']}/{nd['threshold']} | Strings: {syn['string_count']['value']}/{syn['threshold']}")
+
+    return stats
+
+
+def validate_multiple_files(filepaths: List[Path]) -> List[Dict]:
+    """Valida múltiples archivos y retorna resultados."""
+    results = []
+    for filepath in filepaths:
+        try:
+            result = validate_experiment(filepath)
+            results.append(result)
+        except Exception as e:
+            results.append({
+                "file": str(filepath),
+                "error": str(e),
+                "unified_status": "ERROR"
+            })
+    return results
+
+
 def main():
     """Punto de entrada principal."""
     if len(sys.argv) < 2:
@@ -800,51 +980,88 @@ def main():
         print("\nUso:")
         print("  python synaksis_lab.py experimento.json")
         print("  python synaksis_lab.py directorio/")
+        print("  python synaksis_lab.py archivo1.json archivo2.json ...")
         print("  python synaksis_lab.py experimento.json --mark")
         print("  python synaksis_lab.py experimento.json --report")
         print("  python synaksis_lab.py --status")
+        print("  python synaksis_lab.py --batch archivo1.json archivo2.json ...")
         return 0
 
-    arg = sys.argv[1]
+    args = sys.argv[1:]
 
-    if arg == "--status":
+    # Filtrar opciones
+    options = [a for a in args if a.startswith("--")]
+    files = [a for a in args if not a.startswith("--")]
+
+    if "--status" in options:
         print_status()
         return 0
 
-    path = Path(arg)
-    if not path.exists():
-        print(f"ERROR: No encontrado: {path}")
-        return 1
+    # Modo batch: múltiples archivos con tabla resumen
+    if "--batch" in options or len(files) > 1:
+        filepaths = []
+        for f in files:
+            p = Path(f)
+            if p.is_dir():
+                filepaths.extend(p.glob("*.json"))
+            elif p.exists() and p.suffix == ".json":
+                filepaths.append(p)
 
-    # Validar
-    if path.is_dir():
-        results = validate_directory(path)
-        for result in results:
-            print(f"\n{'=' * 70}")
-            print_result(result)
-    else:
+        if not filepaths:
+            print("ERROR: No se encontraron archivos JSON")
+            return 1
+
+        results = validate_multiple_files(filepaths)
+        stats = print_detailed_summary(results)
+
+        # Exit code basado en resultados
+        if stats["chaotic"] > 0:
+            return 1
+        elif stats["borderline"] > 0:
+            return 2
+        return 0
+
+    # Modo single file
+    if len(files) == 1:
+        path = Path(files[0])
+        if not path.exists():
+            print(f"ERROR: No encontrado: {path}")
+            return 1
+
+        # Validar directorio
+        if path.is_dir():
+            results = validate_directory(path)
+            if results:
+                stats = print_detailed_summary(results)
+                if stats["chaotic"] > 0:
+                    return 1
+                elif stats["borderline"] > 0:
+                    return 2
+            return 0
+
+        # Validar archivo único
         result = validate_experiment(path)
         print_result(result)
 
         # Opciones
-        if "--report" in sys.argv:
+        if "--report" in options:
             report = generate_report(result)
             report_path = path.parent / f"{path.stem}_report.txt"
             with open(report_path, 'w') as f:
                 f.write(report)
             print(f"\n✓ Informe guardado: {report_path}")
 
-        if "--mark" in sys.argv:
+        if "--mark" in options:
             if result["unified_status"] == "VALIDADO":
                 new_path = mark_experiment(path, result)
                 print(f"\n✓ Experimento marcado: {new_path}")
             else:
                 print(f"\n✗ No se puede marcar: estado es {result['unified_status']}")
 
-    # Exit code
-    if path.is_file():
+        # Exit code
         status = result["unified_status"]
         return {"VALIDADO": 0, "BORDERLINE": 2, "CAÓTICO": 1}.get(status, 1)
+
     return 0
 
 
