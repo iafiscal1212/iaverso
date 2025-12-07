@@ -1,0 +1,135 @@
+{
+  "agent": "EVA",
+  "personality": {
+    "curiosity": 0.7,
+    "domain": "biology_nature"
+  },
+  "search_history": [
+    {
+      "timestamp": "2025-12-06T07:06:24.621306",
+      "interest": "cell",
+      "search_results": [
+        "Cell",
+        "Cell (biology)",
+        "Cello",
+        "Cell membrane",
+        "Cell signaling"
+      ],
+      "chosen": "Cell",
+      "reason": "Curiosidad 70%, inter\u00e9s en 'cell'"
+    },
+    {
+      "timestamp": "2025-12-06T07:06:25.011148",
+      "interest": "life",
+      "search_results": [
+        "Life",
+        "Life expectancy",
+        "The Life of a Showgirl",
+        "Lifetime (TV channel)",
+        "The Life of Pablo"
+      ],
+      "chosen": "Life",
+      "reason": "Curiosidad 70%, inter\u00e9s en 'life'"
+    },
+    {
+      "timestamp": "2025-12-06T07:06:25.508447",
+      "interest": "cells",
+      "search_results": [
+        "Cells",
+        "Cell (biology)",
+        "Cells at Work!",
+        "Cel shading",
+        "Cells at Work! Code Black"
+      ],
+      "chosen": "Cells",
+      "reason": "Curiosidad 70%, inter\u00e9s en 'cells'"
+    }
+  ],
+  "facts_learned": 10,
+  "facts_with_sources": [
+    {
+      "value": 2016.0,
+      "source": "https://en.wikipedia.org/wiki/Cell"
+    },
+    {
+      "value": 19.0,
+      "source": "https://en.wikipedia.org/wiki/Life"
+    },
+    {
+      "value": 64.0,
+      "source": "https://en.wikipedia.org/wiki/Life"
+    },
+    {
+      "value": 77.0,
+      "source": "https://en.wikipedia.org/wiki/Life"
+    },
+    {
+      "value": 900.0,
+      "source": "https://en.wikipedia.org/wiki/Life"
+    },
+    {
+      "value": 500.0,
+      "source": "https://en.wikipedia.org/wiki/Life"
+    },
+    {
+      "value": 900.0,
+      "source": "https://en.wikipedia.org/wiki/Life"
+    },
+    {
+      "value": 600.0,
+      "source": "https://en.wikipedia.org/wiki/Life"
+    },
+    {
+      "value": 120.0,
+      "source": "https://en.wikipedia.org/wiki/Life"
+    },
+    {
+      "value": 2.0,
+      "source": "https://en.wikipedia.org/wiki/Life"
+    }
+  ],
+  "hypotheses": [
+    {
+      "type": "cluster_boundary",
+      "description": "Los valores parecen agruparse con una separaci\u00f3n en ~900.0",
+      "evidence": "Gap m\u00e1ximo de 1116.0 encontrado",
+      "values_below": [
+        19.0,
+        64.0,
+        77.0,
+        900.0,
+        500.0,
+        900.0,
+        600.0,
+        120.0,
+        2.0
+      ],
+      "values_above": [
+        2016.0
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Life",
+        "https://en.wikipedia.org/wiki/Cell"
+      ],
+      "formulated_by": "EVA",
+      "timestamp": "2025-12-06T07:06:27.101732"
+    }
+  ],
+  "wikipedia_sources": [
+    {
+      "title": "Cell",
+      "url": "https://en.wikipedia.org/wiki/Cell",
+      "fetched_at": "2025-12-06T07:06:24.808212"
+    },
+    {
+      "title": "Life",
+      "url": "https://en.wikipedia.org/wiki/Life",
+      "fetched_at": "2025-12-06T07:06:25.280695"
+    },
+    {
+      "title": "Cells",
+      "url": "https://en.wikipedia.org/wiki/Cells",
+      "fetched_at": "2025-12-06T07:06:25.719315"
+    }
+  ]
+}

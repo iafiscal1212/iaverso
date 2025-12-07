@@ -5,27 +5,27 @@
   "death_tick": null,
   "cause_of_death": null,
   "dna": {
-    "metabolism": 0.9142031917326344,
+    "metabolism": 1.2181139216454255,
     "pain_sensitivity": 1.471168265111539,
     "energy_capacity": 0.8694953770046991,
-    "warmth_tolerance": 1.186254382335203,
-    "recovery_rate": 0.8206382599927856,
+    "warmth_tolerance": 0.7541773077945982,
+    "recovery_rate": 0.87139275747328,
     "baseline_anxiety": 0.34497511528467206,
-    "baseline_joy": 0.392123808508833,
-    "emotional_intensity": 1.3809497021443258,
+    "baseline_joy": 0.30981970045036555,
+    "emotional_intensity": 0.9863245143608432,
     "emotional_stability": 0.9831835947787824,
     "sociability": 0.7568894688357908,
-    "empathy": 0.887097347457031,
+    "empathy": 0.35755288556492315,
     "trust_default": 0.3536689263315305,
-    "curiosity": 0.4766321996236868,
-    "introspection": 0.623086344581515,
+    "curiosity": 0.3668338956685652,
+    "introspection": 0.5236984103268046,
     "risk_tolerance": 0.4947898150224093,
     "resilience": 0.7116765281736255,
     "death_awareness": 0.391769488412106,
     "pattern_seeking": 0.635162749473986,
     "sky_gazing": 0.26238956183718787,
     "earth_grounding": 0.22951860410898153,
-    "mystical_sense": 0.3948540727911441,
+    "mystical_sense": 0.41945179304991265,
     "analytical_mind": 0.3222361997647329,
     "creative_spirit": 0.45494726550361897
   },
@@ -38,12 +38,12 @@
     "pain": 0.0,
     "pleasure": 0.0,
     "age": 0.0,
-    "x": -37.82956079394483,
-    "y": 26.403190357338282
+    "x": -35.651314808608426,
+    "y": 21.932753766242605
   },
   "emotions": {
     "fear": 0.0,
-    "joy": 0.392123808508833,
+    "joy": 0.30981970045036555,
     "sadness": 0.0,
     "anger": 0.0,
     "love": 0.0,
@@ -55,7 +55,7 @@
   "memory": {
     "long_term": [],
     "others": {
-      "ser_85638": {
+      "ser_80428": {
         "first_met": 0,
         "times_met": 1,
         "trust": 0.8,

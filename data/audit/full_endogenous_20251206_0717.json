@@ -1,0 +1,1329 @@
+{
+  "start_time": "2025-12-06T07:17:29.701256",
+  "sources_consulted": [
+    {
+      "source": "Wikipedia",
+      "topic": "Temperature",
+      "url": "https://en.wikipedia.org/wiki/Temperature",
+      "n_values": 49
+    },
+    {
+      "source": "Wikipedia",
+      "topic": "Planetary equilibrium temperature",
+      "url": "https://en.wikipedia.org/wiki/Planetary_equilibrium_temperature",
+      "n_values": 32
+    }
+  ],
+  "thresholds_derived": [
+    {
+      "category": "exoplanet_temperature",
+      "n_values": 744,
+      "source": "NASA Exoplanet Archive"
+    },
+    {
+      "category": "exoplanet_radius",
+      "n_values": 975,
+      "source": "NASA Exoplanet Archive"
+    },
+    {
+      "category": "orbital_period",
+      "n_values": 960,
+      "source": "NASA Exoplanet Archive"
+    }
+  ],
+  "decisions_made": [
+    {
+      "can_score": true,
+      "score": 17.002443005744805,
+      "z_score": 1.372125314905081,
+      "probability": 0.17002443005744805,
+      "percentile": 8.501221502872408,
+      "justification": {
+        "mean": 873.9543548387097,
+        "std": 427.0414287045233,
+        "n_samples": 744,
+        "method": "normal_distribution_probability"
+      },
+      "agent": "OBSERVADOR",
+      "category": "exoplanet_temperature",
+      "value": 288
+    },
+    {
+      "can_score": true,
+      "score": 74.84338984770788,
+      "z_score": 0.3207050783203299,
+      "probability": 0.7484338984770789,
+      "percentile": 37.421694923853934,
+      "justification": {
+        "mean": 873.9543548387097,
+        "std": 427.0414287045233,
+        "n_samples": 744,
+        "method": "normal_distribution_probability"
+      },
+      "agent": "OBSERVADOR",
+      "category": "exoplanet_temperature",
+      "value": 737
+    },
+    {
+      "can_score": true,
+      "score": 11.999909749523407,
+      "z_score": 1.5547773827304943,
+      "probability": 0.11999909749523407,
+      "percentile": 5.999954874761705,
+      "justification": {
+        "mean": 873.9543548387097,
+        "std": 427.0414287045233,
+        "n_samples": 744,
+        "method": "normal_distribution_probability"
+      },
+      "agent": "OBSERVADOR",
+      "category": "exoplanet_temperature",
+      "value": 210
+    },
+    {
+      "can_score": true,
+      "score": 14.264642999913036,
+      "z_score": 1.4660068159205724,
+      "probability": 0.14264642999913035,
+      "percentile": 92.86767850004348,
+      "justification": {
+        "mean": 873.9543548387097,
+        "std": 427.0414287045233,
+        "n_samples": 744,
+        "method": "normal_distribution_probability"
+      },
+      "agent": "OBSERVADOR",
+      "category": "exoplanet_temperature",
+      "value": 1500
+    },
+    {
+      "can_score": true,
+      "score": 17.002443005744805,
+      "z_score": 1.372125314905081,
+      "probability": 0.17002443005744805,
+      "percentile": 8.501221502872408,
+      "justification": {
+        "mean": 873.9543548387097,
+        "std": 427.0414287045233,
+        "n_samples": 744,
+        "method": "normal_distribution_probability"
+      },
+      "agent": "ANALISTA",
+      "category": "exoplanet_temperature",
+      "value": 288
+    },
+    {
+      "can_score": true,
+      "score": 74.84338984770788,
+      "z_score": 0.3207050783203299,
+      "probability": 0.7484338984770789,
+      "percentile": 37.421694923853934,
+      "justification": {
+        "mean": 873.9543548387097,
+        "std": 427.0414287045233,
+        "n_samples": 744,
+        "method": "normal_distribution_probability"
+      },
+      "agent": "ANALISTA",
+      "category": "exoplanet_temperature",
+      "value": 737
+    },
+    {
+      "can_score": true,
+      "score": 11.999909749523407,
+      "z_score": 1.5547773827304943,
+      "probability": 0.11999909749523407,
+      "percentile": 5.999954874761705,
+      "justification": {
+        "mean": 873.9543548387097,
+        "std": 427.0414287045233,
+        "n_samples": 744,
+        "method": "normal_distribution_probability"
+      },
+      "agent": "ANALISTA",
+      "category": "exoplanet_temperature",
+      "value": 210
+    },
+    {
+      "can_score": true,
+      "score": 14.264642999913036,
+      "z_score": 1.4660068159205724,
+      "probability": 0.14264642999913035,
+      "percentile": 92.86767850004348,
+      "justification": {
+        "mean": 873.9543548387097,
+        "std": 427.0414287045233,
+        "n_samples": 744,
+        "method": "normal_distribution_probability"
+      },
+      "agent": "ANALISTA",
+      "category": "exoplanet_temperature",
+      "value": 1500
+    },
+    {
+      "can_score": true,
+      "score": 17.002443005744805,
+      "z_score": 1.372125314905081,
+      "probability": 0.17002443005744805,
+      "percentile": 8.501221502872408,
+      "justification": {
+        "mean": 873.9543548387097,
+        "std": 427.0414287045233,
+        "n_samples": 744,
+        "method": "normal_distribution_probability"
+      },
+      "agent": "EXPLORADOR",
+      "category": "exoplanet_temperature",
+      "value": 288
+    },
+    {
+      "can_score": true,
+      "score": 74.84338984770788,
+      "z_score": 0.3207050783203299,
+      "probability": 0.7484338984770789,
+      "percentile": 37.421694923853934,
+      "justification": {
+        "mean": 873.9543548387097,
+        "std": 427.0414287045233,
+        "n_samples": 744,
+        "method": "normal_distribution_probability"
+      },
+      "agent": "EXPLORADOR",
+      "category": "exoplanet_temperature",
+      "value": 737
+    },
+    {
+      "can_score": true,
+      "score": 11.999909749523407,
+      "z_score": 1.5547773827304943,
+      "probability": 0.11999909749523407,
+      "percentile": 5.999954874761705,
+      "justification": {
+        "mean": 873.9543548387097,
+        "std": 427.0414287045233,
+        "n_samples": 744,
+        "method": "normal_distribution_probability"
+      },
+      "agent": "EXPLORADOR",
+      "category": "exoplanet_temperature",
+      "value": 210
+    },
+    {
+      "can_score": true,
+      "score": 14.264642999913036,
+      "z_score": 1.4660068159205724,
+      "probability": 0.14264642999913035,
+      "percentile": 92.86767850004348,
+      "justification": {
+        "mean": 873.9543548387097,
+        "std": 427.0414287045233,
+        "n_samples": 744,
+        "method": "normal_distribution_probability"
+      },
+      "agent": "EXPLORADOR",
+      "category": "exoplanet_temperature",
+      "value": 1500
+    }
+  ],
+  "end_time": "2025-12-06T07:17:31.638693",
+  "agents": [
+    {
+      "agent_id": "OBSERVADOR",
+      "birth_time": 1765001849.701262,
+      "calibration": {
+        "exoplanet_temperature": {
+          "calibrated": true,
+          "n_observations": 744,
+          "required": 5
+        },
+        "exoplanet_radius": {
+          "calibrated": true,
+          "n_observations": 975,
+          "required": 5
+        },
+        "orbital_period": {
+          "calibrated": true,
+          "n_observations": 960,
+          "required": 5
+        },
+        "wiki_temperature": {
+          "calibrated": true,
+          "n_observations": 49,
+          "required": 5
+        },
+        "wiki_planetary_equilibrium_temperature": {
+          "calibrated": true,
+          "n_observations": 32,
+          "required": 5
+        }
+      },
+      "thresholds": {
+        "categories": [
+          "exoplanet_temperature",
+          "exoplanet_radius",
+          "orbital_period",
+          "wiki_temperature",
+          "wiki_planetary_equilibrium_temperature"
+        ],
+        "distributions": {
+          "exoplanet_temperature": {
+            "n": 744,
+            "mean": 873.9543548387097,
+            "std": 427.0414287045233,
+            "median": 786.5,
+            "q1": 563.0,
+            "q3": 1087.25,
+            "is_valid": true
+          },
+          "exoplanet_radius": {
+            "n": 975,
+            "mean": 6.012776867405129,
+            "std": 5.339906384164923,
+            "median": 2.88,
+            "q1": 1.8,
+            "q3": 12.3,
+            "is_valid": true
+          },
+          "orbital_period": {
+            "n": 960,
+            "mean": 809.5548317625864,
+            "std": 5508.099197522511,
+            "median": 13.737988000000001,
+            "q1": 5.52018725,
+            "q3": 56.5216260725,
+            "is_valid": true
+          },
+          "wiki_temperature": {
+            "n": 49,
+            "mean": 277.6938775510204,
+            "std": 1658.5715013740191,
+            "median": 5.0,
+            "q1": 0.0,
+            "q3": 16.0,
+            "is_valid": true
+          },
+          "wiki_planetary_equilibrium_temperature": {
+            "n": 32,
+            "mean": 178.0,
+            "std": 202.50400234993364,
+            "median": 97.5,
+            "q1": 56.75,
+            "q3": 233.25,
+            "is_valid": true
+          }
+        },
+        "thresholds": {
+          "exoplanet_temperature": {
+            "low": {
+              "value": 408.3,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 786.5,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 1469.3370000000002,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -223.375,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 1873.625,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 1300.995783543233,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 1728.0372122477563,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 744,
+            "_last_updated": "2025-12-06T07:17:29.875121"
+          },
+          "exoplanet_radius": {
+            "low": {
+              "value": 1.264,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 2.88,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 13.6,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -13.95,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 28.05,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 11.352683251570053,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 16.692589635734976,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 975,
+            "_last_updated": "2025-12-06T07:17:30.447125"
+          },
+          "orbital_period": {
+            "low": {
+              "value": 3.243637644,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 13.737988000000001,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 872.5300000000001,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -70.98197098374999,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 133.02378430624998,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 6317.654029285097,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 11825.753226807608,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 960,
+            "_last_updated": "2025-12-06T07:17:31.136855"
+          },
+          "wiki_temperature": {
+            "low": {
+              "value": 0.0,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 5.0,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 100.0,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -24.0,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 40.0,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 1936.2653789250396,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 3594.8368802990585,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 49,
+            "_last_updated": "2025-12-06T07:17:31.602865"
+          },
+          "wiki_planetary_equilibrium_temperature": {
+            "low": {
+              "value": 15.3,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 97.5,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 364.50000000000017,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -208.0,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 498.0,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 380.50400234993367,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 583.0080046998673,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 32,
+            "_last_updated": "2025-12-06T07:17:31.626801"
+          }
+        },
+        "mathematical_constants": {
+          "TUKEY_FENCE": 1.5,
+          "IQR_MILD_OUTLIER": 1.5,
+          "IQR_EXTREME_OUTLIER": 3.0,
+          "STANDARD_DEVIATIONS_95": 1.96,
+          "STANDARD_DEVIATIONS_99": 2.576,
+          "MIN_SAMPLES_FOR_STATISTICS": 5,
+          "MIN_SAMPLES_FOR_PERCENTILES": 10
+        },
+        "timestamp": "2025-12-06T07:17:31.638711"
+      },
+      "personal_thresholds": {},
+      "n_decisions": 4,
+      "recent_decisions": [
+        {
+          "type": "evaluate",
+          "variable": "exoplanet_temperature",
+          "value": 288,
+          "result": {
+            "can_score": true,
+            "score": 17.002443005744805,
+            "z_score": 1.372125314905081,
+            "probability": 0.17002443005744805,
+            "percentile": 8.501221502872408,
+            "justification": {
+              "mean": 873.9543548387097,
+              "std": 427.0414287045233,
+              "n_samples": 744,
+              "method": "normal_distribution_probability"
+            },
+            "agent": "OBSERVADOR",
+            "category": "exoplanet_temperature",
+            "value": 288
+          },
+          "timestamp": "2025-12-06T07:17:31.638076"
+        },
+        {
+          "type": "evaluate",
+          "variable": "exoplanet_temperature",
+          "value": 737,
+          "result": {
+            "can_score": true,
+            "score": 74.84338984770788,
+            "z_score": 0.3207050783203299,
+            "probability": 0.7484338984770789,
+            "percentile": 37.421694923853934,
+            "justification": {
+              "mean": 873.9543548387097,
+              "std": 427.0414287045233,
+              "n_samples": 744,
+              "method": "normal_distribution_probability"
+            },
+            "agent": "OBSERVADOR",
+            "category": "exoplanet_temperature",
+            "value": 737
+          },
+          "timestamp": "2025-12-06T07:17:31.638138"
+        },
+        {
+          "type": "evaluate",
+          "variable": "exoplanet_temperature",
+          "value": 210,
+          "result": {
+            "can_score": true,
+            "score": 11.999909749523407,
+            "z_score": 1.5547773827304943,
+            "probability": 0.11999909749523407,
+            "percentile": 5.999954874761705,
+            "justification": {
+              "mean": 873.9543548387097,
+              "std": 427.0414287045233,
+              "n_samples": 744,
+              "method": "normal_distribution_probability"
+            },
+            "agent": "OBSERVADOR",
+            "category": "exoplanet_temperature",
+            "value": 210
+          },
+          "timestamp": "2025-12-06T07:17:31.638195"
+        },
+        {
+          "type": "evaluate",
+          "variable": "exoplanet_temperature",
+          "value": 1500,
+          "result": {
+            "can_score": true,
+            "score": 14.264642999913036,
+            "z_score": 1.4660068159205724,
+            "probability": 0.14264642999913035,
+            "percentile": 92.86767850004348,
+            "justification": {
+              "mean": 873.9543548387097,
+              "std": 427.0414287045233,
+              "n_samples": 744,
+              "method": "normal_distribution_probability"
+            },
+            "agent": "OBSERVADOR",
+            "category": "exoplanet_temperature",
+            "value": 1500
+          },
+          "timestamp": "2025-12-06T07:17:31.638249"
+        }
+      ],
+      "mathematical_constants_used": {
+        "TUKEY_FENCE": 1.5,
+        "IQR_MILD_OUTLIER": 1.5,
+        "IQR_EXTREME_OUTLIER": 3.0,
+        "STANDARD_DEVIATIONS_95": 1.96,
+        "STANDARD_DEVIATIONS_99": 2.576,
+        "MIN_SAMPLES_FOR_STATISTICS": 5,
+        "MIN_SAMPLES_FOR_PERCENTILES": 10
+      },
+      "guarantee": "All thresholds derived from observed distributions"
+    },
+    {
+      "agent_id": "ANALISTA",
+      "birth_time": 1765001849.701268,
+      "calibration": {
+        "exoplanet_temperature": {
+          "calibrated": true,
+          "n_observations": 744,
+          "required": 5
+        },
+        "exoplanet_radius": {
+          "calibrated": true,
+          "n_observations": 975,
+          "required": 5
+        },
+        "orbital_period": {
+          "calibrated": true,
+          "n_observations": 960,
+          "required": 5
+        },
+        "wiki_temperature": {
+          "calibrated": true,
+          "n_observations": 49,
+          "required": 5
+        },
+        "wiki_planetary_equilibrium_temperature": {
+          "calibrated": true,
+          "n_observations": 32,
+          "required": 5
+        }
+      },
+      "thresholds": {
+        "categories": [
+          "exoplanet_temperature",
+          "exoplanet_radius",
+          "orbital_period",
+          "wiki_temperature",
+          "wiki_planetary_equilibrium_temperature"
+        ],
+        "distributions": {
+          "exoplanet_temperature": {
+            "n": 744,
+            "mean": 873.9543548387097,
+            "std": 427.0414287045233,
+            "median": 786.5,
+            "q1": 563.0,
+            "q3": 1087.25,
+            "is_valid": true
+          },
+          "exoplanet_radius": {
+            "n": 975,
+            "mean": 6.012776867405129,
+            "std": 5.339906384164923,
+            "median": 2.88,
+            "q1": 1.8,
+            "q3": 12.3,
+            "is_valid": true
+          },
+          "orbital_period": {
+            "n": 960,
+            "mean": 809.5548317625864,
+            "std": 5508.099197522511,
+            "median": 13.737988000000001,
+            "q1": 5.52018725,
+            "q3": 56.5216260725,
+            "is_valid": true
+          },
+          "wiki_temperature": {
+            "n": 49,
+            "mean": 277.6938775510204,
+            "std": 1658.5715013740191,
+            "median": 5.0,
+            "q1": 0.0,
+            "q3": 16.0,
+            "is_valid": true
+          },
+          "wiki_planetary_equilibrium_temperature": {
+            "n": 32,
+            "mean": 178.0,
+            "std": 202.50400234993364,
+            "median": 97.5,
+            "q1": 56.75,
+            "q3": 233.25,
+            "is_valid": true
+          }
+        },
+        "thresholds": {
+          "exoplanet_temperature": {
+            "low": {
+              "value": 408.3,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 786.5,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 1469.3370000000002,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -223.375,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 1873.625,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 1300.995783543233,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 1728.0372122477563,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 744,
+            "_last_updated": "2025-12-06T07:17:30.046446"
+          },
+          "exoplanet_radius": {
+            "low": {
+              "value": 1.264,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 2.88,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 13.6,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -13.95,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 28.05,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 11.352683251570053,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 16.692589635734976,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 975,
+            "_last_updated": "2025-12-06T07:17:30.677725"
+          },
+          "orbital_period": {
+            "low": {
+              "value": 3.243637644,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 13.737988000000001,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 872.5300000000001,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -70.98197098374999,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 133.02378430624998,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 6317.654029285097,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 11825.753226807608,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 960,
+            "_last_updated": "2025-12-06T07:17:31.365413"
+          },
+          "wiki_temperature": {
+            "low": {
+              "value": 0.0,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 5.0,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 100.0,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -24.0,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 40.0,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 1936.2653789250396,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 3594.8368802990585,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 49,
+            "_last_updated": "2025-12-06T07:17:31.611805"
+          },
+          "wiki_planetary_equilibrium_temperature": {
+            "low": {
+              "value": 15.3,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 97.5,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 364.50000000000017,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -208.0,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 498.0,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 380.50400234993367,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 583.0080046998673,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 32,
+            "_last_updated": "2025-12-06T07:17:31.632301"
+          }
+        },
+        "mathematical_constants": {
+          "TUKEY_FENCE": 1.5,
+          "IQR_MILD_OUTLIER": 1.5,
+          "IQR_EXTREME_OUTLIER": 3.0,
+          "STANDARD_DEVIATIONS_95": 1.96,
+          "STANDARD_DEVIATIONS_99": 2.576,
+          "MIN_SAMPLES_FOR_STATISTICS": 5,
+          "MIN_SAMPLES_FOR_PERCENTILES": 10
+        },
+        "timestamp": "2025-12-06T07:17:31.638725"
+      },
+      "personal_thresholds": {},
+      "n_decisions": 4,
+      "recent_decisions": [
+        {
+          "type": "evaluate",
+          "variable": "exoplanet_temperature",
+          "value": 288,
+          "result": {
+            "can_score": true,
+            "score": 17.002443005744805,
+            "z_score": 1.372125314905081,
+            "probability": 0.17002443005744805,
+            "percentile": 8.501221502872408,
+            "justification": {
+              "mean": 873.9543548387097,
+              "std": 427.0414287045233,
+              "n_samples": 744,
+              "method": "normal_distribution_probability"
+            },
+            "agent": "ANALISTA",
+            "category": "exoplanet_temperature",
+            "value": 288
+          },
+          "timestamp": "2025-12-06T07:17:31.638304"
+        },
+        {
+          "type": "evaluate",
+          "variable": "exoplanet_temperature",
+          "value": 737,
+          "result": {
+            "can_score": true,
+            "score": 74.84338984770788,
+            "z_score": 0.3207050783203299,
+            "probability": 0.7484338984770789,
+            "percentile": 37.421694923853934,
+            "justification": {
+              "mean": 873.9543548387097,
+              "std": 427.0414287045233,
+              "n_samples": 744,
+              "method": "normal_distribution_probability"
+            },
+            "agent": "ANALISTA",
+            "category": "exoplanet_temperature",
+            "value": 737
+          },
+          "timestamp": "2025-12-06T07:17:31.638358"
+        },
+        {
+          "type": "evaluate",
+          "variable": "exoplanet_temperature",
+          "value": 210,
+          "result": {
+            "can_score": true,
+            "score": 11.999909749523407,
+            "z_score": 1.5547773827304943,
+            "probability": 0.11999909749523407,
+            "percentile": 5.999954874761705,
+            "justification": {
+              "mean": 873.9543548387097,
+              "std": 427.0414287045233,
+              "n_samples": 744,
+              "method": "normal_distribution_probability"
+            },
+            "agent": "ANALISTA",
+            "category": "exoplanet_temperature",
+            "value": 210
+          },
+          "timestamp": "2025-12-06T07:17:31.638412"
+        },
+        {
+          "type": "evaluate",
+          "variable": "exoplanet_temperature",
+          "value": 1500,
+          "result": {
+            "can_score": true,
+            "score": 14.264642999913036,
+            "z_score": 1.4660068159205724,
+            "probability": 0.14264642999913035,
+            "percentile": 92.86767850004348,
+            "justification": {
+              "mean": 873.9543548387097,
+              "std": 427.0414287045233,
+              "n_samples": 744,
+              "method": "normal_distribution_probability"
+            },
+            "agent": "ANALISTA",
+            "category": "exoplanet_temperature",
+            "value": 1500
+          },
+          "timestamp": "2025-12-06T07:17:31.638464"
+        }
+      ],
+      "mathematical_constants_used": {
+        "TUKEY_FENCE": 1.5,
+        "IQR_MILD_OUTLIER": 1.5,
+        "IQR_EXTREME_OUTLIER": 3.0,
+        "STANDARD_DEVIATIONS_95": 1.96,
+        "STANDARD_DEVIATIONS_99": 2.576,
+        "MIN_SAMPLES_FOR_STATISTICS": 5,
+        "MIN_SAMPLES_FOR_PERCENTILES": 10
+      },
+      "guarantee": "All thresholds derived from observed distributions"
+    },
+    {
+      "agent_id": "EXPLORADOR",
+      "birth_time": 1765001849.701271,
+      "calibration": {
+        "exoplanet_temperature": {
+          "calibrated": true,
+          "n_observations": 744,
+          "required": 5
+        },
+        "exoplanet_radius": {
+          "calibrated": true,
+          "n_observations": 975,
+          "required": 5
+        },
+        "orbital_period": {
+          "calibrated": true,
+          "n_observations": 960,
+          "required": 5
+        },
+        "wiki_temperature": {
+          "calibrated": true,
+          "n_observations": 49,
+          "required": 5
+        },
+        "wiki_planetary_equilibrium_temperature": {
+          "calibrated": true,
+          "n_observations": 32,
+          "required": 5
+        }
+      },
+      "thresholds": {
+        "categories": [
+          "exoplanet_temperature",
+          "exoplanet_radius",
+          "orbital_period",
+          "wiki_temperature",
+          "wiki_planetary_equilibrium_temperature"
+        ],
+        "distributions": {
+          "exoplanet_temperature": {
+            "n": 744,
+            "mean": 873.9543548387097,
+            "std": 427.0414287045233,
+            "median": 786.5,
+            "q1": 563.0,
+            "q3": 1087.25,
+            "is_valid": true
+          },
+          "exoplanet_radius": {
+            "n": 975,
+            "mean": 6.012776867405129,
+            "std": 5.339906384164923,
+            "median": 2.88,
+            "q1": 1.8,
+            "q3": 12.3,
+            "is_valid": true
+          },
+          "orbital_period": {
+            "n": 960,
+            "mean": 809.5548317625864,
+            "std": 5508.099197522511,
+            "median": 13.737988000000001,
+            "q1": 5.52018725,
+            "q3": 56.5216260725,
+            "is_valid": true
+          },
+          "wiki_temperature": {
+            "n": 49,
+            "mean": 277.6938775510204,
+            "std": 1658.5715013740191,
+            "median": 5.0,
+            "q1": 0.0,
+            "q3": 16.0,
+            "is_valid": true
+          },
+          "wiki_planetary_equilibrium_temperature": {
+            "n": 32,
+            "mean": 178.0,
+            "std": 202.50400234993364,
+            "median": 97.5,
+            "q1": 56.75,
+            "q3": 233.25,
+            "is_valid": true
+          }
+        },
+        "thresholds": {
+          "exoplanet_temperature": {
+            "low": {
+              "value": 408.3,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 786.5,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 1469.3370000000002,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -223.375,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 1873.625,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 1300.995783543233,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 1728.0372122477563,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 744,
+            "_last_updated": "2025-12-06T07:17:30.216566"
+          },
+          "exoplanet_radius": {
+            "low": {
+              "value": 1.264,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 2.88,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 13.6,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -13.95,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 28.05,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 11.352683251570053,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 16.692589635734976,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 975,
+            "_last_updated": "2025-12-06T07:17:30.908748"
+          },
+          "orbital_period": {
+            "low": {
+              "value": 3.243637644,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 13.737988000000001,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 872.5300000000001,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -70.98197098374999,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 133.02378430624998,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 6317.654029285097,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 11825.753226807608,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 960,
+            "_last_updated": "2025-12-06T07:17:31.592358"
+          },
+          "wiki_temperature": {
+            "low": {
+              "value": 0.0,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 5.0,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 100.0,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -24.0,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 40.0,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 1936.2653789250396,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 3594.8368802990585,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 49,
+            "_last_updated": "2025-12-06T07:17:31.620698"
+          },
+          "wiki_planetary_equilibrium_temperature": {
+            "low": {
+              "value": 15.3,
+              "justification": "percentile_10"
+            },
+            "medium": {
+              "value": 97.5,
+              "justification": "percentile_50 (median)"
+            },
+            "high": {
+              "value": 364.50000000000017,
+              "justification": "percentile_90"
+            },
+            "outlier_low": {
+              "value": -208.0,
+              "justification": "Q1 - 1.5*IQR (Tukey fence)"
+            },
+            "outlier_high": {
+              "value": 498.0,
+              "justification": "Q3 + 1.5*IQR (Tukey fence)"
+            },
+            "significant": {
+              "value": 380.50400234993367,
+              "justification": "mean + 1*std (~84th percentile in normal)"
+            },
+            "very_significant": {
+              "value": 583.0080046998673,
+              "justification": "mean + 2*std (~97.7th percentile in normal)"
+            },
+            "_n_samples": 32,
+            "_last_updated": "2025-12-06T07:17:31.637899"
+          }
+        },
+        "mathematical_constants": {
+          "TUKEY_FENCE": 1.5,
+          "IQR_MILD_OUTLIER": 1.5,
+          "IQR_EXTREME_OUTLIER": 3.0,
+          "STANDARD_DEVIATIONS_95": 1.96,
+          "STANDARD_DEVIATIONS_99": 2.576,
+          "MIN_SAMPLES_FOR_STATISTICS": 5,
+          "MIN_SAMPLES_FOR_PERCENTILES": 10
+        },
+        "timestamp": "2025-12-06T07:17:31.638747"
+      },
+      "personal_thresholds": {},
+      "n_decisions": 4,
+      "recent_decisions": [
+        {
+          "type": "evaluate",
+          "variable": "exoplanet_temperature",
+          "value": 288,
+          "result": {
+            "can_score": true,
+            "score": 17.002443005744805,
+            "z_score": 1.372125314905081,
+            "probability": 0.17002443005744805,
+            "percentile": 8.501221502872408,
+            "justification": {
+              "mean": 873.9543548387097,
+              "std": 427.0414287045233,
+              "n_samples": 744,
+              "method": "normal_distribution_probability"
+            },
+            "agent": "EXPLORADOR",
+            "category": "exoplanet_temperature",
+            "value": 288
+          },
+          "timestamp": "2025-12-06T07:17:31.638516"
+        },
+        {
+          "type": "evaluate",
+          "variable": "exoplanet_temperature",
+          "value": 737,
+          "result": {
+            "can_score": true,
+            "score": 74.84338984770788,
+            "z_score": 0.3207050783203299,
+            "probability": 0.7484338984770789,
+            "percentile": 37.421694923853934,
+            "justification": {
+              "mean": 873.9543548387097,
+              "std": 427.0414287045233,
+              "n_samples": 744,
+              "method": "normal_distribution_probability"
+            },
+            "agent": "EXPLORADOR",
+            "category": "exoplanet_temperature",
+            "value": 737
+          },
+          "timestamp": "2025-12-06T07:17:31.638568"
+        },
+        {
+          "type": "evaluate",
+          "variable": "exoplanet_temperature",
+          "value": 210,
+          "result": {
+            "can_score": true,
+            "score": 11.999909749523407,
+            "z_score": 1.5547773827304943,
+            "probability": 0.11999909749523407,
+            "percentile": 5.999954874761705,
+            "justification": {
+              "mean": 873.9543548387097,
+              "std": 427.0414287045233,
+              "n_samples": 744,
+              "method": "normal_distribution_probability"
+            },
+            "agent": "EXPLORADOR",
+            "category": "exoplanet_temperature",
+            "value": 210
+          },
+          "timestamp": "2025-12-06T07:17:31.638621"
+        },
+        {
+          "type": "evaluate",
+          "variable": "exoplanet_temperature",
+          "value": 1500,
+          "result": {
+            "can_score": true,
+            "score": 14.264642999913036,
+            "z_score": 1.4660068159205724,
+            "probability": 0.14264642999913035,
+            "percentile": 92.86767850004348,
+            "justification": {
+              "mean": 873.9543548387097,
+              "std": 427.0414287045233,
+              "n_samples": 744,
+              "method": "normal_distribution_probability"
+            },
+            "agent": "EXPLORADOR",
+            "category": "exoplanet_temperature",
+            "value": 1500
+          },
+          "timestamp": "2025-12-06T07:17:31.638671"
+        }
+      ],
+      "mathematical_constants_used": {
+        "TUKEY_FENCE": 1.5,
+        "IQR_MILD_OUTLIER": 1.5,
+        "IQR_EXTREME_OUTLIER": 3.0,
+        "STANDARD_DEVIATIONS_95": 1.96,
+        "STANDARD_DEVIATIONS_99": 2.576,
+        "MIN_SAMPLES_FOR_STATISTICS": 5,
+        "MIN_SAMPLES_FOR_PERCENTILES": 10
+      },
+      "guarantee": "All thresholds derived from observed distributions"
+    }
+  ],
+  "mathematical_constants": {
+    "TUKEY_FENCE": 1.5,
+    "IQR_MILD_OUTLIER": 1.5,
+    "IQR_EXTREME_OUTLIER": 3.0,
+    "STANDARD_DEVIATIONS_95": 1.96,
+    "STANDARD_DEVIATIONS_99": 2.576,
+    "MIN_SAMPLES_FOR_STATISTICS": 5,
+    "MIN_SAMPLES_FOR_PERCENTILES": 10
+  },
+  "guarantee": {
+    "magic_numbers": "None used",
+    "all_thresholds": "Derived from observed distributions",
+    "all_sources": "Externally verifiable (URLs/DOIs)",
+    "all_decisions": "Have statistical justification"
+  }
+}

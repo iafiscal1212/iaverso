@@ -5,26 +5,26 @@
   "death_tick": null,
   "cause_of_death": null,
   "dna": {
-    "metabolism": 0.9142031917326344,
+    "metabolism": 1.1113352422759737,
     "pain_sensitivity": 1.4695641536154533,
-    "energy_capacity": 0.8498728494782573,
+    "energy_capacity": 0.9461112817056512,
     "warmth_tolerance": 0.7541773077945982,
-    "recovery_rate": 0.9533109036456859,
-    "baseline_anxiety": 0.06907871733690137,
+    "recovery_rate": 1.0353275361714012,
+    "baseline_anxiety": 0.0,
     "baseline_joy": 0.41360538370365285,
-    "emotional_intensity": 1.1413461411204335,
+    "emotional_intensity": 1.3809497021443258,
     "emotional_stability": 0.9965206619234978,
     "sociability": 0.7568894688357908,
     "empathy": 0.887097347457031,
     "trust_default": 0.4812039472499574,
-    "curiosity": 0.3668338956685652,
+    "curiosity": 0.5700687021246394,
     "introspection": 0.5236984103268046,
-    "risk_tolerance": 0.66505287088778,
-    "resilience": 0.8149472580212483,
-    "death_awareness": 0.1367214332522433,
-    "pattern_seeking": 0.5371217186737561,
+    "risk_tolerance": 0.5988714155421299,
+    "resilience": 0.7116765281736255,
+    "death_awareness": 0.23608712151975902,
+    "pattern_seeking": 0.635162749473986,
     "sky_gazing": 0.17681856752060765,
-    "earth_grounding": 0.22568632369379343,
+    "earth_grounding": 0.22951860410898153,
     "mystical_sense": 0.7712837322556029,
     "analytical_mind": 0.47044810808263005,
     "creative_spirit": 0.5971312684573695
@@ -38,8 +38,8 @@
     "pain": 0.0,
     "pleasure": 0.0,
     "age": 0.0,
-    "x": -42.45088958683893,
-    "y": 28.875328104733757
+    "x": -36.67133965692355,
+    "y": 19.451949588566784
   },
   "emotions": {
     "fear": 0.0,
@@ -48,21 +48,21 @@
     "anger": 0.0,
     "love": 0.0,
     "loneliness": 0.27293315934926277,
-    "anxiety": 0.06907871733690137,
+    "anxiety": 0.0,
     "peace": 0.3,
     "trust": 0.4812039472499574
   },
   "memory": {
     "long_term": [],
     "others": {
-      "ser_39004": {
+      "ser_03218": {
         "first_met": 0,
         "times_met": 1,
         "trust": 0.8,
         "feelings": "parent",
         "memories": []
       },
-      "ser_09277": {
+      "ser_39004": {
         "first_met": 0,
         "times_met": 1,
         "trust": 0.8,

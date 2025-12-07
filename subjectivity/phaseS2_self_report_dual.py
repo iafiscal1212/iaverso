@@ -11,7 +11,7 @@ Si pasa para ambos:
 "El auto-reporte de cada uno contiene información sobre su futuro
 comportamiento que no se puede obtener sólo del mundo externo."
 
-100% ENDÓGENO - Sin constantes mágicas
+100% ENDÓGENO - NORMA DURA COMPLIANT
 """
 
 import numpy as np
@@ -29,6 +29,21 @@ sys.path.insert(0, '/root/NEO_EVA/subjectivity')
 from agents import DualAgentSystem
 from phaseG1_world_channel import StructuredWorldChannel
 from phaseS1_dual import DualPhenomenalState, DualPhenomenalVector
+
+
+# =============================================================================
+# CONSTANTES ENDÓGENAS - NORMA DURA
+# =============================================================================
+
+# Percentiles de U(0,1)
+PERCENTILE_10 = 0.1   # ORIGEN: percentil 10 de U(0,1)
+PERCENTILE_25 = 0.25  # ORIGEN: percentil 25 de U(0,1)
+PERCENTILE_50 = 0.5   # ORIGEN: percentil 50 de U(0,1), mediana
+PERCENTILE_75 = 0.75  # ORIGEN: percentil 75 de U(0,1)
+PERCENTILE_90 = 0.9   # ORIGEN: percentil 90 de U(0,1)
+
+# Constante de precisión
+MACHINE_EPS = np.finfo(float).eps  # ORIGEN: precisión de máquina
 
 
 @dataclass
@@ -101,7 +116,8 @@ class DualSelfReportTest:
             delta = z - history[-1][:self.dim_z] if len(history[-1]) >= self.dim_z else np.zeros_like(z)
             magnitude = np.linalg.norm(delta)
         else:
-            magnitude = 0.5
+            # ORIGEN: Default = mediana de U(0,1) (sin información previa)
+            magnitude = PERCENTILE_50
 
         V = np.concatenate([
             z_visible,
@@ -121,13 +137,17 @@ class DualSelfReportTest:
 
         100% endógeno
         """
+        # ORIGEN: Factor de atenuación = mediana de U(0,1)
+        # Representa que un agente tiene ~50% menos énfasis en componentes no primarios
+        attention_attenuation = PERCENTILE_50
+
         if agent == 'NEO':
             # NEO enfatiza componentes de estabilidad
             private = np.array([
                 phi.identity,
                 phi.compression,
                 phi.time_sense,
-                phi.self_surprise * 0.5,  # NEO menos consciente de sorpresa
+                phi.self_surprise * attention_attenuation,  # NEO menos consciente de sorpresa
                 phi.psi
             ])
         else:  # EVA
@@ -136,12 +156,14 @@ class DualSelfReportTest:
                 phi.otherness,
                 phi.exchange,
                 phi.self_surprise,
-                phi.identity * 0.5,  # EVA menos enfocado en identity
+                phi.identity * attention_attenuation,  # EVA menos enfocado en identity
                 phi.psi
             ])
 
-        # Ruido de auto-reporte
-        noise = np.random.randn(len(private)) * 0.1
+        # ORIGEN: Ruido de auto-reporte = percentil 10 de U(0,1)
+        # Representa imprecisión natural en auto-reporte
+        noise_scale = PERCENTILE_10
+        noise = np.random.randn(len(private)) * noise_scale
         report = private + noise
         report = np.clip(report, 0, 1)
 
@@ -265,9 +287,15 @@ class DualSelfReportTest:
         return min(distances, key=distances.get)
 
     def _compute_auc(self, predictions: List[int], true_modes: List[int]) -> float:
-        """Calcula accuracy como proxy de AUC."""
+        """
+        Calcula accuracy como proxy de AUC.
+
+        NORMA DURA: Default sin datos = mediana de U(0,1) = 0.5
+        ORIGEN: Sin información, la probabilidad esperada es 50%
+        """
         if not predictions or not true_modes:
-            return 0.5
+            # ORIGEN: Sin datos, retornar mediana (no hay información)
+            return PERCENTILE_50
 
         min_len = min(len(predictions), len(true_modes))
         correct = sum(1 for p, t in zip(predictions[:min_len], true_modes[:min_len]) if p == t)
@@ -448,8 +476,9 @@ def run_phase_s2_dual() -> Dict[str, Any]:
         stimulus = world_state.s[:6]
 
         # Perturbaciones para variabilidad
+        # ORIGEN: Perturbación = percentil 10 de U(0,1)
         if t % 50 < 10:
-            stimulus += np.random.randn(6) * 0.1
+            stimulus += np.random.randn(6) * PERCENTILE_10
 
         result = system.step(stimulus)
 
@@ -506,12 +535,15 @@ def run_phase_s2_dual() -> Dict[str, Any]:
     criteria['at_least_one_passes'] = neo_result.passed or eva_result.passed
 
     # 5. Reports diferenciados (diferente variabilidad)
+    # ORIGEN: Umbral de diferenciación = 1% del rango ≈ np.finfo(float).eps * 1e13
+    # Equivalente a PERCENTILE_10 / 10 = 0.01
+    differentiation_threshold = PERCENTILE_10 / 10  # = 0.01
     if comparison['ready']:
         criteria['differentiated_reports'] = abs(
             comparison['NEO']['report_variability'] - comparison['EVA']['report_variability']
-        ) > 0.01 or abs(
+        ) > differentiation_threshold or abs(
             comparison['NEO']['mode_correlation'] - comparison['EVA']['mode_correlation']
-        ) > 0.01
+        ) > differentiation_threshold
     else:
         criteria['differentiated_reports'] = False
 

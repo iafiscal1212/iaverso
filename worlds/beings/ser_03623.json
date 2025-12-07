@@ -1,0 +1,92 @@
+{
+  "id": "ser_03623",
+  "alive": true,
+  "birth_tick": 0,
+  "death_tick": null,
+  "cause_of_death": null,
+  "dna": {
+    "metabolism": 1.007029973441592,
+    "pain_sensitivity": 1.0310232504908332,
+    "energy_capacity": 1.1832614133191603,
+    "warmth_tolerance": 1.2711342385539721,
+    "recovery_rate": 1.171903498521124,
+    "baseline_anxiety": 0.35998631119451363,
+    "baseline_joy": 0.41355503137738475,
+    "emotional_intensity": 0.6191909611165745,
+    "emotional_stability": 0.959804641770428,
+    "sociability": 0.3963228789294152,
+    "empathy": 0.7974456082395305,
+    "trust_default": 0.6145011519625228,
+    "curiosity": 0.865806475155261,
+    "introspection": 0.4728188761435188,
+    "risk_tolerance": 0.3936182737068626,
+    "resilience": 0.6944242888611611,
+    "death_awareness": 0.5207445578460717,
+    "pattern_seeking": 0.601454924844704,
+    "sky_gazing": 0.24890769414006453,
+    "earth_grounding": 0.9994246616251895,
+    "mystical_sense": 0.49451535997691276,
+    "analytical_mind": 0.7321263995027707,
+    "creative_spirit": 0.6362284760268319
+  },
+  "body": {
+    "hunger": 70.0,
+    "thirst": 70.0,
+    "energy": 100.0,
+    "warmth": 50.0,
+    "health": 100.0,
+    "pain": 0.0,
+    "pleasure": 0.0,
+    "age": 0.0,
+    "x": -167.32622725817183,
+    "y": -153.85105025226852
+  },
+  "emotions": {
+    "fear": 0.0,
+    "joy": 0.41355503137738475,
+    "sadness": 0.0,
+    "anger": 0.0,
+    "love": 0.0,
+    "loneliness": 0.38110313632117543,
+    "anxiety": 0.35998631119451363,
+    "peace": 0.3,
+    "trust": 0.6145011519625228
+  },
+  "memory": {
+    "long_term": [],
+    "others": {
+      "ser_48530": {
+        "first_met": 0,
+        "times_met": 1,
+        "trust": 0.8,
+        "feelings": "parent",
+        "memories": []
+      },
+      "ser_36673": {
+        "first_met": 0,
+        "times_met": 1,
+        "trust": 0.8,
+        "feelings": "parent",
+        "memories": []
+      }
+    },
+    "traumas": [],
+    "happy_memories": []
+  },
+  "mind": {
+    "thought_stream": [
+      "...",
+      "\u00bfQu\u00e9 es esto?",
+      "Existo."
+    ],
+    "questions": [
+      "\u00bfQu\u00e9 soy?",
+      "\u00bfD\u00f3nde estoy?"
+    ],
+    "desires": [],
+    "fears": [],
+    "self_concept": [],
+    "beliefs": {},
+    "likes": {}
+  }
+}

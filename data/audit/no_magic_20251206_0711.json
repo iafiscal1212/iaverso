@@ -1,0 +1,44 @@
+{
+  "agent": "RIGUROSO",
+  "categories_learned": [
+    "Temperature",
+    "Planetary equilibrium temperature",
+    "exoplanet temperature"
+  ],
+  "distribution_params": {
+    "Temperature": {
+      "n": 49,
+      "mean": 277.6938775510204,
+      "std": 1658.5715013740191,
+      "median": 5.0,
+      "q1": 0.0,
+      "q3": 16.0,
+      "iqr": 16.0,
+      "min": 0.0,
+      "max": 11605.0,
+      "p10": 0.0,
+      "p90": 100.0
+    },
+    "Planetary equilibrium temperature": {
+      "n": 32,
+      "mean": 178.0,
+      "std": 202.50400234993364,
+      "median": 97.5,
+      "q1": 56.75,
+      "q3": 233.25,
+      "iqr": 176.5,
+      "min": 1.0,
+      "max": 872.0,
+      "p10": 15.3,
+      "p90": 364.50000000000017
+    }
+  },
+  "n_evaluations": 8,
+  "method_used": "normal_distribution_probability",
+  "magic_numbers_used": [],
+  "statistical_constants": {
+    "TUKEY_FENCE_MULTIPLIER": 1.5,
+    "MIN_SAMPLES_FOR_STATISTICS": 5,
+    "explanation": "Tukey 1.5 is standard definition, MIN_SAMPLES is for reliable std"
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "agent": "NEO",
+  "personality": {
+    "curiosity": 0.9,
+    "domain": "cosmos_physics"
+  },
+  "search_history": [
+    {
+      "timestamp": "2025-12-06T07:06:22.594624",
+      "interest": "orbit",
+      "search_results": [
+        "Orbit",
+        "Orbital hybridisation",
+        "Orbital mechanics",
+        "Orbitofrontal cortex",
+        "Orbital elements"
+      ],
+      "chosen": "Orbital mechanics",
+      "reason": "Curiosidad 90%, inter\u00e9s en 'orbit'"
+    },
+    {
+      "timestamp": "2025-12-06T07:06:23.204694",
+      "interest": "temperature",
+      "search_results": [
+        "Temperature",
+        "Temperatures Rising",
+        "Temperature-responsive polymer",
+        "Temperature of Love",
+        "Temperature in Canada"
+      ],
+      "chosen": "Temperature",
+      "reason": "Curiosidad 90%, inter\u00e9s en 'temperature'"
+    },
+    {
+      "timestamp": "2025-12-06T07:06:24.019840",
+      "interest": "planet",
+      "search_results": [
+        "Planet",
+        "Planet of the Apes",
+        "Planet Nine",
+        "Planetary symbols",
+        "Planets beyond Neptune"
+      ],
+      "chosen": "Planets beyond Neptune",
+      "reason": "Curiosidad 90%, inter\u00e9s en 'planet'"
+    }
+  ],
+  "facts_learned": 69,
+  "facts_with_sources": [
+    {
+      "value": 180.0,
+      "source": "https://en.wikipedia.org/wiki/Orbital_mechanics"
+    },
+    {
+      "value": 180.0,
+      "source": "https://en.wikipedia.org/wiki/Orbital_mechanics"
+    },
+    {
+      "value": 11.0,
+      "source": "https://en.wikipedia.org/wiki/Orbital_mechanics"
+    },
+    {
+      "value": 42.0,
+      "source": "https://en.wikipedia.org/wiki/Orbital_mechanics"
+    },
+    {
+      "value": 0.0,
+      "source": "https://en.wikipedia.org/wiki/Temperature"
+    },
+    {
+      "value": 15.0,
+      "source": "https://en.wikipedia.org/wiki/Temperature"
+    },
+    {
+      "value": 0.0,
+      "source": "https://en.wikipedia.org/wiki/Temperature"
+    },
+    {
+      "value": 100.0,
+      "source": "https://en.wikipedia.org/wiki/Temperature"
+    },
+    {
+      "value": 32.0,
+      "source": "https://en.wikipedia.org/wiki/Temperature"
+    },
+    {
+      "value": 212.0,
+      "source": "https://en.wikipedia.org/wiki/Temperature"
+    }
+  ],
+  "hypotheses": [
+    {
+      "type": "cluster_boundary",
+      "description": "Los valores parecen agruparse con una separaci\u00f3n en ~2023.0",
+      "evidence": "Gap m\u00e1ximo de 9582.0 encontrado",
+      "values_below": [
+        180.0,
+        180.0,
+        11.0,
+        42.0,
+        0.0,
+        15.0,
+        0.0,
+        100.0,
+        32.0,
+        212.0,
+        0.0,
+        15.0,
+        67.0,
+        0.0,
+        0.0,
+        16.0,
+        15.0,
+        0.0,
+        16.0,
+        3.0,
+        1.0,
+        16.0,
+        0.0,
+        15.0,
+        0.0,
+        100.0,
+        0.0,
+        1.0,
+        15.0,
+        0.0,
+        15.0,
+        16.0,
+        1.0,
+        15.0,
+        0.0,
+        15.0,
+        16.0,
+        1.0,
+        32.0,
+        212.0,
+        1012.0,
+        8.0,
+        2.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        5.0,
+        3.0,
+        6.0,
+        0.0,
+        2.0,
+        1719.0,
+        1919.0,
+        33.0,
+        180.0,
+        18.0,
+        21.0,
+        1022.0,
+        1989.0,
+        92.0,
+        0.0,
+        2023.0,
+        30.0,
+        880.0,
+        9.0,
+        2.0,
+        2.0
+      ],
+      "values_above": [
+        11605.0
+      ],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Temperature",
+        "https://en.wikipedia.org/wiki/Orbital_mechanics"
+      ],
+      "formulated_by": "NEO",
+      "timestamp": "2025-12-06T07:06:27.101707"
+    }
+  ],
+  "wikipedia_sources": [
+    {
+      "title": "Orbital mechanics",
+      "url": "https://en.wikipedia.org/wiki/Orbital_mechanics",
+      "fetched_at": "2025-12-06T07:06:22.942448"
+    },
+    {
+      "title": "Temperature",
+      "url": "https://en.wikipedia.org/wiki/Temperature",
+      "fetched_at": "2025-12-06T07:06:23.565342"
+    },
+    {
+      "title": "Planets beyond Neptune",
+      "url": "https://en.wikipedia.org/wiki/Planets_beyond_Neptune",
+      "fetched_at": "2025-12-06T07:06:24.376345"
+    }
+  ]
+}

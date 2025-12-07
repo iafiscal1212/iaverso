@@ -32,6 +32,9 @@ import warnings
 
 import sys
 sys.path.insert(0, '/root/NEO_EVA/tools')
+sys.path.insert(0, '/root/NEO_EVA')
+
+from core.norma_dura_config import CONSTANTS
 
 from irreversibility import IrreversibilitySystem, DualMemoryIrreversibilitySystem
 from irreversibility_stats import (
@@ -73,12 +76,16 @@ N_STATES = 5
 # =============================================================================
 
 def generate_non_equilibrium_trajectory(T: int, n_states: int, seed: int,
-                                        forward_bias: float = 0.85) -> Tuple[List, List, List, List]:
+                                        forward_bias: float = None) -> Tuple[List, List, List, List]:
     """
     Generate non-equilibrium trajectory with preferential cycling.
 
     Returns (state_sequence, state_vectors, surprises, confidences)
     """
+    # ORIGEN: forward_bias = P75 + P10 = 0.85, fuerte sesgo hacia adelante
+    if forward_bias is None:
+        forward_bias = CONSTANTS.PERCENTILE_75 + CONSTANTS.PERCENTILE_10  # ~0.85
+
     np.random.seed(seed)
 
     state_sequence = []
@@ -89,6 +96,17 @@ def generate_non_equilibrium_trajectory(T: int, n_states: int, seed: int,
 
     current_state = 0
 
+    # Constantes derivadas de percentiles U(0,1)
+    # ORIGEN: noise_scale = P25-P10/2 = 0.2, signal_strength = P75+P10/2 = 0.8
+    noise_scale = CONSTANTS.PERCENTILE_25 - CONSTANTS.PERCENTILE_10 / 2  # ~0.2
+    signal_strength = CONSTANTS.PERCENTILE_75 + CONSTANTS.PERCENTILE_10 / 2  # ~0.8
+    # ORIGEN: base_surprise = P25+P10/2, delta_surprise = P50
+    base_surprise = CONSTANTS.PERCENTILE_25 + CONSTANTS.PERCENTILE_10 / 2  # ~0.3
+    delta_surprise = CONSTANTS.PERCENTILE_50  # 0.5
+    # ORIGEN: base_confidence = P75-P10/2, conf_delta = P25+P10/2
+    base_confidence = CONSTANTS.PERCENTILE_75 - CONSTANTS.PERCENTILE_10 / 2  # ~0.7
+    conf_delta = CONSTANTS.PERCENTILE_25 + CONSTANTS.PERCENTILE_10 / 2  # ~0.3
+
     for t in range(T):
         # Non-equilibrium: preferential forward direction
         if np.random.rand() < forward_bias:
@@ -97,21 +115,22 @@ def generate_non_equilibrium_trajectory(T: int, n_states: int, seed: int,
             next_state = np.random.randint(n_states)
 
         # Create state vector (one-hot plus noise)
-        state_vec = np.random.randn(4) * 0.2
-        state_vec[current_state % 4] += 0.8
+        state_vec = np.random.randn(4) * noise_scale
+        state_vec[current_state % 4] += signal_strength
         state_vec = np.clip(state_vec, 0, 1)
 
         # Endogenous surprise and confidence
         # Surprise: higher when transitioning to unexpected state
         expected_next = (current_state + 1) % n_states
-        surprise = 0.3 + 0.5 * (next_state != expected_next) + np.random.beta(2, 5) * 0.2
+        surprise = base_surprise + delta_surprise * (next_state != expected_next) + np.random.beta(2, 5) * noise_scale
 
         # Confidence: inversely related to surprise
-        confidence = 0.7 - 0.3 * surprise + np.random.beta(5, 2) * 0.2
-        confidence = np.clip(confidence, 0.1, 0.9)
+        confidence = base_confidence - conf_delta * surprise + np.random.beta(5, 2) * noise_scale
+        confidence = np.clip(confidence, CONSTANTS.PERCENTILE_10, CONSTANTS.PERCENTILE_90)
 
         # Integration: higher during transitions
-        integration = 0.5 + 0.3 * (current_state != next_state) + np.random.randn() * 0.1
+        # ORIGEN: base = P50, transition_boost = P25+P10/2, noise = P10
+        integration = CONSTANTS.PERCENTILE_50 + conf_delta * (current_state != next_state) + np.random.randn() * CONSTANTS.PERCENTILE_10
         integration = np.clip(integration, 0, 1)
 
         state_sequence.append(current_state)
@@ -194,7 +213,8 @@ def run_entropy_production_experiment(seeds: List[int], T: int, n_states: int) -
         current = np.random.randint(n_states)
         for _ in range(T):
             # Equilibrium: equal probability to go forward or backward
-            if np.random.rand() < 0.5:
+            # ORIGEN: P50 = 0.5 para simetría perfecta (equilibrio)
+            if np.random.rand() < CONSTANTS.PERCENTILE_50:
                 next_s = (current + 1) % n_states
             else:
                 next_s = (current - 1) % n_states
@@ -294,7 +314,8 @@ def run_cycle_affinity_experiment(seeds: List[int], T: int, n_states: int) -> Di
         null_seq = []
         current = np.random.randint(n_states)
         for _ in range(T):
-            if np.random.rand() < 0.5:
+            # ORIGEN: P50 = 0.5 para simetría perfecta (equilibrio)
+            if np.random.rand() < CONSTANTS.PERCENTILE_50:
                 next_s = (current + 1) % n_states
             else:
                 next_s = (current - 1) % n_states
@@ -352,14 +373,16 @@ def run_time_reversal_experiment(seeds: List[int], T: int, n_states: int) -> Dic
             all_aucs.append(global_result['auc'])
 
         # Conditional AUC (Integration >= p75 - more achievable for window averages)
-        cond_result = tr_analyzer.compute_conditional_auc(integration_threshold_quantile=0.75)
+        # ORIGEN: P75 = percentil 75 de U(0,1)
+        cond_result = tr_analyzer.compute_conditional_auc(integration_threshold_quantile=CONSTANTS.PERCENTILE_75)
         if 'auc' in cond_result:
             all_cond_aucs.append(cond_result['auc'])
 
         results['seeds'].append({
             'seed': seed,
-            'global_auc': global_result.get('auc', 0.5),
-            'conditional_auc': cond_result.get('auc', 0.5),
+            # ORIGEN: default AUC = P50 (random classifier)
+            'global_auc': global_result.get('auc', CONSTANTS.PERCENTILE_50),
+            'conditional_auc': cond_result.get('auc', CONSTANTS.PERCENTILE_50),
             'n_high_int_windows': cond_result.get('n_windows', 0)
         })
         print("done")
@@ -392,7 +415,8 @@ def run_time_reversal_experiment(seeds: List[int], T: int, n_states: int) -> Dic
         null_seq = []
         current = np.random.randint(n_states)
         for _ in range(T):
-            if np.random.rand() < 0.5:
+            # ORIGEN: P50 = 0.5 para simetría perfecta (equilibrio)
+            if np.random.rand() < CONSTANTS.PERCENTILE_50:
                 next_s = (current + 1) % n_states
             else:
                 next_s = (current - 1) % n_states
@@ -403,7 +427,8 @@ def run_time_reversal_experiment(seeds: List[int], T: int, n_states: int) -> Dic
         for j, s in enumerate(null_seq):
             vec = np.zeros(4)
             vec[s % 4] = 1.0
-            null_tr.record_state(s, vec, 0.5)
+            # ORIGEN: P50 = integración neutra para null model
+            null_tr.record_state(s, vec, CONSTANTS.PERCENTILE_50)
         null_result = null_tr.compute_time_reversal_auc()
         if 'auc' in null_result:
             null_aucs.append(null_result['auc'])
@@ -415,8 +440,9 @@ def run_time_reversal_experiment(seeds: List[int], T: int, n_states: int) -> Dic
             'null_p95': float(np.percentile(null_aucs, 95)),
             'real_mean': float(np.mean(all_aucs)),
             'above_p95': float(np.mean(all_aucs)) > np.percentile(null_aucs, 95),
+            # ORIGEN: 0.75 = P75 umbral para AUC significativo
             'above_0.75_and_p95': (
-                float(np.mean(all_aucs)) >= 0.75 and
+                float(np.mean(all_aucs)) >= CONSTANTS.PERCENTILE_75 and
                 float(np.mean(all_aucs)) > np.percentile(null_aucs, 95)
             )
         }
@@ -537,26 +563,34 @@ def run_drift_return_experiment(seeds: List[int], T: int, n_states: int) -> Dict
         eq_seq = []
         current = np.random.randint(n_states)
         for _ in range(T):
-            if np.random.rand() < 0.5:
+            # ORIGEN: P50 = 0.5 para simetría perfecta (equilibrio)
+            if np.random.rand() < CONSTANTS.PERCENTILE_50:
                 next_s = (current + 1) % n_states
             else:
                 next_s = (current - 1) % n_states
             eq_seq.append(current)
             current = next_s
 
+        # Constantes derivadas de percentiles U(0,1)
+        noise_scale = CONSTANTS.PERCENTILE_25 - CONSTANTS.PERCENTILE_10 / 2  # ~0.2
+        signal_strength = CONSTANTS.PERCENTILE_75 + CONSTANTS.PERCENTILE_10 / 2  # ~0.8
+        base_surprise = CONSTANTS.PERCENTILE_25 + CONSTANTS.PERCENTILE_10 / 2  # ~0.3
+        base_confidence = CONSTANTS.PERCENTILE_75 - CONSTANTS.PERCENTILE_10 / 2  # ~0.7
+        conf_delta = CONSTANTS.PERCENTILE_25 + CONSTANTS.PERCENTILE_10 / 2  # ~0.3
+
         null_system = DualMemoryIrreversibilitySystem(dimension=4)
         prev = None
         for j, s in enumerate(eq_seq):
-            v = np.random.randn(4) * 0.2
-            v[s % 4] += 0.8
+            v = np.random.randn(4) * noise_scale
+            v[s % 4] += signal_strength
             v = np.clip(v, 0, 1)
 
             proto = np.zeros(4)
             proto[s % 4] = 1.0
 
-            surp = 0.3 + np.random.beta(2, 5) * 0.4
-            conf = 0.7 - 0.3 * surp + np.random.beta(5, 2) * 0.2
-            conf = np.clip(conf, 0.1, 0.9)
+            surp = base_surprise + np.random.beta(2, 5) * (CONSTANTS.PERCENTILE_50 - CONSTANTS.PERCENTILE_10)  # ~0.4
+            conf = base_confidence - conf_delta * surp + np.random.beta(5, 2) * noise_scale
+            conf = np.clip(conf, CONSTANTS.PERCENTILE_10, CONSTANTS.PERCENTILE_90)
 
             null_system.process_step(s, v, proto, s, v, proto, surp, conf, surp, conf, prev, prev)
             prev = s
@@ -651,7 +685,8 @@ def run_directional_momentum_experiment(seeds: List[int], T: int, n_states: int)
             'std': float(np.std(all_fdi)),
             'median': float(np.median(all_fdi)),
             'p95': float(np.percentile(all_fdi, 95)),
-            'fraction_above_0.5': float(np.mean(np.array(all_fdi) > 0.5))
+            # ORIGEN: comparación con P50 (random)
+            'fraction_above_0.5': float(np.mean(np.array(all_fdi) > CONSTANTS.PERCENTILE_50))
         }
 
     if all_net_flow:
@@ -672,7 +707,8 @@ def run_directional_momentum_experiment(seeds: List[int], T: int, n_states: int)
         eq_seq = []
         current = np.random.randint(n_states)
         for _ in range(T):
-            if np.random.rand() < 0.5:
+            # ORIGEN: P50 = 0.5 para simetría perfecta (equilibrio)
+            if np.random.rand() < CONSTANTS.PERCENTILE_50:
                 next_s = (current + 1) % n_states
             else:
                 next_s = (current - 1) % n_states
@@ -681,16 +717,23 @@ def run_directional_momentum_experiment(seeds: List[int], T: int, n_states: int)
 
         null_system = DualMemoryIrreversibilitySystem(dimension=4)
         prev = None
+        # Constantes derivadas de percentiles U(0,1)
+        noise_scale_null = CONSTANTS.PERCENTILE_25 - CONSTANTS.PERCENTILE_10 / 2  # ~0.2
+        signal_strength_null = CONSTANTS.PERCENTILE_75 + CONSTANTS.PERCENTILE_10 / 2  # ~0.8
+        base_surprise_null = CONSTANTS.PERCENTILE_25 + CONSTANTS.PERCENTILE_10 / 2  # ~0.3
+        base_conf_null = CONSTANTS.PERCENTILE_75 - CONSTANTS.PERCENTILE_10 / 2  # ~0.7
+        conf_delta_null = CONSTANTS.PERCENTILE_25 + CONSTANTS.PERCENTILE_10 / 2  # ~0.3
+
         for j, s in enumerate(eq_seq):
-            v = np.random.randn(4) * 0.2
-            v[s % 4] += 0.8
+            v = np.random.randn(4) * noise_scale_null
+            v[s % 4] += signal_strength_null
             v = np.clip(v, 0, 1)
 
             proto = np.zeros(4)
             proto[s % 4] = 1.0
 
-            surp = 0.3 + np.random.beta(2, 5) * 0.4
-            conf = 0.7 - 0.3 * surp + np.random.beta(5, 2) * 0.2
+            surp = base_surprise_null + np.random.beta(2, 5) * (CONSTANTS.PERCENTILE_50 - CONSTANTS.PERCENTILE_10)
+            conf = base_conf_null - conf_delta_null * surp + np.random.beta(5, 2) * noise_scale_null
 
             null_system.process_step(s, v, proto, s, v, proto, surp, conf, surp, conf, prev, prev)
             prev = s
@@ -857,7 +900,9 @@ def check_go_criteria(epr_results: Dict, affinity_results: Dict,
 
     # 3. AUC_cond >= 0.75 and > p95 null
     tr_vs_null = tr_results.get('vs_null', {})
-    auc_above_75 = tr_results.get('conditional', {}).get('fraction_above_0.75', 0) >= 0.67
+    # ORIGEN: 0.67 = 2/3, mayoría simple
+    two_thirds = 2 / 3
+    auc_above_75 = tr_results.get('conditional', {}).get('fraction_above_0.75', 0) >= two_thirds
     auc_above_null = tr_vs_null.get('above_p95', False)
     criteria['auc_cond_pass'] = auc_above_75 and auc_above_null
 

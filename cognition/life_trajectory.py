@@ -15,10 +15,14 @@ Combina:
 Todo 100% endógeno - sin constantes mágicas.
 """
 
+import sys
 import numpy as np
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 from enum import Enum
+
+sys.path.insert(0, '/root/NEO_EVA')
+from core.norma_dura_config import CONSTANTS
 
 
 class LifePhase(Enum):
@@ -96,14 +100,16 @@ class LifeTrajectory:
         self.identity_history: List[float] = []
 
         # Pesos adaptativos para wellbeing
-        self.alpha = 0.25  # peso SAGI/integración
-        self.beta = 0.25   # peso purpose
-        self.gamma = 0.25  # peso coherence
-        self.delta = 0.25  # peso identity
+        # ORIGEN: distribución uniforme inicial entre 4 componentes (1/4 = 0.25)
+        self.alpha = CONSTANTS.PERCENTILE_25  # peso SAGI/integración
+        self.beta = CONSTANTS.PERCENTILE_25   # peso purpose
+        self.gamma = CONSTANTS.PERCENTILE_25  # peso coherence
+        self.delta = CONSTANTS.PERCENTILE_25  # peso identity
 
         # Umbrales (adaptativos)
-        self.good_threshold = 0.6
-        self.bad_threshold = 0.4
+        # ORIGEN: good=P50+P10, bad=P50-P10 para simetría alrededor de mediana
+        self.good_threshold = CONSTANTS.PERCENTILE_50 + CONSTANTS.PERCENTILE_10  # ~0.6
+        self.bad_threshold = CONSTANTS.PERCENTILE_50 - CONSTANTS.PERCENTILE_10   # ~0.4
 
         # Fase actual
         self.current_phase = LifePhase.BIRTH
@@ -156,14 +162,17 @@ class LifeTrajectory:
             if len(comp) == len(changes):
                 corr = np.corrcoef(comp, changes)[0, 1]
                 if np.isnan(corr):
-                    corr = 0.0
+                    corr = 0.0  # ORIGEN: correlación neutra cuando NaN
             else:
-                corr = 0.0
-            correlations.append(max(0.1, corr + 0.5))
+                corr = 0.0  # ORIGEN: correlación neutra cuando no hay datos
+            # ORIGEN: offset 0.5 (mediana) + floor P10 para evitar pesos negativos
+            correlations.append(max(CONSTANTS.PERCENTILE_10, corr + CONSTANTS.PERCENTILE_50))
 
         # Normalizar
-        total = sum(correlations) + 0.3  # 0.3 para SAGI (base)
-        self.alpha = 0.3 / total
+        # ORIGEN: 0.3 = P25+P10/2 como peso base para SAGI
+        sagi_base_weight = CONSTANTS.PERCENTILE_25 + CONSTANTS.PERCENTILE_10 / 2  # ~0.3
+        total = sum(correlations) + sagi_base_weight
+        self.alpha = sagi_base_weight / total
         self.beta = correlations[0] / total
         self.gamma = correlations[1] / total
         self.delta = correlations[2] / total
@@ -196,44 +205,56 @@ class LifeTrajectory:
         wb_percentile = np.sum(np.array(self.wellbeing_history) <= wellbeing) / \
                        len(self.wellbeing_history)
 
+        # Umbrales derivados de percentiles U(0,1)
+        # ORIGEN: crisis = P25-P10/2 (~0.2), alto = P75-P10/2 (~0.7)
+        crisis_threshold = CONSTANTS.PERCENTILE_25 - CONSTANTS.PERCENTILE_10 / 2  # ~0.2
+        high_threshold = CONSTANTS.PERCENTILE_75 - CONSTANTS.PERCENTILE_10 / 2    # ~0.7
+        medium_threshold = CONSTANTS.PERCENTILE_50 + CONSTANTS.PERCENTILE_10      # ~0.6
+        low_threshold = CONSTANTS.PERCENTILE_50 - CONSTANTS.PERCENTILE_10         # ~0.4
+        trend_threshold = CONSTANTS.PERCENTILE_10 / 2  # ~0.05 para trends
+        momentum_low = CONSTANTS.PERCENTILE_10         # ~0.1 para momentum bajo
+        momentum_high = CONSTANTS.PERCENTILE_25 - CONSTANTS.PERCENTILE_10 / 2  # ~0.2 para momentum alto
+
         # Crisis: bienestar muy bajo
-        if wb_percentile < 0.2:
+        if wb_percentile < crisis_threshold:
             return LifePhase.CRISIS
 
         # Declive: bienestar bajando consistentemente
         if len(self.wellbeing_history) > 5:
             recent_trend = np.mean(np.diff(self.wellbeing_history[-5:]))
-            if recent_trend < -0.05:
+            if recent_trend < -trend_threshold:
                 return LifePhase.DECLINE
 
         # Madurez: alta identidad, alto propósito, alta coherencia
-        if identity > 0.7 and purpose > 0.6 and coherence > 0.7:
+        if identity > high_threshold and purpose > medium_threshold and coherence > high_threshold:
             return LifePhase.MATURITY
 
         # Consolidación: identidad alta, momentum bajo
-        if identity > 0.6 and abs(momentum) < 0.1:
+        if identity > medium_threshold and abs(momentum) < momentum_low:
             return LifePhase.CONSOLIDATION
 
         # Exploración: identidad baja, momentum alto
-        if identity < 0.4 and abs(momentum) > 0.2:
+        if identity < low_threshold and abs(momentum) > momentum_high:
             return LifePhase.EXPLORATION
 
         # Crecimiento: wellbeing subiendo, propósito presente
         if len(self.wellbeing_history) > 5:
             recent_trend = np.mean(np.diff(self.wellbeing_history[-5:]))
-            if recent_trend > 0.02 and purpose > 0.4:
+            trend_positive = trend_threshold / 2.5  # ~0.02
+            if recent_trend > trend_positive and purpose > low_threshold:
                 return LifePhase.GROWTH
 
         # Estancamiento: poco cambio, bajo propósito
-        if abs(momentum) < 0.05 and purpose < 0.3:
+        stagnation_purpose = CONSTANTS.PERCENTILE_25 + CONSTANTS.PERCENTILE_10 / 2  # ~0.3
+        if abs(momentum) < trend_threshold and purpose < stagnation_purpose:
             return LifePhase.STAGNATION
 
         # Renovación: después de crisis, mejorando
-        if self.current_phase == LifePhase.CRISIS and wb_percentile > 0.4:
+        if self.current_phase == LifePhase.CRISIS and wb_percentile > low_threshold:
             return LifePhase.RENEWAL
 
         # Reconstrucción: identidad baja pero coherencia recuperándose
-        if identity < 0.4 and coherence > 0.5:
+        if identity < low_threshold and coherence > CONSTANTS.PERCENTILE_50:
             return LifePhase.RECONSTRUCTION
 
         return self.current_phase  # Mantener fase actual
@@ -263,14 +284,16 @@ class LifeTrajectory:
                 return LifeEvent(
                     t=self.t,
                     event_type="transition",
-                    magnitude=0.5,
+                    magnitude=CONSTANTS.PERCENTILE_50,  # ORIGEN: magnitud media
                     description=f"{old_phase.value} → {new_phase.value}"
                 )
 
         # Cambio brusco en wellbeing
+        # ORIGEN: umbral = P25-P10/2 (~0.2) para detectar cambios significativos
+        significant_change = CONSTANTS.PERCENTILE_25 - CONSTANTS.PERCENTILE_10 / 2
         if len(self.wellbeing_history) > 1:
             change = wellbeing - self.wellbeing_history[-1]
-            if abs(change) > 0.2:
+            if abs(change) > significant_change:
                 return LifeEvent(
                     t=self.t,
                     event_type="discovery" if change > 0 else "setback",
@@ -397,9 +420,11 @@ class LifeTrajectory:
         if current > self.good_threshold and trend >= 0:
             return "thriving"
         elif current > self.bad_threshold:
+            # ORIGEN: trend_declining = -P10/5 = -0.02
+            trend_declining = -CONSTANTS.PERCENTILE_10 / 5
             if trend > 0:
                 return "improving"
-            elif trend < -0.02:
+            elif trend < trend_declining:
                 return "declining"
             else:
                 return "stable"

@@ -1,0 +1,1363 @@
+{
+  "timestamp": "2025-12-06T07:26:12.241581",
+  "n_agents": 3,
+  "n_cycles": 50,
+  "topics_explored": [
+    "August",
+    "Ranking",
+    "originally",
+    "Wika",
+    "exchange",
+    "Missouri",
+    "December",
+    "Sigma Hydrids",
+    "benefiting",
+    "sometimes",
+    "candidate",
+    "City",
+    "territorial",
+    "Castle Pines",
+    "Hennigsdorf",
+    "Monaco",
+    "garments",
+    "conquered",
+    "described",
+    "populous",
+    "february",
+    "crotonaldehyde",
+    "Old English",
+    "France",
+    "Antipope Philip",
+    "influenced",
+    "Low Countries",
+    "caesares",
+    "Croton",
+    "Heinrich Heine",
+    "Aristotle",
+    "orchestra",
+    "birthplace",
+    "Exchange Building",
+    "includes",
+    "burgundy",
+    "Herod",
+    "Exchange\nAll",
+    "johannes",
+    "laboratories",
+    "democrats",
+    "Song",
+    "Artois",
+    "Nord",
+    "Philip",
+    "Haavard Nord",
+    "collected",
+    "Chinese",
+    "Die Linke",
+    "There",
+    "The",
+    "Many",
+    "He",
+    "Kat Graham",
+    "Hans Modrow",
+    "understood",
+    "generally",
+    "Der Kommissar",
+    "produced",
+    "biological",
+    "installations",
+    "Artists",
+    "employees",
+    "India",
+    "Sometimes",
+    "mathematical",
+    "applicable",
+    "organisation",
+    "musician",
+    "switzerland",
+    "calendar",
+    "Malta\nExchange Building",
+    "Blue",
+    "remained",
+    "pursuing",
+    "China\nChinese",
+    "life",
+    "Wallflowers",
+    "Populous Holdings",
+    "institutions",
+    "Masovian Voivodeship",
+    "Philippines",
+    "Bronze Age Egyptian",
+    "George Michael",
+    "Mariah Carey",
+    "Sergius",
+    "Uprising",
+    "Crotonoideae\nCroton",
+    "Outside",
+    "Examples",
+    "confederates",
+    "skeptical",
+    "force",
+    "theravada",
+    "star",
+    "Orada",
+    "dominant",
+    "Eastern Islands",
+    "attested",
+    "Pennsylvania",
+    "Egypt",
+    "overseas",
+    "traditionally",
+    "simplified",
+    "Indonesia",
+    "Pula",
+    "holdings",
+    "Linguistic",
+    "Joe Jackson",
+    "songwriter",
+    "Muhammad Ali"
+  ],
+  "observations": [
+    {
+      "type": "numerical_pattern",
+      "topic": "Aristotle",
+      "n_values_found": 1,
+      "range": [
+        55.0,
+        55.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Aristotle"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Artois",
+      "n_values_found": 2,
+      "range": [
+        0.0,
+        1237.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Artois"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "France",
+      "n_values_found": 1,
+      "range": [
+        702.0,
+        702.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/France"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Low Countries",
+      "n_values_found": 1,
+      "range": [
+        1830.0,
+        1830.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Low_Countries"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Nord",
+      "n_values_found": 3,
+      "range": [
+        1991.0,
+        2009.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Nord"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Hans Modrow",
+      "n_values_found": 1,
+      "range": [
+        10.0,
+        10.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Hans_Modrow"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Heinrich Heine",
+      "n_values_found": 1,
+      "range": [
+        17.0,
+        17.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Heinrich_Heine"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "December",
+      "n_values_found": 1,
+      "range": [
+        16.0,
+        16.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/December"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "crotonaldehyde",
+      "n_values_found": 4,
+      "range": [
+        2.0,
+        3.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/crotonaldehyde"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "France",
+      "n_values_found": 1,
+      "range": [
+        702.0,
+        702.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/France"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Monaco",
+      "n_values_found": 3,
+      "range": [
+        8.0,
+        83.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Monaco"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "sometimes",
+      "n_values_found": 2,
+      "range": [
+        99.0,
+        182.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/sometimes"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Monaco",
+      "n_values_found": 3,
+      "range": [
+        8.0,
+        83.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Monaco"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Missouri",
+      "n_values_found": 1,
+      "range": [
+        114.0,
+        114.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Missouri"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Pennsylvania",
+      "n_values_found": 1,
+      "range": [
+        225.0,
+        225.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Pennsylvania"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Pennsylvania",
+      "n_values_found": 1,
+      "range": [
+        225.0,
+        225.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Pennsylvania"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Populous Holdings",
+      "n_values_found": 2,
+      "range": [
+        1400.0,
+        2022.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Populous_Holdings"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Masovian Voivodeship",
+      "n_values_found": 2,
+      "range": [
+        10.0,
+        42.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Masovian_Voivodeship"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "collected",
+      "n_values_found": 7,
+      "range": [
+        1984.0,
+        2015.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/collected"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "collected",
+      "n_values_found": 7,
+      "range": [
+        1984.0,
+        2015.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/collected"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Outside",
+      "n_values_found": 2,
+      "range": [
+        2004.0,
+        2024.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Outside"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "George Michael",
+      "n_values_found": 1,
+      "range": [
+        25.0,
+        25.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/George_Michael"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "He",
+      "n_values_found": 2,
+      "range": [
+        1955.0,
+        2011.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/He"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "December",
+      "n_values_found": 1,
+      "range": [
+        16.0,
+        16.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/December"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "George Michael",
+      "n_values_found": 1,
+      "range": [
+        25.0,
+        25.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/George_Michael"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Mariah Carey",
+      "n_values_found": 1,
+      "range": [
+        100.0,
+        100.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Mariah_Carey"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Philippines",
+      "n_values_found": 1,
+      "range": [
+        1935.0,
+        1935.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Philippines"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Sometimes",
+      "n_values_found": 2,
+      "range": [
+        99.0,
+        182.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Sometimes"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "Kat Graham",
+      "n_values_found": 2,
+      "range": [
+        2.0,
+        2003.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/Kat_Graham"
+    },
+    {
+      "type": "numerical_pattern",
+      "topic": "switzerland",
+      "n_values_found": 2,
+      "range": [
+        26.0,
+        1830.0
+      ],
+      "source": "https://en.wikipedia.org/wiki/switzerland"
+    }
+  ],
+  "connections": [
+    {
+      "type": "similar_values",
+      "value1": 17.0,
+      "topic1": "Heinrich Heine",
+      "value2": 16.0,
+      "topic2": "December",
+      "ratio": 0.9411764705882353
+    },
+    {
+      "type": "similar_values",
+      "value1": 16.0,
+      "topic1": "December",
+      "value2": 15.0,
+      "topic2": "Monaco",
+      "ratio": 0.9375
+    },
+    {
+      "type": "similar_values",
+      "value1": 2005.0,
+      "topic1": "collected",
+      "value2": 2004.0,
+      "topic2": "Outside",
+      "ratio": 0.9995012468827931
+    },
+    {
+      "type": "similar_values",
+      "value1": 2005.0,
+      "topic1": "collected",
+      "value2": 2024.0,
+      "topic2": "Outside",
+      "ratio": 1.0094763092269328
+    },
+    {
+      "type": "similar_values",
+      "value1": 2015.0,
+      "topic1": "collected",
+      "value2": 2004.0,
+      "topic2": "Outside",
+      "ratio": 0.9945409429280397
+    },
+    {
+      "type": "similar_values",
+      "value1": 2015.0,
+      "topic1": "collected",
+      "value2": 2024.0,
+      "topic2": "Outside",
+      "ratio": 1.0044665012406948
+    },
+    {
+      "type": "similar_values",
+      "value1": 2010.0,
+      "topic1": "collected",
+      "value2": 2004.0,
+      "topic2": "Outside",
+      "ratio": 0.9970149253731343
+    },
+    {
+      "type": "similar_values",
+      "value1": 2010.0,
+      "topic1": "collected",
+      "value2": 2024.0,
+      "topic2": "Outside",
+      "ratio": 1.0069651741293533
+    },
+    {
+      "type": "similar_values",
+      "value1": 2007.0,
+      "topic1": "collected",
+      "value2": 2004.0,
+      "topic2": "Outside",
+      "ratio": 0.9985052316890882
+    },
+    {
+      "type": "similar_values",
+      "value1": 2007.0,
+      "topic1": "collected",
+      "value2": 2024.0,
+      "topic2": "Outside",
+      "ratio": 1.0084703537618336
+    },
+    {
+      "type": "similar_values",
+      "value1": 2008.0,
+      "topic1": "collected",
+      "value2": 2004.0,
+      "topic2": "Outside",
+      "ratio": 0.99800796812749
+    },
+    {
+      "type": "similar_values",
+      "value1": 2008.0,
+      "topic1": "collected",
+      "value2": 2024.0,
+      "topic2": "Outside",
+      "ratio": 1.0079681274900398
+    },
+    {
+      "type": "similar_values",
+      "value1": 2005.0,
+      "topic1": "collected",
+      "value2": 2004.0,
+      "topic2": "Outside",
+      "ratio": 0.9995012468827931
+    },
+    {
+      "type": "similar_values",
+      "value1": 2005.0,
+      "topic1": "collected",
+      "value2": 2024.0,
+      "topic2": "Outside",
+      "ratio": 1.0094763092269328
+    },
+    {
+      "type": "similar_values",
+      "value1": 2015.0,
+      "topic1": "collected",
+      "value2": 2004.0,
+      "topic2": "Outside",
+      "ratio": 0.9945409429280397
+    },
+    {
+      "type": "similar_values",
+      "value1": 2015.0,
+      "topic1": "collected",
+      "value2": 2024.0,
+      "topic2": "Outside",
+      "ratio": 1.0044665012406948
+    },
+    {
+      "type": "similar_values",
+      "value1": 2010.0,
+      "topic1": "collected",
+      "value2": 2004.0,
+      "topic2": "Outside",
+      "ratio": 0.9970149253731343
+    },
+    {
+      "type": "similar_values",
+      "value1": 2010.0,
+      "topic1": "collected",
+      "value2": 2024.0,
+      "topic2": "Outside",
+      "ratio": 1.0069651741293533
+    },
+    {
+      "type": "similar_values",
+      "value1": 2007.0,
+      "topic1": "collected",
+      "value2": 2004.0,
+      "topic2": "Outside",
+      "ratio": 0.9985052316890882
+    },
+    {
+      "type": "similar_values",
+      "value1": 2007.0,
+      "topic1": "collected",
+      "value2": 2024.0,
+      "topic2": "Outside",
+      "ratio": 1.0084703537618336
+    },
+    {
+      "type": "similar_values",
+      "value1": 2008.0,
+      "topic1": "collected",
+      "value2": 2004.0,
+      "topic2": "Outside",
+      "ratio": 0.99800796812749
+    },
+    {
+      "type": "similar_values",
+      "value1": 2008.0,
+      "topic1": "collected",
+      "value2": 2024.0,
+      "topic2": "Outside",
+      "ratio": 1.0079681274900398
+    },
+    {
+      "type": "similar_values",
+      "value1": 2005.0,
+      "topic1": "collected",
+      "value2": 1955.0,
+      "topic2": "He",
+      "ratio": 0.9750623441396509
+    },
+    {
+      "type": "similar_values",
+      "value1": 2005.0,
+      "topic1": "collected",
+      "value2": 2011.0,
+      "topic2": "He",
+      "ratio": 1.0029925187032418
+    },
+    {
+      "type": "similar_values",
+      "value1": 2015.0,
+      "topic1": "collected",
+      "value2": 1955.0,
+      "topic2": "He",
+      "ratio": 0.9702233250620348
+    },
+    {
+      "type": "similar_values",
+      "value1": 2015.0,
+      "topic1": "collected",
+      "value2": 2011.0,
+      "topic2": "He",
+      "ratio": 0.998014888337469
+    },
+    {
+      "type": "similar_values",
+      "value1": 2010.0,
+      "topic1": "collected",
+      "value2": 1955.0,
+      "topic2": "He",
+      "ratio": 0.972636815920398
+    },
+    {
+      "type": "similar_values",
+      "value1": 2010.0,
+      "topic1": "collected",
+      "value2": 2011.0,
+      "topic2": "He",
+      "ratio": 1.000497512437811
+    },
+    {
+      "type": "similar_values",
+      "value1": 2007.0,
+      "topic1": "collected",
+      "value2": 1955.0,
+      "topic2": "He",
+      "ratio": 0.974090682610862
+    },
+    {
+      "type": "similar_values",
+      "value1": 2007.0,
+      "topic1": "collected",
+      "value2": 2011.0,
+      "topic2": "He",
+      "ratio": 1.0019930244145492
+    },
+    {
+      "type": "similar_values",
+      "value1": 2008.0,
+      "topic1": "collected",
+      "value2": 1955.0,
+      "topic2": "He",
+      "ratio": 0.973605577689243
+    },
+    {
+      "type": "similar_values",
+      "value1": 2008.0,
+      "topic1": "collected",
+      "value2": 2011.0,
+      "topic2": "He",
+      "ratio": 1.0014940239043826
+    },
+    {
+      "type": "similar_values",
+      "value1": 2005.0,
+      "topic1": "collected",
+      "value2": 1955.0,
+      "topic2": "He",
+      "ratio": 0.9750623441396509
+    },
+    {
+      "type": "similar_values",
+      "value1": 2005.0,
+      "topic1": "collected",
+      "value2": 2011.0,
+      "topic2": "He",
+      "ratio": 1.0029925187032418
+    },
+    {
+      "type": "similar_values",
+      "value1": 2015.0,
+      "topic1": "collected",
+      "value2": 1955.0,
+      "topic2": "He",
+      "ratio": 0.9702233250620348
+    },
+    {
+      "type": "similar_values",
+      "value1": 2015.0,
+      "topic1": "collected",
+      "value2": 2011.0,
+      "topic2": "He",
+      "ratio": 0.998014888337469
+    },
+    {
+      "type": "similar_values",
+      "value1": 2010.0,
+      "topic1": "collected",
+      "value2": 1955.0,
+      "topic2": "He",
+      "ratio": 0.972636815920398
+    },
+    {
+      "type": "similar_values",
+      "value1": 2010.0,
+      "topic1": "collected",
+      "value2": 2011.0,
+      "topic2": "He",
+      "ratio": 1.000497512437811
+    },
+    {
+      "type": "similar_values",
+      "value1": 2007.0,
+      "topic1": "collected",
+      "value2": 1955.0,
+      "topic2": "He",
+      "ratio": 0.974090682610862
+    },
+    {
+      "type": "similar_values",
+      "value1": 2007.0,
+      "topic1": "collected",
+      "value2": 2011.0,
+      "topic2": "He",
+      "ratio": 1.0019930244145492
+    },
+    {
+      "type": "similar_values",
+      "value1": 2008.0,
+      "topic1": "collected",
+      "value2": 1955.0,
+      "topic2": "He",
+      "ratio": 0.973605577689243
+    },
+    {
+      "type": "similar_values",
+      "value1": 2008.0,
+      "topic1": "collected",
+      "value2": 2011.0,
+      "topic2": "He",
+      "ratio": 1.0014940239043826
+    },
+    {
+      "type": "similar_values",
+      "value1": 2004.0,
+      "topic1": "Outside",
+      "value2": 1955.0,
+      "topic2": "He",
+      "ratio": 0.9755489021956087
+    },
+    {
+      "type": "similar_values",
+      "value1": 2004.0,
+      "topic1": "Outside",
+      "value2": 2011.0,
+      "topic2": "He",
+      "ratio": 1.003493013972056
+    },
+    {
+      "type": "similar_values",
+      "value1": 2024.0,
+      "topic1": "Outside",
+      "value2": 1955.0,
+      "topic2": "He",
+      "ratio": 0.9659090909090909
+    },
+    {
+      "type": "similar_values",
+      "value1": 2024.0,
+      "topic1": "Outside",
+      "value2": 2011.0,
+      "topic2": "He",
+      "ratio": 0.9935770750988142
+    },
+    {
+      "type": "similar_values",
+      "value1": 2005.0,
+      "topic1": "collected",
+      "value2": 1935.0,
+      "topic2": "Philippines",
+      "ratio": 0.9650872817955112
+    },
+    {
+      "type": "similar_values",
+      "value1": 2015.0,
+      "topic1": "collected",
+      "value2": 1935.0,
+      "topic2": "Philippines",
+      "ratio": 0.9602977667493796
+    },
+    {
+      "type": "similar_values",
+      "value1": 2010.0,
+      "topic1": "collected",
+      "value2": 1935.0,
+      "topic2": "Philippines",
+      "ratio": 0.9626865671641791
+    },
+    {
+      "type": "similar_values",
+      "value1": 2007.0,
+      "topic1": "collected",
+      "value2": 1935.0,
+      "topic2": "Philippines",
+      "ratio": 0.9641255605381166
+    },
+    {
+      "type": "similar_values",
+      "value1": 2008.0,
+      "topic1": "collected",
+      "value2": 1935.0,
+      "topic2": "Philippines",
+      "ratio": 0.9636454183266933
+    },
+    {
+      "type": "similar_values",
+      "value1": 2005.0,
+      "topic1": "collected",
+      "value2": 1935.0,
+      "topic2": "Philippines",
+      "ratio": 0.9650872817955112
+    },
+    {
+      "type": "similar_values",
+      "value1": 2015.0,
+      "topic1": "collected",
+      "value2": 1935.0,
+      "topic2": "Philippines",
+      "ratio": 0.9602977667493796
+    },
+    {
+      "type": "similar_values",
+      "value1": 2010.0,
+      "topic1": "collected",
+      "value2": 1935.0,
+      "topic2": "Philippines",
+      "ratio": 0.9626865671641791
+    },
+    {
+      "type": "similar_values",
+      "value1": 2007.0,
+      "topic1": "collected",
+      "value2": 1935.0,
+      "topic2": "Philippines",
+      "ratio": 0.9641255605381166
+    },
+    {
+      "type": "similar_values",
+      "value1": 2008.0,
+      "topic1": "collected",
+      "value2": 1935.0,
+      "topic2": "Philippines",
+      "ratio": 0.9636454183266933
+    },
+    {
+      "type": "similar_values",
+      "value1": 2004.0,
+      "topic1": "Outside",
+      "value2": 1935.0,
+      "topic2": "Philippines",
+      "ratio": 0.9655688622754491
+    },
+    {
+      "type": "similar_values",
+      "value1": 2024.0,
+      "topic1": "Outside",
+      "value2": 1935.0,
+      "topic2": "Philippines",
+      "ratio": 0.9560276679841897
+    },
+    {
+      "type": "similar_values",
+      "value1": 1955.0,
+      "topic1": "He",
+      "value2": 1935.0,
+      "topic2": "Philippines",
+      "ratio": 0.989769820971867
+    },
+    {
+      "type": "similar_values",
+      "value1": 2011.0,
+      "topic1": "He",
+      "value2": 1935.0,
+      "topic2": "Philippines",
+      "ratio": 0.9622078567876678
+    },
+    {
+      "type": "similar_values",
+      "value1": 100.0,
+      "topic1": "Mariah Carey",
+      "value2": 99.0,
+      "topic2": "Sometimes",
+      "ratio": 0.99
+    },
+    {
+      "type": "similar_values",
+      "value1": 2005.0,
+      "topic1": "collected",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 0.999002493765586
+    },
+    {
+      "type": "similar_values",
+      "value1": 2015.0,
+      "topic1": "collected",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 0.994044665012407
+    },
+    {
+      "type": "similar_values",
+      "value1": 2010.0,
+      "topic1": "collected",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 0.9965174129353234
+    },
+    {
+      "type": "similar_values",
+      "value1": 2007.0,
+      "topic1": "collected",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 0.9980069755854509
+    },
+    {
+      "type": "similar_values",
+      "value1": 2008.0,
+      "topic1": "collected",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 0.9975099601593626
+    },
+    {
+      "type": "similar_values",
+      "value1": 2005.0,
+      "topic1": "collected",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 0.999002493765586
+    },
+    {
+      "type": "similar_values",
+      "value1": 2015.0,
+      "topic1": "collected",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 0.994044665012407
+    },
+    {
+      "type": "similar_values",
+      "value1": 2010.0,
+      "topic1": "collected",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 0.9965174129353234
+    },
+    {
+      "type": "similar_values",
+      "value1": 2007.0,
+      "topic1": "collected",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 0.9980069755854509
+    },
+    {
+      "type": "similar_values",
+      "value1": 2008.0,
+      "topic1": "collected",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 0.9975099601593626
+    },
+    {
+      "type": "similar_values",
+      "value1": 2004.0,
+      "topic1": "Outside",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 0.9995009980039921
+    },
+    {
+      "type": "similar_values",
+      "value1": 2024.0,
+      "topic1": "Outside",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 0.9896245059288538
+    },
+    {
+      "type": "similar_values",
+      "value1": 1955.0,
+      "topic1": "He",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 1.0245524296675192
+    },
+    {
+      "type": "similar_values",
+      "value1": 2011.0,
+      "topic1": "He",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 0.9960218796618597
+    },
+    {
+      "type": "similar_values",
+      "value1": 1935.0,
+      "topic1": "Philippines",
+      "value2": 2003.0,
+      "topic2": "Kat Graham",
+      "ratio": 1.0351421188630492
+    },
+    {
+      "type": "similar_values",
+      "value1": 2005.0,
+      "topic1": "collected",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.912718204488778
+    },
+    {
+      "type": "similar_values",
+      "value1": 2015.0,
+      "topic1": "collected",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.9081885856079405
+    },
+    {
+      "type": "similar_values",
+      "value1": 2010.0,
+      "topic1": "collected",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.9104477611940298
+    },
+    {
+      "type": "similar_values",
+      "value1": 2007.0,
+      "topic1": "collected",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.9118086696562033
+    },
+    {
+      "type": "similar_values",
+      "value1": 2008.0,
+      "topic1": "collected",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.9113545816733067
+    },
+    {
+      "type": "similar_values",
+      "value1": 2005.0,
+      "topic1": "collected",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.912718204488778
+    },
+    {
+      "type": "similar_values",
+      "value1": 2015.0,
+      "topic1": "collected",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.9081885856079405
+    },
+    {
+      "type": "similar_values",
+      "value1": 2010.0,
+      "topic1": "collected",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.9104477611940298
+    },
+    {
+      "type": "similar_values",
+      "value1": 2007.0,
+      "topic1": "collected",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.9118086696562033
+    },
+    {
+      "type": "similar_values",
+      "value1": 2008.0,
+      "topic1": "collected",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.9113545816733067
+    },
+    {
+      "type": "similar_values",
+      "value1": 2004.0,
+      "topic1": "Outside",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.9131736526946108
+    },
+    {
+      "type": "similar_values",
+      "value1": 2024.0,
+      "topic1": "Outside",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.9041501976284585
+    },
+    {
+      "type": "similar_values",
+      "value1": 25.0,
+      "topic1": "George Michael",
+      "value2": 26.0,
+      "topic2": "switzerland",
+      "ratio": 1.04
+    },
+    {
+      "type": "similar_values",
+      "value1": 1955.0,
+      "topic1": "He",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.9360613810741688
+    },
+    {
+      "type": "similar_values",
+      "value1": 2011.0,
+      "topic1": "He",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.9099950273495774
+    },
+    {
+      "type": "similar_values",
+      "value1": 25.0,
+      "topic1": "George Michael",
+      "value2": 26.0,
+      "topic2": "switzerland",
+      "ratio": 1.04
+    },
+    {
+      "type": "similar_values",
+      "value1": 1935.0,
+      "topic1": "Philippines",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.9457364341085271
+    },
+    {
+      "type": "similar_values",
+      "value1": 2003.0,
+      "topic1": "Kat Graham",
+      "value2": 1830.0,
+      "topic2": "switzerland",
+      "ratio": 0.9136295556665003
+    }
+  ],
+  "agent_summaries": [
+    {
+      "agent_id": "LIBRE_1",
+      "curiosity": 0.9732816785362465,
+      "explorations": 50,
+      "facts_learned": 19,
+      "concepts_encountered": 420,
+      "observations_made": 11,
+      "connections_found": 2,
+      "current_interests": [
+        "originally",
+        "acquired",
+        "northumbrian",
+        "traditionally",
+        "imported",
+        "emphatic",
+        "Ye",
+        "benefiting",
+        "proportion",
+        "distinguished"
+      ],
+      "topics_explored": [
+        "August",
+        "originally",
+        "Wika",
+        "December",
+        "Sigma Hydrids",
+        "benefiting",
+        "candidate",
+        "City",
+        "territorial",
+        "Castle Pines",
+        "Hennigsdorf",
+        "Monaco",
+        "garments",
+        "conquered",
+        "february",
+        "crotonaldehyde",
+        "Old English",
+        "France",
+        "Antipope Philip",
+        "Low Countries",
+        "Sergius",
+        "caesares",
+        "Croton",
+        "Aristotle",
+        "Heinrich Heine",
+        "includes",
+        "burgundy",
+        "Herod",
+        "Crotonoideae\nCroton",
+        "Artois",
+        "Nord",
+        "Philip",
+        "Haavard Nord",
+        "Die Linke",
+        "The",
+        "Pula",
+        "Hans Modrow",
+        "understood",
+        "produced",
+        "mathematical",
+        "applicable",
+        "force"
+      ]
+    },
+    {
+      "agent_id": "LIBRE_2",
+      "curiosity": 0.6139889380745985,
+      "explorations": 50,
+      "facts_learned": 10,
+      "concepts_encountered": 251,
+      "observations_made": 6,
+      "connections_found": 0,
+      "current_interests": [
+        "holdings",
+        "Populous",
+        "Popular",
+        "Populous Holdings",
+        "architectural",
+        "Poplar",
+        "Popular",
+        "retractable",
+        "Missouri",
+        "described"
+      ],
+      "topics_explored": [
+        "Ranking",
+        "exchange",
+        "Missouri",
+        "sometimes",
+        "Pennsylvania",
+        "Malta\nExchange Building",
+        "skeptical",
+        "territorial",
+        "Castle Pines",
+        "Monaco",
+        "described",
+        "populous",
+        "biological",
+        "influenced",
+        "orchestra",
+        "birthplace",
+        "Exchange Building",
+        "Exchange\nAll",
+        "johannes",
+        "democrats",
+        "laboratories",
+        "life",
+        "The",
+        "Examples",
+        "generally",
+        "understood",
+        "Der Kommissar",
+        "installations",
+        "Populous Holdings",
+        "holdings",
+        "musician"
+      ]
+    },
+    {
+      "agent_id": "LIBRE_3",
+      "curiosity": 0.7772526243266007,
+      "explorations": 50,
+      "facts_learned": 27,
+      "concepts_encountered": 382,
+      "observations_made": 13,
+      "connections_found": 92,
+      "current_interests": [
+        "Colour",
+        "June",
+        "canadian",
+        "campaign",
+        "switzerland",
+        "Federal Charter",
+        "advanced",
+        "Song",
+        "producer",
+        "obtaining"
+      ],
+      "topics_explored": [
+        "songwriter",
+        "Philippines",
+        "dominant",
+        "December",
+        "Linguistic",
+        "Indonesia",
+        "Blue",
+        "institutions",
+        "Egypt",
+        "confederates",
+        "Uprising",
+        "organisation",
+        "George Michael",
+        "switzerland",
+        "calendar",
+        "overseas",
+        "Mariah Carey",
+        "Outside",
+        "traditionally",
+        "Many",
+        "theravada",
+        "Eastern Islands",
+        "China\nChinese",
+        "Song",
+        "Bronze Age Egyptian",
+        "pursuing",
+        "remained",
+        "Muhammad Ali",
+        "collected",
+        "Chinese",
+        "attested",
+        "There",
+        "simplified",
+        "He",
+        "Kat Graham",
+        "generally",
+        "Artists",
+        "Wallflowers",
+        "employees",
+        "India",
+        "Sometimes",
+        "Masovian Voivodeship",
+        "star",
+        "Joe Jackson",
+        "Orada"
+      ]
+    }
+  ]
+}

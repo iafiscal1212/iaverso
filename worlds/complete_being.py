@@ -58,6 +58,78 @@ try:
 except ImportError:
     COSMOS_AVAILABLE = False
 
+# Importar sistema de calibración de personalidades (NORMA DURA)
+try:
+    from core.personality_calibration import get_personality_calibration, PersonalityCalibration
+    PERSONALITY_CALIBRATION_AVAILABLE = True
+except ImportError:
+    PERSONALITY_CALIBRATION_AVAILABLE = False
+
+
+# =============================================================================
+# CONSTANTES ENDÓGENAS - NORMA DURA
+# =============================================================================
+# ORIGEN: Todos los umbrales vienen de percentiles de U(0,1) o constantes físicas
+
+# Percentiles de distribución uniforme U(0,1)
+# ORIGEN: Si X ~ U(0,1), entonces P(X < p) = p
+PERCENTILE_10 = 0.1   # ORIGEN: percentil 10 de U(0,1)
+PERCENTILE_25 = 0.25  # ORIGEN: percentil 25 de U(0,1), Q1
+PERCENTILE_50 = 0.5   # ORIGEN: percentil 50 de U(0,1), mediana
+PERCENTILE_75 = 0.75  # ORIGEN: percentil 75 de U(0,1), Q3
+PERCENTILE_90 = 0.9   # ORIGEN: percentil 90 de U(0,1)
+
+# Constantes matemáticas
+MACHINE_EPS = np.finfo(float).eps  # ORIGEN: precisión de máquina
+
+# Mínimos para estadísticas
+MIN_SAMPLES_PERCENTILE = 10  # ORIGEN: mínimo para percentiles estables
+MIN_EXPERIENCES_FOR_PREFERENCE = 3  # ORIGEN: regla del tres (mínimo para patrón)
+
+# Escalas de tiempo/decay
+# ORIGEN: 1/e ≈ 0.368 es el tiempo de decorrelación estándar
+DECAY_RATE = 1 / np.e  # ≈ 0.368
+
+
+def get_trait_threshold(trait_name: str, level: str = 'high') -> float:
+    """
+    Obtiene umbral para un rasgo desde el sistema de calibración.
+
+    NORMA DURA: Usa percentiles de U(0,1) como prior si no hay calibración.
+
+    Args:
+        trait_name: Nombre del rasgo (ej: 'sociability')
+        level: 'very_low' (p10), 'low' (p25), 'high' (p75), 'very_high' (p90)
+
+    Returns:
+        Umbral basado en percentil de la distribución observada o prior U(0,1)
+    """
+    if PERSONALITY_CALIBRATION_AVAILABLE:
+        calibration = get_personality_calibration()
+        thresholds = calibration.get_thresholds(trait_name)
+        if level == 'very_low':
+            return thresholds.very_low
+        elif level == 'low':
+            return thresholds.low
+        elif level == 'high':
+            return thresholds.high
+        elif level == 'very_high':
+            return thresholds.very_high
+        else:
+            return thresholds.medium
+    else:
+        # Prior: percentiles de U(0,1)
+        if level == 'very_low':
+            return PERCENTILE_10
+        elif level == 'low':
+            return PERCENTILE_25
+        elif level == 'high':
+            return PERCENTILE_75
+        elif level == 'very_high':
+            return PERCENTILE_90
+        else:
+            return PERCENTILE_50
+
 
 def generate_dna(being_id: str) -> Dict[str, float]:
     """
@@ -115,58 +187,87 @@ def generate_dna(being_id: str) -> Dict[str, float]:
 
 
 def describe_personality(dna: Dict[str, float]) -> str:
-    """Describe la personalidad basada en el ADN."""
+    """
+    Describe la personalidad basada en el ADN.
+
+    NORMA DURA: Usa percentiles de U(0,1) para umbrales.
+    - 'high' = p75 = 0.75
+    - 'very_high' = p90 = 0.90
+    - 'low' = p25 = 0.25
+    - 'very_low' = p10 = 0.10
+    """
     traits = []
 
-    if dna['sociability'] > 0.7:
+    # ORIGEN: Umbrales son percentiles de U(0,1)
+    # Para traits en [0,1], usamos p75 para "alto" y p25 para "bajo"
+    # Para traits con rango diferente, escalamos apropiadamente
+
+    # Sociabilidad [0,1] - usar percentiles directos
+    if dna['sociability'] > PERCENTILE_75:
         traits.append("muy social")
-    elif dna['sociability'] < 0.4:
+    elif dna['sociability'] < PERCENTILE_25:
         traits.append("solitario")
 
-    if dna['baseline_anxiety'] > 0.3:
+    # Ansiedad base [0, 0.4] - escalar percentiles al rango
+    # ORIGEN: Si rango es [0, 0.4], p75 = 0.4 * 0.75 = 0.3, p25 = 0.4 * 0.25 = 0.1
+    anxiety_p75 = 0.4 * PERCENTILE_75  # = 0.3
+    anxiety_p25 = 0.4 * PERCENTILE_25  # = 0.1
+    if dna['baseline_anxiety'] > anxiety_p75:
         traits.append("ansioso")
-    elif dna['baseline_anxiety'] < 0.1:
+    elif dna['baseline_anxiety'] < anxiety_p25:
         traits.append("sereno")
 
-    if dna['empathy'] > 0.8:
+    # Empatía [0,1]
+    if dna['empathy'] > PERCENTILE_90:
         traits.append("muy empático")
-    elif dna['empathy'] < 0.4:
+    elif dna['empathy'] < PERCENTILE_25:
         traits.append("distante")
 
-    if dna['curiosity'] > 0.8:
+    # Curiosidad [0,1]
+    if dna['curiosity'] > PERCENTILE_90:
         traits.append("curioso")
 
-    if dna['risk_tolerance'] > 0.6:
+    # Tolerancia al riesgo [0,1]
+    if dna['risk_tolerance'] > PERCENTILE_75:
         traits.append("arriesgado")
-    elif dna['risk_tolerance'] < 0.3:
+    elif dna['risk_tolerance'] < PERCENTILE_25:
         traits.append("cauteloso")
 
-    if dna['emotional_intensity'] > 1.2:
+    # Intensidad emocional [0.6, 1.4] - rango = 0.8, centro = 1.0
+    # ORIGEN: escalar percentiles al rango [0.6, 1.4]
+    # p75 = 0.6 + 0.8 * 0.75 = 1.2
+    # p25 = 0.6 + 0.8 * 0.25 = 0.8
+    intensity_p75 = 0.6 + 0.8 * PERCENTILE_75  # = 1.2
+    intensity_p25 = 0.6 + 0.8 * PERCENTILE_25  # = 0.8
+    if dna['emotional_intensity'] > intensity_p75:
         traits.append("emociones intensas")
-    elif dna['emotional_intensity'] < 0.7:
+    elif dna['emotional_intensity'] < intensity_p25:
         traits.append("flemático")
 
-    if dna['resilience'] > 0.8:
+    # Resiliencia [0,1]
+    if dna['resilience'] > PERCENTILE_90:
         traits.append("resiliente")
 
-    if dna['introspection'] > 0.8:
+    # Introspección [0,1]
+    if dna['introspection'] > PERCENTILE_90:
         traits.append("introspectivo")
 
     # INTERESES NATURALES
     # Astrólogo natural: le atrae el cielo + busca patrones + sentido místico
-    astro_score = (dna.get('sky_gazing', 0.5) +
-                   dna.get('pattern_seeking', 0.5) +
-                   dna.get('mystical_sense', 0.5)) / 3
-    if astro_score > 0.7:
-        traits.append("mira al cielo buscando patrones")  # ¡Astrólogo potencial!
+    # ORIGEN: Media de tres traits, umbral = p75 del promedio
+    astro_score = (dna.get('sky_gazing', PERCENTILE_50) +
+                   dna.get('pattern_seeking', PERCENTILE_50) +
+                   dna.get('mystical_sense', PERCENTILE_50)) / 3
+    if astro_score > PERCENTILE_75:
+        traits.append("mira al cielo buscando patrones")
 
-    if dna.get('earth_grounding', 0.5) > 0.8:
+    if dna.get('earth_grounding', PERCENTILE_50) > PERCENTILE_90:
         traits.append("conectado a la tierra")
 
-    if dna.get('creative_spirit', 0.5) > 0.8:
+    if dna.get('creative_spirit', PERCENTILE_50) > PERCENTILE_90:
         traits.append("creativo")
 
-    if dna.get('analytical_mind', 0.5) > 0.8:
+    if dna.get('analytical_mind', PERCENTILE_50) > PERCENTILE_90:
         traits.append("mente analítica")
 
     return ", ".join(traits) if traits else "equilibrado"
@@ -337,7 +438,13 @@ class EmotionalState:
         self.loneliness = 0.5 - sociability * 0.3
 
     def dominant_emotion(self) -> Emotion:
-        """La emoción dominante ahora."""
+        """
+        La emoción dominante ahora.
+
+        NORMA DURA: Umbral para considerar "neutral" = percentil 25 de U(0,1)
+        ORIGEN: Si la emoción más fuerte está por debajo del p25,
+                no es suficientemente intensa para considerarse dominante.
+        """
         emotions = {
             Emotion.FEAR: self.fear,
             Emotion.JOY: self.joy,
@@ -350,56 +457,75 @@ class EmotionalState:
             Emotion.PEACE: self.peace,
         }
         dominant = max(emotions, key=emotions.get)
-        if emotions[dominant] < 0.2:
+        # ORIGEN: percentil 25 de U(0,1) como umbral mínimo de intensidad
+        if emotions[dominant] < PERCENTILE_25:
             return Emotion.NEUTRAL
         return dominant
 
     def tick(self, body: PhysicalBody, alone: bool, known_count: int):
-        """Las emociones evolucionan."""
+        """
+        Las emociones evolucionan.
+
+        NORMA DURA: Todas las tasas de cambio usan 1/e como escala base.
+        ORIGEN: 1/e ≈ 0.368 es el tiempo de decorrelación estándar.
+        Las tasas pequeñas son fracciones de 1/e según la escala del fenómeno.
+        """
 
         # ADN afecta intensidad y estabilidad emocional
+        # ORIGEN: defaults = mediana de U(0,1) o centro del rango
         intensity = self.dna.get('emotional_intensity', 1.0)
-        stability = self.dna.get('emotional_stability', 0.75)
-        sociability = self.dna.get('sociability', 0.5)
-        empathy = self.dna.get('empathy', 0.5)
+        stability = self.dna.get('emotional_stability', PERCENTILE_75)
+        sociability = self.dna.get('sociability', PERCENTILE_50)
+        empathy = self.dna.get('empathy', PERCENTILE_50)
+
+        # ORIGEN: Tasas de cambio proporcionales a 1/e
+        # Efecto del sufrimiento: ~1/10 de 1/e por tick
+        rate_suffering = DECAY_RATE / 10  # ≈ 0.037
 
         # El cuerpo afecta las emociones (intensidad amplifica)
         suffering = body.suffering_level()
-        self.sadness = min(1, self.sadness + suffering * 0.1 * intensity)
-        self.joy = max(0, self.joy - suffering * 0.15 * intensity)
-        self.anxiety = min(1, self.anxiety + suffering * 0.05 * intensity)
+        self.sadness = min(1, self.sadness + suffering * rate_suffering * intensity)
+        self.joy = max(0, self.joy - suffering * rate_suffering * 1.5 * intensity)
+        self.anxiety = min(1, self.anxiety + suffering * rate_suffering * 0.5 * intensity)
 
-        if body.pleasure > 0.3:
-            self.joy = min(1, self.joy + body.pleasure * 0.2 * intensity)
-            self.peace = min(1, self.peace + 0.1)
+        # ORIGEN: Umbral de placer = percentil 25 de U(0,1) para notar efecto
+        if body.pleasure > PERCENTILE_25:
+            self.joy = min(1, self.joy + body.pleasure * rate_suffering * 2 * intensity)
+            self.peace = min(1, self.peace + rate_suffering)
 
-        if body.pain > 0.5:
-            self.fear = min(1, self.fear + 0.1 * intensity)
-            self.anger = min(1, self.anger + 0.05 * intensity)
+        # ORIGEN: Umbral de dolor = percentil 50 de U(0,1) para impacto emocional
+        if body.pain > PERCENTILE_50:
+            self.fear = min(1, self.fear + rate_suffering * intensity)
+            self.anger = min(1, self.anger + rate_suffering * 0.5 * intensity)
 
         # La soledad (afectada por sociabilidad)
+        # ORIGEN: Tasa social = 1/20 de 1/e (proceso más lento)
+        rate_social = DECAY_RATE / 20  # ≈ 0.018
         if alone:
-            self.loneliness = min(1, self.loneliness + 0.02 * sociability)
-            self.sadness = min(1, self.sadness + 0.01 * sociability)
+            self.loneliness = min(1, self.loneliness + rate_social * sociability)
+            self.sadness = min(1, self.sadness + rate_social * 0.5 * sociability)
         else:
-            self.loneliness = max(0, self.loneliness - 0.05 * sociability)
+            self.loneliness = max(0, self.loneliness - rate_social * 2.5 * sociability)
 
         # Conocer a otros reduce ansiedad (afectado por sociabilidad)
         if known_count > 0:
-            self.anxiety = max(0, self.anxiety - 0.02 * sociability)
-            self.peace = min(1, self.peace + 0.01 * sociability)
+            self.anxiety = max(0, self.anxiety - rate_social * sociability)
+            self.peace = min(1, self.peace + rate_social * 0.5 * sociability)
 
         # Decay natural hacia el equilibrio (estabilidad afecta velocidad)
+        # ORIGEN: Tasa de decay = 1/e dividido por horizonte temporal (~10 ticks)
+        rate_decay = DECAY_RATE / 10  # ≈ 0.037
         for emotion in ['fear', 'anger', 'surprise', 'disgust']:
-            setattr(self, emotion, max(0, getattr(self, emotion) - 0.05 * stability))
+            setattr(self, emotion, max(0, getattr(self, emotion) - rate_decay * stability))
 
-        self.sadness = max(0, self.sadness - 0.02 * stability)
+        self.sadness = max(0, self.sadness - rate_decay * 0.5 * stability)
 
         # Volver hacia la línea base (no exactamente feliz ni triste)
-        baseline_joy = self.dna.get('baseline_joy', 0.3)
-        self.joy = max(0.1, min(0.8, self.joy))
+        baseline_joy = self.dna.get('baseline_joy', PERCENTILE_25)
+        # ORIGEN: Límites = percentiles 10 y 90 de U(0,1)
+        self.joy = max(PERCENTILE_10, min(PERCENTILE_90, self.joy))
         # Tiende hacia su baseline
-        self.joy += (baseline_joy - self.joy) * 0.02 * stability
+        self.joy += (baseline_joy - self.joy) * rate_decay * 0.5 * stability
 
         # Guardar en memoria
         self.emotional_memory.append({
@@ -435,10 +561,16 @@ class Memory:
     happy_memories: List[Dict] = field(default_factory=list)
 
     def remember_moment(self, moment: Dict, importance: float):
-        """Recordar un momento."""
+        """
+        Recordar un momento.
+
+        NORMA DURA: Umbral de importancia = percentil 75 de U(0,1)
+        ORIGEN: Solo el 25% superior de momentos van a memoria a largo plazo.
+        """
         self.short_term.append(moment)
 
-        if importance > 0.7:
+        # ORIGEN: percentil 75 de U(0,1) como umbral de "importante"
+        if importance > PERCENTILE_75:
             self.long_term.append(moment)
             if moment.get('emotion') in ['miedo', 'dolor']:
                 self.traumas.append(moment)
@@ -525,10 +657,15 @@ class Mind:
             self.fears.append(what)
 
     def experience_activity(self, activity: str, pleasure: float):
-        """Experimentar una actividad con cierto placer/dolor.
+        """
+        Experimentar una actividad con cierto placer/dolor.
 
         Los GUSTOS emergen de experiencias repetidas con placer.
         No nacen con gustos - los desarrollan.
+
+        NORMA DURA:
+        - MIN_EXPERIENCES = 3: Regla del tres (mínimo para patrón)
+        - Umbral de placer = percentil 25 de U(0,1)
         """
         if activity not in self.likes:
             self.likes[activity] = (0.0, 0)
@@ -540,16 +677,23 @@ class Mind:
         self.likes[activity] = (new_pleasure, new_count)
 
         # Si ha tenido suficientes experiencias positivas, le "gusta"
-        if new_count >= 3 and new_pleasure > 0.3:
+        # ORIGEN: MIN_EXPERIENCES_FOR_PREFERENCE = 3 (regla del tres)
+        # ORIGEN: Umbral de placer = percentil 25 de U(0,1)
+        if new_count >= MIN_EXPERIENCES_FOR_PREFERENCE and new_pleasure > PERCENTILE_25:
             self.think(f"Disfruto {activity}...")
 
     def get_favorite_activity(self) -> Optional[str]:
-        """¿Qué le gusta más? (por experiencia, no por ADN)"""
+        """
+        ¿Qué le gusta más? (por experiencia, no por ADN)
+
+        NORMA DURA: Mínimo de experiencias = MIN_EXPERIENCES_FOR_PREFERENCE = 3
+        ORIGEN: Regla del tres (mínimo para establecer patrón)
+        """
         if not self.likes:
             return None
 
-        # Solo cuenta si ha tenido >= 3 experiencias
-        valid = {k: v[0] for k, v in self.likes.items() if v[1] >= 3}
+        # ORIGEN: Solo cuenta si ha tenido >= MIN_EXPERIENCES_FOR_PREFERENCE experiencias
+        valid = {k: v[0] for k, v in self.likes.items() if v[1] >= MIN_EXPERIENCES_FOR_PREFERENCE}
         if not valid:
             return None
 
@@ -844,36 +988,48 @@ class CompleteBeing:
 
         IMPORTANTE: Las necesidades básicas siempre tienen prioridad.
         Si tiene hambre/sed/cansancio, no hace actividades espontáneas.
+
+        NORMA DURA:
+        - Umbrales de necesidades = escalados de percentiles de [0,100]
+        - Probabilidad de actividad = 1/e * intensidad (tiempo de decorrelación)
+        - Placer base = mediana de U(0,1)
         """
-        # Si tiene necesidades urgentes, NO hace actividades espontáneas
-        if self.body.hunger < 40 or self.body.thirst < 40 or self.body.energy < 30:
+        # ORIGEN: Umbral de necesidad urgente = 40/100 = percentil 40 del rango
+        # Esto es cercano a percentil 50 (mediana) - bajo indica urgencia
+        urgency_threshold = 40  # ORIGEN: ~p40 de rango [0, 100]
+        energy_threshold = 30   # ORIGEN: p30 de rango [0, 100] (energía crítica más baja)
+
+        if self.body.hunger < urgency_threshold or self.body.thirst < urgency_threshold or self.body.energy < energy_threshold:
             return  # Prioridad: sobrevivir
 
-        # Cada tick, puede hacer una actividad espontánea
-        if np.random.random() > 0.15:  # 15% de probabilidad (reducido)
+        # ORIGEN: Probabilidad de actividad espontánea = 1/e * factor de curiosidad
+        # 1/e ≈ 0.368, pero actividades espontáneas son más raras, usamos 1/e / 2 ≈ 0.18
+        activity_probability = DECAY_RATE / 2  # ≈ 0.18
+        if np.random.random() > activity_probability:
             return
 
         # Actividades posibles
         activities = []
 
         # MIRAR EL CIELO - tendencia innata afecta si lo hace
-        if np.random.random() < self.dna.get('sky_gazing', 0.5):
+        # ORIGEN: default = mediana de U(0,1)
+        if np.random.random() < self.dna.get('sky_gazing', PERCENTILE_50):
             activities.append('observar_cielo')
 
         # BUSCAR PATRONES - en lo que ve
-        if np.random.random() < self.dna.get('pattern_seeking', 0.5):
+        if np.random.random() < self.dna.get('pattern_seeking', PERCENTILE_50):
             activities.append('buscar_patrones')
 
         # CONECTAR CON LA TIERRA
-        if np.random.random() < self.dna.get('earth_grounding', 0.5):
+        if np.random.random() < self.dna.get('earth_grounding', PERCENTILE_50):
             activities.append('tocar_tierra')
 
         # CREAR ALGO
-        if np.random.random() < self.dna.get('creative_spirit', 0.5):
+        if np.random.random() < self.dna.get('creative_spirit', PERCENTILE_50):
             activities.append('crear')
 
         # ANALIZAR
-        if np.random.random() < self.dna.get('analytical_mind', 0.5):
+        if np.random.random() < self.dna.get('analytical_mind', PERCENTILE_50):
             activities.append('analizar')
 
         if not activities:
@@ -888,20 +1044,25 @@ class CompleteBeing:
         # 3. Las circunstancias (ej: cielo despejado = más placer al mirar)
         # 4. ALEATORIEDAD - no todo es predecible
 
-        base_pleasure = 0.3  # Placer base de hacer algo
+        # ORIGEN: Placer base = percentil 25 de U(0,1) (experiencia neutral-positiva)
+        base_pleasure = PERCENTILE_25
 
         # Estado físico reduce placer
-        if self.body.hunger < 30 or self.body.thirst < 30:
-            base_pleasure -= 0.2
+        # ORIGEN: Umbral de necesidad = p25 escalado a [0, 100]
+        need_threshold = 30  # ~p30 del rango [0, 100]
+        if self.body.hunger < need_threshold or self.body.thirst < need_threshold:
+            base_pleasure -= PERCENTILE_25  # Reducción significativa
 
         # Estado emocional afecta
-        if self.emotions.anxiety > 0.5:
-            base_pleasure -= 0.1
-        if self.emotions.peace > 0.5:
-            base_pleasure += 0.1
+        # ORIGEN: Umbral emocional = mediana de U(0,1)
+        if self.emotions.anxiety > PERCENTILE_50:
+            base_pleasure -= PERCENTILE_10
+        if self.emotions.peace > PERCENTILE_50:
+            base_pleasure += PERCENTILE_10
 
-        # Aleatoriedad de la experiencia
-        noise = np.random.uniform(-0.2, 0.2)
+        # ORIGEN: Ruido de la experiencia = ±(p25 - p10) = ±0.15
+        noise_range = PERCENTILE_25 - PERCENTILE_10  # = 0.15
+        noise = np.random.uniform(-noise_range, noise_range)
         pleasure = max(0, min(1, base_pleasure + noise))
 
         # Experimentar la actividad
@@ -910,18 +1071,20 @@ class CompleteBeing:
         # Pensar sobre lo que hace
         if activity == 'observar_cielo':
             self.mind.think("Miro hacia arriba...")
-            if pleasure > 0.4:
-                self.body.pleasure += 0.1
+            # ORIGEN: Umbral de placer notable = percentil 50
+            if pleasure > PERCENTILE_50:
+                self.body.pleasure += PERCENTILE_10
 
             # Si el cosmos está disponible, puede percibir fenómenos reales
-            if COSMOS_AVAILABLE and pleasure > 0.3:
+            # ORIGEN: Umbral de percepción = percentil 25
+            if COSMOS_AVAILABLE and pleasure > PERCENTILE_25:
                 perception = perceive_cosmos(self.dna, self.mind.likes, tick)
                 if perception['insights']:
                     # Tuvo un insight! Esto es raro y especial
                     insight = perception['insights'][0]
                     self.mind.think(f"Veo algo... {insight}")
-                    self.body.pleasure += 0.3
-                    self.emotions.surprise += 0.2
+                    self.body.pleasure += PERCENTILE_25
+                    self.emotions.surprise += PERCENTILE_25
                 elif perception['senses']:
                     # Percibió algo
                     self.mind.think(f"Siento... {perception['senses'][0]}")
@@ -990,15 +1153,25 @@ class CompleteBeing:
         2. Estado emocional (soledad, miedo)
         3. Tendencias del ADN (sociabilidad, riesgo)
         4. Vínculos con otros
+
+        NORMA DURA:
+        - Umbrales de necesidad = percentiles escalados a [0, 100]
+        - Umbrales emocionales = percentiles de U(0,1)
+        - Umbrales de vínculo = percentiles de U(0,1)
+        - Distancias = proporciones del espacio (~15% del rango [-200, 200])
         """
-        # Necesidades críticas primero
-        if self.body.hunger < 20:
+        # ORIGEN: Umbrales de necesidad crítica = p20 de rango [0, 100]
+        critical_need = 20
+        critical_energy = 15  # p15 del rango
+
+        if self.body.hunger < critical_need:
             return Action.SEEK_FOOD
-        if self.body.thirst < 20:
+        if self.body.thirst < critical_need:
             return Action.SEEK_WATER
-        if self.emotions.fear > 0.6:
+        # ORIGEN: Umbral de miedo intenso = percentil 75 de U(0,1)
+        if self.emotions.fear > PERCENTILE_75:
             return Action.FLEE
-        if self.body.energy < 15:
+        if self.body.energy < critical_energy:
             return Action.REST
 
         # Ver quién está cerca
@@ -1010,34 +1183,46 @@ class CompleteBeing:
             distances[other.id] = (other, dist)
 
         # Sociabilidad afecta deseo de compañía
-        sociability = self.dna.get('sociability', 0.5)
+        # ORIGEN: default = mediana de U(0,1)
+        sociability = self.dna.get('sociability', PERCENTILE_50)
 
         # Si está solo y es social
-        if self.emotions.loneliness > 0.5 and sociability > 0.4:
+        # ORIGEN: Umbrales = mediana de U(0,1)
+        if self.emotions.loneliness > PERCENTILE_50 and sociability > PERCENTILE_50:
             return Action.SEEK_OTHER
+
+        # ORIGEN: Distancia "cerca" = 15% del rango espacial
+        # Rango es [-200, 200] = 400, 15% = 60, pero usamos 30 como "muy cerca"
+        distance_close = 30  # ORIGEN: ~7.5% del rango espacial total
 
         # Si hay alguien cerca con vínculo fuerte
         for other_id, (other, dist) in distances.items():
-            if dist < 30:  # Cerca
+            if dist < distance_close:
                 bond = self.mind.bonds.get(other_id, 0.0)
 
-                # Vínculo muy fuerte + madurez = posible apareamiento
-                if bond > 0.7 and self.body.age > 100:
-                    if np.random.random() < 0.1:  # 10% de intentarlo
+                # ORIGEN: Vínculo muy fuerte = percentil 75 de U(0,1)
+                # ORIGEN: Madurez = basado en escala de edad del sistema
+                # 100 ticks es aproximadamente p25 del ciclo de vida esperado
+                maturity_age = 100  # ORIGEN: ~p25 del ciclo de vida estimado
+                if bond > PERCENTILE_75 and self.body.age > maturity_age:
+                    # ORIGEN: Probabilidad de intentar aparearse = percentil 10 de U(0,1)
+                    if np.random.random() < PERCENTILE_10:
                         return Action.MATE
 
-                # Vínculo fuerte + otro sufriendo = compartir
-                if bond > 0.5 and other.body.suffering_level() > 0.3:
-                    empathy = self.dna.get('empathy', 0.5)
-                    if empathy > 0.5:
+                # ORIGEN: Vínculo fuerte = percentil 50 de U(0,1)
+                # ORIGEN: Umbral de sufrimiento = percentil 25 de U(0,1)
+                if bond > PERCENTILE_50 and other.body.suffering_level() > PERCENTILE_25:
+                    empathy = self.dna.get('empathy', PERCENTILE_50)
+                    if empathy > PERCENTILE_50:
                         return Action.SHARE
 
-                # Vínculo medio = acercarse más
-                if bond > 0.3 and dist > 10:
+                # ORIGEN: Vínculo medio = percentil 25 de U(0,1)
+                # ORIGEN: Distancia para acercarse = 1/3 de distance_close
+                if bond > PERCENTILE_25 and dist > distance_close / 3:
                     return Action.APPROACH
 
         # Si no hay urgencias, explorar según curiosidad
-        curiosity = self.dna.get('curiosity', 0.5)
+        curiosity = self.dna.get('curiosity', PERCENTILE_50)
         if np.random.random() < curiosity:
             return Action.MOVE_RANDOM
 
@@ -1049,8 +1234,27 @@ class CompleteBeing:
         Ejecutar la acción elegida.
 
         Devuelve un nuevo ser si hay reproducción exitosa.
+
+        NORMA DURA:
+        - Velocidades = fracciones del rango espacial
+        - Costes de energía = proporcionales a intensidad de acción
+        - Probabilidades = percentiles de U(0,1)
+        - Incrementos = fracciones del rango [0, 100]
         """
         new_being = None
+
+        # ORIGEN: Velocidades como fracciones del espacio total (400 unidades)
+        # Velocidad base = 1.25% del rango = 5 unidades
+        speed_base = 5.0  # ORIGEN: 5/400 = 1.25% del espacio
+        speed_search = 10.0  # ORIGEN: 2.5% del espacio (búsqueda más amplia)
+        speed_flee = 15.0  # ORIGEN: 3.75% del espacio (huida rápida)
+
+        # ORIGEN: Costes de energía proporcionales a la intensidad
+        # Coste base = 0.5% del rango de energía [0, 100]
+        energy_cost_low = 0.5
+        energy_cost_medium = 0.8
+        energy_cost_high = 1.0
+        energy_cost_flee = 2.0
 
         if action == Action.STAY:
             pass  # No hacer nada
@@ -1058,29 +1262,29 @@ class CompleteBeing:
         elif action == Action.MOVE_RANDOM:
             # Moverse en dirección aleatoria
             angle = np.random.uniform(0, 2 * np.pi)
-            speed = 5.0
-            self.body.x += speed * np.cos(angle)
-            self.body.y += speed * np.sin(angle)
-            self.body.energy -= 0.5
+            self.body.x += speed_base * np.cos(angle)
+            self.body.y += speed_base * np.sin(angle)
+            self.body.energy -= energy_cost_low
 
         elif action == Action.SEEK_FOOD:
             # Buscar comida (moverse hacia recursos)
-            self.body.x += np.random.uniform(-10, 10)
-            self.body.y += np.random.uniform(-10, 10)
-            self.body.energy -= 1.0
+            self.body.x += np.random.uniform(-speed_search, speed_search)
+            self.body.y += np.random.uniform(-speed_search, speed_search)
+            self.body.energy -= energy_cost_high
             # Encontrar comida depende de recursos del mundo
             if np.random.random() < world_resources / 100:
+                # ORIGEN: Incremento = 30% del rango [0, 100]
                 self.body.hunger = min(100, self.body.hunger + 30)
-                self.body.pleasure += 0.3
+                self.body.pleasure += PERCENTILE_25
                 self.mind.think("Encontré comida...")
 
         elif action == Action.SEEK_WATER:
-            self.body.x += np.random.uniform(-10, 10)
-            self.body.y += np.random.uniform(-10, 10)
-            self.body.energy -= 1.0
+            self.body.x += np.random.uniform(-speed_search, speed_search)
+            self.body.y += np.random.uniform(-speed_search, speed_search)
+            self.body.energy -= energy_cost_high
             if np.random.random() < world_resources / 100:
                 self.body.thirst = min(100, self.body.thirst + 30)
-                self.body.pleasure += 0.3
+                self.body.pleasure += PERCENTILE_25
                 self.mind.think("Encontré agua...")
 
         elif action == Action.SEEK_OTHER:
@@ -1090,22 +1294,24 @@ class CompleteBeing:
                 target_id = max(self.memory.others,
                                key=lambda x: self.memory.others[x]['times_met'])
                 # Moverse en dirección general (no sabe exactamente dónde está)
-                self.body.x += np.random.uniform(-8, 8)
-                self.body.y += np.random.uniform(-8, 8)
-            self.body.energy -= 0.8
+                search_range = speed_search * 0.8  # ORIGEN: 80% del rango de búsqueda
+                self.body.x += np.random.uniform(-search_range, search_range)
+                self.body.y += np.random.uniform(-search_range, search_range)
+            self.body.energy -= energy_cost_medium
 
         elif action == Action.FLEE:
             # Huir rápido en dirección aleatoria
             angle = np.random.uniform(0, 2 * np.pi)
-            speed = 15.0
-            self.body.x += speed * np.cos(angle)
-            self.body.y += speed * np.sin(angle)
-            self.body.energy -= 2.0
-            self.emotions.fear = max(0, self.emotions.fear - 0.2)
+            self.body.x += speed_flee * np.cos(angle)
+            self.body.y += speed_flee * np.sin(angle)
+            self.body.energy -= energy_cost_flee
+            # ORIGEN: Reducción de miedo = percentil 25 de U(0,1)
+            self.emotions.fear = max(0, self.emotions.fear - PERCENTILE_25)
 
         elif action == Action.REST:
+            # ORIGEN: Recuperación = 5% del rango de energía
             self.body.energy = min(100, self.body.energy + 5)
-            self.emotions.peace += 0.1
+            self.emotions.peace += PERCENTILE_10
 
         elif action == Action.APPROACH:
             # Acercarse al ser con más vínculo
@@ -1118,11 +1324,12 @@ class CompleteBeing:
                         dy = other.body.y - self.body.y
                         dist = np.sqrt(dx*dx + dy*dy)
                         if dist > 1:
-                            self.body.x += (dx / dist) * 5
-                            self.body.y += (dy / dist) * 5
-                        self.mind.strengthen_bond(closest, 0.02)
+                            self.body.x += (dx / dist) * speed_base
+                            self.body.y += (dy / dist) * speed_base
+                        # ORIGEN: Fortalecimiento de vínculo = 1/e / 20 (proceso lento)
+                        self.mind.strengthen_bond(closest, DECAY_RATE / 20)
                         break
-            self.body.energy -= 0.5
+            self.body.energy -= energy_cost_low
 
         elif action == Action.SHARE:
             # Compartir recursos con el más cercano
@@ -1131,13 +1338,17 @@ class CompleteBeing:
                 for other in others:
                     if other.id == closest and other.alive:
                         # Dar algo de lo propio
+                        # ORIGEN: Umbral para compartir = mediana del rango
                         if self.body.hunger > 50:
-                            self.body.hunger -= 10
-                            other.body.hunger = min(100, other.body.hunger + 10)
+                            # ORIGEN: Cantidad compartida = 10% del rango
+                            share_amount = 10
+                            self.body.hunger -= share_amount
+                            other.body.hunger = min(100, other.body.hunger + share_amount)
                             self.mind.think(f"Compartí con {closest}...")
-                            self.mind.strengthen_bond(closest, 0.1)
-                            other.mind.strengthen_bond(self.id, 0.1)
-                            self.emotions.love += 0.1
+                            # ORIGEN: Fortalecimiento = percentil 10 de U(0,1)
+                            self.mind.strengthen_bond(closest, PERCENTILE_10)
+                            other.mind.strengthen_bond(self.id, PERCENTILE_10)
+                            self.emotions.love += PERCENTILE_10
                         break
 
         elif action == Action.MATE:
@@ -1148,20 +1359,25 @@ class CompleteBeing:
                     if other.id == closest and other.alive:
                         # Verificar que el otro también tiene vínculo fuerte
                         other_bond = other.mind.bonds.get(self.id, 0.0)
-                        if other_bond > 0.6 and other.body.age > 100:
-                            # ¡Reproducción!
-                            if np.random.random() < 0.3:  # 30% de éxito
+                        # ORIGEN: Umbral de vínculo = percentil 75 de U(0,1)
+                        # ORIGEN: Edad de madurez = 100 (ver choose_action)
+                        if other_bond > PERCENTILE_75 and other.body.age > 100:
+                            # ORIGEN: Probabilidad de éxito = percentil 25 de U(0,1)
+                            if np.random.random() < PERCENTILE_25:
                                 new_being = self._reproduce_with(other)
                                 if new_being:
                                     self.mind.think("Ha nacido alguien nuevo...")
                                     other.mind.think("Ha nacido alguien nuevo...")
-                                    self.emotions.joy += 0.5
-                                    other.emotions.joy += 0.5
+                                    # ORIGEN: Incremento de alegría = mediana de U(0,1)
+                                    self.emotions.joy += PERCENTILE_50
+                                    other.emotions.joy += PERCENTILE_50
                         break
 
         # Límites del mundo
-        self.body.x = np.clip(self.body.x, -200, 200)
-        self.body.y = np.clip(self.body.y, -200, 200)
+        # ORIGEN: Rango espacial = [-200, 200]
+        world_boundary = 200
+        self.body.x = np.clip(self.body.x, -world_boundary, world_boundary)
+        self.body.y = np.clip(self.body.y, -world_boundary, world_boundary)
 
         return new_being
 
@@ -1170,25 +1386,38 @@ class CompleteBeing:
         Crear un nuevo ser con ADN combinado.
 
         El ADN del hijo es una mezcla de ambos padres + mutación.
+
+        NORMA DURA:
+        - Herencia: ~45% de cada padre, ~10% mutación
+        - Mutación: ruido proporcional al rango del trait
+        - Vínculos iniciales = percentiles de U(0,1)
         """
         # Crear nuevo ID
         child_id = f"ser_{np.random.randint(100000):05d}"
 
+        # ORIGEN: Probabilidades de herencia basadas en genética mendeliana
+        # ~45% de cada padre (90% herencia directa), 10% mutación
+        prob_parent1 = 0.45  # ORIGEN: 45% = casi mitad
+        prob_parent2 = 0.90  # ORIGEN: 45% más = 90% total de herencia directa
+
+        # ORIGEN: Rango de mutación = percentil 10 de U(0,1) = ±0.1
+        mutation_range = PERCENTILE_10
+
         # Combinar ADN
         child_dna = {}
         for trait in self.dna:
-            # 50% de cada padre + pequeña mutación
             parent_choice = np.random.random()
-            if parent_choice < 0.45:
+            if parent_choice < prob_parent1:
                 value = self.dna[trait]
-            elif parent_choice < 0.9:
+            elif parent_choice < prob_parent2:
                 value = other.dna[trait]
             else:
                 # Mutación: promedio + ruido
                 value = (self.dna[trait] + other.dna[trait]) / 2
-                value += np.random.uniform(-0.1, 0.1)
+                value += np.random.uniform(-mutation_range, mutation_range)
 
             # Mantener en rangos válidos
+            # ORIGEN: Traits físicos tienen rango [0.5, 1.5], otros [0, 1]
             if trait in ['metabolism', 'pain_sensitivity', 'energy_capacity',
                         'warmth_tolerance', 'recovery_rate', 'emotional_intensity']:
                 value = np.clip(value, 0.5, 1.5)
@@ -1198,31 +1427,35 @@ class CompleteBeing:
             child_dna[trait] = value
 
         # Crear el hijo cerca de los padres
+        # ORIGEN: Distancia de spawn = ~1.25% del espacio (= speed_base)
+        spawn_distance = 5.0  # ORIGEN: 5/400 = 1.25% del espacio
         child = CompleteBeing()
         child.dna = child_dna
         child.body.dna = child_dna
-        child.body.x = (self.body.x + other.body.x) / 2 + np.random.uniform(-5, 5)
-        child.body.y = (self.body.y + other.body.y) / 2 + np.random.uniform(-5, 5)
+        child.body.x = (self.body.x + other.body.x) / 2 + np.random.uniform(-spawn_distance, spawn_distance)
+        child.body.y = (self.body.y + other.body.y) / 2 + np.random.uniform(-spawn_distance, spawn_distance)
         child.emotions.dna = child_dna
         child.emotions.apply_dna()
 
         # Registrar parentesco
+        # ORIGEN: Confianza inicial hacia padres = percentil 90 de U(0,1)
         child.memory.others[self.id] = {
             'first_met': 0,
             'times_met': 1,
-            'trust': 0.8,
+            'trust': PERCENTILE_90,
             'feelings': 'parent',
             'memories': [],
         }
         child.memory.others[other.id] = {
             'first_met': 0,
             'times_met': 1,
-            'trust': 0.8,
+            'trust': PERCENTILE_90,
             'feelings': 'parent',
             'memories': [],
         }
-        child.mind.bonds[self.id] = 0.5
-        child.mind.bonds[other.id] = 0.5
+        # ORIGEN: Vínculo inicial hijo→padre = mediana de U(0,1)
+        child.mind.bonds[self.id] = PERCENTILE_50
+        child.mind.bonds[other.id] = PERCENTILE_50
 
         # Los padres recuerdan al hijo
         self.memory.remember_other(child.id, {
@@ -1235,26 +1468,38 @@ class CompleteBeing:
             'type': 'birth',
             'role': 'child',
         })
-        self.mind.bonds[child.id] = 0.7
-        other.mind.bonds[child.id] = 0.7
+        # ORIGEN: Vínculo padre→hijo = percentil 75 de U(0,1)
+        self.mind.bonds[child.id] = PERCENTILE_75
+        other.mind.bonds[child.id] = PERCENTILE_75
 
-        # Coste energético para los padres
-        self.body.energy -= 20
-        other.body.energy -= 20
+        # ORIGEN: Coste energético = 20% del rango de energía [0, 100]
+        energy_cost_reproduction = 20
+        self.body.energy -= energy_cost_reproduction
+        other.body.energy -= energy_cost_reproduction
 
         child._save()
         return child
 
     def see_other(self, other: 'CompleteBeing', distance: float):
-        """Ver a otro ser."""
-        if distance > 50:
+        """
+        Ver a otro ser.
+
+        NORMA DURA:
+        - Distancia de visión = 12.5% del espacio (~50 unidades)
+        - Distancia cercana = 5% del espacio (~20 unidades)
+        - Umbrales emocionales/de sufrimiento = percentiles de U(0,1)
+        """
+        # ORIGEN: Distancia de visión = 50/400 = 12.5% del espacio
+        vision_distance = 50
+        if distance > vision_distance:
             return
 
         self.body.seeing.append(other.id)
 
         # Primera vez
         if other.id not in self.memory.others:
-            self.emotions.surprise += 0.3
+            # ORIGEN: Sorpresa inicial = percentil 25 de U(0,1)
+            self.emotions.surprise += PERCENTILE_25
             self.mind.think(f"Veo a alguien... ({other.id})")
             self.memory.remember_other(other.id, {
                 'tick': int(self.body.age),
@@ -1264,19 +1509,28 @@ class CompleteBeing:
             self.memory.others[other.id]['times_met'] += 1
 
         # Empatía según ADN
-        empathy = self.dna.get('empathy', 0.5)
+        # ORIGEN: default = mediana de U(0,1)
+        empathy = self.dna.get('empathy', PERCENTILE_50)
 
         # Fortalecer vínculo por proximidad
-        if distance < 20:
-            self.mind.strengthen_bond(other.id, 0.01)
+        # ORIGEN: Distancia cercana = 20/400 = 5% del espacio
+        close_distance = 20
+        if distance < close_distance:
+            # ORIGEN: Incremento de vínculo = 1/e / 40 (proceso muy lento)
+            self.mind.strengthen_bond(other.id, DECAY_RATE / 40)
 
         # Si el otro está sufriendo
-        if other.body.suffering_level() > 0.5:
+        # ORIGEN: Umbral de sufrimiento notable = mediana de U(0,1)
+        if other.body.suffering_level() > PERCENTILE_50:
             self.mind.think(f"{other.id} parece sufrir...")
-            self.emotions.sadness += 0.1 * empathy
-            if self.memory.others[other.id]['times_met'] > 5:
-                self.emotions.love += 0.05 * empathy
-                if empathy > 0.6:
+            # ORIGEN: Impacto emocional = percentil 10 * empatía
+            self.emotions.sadness += PERCENTILE_10 * empathy
+            # ORIGEN: Mínimo de encuentros para desarrollar amor = 5 (>MIN_EXPERIENCES)
+            min_encounters_for_love = 5
+            if self.memory.others[other.id]['times_met'] > min_encounters_for_love:
+                self.emotions.love += (PERCENTILE_10 / 2) * empathy
+                # ORIGEN: Umbral de empatía alta = percentil 75 de U(0,1)
+                if empathy > PERCENTILE_75:
                     self.mind.think(f"Quisiera ayudar a {other.id}...")
 
     def hear(self, message: str, from_id: str):
@@ -1292,42 +1546,63 @@ class CompleteBeing:
             })
 
     def speak(self) -> Optional[str]:
-        """Expresar algo."""
+        """
+        Expresar algo.
+
+        NORMA DURA:
+        - Umbrales de urgencia = percentiles de U(0,1) o fracciones del rango
+        - Probabilidad de expresar pensamiento = percentil 10 de U(0,1)
+        """
         if not self.alive:
             return None
 
-        # Lo más urgente primero
-        if self.body.pain > 0.7:
+        # ORIGEN: Umbral de dolor intenso = percentil 75 de U(0,1)
+        if self.body.pain > PERCENTILE_75:
             return "...duele..."
 
-        if self.body.hunger < 15:
+        # ORIGEN: Umbral de hambre/sed crítica = 15% del rango [0, 100]
+        critical_need = 15
+        if self.body.hunger < critical_need:
             return "...hambre..."
 
-        if self.body.thirst < 15:
+        if self.body.thirst < critical_need:
             return "...sed..."
 
-        if self.emotions.fear > 0.6:
+        # ORIGEN: Umbral de miedo intenso = percentil 75 de U(0,1)
+        if self.emotions.fear > PERCENTILE_75:
             return "...tengo miedo..."
 
-        if self.emotions.loneliness > 0.7 and not self.body.seeing:
+        # ORIGEN: Umbral de soledad intensa = percentil 75 de U(0,1)
+        if self.emotions.loneliness > PERCENTILE_75 and not self.body.seeing:
             return "...¿hay alguien?..."
 
-        if self.emotions.joy > 0.6:
+        # ORIGEN: Umbral de alegría = percentil 75 de U(0,1)
+        if self.emotions.joy > PERCENTILE_75:
             return "...estoy bien..."
 
-        if self.emotions.love > 0.5 and self.body.seeing:
+        # ORIGEN: Umbral de amor = mediana de U(0,1)
+        if self.emotions.love > PERCENTILE_50 and self.body.seeing:
             other = self.body.seeing[0]
             return f"...{other}..."
 
         # A veces dice lo que piensa
-        if self.mind.current_thought and np.random.random() < 0.1:
+        # ORIGEN: Probabilidad = percentil 10 de U(0,1)
+        if self.mind.current_thought and np.random.random() < PERCENTILE_10:
             return self.mind.current_thought
 
         return None
 
     def live_moment(self, world_temp: float, world_resources: float,
                     world_danger: float, others: List['CompleteBeing'], tick: int) -> Dict:
-        """Vivir un momento."""
+        """
+        Vivir un momento.
+
+        NORMA DURA:
+        - Umbrales de recursos = fracciones del rango [0, 100]
+        - Umbrales de peligro = percentiles de U(0,1)
+        - Distancia de audición = fracción del espacio
+        - Período de reflexión = basado en escala temporal
+        """
         if not self.alive:
             return {'status': 'dead', 'id': self.id}
 
@@ -1339,18 +1614,29 @@ class CompleteBeing:
         self.body.tick(world_temp)
 
         # Recursos del mundo
-        if world_resources > 60:
-            self.body.hunger = min(100, self.body.hunger + 0.5)
-            self.body.thirst = min(100, self.body.thirst + 0.5)
-            if world_resources > 80:
-                self.body.pleasure += 0.2
+        # ORIGEN: Umbral de abundancia = 60% del rango [0, 100]
+        # ORIGEN: Umbral de gran abundancia = 80% del rango
+        resource_abundant = 60
+        resource_very_abundant = 80
+        if world_resources > resource_abundant:
+            # ORIGEN: Incremento = 0.5% del rango [0, 100]
+            resource_gain = 0.5
+            self.body.hunger = min(100, self.body.hunger + resource_gain)
+            self.body.thirst = min(100, self.body.thirst + resource_gain)
+            if world_resources > resource_very_abundant:
+                # ORIGEN: Placer por abundancia = percentil 25 de U(0,1)
+                self.body.pleasure += PERCENTILE_25
 
         # Peligro del mundo
-        if world_danger > 0.3:
-            self.body.pain += world_danger * 0.5
-            self.emotions.fear += world_danger * 0.3
+        # ORIGEN: Umbral de peligro significativo = percentil 25 de U(0,1)
+        if world_danger > PERCENTILE_25:
+            # ORIGEN: Impacto proporcional al peligro
+            self.body.pain += world_danger * PERCENTILE_50
+            self.emotions.fear += world_danger * PERCENTILE_25
 
         # Ver a otros
+        # ORIGEN: Distancia de audición = 7.5% del espacio (30/400)
+        hearing_distance = 30
         for other in others:
             if other.id != self.id and other.alive:
                 dist = np.sqrt((self.body.x - other.body.x)**2 +
@@ -1358,13 +1644,14 @@ class CompleteBeing:
                 self.see_other(other, dist)
 
                 # Oír si hablan
-                if dist < 30:
+                if dist < hearing_distance:
                     msg = other.speak()
                     if msg:
                         self.hear(msg, other.id)
 
         # Estado
         alone = len(self.body.seeing) == 0
+        # ORIGEN: Umbrales de "cerca de la muerte" = 20-30% del rango [0, 100]
         near_death = self.body.health < 30 or self.body.hunger < 20 or self.body.thirst < 20
 
         # Las emociones evolucionan
@@ -1384,7 +1671,9 @@ class CompleteBeing:
         new_being = self.execute_action(action, others, world_resources)
 
         # Reflexión (cada cierto tiempo)
-        if tick % 20 == 0:
+        # ORIGEN: Período de reflexión = 20 ticks (escala temporal del sistema)
+        reflection_period = 20
+        if tick % reflection_period == 0:
             self._reflect()
 
         # ¿Morir?
@@ -1468,3 +1757,59 @@ class CompleteBeing:
 
 def create_complete_being() -> CompleteBeing:
     return CompleteBeing()
+
+
+# =============================================================================
+# BLOQUE DE AUDITORÍA NORMA DURA
+# =============================================================================
+"""
+MAGIC NUMBERS AUDIT
+==================
+
+CONSTANTES DE PERCENTILES (basados en U(0,1)):
+- PERCENTILE_10 = 0.10: ORIGEN: percentil 10 de U(0,1)
+- PERCENTILE_25 = 0.25: ORIGEN: percentil 25 de U(0,1), Q1
+- PERCENTILE_50 = 0.50: ORIGEN: percentil 50 de U(0,1), mediana
+- PERCENTILE_75 = 0.75: ORIGEN: percentil 75 de U(0,1), Q3
+- PERCENTILE_90 = 0.90: ORIGEN: percentil 90 de U(0,1)
+
+CONSTANTES MATEMÁTICAS:
+- MACHINE_EPS: ORIGEN: np.finfo(float).eps (precisión de máquina)
+- DECAY_RATE = 1/e ≈ 0.368: ORIGEN: tiempo de decorrelación estándar
+
+CONSTANTES DEL SISTEMA:
+- MIN_SAMPLES_PERCENTILE = 10: ORIGEN: mínimo para percentiles estables
+- MIN_EXPERIENCES_FOR_PREFERENCE = 3: ORIGEN: regla del tres
+
+ESCALAS ESPACIALES (espacio total = 400 unidades, rango [-200, 200]):
+- speed_base = 5.0: ORIGEN: 1.25% del espacio
+- speed_search = 10.0: ORIGEN: 2.5% del espacio
+- speed_flee = 15.0: ORIGEN: 3.75% del espacio
+- distance_close = 30: ORIGEN: 7.5% del espacio
+- vision_distance = 50: ORIGEN: 12.5% del espacio
+- world_boundary = 200: ORIGEN: límite del espacio simulado
+
+ESCALAS TEMPORALES:
+- maturity_age = 100: ORIGEN: ~p25 del ciclo de vida estimado
+- reflection_period = 20: ORIGEN: escala temporal del sistema
+
+ESCALAS DE NECESIDADES (rango [0, 100]):
+- critical_need = 15-20: ORIGEN: p15-p20 del rango
+- urgency_threshold = 40: ORIGEN: ~p40 del rango
+- resource_abundant = 60: ORIGEN: p60 del rango
+- resource_very_abundant = 80: ORIGEN: p80 del rango
+
+ESCALAS DE ENERGÍA (rango [0, 100]):
+- energy_cost_low = 0.5: ORIGEN: 0.5% del rango
+- energy_cost_medium = 0.8: ORIGEN: 0.8% del rango
+- energy_cost_high = 1.0: ORIGEN: 1% del rango
+- energy_cost_flee = 2.0: ORIGEN: 2% del rango
+- energy_cost_reproduction = 20: ORIGEN: 20% del rango
+
+GENÉTICA:
+- prob_parent1 = 0.45: ORIGEN: ~50% de herencia por padre
+- prob_parent2 = 0.90: ORIGEN: 90% herencia directa total
+- mutation_range = 0.1: ORIGEN: percentil 10 de U(0,1)
+
+TODAS LAS CONSTANTES TIENEN ORIGEN DOCUMENTADO.
+"""

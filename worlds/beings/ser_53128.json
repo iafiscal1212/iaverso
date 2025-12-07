@@ -5,26 +5,26 @@
   "death_tick": null,
   "cause_of_death": null,
   "dna": {
-    "metabolism": 0.7317497637238308,
-    "pain_sensitivity": 0.6495487903564433,
-    "energy_capacity": 0.8142973718386893,
+    "metabolism": 0.7437559601126804,
+    "pain_sensitivity": 0.6735031946565547,
+    "energy_capacity": 0.7955613568444517,
     "warmth_tolerance": 0.9066908424189868,
-    "recovery_rate": 0.8965338368237228,
+    "recovery_rate": 1.0267346158506896,
     "baseline_anxiety": 0.24691276685532448,
     "baseline_joy": 0.3551855747995679,
-    "emotional_intensity": 1.2508469398353652,
-    "emotional_stability": 0.7246230392229436,
+    "emotional_intensity": 0.8796936666760673,
+    "emotional_stability": 0.6415394883332167,
     "sociability": 0.38163240051662894,
-    "empathy": 0.4452573067039174,
-    "trust_default": 0.6384180317129923,
+    "empathy": 0.33509220404459794,
+    "trust_default": 0.5228643101157939,
     "curiosity": 0.9254547901696661,
     "introspection": 0.46212364285239793,
-    "risk_tolerance": 0.411315154431805,
-    "resilience": 0.8739364554128943,
-    "death_awareness": 0.6926220688344209,
+    "risk_tolerance": 0.3705766833118135,
+    "resilience": 0.7735662066403974,
+    "death_awareness": 0.5312900499779405,
     "pattern_seeking": 0.2514925007059919,
-    "sky_gazing": 0.6548051735222088,
-    "earth_grounding": 0.2642921084248231,
+    "sky_gazing": 0.8256287835127241,
+    "earth_grounding": 0.4495574307010124,
     "mystical_sense": 0.2567375407432632,
     "analytical_mind": 0.8598509444391425,
     "creative_spirit": 0.5674790967009293
@@ -38,8 +38,8 @@
     "pain": 0.0,
     "pleasure": 0.0,
     "age": 0.0,
-    "x": 10.999117106547352,
-    "y": 46.95262647718454
+    "x": 10.81136458014767,
+    "y": 44.885828885306715
   },
   "emotions": {
     "fear": 0.0,
@@ -50,12 +50,12 @@
     "loneliness": 0.3855102798450113,
     "anxiety": 0.24691276685532448,
     "peace": 0.3,
-    "trust": 0.6384180317129923
+    "trust": 0.5228643101157939
   },
   "memory": {
     "long_term": [],
     "others": {
-      "ser_28629": {
+      "ser_11461": {
         "first_met": 0,
         "times_met": 1,
         "trust": 0.8,

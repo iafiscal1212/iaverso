@@ -1,0 +1,270 @@
+{
+  "physics": {
+    "description": "Leyes fundamentales del universo",
+    "topics": {
+      "thermodynamics": {
+        "facts": [
+          {
+            "id": "thermo_001",
+            "content": "El agua pura se congela a 273.15K (0°C) a presión atmosférica"
+          },
+          {
+            "id": "thermo_002",
+            "content": "El agua pura hierve a 373.15K (100°C) a presión atmosférica"
+          },
+          {
+            "id": "thermo_003",
+            "content": "El rango de agua líquida es 273-373K a 1 atm"
+          },
+          {
+            "id": "thermo_004",
+            "content": "La presión afecta los puntos de fusión y ebullición"
+          },
+          {
+            "id": "thermo_005",
+            "content": "Marte tiene presión ~0.6% de la Tierra, agua no es estable"
+          }
+        ],
+        "difficulty": 0.3,
+        "prerequisites": []
+      },
+      "stellar_physics": {
+        "facts": [
+          {
+            "id": "stellar_001",
+            "content": "Las estrellas emiten radiación según su temperatura (ley de Stefan-Boltzmann)"
+          },
+          {
+            "id": "stellar_002",
+            "content": "La luminosidad estelar: L = 4πR²σT⁴"
+          },
+          {
+            "id": "stellar_003",
+            "content": "La temperatura de equilibrio: T_eq = T_star × √(R_star/2a) × (1-albedo)^0.25"
+          },
+          {
+            "id": "stellar_004",
+            "content": "Estrellas tipo G (5300-6000K) son estables por miles de millones de años"
+          },
+          {
+            "id": "stellar_005",
+            "content": "Enanas M emiten más en infrarrojo y tienen flares frecuentes"
+          }
+        ],
+        "difficulty": 0.5,
+        "prerequisites": [
+          "thermodynamics"
+        ]
+      },
+      "orbital_mechanics": {
+        "facts": [
+          {
+            "id": "orbit_001",
+            "content": "Ley de Kepler: T² ∝ a³ (período al cuadrado proporcional al semieje mayor al cubo)"
+          },
+          {
+            "id": "orbit_002",
+            "content": "Velocidad de escape: v_e = √(2GM/r)"
+          },
+          {
+            "id": "orbit_003",
+            "content": "Órbitas circulares tienen clima más estable que elípticas"
+          },
+          {
+            "id": "orbit_004",
+            "content": "La zona habitable depende de la luminosidad estelar"
+          },
+          {
+            "id": "orbit_005",
+            "content": "Marea gravitacional puede calentar lunas (como Io)"
+          }
+        ],
+        "difficulty": 0.6,
+        "prerequisites": [
+          "stellar_physics"
+        ]
+      }
+    }
+  },
+  "chemistry": {
+    "description": "Interacciones entre sustancias",
+    "topics": {
+      "water_chemistry": {
+        "facts": [
+          {
+            "id": "water_001",
+            "content": "H₂O es el solvente universal para reacciones bioquímicas"
+          },
+          {
+            "id": "water_002",
+            "content": "Los puentes de hidrógeno dan al agua propiedades únicas"
+          },
+          {
+            "id": "water_003",
+            "content": "El agua expande al congelarse (hielo flota)"
+          },
+          {
+            "id": "water_004",
+            "content": "Alto calor específico del agua estabiliza temperaturas"
+          },
+          {
+            "id": "water_005",
+            "content": "Vida basada en carbono requiere agua líquida como solvente"
+          }
+        ],
+        "difficulty": 0.3,
+        "prerequisites": []
+      },
+      "atmospheric_chemistry": {
+        "facts": [
+          {
+            "id": "atm_001",
+            "content": "O₂ libre es inestable sin reposición biológica"
+          },
+          {
+            "id": "atm_002",
+            "content": "CO₂ causa efecto invernadero (atrapa calor)"
+          },
+          {
+            "id": "atm_003",
+            "content": "CH₄ es biosignatura potencial (metano)"
+          },
+          {
+            "id": "atm_004",
+            "content": "La capa de ozono O₃ protege de UV"
+          },
+          {
+            "id": "atm_005",
+            "content": "Venus tiene CO₂ denso → efecto invernadero extremo"
+          }
+        ],
+        "difficulty": 0.4,
+        "prerequisites": [
+          "water_chemistry"
+        ]
+      }
+    }
+  },
+  "biology": {
+    "description": "La ciencia de los seres vivos",
+    "topics": {
+      "biochemistry_basics": {
+        "facts": [
+          {
+            "id": "bio_001",
+            "content": "La vida terrestre usa carbono como base"
+          },
+          {
+            "id": "bio_002",
+            "content": "Las proteínas se desnaturalizan sobre ~340K"
+          },
+          {
+            "id": "bio_003",
+            "content": "Bajo ~260K las reacciones bioquímicas son muy lentas"
+          },
+          {
+            "id": "bio_004",
+            "content": "El rango óptimo para enzimas terrestres: 280-320K"
+          },
+          {
+            "id": "bio_005",
+            "content": "Extremófilos pueden sobrevivir fuera del rango óptimo"
+          }
+        ],
+        "difficulty": 0.4,
+        "prerequisites": [
+          "water_chemistry"
+        ]
+      },
+      "astrobiology": {
+        "facts": [
+          {
+            "id": "astro_001",
+            "content": "Biosignaturas: O₂ + CH₄ juntos indican vida activa"
+          },
+          {
+            "id": "astro_002",
+            "content": "La fotosíntesis oxigénica cambió la atmósfera terrestre"
+          },
+          {
+            "id": "astro_003",
+            "content": "Vida puede existir en océanos subterráneos (Europa, Encélado)"
+          },
+          {
+            "id": "astro_004",
+            "content": "La zona habitable clásica: donde agua líquida es posible"
+          },
+          {
+            "id": "astro_005",
+            "content": "Habitabilidad ≠ vida, solo potencial"
+          }
+        ],
+        "difficulty": 0.6,
+        "prerequisites": [
+          "biochemistry_basics",
+          "thermodynamics",
+          "atmospheric_chemistry"
+        ]
+      }
+    }
+  },
+  "mathematics": {
+    "description": "El lenguaje de los patrones",
+    "topics": {
+      "statistics": {
+        "facts": [
+          {
+            "id": "stat_001",
+            "content": "La correlación mide relación lineal entre variables"
+          },
+          {
+            "id": "stat_002",
+            "content": "Correlación no implica causalidad"
+          },
+          {
+            "id": "stat_003",
+            "content": "La desviación estándar mide dispersión"
+          },
+          {
+            "id": "stat_004",
+            "content": "Outliers pueden distorsionar la media"
+          },
+          {
+            "id": "stat_005",
+            "content": "El clustering agrupa por similitud, no por significado"
+          }
+        ],
+        "difficulty": 0.3,
+        "prerequisites": []
+      },
+      "pattern_recognition": {
+        "facts": [
+          {
+            "id": "pattern_001",
+            "content": "Los patrones pueden ser espurios (falsos positivos)"
+          },
+          {
+            "id": "pattern_002",
+            "content": "El cerebro ve patrones incluso donde no los hay (pareidolia)"
+          },
+          {
+            "id": "pattern_003",
+            "content": "Validar patrones requiere predicciones exitosas"
+          },
+          {
+            "id": "pattern_004",
+            "content": "Un modelo predictivo es mejor que uno descriptivo"
+          },
+          {
+            "id": "pattern_005",
+            "content": "Simplicidad (Occam): modelos simples suelen ser mejores"
+          }
+        ],
+        "difficulty": 0.4,
+        "prerequisites": [
+          "statistics"
+        ]
+      }
+    }
+  }
+}

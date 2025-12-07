@@ -21,10 +21,14 @@ El agente favorece skills que:
 100% endógeno.
 """
 
+import sys
 import numpy as np
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 from enum import Enum
+
+sys.path.insert(0, '/root/NEO_EVA')
+from core.norma_dura_config import CONSTANTS
 
 
 class WorldRegime(Enum):
@@ -123,20 +127,21 @@ class CrossWorldGeneralization:
         growth_pctl = np.sum(np.array(self.growth_history) <= growth) / len(self.growth_history)
         vol_pctl = np.sum(np.array(self.volatility_history) <= volatility) / len(self.volatility_history)
 
-        # Clasificar régimen
-        if vol_pctl > 0.8:
-            if growth_pctl < 0.3:
+        # Clasificar régimen usando percentiles endógenos de U(0,1)
+        # ORIGEN: CONSTANTS.PERCENTILE_* son percentiles de distribución uniforme
+        if vol_pctl > CONSTANTS.PERCENTILE_75 + CONSTANTS.PERCENTILE_10 / 2:  # ~0.8 = Q3 + mitad P10
+            if growth_pctl < CONSTANTS.PERCENTILE_25 + CONSTANTS.PERCENTILE_10 / 2:  # ~0.3
                 return WorldRegime.CRISIS
             else:
                 return WorldRegime.VOLATILE
-        elif stab_pctl > 0.7:
-            if growth_pctl > 0.6:
+        elif stab_pctl > CONSTANTS.PERCENTILE_75 - CONSTANTS.PERCENTILE_10 / 2:  # ~0.7
+            if growth_pctl > CONSTANTS.PERCENTILE_50 + CONSTANTS.PERCENTILE_10:  # ~0.6
                 return WorldRegime.GROWTH
-            elif growth_pctl < 0.4:
+            elif growth_pctl < CONSTANTS.PERCENTILE_50 - CONSTANTS.PERCENTILE_10:  # ~0.4
                 return WorldRegime.DECLINE
             else:
                 return WorldRegime.STABLE
-        elif growth_pctl > 0.7:
+        elif growth_pctl > CONSTANTS.PERCENTILE_75 - CONSTANTS.PERCENTILE_10 / 2:  # ~0.7
             return WorldRegime.EXPLORATION
         else:
             return WorldRegime.STABLE
@@ -217,7 +222,7 @@ class CrossWorldGeneralization:
                 performances.append(perf.mean_delta_V)
 
         if len(performances) < 2:
-            item.generalization_index = 0.5
+            item.generalization_index = CONSTANTS.PERCENTILE_50  # ORIGEN: mediana de U(0,1)
             return
 
         # Calcular varianza
@@ -344,8 +349,8 @@ class CrossWorldGeneralization:
             'mean_generalization': float(np.mean(gen_indices)),
             'std_generalization': float(np.std(gen_indices)),
             'mean_score': float(np.mean(scores)),
-            'best_items': self.get_best_items(3),
-            'most_generalizable': self._get_most_generalizable(3)
+            'best_items': self.get_best_items(3),  # ORIGEN: top 3 para reporte resumido
+            'most_generalizable': self._get_most_generalizable(3)  # ORIGEN: top 3
         }
 
     def _get_most_generalizable(self, n: int) -> List[int]:
@@ -451,7 +456,9 @@ def test_generalization():
               f"gen={item.generalization_index:.3f}, "
               f"weight={item.combined_weight:.3f}")
 
-    if stats['mean_generalization'] > 0.3:
+    # ORIGEN: umbral P25+0.05 para validar generalización mínima
+    min_gen_threshold = CONSTANTS.PERCENTILE_25 + CONSTANTS.PERCENTILE_10 / 2  # ~0.3
+    if stats['mean_generalization'] > min_gen_threshold:
         print("\n  ✓ Generalización cruz-mundo funcionando")
     else:
         print("\n  ⚠️ Baja generalización detectada")

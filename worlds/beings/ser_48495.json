@@ -5,29 +5,29 @@
   "death_tick": null,
   "cause_of_death": null,
   "dna": {
-    "metabolism": 0.737348583077808,
-    "pain_sensitivity": 1.4698605502437552,
-    "energy_capacity": 1.1826851039298178,
-    "warmth_tolerance": 1.1348214026214407,
-    "recovery_rate": 1.082791845099347,
-    "baseline_anxiety": 0.12923731198957175,
-    "baseline_joy": 0.4145155878767677,
-    "emotional_intensity": 1.0931889233124692,
-    "emotional_stability": 0.9061997174040959,
-    "sociability": 0.8985268773059607,
-    "empathy": 0.9984839693169978,
-    "trust_default": 0.3062452609401233,
-    "curiosity": 0.6299496920802624,
-    "introspection": 0.30168594423006984,
-    "risk_tolerance": 0.5979757649998058,
-    "resilience": 0.5701526205999659,
-    "death_awareness": 0.5388221868517311,
-    "pattern_seeking": 0.2598815905029742,
-    "sky_gazing": 0.29004708809293067,
-    "earth_grounding": 0.8312924371193944,
-    "mystical_sense": 0.2539332716262378,
-    "analytical_mind": 0.822460125441605,
-    "creative_spirit": 0.69232605478093
+    "metabolism": 1.2181139216454255,
+    "pain_sensitivity": 1.4695641536154533,
+    "energy_capacity": 0.9461112817056512,
+    "warmth_tolerance": 0.8816556924469447,
+    "recovery_rate": 0.8206382599927856,
+    "baseline_anxiety": 0.06907871733690137,
+    "baseline_joy": 0.41360538370365285,
+    "emotional_intensity": 1.3809497021443258,
+    "emotional_stability": 0.9831835947787824,
+    "sociability": 0.599183156073493,
+    "empathy": 0.9833433898523635,
+    "trust_default": 0.4812039472499574,
+    "curiosity": 0.40531188767892146,
+    "introspection": 0.5236984103268046,
+    "risk_tolerance": 0.66505287088778,
+    "resilience": 0.7116765281736255,
+    "death_awareness": 0.21877517046862727,
+    "pattern_seeking": 0.635162749473986,
+    "sky_gazing": 0.17681856752060765,
+    "earth_grounding": 0.27361511030855046,
+    "mystical_sense": 0.7712837322556029,
+    "analytical_mind": 0.47044810808263005,
+    "creative_spirit": 0.5971312684573695
   },
   "body": {
     "hunger": 70.0,
@@ -38,31 +38,31 @@
     "pain": 0.0,
     "pleasure": 0.0,
     "age": 0.0,
-    "x": 86.40913402808013,
-    "y": 19.112441492840137
+    "x": -42.61578603444052,
+    "y": 25.100896038208496
   },
   "emotions": {
     "fear": 0.0,
-    "joy": 0.4145155878767677,
+    "joy": 0.41360538370365285,
     "sadness": 0.0,
     "anger": 0.0,
     "love": 0.0,
-    "loneliness": 0.2304419368082118,
-    "anxiety": 0.12923731198957175,
+    "loneliness": 0.3202450531779521,
+    "anxiety": 0.06907871733690137,
     "peace": 0.3,
-    "trust": 0.3062452609401233
+    "trust": 0.4812039472499574
   },
   "memory": {
     "long_term": [],
     "others": {
-      "ser_51770": {
+      "ser_43139": {
         "first_met": 0,
         "times_met": 1,
         "trust": 0.8,
         "feelings": "parent",
         "memories": []
       },
-      "ser_06277": {
+      "ser_39004": {
         "first_met": 0,
         "times_met": 1,
         "trust": 0.8,
