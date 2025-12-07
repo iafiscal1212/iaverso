@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "type": "CROSS_VALIDATION_CORRECTED",
+    "source": "100% END\u00d3GENO",
+    "timestamp": "2025-12-07T18:58:35"
+  },
+  "partition": {
+    "seed": {
+      "value": 21310,
+      "origin": "int(sum(cvs)*1000)",
+      "source": "FROM_MATH"
+    },
+    "n_train": {
+      "value": 7,
+      "origin": "len(train)",
+      "source": "FROM_DATA"
+    },
+    "n_test": {
+      "value": 8,
+      "origin": "len(test)",
+      "source": "FROM_DATA"
+    }
+  },
+  "original": {
+    "cv_mean": {
+      "value": 1.3682532121963897,
+      "origin": "mean(test_cvs)",
+      "source": "FROM_STATISTICS"
+    },
+    "cv_std": {
+      "value": 0.6579927380132975,
+      "origin": "std(test_cvs)",
+      "source": "FROM_STATISTICS"
+    },
+    "cv_of_cvs": {
+      "value": 0.480899830636651,
+      "origin": "std/mean",
+      "source": "FROM_MATH"
+    }
+  },
+  "after_framework": {
+    "cv_mean": {
+      "value": 1.0950430029359697,
+      "origin": "mean(test_cvs_after)",
+      "source": "FROM_STATISTICS"
+    },
+    "cv_std": {
+      "value": 0.5512719284646818,
+      "origin": "std(test_cvs_after)",
+      "source": "FROM_STATISTICS"
+    },
+    "cv_of_cvs": {
+      "value": 0.5034249129820851,
+      "origin": "std/mean",
+      "source": "FROM_MATH"
+    }
+  },
+  "comparison": {
+    "reduction_projected": {
+      "value": 0.30363330156322094,
+      "origin": "framework_projection",
+      "source": "FROM_DATA"
+    },
+    "mean_adherence": {
+      "value": 0.6913063070596006,
+      "origin": "mean(adherence)",
+      "source": "FROM_STATISTICS"
+    },
+    "reduction_expected": {
+      "value": 0.20990361640398433,
+      "origin": "projected * adherence",
+      "source": "FROM_MATH"
+    },
+    "reduction_observed": {
+      "value": 0.19967810550347553,
+      "origin": "1 - (mean_after/mean_before)",
+      "source": "FROM_MATH"
+    },
+    "diff_vs_expected": {
+      "value": 0.0102255109005088,
+      "origin": "abs(observed - expected_adjusted)",
+      "source": "FROM_MATH"
+    },
+    "error_tipico": {
+      "value": 0.15,
+      "origin": "std(cv_reductions_prev)",
+      "source": "FROM_STATISTICS"
+    }
+  },
+  "validation": {
+    "status": "VALIDADO",
+    "criterion": "diff_adjusted (0.0102) < error_tipico (0.1500)",
+    "pattern_to_remove": null
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "type": "CAUSAL_FRAMEWORK_MINIMAL",
+    "name": "HHI_CONCENTRATION_FRAMEWORK",
+    "source": "100% END\u00d3GENO",
+    "timestamp": "2025-12-07T19:15:46"
+  },
+  "causal_factor": {
+    "name": "high_hhi",
+    "description": "HHI >= median",
+    "validated": true
+  },
+  "framework": {
+    "core_principle": "Maximizar concentraci\u00f3n (HHI) mediante adopci\u00f3n de est\u00e1ndares dominantes",
+    "implementation_steps": [
+      "Usar framework dominante del campo (PyTorch en ML)",
+      "Adoptar m\u00e9tricas est\u00e1ndar del campo",
+      "Seguir convenciones de c\u00f3digo dominantes"
+    ],
+    "metric": "HHI (Herfindahl-Hirschman Index)"
+  },
+  "projection": {
+    "base_reduction": {
+      "value": 0.24026499519248704,
+      "origin": "causal_factor.mean_reduction",
+      "source": "FROM_DATA"
+    },
+    "adoption_rate": {
+      "value": 0.8,
+      "origin": "specified_80pct",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "projected_reduction": {
+      "value": 0.19221199615398965,
+      "origin": "base * adoption",
+      "source": "FROM_MATH"
+    }
+  }
+}

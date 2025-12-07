@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "type": "CAUSAL_FACTOR_IDENTIFICATION",
+    "source": "100% END\u00d3GENO",
+    "timestamp": "2025-12-07T19:13:05"
+  },
+  "error_tipico": {
+    "value": 0.42531429328761056,
+    "origin": "std(cvs)/mean(cvs)",
+    "source": "FROM_STATISTICS"
+  },
+  "factors_tested": {
+    "high_hhi": {
+      "description": "HHI >= median",
+      "mean_reduction": {
+        "value": 0.24026499519248704,
+        "origin": "mean(reductions)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_reduction": {
+        "value": 0.0613275171681165,
+        "origin": "std(reductions)",
+        "source": "FROM_STATISTICS"
+      },
+      "pct_positive": {
+        "value": 1.0,
+        "origin": "mean(r>0)",
+        "source": "FROM_STATISTICS"
+      },
+      "passes_causal": true
+    },
+    "has_unit": {
+      "description": "unit_count > 0",
+      "mean_reduction": {
+        "value": 0.05613601168013478,
+        "origin": "mean(reductions)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_reduction": {
+        "value": 0.04995781221032036,
+        "origin": "std(reductions)",
+        "source": "FROM_STATISTICS"
+      },
+      "pct_positive": {
+        "value": 0.8,
+        "origin": "mean(r>0)",
+        "source": "FROM_STATISTICS"
+      },
+      "passes_causal": true
+    },
+    "no_drift": {
+      "description": "drift == False",
+      "mean_reduction": {
+        "value": 0.15745953949982924,
+        "origin": "mean(reductions)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_reduction": {
+        "value": 0.07825323349684372,
+        "origin": "std(reductions)",
+        "source": "FROM_STATISTICS"
+      },
+      "pct_positive": {
+        "value": 0.9,
+        "origin": "mean(r>0)",
+        "source": "FROM_STATISTICS"
+      },
+      "passes_causal": true
+    },
+    "low_outlier": {
+      "description": "outlier_impact < median",
+      "mean_reduction": {
+        "value": 0.21852631995154614,
+        "origin": "mean(reductions)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_reduction": {
+        "value": 0.10888586850172362,
+        "origin": "std(reductions)",
+        "source": "FROM_STATISTICS"
+      },
+      "pct_positive": {
+        "value": 1.0,
+        "origin": "mean(r>0)",
+        "source": "FROM_STATISTICS"
+      },
+      "passes_causal": true
+    },
+    "low_skewness": {
+      "description": "skewness < median",
+      "mean_reduction": {
+        "value": 0.12977961643238278,
+        "origin": "mean(reductions)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_reduction": {
+        "value": 0.08818700368372259,
+        "origin": "std(reductions)",
+        "source": "FROM_STATISTICS"
+      },
+      "pct_positive": {
+        "value": 1.0,
+        "origin": "mean(r>0)",
+        "source": "FROM_STATISTICS"
+      },
+      "passes_causal": true
+    }
+  },
+  "winner": "high_hhi",
+  "winner_description": "HHI >= median",
+  "winner_stats": {
+    "mean_reduction": {
+      "value": 0.24026499519248704,
+      "origin": "winner.mean",
+      "source": "FROM_DATA"
+    },
+    "std_reduction": {
+      "value": 0.0613275171681165,
+      "origin": "winner.std",
+      "source": "FROM_DATA"
+    },
+    "pct_positive": {
+      "value": 1.0,
+      "origin": "winner.pct_pos",
+      "source": "FROM_DATA"
+    }
+  }
+}

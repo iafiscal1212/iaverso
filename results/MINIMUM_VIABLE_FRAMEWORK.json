@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "type": "MINIMUM_VIABLE_FRAMEWORK",
+    "source": "100% END\u00d3GENO",
+    "timestamp": "2025-12-07T18:57:25"
+  },
+  "top5_patterns": [
+    {
+      "pattern": "pytorch",
+      "share": {
+        "value": 0.98,
+        "origin": "from_PYTORCH_ANALYSIS",
+        "source": "FROM_DATA"
+      },
+      "source": "PYTORCH_ANALYSIS"
+    },
+    {
+      "pattern": "import_torch",
+      "share": {
+        "value": 0.2962962962962963,
+        "origin": "from_SCALED_ANALYSIS",
+        "source": "FROM_DATA"
+      },
+      "source": "SCALED_ANALYSIS"
+    },
+    {
+      "pattern": "transformers_lib",
+      "share": {
+        "value": 0.2777777777777778,
+        "origin": "from_SCALED_ANALYSIS",
+        "source": "FROM_DATA"
+      },
+      "source": "SCALED_ANALYSIS"
+    },
+    {
+      "pattern": "from_torch",
+      "share": {
+        "value": 0.2222222222222222,
+        "origin": "from_SCALED_ANALYSIS",
+        "source": "FROM_DATA"
+      },
+      "source": "SCALED_ANALYSIS"
+    },
+    {
+      "pattern": "transformer",
+      "share": {
+        "value": 0.2,
+        "origin": "from_PYTORCH_ANALYSIS",
+        "source": "FROM_DATA"
+      },
+      "source": "PYTORCH_ANALYSIS"
+    }
+  ],
+  "metric": {
+    "name": "CV",
+    "stability": {
+      "value": 0.42531429328761056,
+      "origin": "std(cv_values)/mean(cv_values)",
+      "source": "FROM_MATH"
+    }
+  },
+  "unit": {
+    "name": "%",
+    "reduction_impact": {
+      "value": 0.133,
+      "origin": "mean(cv_reduction_with_unit)",
+      "source": "FROM_STATISTICS"
+    }
+  },
+  "template": {
+    "files": [
+      "main.py",
+      "config.py"
+    ],
+    "main_py": "\"\"\"\nFRAMEWORK M\u00cdNIMO VIABLE - 100% END\u00d3GENO\nPatrones obligatorios: pytorch, import_torch, transformers_lib\nM\u00e9trica: CV | Unidad: %\nReducci\u00f3n proyectada: 30.4%\n\"\"\"\n\nimport torch  # Patr\u00f3n: import_torch\nfrom torch import nn  # Patr\u00f3n: from_torch\nfrom transformers import AutoModel  # Patr\u00f3n: transformers_lib\n\nimport logging  # Patr\u00f3n: logging\nfrom tqdm import tqdm  # Patr\u00f3n: tqdm\n\nclass MinimalModel(nn.Module):\n    def __init__(self):\n        super().__init__()\n        self.backbone = AutoModel.from_pretrained(\"bert-base-uncased\")\n    \n    def forward(self, x):\n        return self.backbone(x)\n\ndef train(model, data, epochs=10):\n    optimizer = torch.optim.Adam(model.parameters())\n    model.train()\n    \n    for epoch in tqdm(range(epochs)):\n        for batch in data:\n            optimizer.zero_grad()  # Patr\u00f3n: zero_grad\n            loss = model(batch)\n            loss.backward()\n            optimizer.step()\n    \n    torch.save(model.state_dict(), \"model.pt\")  # Patr\u00f3n: torch_save\n    logging.info(\"Training complete\")\n",
+    "config_py": "\"\"\"\nCONFIG - Derivado de an\u00e1lisis end\u00f3geno\n\"\"\"\nCONFIG = {\n    \"metric\": \"CV\",\n    \"unit\": \"%\",\n    \"patterns_required\": ['pytorch', 'import_torch', 'transformers_lib', 'from_torch', 'transformer'],\n    \"projected_reduction\": 0.3036\n}\n"
+  },
+  "projection": {
+    "global_cv_reduction": {
+      "value": 0.30363330156322094,
+      "origin": "exp(mean(log(reductions)))",
+      "source": "FROM_MATH"
+    },
+    "adoption_rate": {
+      "value": 0.8,
+      "origin": "specified_in_prompt",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "timeframe_months": {
+      "value": 12,
+      "origin": "specified_in_prompt",
+      "source": "CONFIG_OPERATIONAL"
+    }
+  }
+}

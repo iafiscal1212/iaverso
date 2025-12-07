@@ -1,0 +1,1323 @@
+{
+  "metadata": {
+    "topic": "FRAMEWORK_DOMINANCE_VARIANCE_REDUCTION",
+    "source": "GitHub API",
+    "n_tasks": {
+      "value": 12,
+      "origin": "len(tasks)",
+      "source": "FROM_DATA"
+    },
+    "total_repos": {
+      "value": 360,
+      "origin": "sum(repos_per_task)",
+      "source": "FROM_DATA"
+    },
+    "timestamp": "2025-12-07T17:43:45.717716",
+    "norma_dura": true
+  },
+  "task_results": [
+    {
+      "task": "image classification",
+      "n_repos": {
+        "value": 30,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_frameworks": {
+        "value": 3,
+        "origin": "count(unique frameworks)",
+        "source": "FROM_DATA"
+      },
+      "top_framework": "pytorch",
+      "dominance_index": {
+        "value": 0.43333333333333335,
+        "origin": "max(framework_shares)",
+        "source": "FROM_MATH"
+      },
+      "hhi": {
+        "value": 0.19333333333333336,
+        "origin": "sum(share^2)",
+        "source": "FROM_MATH"
+      },
+      "cv_global": {
+        "value": 1.6939874012497824,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "framework_shares": {
+        "pytorch": {
+          "count": {
+            "value": 13,
+            "origin": "count(pytorch)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.43333333333333335,
+            "origin": "13/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "tensorflow": {
+          "count": {
+            "value": 2,
+            "origin": "count(tensorflow)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.06666666666666667,
+            "origin": "2/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "caffe": {
+          "count": {
+            "value": 1,
+            "origin": "count(caffe)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.03333333333333333,
+            "origin": "1/30",
+            "source": "FROM_MATH"
+          }
+        }
+      },
+      "cv_by_framework": {
+        "pytorch": {
+          "value": 1.7308975735825334,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        }
+      }
+    },
+    {
+      "task": "object detection",
+      "n_repos": {
+        "value": 30,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_frameworks": {
+        "value": 4,
+        "origin": "count(unique frameworks)",
+        "source": "FROM_DATA"
+      },
+      "top_framework": "pytorch",
+      "dominance_index": {
+        "value": 0.3,
+        "origin": "max(framework_shares)",
+        "source": "FROM_MATH"
+      },
+      "hhi": {
+        "value": 0.15,
+        "origin": "sum(share^2)",
+        "source": "FROM_MATH"
+      },
+      "cv_global": {
+        "value": 0.7602292281458977,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "framework_shares": {
+        "tensorflow": {
+          "count": {
+            "value": 7,
+            "origin": "count(tensorflow)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.23333333333333334,
+            "origin": "7/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "pytorch": {
+          "count": {
+            "value": 9,
+            "origin": "count(pytorch)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.3,
+            "origin": "9/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "keras": {
+          "count": {
+            "value": 2,
+            "origin": "count(keras)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.06666666666666667,
+            "origin": "2/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "paddlepaddle": {
+          "count": {
+            "value": 1,
+            "origin": "count(paddlepaddle)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.03333333333333333,
+            "origin": "1/30",
+            "source": "FROM_MATH"
+          }
+        }
+      },
+      "cv_by_framework": {
+        "tensorflow": {
+          "value": 0.49153036164107283,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "pytorch": {
+          "value": 0.7025139720610715,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        }
+      }
+    },
+    {
+      "task": "semantic segmentation",
+      "n_repos": {
+        "value": 30,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_frameworks": {
+        "value": 2,
+        "origin": "count(unique frameworks)",
+        "source": "FROM_DATA"
+      },
+      "top_framework": "pytorch",
+      "dominance_index": {
+        "value": 0.43333333333333335,
+        "origin": "max(framework_shares)",
+        "source": "FROM_MATH"
+      },
+      "hhi": {
+        "value": 0.1977777777777778,
+        "origin": "sum(share^2)",
+        "source": "FROM_MATH"
+      },
+      "cv_global": {
+        "value": 0.9179944632938928,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "framework_shares": {
+        "pytorch": {
+          "count": {
+            "value": 13,
+            "origin": "count(pytorch)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.43333333333333335,
+            "origin": "13/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "tensorflow": {
+          "count": {
+            "value": 3,
+            "origin": "count(tensorflow)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.1,
+            "origin": "3/30",
+            "source": "FROM_MATH"
+          }
+        }
+      },
+      "cv_by_framework": {
+        "pytorch": {
+          "value": 0.8745626694472535,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "tensorflow": {
+          "value": 0.4187482938790526,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        }
+      }
+    },
+    {
+      "task": "natural language processing",
+      "n_repos": {
+        "value": 30,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_frameworks": {
+        "value": 4,
+        "origin": "count(unique frameworks)",
+        "source": "FROM_DATA"
+      },
+      "top_framework": "pytorch",
+      "dominance_index": {
+        "value": 0.23333333333333334,
+        "origin": "max(framework_shares)",
+        "source": "FROM_MATH"
+      },
+      "hhi": {
+        "value": 0.09666666666666666,
+        "origin": "sum(share^2)",
+        "source": "FROM_MATH"
+      },
+      "cv_global": {
+        "value": 1.4741331551505013,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "framework_shares": {
+        "pytorch": {
+          "count": {
+            "value": 7,
+            "origin": "count(pytorch)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.23333333333333334,
+            "origin": "7/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "tensorflow": {
+          "count": {
+            "value": 6,
+            "origin": "count(tensorflow)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.2,
+            "origin": "6/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "keras": {
+          "count": {
+            "value": 1,
+            "origin": "count(keras)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.03333333333333333,
+            "origin": "1/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "mxnet": {
+          "count": {
+            "value": 1,
+            "origin": "count(mxnet)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.03333333333333333,
+            "origin": "1/30",
+            "source": "FROM_MATH"
+          }
+        }
+      },
+      "cv_by_framework": {
+        "pytorch": {
+          "value": 1.5404091439022178,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "tensorflow": {
+          "value": 1.5494092076180908,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        }
+      }
+    },
+    {
+      "task": "text classification",
+      "n_repos": {
+        "value": 30,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_frameworks": {
+        "value": 3,
+        "origin": "count(unique frameworks)",
+        "source": "FROM_DATA"
+      },
+      "top_framework": "pytorch",
+      "dominance_index": {
+        "value": 0.23333333333333334,
+        "origin": "max(framework_shares)",
+        "source": "FROM_MATH"
+      },
+      "hhi": {
+        "value": 0.11222222222222224,
+        "origin": "sum(share^2)",
+        "source": "FROM_MATH"
+      },
+      "cv_global": {
+        "value": 1.561365384295356,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "framework_shares": {
+        "tensorflow": {
+          "count": {
+            "value": 6,
+            "origin": "count(tensorflow)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.2,
+            "origin": "6/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "pytorch": {
+          "count": {
+            "value": 7,
+            "origin": "count(pytorch)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.23333333333333334,
+            "origin": "7/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "keras": {
+          "count": {
+            "value": 4,
+            "origin": "count(keras)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.13333333333333333,
+            "origin": "4/30",
+            "source": "FROM_MATH"
+          }
+        }
+      },
+      "cv_by_framework": {
+        "tensorflow": {
+          "value": 0.6851137868297983,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "pytorch": {
+          "value": 0.8718388683417515,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "keras": {
+          "value": 0.3449799315847238,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        }
+      }
+    },
+    {
+      "task": "machine translation",
+      "n_repos": {
+        "value": 30,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_frameworks": {
+        "value": 2,
+        "origin": "count(unique frameworks)",
+        "source": "FROM_DATA"
+      },
+      "top_framework": "pytorch",
+      "dominance_index": {
+        "value": 0.13333333333333333,
+        "origin": "max(framework_shares)",
+        "source": "FROM_MATH"
+      },
+      "hhi": {
+        "value": 0.035555555555555556,
+        "origin": "sum(share^2)",
+        "source": "FROM_MATH"
+      },
+      "cv_global": {
+        "value": 1.1244141768493783,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "framework_shares": {
+        "pytorch": {
+          "count": {
+            "value": 4,
+            "origin": "count(pytorch)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.13333333333333333,
+            "origin": "4/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "tensorflow": {
+          "count": {
+            "value": 4,
+            "origin": "count(tensorflow)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.13333333333333333,
+            "origin": "4/30",
+            "source": "FROM_MATH"
+          }
+        }
+      },
+      "cv_by_framework": {
+        "pytorch": {
+          "value": 0.8771818121600105,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "tensorflow": {
+          "value": 0.7162791755641387,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        }
+      }
+    },
+    {
+      "task": "speech recognition",
+      "n_repos": {
+        "value": 30,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_frameworks": {
+        "value": 3,
+        "origin": "count(unique frameworks)",
+        "source": "FROM_DATA"
+      },
+      "top_framework": "pytorch",
+      "dominance_index": {
+        "value": 0.23333333333333334,
+        "origin": "max(framework_shares)",
+        "source": "FROM_MATH"
+      },
+      "hhi": {
+        "value": 0.08666666666666667,
+        "origin": "sum(share^2)",
+        "source": "FROM_MATH"
+      },
+      "cv_global": {
+        "value": 1.6761004901097676,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "framework_shares": {
+        "pytorch": {
+          "count": {
+            "value": 7,
+            "origin": "count(pytorch)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.23333333333333334,
+            "origin": "7/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "tensorflow": {
+          "count": {
+            "value": 5,
+            "origin": "count(tensorflow)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.16666666666666666,
+            "origin": "5/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "keras": {
+          "count": {
+            "value": 2,
+            "origin": "count(keras)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.06666666666666667,
+            "origin": "2/30",
+            "source": "FROM_MATH"
+          }
+        }
+      },
+      "cv_by_framework": {
+        "pytorch": {
+          "value": 1.7145203472918136,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "tensorflow": {
+          "value": 1.548188087401329,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        }
+      }
+    },
+    {
+      "task": "reinforcement learning",
+      "n_repos": {
+        "value": 30,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_frameworks": {
+        "value": 3,
+        "origin": "count(unique frameworks)",
+        "source": "FROM_DATA"
+      },
+      "top_framework": "pytorch",
+      "dominance_index": {
+        "value": 0.26666666666666666,
+        "origin": "max(framework_shares)",
+        "source": "FROM_MATH"
+      },
+      "hhi": {
+        "value": 0.11222222222222222,
+        "origin": "sum(share^2)",
+        "source": "FROM_MATH"
+      },
+      "cv_global": {
+        "value": 0.8331583792213932,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "framework_shares": {
+        "pytorch": {
+          "count": {
+            "value": 8,
+            "origin": "count(pytorch)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.26666666666666666,
+            "origin": "8/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "tensorflow": {
+          "count": {
+            "value": 6,
+            "origin": "count(tensorflow)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.2,
+            "origin": "6/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "keras": {
+          "count": {
+            "value": 1,
+            "origin": "count(keras)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.03333333333333333,
+            "origin": "1/30",
+            "source": "FROM_MATH"
+          }
+        }
+      },
+      "cv_by_framework": {
+        "pytorch": {
+          "value": 1.0831094993555093,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "tensorflow": {
+          "value": 0.4442873024027918,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        }
+      }
+    },
+    {
+      "task": "generative model",
+      "n_repos": {
+        "value": 30,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_frameworks": {
+        "value": 2,
+        "origin": "count(unique frameworks)",
+        "source": "FROM_DATA"
+      },
+      "top_framework": "pytorch",
+      "dominance_index": {
+        "value": 0.3,
+        "origin": "max(framework_shares)",
+        "source": "FROM_MATH"
+      },
+      "hhi": {
+        "value": 0.13,
+        "origin": "sum(share^2)",
+        "source": "FROM_MATH"
+      },
+      "cv_global": {
+        "value": 1.1426838328203288,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "framework_shares": {
+        "pytorch": {
+          "count": {
+            "value": 9,
+            "origin": "count(pytorch)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.3,
+            "origin": "9/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "tensorflow": {
+          "count": {
+            "value": 6,
+            "origin": "count(tensorflow)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.2,
+            "origin": "6/30",
+            "source": "FROM_MATH"
+          }
+        }
+      },
+      "cv_by_framework": {
+        "pytorch": {
+          "value": 1.2780983871471756,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "tensorflow": {
+          "value": 0.34691075183988745,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        }
+      }
+    },
+    {
+      "task": "graph neural network",
+      "n_repos": {
+        "value": 30,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_frameworks": {
+        "value": 5,
+        "origin": "count(unique frameworks)",
+        "source": "FROM_DATA"
+      },
+      "top_framework": "pytorch",
+      "dominance_index": {
+        "value": 0.26666666666666666,
+        "origin": "max(framework_shares)",
+        "source": "FROM_MATH"
+      },
+      "hhi": {
+        "value": 0.1488888888888889,
+        "origin": "sum(share^2)",
+        "source": "FROM_MATH"
+      },
+      "cv_global": {
+        "value": 1.6916851906585133,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "framework_shares": {
+        "pytorch": {
+          "count": {
+            "value": 8,
+            "origin": "count(pytorch)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.26666666666666666,
+            "origin": "8/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "tensorflow": {
+          "count": {
+            "value": 8,
+            "origin": "count(tensorflow)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.26666666666666666,
+            "origin": "8/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "caffe": {
+          "count": {
+            "value": 1,
+            "origin": "count(caffe)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.03333333333333333,
+            "origin": "1/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "keras": {
+          "count": {
+            "value": 2,
+            "origin": "count(keras)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.06666666666666667,
+            "origin": "2/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "jax": {
+          "count": {
+            "value": 1,
+            "origin": "count(jax)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.03333333333333333,
+            "origin": "1/30",
+            "source": "FROM_MATH"
+          }
+        }
+      },
+      "cv_by_framework": {
+        "pytorch": {
+          "value": 1.5845060063562109,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "tensorflow": {
+          "value": 0.3468519938684264,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        }
+      }
+    },
+    {
+      "task": "recommendation system",
+      "n_repos": {
+        "value": 30,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_frameworks": {
+        "value": 3,
+        "origin": "count(unique frameworks)",
+        "source": "FROM_DATA"
+      },
+      "top_framework": "pytorch",
+      "dominance_index": {
+        "value": 0.13333333333333333,
+        "origin": "max(framework_shares)",
+        "source": "FROM_MATH"
+      },
+      "hhi": {
+        "value": 0.02888888888888889,
+        "origin": "sum(share^2)",
+        "source": "FROM_MATH"
+      },
+      "cv_global": {
+        "value": 2.118772192569077,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "framework_shares": {
+        "tensorflow": {
+          "count": {
+            "value": 3,
+            "origin": "count(tensorflow)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.1,
+            "origin": "3/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "pytorch": {
+          "count": {
+            "value": 4,
+            "origin": "count(pytorch)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.13333333333333333,
+            "origin": "4/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "jax": {
+          "count": {
+            "value": 1,
+            "origin": "count(jax)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.03333333333333333,
+            "origin": "1/30",
+            "source": "FROM_MATH"
+          }
+        }
+      },
+      "cv_by_framework": {
+        "tensorflow": {
+          "value": 0.6789346060928051,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "pytorch": {
+          "value": 0.8279279108572296,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        }
+      }
+    },
+    {
+      "task": "time series",
+      "n_repos": {
+        "value": 30,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_frameworks": {
+        "value": 3,
+        "origin": "count(unique frameworks)",
+        "source": "FROM_DATA"
+      },
+      "top_framework": "pytorch",
+      "dominance_index": {
+        "value": 0.1,
+        "origin": "max(framework_shares)",
+        "source": "FROM_MATH"
+      },
+      "hhi": {
+        "value": 0.012222222222222225,
+        "origin": "sum(share^2)",
+        "source": "FROM_MATH"
+      },
+      "cv_global": {
+        "value": 1.0586677342000141,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "framework_shares": {
+        "pytorch": {
+          "count": {
+            "value": 3,
+            "origin": "count(pytorch)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.1,
+            "origin": "3/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "keras": {
+          "count": {
+            "value": 1,
+            "origin": "count(keras)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.03333333333333333,
+            "origin": "1/30",
+            "source": "FROM_MATH"
+          }
+        },
+        "mxnet": {
+          "count": {
+            "value": 1,
+            "origin": "count(mxnet)",
+            "source": "FROM_DATA"
+          },
+          "share": {
+            "value": 0.03333333333333333,
+            "origin": "1/30",
+            "source": "FROM_MATH"
+          }
+        }
+      },
+      "cv_by_framework": {
+        "pytorch": {
+          "value": 0.09788299914640532,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        }
+      }
+    }
+  ],
+  "global_framework_shares": {
+    "pytorch": {
+      "count": {
+        "value": 92,
+        "origin": "aggregate",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.25555555555555554,
+        "origin": "92/360",
+        "source": "FROM_MATH"
+      }
+    },
+    "tensorflow": {
+      "count": {
+        "value": 56,
+        "origin": "aggregate",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.15555555555555556,
+        "origin": "56/360",
+        "source": "FROM_MATH"
+      }
+    },
+    "caffe": {
+      "count": {
+        "value": 2,
+        "origin": "aggregate",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.005555555555555556,
+        "origin": "2/360",
+        "source": "FROM_MATH"
+      }
+    },
+    "keras": {
+      "count": {
+        "value": 13,
+        "origin": "aggregate",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.03611111111111111,
+        "origin": "13/360",
+        "source": "FROM_MATH"
+      }
+    },
+    "paddlepaddle": {
+      "count": {
+        "value": 1,
+        "origin": "aggregate",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.002777777777777778,
+        "origin": "1/360",
+        "source": "FROM_MATH"
+      }
+    },
+    "mxnet": {
+      "count": {
+        "value": 2,
+        "origin": "aggregate",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.005555555555555556,
+        "origin": "2/360",
+        "source": "FROM_MATH"
+      }
+    },
+    "jax": {
+      "count": {
+        "value": 2,
+        "origin": "aggregate",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.005555555555555556,
+        "origin": "2/360",
+        "source": "FROM_MATH"
+      }
+    }
+  },
+  "variance_analysis": {
+    "correlation_dominance_cv": {
+      "value": -0.18036180529227086,
+      "origin": "pearson(dominance, CV)",
+      "source": "FROM_STATISTICS"
+    },
+    "median_dominance": {
+      "value": 0.25,
+      "origin": "median(dominances)",
+      "source": "FROM_STATISTICS"
+    },
+    "cv_high_dominance": {
+      "value": 1.1732897492316348,
+      "origin": "mean(CV where dom >= median)",
+      "source": "FROM_STATISTICS"
+    },
+    "cv_low_dominance": {
+      "value": 1.502242188862349,
+      "origin": "mean(CV where dom < median)",
+      "source": "FROM_STATISTICS"
+    },
+    "variance_reduction": {
+      "value": 0.2189743052548874,
+      "origin": "(cv_low - cv_high) / cv_low",
+      "source": "FROM_MATH"
+    },
+    "n_tasks": {
+      "value": 12,
+      "origin": "count(tasks)",
+      "source": "FROM_DATA"
+    }
+  },
+  "audit_log": [
+    {
+      "step": "fetch_task_image classification",
+      "origin": "GitHub API /search/repositories",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:42:13.722718"
+    },
+    {
+      "step": "calc_framework_share",
+      "origin": "count per framework",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:42:14.482747"
+    },
+    {
+      "step": "calc_cv_by_framework",
+      "origin": "CV(stars) per framework",
+      "source": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:42:14.482886"
+    },
+    {
+      "step": "fetch_task_object detection",
+      "origin": "GitHub API /search/repositories",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:42:16.484316"
+    },
+    {
+      "step": "calc_framework_share",
+      "origin": "count per framework",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:42:17.152598"
+    },
+    {
+      "step": "calc_cv_by_framework",
+      "origin": "CV(stars) per framework",
+      "source": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:42:17.152714"
+    },
+    {
+      "step": "fetch_task_semantic segmentation",
+      "origin": "GitHub API /search/repositories",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:42:19.154926"
+    },
+    {
+      "step": "calc_framework_share",
+      "origin": "count per framework",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:42:19.796509"
+    },
+    {
+      "step": "calc_cv_by_framework",
+      "origin": "CV(stars) per framework",
+      "source": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:42:19.796625"
+    },
+    {
+      "step": "fetch_task_natural language processing",
+      "origin": "GitHub API /search/repositories",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:42:21.798805"
+    },
+    {
+      "step": "calc_framework_share",
+      "origin": "count per framework",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:42:22.435145"
+    },
+    {
+      "step": "calc_cv_by_framework",
+      "origin": "CV(stars) per framework",
+      "source": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:42:22.435264"
+    },
+    {
+      "step": "fetch_task_text classification",
+      "origin": "GitHub API /search/repositories",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:42:24.437459"
+    },
+    {
+      "step": "calc_framework_share",
+      "origin": "count per framework",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:42:25.063747"
+    },
+    {
+      "step": "calc_cv_by_framework",
+      "origin": "CV(stars) per framework",
+      "source": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:42:25.063864"
+    },
+    {
+      "step": "fetch_task_machine translation",
+      "origin": "GitHub API /search/repositories",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:42:27.066070"
+    },
+    {
+      "step": "calc_framework_share",
+      "origin": "count per framework",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:42:27.712445"
+    },
+    {
+      "step": "calc_cv_by_framework",
+      "origin": "CV(stars) per framework",
+      "source": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:42:27.712560"
+    },
+    {
+      "step": "fetch_task_speech recognition",
+      "origin": "GitHub API /search/repositories",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:42:29.714753"
+    },
+    {
+      "step": "calc_framework_share",
+      "origin": "count per framework",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:43:30.378200"
+    },
+    {
+      "step": "calc_cv_by_framework",
+      "origin": "CV(stars) per framework",
+      "source": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:43:30.378315"
+    },
+    {
+      "step": "fetch_task_reinforcement learning",
+      "origin": "GitHub API /search/repositories",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:43:32.380504"
+    },
+    {
+      "step": "calc_framework_share",
+      "origin": "count per framework",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:43:33.013893"
+    },
+    {
+      "step": "calc_cv_by_framework",
+      "origin": "CV(stars) per framework",
+      "source": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:43:33.014010"
+    },
+    {
+      "step": "fetch_task_generative model",
+      "origin": "GitHub API /search/repositories",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:43:35.016210"
+    },
+    {
+      "step": "calc_framework_share",
+      "origin": "count per framework",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:43:35.602045"
+    },
+    {
+      "step": "calc_cv_by_framework",
+      "origin": "CV(stars) per framework",
+      "source": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:43:35.602159"
+    },
+    {
+      "step": "fetch_task_graph neural network",
+      "origin": "GitHub API /search/repositories",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:43:37.604339"
+    },
+    {
+      "step": "calc_framework_share",
+      "origin": "count per framework",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:43:38.266988"
+    },
+    {
+      "step": "calc_cv_by_framework",
+      "origin": "CV(stars) per framework",
+      "source": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:43:38.267105"
+    },
+    {
+      "step": "fetch_task_recommendation system",
+      "origin": "GitHub API /search/repositories",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:43:40.268316"
+    },
+    {
+      "step": "calc_framework_share",
+      "origin": "count per framework",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:43:40.915039"
+    },
+    {
+      "step": "calc_cv_by_framework",
+      "origin": "CV(stars) per framework",
+      "source": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:43:40.915157"
+    },
+    {
+      "step": "fetch_task_time series",
+      "origin": "GitHub API /search/repositories",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:43:42.917336"
+    },
+    {
+      "step": "calc_framework_share",
+      "origin": "count per framework",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:43:43.711278"
+    },
+    {
+      "step": "calc_cv_by_framework",
+      "origin": "CV(stars) per framework",
+      "source": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:43:43.711391"
+    },
+    {
+      "step": "global_framework_shares",
+      "origin": "aggregate counts",
+      "source": "FROM_DATA",
+      "ts": "2025-12-07T17:43:45.713667"
+    },
+    {
+      "step": "analyze_variance_reduction",
+      "origin": "correlation dominance vs CV",
+      "source": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:43:45.713678"
+    }
+  ]
+}

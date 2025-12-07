@@ -1,0 +1,302 @@
+{
+  "metadata": {
+    "dominant_pattern": "pytorch",
+    "dominant_pattern_source": "FROM_DATA (prev_analysis.top_3_patterns[0])",
+    "total_repos": {
+      "value": 1000,
+      "origin": "len(repos_fetched)",
+      "source": "FROM_DATA"
+    },
+    "p90_threshold": {
+      "value": 16208.800000000001,
+      "origin": "np.percentile(stars, 90)",
+      "source": "FROM_STATISTICS"
+    },
+    "repos_p90": {
+      "value": 100,
+      "origin": "len(repos[stars >= p90])",
+      "source": "FROM_DATA"
+    },
+    "files_extracted": {
+      "value": 54,
+      "origin": "len(files_extracted)",
+      "source": "FROM_DATA"
+    },
+    "timestamp": "2025-12-07T18:54:18"
+  },
+  "top_patterns": [
+    {
+      "pattern": "import_torch",
+      "count": {
+        "value": 16,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.2962962962962963,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pattern": "transformers_lib",
+      "count": {
+        "value": 15,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.2777777777777778,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pattern": "from_torch",
+      "count": {
+        "value": 12,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.2222222222222222,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pattern": "logging",
+      "count": {
+        "value": 10,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.18518518518518517,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pattern": "tqdm",
+      "count": {
+        "value": 8,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.14814814814814814,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pattern": "argparse",
+      "count": {
+        "value": 6,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.1111111111111111,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pattern": "zero_grad",
+      "count": {
+        "value": 3,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.05555555555555555,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pattern": "torch_save",
+      "count": {
+        "value": 3,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.05555555555555555,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pattern": "model_eval",
+      "count": {
+        "value": 3,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.05555555555555555,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pattern": "trainer_class",
+      "count": {
+        "value": 2,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.037037037037037035,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pattern": "to_device",
+      "count": {
+        "value": 2,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.037037037037037035,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pattern": "optim_step",
+      "count": {
+        "value": 2,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.037037037037037035,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pattern": "model_train",
+      "count": {
+        "value": 2,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.037037037037037035,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pattern": "no_grad",
+      "count": {
+        "value": 2,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.037037037037037035,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pattern": "torch_load",
+      "count": {
+        "value": 2,
+        "origin": "sum(regex_match)",
+        "source": "FROM_DATA"
+      },
+      "share": {
+        "value": 0.037037037037037035,
+        "origin": "count/n_files",
+        "source": "FROM_MATH"
+      }
+    }
+  ],
+  "cv_analysis": {
+    "cv_patterns": {
+      "value": 0.8347439850860878,
+      "origin": "std/mean of pattern_counts",
+      "source": "FROM_MATH"
+    },
+    "cv_adherence": {
+      "value": 1.4510233456988675,
+      "origin": "std/mean of patterns_per_file",
+      "source": "FROM_MATH"
+    },
+    "mean_patterns_per_file": {
+      "value": 1.7777777777777777,
+      "origin": "np.mean(patterns_per_file)",
+      "source": "FROM_STATISTICS"
+    },
+    "top5_share": {
+      "value": 0.6931818181818182,
+      "origin": "sum(top5)/sum(all)",
+      "source": "FROM_MATH"
+    },
+    "projected_cv": {
+      "value": 0.2561146317877769,
+      "origin": "cv_current * (1 - top5_share)",
+      "source": "FROM_MATH"
+    },
+    "cv_reduction": {
+      "value": 0.6931818181818183,
+      "origin": "1 - (cv_projected / cv_current)",
+      "source": "FROM_MATH"
+    }
+  },
+  "audit_log": [
+    {
+      "step": "load_prev_analysis",
+      "source": "FROM_DATA"
+    },
+    {
+      "step": "search_repos",
+      "source": "FROM_DATA",
+      "n": {
+        "value": 1000,
+        "origin": "len(repos_fetched)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "step": "calc_p90",
+      "source": "FROM_STATISTICS",
+      "threshold": {
+        "value": 16208.800000000001,
+        "origin": "np.percentile(stars, 90)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "step": "extract_code",
+      "source": "FROM_DATA",
+      "n_files": {
+        "value": 54,
+        "origin": "len(files_extracted)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "step": "pattern_detection",
+      "source": "FROM_DATA",
+      "n_patterns": {
+        "value": 25,
+        "origin": "len(patterns_to_detect)",
+        "source": "CONFIG_OPERATIONAL"
+      }
+    },
+    {
+      "step": "cv_calculation",
+      "source": "FROM_MATH"
+    }
+  ]
+}

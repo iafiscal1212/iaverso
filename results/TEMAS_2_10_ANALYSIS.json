@@ -1,0 +1,2667 @@
+{
+  "metadata": {
+    "topics": "TEMAS_2_10",
+    "source": "GitHub API",
+    "n_tasks": {
+      "value": 15,
+      "origin": "len(tasks)",
+      "source": "FROM_DATA"
+    },
+    "timestamp": "2025-12-07T18:01:13.401839",
+    "norma_dura": true
+  },
+  "tema2_unit_convergence": [
+    {
+      "task": "image classification",
+      "dominant_unit": "map",
+      "unit_count": {
+        "value": 1,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 1.5699747489303182,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.0,
+        "origin": "n<3",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 0.0,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "object detection",
+      "dominant_unit": "map",
+      "unit_count": {
+        "value": 1,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 0.6922587813540549,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.0,
+        "origin": "n<3",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 0.0,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "semantic segmentation",
+      "dominant_unit": "mse",
+      "unit_count": {
+        "value": 3,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 0.8331712498041873,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.7225928986348885,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 13.271983544233798,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "natural language processing",
+      "dominant_unit": "none",
+      "unit_count": {
+        "value": 0,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 1.3498438616299728,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.0,
+        "origin": "n<3",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 0.0,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "text classification",
+      "dominant_unit": "iou",
+      "unit_count": {
+        "value": 1,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 1.4620066303296606,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.0,
+        "origin": "n<3",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 0.0,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "machine translation",
+      "dominant_unit": "none",
+      "unit_count": {
+        "value": 0,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 1.0453170227695827,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.0,
+        "origin": "n<3",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 0.0,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "speech recognition",
+      "dominant_unit": "map",
+      "unit_count": {
+        "value": 1,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 1.536444430303397,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.0,
+        "origin": "n<3",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 0.0,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "reinforcement learning",
+      "dominant_unit": "none",
+      "unit_count": {
+        "value": 0,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 0.7752872382399993,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.0,
+        "origin": "n<3",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 0.0,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "generative model",
+      "dominant_unit": "iou",
+      "unit_count": {
+        "value": 2,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 1.0375350416868934,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.0,
+        "origin": "n<3",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 0.0,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "graph neural network",
+      "dominant_unit": "map",
+      "unit_count": {
+        "value": 1,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 1.6084930942941427,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.0,
+        "origin": "n<3",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 0.0,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "recommendation system",
+      "dominant_unit": "none",
+      "unit_count": {
+        "value": 0,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 1.9311194194594414,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.0,
+        "origin": "n<3",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 0.0,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "time series",
+      "dominant_unit": "iou",
+      "unit_count": {
+        "value": 1,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 0.9850449083861712,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.0,
+        "origin": "n<3",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 0.0,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "question answering",
+      "dominant_unit": "accuracy",
+      "unit_count": {
+        "value": 1,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 1.0911449112501475,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.0,
+        "origin": "n<3",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 0.0,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "sentiment analysis",
+      "dominant_unit": "iou",
+      "unit_count": {
+        "value": 1,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 2.6435198259642574,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.0,
+        "origin": "n<3",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 0.0,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "named entity recognition",
+      "dominant_unit": "none",
+      "unit_count": {
+        "value": 0,
+        "origin": "len(re.findall(unit_pattern, readme))",
+        "source": "FROM_DATA"
+      },
+      "cv_original": {
+        "value": 2.7490533753835615,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_normalized": {
+        "value": 0.0,
+        "origin": "n<3",
+        "source": "FROM_MATH"
+      },
+      "reduction_pct": {
+        "value": 0.0,
+        "origin": "(cv_orig-cv_norm)/cv_orig*100",
+        "source": "FROM_MATH"
+      }
+    }
+  ],
+  "tema3_fragmentation": [
+    {
+      "task": "image classification",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.8741356354642505,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 1.5699747489303182,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "object detection",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.8057900666611688,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 0.6922587813540549,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "semantic segmentation",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.8474277985003273,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 0.8331712498041873,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "natural language processing",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.7625975851781633,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 1.3498438616299728,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "text classification",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.8800242733281017,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 1.4620066303296606,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "machine translation",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.8104963137943773,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 1.0453170227695827,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "speech recognition",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.8899794756103229,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 1.536444430303397,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "reinforcement learning",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.8055334854520888,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 0.7752872382399993,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "generative model",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.7821793093004442,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 1.0375350416868934,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "graph neural network",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.9314336931344265,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 1.6084930942941427,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "recommendation system",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.8594007665754946,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 1.9311194194594414,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "time series",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.8204306885453474,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 0.9850449083861712,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "question answering",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.7628106787290697,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 1.0911449112501475,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "sentiment analysis",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.9275271781874198,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 2.6435198259642574,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "task": "named entity recognition",
+      "n_clusters": {
+        "value": 2.0,
+        "origin": "silhouette optimization",
+        "source": "FROM_STATISTICS"
+      },
+      "silhouette": {
+        "value": 0.9189180452588885,
+        "origin": "sklearn silhouette_score",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 2.7490533753835615,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      }
+    }
+  ],
+  "tema4_consensus": [
+    {
+      "task": "image classification",
+      "mean_old": {
+        "value": 3865.5,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 3414.846153846154,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 1.2080925686163642,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 1.9039307360121744,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": -0.11658358456961183,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": 0.6958381673958103,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "DECLIVE"
+    },
+    {
+      "task": "object detection",
+      "mean_old": {
+        "value": 17202.833333333332,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 7493.846153846154,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 0.5495816102498808,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 0.3863669776382841,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": -0.5643830287348279,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": -0.16321463261159674,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "DECLIVE"
+    },
+    {
+      "task": "semantic segmentation",
+      "mean_old": {
+        "value": 3918.9166666666665,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 4032.923076923077,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 0.8309166278985525,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 0.8347423059943275,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": 0.029091307612156687,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": 0.0038256780957750536,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "ESTANCAMIENTO"
+    },
+    {
+      "task": "natural language processing",
+      "mean_old": {
+        "value": 10930.25,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 13075.923076923076,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 1.0493358418311347,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 1.5002080834796934,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": 0.19630594697496,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": 0.45087224164855866,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "PROGRESO_INFLADO"
+    },
+    {
+      "task": "text classification",
+      "mean_old": {
+        "value": 4609.416666666667,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 2357.846153846154,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 1.5011655057887083,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 0.5956832806958605,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": -0.4884718990806062,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": -0.9054822250928478,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "DECLIVE"
+    },
+    {
+      "task": "machine translation",
+      "mean_old": {
+        "value": 2528.75,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 2581.6923076923076,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 0.7941164003718068,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 1.2253467152087532,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": 0.020936157268336343,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": 0.4312303148369464,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "ESTANCAMIENTO"
+    },
+    {
+      "task": "speech recognition",
+      "mean_old": {
+        "value": 15541.083333333334,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 13231.846153846154,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 1.3340623504990632,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 1.7467938270651717,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": -0.14858920256441785,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": 0.41273147656610853,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "DECLIVE"
+    },
+    {
+      "task": "reinforcement learning",
+      "mean_old": {
+        "value": 16248.916666666666,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 18339.23076923077,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 0.47988905117407815,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 0.927236307536217,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": 0.12864329022329227,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": 0.44734725636213885,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "PROGRESO_INFLADO"
+    },
+    {
+      "task": "generative model",
+      "mean_old": {
+        "value": 5988.083333333333,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 13899.384615384615,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 0.6162218655874244,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 0.9343157965700675,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": 1.3211742124582686,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": 0.31809393098264305,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "PROGRESO_INFLADO"
+    },
+    {
+      "task": "graph neural network",
+      "mean_old": {
+        "value": 4782.833333333333,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 1662.1538461538462,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 1.4504340271874607,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 0.46152882153957286,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": -0.6524750643996421,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": -0.9889052056478879,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "DECLIVE"
+    },
+    {
+      "task": "recommendation system",
+      "mean_old": {
+        "value": 7531.666666666667,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 1514.4615384615386,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 1.4929659583277217,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 1.4647821339921598,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": -0.7989207959555276,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": -0.02818382433556188,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "DECLIVE"
+    },
+    {
+      "task": "time series",
+      "mean_old": {
+        "value": 16300.833333333334,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 8220.76923076923,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 0.9364548869745233,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 0.6289040465788517,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": -0.495684112421495,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": -0.3075508403956716,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "DECLIVE"
+    },
+    {
+      "task": "question answering",
+      "mean_old": {
+        "value": 20539.166666666668,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 11050.846153846154,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 1.0971827164364765,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 0.6109876709397364,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": -0.46196229218097784,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": -0.4861950454967401,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "DECLIVE"
+    },
+    {
+      "task": "sentiment analysis",
+      "mean_old": {
+        "value": 3381.25,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 7731.923076923077,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 0.9275461297934343,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 2.618380978301315,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": 1.286705531067785,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": 1.690834848507881,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "PROGRESO_INFLADO"
+    },
+    {
+      "task": "named entity recognition",
+      "mean_old": {
+        "value": 4369.416666666667,
+        "origin": "mean(old_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_new": {
+        "value": 7266.076923076923,
+        "origin": "mean(new_half)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv_old": {
+        "value": 2.1835435477114635,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "cv_new": {
+        "value": 2.7992167872845135,
+        "origin": "std/mean",
+        "source": "FROM_MATH"
+      },
+      "mean_trend": {
+        "value": 0.6629398103660342,
+        "origin": "(new-old)/old",
+        "source": "FROM_MATH"
+      },
+      "cv_trend": {
+        "value": 0.61567323957305,
+        "origin": "cv_new - cv_old",
+        "source": "FROM_MATH"
+      },
+      "status": "PROGRESO_INFLADO"
+    }
+  ],
+  "tema5_reproducibility": {
+    "results": [
+      {
+        "task": "image classification",
+        "hhi": {
+          "value": 0.7396449704142012,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 1.5699747489303182,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.0,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "pytorch",
+          "count": {
+            "value": 11,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      },
+      {
+        "task": "object detection",
+        "hhi": {
+          "value": 0.5384615384615384,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 0.6922587813540549,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.30774121864594506,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "pytorch",
+          "count": {
+            "value": 9,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      },
+      {
+        "task": "semantic segmentation",
+        "hhi": {
+          "value": 0.8579881656804735,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 0.8331712498041873,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.16682875019581267,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "pytorch",
+          "count": {
+            "value": 12,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      },
+      {
+        "task": "natural language processing",
+        "hhi": {
+          "value": 0.4305555555555556,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 1.3498438616299728,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.0,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "tensorflow",
+          "count": {
+            "value": 6,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      },
+      {
+        "task": "text classification",
+        "hhi": {
+          "value": 0.375,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 1.4620066303296606,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.0,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "pytorch",
+          "count": {
+            "value": 6,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      },
+      {
+        "task": "machine translation",
+        "hhi": {
+          "value": 0.52,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 1.0453170227695827,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.0,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "tensorflow",
+          "count": {
+            "value": 3,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      },
+      {
+        "task": "speech recognition",
+        "hhi": {
+          "value": 0.3600000000000001,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 1.536444430303397,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.0,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "pytorch",
+          "count": {
+            "value": 4,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      },
+      {
+        "task": "reinforcement learning",
+        "hhi": {
+          "value": 0.52,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 0.7752872382399993,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.22471276176000066,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "pytorch",
+          "count": {
+            "value": 6,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      },
+      {
+        "task": "generative model",
+        "hhi": {
+          "value": 0.5555555555555556,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 1.0375350416868934,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.0,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "pytorch",
+          "count": {
+            "value": 6,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      },
+      {
+        "task": "graph neural network",
+        "hhi": {
+          "value": 0.3515625,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 1.6084930942941427,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.0,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "pytorch",
+          "count": {
+            "value": 7,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      },
+      {
+        "task": "recommendation system",
+        "hhi": {
+          "value": 0.3877551020408163,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 1.9311194194594414,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.0,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "tensorflow",
+          "count": {
+            "value": 3,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      },
+      {
+        "task": "time series",
+        "hhi": {
+          "value": 0.625,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 0.9850449083861712,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.014955091613828797,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "pytorch",
+          "count": {
+            "value": 3,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      },
+      {
+        "task": "question answering",
+        "hhi": {
+          "value": 1.0,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 1.0911449112501475,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.0,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "pytorch",
+          "count": {
+            "value": 1,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      },
+      {
+        "task": "sentiment analysis",
+        "hhi": {
+          "value": 0.3472222222222222,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 2.6435198259642574,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.0,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "pytorch",
+          "count": {
+            "value": 5,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      },
+      {
+        "task": "named entity recognition",
+        "hhi": {
+          "value": 0.371900826446281,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "cv": {
+          "value": 2.7490533753835615,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "reproducibility": {
+          "value": 0.0,
+          "origin": "1 - CV",
+          "source": "FROM_MATH"
+        },
+        "top_fw": {
+          "framework": "tensorflow",
+          "count": {
+            "value": 5,
+            "origin": "max(framework_counts)",
+            "source": "FROM_DATA"
+          }
+        }
+      }
+    ],
+    "correlation": {
+      "value": 0.19786649865008665,
+      "origin": "np.corrcoef(hhi_values, reproducibility_values)[0,1]",
+      "source": "FROM_MATH"
+    }
+  },
+  "tema6_outliers": [
+    {
+      "task": "image classification",
+      "outlier_impact": {
+        "value": 0.9875784524692884,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.2848345983101819,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.6806199671730246,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "MEDIA"
+    },
+    {
+      "task": "object detection",
+      "outlier_impact": {
+        "value": 0.6830800441266537,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.1111915591040434,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.4577757738914084,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "BAJA"
+    },
+    {
+      "task": "semantic segmentation",
+      "outlier_impact": {
+        "value": 0.9060989753628764,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.11198029259464079,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.5184958021215625,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "BAJA"
+    },
+    {
+      "task": "natural language processing",
+      "outlier_impact": {
+        "value": 0.8729424039358026,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.25797111074215506,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.6228191930931429,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "MEDIA"
+    },
+    {
+      "task": "text classification",
+      "outlier_impact": {
+        "value": 0.8669942024785502,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.30757866573605536,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.5829698132961089,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "ALTA"
+    },
+    {
+      "task": "machine translation",
+      "outlier_impact": {
+        "value": 0.9160280030731939,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.20716040496346252,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.5275634906974197,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "MEDIA"
+    },
+    {
+      "task": "speech recognition",
+      "outlier_impact": {
+        "value": 0.9552382683873215,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.25570769887338324,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.6712030727433494,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "MEDIA"
+    },
+    {
+      "task": "reinforcement learning",
+      "outlier_impact": {
+        "value": 0.8887704808792222,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.1492972955511921,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.452188178506081,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "BAJA"
+    },
+    {
+      "task": "generative model",
+      "outlier_impact": {
+        "value": 0.7478224412784854,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.15357019825855578,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.5674779943694095,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "MEDIA"
+    },
+    {
+      "task": "graph neural network",
+      "outlier_impact": {
+        "value": 0.9888071016595926,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.29418242576137316,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.6248702564492038,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "MEDIA"
+    },
+    {
+      "task": "recommendation system",
+      "outlier_impact": {
+        "value": 0.9948249377766305,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.33851800705018714,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.8322673256532326,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "ALTA"
+    },
+    {
+      "task": "time series",
+      "outlier_impact": {
+        "value": 0.7081378456412349,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.20376884422110553,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.5011901613329807,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "MEDIA"
+    },
+    {
+      "task": "question answering",
+      "outlier_impact": {
+        "value": 0.82284892395257,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.20144515560158,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.5640336194765349,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "MEDIA"
+    },
+    {
+      "task": "sentiment analysis",
+      "outlier_impact": {
+        "value": 0.994429193361002,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.5506272591962577,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.7696293146218726,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "ALTA"
+    },
+    {
+      "task": "named entity recognition",
+      "outlier_impact": {
+        "value": 0.9985375528153513,
+        "origin": "(var_full-var_clean)/var_full",
+        "source": "FROM_STATISTICS"
+      },
+      "top1_share": {
+        "value": 0.5288783596111429,
+        "origin": "top1/sum",
+        "source": "FROM_MATH"
+      },
+      "top5_share": {
+        "value": 0.8226996705062223,
+        "origin": "top5/sum",
+        "source": "FROM_MATH"
+      },
+      "dependency": "ALTA"
+    }
+  ],
+  "tema7_symmetry": [
+    {
+      "task": "image classification",
+      "skewness": {
+        "value": 2.812508192590044,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 7.205165592866161,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.5829401072935371,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "task": "object detection",
+      "skewness": {
+        "value": 1.2502338493350367,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 0.2204238347446945,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.35227339445918104,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "task": "semantic segmentation",
+      "skewness": {
+        "value": 1.2903309913249172,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 0.038299075556356144,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.410773917852295,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "task": "natural language processing",
+      "skewness": {
+        "value": 2.765315646830932,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 7.98009427505119,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.5692549227959489,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "task": "text classification",
+      "skewness": {
+        "value": 3.821403534979004,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 14.581345598568568,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.5111326702727854,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "task": "machine translation",
+      "skewness": {
+        "value": 2.7849164950112772,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 7.744375490828158,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.4288068599683916,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "task": "speech recognition",
+      "skewness": {
+        "value": 2.6556054143928836,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 5.870643271466708,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.5960175951933993,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "task": "reinforcement learning",
+      "skewness": {
+        "value": 2.2972927654153783,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 4.663271266620958,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.34292844666668204,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "task": "generative model",
+      "skewness": {
+        "value": 1.710312251742544,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 1.7803108095491842,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.4883272553049111,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "task": "graph neural network",
+      "skewness": {
+        "value": 3.182946090233285,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 8.748215625570381,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.5250084807979545,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "task": "recommendation system",
+      "skewness": {
+        "value": 2.7083254763884117,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 6.780271057862988,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.7251422756841226,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "ESPECIALIZADO"
+    },
+    {
+      "task": "time series",
+      "skewness": {
+        "value": 2.897486483505654,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 9.109148880249906,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.416105527638191,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "task": "question answering",
+      "skewness": {
+        "value": 2.280666385882215,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 5.131064123206103,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.4905876231317173,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "task": "sentiment analysis",
+      "skewness": {
+        "value": 4.488514764620414,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 18.75799235332104,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.7044331986675172,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "ESPECIALIZADO"
+    },
+    {
+      "task": "named entity recognition",
+      "skewness": {
+        "value": 3.7535429866802774,
+        "origin": "scipy.stats.skew",
+        "source": "FROM_STATISTICS"
+      },
+      "kurtosis": {
+        "value": 13.1150140322057,
+        "origin": "scipy.stats.kurtosis",
+        "source": "FROM_STATISTICS"
+      },
+      "gini": {
+        "value": 0.756001960624132,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "ESPECIALIZADO"
+    }
+  ],
+  "tema8_drift": [
+    {
+      "task": "image classification",
+      "old_fw": "pytorch",
+      "new_fw": "pytorch",
+      "drift": false,
+      "old_period": "2012-05",
+      "new_period": "2022-04"
+    },
+    {
+      "task": "object detection",
+      "old_fw": "pytorch",
+      "new_fw": "pytorch",
+      "drift": false,
+      "old_period": "2017-05",
+      "new_period": "2025-03"
+    },
+    {
+      "task": "semantic segmentation",
+      "old_fw": "pytorch",
+      "new_fw": "pytorch",
+      "drift": false,
+      "old_period": "2015-06",
+      "new_period": "2022-03"
+    },
+    {
+      "task": "natural language processing",
+      "old_fw": "tensorflow",
+      "new_fw": "pytorch",
+      "drift": true,
+      "old_period": "2011-05",
+      "new_period": "2022-09"
+    },
+    {
+      "task": "text classification",
+      "old_fw": "tensorflow",
+      "new_fw": "pytorch",
+      "drift": true,
+      "old_period": "2014-04",
+      "new_period": "2023-05"
+    },
+    {
+      "task": "machine translation",
+      "old_fw": "tensorflow",
+      "new_fw": "none",
+      "drift": false,
+      "old_period": "2011-08",
+      "new_period": "2021-10"
+    },
+    {
+      "task": "speech recognition",
+      "old_fw": "tensorflow",
+      "new_fw": "pytorch",
+      "drift": true,
+      "old_period": "2013-08",
+      "new_period": "2024-10"
+    },
+    {
+      "task": "reinforcement learning",
+      "old_fw": "tensorflow",
+      "new_fw": "pytorch",
+      "drift": true,
+      "old_period": "2015-08",
+      "new_period": "2025-03"
+    },
+    {
+      "task": "generative model",
+      "old_fw": "pytorch",
+      "new_fw": "pytorch",
+      "drift": false,
+      "old_period": "2016-02",
+      "new_period": "2025-07"
+    },
+    {
+      "task": "graph neural network",
+      "old_fw": "pytorch",
+      "new_fw": "pytorch",
+      "drift": false,
+      "old_period": "2016-09",
+      "new_period": "2022-05"
+    },
+    {
+      "task": "recommendation system",
+      "old_fw": "tensorflow",
+      "new_fw": "pytorch",
+      "drift": true,
+      "old_period": "2016-04",
+      "new_period": "2025-03"
+    },
+    {
+      "task": "time series",
+      "old_fw": "keras",
+      "new_fw": "pytorch",
+      "drift": true,
+      "old_period": "2010-08",
+      "new_period": "2024-04"
+    },
+    {
+      "task": "question answering",
+      "old_fw": "none",
+      "new_fw": "pytorch",
+      "drift": false,
+      "old_period": "2013-11",
+      "new_period": "2025-11"
+    },
+    {
+      "task": "sentiment analysis",
+      "old_fw": "keras",
+      "new_fw": "pytorch",
+      "drift": true,
+      "old_period": "2012-10",
+      "new_period": "2023-04"
+    },
+    {
+      "task": "named entity recognition",
+      "old_fw": "tensorflow",
+      "new_fw": "pytorch",
+      "drift": true,
+      "old_period": "2014-10",
+      "new_period": "2023-11"
+    }
+  ],
+  "tema9_pre_standard": {
+    "cv_threshold": {
+      "value": 1.3498438616299728,
+      "origin": "np.median(cv_values)",
+      "source": "FROM_STATISTICS"
+    },
+    "hhi_threshold": {
+      "value": 0.52,
+      "origin": "np.median(hhi_values)",
+      "source": "FROM_STATISTICS"
+    },
+    "results": [
+      {
+        "task": "image classification",
+        "cv": {
+          "value": 1.5699747489303182,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 0.7396449704142012,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "False"
+      },
+      {
+        "task": "object detection",
+        "cv": {
+          "value": 0.6922587813540549,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 0.5384615384615384,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "True"
+      },
+      {
+        "task": "semantic segmentation",
+        "cv": {
+          "value": 0.8331712498041873,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 0.8579881656804735,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "True"
+      },
+      {
+        "task": "natural language processing",
+        "cv": {
+          "value": 1.3498438616299728,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 0.4305555555555556,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "False"
+      },
+      {
+        "task": "text classification",
+        "cv": {
+          "value": 1.4620066303296606,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 0.375,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "False"
+      },
+      {
+        "task": "machine translation",
+        "cv": {
+          "value": 1.0453170227695827,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 0.52,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "False"
+      },
+      {
+        "task": "speech recognition",
+        "cv": {
+          "value": 1.536444430303397,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 0.3600000000000001,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "False"
+      },
+      {
+        "task": "reinforcement learning",
+        "cv": {
+          "value": 0.7752872382399993,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 0.52,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "False"
+      },
+      {
+        "task": "generative model",
+        "cv": {
+          "value": 1.0375350416868934,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 0.5555555555555556,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "True"
+      },
+      {
+        "task": "graph neural network",
+        "cv": {
+          "value": 1.6084930942941427,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 0.3515625,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "False"
+      },
+      {
+        "task": "recommendation system",
+        "cv": {
+          "value": 1.9311194194594414,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 0.3877551020408163,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "False"
+      },
+      {
+        "task": "time series",
+        "cv": {
+          "value": 0.9850449083861712,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 0.625,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "True"
+      },
+      {
+        "task": "question answering",
+        "cv": {
+          "value": 1.0911449112501475,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 1.0,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "True"
+      },
+      {
+        "task": "sentiment analysis",
+        "cv": {
+          "value": 2.6435198259642574,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 0.3472222222222222,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "False"
+      },
+      {
+        "task": "named entity recognition",
+        "cv": {
+          "value": 2.7490533753835615,
+          "origin": "std/mean",
+          "source": "FROM_MATH"
+        },
+        "hhi": {
+          "value": 0.371900826446281,
+          "origin": "sum(share^2)",
+          "source": "FROM_MATH"
+        },
+        "ready": "False"
+      }
+    ]
+  },
+  "tema10_endogeneity": [
+    {
+      "task": "image classification",
+      "autocorr": {
+        "value": -0.07496943378455283,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    },
+    {
+      "task": "object detection",
+      "autocorr": {
+        "value": 0.08699285912759915,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    },
+    {
+      "task": "semantic segmentation",
+      "autocorr": {
+        "value": -0.09364223044855957,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    },
+    {
+      "task": "natural language processing",
+      "autocorr": {
+        "value": 0.17646445885509493,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    },
+    {
+      "task": "text classification",
+      "autocorr": {
+        "value": 0.032055760974727,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    },
+    {
+      "task": "machine translation",
+      "autocorr": {
+        "value": 0.0330119607380531,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    },
+    {
+      "task": "speech recognition",
+      "autocorr": {
+        "value": -0.03564739888147169,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    },
+    {
+      "task": "reinforcement learning",
+      "autocorr": {
+        "value": -0.05955280522972781,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    },
+    {
+      "task": "generative model",
+      "autocorr": {
+        "value": -0.07603300125152006,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    },
+    {
+      "task": "graph neural network",
+      "autocorr": {
+        "value": -0.10608631280016877,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    },
+    {
+      "task": "recommendation system",
+      "autocorr": {
+        "value": 0.15829822981287006,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    },
+    {
+      "task": "time series",
+      "autocorr": {
+        "value": -0.009801337704408636,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    },
+    {
+      "task": "question answering",
+      "autocorr": {
+        "value": -0.039777336112448096,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    },
+    {
+      "task": "sentiment analysis",
+      "autocorr": {
+        "value": -0.059756731696974735,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    },
+    {
+      "task": "named entity recognition",
+      "autocorr": {
+        "value": -0.06493543523853748,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "D\u00c9BIL"
+    }
+  ],
+  "audit_log": [
+    {
+      "step": "data_collection",
+      "origin": "FROM_DATA",
+      "ts": "2025-12-07T18:01:13.116681"
+    },
+    {
+      "step": "tema2_unit_convergence",
+      "origin": "FROM_STATISTICS",
+      "ts": "2025-12-07T18:01:13.117298"
+    },
+    {
+      "step": "tema3_fragmentation",
+      "origin": "FROM_STATISTICS",
+      "ts": "2025-12-07T18:01:13.383470"
+    },
+    {
+      "step": "tema4_consensus_vs_illusion",
+      "origin": "FROM_STATISTICS",
+      "ts": "2025-12-07T18:01:13.384608"
+    },
+    {
+      "step": "tema5_reproducibility",
+      "origin": "FROM_STATISTICS",
+      "ts": "2025-12-07T18:01:13.385707"
+    },
+    {
+      "step": "tema6_outliers",
+      "origin": "FROM_STATISTICS",
+      "ts": "2025-12-07T18:01:13.387086"
+    },
+    {
+      "step": "tema7_symmetry",
+      "origin": "FROM_STATISTICS",
+      "ts": "2025-12-07T18:01:13.394695"
+    },
+    {
+      "step": "tema8_framework_drift",
+      "origin": "FROM_DATA",
+      "ts": "2025-12-07T18:01:13.395058"
+    },
+    {
+      "step": "tema9_pre_standard",
+      "origin": "FROM_STATISTICS",
+      "ts": "2025-12-07T18:01:13.401262"
+    },
+    {
+      "step": "tema10_endogeneity",
+      "origin": "FROM_STATISTICS",
+      "ts": "2025-12-07T18:01:13.401837"
+    }
+  ]
+}

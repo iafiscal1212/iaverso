@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "type": "STRESS_TEST_FINAL",
+    "source": "100% END\u00d3GENO",
+    "timestamp": "2025-12-07T19:15:46"
+  },
+  "configuration": {
+    "n_runs": {
+      "value": 20,
+      "origin": "specified",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "factor": "high_hhi",
+    "hhi_threshold": {
+      "value": 0.52,
+      "origin": "np.median(hhi)",
+      "source": "FROM_STATISTICS"
+    }
+  },
+  "results": {
+    "all_reductions": [
+      {
+        "value": 0.26562359917079603,
+        "origin": "run_0",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.3675491189995285,
+        "origin": "run_1",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.28389987793842175,
+        "origin": "run_2",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.27759307047597925,
+        "origin": "run_3",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.280676997533809,
+        "origin": "run_4",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.27096734408650175,
+        "origin": "run_5",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.3444472869390342,
+        "origin": "run_6",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.30240478537154847,
+        "origin": "run_7",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.17073219297042966,
+        "origin": "run_8",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.3426102354147061,
+        "origin": "run_9",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.2619715759891482,
+        "origin": "run_10",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.2668653615445116,
+        "origin": "run_11",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.1521278205121228,
+        "origin": "run_12",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.1767766319886046,
+        "origin": "run_13",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.29233399915370306,
+        "origin": "run_14",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.3036827801205796,
+        "origin": "run_15",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.25686368837954526,
+        "origin": "run_16",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.283728688608802,
+        "origin": "run_17",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.4593562563776146,
+        "origin": "run_18",
+        "source": "FROM_DATA"
+      },
+      {
+        "value": 0.36712209969104315,
+        "origin": "run_19",
+        "source": "FROM_DATA"
+      }
+    ],
+    "mean_reduction": {
+      "value": 0.28636667056332155,
+      "origin": "mean(20_reductions)",
+      "source": "FROM_STATISTICS"
+    },
+    "std_reduction": {
+      "value": 0.06935554506907218,
+      "origin": "std(20_reductions)",
+      "source": "FROM_STATISTICS"
+    },
+    "pct_positive": {
+      "value": 1.0,
+      "origin": "mean(r > 0)",
+      "source": "FROM_STATISTICS"
+    }
+  },
+  "validation_criteria": {
+    "criterion_pct_positive": {
+      "threshold": {
+        "value": 0.9,
+        "origin": ">90%",
+        "source": "CONFIG_OPERATIONAL"
+      },
+      "observed": {
+        "value": 1.0,
+        "origin": "mean(r > 0)",
+        "source": "FROM_STATISTICS"
+      },
+      "passed": true
+    },
+    "criterion_mean_reduction": {
+      "threshold": {
+        "value": 0.15,
+        "origin": ">15%",
+        "source": "CONFIG_OPERATIONAL"
+      },
+      "observed": {
+        "value": 0.28636667056332155,
+        "origin": "mean(20_reductions)",
+        "source": "FROM_STATISTICS"
+      },
+      "passed": true
+    }
+  },
+  "final_status": "FINAL_VALIDADO",
+  "auto_name": "HHI52_CV_REDUCER"
+}
