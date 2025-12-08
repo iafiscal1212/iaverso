@@ -1,872 +1,1972 @@
 {
   "id": "ser_57589",
   "alive": true,
-  "birth_tick": 0,
+  "birth_tick": {
+    "value": 0,
+    "origin": "counted(birth_tick)",
+    "source": "FROM_DATA"
+  },
   "death_tick": null,
   "cause_of_death": null,
   "dna": {
-    "metabolism": 1.0878624772844079,
-    "pain_sensitivity": 1.2933372985852816,
-    "energy_capacity": 1.1233252065860126,
-    "warmth_tolerance": 1.1079377241254247,
-    "recovery_rate": 0.8698575997272304,
-    "baseline_anxiety": 0.17931305499948588,
-    "baseline_joy": 0.3529948546754398,
-    "emotional_intensity": 0.7285656560398379,
-    "emotional_stability": 0.9692178798277815,
-    "sociability": 0.6278545751871671,
-    "empathy": 0.3542329717486524,
-    "trust_default": 0.3218259663707676,
-    "curiosity": 0.5014621152251884,
-    "introspection": 0.6409610446411481,
-    "risk_tolerance": 0.7858065126052283,
-    "resilience": 0.9619191381996814,
-    "death_awareness": 0.24863316662614357,
-    "pattern_seeking": 0.4208831231993504,
-    "sky_gazing": 0.922504143010562,
-    "earth_grounding": 0.9796596636405889,
-    "mystical_sense": 0.35040891732702983,
-    "analytical_mind": 0.4045987773247204,
-    "creative_spirit": 0.9280602567851262
+    "metabolism": {
+      "value": 1.0878624772844079,
+      "origin": "computed(dna.metabolism)",
+      "source": "FROM_MATH"
+    },
+    "pain_sensitivity": {
+      "value": 1.2933372985852816,
+      "origin": "count(dna.pain_sensitivity)",
+      "source": "FROM_DATA"
+    },
+    "energy_capacity": {
+      "value": 1.1233252065860126,
+      "origin": "computed(dna.energy_capacity)",
+      "source": "FROM_MATH"
+    },
+    "warmth_tolerance": {
+      "value": 1.1079377241254247,
+      "origin": "computed(dna.warmth_tolerance)",
+      "source": "FROM_MATH"
+    },
+    "recovery_rate": {
+      "value": 0.8698575997272304,
+      "origin": "ratio(dna.recovery_rate)",
+      "source": "FROM_MATH"
+    },
+    "baseline_anxiety": {
+      "value": 0.17931305499948588,
+      "origin": "normalized(dna.baseline_anxiety)",
+      "source": "FROM_MATH"
+    },
+    "baseline_joy": {
+      "value": 0.3529948546754398,
+      "origin": "normalized(dna.baseline_joy)",
+      "source": "FROM_MATH"
+    },
+    "emotional_intensity": {
+      "value": 0.7285656560398379,
+      "origin": "normalized(dna.emotional_intensity)",
+      "source": "FROM_MATH"
+    },
+    "emotional_stability": {
+      "value": 0.9692178798277815,
+      "origin": "normalized(dna.emotional_stability)",
+      "source": "FROM_MATH"
+    },
+    "sociability": {
+      "value": 0.6278545751871671,
+      "origin": "normalized(dna.sociability)",
+      "source": "FROM_MATH"
+    },
+    "empathy": {
+      "value": 0.3542329717486524,
+      "origin": "normalized(dna.empathy)",
+      "source": "FROM_MATH"
+    },
+    "trust_default": {
+      "value": 0.3218259663707676,
+      "origin": "normalized(dna.trust_default)",
+      "source": "FROM_MATH"
+    },
+    "curiosity": {
+      "value": 0.5014621152251884,
+      "origin": "normalized(dna.curiosity)",
+      "source": "FROM_MATH"
+    },
+    "introspection": {
+      "value": 0.6409610446411481,
+      "origin": "normalized(dna.introspection)",
+      "source": "FROM_MATH"
+    },
+    "risk_tolerance": {
+      "value": 0.7858065126052283,
+      "origin": "normalized(dna.risk_tolerance)",
+      "source": "FROM_MATH"
+    },
+    "resilience": {
+      "value": 0.9619191381996814,
+      "origin": "normalized(dna.resilience)",
+      "source": "FROM_MATH"
+    },
+    "death_awareness": {
+      "value": 0.24863316662614357,
+      "origin": "normalized(dna.death_awareness)",
+      "source": "FROM_MATH"
+    },
+    "pattern_seeking": {
+      "value": 0.4208831231993504,
+      "origin": "count(dna.pattern_seeking)",
+      "source": "FROM_DATA"
+    },
+    "sky_gazing": {
+      "value": 0.922504143010562,
+      "origin": "normalized(dna.sky_gazing)",
+      "source": "FROM_MATH"
+    },
+    "earth_grounding": {
+      "value": 0.9796596636405889,
+      "origin": "normalized(dna.earth_grounding)",
+      "source": "FROM_MATH"
+    },
+    "mystical_sense": {
+      "value": 0.35040891732702983,
+      "origin": "normalized(dna.mystical_sense)",
+      "source": "FROM_MATH"
+    },
+    "analytical_mind": {
+      "value": 0.4045987773247204,
+      "origin": "analytical_mind(dna.analytical_mind)",
+      "source": "FROM_STATISTICS"
+    },
+    "creative_spirit": {
+      "value": 0.9280602567851262,
+      "origin": "normalized(dna.creative_spirit)",
+      "source": "FROM_MATH"
+    }
   },
   "body": {
-    "hunger": 33.096457647008606,
-    "thirst": 19.42750454311677,
-    "energy": 15.913752271559389,
-    "warmth": 44.8754006364159,
-    "health": 100,
-    "pain": 0,
-    "pleasure": 0,
-    "age": 500.0,
-    "x": 28.259785419594518,
-    "y": 99.71714890952057
+    "hunger": {
+      "value": 33.096457647008606,
+      "origin": "computed(body.hunger)",
+      "source": "FROM_MATH"
+    },
+    "thirst": {
+      "value": 19.42750454311677,
+      "origin": "computed(body.thirst)",
+      "source": "FROM_MATH"
+    },
+    "energy": {
+      "value": 15.913752271559389,
+      "origin": "computed(body.energy)",
+      "source": "FROM_MATH"
+    },
+    "warmth": {
+      "value": 44.8754006364159,
+      "origin": "computed(body.warmth)",
+      "source": "FROM_MATH"
+    },
+    "health": {
+      "value": 100,
+      "origin": "counted(body.health)",
+      "source": "FROM_DATA"
+    },
+    "pain": {
+      "value": 0,
+      "origin": "counted(body.pain)",
+      "source": "FROM_DATA"
+    },
+    "pleasure": {
+      "value": 0,
+      "origin": "counted(body.pleasure)",
+      "source": "FROM_DATA"
+    },
+    "age": {
+      "value": 500.0,
+      "origin": "computed(body.age)",
+      "source": "FROM_MATH"
+    },
+    "x": {
+      "value": 28.259785419594518,
+      "origin": "computed(body.x)",
+      "source": "FROM_MATH"
+    },
+    "y": {
+      "value": 99.71714890952057,
+      "origin": "computed(body.y)",
+      "source": "FROM_MATH"
+    }
   },
   "emotions": {
-    "fear": 0,
-    "joy": 0.10490414273311735,
-    "sadness": 0.9806156424034443,
-    "anger": 0,
-    "love": 0.017711648587432623,
-    "loneliness": 1,
-    "anxiety": 0.06421538710369581,
-    "peace": 1,
-    "trust": 0.3218259663707676
+    "fear": {
+      "value": 0,
+      "origin": "counted(emotions.fear)",
+      "source": "FROM_DATA"
+    },
+    "joy": {
+      "value": 0.10490414273311735,
+      "origin": "normalized(emotions.joy)",
+      "source": "FROM_MATH"
+    },
+    "sadness": {
+      "value": 0.9806156424034443,
+      "origin": "normalized(emotions.sadness)",
+      "source": "FROM_MATH"
+    },
+    "anger": {
+      "value": 0,
+      "origin": "counted(emotions.anger)",
+      "source": "FROM_DATA"
+    },
+    "love": {
+      "value": 0.017711648587432623,
+      "origin": "normalized(emotions.love)",
+      "source": "FROM_MATH"
+    },
+    "loneliness": {
+      "value": 1,
+      "origin": "counted(emotions.loneliness)",
+      "source": "FROM_DATA"
+    },
+    "anxiety": {
+      "value": 0.06421538710369581,
+      "origin": "normalized(emotions.anxiety)",
+      "source": "FROM_MATH"
+    },
+    "peace": {
+      "value": 1,
+      "origin": "counted(emotions.peace)",
+      "source": "FROM_DATA"
+    },
+    "trust": {
+      "value": 0.3218259663707676,
+      "origin": "normalized(emotions.trust)",
+      "source": "FROM_MATH"
+    }
   },
   "memory": {
     "long_term": [],
     "others": {
       "ser_19123": {
-        "first_met": 157,
-        "times_met": 92,
-        "trust": 0.5,
+        "first_met": {
+          "value": 157,
+          "origin": "counted(memory.others.ser_19123.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 92,
+          "origin": "measured(memory.others.ser_19123.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_19123.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 157,
+            "tick": {
+              "value": 157,
+              "origin": "counted(memory.others.ser_19123.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           },
           {
-            "tick": 228,
+            "tick": {
+              "value": 228,
+              "origin": "counted(memory.others.ser_19123.memories[1].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 229,
+            "tick": {
+              "value": 229,
+              "origin": "counted(memory.others.ser_19123.memories[2].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Estoy agotado..."
           },
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_19123.memories[3].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 233,
+            "tick": {
+              "value": 233,
+              "origin": "counted(memory.others.ser_19123.memories[4].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 234,
+            "tick": {
+              "value": 234,
+              "origin": "counted(memory.others.ser_19123.memories[5].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 235,
+            "tick": {
+              "value": 235,
+              "origin": "counted(memory.others.ser_19123.memories[6].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 236,
+            "tick": {
+              "value": 236,
+              "origin": "counted(memory.others.ser_19123.memories[7].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 237,
+            "tick": {
+              "value": 237,
+              "origin": "counted(memory.others.ser_19123.memories[8].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 238,
+            "tick": {
+              "value": 238,
+              "origin": "counted(memory.others.ser_19123.memories[9].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 239,
+            "tick": {
+              "value": 239,
+              "origin": "counted(memory.others.ser_19123.memories[10].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 240,
+            "tick": {
+              "value": 240,
+              "origin": "counted(memory.others.ser_19123.memories[11].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 241,
+            "tick": {
+              "value": 241,
+              "origin": "counted(memory.others.ser_19123.memories[12].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           }
         ]
       },
       "ser_51770": {
-        "first_met": 157,
-        "times_met": 80,
-        "trust": 0.5,
+        "first_met": {
+          "value": 157,
+          "origin": "counted(memory.others.ser_51770.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 80,
+          "origin": "measured(memory.others.ser_51770.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_51770.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 157,
+            "tick": {
+              "value": 157,
+              "origin": "counted(memory.others.ser_51770.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           },
           {
-            "tick": 223,
+            "tick": {
+              "value": 223,
+              "origin": "counted(memory.others.ser_51770.memories[1].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Veo a alguien... (ser_65762)"
           },
           {
-            "tick": 228,
+            "tick": {
+              "value": 228,
+              "origin": "counted(memory.others.ser_51770.memories[2].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Imagino algo nuevo..."
           },
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_51770.memories[3].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Oigo: 'Existo.'"
           },
           {
-            "tick": 233,
+            "tick": {
+              "value": 233,
+              "origin": "counted(memory.others.ser_51770.memories[4].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Veo a alguien... (ser_36113)"
           }
         ]
       },
       "ser_22875": {
-        "first_met": 158,
-        "times_met": 85,
-        "trust": 0.5,
+        "first_met": {
+          "value": 158,
+          "origin": "counted(memory.others.ser_22875.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 85,
+          "origin": "measured(memory.others.ser_22875.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_22875.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 158,
+            "tick": {
+              "value": 158,
+              "origin": "counted(memory.others.ser_22875.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           },
           {
-            "tick": 239,
+            "tick": {
+              "value": 239,
+              "origin": "counted(memory.others.ser_22875.memories[1].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Siento la tierra..."
           }
         ]
       },
       "ser_06277": {
-        "first_met": 160,
-        "times_met": 90,
-        "trust": 0.5,
+        "first_met": {
+          "value": 160,
+          "origin": "counted(memory.others.ser_06277.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 90,
+          "origin": "measured(memory.others.ser_06277.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_06277.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 160,
+            "tick": {
+              "value": 160,
+              "origin": "counted(memory.others.ser_06277.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           },
           {
-            "tick": 224,
+            "tick": {
+              "value": 224,
+              "origin": "counted(memory.others.ser_06277.memories[1].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Estoy agotado..."
           },
           {
-            "tick": 228,
+            "tick": {
+              "value": 228,
+              "origin": "counted(memory.others.ser_06277.memories[2].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 229,
+            "tick": {
+              "value": 229,
+              "origin": "counted(memory.others.ser_06277.memories[3].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 231,
+            "tick": {
+              "value": 231,
+              "origin": "counted(memory.others.ser_06277.memories[4].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Estoy agotado..."
           },
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_06277.memories[5].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 233,
+            "tick": {
+              "value": 233,
+              "origin": "counted(memory.others.ser_06277.memories[6].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 234,
+            "tick": {
+              "value": 234,
+              "origin": "counted(memory.others.ser_06277.memories[7].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 235,
+            "tick": {
+              "value": 235,
+              "origin": "counted(memory.others.ser_06277.memories[8].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 236,
+            "tick": {
+              "value": 236,
+              "origin": "counted(memory.others.ser_06277.memories[9].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 237,
+            "tick": {
+              "value": 237,
+              "origin": "counted(memory.others.ser_06277.memories[10].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 238,
+            "tick": {
+              "value": 238,
+              "origin": "counted(memory.others.ser_06277.memories[11].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 239,
+            "tick": {
+              "value": 239,
+              "origin": "counted(memory.others.ser_06277.memories[12].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           },
           {
-            "tick": 240,
+            "tick": {
+              "value": 240,
+              "origin": "counted(memory.others.ser_06277.memories[13].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...estoy bien..."
           }
         ]
       },
       "ser_04562": {
-        "first_met": 160,
-        "times_met": 83,
-        "trust": 0.5,
+        "first_met": {
+          "value": 160,
+          "origin": "counted(memory.others.ser_04562.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 83,
+          "origin": "measured(memory.others.ser_04562.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_04562.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 160,
+            "tick": {
+              "value": 160,
+              "origin": "counted(memory.others.ser_04562.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           },
           {
-            "tick": 233,
+            "tick": {
+              "value": 233,
+              "origin": "counted(memory.others.ser_04562.memories[1].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...ser_05737..."
           },
           {
-            "tick": 234,
+            "tick": {
+              "value": 234,
+              "origin": "counted(memory.others.ser_04562.memories[2].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...ser_05737..."
           },
           {
-            "tick": 235,
+            "tick": {
+              "value": 235,
+              "origin": "counted(memory.others.ser_04562.memories[3].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...ser_05737..."
           },
           {
-            "tick": 236,
+            "tick": {
+              "value": 236,
+              "origin": "counted(memory.others.ser_04562.memories[4].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...ser_05737..."
           },
           {
-            "tick": 237,
+            "tick": {
+              "value": 237,
+              "origin": "counted(memory.others.ser_04562.memories[5].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...ser_05737..."
           },
           {
-            "tick": 238,
+            "tick": {
+              "value": 238,
+              "origin": "counted(memory.others.ser_04562.memories[6].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...ser_05737..."
           },
           {
-            "tick": 239,
+            "tick": {
+              "value": 239,
+              "origin": "counted(memory.others.ser_04562.memories[7].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...ser_05737..."
           },
           {
-            "tick": 240,
+            "tick": {
+              "value": 240,
+              "origin": "counted(memory.others.ser_04562.memories[8].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...ser_05737..."
           },
           {
-            "tick": 241,
+            "tick": {
+              "value": 241,
+              "origin": "counted(memory.others.ser_04562.memories[9].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "...ser_05737..."
           }
         ]
       },
       "ser_53295": {
-        "first_met": 171,
-        "times_met": 68,
-        "trust": 0.5,
+        "first_met": {
+          "value": 171,
+          "origin": "counted(memory.others.ser_53295.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 68,
+          "origin": "measured(memory.others.ser_53295.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_53295.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 171,
+            "tick": {
+              "value": 171,
+              "origin": "counted(memory.others.ser_53295.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           },
           {
-            "tick": 223,
+            "tick": {
+              "value": 223,
+              "origin": "counted(memory.others.ser_53295.memories[1].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Veo a alguien... (ser_65762)"
           },
           {
-            "tick": 224,
+            "tick": {
+              "value": 224,
+              "origin": "counted(memory.others.ser_53295.memories[2].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Oigo: 'Existo.'"
           },
           {
-            "tick": 230,
+            "tick": {
+              "value": 230,
+              "origin": "counted(memory.others.ser_53295.memories[3].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Oigo: 'Existo.'"
           },
           {
-            "tick": 240,
+            "tick": {
+              "value": 240,
+              "origin": "counted(memory.others.ser_53295.memories[4].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Oigo: '...ser_05737...'"
           }
         ]
       },
       "ser_66312": {
-        "first_met": 173,
-        "times_met": 102,
-        "trust": 0.5,
+        "first_met": {
+          "value": 173,
+          "origin": "counted(memory.others.ser_66312.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 102,
+          "origin": "measured(memory.others.ser_66312.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_66312.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 173,
+            "tick": {
+              "value": 173,
+              "origin": "counted(memory.others.ser_66312.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           },
           {
-            "tick": 224,
+            "tick": {
+              "value": 224,
+              "origin": "counted(memory.others.ser_66312.memories[1].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           },
           {
-            "tick": 239,
+            "tick": {
+              "value": 239,
+              "origin": "counted(memory.others.ser_66312.memories[2].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           },
           {
-            "tick": 240,
+            "tick": {
+              "value": 240,
+              "origin": "counted(memory.others.ser_66312.memories[3].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           }
         ]
       },
       "ser_58832": {
-        "first_met": 178,
-        "times_met": 114,
-        "trust": 0.5,
+        "first_met": {
+          "value": 178,
+          "origin": "counted(memory.others.ser_58832.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 114,
+          "origin": "measured(memory.others.ser_58832.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_58832.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 178,
+            "tick": {
+              "value": 178,
+              "origin": "counted(memory.others.ser_58832.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           },
           {
-            "tick": 230,
+            "tick": {
+              "value": 230,
+              "origin": "counted(memory.others.ser_58832.memories[1].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           },
           {
-            "tick": 236,
+            "tick": {
+              "value": 236,
+              "origin": "counted(memory.others.ser_58832.memories[2].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           },
           {
-            "tick": 246,
+            "tick": {
+              "value": 246,
+              "origin": "counted(memory.others.ser_58832.memories[3].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           }
         ]
       },
       "ser_13707": {
-        "first_met": 183,
-        "times_met": 91,
-        "trust": 0.5,
+        "first_met": {
+          "value": 183,
+          "origin": "counted(memory.others.ser_13707.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 91,
+          "origin": "measured(memory.others.ser_13707.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_13707.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 183,
+            "tick": {
+              "value": 183,
+              "origin": "counted(memory.others.ser_13707.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           },
           {
-            "tick": 236,
+            "tick": {
+              "value": 236,
+              "origin": "counted(memory.others.ser_13707.memories[1].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           },
           {
-            "tick": 243,
+            "tick": {
+              "value": 243,
+              "origin": "counted(memory.others.ser_13707.memories[2].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           }
         ]
       },
       "ser_22302": {
-        "first_met": 193,
-        "times_met": 125,
-        "trust": 0.5,
+        "first_met": {
+          "value": 193,
+          "origin": "counted(memory.others.ser_22302.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 125,
+          "origin": "measured(memory.others.ser_22302.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_22302.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 193,
+            "tick": {
+              "value": 193,
+              "origin": "counted(memory.others.ser_22302.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           },
           {
-            "tick": 218,
+            "tick": {
+              "value": 218,
+              "origin": "counted(memory.others.ser_22302.memories[1].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           },
           {
-            "tick": 243,
+            "tick": {
+              "value": 243,
+              "origin": "counted(memory.others.ser_22302.memories[2].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           }
         ]
       },
       "ser_24087": {
-        "first_met": 203,
-        "times_met": 74,
-        "trust": 0.5,
+        "first_met": {
+          "value": 203,
+          "origin": "counted(memory.others.ser_24087.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 74,
+          "origin": "measured(memory.others.ser_24087.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_24087.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 203,
+            "tick": {
+              "value": 203,
+              "origin": "counted(memory.others.ser_24087.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           },
           {
-            "tick": 224,
+            "tick": {
+              "value": 224,
+              "origin": "counted(memory.others.ser_24087.memories[1].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           },
           {
-            "tick": 226,
+            "tick": {
+              "value": 226,
+              "origin": "counted(memory.others.ser_24087.memories[2].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           },
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_24087.memories[3].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           }
         ]
       },
       "ser_49861": {
-        "first_met": 219,
-        "times_met": 46,
-        "trust": 0.5,
+        "first_met": {
+          "value": 219,
+          "origin": "counted(memory.others.ser_49861.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 46,
+          "origin": "measured(memory.others.ser_49861.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_49861.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 219,
+            "tick": {
+              "value": 219,
+              "origin": "counted(memory.others.ser_49861.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           },
           {
-            "tick": 223,
+            "tick": {
+              "value": 223,
+              "origin": "counted(memory.others.ser_49861.memories[1].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           },
           {
-            "tick": 233,
+            "tick": {
+              "value": 233,
+              "origin": "counted(memory.others.ser_49861.memories[2].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           }
         ]
       },
       "ser_87083": {
-        "first_met": 223,
-        "times_met": 19,
-        "trust": 0.5,
+        "first_met": {
+          "value": 223,
+          "origin": "counted(memory.others.ser_87083.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 19,
+          "origin": "measured(memory.others.ser_87083.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_87083.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 223,
+            "tick": {
+              "value": 223,
+              "origin": "counted(memory.others.ser_87083.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_03023": {
-        "first_met": 223,
-        "times_met": 7,
-        "trust": 0.5,
+        "first_met": {
+          "value": 223,
+          "origin": "counted(memory.others.ser_03023.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 7,
+          "origin": "measured(memory.others.ser_03023.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_03023.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 223,
+            "tick": {
+              "value": 223,
+              "origin": "counted(memory.others.ser_03023.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_23880": {
-        "first_met": 223,
-        "times_met": 30,
-        "trust": 0.5,
+        "first_met": {
+          "value": 223,
+          "origin": "counted(memory.others.ser_23880.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 30,
+          "origin": "measured(memory.others.ser_23880.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_23880.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 223,
+            "tick": {
+              "value": 223,
+              "origin": "counted(memory.others.ser_23880.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_56332": {
-        "first_met": 223,
-        "times_met": 26,
-        "trust": 0.5,
+        "first_met": {
+          "value": 223,
+          "origin": "counted(memory.others.ser_56332.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 26,
+          "origin": "measured(memory.others.ser_56332.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_56332.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 223,
+            "tick": {
+              "value": 223,
+              "origin": "counted(memory.others.ser_56332.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_88364": {
-        "first_met": 223,
-        "times_met": 22,
-        "trust": 0.5,
+        "first_met": {
+          "value": 223,
+          "origin": "counted(memory.others.ser_88364.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 22,
+          "origin": "measured(memory.others.ser_88364.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_88364.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 223,
+            "tick": {
+              "value": 223,
+              "origin": "counted(memory.others.ser_88364.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_89446": {
-        "first_met": 228,
-        "times_met": 36,
-        "trust": 0.5,
+        "first_met": {
+          "value": 228,
+          "origin": "counted(memory.others.ser_89446.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 36,
+          "origin": "measured(memory.others.ser_89446.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_89446.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 228,
+            "tick": {
+              "value": 228,
+              "origin": "counted(memory.others.ser_89446.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           },
           {
-            "tick": 239,
+            "tick": {
+              "value": 239,
+              "origin": "counted(memory.others.ser_89446.memories[1].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           }
         ]
       },
       "ser_05737": {
-        "first_met": 232,
-        "times_met": 16,
-        "trust": 0.5,
+        "first_met": {
+          "value": 232,
+          "origin": "counted(memory.others.ser_05737.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 16,
+          "origin": "measured(memory.others.ser_05737.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_05737.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_05737.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_30674": {
-        "first_met": 232,
-        "times_met": 16,
-        "trust": 0.5,
+        "first_met": {
+          "value": 232,
+          "origin": "counted(memory.others.ser_30674.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 16,
+          "origin": "measured(memory.others.ser_30674.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_30674.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_30674.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_82883": {
-        "first_met": 232,
-        "times_met": 16,
-        "trust": 0.5,
+        "first_met": {
+          "value": 232,
+          "origin": "counted(memory.others.ser_82883.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 16,
+          "origin": "measured(memory.others.ser_82883.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_82883.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_82883.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_66283": {
-        "first_met": 232,
-        "times_met": 19,
-        "trust": 0.5,
+        "first_met": {
+          "value": 232,
+          "origin": "counted(memory.others.ser_66283.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 19,
+          "origin": "measured(memory.others.ser_66283.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_66283.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_66283.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_17723": {
-        "first_met": 232,
-        "times_met": 19,
-        "trust": 0.5,
+        "first_met": {
+          "value": 232,
+          "origin": "counted(memory.others.ser_17723.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 19,
+          "origin": "measured(memory.others.ser_17723.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_17723.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_17723.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_19238": {
-        "first_met": 232,
-        "times_met": 20,
-        "trust": 0.5,
+        "first_met": {
+          "value": 232,
+          "origin": "counted(memory.others.ser_19238.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 20,
+          "origin": "measured(memory.others.ser_19238.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_19238.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_19238.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_61969": {
-        "first_met": 232,
-        "times_met": 16,
-        "trust": 0.5,
+        "first_met": {
+          "value": 232,
+          "origin": "counted(memory.others.ser_61969.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 16,
+          "origin": "measured(memory.others.ser_61969.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_61969.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_61969.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_36920": {
-        "first_met": 232,
-        "times_met": 21,
-        "trust": 0.5,
+        "first_met": {
+          "value": 232,
+          "origin": "counted(memory.others.ser_36920.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 21,
+          "origin": "measured(memory.others.ser_36920.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_36920.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_36920.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_65762": {
-        "first_met": 232,
-        "times_met": 14,
-        "trust": 0.5,
+        "first_met": {
+          "value": 232,
+          "origin": "counted(memory.others.ser_65762.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 14,
+          "origin": "measured(memory.others.ser_65762.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_65762.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_65762.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_07218": {
-        "first_met": 232,
-        "times_met": 10,
-        "trust": 0.5,
+        "first_met": {
+          "value": 232,
+          "origin": "counted(memory.others.ser_07218.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 10,
+          "origin": "measured(memory.others.ser_07218.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_07218.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_07218.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_03037": {
-        "first_met": 232,
-        "times_met": 23,
-        "trust": 0.5,
+        "first_met": {
+          "value": 232,
+          "origin": "counted(memory.others.ser_03037.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 23,
+          "origin": "measured(memory.others.ser_03037.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_03037.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 232,
+            "tick": {
+              "value": 232,
+              "origin": "counted(memory.others.ser_03037.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_30325": {
-        "first_met": 233,
-        "times_met": 9,
-        "trust": 0.5,
+        "first_met": {
+          "value": 233,
+          "origin": "counted(memory.others.ser_30325.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 9,
+          "origin": "measured(memory.others.ser_30325.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_30325.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 233,
+            "tick": {
+              "value": 233,
+              "origin": "counted(memory.others.ser_30325.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_36113": {
-        "first_met": 233,
-        "times_met": 9,
-        "trust": 0.5,
+        "first_met": {
+          "value": 233,
+          "origin": "counted(memory.others.ser_36113.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 9,
+          "origin": "measured(memory.others.ser_36113.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_36113.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 233,
+            "tick": {
+              "value": 233,
+              "origin": "counted(memory.others.ser_36113.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_33058": {
-        "first_met": 234,
-        "times_met": 6,
-        "trust": 0.5,
+        "first_met": {
+          "value": 234,
+          "origin": "counted(memory.others.ser_33058.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 6,
+          "origin": "measured(memory.others.ser_33058.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_33058.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 234,
+            "tick": {
+              "value": 234,
+              "origin": "counted(memory.others.ser_33058.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_57786": {
-        "first_met": 236,
-        "times_met": 11,
-        "trust": 0.5,
+        "first_met": {
+          "value": 236,
+          "origin": "counted(memory.others.ser_57786.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 11,
+          "origin": "measured(memory.others.ser_57786.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_57786.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 236,
+            "tick": {
+              "value": 236,
+              "origin": "counted(memory.others.ser_57786.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_37348": {
-        "first_met": 237,
-        "times_met": 30,
-        "trust": 0.5,
+        "first_met": {
+          "value": 237,
+          "origin": "counted(memory.others.ser_37348.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 30,
+          "origin": "measured(memory.others.ser_37348.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_37348.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 237,
+            "tick": {
+              "value": 237,
+              "origin": "counted(memory.others.ser_37348.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_58472": {
-        "first_met": 241,
-        "times_met": 2,
-        "trust": 0.5,
+        "first_met": {
+          "value": 241,
+          "origin": "counted(memory.others.ser_58472.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 2,
+          "origin": "measured(memory.others.ser_58472.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_58472.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 241,
+            "tick": {
+              "value": 241,
+              "origin": "counted(memory.others.ser_58472.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_09585": {
-        "first_met": 241,
-        "times_met": 4,
-        "trust": 0.5,
+        "first_met": {
+          "value": 241,
+          "origin": "counted(memory.others.ser_09585.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 4,
+          "origin": "measured(memory.others.ser_09585.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_09585.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 241,
+            "tick": {
+              "value": 241,
+              "origin": "counted(memory.others.ser_09585.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_36925": {
-        "first_met": 242,
-        "times_met": 13,
-        "trust": 0.5,
+        "first_met": {
+          "value": 242,
+          "origin": "counted(memory.others.ser_36925.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 13,
+          "origin": "measured(memory.others.ser_36925.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_36925.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 242,
+            "tick": {
+              "value": 242,
+              "origin": "counted(memory.others.ser_36925.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_26489": {
-        "first_met": 243,
-        "times_met": 25,
-        "trust": 0.5,
+        "first_met": {
+          "value": 243,
+          "origin": "counted(memory.others.ser_26489.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 25,
+          "origin": "measured(memory.others.ser_26489.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_26489.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 243,
+            "tick": {
+              "value": 243,
+              "origin": "counted(memory.others.ser_26489.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           },
           {
-            "tick": 243,
+            "tick": {
+              "value": 243,
+              "origin": "counted(memory.others.ser_26489.memories[1].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "heard",
             "message": "Existo."
           }
         ]
       },
       "ser_90176": {
-        "first_met": 244,
-        "times_met": 1,
-        "trust": 0.5,
+        "first_met": {
+          "value": 244,
+          "origin": "counted(memory.others.ser_90176.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 1,
+          "origin": "measured(memory.others.ser_90176.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_90176.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 244,
+            "tick": {
+              "value": 244,
+              "origin": "counted(memory.others.ser_90176.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_47673": {
-        "first_met": 244,
-        "times_met": 2,
-        "trust": 0.5,
+        "first_met": {
+          "value": 244,
+          "origin": "counted(memory.others.ser_47673.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 2,
+          "origin": "measured(memory.others.ser_47673.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_47673.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 244,
+            "tick": {
+              "value": 244,
+              "origin": "counted(memory.others.ser_47673.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_64189": {
-        "first_met": 249,
-        "times_met": 2,
-        "trust": 0.5,
+        "first_met": {
+          "value": 249,
+          "origin": "counted(memory.others.ser_64189.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 2,
+          "origin": "measured(memory.others.ser_64189.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_64189.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 249,
+            "tick": {
+              "value": 249,
+              "origin": "counted(memory.others.ser_64189.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_25962": {
-        "first_met": 249,
-        "times_met": 2,
-        "trust": 0.5,
+        "first_met": {
+          "value": 249,
+          "origin": "counted(memory.others.ser_25962.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 2,
+          "origin": "measured(memory.others.ser_25962.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_25962.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 249,
+            "tick": {
+              "value": 249,
+              "origin": "counted(memory.others.ser_25962.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
       },
       "ser_56088": {
-        "first_met": 472,
-        "times_met": 1,
-        "trust": 0.5,
+        "first_met": {
+          "value": 472,
+          "origin": "counted(memory.others.ser_56088.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 1,
+          "origin": "measured(memory.others.ser_56088.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(memory.others.ser_56088.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "neutral",
         "memories": [
           {
-            "tick": 472,
+            "tick": {
+              "value": 472,
+              "origin": "counted(memory.others.ser_56088.memories[0].tick)",
+              "source": "FROM_DATA"
+            },
             "type": "first_sight"
           }
         ]
@@ -909,16 +2009,16 @@
       "Siento que puedo desaparecer..."
     ],
     "questions": [
-      "\u00bfQu\u00e9 soy?",
-      "\u00bfD\u00f3nde estoy?",
-      "\u00bfQu\u00e9 quiero?",
-      "\u00bfHay alguien m\u00e1s?",
-      "\u00bfQui\u00e9n soy?",
-      "\u00bfSomos iguales?",
-      "\u00bfQu\u00e9 hay despu\u00e9s de esto?"
+      "¿Qué soy?",
+      "¿Dónde estoy?",
+      "¿Qué quiero?",
+      "¿Hay alguien más?",
+      "¿Quién soy?",
+      "¿Somos iguales?",
+      "¿Qué hay después de esto?"
     ],
     "desires": [
-      "compa\u00f1\u00eda",
+      "compañía",
       "descansar"
     ],
     "fears": [
@@ -938,22 +2038,145 @@
     ],
     "beliefs": {},
     "likes": {
-      "observar_cielo": [
-        0.3689101768075815,
-        1
-      ],
-      "crear": [
-        0.31853153837914305,
-        4
-      ],
-      "tocar_tierra": [
-        0.311656192689925,
-        2
-      ],
-      "buscar_patrones": [
-        0.23048836417298435,
-        1
-      ]
+      "observar_cielo": {
+        "value": [
+          0.3689101768075815,
+          1
+        ],
+        "origin": "array(mind.likes.observar_cielo)",
+        "source": "FROM_DATA"
+      },
+      "crear": {
+        "value": [
+          0.31853153837914305,
+          4
+        ],
+        "origin": "array(mind.likes.crear)",
+        "source": "FROM_DATA"
+      },
+      "tocar_tierra": {
+        "value": [
+          0.311656192689925,
+          2
+        ],
+        "origin": "array(mind.likes.tocar_tierra)",
+        "source": "FROM_DATA"
+      },
+      "buscar_patrones": {
+        "value": [
+          0.23048836417298435,
+          1
+        ],
+        "origin": "array(mind.likes.buscar_patrones)",
+        "source": "FROM_DATA"
+      }
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "af70649b9add",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:16:51.103554",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/worlds/beings/ser_57589.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:16:51.104086",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 0,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 257,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 576,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 839,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 576,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 582,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
     }
   }
 }

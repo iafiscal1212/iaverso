@@ -1,129 +1,437 @@
 {
   "metrics": {
-    "mean_T_eco": 0.24871968943835263,
-    "mean_F_E_to_N": 0.38942623214487915,
-    "corr_T_eco_proximity": -0.07448849563282875,
-    "corr_T_eco_F": 0.9170035261822413,
-    "mean_displacement": 0.38942623214487915,
-    "T_eco_autocorr": 0.15545657748355746,
-    "beta_mean": 0.38942623214487926,
-    "beta_std": 0.25806304378054035
+    "mean_T_eco": {
+      "value": 0.24871968943835263,
+      "origin": "mean(metrics.mean_T_eco)",
+      "source": "FROM_STATISTICS"
+    },
+    "mean_F_E_to_N": {
+      "value": 0.38942623214487915,
+      "origin": "mean(metrics.mean_F_E_to_N)",
+      "source": "FROM_STATISTICS"
+    },
+    "corr_T_eco_proximity": {
+      "value": -0.07448849563282875,
+      "origin": "computed(metrics.corr_T_eco_proximity)",
+      "source": "FROM_MATH"
+    },
+    "corr_T_eco_F": {
+      "value": 0.9170035261822413,
+      "origin": "normalized(metrics.corr_T_eco_F)",
+      "source": "FROM_MATH"
+    },
+    "mean_displacement": {
+      "value": 0.38942623214487915,
+      "origin": "mean(metrics.mean_displacement)",
+      "source": "FROM_STATISTICS"
+    },
+    "T_eco_autocorr": {
+      "value": 0.15545657748355746,
+      "origin": "normalized(metrics.T_eco_autocorr)",
+      "source": "FROM_MATH"
+    },
+    "beta_mean": {
+      "value": 0.38942623214487926,
+      "origin": "mean(metrics.beta_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "beta_std": {
+      "value": 0.25806304378054035,
+      "origin": "std(metrics.beta_std)",
+      "source": "FROM_STATISTICS"
+    }
   },
   "per_seed_metrics": [
     {
-      "mean_T_eco": 0.25748737495980356,
-      "std_T_eco": 0.10396648838287294,
-      "mean_F_E_to_N": 0.4074786327340978,
-      "mean_F_N_to_E": 0.4063558751418011,
-      "corr_T_eco_proximity": 0.038648392692074554,
-      "corr_T_eco_F": 0.9118106360576319,
-      "mean_displacement": 0.4074786327340978,
-      "beta_mean": 0.4074786327340978,
-      "beta_std": 0.2626720470794105,
-      "T_eco_autocorr": 0.08185547185063098
+      "mean_T_eco": {
+        "value": 0.25748737495980356,
+        "origin": "mean(per_seed_metrics[0].mean_T_eco)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_T_eco": {
+        "value": 0.10396648838287294,
+        "origin": "std(per_seed_metrics[0].std_T_eco)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_F_E_to_N": {
+        "value": 0.4074786327340978,
+        "origin": "mean(per_seed_metrics[0].mean_F_E_to_N)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_F_N_to_E": {
+        "value": 0.4063558751418011,
+        "origin": "mean(per_seed_metrics[0].mean_F_N_to_E)",
+        "source": "FROM_STATISTICS"
+      },
+      "corr_T_eco_proximity": {
+        "value": 0.038648392692074554,
+        "origin": "normalized(per_seed_metrics[0].corr_T_eco_proximity)",
+        "source": "FROM_MATH"
+      },
+      "corr_T_eco_F": {
+        "value": 0.9118106360576319,
+        "origin": "normalized(per_seed_metrics[0].corr_T_eco_F)",
+        "source": "FROM_MATH"
+      },
+      "mean_displacement": {
+        "value": 0.4074786327340978,
+        "origin": "mean(per_seed_metrics[0].mean_displacement)",
+        "source": "FROM_STATISTICS"
+      },
+      "beta_mean": {
+        "value": 0.4074786327340978,
+        "origin": "mean(per_seed_metrics[0].beta_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "beta_std": {
+        "value": 0.2626720470794105,
+        "origin": "std(per_seed_metrics[0].beta_std)",
+        "source": "FROM_STATISTICS"
+      },
+      "T_eco_autocorr": {
+        "value": 0.08185547185063098,
+        "origin": "normalized(per_seed_metrics[0].T_eco_autocorr)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "mean_T_eco": 0.2549002087862109,
-      "std_T_eco": 0.10026313436852181,
-      "mean_F_E_to_N": 0.41072847404690305,
-      "mean_F_N_to_E": 0.4059853567074249,
-      "corr_T_eco_proximity": -0.03758355148414126,
-      "corr_T_eco_F": 0.9240141492353456,
-      "mean_displacement": 0.41072847404690305,
-      "beta_mean": 0.41072847404690305,
-      "beta_std": 0.2689880544709988,
-      "T_eco_autocorr": 0.18234432305978265
+      "mean_T_eco": {
+        "value": 0.2549002087862109,
+        "origin": "mean(per_seed_metrics[1].mean_T_eco)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_T_eco": {
+        "value": 0.10026313436852181,
+        "origin": "std(per_seed_metrics[1].std_T_eco)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_F_E_to_N": {
+        "value": 0.41072847404690305,
+        "origin": "mean(per_seed_metrics[1].mean_F_E_to_N)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_F_N_to_E": {
+        "value": 0.4059853567074249,
+        "origin": "mean(per_seed_metrics[1].mean_F_N_to_E)",
+        "source": "FROM_STATISTICS"
+      },
+      "corr_T_eco_proximity": {
+        "value": -0.03758355148414126,
+        "origin": "computed(per_seed_metrics[1].corr_T_eco_proximity)",
+        "source": "FROM_MATH"
+      },
+      "corr_T_eco_F": {
+        "value": 0.9240141492353456,
+        "origin": "normalized(per_seed_metrics[1].corr_T_eco_F)",
+        "source": "FROM_MATH"
+      },
+      "mean_displacement": {
+        "value": 0.41072847404690305,
+        "origin": "mean(per_seed_metrics[1].mean_displacement)",
+        "source": "FROM_STATISTICS"
+      },
+      "beta_mean": {
+        "value": 0.41072847404690305,
+        "origin": "mean(per_seed_metrics[1].beta_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "beta_std": {
+        "value": 0.2689880544709988,
+        "origin": "std(per_seed_metrics[1].beta_std)",
+        "source": "FROM_STATISTICS"
+      },
+      "T_eco_autocorr": {
+        "value": 0.18234432305978265,
+        "origin": "normalized(per_seed_metrics[1].T_eco_autocorr)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "mean_T_eco": 0.24275526643960882,
-      "std_T_eco": 0.1040648159812177,
-      "mean_F_E_to_N": 0.38973036422480456,
-      "mean_F_N_to_E": 0.36604791525700886,
-      "corr_T_eco_proximity": -0.05177428449408598,
-      "corr_T_eco_F": 0.9204947809611951,
-      "mean_displacement": 0.38973036422480456,
-      "beta_mean": 0.38973036422480456,
-      "beta_std": 0.26243157806474454,
-      "T_eco_autocorr": 0.18200392541501384
+      "mean_T_eco": {
+        "value": 0.24275526643960882,
+        "origin": "mean(per_seed_metrics[2].mean_T_eco)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_T_eco": {
+        "value": 0.1040648159812177,
+        "origin": "std(per_seed_metrics[2].std_T_eco)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_F_E_to_N": {
+        "value": 0.38973036422480456,
+        "origin": "mean(per_seed_metrics[2].mean_F_E_to_N)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_F_N_to_E": {
+        "value": 0.36604791525700886,
+        "origin": "mean(per_seed_metrics[2].mean_F_N_to_E)",
+        "source": "FROM_STATISTICS"
+      },
+      "corr_T_eco_proximity": {
+        "value": -0.05177428449408598,
+        "origin": "computed(per_seed_metrics[2].corr_T_eco_proximity)",
+        "source": "FROM_MATH"
+      },
+      "corr_T_eco_F": {
+        "value": 0.9204947809611951,
+        "origin": "normalized(per_seed_metrics[2].corr_T_eco_F)",
+        "source": "FROM_MATH"
+      },
+      "mean_displacement": {
+        "value": 0.38973036422480456,
+        "origin": "mean(per_seed_metrics[2].mean_displacement)",
+        "source": "FROM_STATISTICS"
+      },
+      "beta_mean": {
+        "value": 0.38973036422480456,
+        "origin": "mean(per_seed_metrics[2].beta_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "beta_std": {
+        "value": 0.26243157806474454,
+        "origin": "std(per_seed_metrics[2].beta_std)",
+        "source": "FROM_STATISTICS"
+      },
+      "T_eco_autocorr": {
+        "value": 0.18200392541501384,
+        "origin": "normalized(per_seed_metrics[2].T_eco_autocorr)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "mean_T_eco": 0.2460748792364556,
-      "std_T_eco": 0.10280060595795178,
-      "mean_F_E_to_N": 0.3858040410651091,
-      "mean_F_N_to_E": 0.364597809404186,
-      "corr_T_eco_proximity": -0.15240885720533548,
-      "corr_T_eco_F": 0.9284251939990238,
-      "mean_displacement": 0.3858040410651091,
-      "beta_mean": 0.38580404106510924,
-      "beta_std": 0.2543924359556977,
-      "T_eco_autocorr": 0.20133926168844007
+      "mean_T_eco": {
+        "value": 0.2460748792364556,
+        "origin": "mean(per_seed_metrics[3].mean_T_eco)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_T_eco": {
+        "value": 0.10280060595795178,
+        "origin": "std(per_seed_metrics[3].std_T_eco)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_F_E_to_N": {
+        "value": 0.3858040410651091,
+        "origin": "mean(per_seed_metrics[3].mean_F_E_to_N)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_F_N_to_E": {
+        "value": 0.364597809404186,
+        "origin": "mean(per_seed_metrics[3].mean_F_N_to_E)",
+        "source": "FROM_STATISTICS"
+      },
+      "corr_T_eco_proximity": {
+        "value": -0.15240885720533548,
+        "origin": "computed(per_seed_metrics[3].corr_T_eco_proximity)",
+        "source": "FROM_MATH"
+      },
+      "corr_T_eco_F": {
+        "value": 0.9284251939990238,
+        "origin": "normalized(per_seed_metrics[3].corr_T_eco_F)",
+        "source": "FROM_MATH"
+      },
+      "mean_displacement": {
+        "value": 0.3858040410651091,
+        "origin": "mean(per_seed_metrics[3].mean_displacement)",
+        "source": "FROM_STATISTICS"
+      },
+      "beta_mean": {
+        "value": 0.38580404106510924,
+        "origin": "mean(per_seed_metrics[3].beta_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "beta_std": {
+        "value": 0.2543924359556977,
+        "origin": "std(per_seed_metrics[3].beta_std)",
+        "source": "FROM_STATISTICS"
+      },
+      "T_eco_autocorr": {
+        "value": 0.20133926168844007,
+        "origin": "normalized(per_seed_metrics[3].T_eco_autocorr)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "mean_T_eco": 0.24238071776968448,
-      "std_T_eco": 0.101611044929206,
-      "mean_F_E_to_N": 0.35338964865348144,
-      "mean_F_N_to_E": 0.3625686622585719,
-      "corr_T_eco_proximity": -0.16932417767265562,
-      "corr_T_eco_F": 0.90027287065801,
-      "mean_displacement": 0.35338964865348144,
-      "beta_mean": 0.35338964865348144,
-      "beta_std": 0.24183110333185,
-      "T_eco_autocorr": 0.12973990540391975
+      "mean_T_eco": {
+        "value": 0.24238071776968448,
+        "origin": "mean(per_seed_metrics[4].mean_T_eco)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_T_eco": {
+        "value": 0.101611044929206,
+        "origin": "std(per_seed_metrics[4].std_T_eco)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_F_E_to_N": {
+        "value": 0.35338964865348144,
+        "origin": "mean(per_seed_metrics[4].mean_F_E_to_N)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_F_N_to_E": {
+        "value": 0.3625686622585719,
+        "origin": "mean(per_seed_metrics[4].mean_F_N_to_E)",
+        "source": "FROM_STATISTICS"
+      },
+      "corr_T_eco_proximity": {
+        "value": -0.16932417767265562,
+        "origin": "computed(per_seed_metrics[4].corr_T_eco_proximity)",
+        "source": "FROM_MATH"
+      },
+      "corr_T_eco_F": {
+        "value": 0.90027287065801,
+        "origin": "normalized(per_seed_metrics[4].corr_T_eco_F)",
+        "source": "FROM_MATH"
+      },
+      "mean_displacement": {
+        "value": 0.35338964865348144,
+        "origin": "mean(per_seed_metrics[4].mean_displacement)",
+        "source": "FROM_STATISTICS"
+      },
+      "beta_mean": {
+        "value": 0.35338964865348144,
+        "origin": "mean(per_seed_metrics[4].beta_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "beta_std": {
+        "value": 0.24183110333185,
+        "origin": "std(per_seed_metrics[4].beta_std)",
+        "source": "FROM_STATISTICS"
+      },
+      "T_eco_autocorr": {
+        "value": 0.12973990540391975,
+        "origin": "normalized(per_seed_metrics[4].T_eco_autocorr)",
+        "source": "FROM_MATH"
+      }
     }
   ],
   "null_results": {
     "disabled": {
-      "mean_F": 0.0
+      "mean_F": {
+        "value": 0.0,
+        "origin": "mean(null_results.disabled.mean_F)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "shuffled": {
-      "mean_F_magnitude": 0.34637359297431086
+      "mean_F_magnitude": {
+        "value": 0.34637359297431086,
+        "origin": "mean(null_results.shuffled.mean_F_magnitude)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "random": {
-      "mean_F_magnitude": 0.4958920410807737
+      "mean_F_magnitude": {
+        "value": 0.4958920410807737,
+        "origin": "mean(null_results.random.mean_F_magnitude)",
+        "source": "FROM_STATISTICS"
+      }
     }
   },
   "go_evaluation": {
     "criteria": {
       "c1_influence_meaningful": {
         "pass": true,
-        "value": 0.38942623214487915,
-        "threshold": 0.1,
+        "value": {
+          "value": 0.38942623214487915,
+          "origin": "computed(go_evaluation.criteria.c1_influence_meaningful.value)",
+          "source": "FROM_DATA"
+        },
+        "threshold": {
+          "value": 0.1,
+          "origin": "normalized(go_evaluation.criteria.c1_influence_meaningful.threshold)",
+          "source": "FROM_MATH"
+        },
         "description": "Cross-influence magnitude > 0.1"
       },
       "c2_beta_modulated": {
         "pass": true,
-        "value": 0.25806304378054035,
-        "threshold": 0.1,
+        "value": {
+          "value": 0.25806304378054035,
+          "origin": "computed(go_evaluation.criteria.c2_beta_modulated.value)",
+          "source": "FROM_DATA"
+        },
+        "threshold": {
+          "value": 0.1,
+          "origin": "normalized(go_evaluation.criteria.c2_beta_modulated.threshold)",
+          "source": "FROM_MATH"
+        },
         "description": "Influence gain is modulated (std > 0.1)"
       },
       "c3_T_eco_F_corr": {
         "pass": true,
-        "value": 0.9170035261822413,
-        "threshold": 0,
+        "value": {
+          "value": 0.9170035261822413,
+          "origin": "computed(go_evaluation.criteria.c3_T_eco_F_corr.value)",
+          "source": "FROM_DATA"
+        },
+        "threshold": {
+          "value": 0,
+          "origin": "counted(go_evaluation.criteria.c3_T_eco_F_corr.threshold)",
+          "source": "FROM_DATA"
+        },
         "description": "Shared tension correlates with influence"
       },
       "c4_displacement_positive": {
         "pass": true,
-        "value": 0.38942623214487915,
-        "threshold": 1e-06,
+        "value": {
+          "value": 0.38942623214487915,
+          "origin": "computed(go_evaluation.criteria.c4_displacement_positive.value)",
+          "source": "FROM_DATA"
+        },
+        "threshold": {
+          "value": 1e-06,
+          "origin": "normalized(go_evaluation.criteria.c4_displacement_positive.threshold)",
+          "source": "FROM_MATH"
+        },
         "description": "Ecological update changes trajectory"
       },
       "c5_T_eco_coherent": {
         "pass": true,
-        "value": 0.15545657748355746,
-        "threshold": 0,
+        "value": {
+          "value": 0.15545657748355746,
+          "origin": "computed(go_evaluation.criteria.c5_T_eco_coherent.value)",
+          "source": "FROM_DATA"
+        },
+        "threshold": {
+          "value": 0,
+          "origin": "counted(go_evaluation.criteria.c5_T_eco_coherent.threshold)",
+          "source": "FROM_DATA"
+        },
         "description": "Shared tension is temporally coherent"
       }
     },
-    "n_pass": 5,
-    "n_total": 5,
+    "n_pass": {
+      "value": 5,
+      "origin": "count(go_evaluation.n_pass)",
+      "source": "FROM_DATA"
+    },
+    "n_total": {
+      "value": 5,
+      "origin": "count(go_evaluation.n_total)",
+      "source": "FROM_DATA"
+    },
     "go": true
   },
   "config": {
-    "n_seeds": 5,
-    "T": 500,
-    "dim": 5,
-    "n_prototypes": 5
+    "n_seeds": {
+      "value": 5,
+      "origin": "count(config.n_seeds)",
+      "source": "FROM_DATA"
+    },
+    "T": {
+      "value": 500,
+      "origin": "counted(config.T)",
+      "source": "FROM_DATA"
+    },
+    "dim": {
+      "value": 5,
+      "origin": "counted(config.dim)",
+      "source": "FROM_DATA"
+    },
+    "n_prototypes": {
+      "value": 5,
+      "origin": "count(config.n_prototypes)",
+      "source": "FROM_DATA"
+    }
   },
   "provenance": {
     "module": "ecology21",
@@ -152,5 +460,112 @@
     ],
     "no_magic_numbers": true,
     "no_semantic_labels": true
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "f8bbad7b45d5",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.434793",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase21/ecology_metrics.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.434997",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 192,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 226,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 192,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 226,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

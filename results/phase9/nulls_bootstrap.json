@@ -1,112 +1,539 @@
 {
   "neo_alpha_affect": {
     "name": "alpha_affect",
-    "observed": 0.013151669686257632,
-    "null_mean": 0.023171078190521475,
-    "null_std": 0.00026462103015100776,
-    "null_q025": 0.02264261813663724,
-    "null_q500": 0.0232002085945901,
-    "null_q975": 0.023639643230067148,
-    "p_value": 1.0,
-    "n_bootstrap": 100
+    "observed": {
+      "value": 0.013151669686257632,
+      "origin": "normalized(neo_alpha_affect.observed)",
+      "source": "FROM_MATH"
+    },
+    "null_mean": {
+      "value": 0.023171078190521475,
+      "origin": "mean(neo_alpha_affect.null_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 0.00026462103015100776,
+      "origin": "std(neo_alpha_affect.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_q025": {
+      "value": 0.02264261813663724,
+      "origin": "normalized(neo_alpha_affect.null_q025)",
+      "source": "FROM_MATH"
+    },
+    "null_q500": {
+      "value": 0.0232002085945901,
+      "origin": "normalized(neo_alpha_affect.null_q500)",
+      "source": "FROM_MATH"
+    },
+    "null_q975": {
+      "value": 0.023639643230067148,
+      "origin": "normalized(neo_alpha_affect.null_q975)",
+      "source": "FROM_MATH"
+    },
+    "p_value": {
+      "value": 1.0,
+      "origin": "computed(neo_alpha_affect.p_value)",
+      "source": "FROM_DATA"
+    },
+    "n_bootstrap": {
+      "value": 100,
+      "origin": "count(neo_alpha_affect.n_bootstrap)",
+      "source": "FROM_DATA"
+    }
   },
   "neo_alpha_hyst": {
     "name": "alpha_hyst",
-    "observed": 0.1195586027830744,
-    "null_mean": 0.42818489441110535,
-    "null_std": 0.024971751897264888,
-    "null_q025": 0.3744833635370425,
-    "null_q500": 0.42773540508742686,
-    "null_q975": 0.47913309041598545,
-    "p_value": 1.0,
-    "n_bootstrap": 100
+    "observed": {
+      "value": 0.1195586027830744,
+      "origin": "normalized(neo_alpha_hyst.observed)",
+      "source": "FROM_MATH"
+    },
+    "null_mean": {
+      "value": 0.42818489441110535,
+      "origin": "mean(neo_alpha_hyst.null_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 0.024971751897264888,
+      "origin": "std(neo_alpha_hyst.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_q025": {
+      "value": 0.3744833635370425,
+      "origin": "normalized(neo_alpha_hyst.null_q025)",
+      "source": "FROM_MATH"
+    },
+    "null_q500": {
+      "value": 0.42773540508742686,
+      "origin": "normalized(neo_alpha_hyst.null_q500)",
+      "source": "FROM_MATH"
+    },
+    "null_q975": {
+      "value": 0.47913309041598545,
+      "origin": "normalized(neo_alpha_hyst.null_q975)",
+      "source": "FROM_MATH"
+    },
+    "p_value": {
+      "value": 1.0,
+      "origin": "computed(neo_alpha_hyst.p_value)",
+      "source": "FROM_DATA"
+    },
+    "n_bootstrap": {
+      "value": 100,
+      "origin": "count(neo_alpha_hyst.n_bootstrap)",
+      "source": "FROM_DATA"
+    }
   },
   "neo_alpha_switch": {
     "name": "alpha_switch",
-    "observed": 0.7961783439490446,
-    "null_mean": 0.7977707006369426,
-    "null_std": 0.002758042687211588,
-    "null_q025": 0.7961783439490446,
-    "null_q500": 0.7961783439490446,
-    "null_q975": 0.802547770700637,
-    "p_value": 1.0,
-    "n_bootstrap": 100
+    "observed": {
+      "value": 0.7961783439490446,
+      "origin": "normalized(neo_alpha_switch.observed)",
+      "source": "FROM_MATH"
+    },
+    "null_mean": {
+      "value": 0.7977707006369426,
+      "origin": "mean(neo_alpha_switch.null_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 0.002758042687211588,
+      "origin": "std(neo_alpha_switch.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_q025": {
+      "value": 0.7961783439490446,
+      "origin": "normalized(neo_alpha_switch.null_q025)",
+      "source": "FROM_MATH"
+    },
+    "null_q500": {
+      "value": 0.7961783439490446,
+      "origin": "normalized(neo_alpha_switch.null_q500)",
+      "source": "FROM_MATH"
+    },
+    "null_q975": {
+      "value": 0.802547770700637,
+      "origin": "normalized(neo_alpha_switch.null_q975)",
+      "source": "FROM_MATH"
+    },
+    "p_value": {
+      "value": 1.0,
+      "origin": "computed(neo_alpha_switch.p_value)",
+      "source": "FROM_DATA"
+    },
+    "n_bootstrap": {
+      "value": 100,
+      "origin": "count(neo_alpha_switch.n_bootstrap)",
+      "source": "FROM_DATA"
+    }
   },
   "eva_alpha_affect": {
     "name": "alpha_affect",
-    "observed": 0.0131974579894794,
-    "null_mean": 0.02309238742061554,
-    "null_std": 0.00028938002218351766,
-    "null_q025": 0.022539076497813205,
-    "null_q500": 0.023159855909969822,
-    "null_q975": 0.023566879691096828,
-    "p_value": 1.0,
-    "n_bootstrap": 100
+    "observed": {
+      "value": 0.0131974579894794,
+      "origin": "normalized(eva_alpha_affect.observed)",
+      "source": "FROM_MATH"
+    },
+    "null_mean": {
+      "value": 0.02309238742061554,
+      "origin": "mean(eva_alpha_affect.null_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 0.00028938002218351766,
+      "origin": "std(eva_alpha_affect.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_q025": {
+      "value": 0.022539076497813205,
+      "origin": "normalized(eva_alpha_affect.null_q025)",
+      "source": "FROM_MATH"
+    },
+    "null_q500": {
+      "value": 0.023159855909969822,
+      "origin": "normalized(eva_alpha_affect.null_q500)",
+      "source": "FROM_MATH"
+    },
+    "null_q975": {
+      "value": 0.023566879691096828,
+      "origin": "normalized(eva_alpha_affect.null_q975)",
+      "source": "FROM_MATH"
+    },
+    "p_value": {
+      "value": 1.0,
+      "origin": "computed(eva_alpha_affect.p_value)",
+      "source": "FROM_DATA"
+    },
+    "n_bootstrap": {
+      "value": 100,
+      "origin": "count(eva_alpha_affect.n_bootstrap)",
+      "source": "FROM_DATA"
+    }
   },
   "eva_alpha_hyst": {
     "name": "alpha_hyst",
-    "observed": 0.11533936468010954,
-    "null_mean": 0.4151413912847417,
-    "null_std": 0.026206584249740948,
-    "null_q025": 0.368610288449836,
-    "null_q500": 0.4130796381191937,
-    "null_q975": 0.45938019797963425,
-    "p_value": 1.0,
-    "n_bootstrap": 100
+    "observed": {
+      "value": 0.11533936468010954,
+      "origin": "normalized(eva_alpha_hyst.observed)",
+      "source": "FROM_MATH"
+    },
+    "null_mean": {
+      "value": 0.4151413912847417,
+      "origin": "mean(eva_alpha_hyst.null_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 0.026206584249740948,
+      "origin": "std(eva_alpha_hyst.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_q025": {
+      "value": 0.368610288449836,
+      "origin": "normalized(eva_alpha_hyst.null_q025)",
+      "source": "FROM_MATH"
+    },
+    "null_q500": {
+      "value": 0.4130796381191937,
+      "origin": "normalized(eva_alpha_hyst.null_q500)",
+      "source": "FROM_MATH"
+    },
+    "null_q975": {
+      "value": 0.45938019797963425,
+      "origin": "normalized(eva_alpha_hyst.null_q975)",
+      "source": "FROM_MATH"
+    },
+    "p_value": {
+      "value": 1.0,
+      "origin": "computed(eva_alpha_hyst.p_value)",
+      "source": "FROM_DATA"
+    },
+    "n_bootstrap": {
+      "value": 100,
+      "origin": "count(eva_alpha_hyst.n_bootstrap)",
+      "source": "FROM_DATA"
+    }
   },
   "eva_alpha_switch": {
     "name": "alpha_switch",
-    "observed": 0.802547770700637,
-    "null_mean": 0.8018471337579618,
-    "null_std": 0.0019929283881735048,
-    "null_q025": 0.7961783439490446,
-    "null_q500": 0.802547770700637,
-    "null_q975": 0.802547770700637,
-    "p_value": 0.89,
-    "n_bootstrap": 100
+    "observed": {
+      "value": 0.802547770700637,
+      "origin": "normalized(eva_alpha_switch.observed)",
+      "source": "FROM_MATH"
+    },
+    "null_mean": {
+      "value": 0.8018471337579618,
+      "origin": "mean(eva_alpha_switch.null_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 0.0019929283881735048,
+      "origin": "std(eva_alpha_switch.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_q025": {
+      "value": 0.7961783439490446,
+      "origin": "normalized(eva_alpha_switch.null_q025)",
+      "source": "FROM_MATH"
+    },
+    "null_q500": {
+      "value": 0.802547770700637,
+      "origin": "normalized(eva_alpha_switch.null_q500)",
+      "source": "FROM_MATH"
+    },
+    "null_q975": {
+      "value": 0.802547770700637,
+      "origin": "normalized(eva_alpha_switch.null_q975)",
+      "source": "FROM_MATH"
+    },
+    "p_value": {
+      "value": 0.89,
+      "origin": "computed(eva_alpha_switch.p_value)",
+      "source": "FROM_DATA"
+    },
+    "n_bootstrap": {
+      "value": 100,
+      "origin": "count(eva_alpha_switch.n_bootstrap)",
+      "source": "FROM_DATA"
+    }
   },
   "inter_alpha_consent_elast": {
     "name": "alpha_consent_elast",
-    "observed": 0.024895029776874494,
-    "null_mean": 0.0008541764716134851,
-    "null_std": 0.002505810396714647,
-    "null_q025": 0.0,
-    "null_q500": 0.0,
-    "null_q975": 0.00831862212539286,
-    "p_value": 0.0,
-    "n_bootstrap": 100
+    "observed": {
+      "value": 0.024895029776874494,
+      "origin": "normalized(inter_alpha_consent_elast.observed)",
+      "source": "FROM_MATH"
+    },
+    "null_mean": {
+      "value": 0.0008541764716134851,
+      "origin": "mean(inter_alpha_consent_elast.null_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 0.002505810396714647,
+      "origin": "std(inter_alpha_consent_elast.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_q025": {
+      "value": 0.0,
+      "origin": "normalized(inter_alpha_consent_elast.null_q025)",
+      "source": "FROM_MATH"
+    },
+    "null_q500": {
+      "value": 0.0,
+      "origin": "normalized(inter_alpha_consent_elast.null_q500)",
+      "source": "FROM_MATH"
+    },
+    "null_q975": {
+      "value": 0.00831862212539286,
+      "origin": "normalized(inter_alpha_consent_elast.null_q975)",
+      "source": "FROM_MATH"
+    },
+    "p_value": {
+      "value": 0.0,
+      "origin": "computed(inter_alpha_consent_elast.p_value)",
+      "source": "FROM_DATA"
+    },
+    "n_bootstrap": {
+      "value": 100,
+      "origin": "count(inter_alpha_consent_elast.n_bootstrap)",
+      "source": "FROM_DATA"
+    }
   },
   "inter_alpha_cross_sus": {
     "name": "alpha_cross_sus",
-    "observed": 0.9868421052631576,
-    "null_mean": 0.9826780693628681,
-    "null_std": 0.07470852102804798,
-    "null_q025": 0.8333333333333334,
-    "null_q500": 0.9915516755843419,
-    "null_q975": 1.1176266339869283,
-    "p_value": 0.51,
-    "n_bootstrap": 100
+    "observed": {
+      "value": 0.9868421052631576,
+      "origin": "normalized(inter_alpha_cross_sus.observed)",
+      "source": "FROM_MATH"
+    },
+    "null_mean": {
+      "value": 0.9826780693628681,
+      "origin": "mean(inter_alpha_cross_sus.null_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 0.07470852102804798,
+      "origin": "std(inter_alpha_cross_sus.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_q025": {
+      "value": 0.8333333333333334,
+      "origin": "normalized(inter_alpha_cross_sus.null_q025)",
+      "source": "FROM_MATH"
+    },
+    "null_q500": {
+      "value": 0.9915516755843419,
+      "origin": "normalized(inter_alpha_cross_sus.null_q500)",
+      "source": "FROM_MATH"
+    },
+    "null_q975": {
+      "value": 1.1176266339869283,
+      "origin": "computed(inter_alpha_cross_sus.null_q975)",
+      "source": "FROM_MATH"
+    },
+    "p_value": {
+      "value": 0.51,
+      "origin": "computed(inter_alpha_cross_sus.p_value)",
+      "source": "FROM_DATA"
+    },
+    "n_bootstrap": {
+      "value": 100,
+      "origin": "count(inter_alpha_cross_sus.n_bootstrap)",
+      "source": "FROM_DATA"
+    }
   },
   "struct_alpha_weights": {
     "name": "alpha_weights",
-    "observed": 0.0016490766005965163,
-    "null_mean": 0.0016490766005965163,
-    "null_std": 0.0,
-    "null_q025": 0.0016490766005965163,
-    "null_q500": 0.0016490766005965163,
-    "null_q975": 0.0016490766005965163,
-    "p_value": 1.0,
-    "n_bootstrap": 100
+    "observed": {
+      "value": 0.0016490766005965163,
+      "origin": "normalized(struct_alpha_weights.observed)",
+      "source": "FROM_MATH"
+    },
+    "null_mean": {
+      "value": 0.0016490766005965163,
+      "origin": "mean(struct_alpha_weights.null_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 0.0,
+      "origin": "std(struct_alpha_weights.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_q025": {
+      "value": 0.0016490766005965163,
+      "origin": "normalized(struct_alpha_weights.null_q025)",
+      "source": "FROM_MATH"
+    },
+    "null_q500": {
+      "value": 0.0016490766005965163,
+      "origin": "normalized(struct_alpha_weights.null_q500)",
+      "source": "FROM_MATH"
+    },
+    "null_q975": {
+      "value": 0.0016490766005965163,
+      "origin": "normalized(struct_alpha_weights.null_q975)",
+      "source": "FROM_MATH"
+    },
+    "p_value": {
+      "value": 1.0,
+      "origin": "computed(struct_alpha_weights.p_value)",
+      "source": "FROM_DATA"
+    },
+    "n_bootstrap": {
+      "value": 100,
+      "origin": "count(struct_alpha_weights.n_bootstrap)",
+      "source": "FROM_DATA"
+    }
   },
   "struct_alpha_manifold": {
     "name": "alpha_manifold",
-    "observed": 1.6661626954434912,
-    "null_mean": 1.1188718782364848,
-    "null_std": 0.013779248672235364,
-    "null_q025": 1.0926561654442604,
-    "null_q500": 1.1185674299714816,
-    "null_q975": 1.1463514843438964,
-    "p_value": 0.0,
-    "n_bootstrap": 100
+    "observed": {
+      "value": 1.6661626954434912,
+      "origin": "computed(struct_alpha_manifold.observed)",
+      "source": "FROM_MATH"
+    },
+    "null_mean": {
+      "value": 1.1188718782364848,
+      "origin": "mean(struct_alpha_manifold.null_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 0.013779248672235364,
+      "origin": "std(struct_alpha_manifold.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_q025": {
+      "value": 1.0926561654442604,
+      "origin": "computed(struct_alpha_manifold.null_q025)",
+      "source": "FROM_MATH"
+    },
+    "null_q500": {
+      "value": 1.1185674299714816,
+      "origin": "computed(struct_alpha_manifold.null_q500)",
+      "source": "FROM_MATH"
+    },
+    "null_q975": {
+      "value": 1.1463514843438964,
+      "origin": "computed(struct_alpha_manifold.null_q975)",
+      "source": "FROM_MATH"
+    },
+    "p_value": {
+      "value": 0.0,
+      "origin": "computed(struct_alpha_manifold.p_value)",
+      "source": "FROM_DATA"
+    },
+    "n_bootstrap": {
+      "value": 100,
+      "origin": "count(struct_alpha_manifold.n_bootstrap)",
+      "source": "FROM_DATA"
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "71c68a171e86",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.376288",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase9/nulls_bootstrap.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.376486",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 198,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 217,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 198,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 217,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

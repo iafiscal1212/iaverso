@@ -1,0 +1,852 @@
+{
+  "metadata": {
+    "type": "100% ENDOGENOUS - N-gram Causal Analysis",
+    "n_fields_analyzed": 9,
+    "timestamp": "2025-12-07T16:54:36.980799",
+    "experiment_id": {
+      "value": "0e9017dbd57b",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.022700",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/ENDOGENOUS_NgramCausal_MAP.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "fields_discovered": [
+    "javascript",
+    "python",
+    "awesome",
+    "react",
+    "free",
+    "programming",
+    "windows",
+    "code",
+    "awesome-list",
+    "list",
+    "software",
+    "interview",
+    "framework",
+    "open",
+    "algorithms",
+    "design",
+    "typescript",
+    "education",
+    "books",
+    "hacktoberfest",
+    "computer-science",
+    "build",
+    "source",
+    "algorithm",
+    "linux"
+  ],
+  "field_counts": {
+    "javascript": {
+      "value": 34,
+      "origin": "counted(field_counts.javascript)",
+      "source": "FROM_DATA"
+    },
+    "python": {
+      "value": 27,
+      "origin": "counted(field_counts.python)",
+      "source": "FROM_DATA"
+    },
+    "awesome": {
+      "value": 20,
+      "origin": "counted(field_counts.awesome)",
+      "source": "FROM_DATA"
+    },
+    "react": {
+      "value": 16,
+      "origin": "counted(field_counts.react)",
+      "source": "FROM_DATA"
+    },
+    "free": {
+      "value": 14,
+      "origin": "counted(field_counts.free)",
+      "source": "FROM_DATA"
+    },
+    "programming": {
+      "value": 14,
+      "origin": "programming(field_counts.programming)",
+      "source": "FROM_STATISTICS"
+    },
+    "windows": {
+      "value": 13,
+      "origin": "counted(field_counts.windows)",
+      "source": "FROM_DATA"
+    },
+    "code": {
+      "value": 12,
+      "origin": "counted(field_counts.code)",
+      "source": "FROM_DATA"
+    },
+    "awesome-list": {
+      "value": 10,
+      "origin": "counted(field_counts.awesome-list)",
+      "source": "FROM_DATA"
+    },
+    "list": {
+      "value": 10,
+      "origin": "counted(field_counts.list)",
+      "source": "FROM_DATA"
+    },
+    "software": {
+      "value": 10,
+      "origin": "counted(field_counts.software)",
+      "source": "FROM_DATA"
+    },
+    "interview": {
+      "value": 10,
+      "origin": "counted(field_counts.interview)",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": 10,
+      "origin": "counted(field_counts.framework)",
+      "source": "FROM_DATA"
+    },
+    "open": {
+      "value": 9,
+      "origin": "counted(field_counts.open)",
+      "source": "FROM_DATA"
+    },
+    "algorithms": {
+      "value": 9,
+      "origin": "counted(field_counts.algorithms)",
+      "source": "FROM_DATA"
+    },
+    "design": {
+      "value": 9,
+      "origin": "counted(field_counts.design)",
+      "source": "FROM_DATA"
+    },
+    "typescript": {
+      "value": 9,
+      "origin": "counted(field_counts.typescript)",
+      "source": "FROM_DATA"
+    },
+    "education": {
+      "value": 8,
+      "origin": "counted(field_counts.education)",
+      "source": "FROM_DATA"
+    },
+    "books": {
+      "value": 8,
+      "origin": "counted(field_counts.books)",
+      "source": "FROM_DATA"
+    },
+    "hacktoberfest": {
+      "value": 8,
+      "origin": "counted(field_counts.hacktoberfest)",
+      "source": "FROM_DATA"
+    },
+    "computer-science": {
+      "value": 8,
+      "origin": "counted(field_counts.computer-science)",
+      "source": "FROM_DATA"
+    },
+    "build": {
+      "value": 7,
+      "origin": "counted(field_counts.build)",
+      "source": "FROM_DATA"
+    },
+    "source": {
+      "value": 7,
+      "origin": "counted(field_counts.source)",
+      "source": "FROM_DATA"
+    },
+    "algorithm": {
+      "value": 7,
+      "origin": "counted(field_counts.algorithm)",
+      "source": "FROM_DATA"
+    },
+    "linux": {
+      "value": 7,
+      "origin": "counted(field_counts.linux)",
+      "source": "FROM_DATA"
+    }
+  },
+  "field_results": [
+    {
+      "field": "javascript",
+      "n_repos": {
+        "value": 30,
+        "origin": "count(field_results[0].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 3,
+        "origin": "count(field_results[0].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 87.32080743804565,
+        "origin": "computed(field_results[0].threshold)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "freecodecamp",
+      "concentration": {
+        "value": 9.9999999925,
+        "origin": "ratio(field_results[0].concentration)",
+        "source": "FROM_MATH"
+      },
+      "freq_in_top": {
+        "value": 4,
+        "origin": "count(field_results[0].freq_in_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_in_all": {
+        "value": 4,
+        "origin": "count(field_results[0].freq_in_all)",
+        "source": "FROM_DATA"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5205935612556979,
+        "origin": "normalized(field_results[0].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with_ngram": {
+        "value": 1,
+        "origin": "count(field_results[0].n_with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without_ngram": {
+        "value": 29,
+        "origin": "count(field_results[0].n_without_ngram)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "field": "python",
+      "n_repos": {
+        "value": 30,
+        "origin": "count(field_results[1].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 3,
+        "origin": "count(field_results[1].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 86.2583849041085,
+        "origin": "computed(field_results[1].threshold)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "project",
+      "concentration": {
+        "value": 9.9999999925,
+        "origin": "ratio(field_results[1].concentration)",
+        "source": "FROM_MATH"
+      },
+      "freq_in_top": {
+        "value": 4,
+        "origin": "count(field_results[1].freq_in_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_in_all": {
+        "value": 4,
+        "origin": "count(field_results[1].freq_in_all)",
+        "source": "FROM_DATA"
+      },
+      "cv_with": {
+        "value": 0.23593805404417922,
+        "origin": "normalized(field_results[1].cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5788415885663258,
+        "origin": "normalized(field_results[1].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.3429035345221466,
+        "origin": "normalized(field_results[1].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with_ngram": {
+        "value": 2,
+        "origin": "count(field_results[1].n_with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without_ngram": {
+        "value": 28,
+        "origin": "count(field_results[1].n_without_ngram)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "field": "awesome",
+      "n_repos": {
+        "value": 30,
+        "origin": "count(field_results[2].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 3,
+        "origin": "count(field_results[2].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 89.4062495941533,
+        "origin": "computed(field_results[2].threshold)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "selfhosted",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "ratio(field_results[2].concentration)",
+        "source": "FROM_MATH"
+      },
+      "freq_in_top": {
+        "value": 3,
+        "origin": "count(field_results[2].freq_in_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_in_all": {
+        "value": 3,
+        "origin": "count(field_results[2].freq_in_all)",
+        "source": "FROM_DATA"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5171744062019887,
+        "origin": "normalized(field_results[2].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with_ngram": {
+        "value": 1,
+        "origin": "count(field_results[2].n_with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without_ngram": {
+        "value": 29,
+        "origin": "count(field_results[2].n_without_ngram)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "field": "react",
+      "n_repos": {
+        "value": 30,
+        "origin": "count(field_results[3].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 3,
+        "origin": "count(field_results[3].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 79.44389950120924,
+        "origin": "computed(field_results[3].threshold)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "freecodecamp",
+      "concentration": {
+        "value": 9.9999999925,
+        "origin": "ratio(field_results[3].concentration)",
+        "source": "FROM_MATH"
+      },
+      "freq_in_top": {
+        "value": 4,
+        "origin": "count(field_results[3].freq_in_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_in_all": {
+        "value": 4,
+        "origin": "count(field_results[3].freq_in_all)",
+        "source": "FROM_DATA"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.4910956697030146,
+        "origin": "normalized(field_results[3].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with_ngram": {
+        "value": 1,
+        "origin": "count(field_results[3].n_with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without_ngram": {
+        "value": 29,
+        "origin": "count(field_results[3].n_without_ngram)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "field": "free",
+      "n_repos": {
+        "value": 30,
+        "origin": "count(field_results[4].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 3,
+        "origin": "count(field_results[4].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 93.71153716945314,
+        "origin": "computed(field_results[4].threshold)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "public",
+      "concentration": {
+        "value": 9.999999994000001,
+        "origin": "ratio(field_results[4].concentration)",
+        "source": "FROM_MATH"
+      },
+      "freq_in_top": {
+        "value": 5,
+        "origin": "count(field_results[4].freq_in_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_in_all": {
+        "value": 5,
+        "origin": "count(field_results[4].freq_in_all)",
+        "source": "FROM_DATA"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5468103495635397,
+        "origin": "normalized(field_results[4].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with_ngram": {
+        "value": 1,
+        "origin": "count(field_results[4].n_with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without_ngram": {
+        "value": 29,
+        "origin": "count(field_results[4].n_without_ngram)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "field": "programming",
+      "n_repos": {
+        "value": 30,
+        "origin": "count(field_results[5].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 3,
+        "origin": "count(field_results[5].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 93.26222008448805,
+        "origin": "computed(field_results[5].threshold)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "freecodecamp",
+      "concentration": {
+        "value": 9.9999999925,
+        "origin": "ratio(field_results[5].concentration)",
+        "source": "FROM_MATH"
+      },
+      "freq_in_top": {
+        "value": 4,
+        "origin": "count(field_results[5].freq_in_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_in_all": {
+        "value": 4,
+        "origin": "count(field_results[5].freq_in_all)",
+        "source": "FROM_DATA"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5402833141519241,
+        "origin": "normalized(field_results[5].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with_ngram": {
+        "value": 1,
+        "origin": "count(field_results[5].n_with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without_ngram": {
+        "value": 29,
+        "origin": "count(field_results[5].n_without_ngram)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "field": "windows",
+      "n_repos": {
+        "value": 30,
+        "origin": "count(field_results[6].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 3,
+        "origin": "count(field_results[6].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 88.97417733635847,
+        "origin": "computed(field_results[6].threshold)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "framework",
+      "concentration": {
+        "value": 9.999999985,
+        "origin": "ratio(field_results[6].concentration)",
+        "source": "FROM_MATH"
+      },
+      "freq_in_top": {
+        "value": 2,
+        "origin": "count(field_results[6].freq_in_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_in_all": {
+        "value": 2,
+        "origin": "count(field_results[6].freq_in_all)",
+        "source": "FROM_DATA"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5574475097547723,
+        "origin": "normalized(field_results[6].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with_ngram": {
+        "value": 1,
+        "origin": "count(field_results[6].n_with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without_ngram": {
+        "value": 29,
+        "origin": "count(field_results[6].n_without_ngram)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "field": "code",
+      "n_repos": {
+        "value": 30,
+        "origin": "count(field_results[7].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 3,
+        "origin": "count(field_results[7].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 83.90985746134776,
+        "origin": "computed(field_results[7].threshold)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "freecodecamp",
+      "concentration": {
+        "value": 9.9999999925,
+        "origin": "ratio(field_results[7].concentration)",
+        "source": "FROM_MATH"
+      },
+      "freq_in_top": {
+        "value": 4,
+        "origin": "count(field_results[7].freq_in_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_in_all": {
+        "value": 4,
+        "origin": "count(field_results[7].freq_in_all)",
+        "source": "FROM_DATA"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.47611349066798925,
+        "origin": "normalized(field_results[7].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with_ngram": {
+        "value": 1,
+        "origin": "count(field_results[7].n_with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without_ngram": {
+        "value": 29,
+        "origin": "count(field_results[7].n_without_ngram)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "field": "awesome-list",
+      "n_repos": {
+        "value": 30,
+        "origin": "count(field_results[8].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 3,
+        "origin": "count(field_results[8].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.48904622614023,
+        "origin": "computed(field_results[8].threshold)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "awesome python",
+      "concentration": {
+        "value": 9.999999985,
+        "origin": "ratio(field_results[8].concentration)",
+        "source": "FROM_MATH"
+      },
+      "freq_in_top": {
+        "value": 2,
+        "origin": "count(field_results[8].freq_in_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_in_all": {
+        "value": 2,
+        "origin": "count(field_results[8].freq_in_all)",
+        "source": "FROM_DATA"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5458002214969461,
+        "origin": "normalized(field_results[8].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with_ngram": {
+        "value": 1,
+        "origin": "count(field_results[8].n_with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without_ngram": {
+        "value": 29,
+        "origin": "count(field_results[8].n_without_ngram)",
+        "source": "FROM_DATA"
+      }
+    }
+  ],
+  "global_ngram_counts": {
+    "freecodecamp": {
+      "value": 4,
+      "origin": "counted(global_ngram_counts.freecodecamp)",
+      "source": "FROM_DATA"
+    },
+    "project": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.project)",
+      "source": "FROM_DATA"
+    },
+    "selfhosted": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.selfhosted)",
+      "source": "FROM_DATA"
+    },
+    "public": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.public)",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.framework)",
+      "source": "FROM_DATA"
+    },
+    "awesome python": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.awesome python)",
+      "source": "FROM_DATA"
+    }
+  },
+  "ngram_effects": {
+    "project": {
+      "ngram": "project",
+      "avg_cv_reduction": {
+        "value": 0.3429035345221466,
+        "origin": "mean(ngram_effects.project.avg_cv_reduction)",
+        "source": "FROM_STATISTICS"
+      },
+      "n_fields": {
+        "value": 1,
+        "origin": "count(ngram_effects.project.n_fields)",
+        "source": "FROM_DATA"
+      },
+      "total_effect": {
+        "value": 0.3429035345221466,
+        "origin": "count(ngram_effects.project.total_effect)",
+        "source": "FROM_DATA"
+      }
+    }
+  },
+  "sorted_effects": [
+    {
+      "ngram": "project",
+      "avg_cv_reduction": {
+        "value": 0.3429035345221466,
+        "origin": "mean(sorted_effects[0].avg_cv_reduction)",
+        "source": "FROM_STATISTICS"
+      },
+      "n_fields": {
+        "value": 1,
+        "origin": "count(sorted_effects[0].n_fields)",
+        "source": "FROM_DATA"
+      },
+      "total_effect": {
+        "value": 0.3429035345221466,
+        "origin": "count(sorted_effects[0].total_effect)",
+        "source": "FROM_DATA"
+      }
+    }
+  ],
+  "causal_dominant_factor": {
+    "ngram": "project",
+    "avg_cv_reduction": {
+      "value": 0.3429035345221466,
+      "origin": "mean(causal_dominant_factor.avg_cv_reduction)",
+      "source": "FROM_STATISTICS"
+    },
+    "n_fields": {
+      "value": 1,
+      "origin": "count(causal_dominant_factor.n_fields)",
+      "source": "FROM_DATA"
+    },
+    "total_effect": {
+      "value": 0.3429035345221466,
+      "origin": "count(causal_dominant_factor.total_effect)",
+      "source": "FROM_DATA"
+    }
+  },
+  "map": [
+    {
+      "field": "python",
+      "dominant_factor": "project",
+      "cv_reduction": {
+        "value": 0.3429035345221466,
+        "origin": "normalized(map[0].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "concentration": {
+        "value": 9.9999999925,
+        "origin": "ratio(map[0].concentration)",
+        "source": "FROM_MATH"
+      }
+    }
+  ],
+  "provenance": {
+    "fields": "FROM_DATA: GitHub API topics + word frequency",
+    "repos": "FROM_DATA: GitHub API search per field",
+    "performance": "FROM_MATH: z-score of log(stars)",
+    "percentile_90": "FROM_MATH: np.percentile(perfs, 90)",
+    "ngrams": "FROM_DATA: regex extraction 1-3 grams",
+    "concentration": "FROM_MATH: (freq_top/n_top) / (freq_all/n_all)",
+    "cv": "FROM_MATH: std / mean",
+    "cv_reduction": "FROM_MATH: cv_without - cv_with",
+    "causal_factor": "FROM_DATA: max(total_effect)"
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.023002",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 288,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 356,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 288,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 356,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
+}

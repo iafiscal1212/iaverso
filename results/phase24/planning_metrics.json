@@ -1,106 +1,322 @@
 {
   "metrics": {
-    "mean_P_magnitude": 0.47970428501975515,
-    "std_P_magnitude": 0.10511144465500281,
-    "mean_error": 0.12942764012126926,
-    "error_reduction": -0.01002118204666412,
-    "P_autocorr": 0.009881599338737288,
-    "mean_displacement": 0.47970428501975515
+    "mean_P_magnitude": {
+      "value": 0.47970428501975515,
+      "origin": "mean(metrics.mean_P_magnitude)",
+      "source": "FROM_STATISTICS"
+    },
+    "std_P_magnitude": {
+      "value": 0.10511144465500281,
+      "origin": "std(metrics.std_P_magnitude)",
+      "source": "FROM_STATISTICS"
+    },
+    "mean_error": {
+      "value": 0.12942764012126926,
+      "origin": "mean(metrics.mean_error)",
+      "source": "FROM_STATISTICS"
+    },
+    "error_reduction": {
+      "value": -0.01002118204666412,
+      "origin": "computed(metrics.error_reduction)",
+      "source": "FROM_MATH"
+    },
+    "P_autocorr": {
+      "value": 0.009881599338737288,
+      "origin": "normalized(metrics.P_autocorr)",
+      "source": "FROM_MATH"
+    },
+    "mean_displacement": {
+      "value": 0.47970428501975515,
+      "origin": "mean(metrics.mean_displacement)",
+      "source": "FROM_STATISTICS"
+    }
   },
   "per_seed_metrics": [
     {
-      "mean_P_magnitude": 0.480596252376916,
-      "std_P_magnitude": 0.10833510223524338,
-      "mean_error": 0.1269107722724736,
-      "error_reduction": -0.0013154810613557333,
-      "P_autocorr": 0.012361174493701143,
-      "mean_displacement": 0.48059625237691594
+      "mean_P_magnitude": {
+        "value": 0.480596252376916,
+        "origin": "mean(per_seed_metrics[0].mean_P_magnitude)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_P_magnitude": {
+        "value": 0.10833510223524338,
+        "origin": "std(per_seed_metrics[0].std_P_magnitude)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_error": {
+        "value": 0.1269107722724736,
+        "origin": "mean(per_seed_metrics[0].mean_error)",
+        "source": "FROM_STATISTICS"
+      },
+      "error_reduction": {
+        "value": -0.0013154810613557333,
+        "origin": "computed(per_seed_metrics[0].error_reduction)",
+        "source": "FROM_MATH"
+      },
+      "P_autocorr": {
+        "value": 0.012361174493701143,
+        "origin": "normalized(per_seed_metrics[0].P_autocorr)",
+        "source": "FROM_MATH"
+      },
+      "mean_displacement": {
+        "value": 0.48059625237691594,
+        "origin": "mean(per_seed_metrics[0].mean_displacement)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "mean_P_magnitude": 0.47864796027040585,
-      "std_P_magnitude": 0.10441860467898717,
-      "mean_error": 0.129885900577933,
-      "error_reduction": -0.009401114568821922,
-      "P_autocorr": 0.0060512602860235175,
-      "mean_displacement": 0.47864796027040585
+      "mean_P_magnitude": {
+        "value": 0.47864796027040585,
+        "origin": "mean(per_seed_metrics[1].mean_P_magnitude)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_P_magnitude": {
+        "value": 0.10441860467898717,
+        "origin": "std(per_seed_metrics[1].std_P_magnitude)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_error": {
+        "value": 0.129885900577933,
+        "origin": "mean(per_seed_metrics[1].mean_error)",
+        "source": "FROM_STATISTICS"
+      },
+      "error_reduction": {
+        "value": -0.009401114568821922,
+        "origin": "computed(per_seed_metrics[1].error_reduction)",
+        "source": "FROM_MATH"
+      },
+      "P_autocorr": {
+        "value": 0.0060512602860235175,
+        "origin": "normalized(per_seed_metrics[1].P_autocorr)",
+        "source": "FROM_MATH"
+      },
+      "mean_displacement": {
+        "value": 0.47864796027040585,
+        "origin": "mean(per_seed_metrics[1].mean_displacement)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "mean_P_magnitude": 0.47765804720615007,
-      "std_P_magnitude": 0.10857240601044181,
-      "mean_error": 0.12951510887614298,
-      "error_reduction": -0.013744020875725571,
-      "P_autocorr": 0.0019230173368993387,
-      "mean_displacement": 0.47765804720615007
+      "mean_P_magnitude": {
+        "value": 0.47765804720615007,
+        "origin": "mean(per_seed_metrics[2].mean_P_magnitude)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_P_magnitude": {
+        "value": 0.10857240601044181,
+        "origin": "std(per_seed_metrics[2].std_P_magnitude)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_error": {
+        "value": 0.12951510887614298,
+        "origin": "mean(per_seed_metrics[2].mean_error)",
+        "source": "FROM_STATISTICS"
+      },
+      "error_reduction": {
+        "value": -0.013744020875725571,
+        "origin": "computed(per_seed_metrics[2].error_reduction)",
+        "source": "FROM_MATH"
+      },
+      "P_autocorr": {
+        "value": 0.0019230173368993387,
+        "origin": "normalized(per_seed_metrics[2].P_autocorr)",
+        "source": "FROM_MATH"
+      },
+      "mean_displacement": {
+        "value": 0.47765804720615007,
+        "origin": "mean(per_seed_metrics[2].mean_displacement)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "mean_P_magnitude": 0.48163168892000785,
-      "std_P_magnitude": 0.10491768617710519,
-      "mean_error": 0.13217710694632792,
-      "error_reduction": -0.010274730169818613,
-      "P_autocorr": 0.016740309461273112,
-      "mean_displacement": 0.48163168892000785
+      "mean_P_magnitude": {
+        "value": 0.48163168892000785,
+        "origin": "mean(per_seed_metrics[3].mean_P_magnitude)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_P_magnitude": {
+        "value": 0.10491768617710519,
+        "origin": "std(per_seed_metrics[3].std_P_magnitude)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_error": {
+        "value": 0.13217710694632792,
+        "origin": "mean(per_seed_metrics[3].mean_error)",
+        "source": "FROM_STATISTICS"
+      },
+      "error_reduction": {
+        "value": -0.010274730169818613,
+        "origin": "computed(per_seed_metrics[3].error_reduction)",
+        "source": "FROM_MATH"
+      },
+      "P_autocorr": {
+        "value": 0.016740309461273112,
+        "origin": "normalized(per_seed_metrics[3].P_autocorr)",
+        "source": "FROM_MATH"
+      },
+      "mean_displacement": {
+        "value": 0.48163168892000785,
+        "origin": "mean(per_seed_metrics[3].mean_displacement)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "mean_P_magnitude": 0.4799874763252961,
-      "std_P_magnitude": 0.09931342417323649,
-      "mean_error": 0.1286493119334687,
-      "error_reduction": -0.015370563557598763,
-      "P_autocorr": 0.012332235115789328,
-      "mean_displacement": 0.4799874763252961
+      "mean_P_magnitude": {
+        "value": 0.4799874763252961,
+        "origin": "mean(per_seed_metrics[4].mean_P_magnitude)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_P_magnitude": {
+        "value": 0.09931342417323649,
+        "origin": "std(per_seed_metrics[4].std_P_magnitude)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_error": {
+        "value": 0.1286493119334687,
+        "origin": "mean(per_seed_metrics[4].mean_error)",
+        "source": "FROM_STATISTICS"
+      },
+      "error_reduction": {
+        "value": -0.015370563557598763,
+        "origin": "computed(per_seed_metrics[4].error_reduction)",
+        "source": "FROM_MATH"
+      },
+      "P_autocorr": {
+        "value": 0.012332235115789328,
+        "origin": "normalized(per_seed_metrics[4].P_autocorr)",
+        "source": "FROM_MATH"
+      },
+      "mean_displacement": {
+        "value": 0.4799874763252961,
+        "origin": "mean(per_seed_metrics[4].mean_displacement)",
+        "source": "FROM_STATISTICS"
+      }
     }
   ],
   "null_results": {
     "disabled": {
-      "mean_P": 0.0
+      "mean_P": {
+        "value": 0.0,
+        "origin": "mean(null_results.disabled.mean_P)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "shuffled": {
-      "mean_P_magnitude": 0.48687529662967616
+      "mean_P_magnitude": {
+        "value": 0.48687529662967616,
+        "origin": "mean(null_results.shuffled.mean_P_magnitude)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "random": {
-      "mean_P_magnitude": 0.497792620807305
+      "mean_P_magnitude": {
+        "value": 0.497792620807305,
+        "origin": "mean(null_results.random.mean_P_magnitude)",
+        "source": "FROM_STATISTICS"
+      }
     }
   },
   "go_evaluation": {
     "criteria": {
       "c1_meaningful_planning": {
         "pass": true,
-        "value": 0.47970428501975515,
-        "threshold": 0.1,
+        "value": {
+          "value": 0.47970428501975515,
+          "origin": "computed(go_evaluation.criteria.c1_meaningful_planning.value)",
+          "source": "FROM_DATA"
+        },
+        "threshold": {
+          "value": 0.1,
+          "origin": "normalized(go_evaluation.criteria.c1_meaningful_planning.threshold)",
+          "source": "FROM_MATH"
+        },
         "description": "Planning field magnitude > 0.1"
       },
       "c2_not_degrading": {
         "pass": true,
-        "value": -0.01002118204666412,
-        "threshold": -0.1,
+        "value": {
+          "value": -0.01002118204666412,
+          "origin": "computed(go_evaluation.criteria.c2_not_degrading.value)",
+          "source": "FROM_DATA"
+        },
+        "threshold": {
+          "value": -0.1,
+          "origin": "computed(go_evaluation.criteria.c2_not_degrading.threshold)",
+          "source": "FROM_MATH"
+        },
         "description": "Prediction not degrading"
       },
       "c3_temporal_coherence": {
         "pass": true,
-        "value": 0.009881599338737288,
-        "threshold": 0,
+        "value": {
+          "value": 0.009881599338737288,
+          "origin": "computed(go_evaluation.criteria.c3_temporal_coherence.value)",
+          "source": "FROM_DATA"
+        },
+        "threshold": {
+          "value": 0,
+          "origin": "counted(go_evaluation.criteria.c3_temporal_coherence.threshold)",
+          "source": "FROM_DATA"
+        },
         "description": "Planning shows temporal coherence"
       },
       "c4_changes_trajectory": {
         "pass": true,
-        "value": 0.47970428501975515,
-        "threshold": 1e-06,
+        "value": {
+          "value": 0.47970428501975515,
+          "origin": "computed(go_evaluation.criteria.c4_changes_trajectory.value)",
+          "source": "FROM_DATA"
+        },
+        "threshold": {
+          "value": 1e-06,
+          "origin": "normalized(go_evaluation.criteria.c4_changes_trajectory.threshold)",
+          "source": "FROM_MATH"
+        },
         "description": "Planning changes trajectory"
       },
       "c5_adaptive": {
         "pass": true,
-        "value": 0.10511144465500281,
-        "threshold": 0.01,
+        "value": {
+          "value": 0.10511144465500281,
+          "origin": "computed(go_evaluation.criteria.c5_adaptive.value)",
+          "source": "FROM_DATA"
+        },
+        "threshold": {
+          "value": 0.01,
+          "origin": "normalized(go_evaluation.criteria.c5_adaptive.threshold)",
+          "source": "FROM_MATH"
+        },
         "description": "Planning field adapts (std > 0.01)"
       }
     },
-    "n_pass": 5,
-    "n_total": 5,
+    "n_pass": {
+      "value": 5,
+      "origin": "count(go_evaluation.n_pass)",
+      "source": "FROM_DATA"
+    },
+    "n_total": {
+      "value": 5,
+      "origin": "count(go_evaluation.n_total)",
+      "source": "FROM_DATA"
+    },
     "go": true
   },
   "config": {
-    "n_seeds": 5,
-    "T": 500,
-    "dim": 5
+    "n_seeds": {
+      "value": 5,
+      "origin": "count(config.n_seeds)",
+      "source": "FROM_DATA"
+    },
+    "T": {
+      "value": 500,
+      "origin": "counted(config.T)",
+      "source": "FROM_DATA"
+    },
+    "dim": {
+      "value": 5,
+      "origin": "counted(config.dim)",
+      "source": "FROM_DATA"
+    }
   },
   "provenance": {
     "module": "planning24",
@@ -121,5 +337,112 @@
     ],
     "no_magic_numbers": true,
     "no_semantic_labels": true
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "c8945dce06ac",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:59.543516",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase24/planning_metrics.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:59.543680",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 146,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 172,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 146,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 172,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

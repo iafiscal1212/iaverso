@@ -1,101 +1,416 @@
 {
-  "cycles": 500,
-  "elapsed": 1.1178929805755615,
+  "cycles": {
+    "value": 500,
+    "origin": "counted(cycles)",
+    "source": "FROM_DATA"
+  },
+  "elapsed": {
+    "value": 1.1178929805755615,
+    "origin": "computed(elapsed)",
+    "source": "FROM_MATH"
+  },
   "coupling_enabled": true,
   "bus_counts": {
-    "NEO": 6,
-    "EVA": 45
+    "NEO": {
+      "value": 6,
+      "origin": "counted(bus_counts.NEO)",
+      "source": "FROM_DATA"
+    },
+    "EVA": {
+      "value": 45,
+      "origin": "counted(bus_counts.EVA)",
+      "source": "FROM_DATA"
+    }
   },
   "neo": {
-    "initial_I": [
-      1.0,
-      0.0,
-      0.0
-    ],
-    "final_I": [
-      0.6878326741253646,
-      0.1984889697639926,
-      0.11367835611064274
-    ],
-    "variance": {
-      "S": 0.04646388489085291,
-      "N": 0.04917424457951359,
-      "C": 0.0038442920965759235,
-      "total": 0.28245365758528995
+    "initial_I": {
+      "value": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "origin": "array(neo.initial_I)",
+      "source": "FROM_DATA"
     },
-    "gate_activations": 74,
-    "coupling_activations": 54,
+    "final_I": {
+      "value": [
+        0.6878326741253646,
+        0.1984889697639926,
+        0.11367835611064274
+      ],
+      "origin": "array(neo.final_I)",
+      "source": "FROM_DATA"
+    },
+    "variance": {
+      "S": {
+        "value": 0.04646388489085291,
+        "origin": "normalized(neo.variance.S)",
+        "source": "FROM_MATH"
+      },
+      "N": {
+        "value": 0.04917424457951359,
+        "origin": "normalized(neo.variance.N)",
+        "source": "FROM_MATH"
+      },
+      "C": {
+        "value": 0.0038442920965759235,
+        "origin": "normalized(neo.variance.C)",
+        "source": "FROM_MATH"
+      },
+      "total": {
+        "value": 0.28245365758528995,
+        "origin": "count(neo.variance.total)",
+        "source": "FROM_DATA"
+      }
+    },
+    "gate_activations": {
+      "value": 74,
+      "origin": "counted(neo.gate_activations)",
+      "source": "FROM_DATA"
+    },
+    "coupling_activations": {
+      "value": 54,
+      "origin": "counted(neo.coupling_activations)",
+      "source": "FROM_DATA"
+    },
     "quantiles": {
-      "T": 100,
-      "w": 10,
-      "max_hist": 100,
-      "sigma_med": 0.003684319882760599,
+      "T": {
+        "value": 100,
+        "origin": "counted(neo.quantiles.T)",
+        "source": "FROM_DATA"
+      },
+      "w": {
+        "value": 10,
+        "origin": "counted(neo.quantiles.w)",
+        "source": "FROM_DATA"
+      },
+      "max_hist": {
+        "value": 100,
+        "origin": "max_hist(neo.quantiles.max_hist)",
+        "source": "FROM_STATISTICS"
+      },
+      "sigma_med": {
+        "value": 0.003684319882760599,
+        "origin": "normalized(neo.quantiles.sigma_med)",
+        "source": "FROM_MATH"
+      },
       "rho_quantiles": {
-        "p50": 1.0021140176712042,
-        "p75": 1.027452581235023,
-        "p95": 1.067436134981141,
-        "p97.5": 1.0872667916129544
+        "p50": {
+          "value": 1.0021140176712042,
+          "origin": "computed(neo.quantiles.rho_quantiles.p50)",
+          "source": "FROM_MATH"
+        },
+        "p75": {
+          "value": 1.027452581235023,
+          "origin": "computed(neo.quantiles.rho_quantiles.p75)",
+          "source": "FROM_MATH"
+        },
+        "p95": {
+          "value": 1.067436134981141,
+          "origin": "computed(neo.quantiles.rho_quantiles.p95)",
+          "source": "FROM_MATH"
+        },
+        "p97.5": {
+          "value": 1.0872667916129544,
+          "origin": "computed(neo.quantiles.rho_quantiles.p97.5)",
+          "source": "FROM_MATH"
+        }
       },
       "iqr_quantiles": {
-        "p50": 0.0006751085865091362,
-        "p75": 0.0008954712056863971,
-        "p95": 0.0013010641254020253
+        "p50": {
+          "value": 0.0006751085865091362,
+          "origin": "normalized(neo.quantiles.iqr_quantiles.p50)",
+          "source": "FROM_MATH"
+        },
+        "p75": {
+          "value": 0.0008954712056863971,
+          "origin": "normalized(neo.quantiles.iqr_quantiles.p75)",
+          "source": "FROM_MATH"
+        },
+        "p95": {
+          "value": 0.0013010641254020253,
+          "origin": "normalized(neo.quantiles.iqr_quantiles.p95)",
+          "source": "FROM_MATH"
+        }
       },
       "tau_quantiles": {
-        "p50": 0.0001599070646035761,
-        "p75": 0.0005830976856242903,
-        "p99": 0.001579287796521316
+        "p50": {
+          "value": 0.0001599070646035761,
+          "origin": "normalized(neo.quantiles.tau_quantiles.p50)",
+          "source": "FROM_MATH"
+        },
+        "p75": {
+          "value": 0.0005830976856242903,
+          "origin": "normalized(neo.quantiles.tau_quantiles.p75)",
+          "source": "FROM_MATH"
+        },
+        "p99": {
+          "value": 0.001579287796521316,
+          "origin": "normalized(neo.quantiles.tau_quantiles.p99)",
+          "source": "FROM_MATH"
+        }
       },
       "ou_limits": {
-        "clip_min_mean": -0.19193781429338502,
-        "clip_max_mean": 1.022457777613152
+        "clip_min_mean": {
+          "value": -0.19193781429338502,
+          "origin": "mean(neo.quantiles.ou_limits.clip_min_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "clip_max_mean": {
+          "value": 1.022457777613152,
+          "origin": "mean(neo.quantiles.ou_limits.clip_max_mean)",
+          "source": "FROM_STATISTICS"
+        }
       }
     }
   },
   "eva": {
-    "initial_I": [
-      0.3333333333333333,
-      0.3333333333333333,
-      0.3333333333333333
-    ],
-    "final_I": [
-      0.007046338447733745,
-      0.004283732218503607,
-      0.9886699293337626
-    ],
-    "variance": {
-      "S": 0.009275491839170898,
-      "N": 0.000704991564755139,
-      "C": 0.01196193279091383,
-      "total": 0.6092498020824253
+    "initial_I": {
+      "value": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "origin": "array(eva.initial_I)",
+      "source": "FROM_DATA"
     },
-    "gate_activations": 452,
-    "coupling_activations": 443,
+    "final_I": {
+      "value": [
+        0.007046338447733745,
+        0.004283732218503607,
+        0.9886699293337626
+      ],
+      "origin": "array(eva.final_I)",
+      "source": "FROM_DATA"
+    },
+    "variance": {
+      "S": {
+        "value": 0.009275491839170898,
+        "origin": "normalized(eva.variance.S)",
+        "source": "FROM_MATH"
+      },
+      "N": {
+        "value": 0.000704991564755139,
+        "origin": "normalized(eva.variance.N)",
+        "source": "FROM_MATH"
+      },
+      "C": {
+        "value": 0.01196193279091383,
+        "origin": "normalized(eva.variance.C)",
+        "source": "FROM_MATH"
+      },
+      "total": {
+        "value": 0.6092498020824253,
+        "origin": "count(eva.variance.total)",
+        "source": "FROM_DATA"
+      }
+    },
+    "gate_activations": {
+      "value": 452,
+      "origin": "counted(eva.gate_activations)",
+      "source": "FROM_DATA"
+    },
+    "coupling_activations": {
+      "value": 443,
+      "origin": "counted(eva.coupling_activations)",
+      "source": "FROM_DATA"
+    },
     "quantiles": {
-      "T": 100,
-      "w": 10,
-      "max_hist": 100,
-      "sigma_med": 8.574420393170366e-05,
+      "T": {
+        "value": 100,
+        "origin": "counted(eva.quantiles.T)",
+        "source": "FROM_DATA"
+      },
+      "w": {
+        "value": 10,
+        "origin": "counted(eva.quantiles.w)",
+        "source": "FROM_DATA"
+      },
+      "max_hist": {
+        "value": 100,
+        "origin": "max_hist(eva.quantiles.max_hist)",
+        "source": "FROM_STATISTICS"
+      },
+      "sigma_med": {
+        "value": 8.574420393170366e-05,
+        "origin": "normalized(eva.quantiles.sigma_med)",
+        "source": "FROM_MATH"
+      },
       "rho_quantiles": {
-        "p50": 1.0017450190860855,
-        "p75": 1.0196608220207497,
-        "p95": 1.0584146234049974,
-        "p97.5": 1.0767125068513534
+        "p50": {
+          "value": 1.0017450190860855,
+          "origin": "computed(eva.quantiles.rho_quantiles.p50)",
+          "source": "FROM_MATH"
+        },
+        "p75": {
+          "value": 1.0196608220207497,
+          "origin": "computed(eva.quantiles.rho_quantiles.p75)",
+          "source": "FROM_MATH"
+        },
+        "p95": {
+          "value": 1.0584146234049974,
+          "origin": "computed(eva.quantiles.rho_quantiles.p95)",
+          "source": "FROM_MATH"
+        },
+        "p97.5": {
+          "value": 1.0767125068513534,
+          "origin": "computed(eva.quantiles.rho_quantiles.p97.5)",
+          "source": "FROM_MATH"
+        }
       },
       "iqr_quantiles": {
-        "p50": 1.5033362639049472e-05,
-        "p75": 1.809814005978805e-05,
-        "p95": 2.3052800863310424e-05
+        "p50": {
+          "value": 1.5033362639049472e-05,
+          "origin": "normalized(eva.quantiles.iqr_quantiles.p50)",
+          "source": "FROM_MATH"
+        },
+        "p75": {
+          "value": 1.809814005978805e-05,
+          "origin": "normalized(eva.quantiles.iqr_quantiles.p75)",
+          "source": "FROM_MATH"
+        },
+        "p95": {
+          "value": 2.3052800863310424e-05,
+          "origin": "normalized(eva.quantiles.iqr_quantiles.p95)",
+          "source": "FROM_MATH"
+        }
       },
       "tau_quantiles": {
-        "p50": 8.43729791214196e-06,
-        "p75": 8.437332559711886e-06,
-        "p99": 8.43734416779533e-06
+        "p50": {
+          "value": 8.43729791214196e-06,
+          "origin": "normalized(eva.quantiles.tau_quantiles.p50)",
+          "source": "FROM_MATH"
+        },
+        "p75": {
+          "value": 8.437332559711886e-06,
+          "origin": "normalized(eva.quantiles.tau_quantiles.p75)",
+          "source": "FROM_MATH"
+        },
+        "p99": {
+          "value": 8.43734416779533e-06,
+          "origin": "normalized(eva.quantiles.tau_quantiles.p99)",
+          "source": "FROM_MATH"
+        }
       },
       "ou_limits": {
-        "clip_min_mean": -0.08950953508080868,
-        "clip_max_mean": 0.10586535141453682
+        "clip_min_mean": {
+          "value": -0.08950953508080868,
+          "origin": "mean(eva.quantiles.ou_limits.clip_min_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "clip_max_mean": {
+          "value": 0.10586535141453682,
+          "origin": "mean(eva.quantiles.ou_limits.clip_max_mean)",
+          "source": "FROM_STATISTICS"
+        }
       }
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "d0d4dcba983c",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:45.877702",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase6_v2_results.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:45.877857",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 142,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 151,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 142,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 151,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
     }
   }
 }

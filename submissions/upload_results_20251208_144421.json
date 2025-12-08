@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "type": "LEADERBOARD_UPLOAD_RESULTS",
+    "source": "100% END\u00d3GENO",
+    "timestamp": {
+      "value": "2025-12-08T14:44:21.641160",
+      "origin": "datetime.now()",
+      "source": "FROM_DATA"
+    }
+  },
+  "uploads": {
+    "egoschema": {
+      "benchmark": {
+        "value": "EgoSchema",
+        "origin": "benchmark_name",
+        "source": "FROM_DATA"
+      },
+      "timestamp": {
+        "value": "2025-12-08T14:44:21.641169",
+        "origin": "datetime.now()",
+        "source": "FROM_DATA"
+      },
+      "status": {
+        "value": "not_ready",
+        "origin": "initial_status",
+        "source": "FROM_DATA"
+      },
+      "message": {
+        "value": "Predictions not ready - need real model inference",
+        "origin": "pred_data.submission_ready",
+        "source": "FROM_DATA"
+      },
+      "predictions_file": {
+        "value": "/root/NEO_EVA/submissions/egoschema_predictions.json",
+        "origin": "generated_path",
+        "source": "FROM_DATA"
+      }
+    },
+    "ego4d": {
+      "benchmark": {
+        "value": "Ego4D_LTA",
+        "origin": "benchmark_name",
+        "source": "FROM_DATA"
+      },
+      "timestamp": {
+        "value": "2025-12-08T14:44:21.641329",
+        "origin": "datetime.now()",
+        "source": "FROM_DATA"
+      },
+      "status": {
+        "value": "not_ready",
+        "origin": "initial_status",
+        "source": "FROM_DATA"
+      },
+      "message": {
+        "value": "Need real model inference on Ego4D test set",
+        "origin": "submission_check",
+        "source": "FROM_DATA"
+      },
+      "predictions_file": {
+        "value": "/root/NEO_EVA/submissions/ego4d_lta_predictions.json",
+        "origin": "generated_path",
+        "source": "FROM_DATA"
+      }
+    },
+    "agentbench": {
+      "benchmark": {
+        "value": "AgentBench",
+        "origin": "benchmark_name",
+        "source": "FROM_DATA"
+      },
+      "timestamp": {
+        "value": "2025-12-08T14:44:21.641425",
+        "origin": "datetime.now()",
+        "source": "FROM_DATA"
+      },
+      "status": {
+        "value": "ready_for_pr",
+        "origin": "initial_status",
+        "source": "FROM_DATA"
+      },
+      "submission_file": {
+        "value": "/root/NEO_EVA/submissions/agentbench_submission.json",
+        "origin": "generated_path",
+        "source": "FROM_DATA"
+      },
+      "next_step": {
+        "value": "Create PR to THUDM/AgentBench",
+        "origin": "github_workflow",
+        "source": "FROM_DATA"
+      }
+    }
+  },
+  "summary": {
+    "total": {
+      "value": 3,
+      "origin": "len(uploads)",
+      "source": "FROM_MATH"
+    },
+    "submitted": {
+      "value": 0,
+      "origin": "count(submitted)",
+      "source": "FROM_MATH"
+    },
+    "ready": {
+      "value": 1,
+      "origin": "count(ready)",
+      "source": "FROM_MATH"
+    },
+    "not_ready": {
+      "value": 2,
+      "origin": "count(not_ready)",
+      "source": "FROM_MATH"
+    },
+    "errors": {
+      "value": 0,
+      "origin": "count(error)",
+      "source": "FROM_MATH"
+    }
+  }
+}

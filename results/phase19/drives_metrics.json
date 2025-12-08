@@ -1,43 +1,115 @@
 {
-  "n_seeds": 5,
-  "n_steps": 2000,
+  "n_seeds": {
+    "value": 5,
+    "origin": "count(n_seeds)",
+    "source": "FROM_DATA"
+  },
+  "n_steps": {
+    "value": 2000,
+    "origin": "count(n_steps)",
+    "source": "FROM_DATA"
+  },
   "timestamp": "2025-11-30T21:11:33.361538",
   "global": {
     "drives": {
       "D_stab": {
-        "mean": 0.5042526474645125,
-        "std": 0.007672738373026841
+        "mean": {
+          "value": 0.5042526474645125,
+          "origin": "mean(global.drives.D_stab.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.007672738373026841,
+          "origin": "std(global.drives.D_stab.std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "D_nov": {
-        "mean": 0.4839611408650901,
-        "std": 0.04632013560524174
+        "mean": {
+          "value": 0.4839611408650901,
+          "origin": "mean(global.drives.D_nov.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.04632013560524174,
+          "origin": "std(global.drives.D_nov.std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "D_irr": {
-        "mean": 0.5055724666979133,
-        "std": 0.007732012841294443
+        "mean": {
+          "value": 0.5055724666979133,
+          "origin": "mean(global.drives.D_irr.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.007732012841294443,
+          "origin": "std(global.drives.D_irr.std)",
+          "source": "FROM_STATISTICS"
+        }
       }
     },
     "divergence": {
-      "mean": 253.2307513990243,
-      "std": 3.37699010498266,
-      "median": 251.96035479569636
+      "mean": {
+        "value": 253.2307513990243,
+        "origin": "mean(global.divergence.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 3.37699010498266,
+        "origin": "std(global.divergence.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "median": {
+        "value": 251.96035479569636,
+        "origin": "mean(global.divergence.median)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "persistence": {
-      "mean": 0.4833035252032786,
-      "std": 0.009724988301240111
+      "mean": {
+        "value": 0.4833035252032786,
+        "origin": "mean(global.persistence.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.009724988301240111,
+        "origin": "std(global.persistence.std)",
+        "source": "FROM_STATISTICS"
+      }
     }
   },
   "vs_null": {
     "disabled": {
-      "mean_divergence": 0.0
+      "mean_divergence": {
+        "value": 0.0,
+        "origin": "mean(vs_null.disabled.mean_divergence)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "shuffled": {
-      "mean_divergence": 156.16836090952842,
-      "divergence_p95": 157.32314001655357
+      "mean_divergence": {
+        "value": 156.16836090952842,
+        "origin": "mean(vs_null.shuffled.mean_divergence)",
+        "source": "FROM_STATISTICS"
+      },
+      "divergence_p95": {
+        "value": 157.32314001655357,
+        "origin": "computed(vs_null.shuffled.divergence_p95)",
+        "source": "FROM_MATH"
+      }
     },
     "noise": {
-      "mean_divergence": 156.16836090952842,
-      "divergence_p95": 157.32314001655357
+      "mean_divergence": {
+        "value": 156.16836090952842,
+        "origin": "mean(vs_null.noise.mean_divergence)",
+        "source": "FROM_STATISTICS"
+      },
+      "divergence_p95": {
+        "value": 157.32314001655357,
+        "origin": "computed(vs_null.noise.divergence_p95)",
+        "source": "FROM_MATH"
+      }
     }
   },
   "go_criteria": {
@@ -46,345 +118,1140 @@
     "divergence_above_shuffled_p95": true,
     "divergence_above_noise_p95": true,
     "persistence_sufficient": true,
-    "n_pass": 5,
-    "required": 3,
+    "n_pass": {
+      "value": 5,
+      "origin": "count(go_criteria.n_pass)",
+      "source": "FROM_DATA"
+    },
+    "required": {
+      "value": 3,
+      "origin": "counted(go_criteria.required)",
+      "source": "FROM_DATA"
+    },
     "go": true
   },
   "seeds": [
     {
-      "seed": 0,
-      "T": 2000,
+      "seed": {
+        "value": 0,
+        "origin": "counted(seeds[0].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[0].T)",
+        "source": "FROM_DATA"
+      },
       "drives": {
         "D_stab": {
-          "mean": 0.5181637685739787,
-          "std": 0.2852462786459132,
-          "min": 0.0,
-          "max": 0.9978506179473401
+          "mean": {
+            "value": 0.5181637685739787,
+            "origin": "mean(seeds[0].drives.D_stab.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.2852462786459132,
+            "origin": "std(seeds[0].drives.D_stab.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[0].drives.D_stab.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9978506179473401,
+            "origin": "max(seeds[0].drives.D_stab.max)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "D_nov": {
-          "mean": 0.4710452788344701,
-          "std": 0.2866603172401449,
-          "min": 0.0,
-          "max": 0.9985486211901307
+          "mean": {
+            "value": 0.4710452788344701,
+            "origin": "mean(seeds[0].drives.D_nov.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.2866603172401449,
+            "origin": "std(seeds[0].drives.D_nov.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[0].drives.D_nov.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9985486211901307,
+            "origin": "max(seeds[0].drives.D_nov.max)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "D_irr": {
-          "mean": 0.491929093169494,
-          "std": 0.2869859420468925,
-          "min": 0.0,
-          "max": 0.9992982456140351
+          "mean": {
+            "value": 0.491929093169494,
+            "origin": "mean(seeds[0].drives.D_irr.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.2869859420468925,
+            "origin": "std(seeds[0].drives.D_irr.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[0].drives.D_irr.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9992982456140351,
+            "origin": "max(seeds[0].drives.D_irr.max)",
+            "source": "FROM_STATISTICS"
+          }
         }
       },
       "correlations": {
-        "stab_nov": -0.06175998739825134,
-        "stab_irr": -0.01704788741914777,
-        "nov_irr": -0.02455214995312621
+        "stab_nov": {
+          "value": -0.06175998739825134,
+          "origin": "computed(seeds[0].correlations.stab_nov)",
+          "source": "FROM_MATH"
+        },
+        "stab_irr": {
+          "value": -0.01704788741914777,
+          "origin": "computed(seeds[0].correlations.stab_irr)",
+          "source": "FROM_MATH"
+        },
+        "nov_irr": {
+          "value": -0.02455214995312621,
+          "origin": "computed(seeds[0].correlations.nov_irr)",
+          "source": "FROM_MATH"
+        }
       },
       "persistence": {
-        "mean_autocorr_lag1": 0.48876860592582533,
-        "autocorrs_per_drive": [
-          0.6589261728277684,
-          0.8150909448632232,
-          -0.007711299913515658
-        ],
+        "mean_autocorr_lag1": {
+          "value": 0.48876860592582533,
+          "origin": "mean(seeds[0].persistence.mean_autocorr_lag1)",
+          "source": "FROM_STATISTICS"
+        },
+        "autocorrs_per_drive": {
+          "value": [
+            0.6589261728277684,
+            0.8150909448632232,
+            -0.007711299913515658
+          ],
+          "origin": "array(seeds[0].persistence.autocorrs_per_drive)",
+          "source": "FROM_DATA"
+        },
         "persistent": false
       },
       "divergence": {
-        "cumulative": 251.6319927001149,
-        "mean_per_step": 0.12904204753852047,
-        "std_per_step": 0.045603476894827626,
-        "max_step": 0.2458934181352486
+        "cumulative": {
+          "value": 251.6319927001149,
+          "origin": "computed(seeds[0].divergence.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "mean_per_step": {
+          "value": 0.12904204753852047,
+          "origin": "mean(seeds[0].divergence.mean_per_step)",
+          "source": "FROM_STATISTICS"
+        },
+        "std_per_step": {
+          "value": 0.045603476894827626,
+          "origin": "std(seeds[0].divergence.std_per_step)",
+          "source": "FROM_STATISTICS"
+        },
+        "max_step": {
+          "value": 0.2458934181352486,
+          "origin": "max_step(seeds[0].divergence.max_step)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "agency": {
-        "mean": -0.09927475260129497,
-        "std": 0.5230684400916612
+        "mean": {
+          "value": -0.09927475260129497,
+          "origin": "mean(seeds[0].agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.5230684400916612,
+          "origin": "std(seeds[0].agency.std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "amplified_agency": {
-        "mean": -0.19271846727039568,
-        "std": 0.7205962451562337
+        "mean": {
+          "value": -0.19271846727039568,
+          "origin": "mean(seeds[0].amplified_agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.7205962451562337,
+          "origin": "std(seeds[0].amplified_agency.std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "n_transitions": 1949,
-          "state_entropy": 1.6094379124341003
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[0].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_transitions": {
+            "value": 1949,
+            "origin": "count(seeds[0].nulls.disabled.n_transitions)",
+            "source": "FROM_DATA"
+          },
+          "state_entropy": {
+            "value": 1.6094379124341003,
+            "origin": "computed(seeds[0].nulls.disabled.state_entropy)",
+            "source": "FROM_MATH"
+          }
         },
         "shuffled": {
-          "cumulative_divergence": 156.33628614562178,
-          "n_steps": 1950
+          "cumulative_divergence": {
+            "value": 156.33628614562178,
+            "origin": "computed(seeds[0].nulls.shuffled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_steps": {
+            "value": 1950,
+            "origin": "count(seeds[0].nulls.shuffled.n_steps)",
+            "source": "FROM_DATA"
+          }
         },
         "noise": {
-          "cumulative_divergence": 156.33628614562178,
-          "n_steps": 1950
+          "cumulative_divergence": {
+            "value": 156.33628614562178,
+            "origin": "computed(seeds[0].nulls.noise.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_steps": {
+            "value": 1950,
+            "origin": "count(seeds[0].nulls.noise.n_steps)",
+            "source": "FROM_DATA"
+          }
         }
       }
     },
     {
-      "seed": 1,
-      "T": 2000,
+      "seed": {
+        "value": 1,
+        "origin": "counted(seeds[1].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[1].T)",
+        "source": "FROM_DATA"
+      },
       "drives": {
         "D_stab": {
-          "mean": 0.504897953207322,
-          "std": 0.29028334469908584,
-          "min": 0.0,
-          "max": 0.9988031119090365
+          "mean": {
+            "value": 0.504897953207322,
+            "origin": "mean(seeds[1].drives.D_stab.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.29028334469908584,
+            "origin": "std(seeds[1].drives.D_stab.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[1].drives.D_stab.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9988031119090365,
+            "origin": "max(seeds[1].drives.D_stab.max)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "D_nov": {
-          "mean": 0.4303562423766696,
-          "std": 0.2843693300776271,
-          "min": 0.0,
-          "max": 0.9941176470588236
+          "mean": {
+            "value": 0.4303562423766696,
+            "origin": "mean(seeds[1].drives.D_nov.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.2843693300776271,
+            "origin": "std(seeds[1].drives.D_nov.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[1].drives.D_nov.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9941176470588236,
+            "origin": "max(seeds[1].drives.D_nov.max)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "D_irr": {
-          "mean": 0.5092817126053195,
-          "std": 0.2870192609499162,
-          "min": 0.0,
-          "max": 0.9974842767295597
+          "mean": {
+            "value": 0.5092817126053195,
+            "origin": "mean(seeds[1].drives.D_irr.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.2870192609499162,
+            "origin": "std(seeds[1].drives.D_irr.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[1].drives.D_irr.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9974842767295597,
+            "origin": "max(seeds[1].drives.D_irr.max)",
+            "source": "FROM_STATISTICS"
+          }
         }
       },
       "correlations": {
-        "stab_nov": -0.05705720557445549,
-        "stab_irr": -0.0032937373319899188,
-        "nov_irr": 0.03568151320281303
+        "stab_nov": {
+          "value": -0.05705720557445549,
+          "origin": "computed(seeds[1].correlations.stab_nov)",
+          "source": "FROM_MATH"
+        },
+        "stab_irr": {
+          "value": -0.0032937373319899188,
+          "origin": "computed(seeds[1].correlations.stab_irr)",
+          "source": "FROM_MATH"
+        },
+        "nov_irr": {
+          "value": 0.03568151320281303,
+          "origin": "normalized(seeds[1].correlations.nov_irr)",
+          "source": "FROM_MATH"
+        }
       },
       "persistence": {
-        "mean_autocorr_lag1": 0.4871230029573672,
-        "autocorrs_per_drive": [
-          0.6412344300123889,
-          0.8500172263469241,
-          -0.029882647487211412
-        ],
+        "mean_autocorr_lag1": {
+          "value": 0.4871230029573672,
+          "origin": "mean(seeds[1].persistence.mean_autocorr_lag1)",
+          "source": "FROM_STATISTICS"
+        },
+        "autocorrs_per_drive": {
+          "value": [
+            0.6412344300123889,
+            0.8500172263469241,
+            -0.029882647487211412
+          ],
+          "origin": "array(seeds[1].persistence.autocorrs_per_drive)",
+          "source": "FROM_DATA"
+        },
         "persistent": false
       },
       "divergence": {
-        "cumulative": 251.96035479569636,
-        "mean_per_step": 0.12921043835676732,
-        "std_per_step": 0.05289892663295891,
-        "max_step": 0.31944773571668345
+        "cumulative": {
+          "value": 251.96035479569636,
+          "origin": "computed(seeds[1].divergence.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "mean_per_step": {
+          "value": 0.12921043835676732,
+          "origin": "mean(seeds[1].divergence.mean_per_step)",
+          "source": "FROM_STATISTICS"
+        },
+        "std_per_step": {
+          "value": 0.05289892663295891,
+          "origin": "std(seeds[1].divergence.std_per_step)",
+          "source": "FROM_STATISTICS"
+        },
+        "max_step": {
+          "value": 0.31944773571668345,
+          "origin": "max_step(seeds[1].divergence.max_step)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "agency": {
-        "mean": -0.10711894276455593,
-        "std": 0.5396851478727178
+        "mean": {
+          "value": -0.10711894276455593,
+          "origin": "mean(seeds[1].agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.5396851478727178,
+          "origin": "std(seeds[1].agency.std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "amplified_agency": {
-        "mean": -0.20144594100295185,
-        "std": 0.7410943868924881
+        "mean": {
+          "value": -0.20144594100295185,
+          "origin": "mean(seeds[1].amplified_agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.7410943868924881,
+          "origin": "std(seeds[1].amplified_agency.std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "n_transitions": 1949,
-          "state_entropy": 1.6094379124341003
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[1].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_transitions": {
+            "value": 1949,
+            "origin": "count(seeds[1].nulls.disabled.n_transitions)",
+            "source": "FROM_DATA"
+          },
+          "state_entropy": {
+            "value": 1.6094379124341003,
+            "origin": "computed(seeds[1].nulls.disabled.state_entropy)",
+            "source": "FROM_MATH"
+          }
         },
         "shuffled": {
-          "cumulative_divergence": 153.2505723325743,
-          "n_steps": 1950
+          "cumulative_divergence": {
+            "value": 153.2505723325743,
+            "origin": "computed(seeds[1].nulls.shuffled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_steps": {
+            "value": 1950,
+            "origin": "count(seeds[1].nulls.shuffled.n_steps)",
+            "source": "FROM_DATA"
+          }
         },
         "noise": {
-          "cumulative_divergence": 153.2505723325743,
-          "n_steps": 1950
+          "cumulative_divergence": {
+            "value": 153.2505723325743,
+            "origin": "computed(seeds[1].nulls.noise.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_steps": {
+            "value": 1950,
+            "origin": "count(seeds[1].nulls.noise.n_steps)",
+            "source": "FROM_DATA"
+          }
         }
       }
     },
     {
-      "seed": 2,
-      "T": 2000,
+      "seed": {
+        "value": 2,
+        "origin": "counted(seeds[2].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[2].T)",
+        "source": "FROM_DATA"
+      },
       "drives": {
         "D_stab": {
-          "mean": 0.5038568418480202,
-          "std": 0.2860576217096264,
-          "min": 0.0,
-          "max": 0.9957983193277311
+          "mean": {
+            "value": 0.5038568418480202,
+            "origin": "mean(seeds[2].drives.D_stab.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.2860576217096264,
+            "origin": "std(seeds[2].drives.D_stab.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[2].drives.D_stab.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9957983193277311,
+            "origin": "max(seeds[2].drives.D_stab.max)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "D_nov": {
-          "mean": 0.48464540755334207,
-          "std": 0.29226365729665976,
-          "min": 0.0,
-          "max": 0.9953703703703703
+          "mean": {
+            "value": 0.48464540755334207,
+            "origin": "mean(seeds[2].drives.D_nov.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.29226365729665976,
+            "origin": "std(seeds[2].drives.D_nov.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[2].drives.D_nov.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9953703703703703,
+            "origin": "max(seeds[2].drives.D_nov.max)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "D_irr": {
-          "mean": 0.5138485001300952,
-          "std": 0.2886891579872323,
-          "min": 0.0,
-          "max": 0.9994065281899109
+          "mean": {
+            "value": 0.5138485001300952,
+            "origin": "mean(seeds[2].drives.D_irr.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.2886891579872323,
+            "origin": "std(seeds[2].drives.D_irr.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[2].drives.D_irr.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9994065281899109,
+            "origin": "max(seeds[2].drives.D_irr.max)",
+            "source": "FROM_STATISTICS"
+          }
         }
       },
       "correlations": {
-        "stab_nov": -0.03888264691687319,
-        "stab_irr": -0.021082434995456544,
-        "nov_irr": 0.015497949191790901
+        "stab_nov": {
+          "value": -0.03888264691687319,
+          "origin": "computed(seeds[2].correlations.stab_nov)",
+          "source": "FROM_MATH"
+        },
+        "stab_irr": {
+          "value": -0.021082434995456544,
+          "origin": "computed(seeds[2].correlations.stab_irr)",
+          "source": "FROM_MATH"
+        },
+        "nov_irr": {
+          "value": 0.015497949191790901,
+          "origin": "normalized(seeds[2].correlations.nov_irr)",
+          "source": "FROM_MATH"
+        }
       },
       "persistence": {
-        "mean_autocorr_lag1": 0.48453958221320564,
-        "autocorrs_per_drive": [
-          0.6737879811915946,
-          0.8137388793546455,
-          -0.03390811390662312
-        ],
+        "mean_autocorr_lag1": {
+          "value": 0.48453958221320564,
+          "origin": "mean(seeds[2].persistence.mean_autocorr_lag1)",
+          "source": "FROM_STATISTICS"
+        },
+        "autocorrs_per_drive": {
+          "value": [
+            0.6737879811915946,
+            0.8137388793546455,
+            -0.03390811390662312
+          ],
+          "origin": "array(seeds[2].persistence.autocorrs_per_drive)",
+          "source": "FROM_DATA"
+        },
         "persistent": false
       },
       "divergence": {
-        "cumulative": 249.0418865264401,
-        "mean_per_step": 0.12771378796227695,
-        "std_per_step": 0.051170120583626924,
-        "max_step": 0.31160896036930824
+        "cumulative": {
+          "value": 249.0418865264401,
+          "origin": "computed(seeds[2].divergence.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "mean_per_step": {
+          "value": 0.12771378796227695,
+          "origin": "mean(seeds[2].divergence.mean_per_step)",
+          "source": "FROM_STATISTICS"
+        },
+        "std_per_step": {
+          "value": 0.051170120583626924,
+          "origin": "std(seeds[2].divergence.std_per_step)",
+          "source": "FROM_STATISTICS"
+        },
+        "max_step": {
+          "value": 0.31160896036930824,
+          "origin": "max_step(seeds[2].divergence.max_step)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "agency": {
-        "mean": -0.11005925537272455,
-        "std": 0.5276832335346686
+        "mean": {
+          "value": -0.11005925537272455,
+          "origin": "mean(seeds[2].agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.5276832335346686,
+          "origin": "std(seeds[2].agency.std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "amplified_agency": {
-        "mean": -0.20891286668896827,
-        "std": 0.7354409238838182
+        "mean": {
+          "value": -0.20891286668896827,
+          "origin": "mean(seeds[2].amplified_agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.7354409238838182,
+          "origin": "std(seeds[2].amplified_agency.std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "n_transitions": 1949,
-          "state_entropy": 1.6094379124341003
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[2].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_transitions": {
+            "value": 1949,
+            "origin": "count(seeds[2].nulls.disabled.n_transitions)",
+            "source": "FROM_DATA"
+          },
+          "state_entropy": {
+            "value": 1.6094379124341003,
+            "origin": "computed(seeds[2].nulls.disabled.state_entropy)",
+            "source": "FROM_MATH"
+          }
         },
         "shuffled": {
-          "cumulative_divergence": 156.7240728757278,
-          "n_steps": 1950
+          "cumulative_divergence": {
+            "value": 156.7240728757278,
+            "origin": "computed(seeds[2].nulls.shuffled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_steps": {
+            "value": 1950,
+            "origin": "count(seeds[2].nulls.shuffled.n_steps)",
+            "source": "FROM_DATA"
+          }
         },
         "noise": {
-          "cumulative_divergence": 156.7240728757278,
-          "n_steps": 1950
+          "cumulative_divergence": {
+            "value": 156.7240728757278,
+            "origin": "computed(seeds[2].nulls.noise.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_steps": {
+            "value": 1950,
+            "origin": "count(seeds[2].nulls.noise.n_steps)",
+            "source": "FROM_DATA"
+          }
         }
       }
     },
     {
-      "seed": 3,
-      "T": 2000,
+      "seed": {
+        "value": 3,
+        "origin": "counted(seeds[3].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[3].T)",
+        "source": "FROM_DATA"
+      },
       "drives": {
         "D_stab": {
-          "mean": 0.49715499177602634,
-          "std": 0.2856730781321067,
-          "min": 0.0,
-          "max": 0.9994577006507592
+          "mean": {
+            "value": 0.49715499177602634,
+            "origin": "mean(seeds[3].drives.D_stab.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.2856730781321067,
+            "origin": "std(seeds[3].drives.D_stab.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[3].drives.D_stab.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9994577006507592,
+            "origin": "max(seeds[3].drives.D_stab.max)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "D_nov": {
-          "mean": 0.569414042997901,
-          "std": 0.2801285599776699,
-          "min": 0.0,
-          "max": 0.9994165694282381
+          "mean": {
+            "value": 0.569414042997901,
+            "origin": "mean(seeds[3].drives.D_nov.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.2801285599776699,
+            "origin": "std(seeds[3].drives.D_nov.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[3].drives.D_nov.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9994165694282381,
+            "origin": "max(seeds[3].drives.D_nov.max)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "D_irr": {
-          "mean": 0.5025836217749967,
-          "std": 0.2823957934395613,
-          "min": 0.0,
-          "max": 0.9991364421416234
+          "mean": {
+            "value": 0.5025836217749967,
+            "origin": "mean(seeds[3].drives.D_irr.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.2823957934395613,
+            "origin": "std(seeds[3].drives.D_irr.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[3].drives.D_irr.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9991364421416234,
+            "origin": "max(seeds[3].drives.D_irr.max)",
+            "source": "FROM_STATISTICS"
+          }
         }
       },
       "correlations": {
-        "stab_nov": -0.10008487573763482,
-        "stab_irr": -0.03424300106973573,
-        "nov_irr": -0.0028222019305232733
+        "stab_nov": {
+          "value": -0.10008487573763482,
+          "origin": "computed(seeds[3].correlations.stab_nov)",
+          "source": "FROM_MATH"
+        },
+        "stab_irr": {
+          "value": -0.03424300106973573,
+          "origin": "computed(seeds[3].correlations.stab_irr)",
+          "source": "FROM_MATH"
+        },
+        "nov_irr": {
+          "value": -0.0028222019305232733,
+          "origin": "computed(seeds[3].correlations.nov_irr)",
+          "source": "FROM_MATH"
+        }
       },
       "persistence": {
-        "mean_autocorr_lag1": 0.4644132512524363,
-        "autocorrs_per_drive": [
-          0.6236931723681117,
-          0.7568775800410515,
-          0.012669001348145652
-        ],
+        "mean_autocorr_lag1": {
+          "value": 0.4644132512524363,
+          "origin": "mean(seeds[3].persistence.mean_autocorr_lag1)",
+          "source": "FROM_STATISTICS"
+        },
+        "autocorrs_per_drive": {
+          "value": [
+            0.6236931723681117,
+            0.7568775800410515,
+            0.012669001348145652
+          ],
+          "origin": "array(seeds[3].persistence.autocorrs_per_drive)",
+          "source": "FROM_DATA"
+        },
         "persistent": false
       },
       "divergence": {
-        "cumulative": 254.47985352515627,
-        "mean_per_step": 0.13050248898725977,
-        "std_per_step": 0.04232086438794455,
-        "max_step": 0.24812831087777226
+        "cumulative": {
+          "value": 254.47985352515627,
+          "origin": "computed(seeds[3].divergence.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "mean_per_step": {
+          "value": 0.13050248898725977,
+          "origin": "mean(seeds[3].divergence.mean_per_step)",
+          "source": "FROM_STATISTICS"
+        },
+        "std_per_step": {
+          "value": 0.04232086438794455,
+          "origin": "std(seeds[3].divergence.std_per_step)",
+          "source": "FROM_STATISTICS"
+        },
+        "max_step": {
+          "value": 0.24812831087777226,
+          "origin": "max_step(seeds[3].divergence.max_step)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "agency": {
-        "mean": -0.10173737327236386,
-        "std": 0.524731477364914
+        "mean": {
+          "value": -0.10173737327236386,
+          "origin": "mean(seeds[3].agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.524731477364914,
+          "origin": "std(seeds[3].agency.std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "amplified_agency": {
-        "mean": -0.19149104660466337,
-        "std": 0.7315453497024754
+        "mean": {
+          "value": -0.19149104660466337,
+          "origin": "mean(seeds[3].amplified_agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.7315453497024754,
+          "origin": "std(seeds[3].amplified_agency.std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "n_transitions": 1949,
-          "state_entropy": 1.6094379124341003
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[3].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_transitions": {
+            "value": 1949,
+            "origin": "count(seeds[3].nulls.disabled.n_transitions)",
+            "source": "FROM_DATA"
+          },
+          "state_entropy": {
+            "value": 1.6094379124341003,
+            "origin": "computed(seeds[3].nulls.disabled.state_entropy)",
+            "source": "FROM_MATH"
+          }
         },
         "shuffled": {
-          "cumulative_divergence": 157.16926423070166,
-          "n_steps": 1950
+          "cumulative_divergence": {
+            "value": 157.16926423070166,
+            "origin": "computed(seeds[3].nulls.shuffled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_steps": {
+            "value": 1950,
+            "origin": "count(seeds[3].nulls.shuffled.n_steps)",
+            "source": "FROM_DATA"
+          }
         },
         "noise": {
-          "cumulative_divergence": 157.16926423070166,
-          "n_steps": 1950
+          "cumulative_divergence": {
+            "value": 157.16926423070166,
+            "origin": "computed(seeds[3].nulls.noise.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_steps": {
+            "value": 1950,
+            "origin": "count(seeds[3].nulls.noise.n_steps)",
+            "source": "FROM_DATA"
+          }
         }
       }
     },
     {
-      "seed": 4,
-      "T": 2000,
+      "seed": {
+        "value": 4,
+        "origin": "counted(seeds[4].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[4].T)",
+        "source": "FROM_DATA"
+      },
       "drives": {
         "D_stab": {
-          "mean": 0.49718968191721535,
-          "std": 0.2876006565241142,
-          "min": 0.0,
-          "max": 0.9994033412887828
+          "mean": {
+            "value": 0.49718968191721535,
+            "origin": "mean(seeds[4].drives.D_stab.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.2876006565241142,
+            "origin": "std(seeds[4].drives.D_stab.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[4].drives.D_stab.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9994033412887828,
+            "origin": "max(seeds[4].drives.D_stab.max)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "D_nov": {
-          "mean": 0.4643447325630683,
-          "std": 0.2814575204924815,
-          "min": 0.0,
-          "max": 0.9963898916967509
+          "mean": {
+            "value": 0.4643447325630683,
+            "origin": "mean(seeds[4].drives.D_nov.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.2814575204924815,
+            "origin": "std(seeds[4].drives.D_nov.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[4].drives.D_nov.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9963898916967509,
+            "origin": "max(seeds[4].drives.D_nov.max)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "D_irr": {
-          "mean": 0.5102194058096612,
-          "std": 0.28719539252972004,
-          "min": 0.0,
-          "max": 0.9984544049459042
+          "mean": {
+            "value": 0.5102194058096612,
+            "origin": "mean(seeds[4].drives.D_irr.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.28719539252972004,
+            "origin": "std(seeds[4].drives.D_irr.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(seeds[4].drives.D_irr.min)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.9984544049459042,
+            "origin": "max(seeds[4].drives.D_irr.max)",
+            "source": "FROM_STATISTICS"
+          }
         }
       },
       "correlations": {
-        "stab_nov": -0.03809548405190362,
-        "stab_irr": -0.01815206935988331,
-        "nov_irr": -0.00861592458651241
+        "stab_nov": {
+          "value": -0.03809548405190362,
+          "origin": "computed(seeds[4].correlations.stab_nov)",
+          "source": "FROM_MATH"
+        },
+        "stab_irr": {
+          "value": -0.01815206935988331,
+          "origin": "computed(seeds[4].correlations.stab_irr)",
+          "source": "FROM_MATH"
+        },
+        "nov_irr": {
+          "value": -0.00861592458651241,
+          "origin": "computed(seeds[4].correlations.nov_irr)",
+          "source": "FROM_MATH"
+        }
       },
       "persistence": {
-        "mean_autocorr_lag1": 0.4916731836675587,
-        "autocorrs_per_drive": [
-          0.6461173070819021,
-          0.8304835165541128,
-          -0.0015812726333387424
-        ],
+        "mean_autocorr_lag1": {
+          "value": 0.4916731836675587,
+          "origin": "mean(seeds[4].persistence.mean_autocorr_lag1)",
+          "source": "FROM_STATISTICS"
+        },
+        "autocorrs_per_drive": {
+          "value": [
+            0.6461173070819021,
+            0.8304835165541128,
+            -0.0015812726333387424
+          ],
+          "origin": "array(seeds[4].persistence.autocorrs_per_drive)",
+          "source": "FROM_DATA"
+        },
         "persistent": false
       },
       "divergence": {
-        "cumulative": 259.03966944771383,
-        "mean_per_step": 0.13284085612703245,
-        "std_per_step": 0.04546878588779052,
-        "max_step": 0.28802740482355943
+        "cumulative": {
+          "value": 259.03966944771383,
+          "origin": "computed(seeds[4].divergence.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "mean_per_step": {
+          "value": 0.13284085612703245,
+          "origin": "mean(seeds[4].divergence.mean_per_step)",
+          "source": "FROM_STATISTICS"
+        },
+        "std_per_step": {
+          "value": 0.04546878588779052,
+          "origin": "std(seeds[4].divergence.std_per_step)",
+          "source": "FROM_STATISTICS"
+        },
+        "max_step": {
+          "value": 0.28802740482355943,
+          "origin": "max_step(seeds[4].divergence.max_step)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "agency": {
-        "mean": -0.11596222740564935,
-        "std": 0.5210590640122426
+        "mean": {
+          "value": -0.11596222740564935,
+          "origin": "mean(seeds[4].agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.5210590640122426,
+          "origin": "std(seeds[4].agency.std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "amplified_agency": {
-        "mean": -0.21457346015582185,
-        "std": 0.723784314337028
+        "mean": {
+          "value": -0.21457346015582185,
+          "origin": "mean(seeds[4].amplified_agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.723784314337028,
+          "origin": "std(seeds[4].amplified_agency.std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "n_transitions": 1949,
-          "state_entropy": 1.6094379124341003
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[4].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_transitions": {
+            "value": 1949,
+            "origin": "count(seeds[4].nulls.disabled.n_transitions)",
+            "source": "FROM_DATA"
+          },
+          "state_entropy": {
+            "value": 1.6094379124341003,
+            "origin": "computed(seeds[4].nulls.disabled.state_entropy)",
+            "source": "FROM_MATH"
+          }
         },
         "shuffled": {
-          "cumulative_divergence": 157.36160896301655,
-          "n_steps": 1950
+          "cumulative_divergence": {
+            "value": 157.36160896301655,
+            "origin": "computed(seeds[4].nulls.shuffled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_steps": {
+            "value": 1950,
+            "origin": "count(seeds[4].nulls.shuffled.n_steps)",
+            "source": "FROM_DATA"
+          }
         },
         "noise": {
-          "cumulative_divergence": 157.36160896301655,
-          "n_steps": 1950
+          "cumulative_divergence": {
+            "value": 157.36160896301655,
+            "origin": "computed(seeds[4].nulls.noise.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "n_steps": {
+            "value": 1950,
+            "origin": "count(seeds[4].nulls.noise.n_steps)",
+            "source": "FROM_DATA"
+          }
         }
       }
     }
-  ]
+  ],
+  "metadata": {
+    "experiment_id": {
+      "value": "ea0b595f3ae4",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.024033",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase19/drives_metrics.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.024477",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 418,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 428,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 418,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 428,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
 }

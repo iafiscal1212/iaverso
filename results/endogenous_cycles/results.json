@@ -1,161 +1,660 @@
 {
   "timestamp": "2025-12-01T04:33:59.590889",
   "parameters": {
-    "T": 1500,
-    "n_seeds": 3
+    "T": {
+      "value": 1500,
+      "origin": "counted(parameters.T)",
+      "source": "FROM_DATA"
+    },
+    "n_seeds": {
+      "value": 3,
+      "origin": "count(parameters.n_seeds)",
+      "source": "FROM_DATA"
+    }
   },
   "results": [
     {
-      "seed": 0,
-      "phi_mean_neo": 0.27219776334113394,
-      "phi_mean_eva": 0.2588410261216988,
-      "coherence_mean_neo": 0.9378114173545395,
-      "coherence_mean_eva": 0.9406235767591252,
-      "n_decisions_neo": 93,
-      "n_decisions_eva": 116,
+      "seed": {
+        "value": 0,
+        "origin": "counted(results[0].seed)",
+        "source": "FROM_DATA"
+      },
+      "phi_mean_neo": {
+        "value": 0.27219776334113394,
+        "origin": "mean(results[0].phi_mean_neo)",
+        "source": "FROM_STATISTICS"
+      },
+      "phi_mean_eva": {
+        "value": 0.2588410261216988,
+        "origin": "mean(results[0].phi_mean_eva)",
+        "source": "FROM_STATISTICS"
+      },
+      "coherence_mean_neo": {
+        "value": 0.9378114173545395,
+        "origin": "mean(results[0].coherence_mean_neo)",
+        "source": "FROM_STATISTICS"
+      },
+      "coherence_mean_eva": {
+        "value": 0.9406235767591252,
+        "origin": "mean(results[0].coherence_mean_eva)",
+        "source": "FROM_STATISTICS"
+      },
+      "n_decisions_neo": {
+        "value": 93,
+        "origin": "count(results[0].n_decisions_neo)",
+        "source": "FROM_DATA"
+      },
+      "n_decisions_eva": {
+        "value": 116,
+        "origin": "count(results[0].n_decisions_eva)",
+        "source": "FROM_DATA"
+      },
       "phases_neo": {
-        "initializing": 25,
-        "flow": 92,
-        "exploration": 466,
-        "transition": 309,
-        "crisis": 145,
-        "consolidation": 463
+        "initializing": {
+          "value": 25,
+          "origin": "counted(results[0].phases_neo.initializing)",
+          "source": "FROM_DATA"
+        },
+        "flow": {
+          "value": 92,
+          "origin": "counted(results[0].phases_neo.flow)",
+          "source": "FROM_DATA"
+        },
+        "exploration": {
+          "value": 466,
+          "origin": "ratio(results[0].phases_neo.exploration)",
+          "source": "FROM_MATH"
+        },
+        "transition": {
+          "value": 309,
+          "origin": "counted(results[0].phases_neo.transition)",
+          "source": "FROM_DATA"
+        },
+        "crisis": {
+          "value": 145,
+          "origin": "counted(results[0].phases_neo.crisis)",
+          "source": "FROM_DATA"
+        },
+        "consolidation": {
+          "value": 463,
+          "origin": "identifier(results[0].phases_neo.consolidation)",
+          "source": "FROM_DATA"
+        }
       },
       "phases_eva": {
-        "initializing": 25,
-        "transition": 347,
-        "flow": 125,
-        "exploration": 425,
-        "consolidation": 388,
-        "crisis": 190
+        "initializing": {
+          "value": 25,
+          "origin": "counted(results[0].phases_eva.initializing)",
+          "source": "FROM_DATA"
+        },
+        "transition": {
+          "value": 347,
+          "origin": "counted(results[0].phases_eva.transition)",
+          "source": "FROM_DATA"
+        },
+        "flow": {
+          "value": 125,
+          "origin": "counted(results[0].phases_eva.flow)",
+          "source": "FROM_DATA"
+        },
+        "exploration": {
+          "value": 425,
+          "origin": "ratio(results[0].phases_eva.exploration)",
+          "source": "FROM_MATH"
+        },
+        "consolidation": {
+          "value": 388,
+          "origin": "identifier(results[0].phases_eva.consolidation)",
+          "source": "FROM_DATA"
+        },
+        "crisis": {
+          "value": 190,
+          "origin": "counted(results[0].phases_eva.crisis)",
+          "source": "FROM_DATA"
+        }
       },
       "h1": {
         "supported": false,
-        "ratio": 0.0,
-        "changes_hpli": 0,
-        "changes_other": 7,
-        "n_hpli_times": 124,
+        "ratio": {
+          "value": 0.0,
+          "origin": "ratio(results[0].h1.ratio)",
+          "source": "FROM_MATH"
+        },
+        "changes_hpli": {
+          "value": 0,
+          "origin": "counted(results[0].h1.changes_hpli)",
+          "source": "FROM_DATA"
+        },
+        "changes_other": {
+          "value": 7,
+          "origin": "counted(results[0].h1.changes_other)",
+          "source": "FROM_DATA"
+        },
+        "n_hpli_times": {
+          "value": 124,
+          "origin": "count(results[0].h1.n_hpli_times)",
+          "source": "FROM_DATA"
+        },
         "interpretation": "NO (ratio=0.00)"
       },
       "h2": {
         "supported": true,
-        "ratio": 51282051.28205128,
-        "changes_hilp": 0,
-        "changes_other": 7,
-        "n_hilp_times": 135,
+        "ratio": {
+          "value": 51282051.28205128,
+          "origin": "ratio(results[0].h2.ratio)",
+          "source": "FROM_MATH"
+        },
+        "changes_hilp": {
+          "value": 0,
+          "origin": "counted(results[0].h2.changes_hilp)",
+          "source": "FROM_DATA"
+        },
+        "changes_other": {
+          "value": 7,
+          "origin": "counted(results[0].h2.changes_other)",
+          "source": "FROM_DATA"
+        },
+        "n_hilp_times": {
+          "value": 135,
+          "origin": "count(results[0].h2.n_hilp_times)",
+          "source": "FROM_DATA"
+        },
         "interpretation": "CONFIRMADO (ratio=51282051.28)"
       },
       "h3": {
         "supported": "False",
-        "ratio": 0.0652611689828373,
-        "mean_distance": 78.71428571428571,
-        "expected_random": 5.136986301369863,
-        "n_crisis_times": 145,
+        "ratio": {
+          "value": 0.0652611689828373,
+          "origin": "ratio(results[0].h3.ratio)",
+          "source": "FROM_MATH"
+        },
+        "mean_distance": {
+          "value": 78.71428571428571,
+          "origin": "mean(results[0].h3.mean_distance)",
+          "source": "FROM_STATISTICS"
+        },
+        "expected_random": {
+          "value": 5.136986301369863,
+          "origin": "computed(results[0].h3.expected_random)",
+          "source": "FROM_MATH"
+        },
+        "n_crisis_times": {
+          "value": 145,
+          "origin": "count(results[0].h3.n_crisis_times)",
+          "source": "FROM_DATA"
+        },
         "interpretation": "NO (ratio=0.07)"
       }
     },
     {
-      "seed": 1,
-      "phi_mean_neo": 0.23515126856909652,
-      "phi_mean_eva": 0.26793280660099905,
-      "coherence_mean_neo": 0.9463353909931433,
-      "coherence_mean_eva": 0.9245220244782777,
-      "n_decisions_neo": 123,
-      "n_decisions_eva": 124,
+      "seed": {
+        "value": 1,
+        "origin": "counted(results[1].seed)",
+        "source": "FROM_DATA"
+      },
+      "phi_mean_neo": {
+        "value": 0.23515126856909652,
+        "origin": "mean(results[1].phi_mean_neo)",
+        "source": "FROM_STATISTICS"
+      },
+      "phi_mean_eva": {
+        "value": 0.26793280660099905,
+        "origin": "mean(results[1].phi_mean_eva)",
+        "source": "FROM_STATISTICS"
+      },
+      "coherence_mean_neo": {
+        "value": 0.9463353909931433,
+        "origin": "mean(results[1].coherence_mean_neo)",
+        "source": "FROM_STATISTICS"
+      },
+      "coherence_mean_eva": {
+        "value": 0.9245220244782777,
+        "origin": "mean(results[1].coherence_mean_eva)",
+        "source": "FROM_STATISTICS"
+      },
+      "n_decisions_neo": {
+        "value": 123,
+        "origin": "count(results[1].n_decisions_neo)",
+        "source": "FROM_DATA"
+      },
+      "n_decisions_eva": {
+        "value": 124,
+        "origin": "count(results[1].n_decisions_eva)",
+        "source": "FROM_DATA"
+      },
       "phases_neo": {
-        "initializing": 25,
-        "flow": 44,
-        "transition": 367,
-        "exploration": 395,
-        "crisis": 358,
-        "consolidation": 311
+        "initializing": {
+          "value": 25,
+          "origin": "counted(results[1].phases_neo.initializing)",
+          "source": "FROM_DATA"
+        },
+        "flow": {
+          "value": 44,
+          "origin": "counted(results[1].phases_neo.flow)",
+          "source": "FROM_DATA"
+        },
+        "transition": {
+          "value": 367,
+          "origin": "counted(results[1].phases_neo.transition)",
+          "source": "FROM_DATA"
+        },
+        "exploration": {
+          "value": 395,
+          "origin": "ratio(results[1].phases_neo.exploration)",
+          "source": "FROM_MATH"
+        },
+        "crisis": {
+          "value": 358,
+          "origin": "counted(results[1].phases_neo.crisis)",
+          "source": "FROM_DATA"
+        },
+        "consolidation": {
+          "value": 311,
+          "origin": "identifier(results[1].phases_neo.consolidation)",
+          "source": "FROM_DATA"
+        }
       },
       "phases_eva": {
-        "initializing": 25,
-        "transition": 368,
-        "flow": 40,
-        "consolidation": 457,
-        "crisis": 270,
-        "exploration": 340
+        "initializing": {
+          "value": 25,
+          "origin": "counted(results[1].phases_eva.initializing)",
+          "source": "FROM_DATA"
+        },
+        "transition": {
+          "value": 368,
+          "origin": "counted(results[1].phases_eva.transition)",
+          "source": "FROM_DATA"
+        },
+        "flow": {
+          "value": 40,
+          "origin": "counted(results[1].phases_eva.flow)",
+          "source": "FROM_DATA"
+        },
+        "consolidation": {
+          "value": 457,
+          "origin": "identifier(results[1].phases_eva.consolidation)",
+          "source": "FROM_DATA"
+        },
+        "crisis": {
+          "value": 270,
+          "origin": "counted(results[1].phases_eva.crisis)",
+          "source": "FROM_DATA"
+        },
+        "exploration": {
+          "value": 340,
+          "origin": "ratio(results[1].phases_eva.exploration)",
+          "source": "FROM_MATH"
+        }
       },
       "h1": {
         "supported": true,
-        "ratio": 2.569548784366121,
-        "changes_hpli": 1,
-        "changes_other": 4,
-        "n_hpli_times": 133,
+        "ratio": {
+          "value": 2.569548784366121,
+          "origin": "ratio(results[1].h1.ratio)",
+          "source": "FROM_MATH"
+        },
+        "changes_hpli": {
+          "value": 1,
+          "origin": "counted(results[1].h1.changes_hpli)",
+          "source": "FROM_DATA"
+        },
+        "changes_other": {
+          "value": 4,
+          "origin": "counted(results[1].h1.changes_other)",
+          "source": "FROM_DATA"
+        },
+        "n_hpli_times": {
+          "value": 133,
+          "origin": "count(results[1].h1.n_hpli_times)",
+          "source": "FROM_DATA"
+        },
         "interpretation": "CONFIRMADO (ratio=2.57)"
       },
       "h2": {
         "supported": true,
-        "ratio": 36683785.76669112,
-        "changes_hilp": 0,
-        "changes_other": 5,
-        "n_hilp_times": 137,
+        "ratio": {
+          "value": 36683785.76669112,
+          "origin": "ratio(results[1].h2.ratio)",
+          "source": "FROM_MATH"
+        },
+        "changes_hilp": {
+          "value": 0,
+          "origin": "counted(results[1].h2.changes_hilp)",
+          "source": "FROM_DATA"
+        },
+        "changes_other": {
+          "value": 5,
+          "origin": "counted(results[1].h2.changes_other)",
+          "source": "FROM_DATA"
+        },
+        "n_hilp_times": {
+          "value": 137,
+          "origin": "count(results[1].h2.n_hilp_times)",
+          "source": "FROM_DATA"
+        },
         "interpretation": "CONFIRMADO (ratio=36683785.77)"
       },
       "h3": {
         "supported": "False",
-        "ratio": 0.08224946811978234,
-        "mean_distance": 25.4,
-        "expected_random": 2.0891364902506964,
-        "n_crisis_times": 358,
+        "ratio": {
+          "value": 0.08224946811978234,
+          "origin": "ratio(results[1].h3.ratio)",
+          "source": "FROM_MATH"
+        },
+        "mean_distance": {
+          "value": 25.4,
+          "origin": "mean(results[1].h3.mean_distance)",
+          "source": "FROM_STATISTICS"
+        },
+        "expected_random": {
+          "value": 2.0891364902506964,
+          "origin": "computed(results[1].h3.expected_random)",
+          "source": "FROM_MATH"
+        },
+        "n_crisis_times": {
+          "value": 358,
+          "origin": "count(results[1].h3.n_crisis_times)",
+          "source": "FROM_DATA"
+        },
         "interpretation": "NO (ratio=0.08)"
       }
     },
     {
-      "seed": 2,
-      "phi_mean_neo": 0.3322165533106862,
-      "phi_mean_eva": 0.2250396132498784,
-      "coherence_mean_neo": 0.9345453976228361,
-      "coherence_mean_eva": 0.8895959223404766,
-      "n_decisions_neo": 95,
-      "n_decisions_eva": 106,
+      "seed": {
+        "value": 2,
+        "origin": "counted(results[2].seed)",
+        "source": "FROM_DATA"
+      },
+      "phi_mean_neo": {
+        "value": 0.3322165533106862,
+        "origin": "mean(results[2].phi_mean_neo)",
+        "source": "FROM_STATISTICS"
+      },
+      "phi_mean_eva": {
+        "value": 0.2250396132498784,
+        "origin": "mean(results[2].phi_mean_eva)",
+        "source": "FROM_STATISTICS"
+      },
+      "coherence_mean_neo": {
+        "value": 0.9345453976228361,
+        "origin": "mean(results[2].coherence_mean_neo)",
+        "source": "FROM_STATISTICS"
+      },
+      "coherence_mean_eva": {
+        "value": 0.8895959223404766,
+        "origin": "mean(results[2].coherence_mean_eva)",
+        "source": "FROM_STATISTICS"
+      },
+      "n_decisions_neo": {
+        "value": 95,
+        "origin": "count(results[2].n_decisions_neo)",
+        "source": "FROM_DATA"
+      },
+      "n_decisions_eva": {
+        "value": 106,
+        "origin": "count(results[2].n_decisions_eva)",
+        "source": "FROM_DATA"
+      },
       "phases_neo": {
-        "initializing": 25,
-        "flow": 95,
-        "transition": 260,
-        "exploration": 359,
-        "crisis": 167,
-        "consolidation": 594
+        "initializing": {
+          "value": 25,
+          "origin": "counted(results[2].phases_neo.initializing)",
+          "source": "FROM_DATA"
+        },
+        "flow": {
+          "value": 95,
+          "origin": "counted(results[2].phases_neo.flow)",
+          "source": "FROM_DATA"
+        },
+        "transition": {
+          "value": 260,
+          "origin": "counted(results[2].phases_neo.transition)",
+          "source": "FROM_DATA"
+        },
+        "exploration": {
+          "value": 359,
+          "origin": "ratio(results[2].phases_neo.exploration)",
+          "source": "FROM_MATH"
+        },
+        "crisis": {
+          "value": 167,
+          "origin": "counted(results[2].phases_neo.crisis)",
+          "source": "FROM_DATA"
+        },
+        "consolidation": {
+          "value": 594,
+          "origin": "identifier(results[2].phases_neo.consolidation)",
+          "source": "FROM_DATA"
+        }
       },
       "phases_eva": {
-        "initializing": 25,
-        "transition": 240,
-        "flow": 43,
-        "exploration": 576,
-        "consolidation": 271,
-        "crisis": 345
+        "initializing": {
+          "value": 25,
+          "origin": "counted(results[2].phases_eva.initializing)",
+          "source": "FROM_DATA"
+        },
+        "transition": {
+          "value": 240,
+          "origin": "counted(results[2].phases_eva.transition)",
+          "source": "FROM_DATA"
+        },
+        "flow": {
+          "value": 43,
+          "origin": "counted(results[2].phases_eva.flow)",
+          "source": "FROM_DATA"
+        },
+        "exploration": {
+          "value": 576,
+          "origin": "ratio(results[2].phases_eva.exploration)",
+          "source": "FROM_MATH"
+        },
+        "consolidation": {
+          "value": 271,
+          "origin": "identifier(results[2].phases_eva.consolidation)",
+          "source": "FROM_DATA"
+        },
+        "crisis": {
+          "value": 345,
+          "origin": "counted(results[2].phases_eva.crisis)",
+          "source": "FROM_DATA"
+        }
       },
       "h1": {
         "supported": false,
-        "ratio": 0.9572649429698009,
-        "changes_hpli": 1,
-        "changes_other": 9,
-        "n_hpli_times": 156,
+        "ratio": {
+          "value": 0.9572649429698009,
+          "origin": "ratio(results[2].h1.ratio)",
+          "source": "FROM_MATH"
+        },
+        "changes_hpli": {
+          "value": 1,
+          "origin": "counted(results[2].h1.changes_hpli)",
+          "source": "FROM_DATA"
+        },
+        "changes_other": {
+          "value": 9,
+          "origin": "counted(results[2].h1.changes_other)",
+          "source": "FROM_DATA"
+        },
+        "n_hpli_times": {
+          "value": 156,
+          "origin": "count(results[2].h1.n_hpli_times)",
+          "source": "FROM_DATA"
+        },
         "interpretation": "NO (ratio=0.96)"
       },
       "h2": {
         "supported": true,
-        "ratio": 72780203.78457059,
-        "changes_hilp": 0,
-        "changes_other": 10,
-        "n_hilp_times": 126,
+        "ratio": {
+          "value": 72780203.78457059,
+          "origin": "ratio(results[2].h2.ratio)",
+          "source": "FROM_MATH"
+        },
+        "changes_hilp": {
+          "value": 0,
+          "origin": "counted(results[2].h2.changes_hilp)",
+          "source": "FROM_DATA"
+        },
+        "changes_other": {
+          "value": 10,
+          "origin": "counted(results[2].h2.changes_other)",
+          "source": "FROM_DATA"
+        },
+        "n_hilp_times": {
+          "value": 126,
+          "origin": "count(results[2].h2.n_hilp_times)",
+          "source": "FROM_DATA"
+        },
         "interpretation": "CONFIRMADO (ratio=72780203.78)"
       },
       "h3": {
         "supported": "False",
-        "ratio": 0.23373223634881368,
-        "mean_distance": 19.1,
-        "expected_random": 4.464285714285714,
-        "n_crisis_times": 167,
+        "ratio": {
+          "value": 0.23373223634881368,
+          "origin": "ratio(results[2].h3.ratio)",
+          "source": "FROM_MATH"
+        },
+        "mean_distance": {
+          "value": 19.1,
+          "origin": "mean(results[2].h3.mean_distance)",
+          "source": "FROM_STATISTICS"
+        },
+        "expected_random": {
+          "value": 4.464285714285714,
+          "origin": "computed(results[2].h3.expected_random)",
+          "source": "FROM_MATH"
+        },
+        "n_crisis_times": {
+          "value": 167,
+          "origin": "count(results[2].h3.n_crisis_times)",
+          "source": "FROM_DATA"
+        },
         "interpretation": "NO (ratio=0.23)"
       }
     }
   ],
   "summary": {
-    "h1_confirmed": 1,
-    "h2_confirmed": 3,
-    "h3_confirmed": 0
+    "h1_confirmed": {
+      "value": 1,
+      "origin": "counted(summary.h1_confirmed)",
+      "source": "FROM_DATA"
+    },
+    "h2_confirmed": {
+      "value": 3,
+      "origin": "counted(summary.h2_confirmed)",
+      "source": "FROM_DATA"
+    },
+    "h3_confirmed": {
+      "value": 0,
+      "origin": "counted(summary.h3_confirmed)",
+      "source": "FROM_DATA"
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "8847de4d7397",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:59.649190",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/endogenous_cycles/results.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:59.649425",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 234,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 256,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 234,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 256,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

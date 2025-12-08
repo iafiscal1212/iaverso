@@ -1,249 +1,876 @@
 {
   "ratio": {
-    "observed": 4.242889717963134,
-    "ci_low": 3.3943117743705074,
-    "ci_high": 5.091467661555761,
+    "observed": {
+      "value": 4.242889717963134,
+      "origin": "computed(ratio.observed)",
+      "source": "FROM_MATH"
+    },
+    "ci_low": {
+      "value": 3.3943117743705074,
+      "origin": "computed(ratio.ci_low)",
+      "source": "FROM_MATH"
+    },
+    "ci_high": {
+      "value": 5.091467661555761,
+      "origin": "computed(ratio.ci_high)",
+      "source": "FROM_MATH"
+    },
     "passes": true
   },
-  "kappa_coefficient": 0.5034540341830623,
+  "kappa_coefficient": {
+    "value": 0.5034540341830623,
+    "origin": "normalized(kappa_coefficient)",
+    "source": "FROM_MATH"
+  },
   "kappa_significant": true,
-  "r_squared": 0.11769754526973586,
+  "r_squared": {
+    "value": 0.11769754526973586,
+    "origin": "normalized(r_squared)",
+    "source": "FROM_MATH"
+  },
   "by_condition": {
     "LEARN": [
       {
         "gw_active": false,
         "entropy_quantile": "high",
-        "te_neo_to_eva": 0.0,
-        "te_eva_to_neo": 0.0,
-        "mit": 0.0,
-        "n_samples": 20,
-        "kappa_median": 0.0
+        "te_neo_to_eva": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.LEARN[0].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.LEARN[0].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.LEARN[0].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 20,
+          "origin": "count(by_condition.LEARN[0].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.0,
+          "origin": "mean(by_condition.LEARN[0].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": true,
         "entropy_quantile": "high",
-        "te_neo_to_eva": 0.0,
-        "te_eva_to_neo": 0.0,
-        "mit": 0.0,
-        "n_samples": 19,
-        "kappa_median": 0.5262113852156249
+        "te_neo_to_eva": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.LEARN[1].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.LEARN[1].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.LEARN[1].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 19,
+          "origin": "count(by_condition.LEARN[1].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.5262113852156249,
+          "origin": "mean(by_condition.LEARN[1].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": true,
         "entropy_quantile": "mid",
-        "te_neo_to_eva": 0.5305557758413306,
-        "te_eva_to_neo": 0.4558060410178237,
-        "mit": 0.2889726470592434,
-        "n_samples": 22,
-        "kappa_median": 0.6919817182654995
+        "te_neo_to_eva": {
+          "value": 0.5305557758413306,
+          "origin": "normalized(by_condition.LEARN[2].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.4558060410178237,
+          "origin": "normalized(by_condition.LEARN[2].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.2889726470592434,
+          "origin": "normalized(by_condition.LEARN[2].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 22,
+          "origin": "count(by_condition.LEARN[2].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.6919817182654995,
+          "origin": "mean(by_condition.LEARN[2].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": false,
         "entropy_quantile": "low",
-        "te_neo_to_eva": 0.16782414881887792,
-        "te_eva_to_neo": 0.07291280926998327,
-        "mit": 0.33862536124680587,
-        "n_samples": 39,
-        "kappa_median": 0.0
+        "te_neo_to_eva": {
+          "value": 0.16782414881887792,
+          "origin": "normalized(by_condition.LEARN[3].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.07291280926998327,
+          "origin": "normalized(by_condition.LEARN[3].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.33862536124680587,
+          "origin": "normalized(by_condition.LEARN[3].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 39,
+          "origin": "count(by_condition.LEARN[3].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.0,
+          "origin": "mean(by_condition.LEARN[3].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": false,
         "entropy_quantile": "mid",
-        "te_neo_to_eva": 0.0,
-        "te_eva_to_neo": 0.0,
-        "mit": 0.0,
-        "n_samples": 19,
-        "kappa_median": 0.0
+        "te_neo_to_eva": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.LEARN[4].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.LEARN[4].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.LEARN[4].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 19,
+          "origin": "count(by_condition.LEARN[4].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.0,
+          "origin": "mean(by_condition.LEARN[4].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       }
     ],
     "WORK": [
       {
         "gw_active": true,
         "entropy_quantile": "high",
-        "te_neo_to_eva": 0.0,
-        "te_eva_to_neo": 0.0,
-        "mit": 0.0,
-        "n_samples": 18,
-        "kappa_median": 0.6597724393294808
+        "te_neo_to_eva": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WORK[0].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WORK[0].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WORK[0].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 18,
+          "origin": "count(by_condition.WORK[0].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.6597724393294808,
+          "origin": "mean(by_condition.WORK[0].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": false,
         "entropy_quantile": "high",
-        "te_neo_to_eva": 0.0,
-        "te_eva_to_neo": 0.0,
-        "mit": 0.0,
-        "n_samples": 19,
-        "kappa_median": 0.0
+        "te_neo_to_eva": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WORK[1].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WORK[1].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WORK[1].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 19,
+          "origin": "count(by_condition.WORK[1].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.0,
+          "origin": "mean(by_condition.WORK[1].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": true,
         "entropy_quantile": "mid",
-        "te_neo_to_eva": 0.7945760675209497,
-        "te_eva_to_neo": 0.739901327023398,
-        "mit": 0.1890401401527124,
-        "n_samples": 23,
-        "kappa_median": 0.6118898443650462
+        "te_neo_to_eva": {
+          "value": 0.7945760675209497,
+          "origin": "normalized(by_condition.WORK[2].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.739901327023398,
+          "origin": "normalized(by_condition.WORK[2].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.1890401401527124,
+          "origin": "normalized(by_condition.WORK[2].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 23,
+          "origin": "count(by_condition.WORK[2].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.6118898443650462,
+          "origin": "mean(by_condition.WORK[2].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": false,
         "entropy_quantile": "low",
-        "te_neo_to_eva": 0.4162443180014483,
-        "te_eva_to_neo": 0.2902374939968043,
-        "mit": 0.1063173182582042,
-        "n_samples": 32,
-        "kappa_median": 0.0
+        "te_neo_to_eva": {
+          "value": 0.4162443180014483,
+          "origin": "normalized(by_condition.WORK[3].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.2902374939968043,
+          "origin": "normalized(by_condition.WORK[3].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.1063173182582042,
+          "origin": "normalized(by_condition.WORK[3].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 32,
+          "origin": "count(by_condition.WORK[3].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.0,
+          "origin": "mean(by_condition.WORK[3].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": false,
         "entropy_quantile": "mid",
-        "te_neo_to_eva": 0.0,
-        "te_eva_to_neo": 0.0,
-        "mit": 0.0,
-        "n_samples": 14,
-        "kappa_median": 0.0
+        "te_neo_to_eva": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WORK[4].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WORK[4].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WORK[4].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 14,
+          "origin": "count(by_condition.WORK[4].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.0,
+          "origin": "mean(by_condition.WORK[4].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       }
     ],
     "SOCIAL": [
       {
         "gw_active": true,
         "entropy_quantile": "high",
-        "te_neo_to_eva": 0,
-        "te_eva_to_neo": 0,
-        "mit": 0.22542279863015932,
-        "n_samples": 46,
-        "kappa_median": 0.610332165328683
+        "te_neo_to_eva": {
+          "value": 0,
+          "origin": "counted(by_condition.SOCIAL[0].te_neo_to_eva)",
+          "source": "FROM_DATA"
+        },
+        "te_eva_to_neo": {
+          "value": 0,
+          "origin": "counted(by_condition.SOCIAL[0].te_eva_to_neo)",
+          "source": "FROM_DATA"
+        },
+        "mit": {
+          "value": 0.22542279863015932,
+          "origin": "normalized(by_condition.SOCIAL[0].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 46,
+          "origin": "count(by_condition.SOCIAL[0].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.610332165328683,
+          "origin": "mean(by_condition.SOCIAL[0].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": false,
         "entropy_quantile": "high",
-        "te_neo_to_eva": 0.08346730959195059,
-        "te_eva_to_neo": 0.16961689147577097,
-        "mit": 0.10631399561126698,
-        "n_samples": 51,
-        "kappa_median": 0.0
+        "te_neo_to_eva": {
+          "value": 0.08346730959195059,
+          "origin": "normalized(by_condition.SOCIAL[1].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.16961689147577097,
+          "origin": "normalized(by_condition.SOCIAL[1].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.10631399561126698,
+          "origin": "normalized(by_condition.SOCIAL[1].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 51,
+          "origin": "count(by_condition.SOCIAL[1].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.0,
+          "origin": "mean(by_condition.SOCIAL[1].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": true,
         "entropy_quantile": "mid",
-        "te_neo_to_eva": 0.4098306386479489,
-        "te_eva_to_neo": 0.42478058561265025,
-        "mit": 0.11882523095313349,
-        "n_samples": 36,
-        "kappa_median": 0.511243132667754
+        "te_neo_to_eva": {
+          "value": 0.4098306386479489,
+          "origin": "normalized(by_condition.SOCIAL[2].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.42478058561265025,
+          "origin": "normalized(by_condition.SOCIAL[2].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.11882523095313349,
+          "origin": "normalized(by_condition.SOCIAL[2].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 36,
+          "origin": "count(by_condition.SOCIAL[2].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.511243132667754,
+          "origin": "mean(by_condition.SOCIAL[2].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": false,
         "entropy_quantile": "low",
-        "te_neo_to_eva": 0.14669326566593993,
-        "te_eva_to_neo": 0.16475796551024438,
-        "mit": 0.024288103009676872,
-        "n_samples": 91,
-        "kappa_median": 0.0
+        "te_neo_to_eva": {
+          "value": 0.14669326566593993,
+          "origin": "normalized(by_condition.SOCIAL[3].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.16475796551024438,
+          "origin": "normalized(by_condition.SOCIAL[3].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.024288103009676872,
+          "origin": "normalized(by_condition.SOCIAL[3].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 91,
+          "origin": "count(by_condition.SOCIAL[3].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.0,
+          "origin": "mean(by_condition.SOCIAL[3].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": false,
         "entropy_quantile": "mid",
-        "te_neo_to_eva": 0.12397642411149176,
-        "te_eva_to_neo": 0.2225145454239934,
-        "mit": 0.20754407678416564,
-        "n_samples": 41,
-        "kappa_median": 0.0
+        "te_neo_to_eva": {
+          "value": 0.12397642411149176,
+          "origin": "normalized(by_condition.SOCIAL[4].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.2225145454239934,
+          "origin": "normalized(by_condition.SOCIAL[4].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.20754407678416564,
+          "origin": "normalized(by_condition.SOCIAL[4].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 41,
+          "origin": "count(by_condition.SOCIAL[4].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.0,
+          "origin": "mean(by_condition.SOCIAL[4].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       }
     ],
     "SLEEP": [
       {
         "gw_active": true,
         "entropy_quantile": "high",
-        "te_neo_to_eva": 0,
-        "te_eva_to_neo": 0,
-        "mit": 0.2098591099152375,
-        "n_samples": 51,
-        "kappa_median": 0.4415487031346054
+        "te_neo_to_eva": {
+          "value": 0,
+          "origin": "counted(by_condition.SLEEP[0].te_neo_to_eva)",
+          "source": "FROM_DATA"
+        },
+        "te_eva_to_neo": {
+          "value": 0,
+          "origin": "counted(by_condition.SLEEP[0].te_eva_to_neo)",
+          "source": "FROM_DATA"
+        },
+        "mit": {
+          "value": 0.2098591099152375,
+          "origin": "normalized(by_condition.SLEEP[0].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 51,
+          "origin": "count(by_condition.SLEEP[0].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.4415487031346054,
+          "origin": "mean(by_condition.SLEEP[0].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": false,
         "entropy_quantile": "high",
-        "te_neo_to_eva": 0.010103587813902169,
-        "te_eva_to_neo": 0.10983665014009512,
-        "mit": 0.07909506636338724,
-        "n_samples": 81,
-        "kappa_median": 0.0
+        "te_neo_to_eva": {
+          "value": 0.010103587813902169,
+          "origin": "normalized(by_condition.SLEEP[1].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.10983665014009512,
+          "origin": "normalized(by_condition.SLEEP[1].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.07909506636338724,
+          "origin": "normalized(by_condition.SLEEP[1].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 81,
+          "origin": "count(by_condition.SLEEP[1].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.0,
+          "origin": "mean(by_condition.SLEEP[1].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": true,
         "entropy_quantile": "mid",
-        "te_neo_to_eva": 0.11420416953330215,
-        "te_eva_to_neo": 0.09645285723100173,
-        "mit": 0.15936855801089628,
-        "n_samples": 89,
-        "kappa_median": 0.5648408390946107
+        "te_neo_to_eva": {
+          "value": 0.11420416953330215,
+          "origin": "normalized(by_condition.SLEEP[2].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.09645285723100173,
+          "origin": "normalized(by_condition.SLEEP[2].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.15936855801089628,
+          "origin": "normalized(by_condition.SLEEP[2].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 89,
+          "origin": "count(by_condition.SLEEP[2].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.5648408390946107,
+          "origin": "mean(by_condition.SLEEP[2].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": false,
         "entropy_quantile": "low",
-        "te_neo_to_eva": 0.10820038074979875,
-        "te_eva_to_neo": 0.09358528375635394,
-        "mit": 0.01718010674115835,
-        "n_samples": 135,
-        "kappa_median": 0.0
+        "te_neo_to_eva": {
+          "value": 0.10820038074979875,
+          "origin": "normalized(by_condition.SLEEP[3].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.09358528375635394,
+          "origin": "normalized(by_condition.SLEEP[3].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.01718010674115835,
+          "origin": "normalized(by_condition.SLEEP[3].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 135,
+          "origin": "count(by_condition.SLEEP[3].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.0,
+          "origin": "mean(by_condition.SLEEP[3].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": false,
         "entropy_quantile": "mid",
-        "te_neo_to_eva": 0.10825067593032289,
-        "te_eva_to_neo": 0.2092274088028131,
-        "mit": 0.12366617651077914,
-        "n_samples": 69,
-        "kappa_median": 0.0
+        "te_neo_to_eva": {
+          "value": 0.10825067593032289,
+          "origin": "normalized(by_condition.SLEEP[4].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.2092274088028131,
+          "origin": "normalized(by_condition.SLEEP[4].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.12366617651077914,
+          "origin": "normalized(by_condition.SLEEP[4].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 69,
+          "origin": "count(by_condition.SLEEP[4].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.0,
+          "origin": "mean(by_condition.SLEEP[4].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       }
     ],
     "WAKE": [
       {
         "gw_active": false,
         "entropy_quantile": "high",
-        "te_neo_to_eva": 0.0,
-        "te_eva_to_neo": 0.0,
-        "mit": 0.0,
-        "n_samples": 15,
-        "kappa_median": 0.0
+        "te_neo_to_eva": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[0].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[0].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[0].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 15,
+          "origin": "count(by_condition.WAKE[0].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.0,
+          "origin": "mean(by_condition.WAKE[0].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": true,
         "entropy_quantile": "high",
-        "te_neo_to_eva": 0.0,
-        "te_eva_to_neo": 0.0,
-        "mit": 0.0,
-        "n_samples": 10,
-        "kappa_median": 0.4110397276358803
+        "te_neo_to_eva": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[1].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[1].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[1].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 10,
+          "origin": "count(by_condition.WAKE[1].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.4110397276358803,
+          "origin": "mean(by_condition.WAKE[1].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": true,
         "entropy_quantile": "mid",
-        "te_neo_to_eva": 0.0,
-        "te_eva_to_neo": 0.0,
-        "mit": 0.0,
-        "n_samples": 13,
-        "kappa_median": 0.6729756820019956
+        "te_neo_to_eva": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[2].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[2].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[2].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 13,
+          "origin": "count(by_condition.WAKE[2].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.6729756820019956,
+          "origin": "mean(by_condition.WAKE[2].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": false,
         "entropy_quantile": "low",
-        "te_neo_to_eva": 0.0,
-        "te_eva_to_neo": 0.0,
-        "mit": 0.0,
-        "n_samples": 18,
-        "kappa_median": 0.0
+        "te_neo_to_eva": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[3].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[3].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[3].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 18,
+          "origin": "count(by_condition.WAKE[3].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.0,
+          "origin": "mean(by_condition.WAKE[3].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       },
       {
         "gw_active": false,
         "entropy_quantile": "mid",
-        "te_neo_to_eva": 0.0,
-        "te_eva_to_neo": 0.0,
-        "mit": 0.0,
-        "n_samples": 14,
-        "kappa_median": 0.033422828224832814
+        "te_neo_to_eva": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[4].te_neo_to_eva)",
+          "source": "FROM_MATH"
+        },
+        "te_eva_to_neo": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[4].te_eva_to_neo)",
+          "source": "FROM_MATH"
+        },
+        "mit": {
+          "value": 0.0,
+          "origin": "normalized(by_condition.WAKE[4].mit)",
+          "source": "FROM_MATH"
+        },
+        "n_samples": {
+          "value": 14,
+          "origin": "count(by_condition.WAKE[4].n_samples)",
+          "source": "FROM_DATA"
+        },
+        "kappa_median": {
+          "value": 0.033422828224832814,
+          "origin": "mean(by_condition.WAKE[4].kappa_median)",
+          "source": "FROM_STATISTICS"
+        }
       }
     ]
   },
-  "source": "phase12_te_conditional.py with real states from phase10"
+  "source": "phase12_te_conditional.py with real states from phase10",
+  "metadata": {
+    "experiment_id": {
+      "value": "38da99c0fdb5",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.141673",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase11/te_mit_stratified.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.141983",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 298,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 333,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 298,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 333,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
 }

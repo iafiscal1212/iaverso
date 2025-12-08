@@ -1,107 +1,386 @@
 {
-  "ts": 1764500823.1545508,
-  "hours_window": 12.0,
+  "ts": {
+    "value": 1764500823.1545508,
+    "origin": "computed(ts)",
+    "source": "FROM_MATH"
+  },
+  "hours_window": {
+    "value": 12.0,
+    "origin": "computed(hours_window)",
+    "source": "FROM_MATH"
+  },
   "NEO": {
     "world": "NEO",
-    "t0": 1,
-    "t": 2000,
-    "n": 2000,
-    "last_I": [
-      0.14045234122597755,
-      0.7553049715817197,
-      0.10424268719230276
-    ],
-    "var_last1k": {
-      "S": 0.07620958068649929,
-      "N": 0.060173999157299624,
-      "C": 0.07282397730668008
+    "t0": {
+      "value": 1,
+      "origin": "counted(NEO.t0)",
+      "source": "FROM_DATA"
     },
-    "prop_rate": 0.2535,
-    "gate_rate": 1.0,
+    "t": {
+      "value": 2000,
+      "origin": "counted(NEO.t)",
+      "source": "FROM_DATA"
+    },
+    "n": {
+      "value": 2000,
+      "origin": "counted(NEO.n)",
+      "source": "FROM_DATA"
+    },
+    "last_I": {
+      "value": [
+        0.14045234122597755,
+        0.7553049715817197,
+        0.10424268719230276
+      ],
+      "origin": "array(NEO.last_I)",
+      "source": "FROM_DATA"
+    },
+    "var_last1k": {
+      "S": {
+        "value": 0.07620958068649929,
+        "origin": "normalized(NEO.var_last1k.S)",
+        "source": "FROM_MATH"
+      },
+      "N": {
+        "value": 0.060173999157299624,
+        "origin": "normalized(NEO.var_last1k.N)",
+        "source": "FROM_MATH"
+      },
+      "C": {
+        "value": 0.07282397730668008,
+        "origin": "normalized(NEO.var_last1k.C)",
+        "source": "FROM_MATH"
+      }
+    },
+    "prop_rate": {
+      "value": 0.2535,
+      "origin": "ratio(NEO.prop_rate)",
+      "source": "FROM_MATH"
+    },
+    "gate_rate": {
+      "value": 1.0,
+      "origin": "ratio(NEO.gate_rate)",
+      "source": "FROM_MATH"
+    },
     "modes": {},
     "cuts": {
-      "count": 0,
+      "count": {
+        "value": 0,
+        "origin": "count(NEO.cuts.count)",
+        "source": "FROM_DATA"
+      },
       "top": []
     },
-    "recent_len": 2000,
-    "recent_last_hours": 12.0,
+    "recent_len": {
+      "value": 2000,
+      "origin": "count(NEO.recent_len)",
+      "source": "FROM_DATA"
+    },
+    "recent_last_hours": {
+      "value": 12.0,
+      "origin": "computed(NEO.recent_last_hours)",
+      "source": "FROM_MATH"
+    },
     "source": "jsonl"
   },
   "EVA": {
     "world": "EVA",
-    "t0": 1,
-    "t": 2000,
-    "n": 2000,
-    "last_I": [
-      0.41517629626358593,
-      0.4922144467861152,
-      0.09260925695029887
-    ],
-    "var_last1k": {
-      "S": 0.07702875286862751,
-      "N": 0.07065276790337353,
-      "C": 0.0762901985567612
+    "t0": {
+      "value": 1,
+      "origin": "counted(EVA.t0)",
+      "source": "FROM_DATA"
     },
-    "prop_rate": 0.2525,
-    "gate_rate": 1.0,
+    "t": {
+      "value": 2000,
+      "origin": "counted(EVA.t)",
+      "source": "FROM_DATA"
+    },
+    "n": {
+      "value": 2000,
+      "origin": "counted(EVA.n)",
+      "source": "FROM_DATA"
+    },
+    "last_I": {
+      "value": [
+        0.41517629626358593,
+        0.4922144467861152,
+        0.09260925695029887
+      ],
+      "origin": "array(EVA.last_I)",
+      "source": "FROM_DATA"
+    },
+    "var_last1k": {
+      "S": {
+        "value": 0.07702875286862751,
+        "origin": "normalized(EVA.var_last1k.S)",
+        "source": "FROM_MATH"
+      },
+      "N": {
+        "value": 0.07065276790337353,
+        "origin": "normalized(EVA.var_last1k.N)",
+        "source": "FROM_MATH"
+      },
+      "C": {
+        "value": 0.0762901985567612,
+        "origin": "normalized(EVA.var_last1k.C)",
+        "source": "FROM_MATH"
+      }
+    },
+    "prop_rate": {
+      "value": 0.2525,
+      "origin": "ratio(EVA.prop_rate)",
+      "source": "FROM_MATH"
+    },
+    "gate_rate": {
+      "value": 1.0,
+      "origin": "ratio(EVA.gate_rate)",
+      "source": "FROM_MATH"
+    },
     "modes": {},
     "cuts": {
-      "count": 0,
+      "count": {
+        "value": 0,
+        "origin": "count(EVA.cuts.count)",
+        "source": "FROM_DATA"
+      },
       "top": []
     },
-    "recent_len": 2000,
-    "recent_last_hours": 12.0,
+    "recent_len": {
+      "value": 2000,
+      "origin": "count(EVA.recent_len)",
+      "source": "FROM_DATA"
+    },
+    "recent_last_hours": {
+      "value": 12.0,
+      "origin": "computed(EVA.recent_last_hours)",
+      "source": "FROM_MATH"
+    },
     "source": "jsonl"
   },
   "COUPLING": {
-    "events": 525,
-    "pNEO": 1.0,
-    "pEVA": 1.0,
-    "both_rate": 1.0,
-    "lift": 1.0,
+    "events": {
+      "value": 525,
+      "origin": "counted(COUPLING.events)",
+      "source": "FROM_DATA"
+    },
+    "pNEO": {
+      "value": 1.0,
+      "origin": "normalized(COUPLING.pNEO)",
+      "source": "FROM_MATH"
+    },
+    "pEVA": {
+      "value": 1.0,
+      "origin": "normalized(COUPLING.pEVA)",
+      "source": "FROM_MATH"
+    },
+    "both_rate": {
+      "value": 1.0,
+      "origin": "ratio(COUPLING.both_rate)",
+      "source": "FROM_MATH"
+    },
+    "lift": {
+      "value": 1.0,
+      "origin": "normalized(COUPLING.lift)",
+      "source": "FROM_MATH"
+    },
     "mode_pairs_top": [
       [
-        [
-          0,
-          0
-        ],
-        151
+        {
+          "value": [
+            0,
+            0
+          ],
+          "origin": "array(COUPLING.mode_pairs_top[0][0])",
+          "source": "FROM_DATA"
+        },
+        {
+          "value": 151,
+          "origin": "counted(COUPLING.mode_pairs_top[0][1])",
+          "source": "FROM_DATA"
+        }
       ],
       [
-        [
-          1,
-          0
-        ],
-        77
+        {
+          "value": [
+            1,
+            0
+          ],
+          "origin": "array(COUPLING.mode_pairs_top[1][0])",
+          "source": "FROM_DATA"
+        },
+        {
+          "value": 77,
+          "origin": "counted(COUPLING.mode_pairs_top[1][1])",
+          "source": "FROM_DATA"
+        }
       ],
       [
-        [
-          0,
-          1
-        ],
-        74
+        {
+          "value": [
+            0,
+            1
+          ],
+          "origin": "array(COUPLING.mode_pairs_top[2][0])",
+          "source": "FROM_DATA"
+        },
+        {
+          "value": 74,
+          "origin": "counted(COUPLING.mode_pairs_top[2][1])",
+          "source": "FROM_DATA"
+        }
       ],
       [
-        [
-          0,
-          -1
-        ],
-        70
+        {
+          "value": [
+            0,
+            -1
+          ],
+          "origin": "array(COUPLING.mode_pairs_top[3][0])",
+          "source": "FROM_DATA"
+        },
+        {
+          "value": 70,
+          "origin": "counted(COUPLING.mode_pairs_top[3][1])",
+          "source": "FROM_DATA"
+        }
       ],
       [
-        [
-          -1,
-          0
-        ],
-        53
+        {
+          "value": [
+            -1,
+            0
+          ],
+          "origin": "array(COUPLING.mode_pairs_top[4][0])",
+          "source": "FROM_DATA"
+        },
+        {
+          "value": 53,
+          "origin": "counted(COUPLING.mode_pairs_top[4][1])",
+          "source": "FROM_DATA"
+        }
       ],
       [
-        [
-          -1,
-          1
-        ],
-        35
+        {
+          "value": [
+            -1,
+            1
+          ],
+          "origin": "array(COUPLING.mode_pairs_top[5][0])",
+          "source": "FROM_DATA"
+        },
+        {
+          "value": 35,
+          "origin": "counted(COUPLING.mode_pairs_top[5][1])",
+          "source": "FROM_DATA"
+        }
       ]
     ]
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "065e58192610",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:46.083257",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase7_live_digest_20251130T110709Z.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:46.083398",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 124,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 137,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 124,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 137,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

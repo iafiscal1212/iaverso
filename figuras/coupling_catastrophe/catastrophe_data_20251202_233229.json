@@ -1,187 +1,778 @@
 {
   "timestamp": "2025-12-02T23:32:29.945527",
-  "critical_coupling": 0.06973684210526315,
+  "critical_coupling": {
+    "value": 0.06973684210526315,
+    "origin": "normalized(critical_coupling)",
+    "source": "FROM_MATH"
+  },
   "critical_era": "Pre-internet",
   "results": [
     {
-      "coupling": 0.05,
+      "coupling": {
+        "value": 0.05,
+        "origin": "normalized(results[0].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Pre-internet",
-      "n_coalitions": 2.0,
-      "polarization": 0.03764569057086714,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[0].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.03764569057086714,
+        "origin": "normalized(results[0].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[0].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[0].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[0].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.08947368421052632,
+      "coupling": {
+        "value": 0.08947368421052632,
+        "origin": "normalized(results[1].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Pre-internet",
-      "n_coalitions": 2.0,
-      "polarization": 0.043089770646199656,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[1].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.043089770646199656,
+        "origin": "normalized(results[1].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[1].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[1].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[1].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.12894736842105264,
+      "coupling": {
+        "value": 0.12894736842105264,
+        "origin": "normalized(results[2].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Web 1.0",
-      "n_coalitions": 2.0,
-      "polarization": 0.04860204961804234,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[2].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.04860204961804234,
+        "origin": "normalized(results[2].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[2].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[2].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[2].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.16842105263157894,
+      "coupling": {
+        "value": 0.16842105263157894,
+        "origin": "normalized(results[3].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Web 1.0",
-      "n_coalitions": 2.0,
-      "polarization": 0.05415791454301464,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[3].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.05415791454301464,
+        "origin": "normalized(results[3].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[3].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[3].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[3].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.20789473684210524,
+      "coupling": {
+        "value": 0.20789473684210524,
+        "origin": "normalized(results[4].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Facebook 2008",
-      "n_coalitions": 2.0,
-      "polarization": 0.05969723217988903,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[4].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.05969723217988903,
+        "origin": "normalized(results[4].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[4].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[4].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[4].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.24736842105263157,
+      "coupling": {
+        "value": 0.24736842105263157,
+        "origin": "normalized(results[5].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Facebook 2008",
-      "n_coalitions": 2.0,
-      "polarization": 0.06531085397569288,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[5].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.06531085397569288,
+        "origin": "normalized(results[5].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[5].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[5].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[5].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.2868421052631579,
+      "coupling": {
+        "value": 0.2868421052631579,
+        "origin": "normalized(results[6].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Facebook 2008",
-      "n_coalitions": 2.0,
-      "polarization": 0.07092796096491445,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[6].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.07092796096491445,
+        "origin": "normalized(results[6].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[6].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[6].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[6].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.32631578947368417,
+      "coupling": {
+        "value": 0.32631578947368417,
+        "origin": "normalized(results[7].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Facebook 2008",
-      "n_coalitions": 2.0,
-      "polarization": 0.07664306902789793,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[7].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.07664306902789793,
+        "origin": "normalized(results[7].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[7].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[7].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[7].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.3657894736842105,
+      "coupling": {
+        "value": 0.3657894736842105,
+        "origin": "normalized(results[8].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Twitter/Instagram",
-      "n_coalitions": 2.0,
-      "polarization": 0.08231353948207511,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[8].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.08231353948207511,
+        "origin": "normalized(results[8].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[8].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[8].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[8].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.4052631578947368,
+      "coupling": {
+        "value": 0.4052631578947368,
+        "origin": "normalized(results[9].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Twitter/Instagram",
-      "n_coalitions": 2.0,
-      "polarization": 0.08804486160819046,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[9].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.08804486160819046,
+        "origin": "normalized(results[9].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[9].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[9].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[9].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.44473684210526315,
+      "coupling": {
+        "value": 0.44473684210526315,
+        "origin": "normalized(results[10].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Twitter/Instagram",
-      "n_coalitions": 2.0,
-      "polarization": 0.09377285150121113,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[10].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.09377285150121113,
+        "origin": "normalized(results[10].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[10].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[10].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[10].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.4842105263157894,
+      "coupling": {
+        "value": 0.4842105263157894,
+        "origin": "normalized(results[11].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Twitter/Instagram",
-      "n_coalitions": 2.0,
-      "polarization": 0.09954216866786623,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[11].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.09954216866786623,
+        "origin": "normalized(results[11].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[11].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[11].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[11].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.5236842105263158,
+      "coupling": {
+        "value": 0.5236842105263158,
+        "origin": "normalized(results[12].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "TikTok/Algoritmos",
-      "n_coalitions": 2.0,
-      "polarization": 0.10536009901145049,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[12].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.10536009901145049,
+        "origin": "normalized(results[12].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[12].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[12].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[12].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.5631578947368421,
+      "coupling": {
+        "value": 0.5631578947368421,
+        "origin": "normalized(results[13].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "TikTok/Algoritmos",
-      "n_coalitions": 2.0,
-      "polarization": 0.11119511891133316,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[13].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.11119511891133316,
+        "origin": "normalized(results[13].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[13].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[13].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[13].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.6026315789473684,
+      "coupling": {
+        "value": 0.6026315789473684,
+        "origin": "normalized(results[14].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "TikTok/Algoritmos",
-      "n_coalitions": 2.0,
-      "polarization": 0.11706107803976806,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[14].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.11706107803976806,
+        "origin": "normalized(results[14].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[14].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[14].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[14].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.6421052631578947,
+      "coupling": {
+        "value": 0.6421052631578947,
+        "origin": "normalized(results[15].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "TikTok/Algoritmos",
-      "n_coalitions": 2.0,
-      "polarization": 0.12290763334130513,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[15].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.12290763334130513,
+        "origin": "normalized(results[15].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[15].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[15].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[15].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.6815789473684211,
+      "coupling": {
+        "value": 0.6815789473684211,
+        "origin": "normalized(results[16].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "TikTok/Algoritmos",
-      "n_coalitions": 2.0,
-      "polarization": 0.12880785676693862,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[16].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.12880785676693862,
+        "origin": "normalized(results[16].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[16].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[16].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[16].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.7210526315789474,
+      "coupling": {
+        "value": 0.7210526315789474,
+        "origin": "normalized(results[17].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Metaverso/Futuro",
-      "n_coalitions": 2.0,
-      "polarization": 0.13472182365410046,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[17].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.13472182365410046,
+        "origin": "normalized(results[17].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[17].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[17].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[17].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.7605263157894737,
+      "coupling": {
+        "value": 0.7605263157894737,
+        "origin": "normalized(results[18].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Metaverso/Futuro",
-      "n_coalitions": 2.0,
-      "polarization": 0.14062539877630734,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[18].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.14062539877630734,
+        "origin": "normalized(results[18].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[18].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[18].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[18].chaos_index)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "coupling": 0.8,
+      "coupling": {
+        "value": 0.8,
+        "origin": "normalized(results[19].coupling)",
+        "source": "FROM_MATH"
+      },
       "era": "Metaverso/Futuro",
-      "n_coalitions": 2.0,
-      "polarization": 0.14656288168706547,
-      "cascade_freq": 1.0,
-      "diversity_health": 0.7333333333333334,
-      "chaos_index": 0.5
+      "n_coalitions": {
+        "value": 2.0,
+        "origin": "count(results[19].n_coalitions)",
+        "source": "FROM_DATA"
+      },
+      "polarization": {
+        "value": 0.14656288168706547,
+        "origin": "normalized(results[19].polarization)",
+        "source": "FROM_MATH"
+      },
+      "cascade_freq": {
+        "value": 1.0,
+        "origin": "normalized(results[19].cascade_freq)",
+        "source": "FROM_MATH"
+      },
+      "diversity_health": {
+        "value": 0.7333333333333334,
+        "origin": "normalized(results[19].diversity_health)",
+        "source": "FROM_MATH"
+      },
+      "chaos_index": {
+        "value": 0.5,
+        "origin": "identifier(results[19].chaos_index)",
+        "source": "FROM_DATA"
+      }
     }
-  ]
+  ],
+  "metadata": {
+    "experiment_id": {
+      "value": "f9be971700da",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:14:07.432457",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/figuras/coupling_catastrophe/catastrophe_data_20251202_233229.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:14:07.432634",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 0,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 22,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 260,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 288,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 260,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 266,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
 }

@@ -1,150 +1,585 @@
 {
-  "I_star": [
-    1.0,
-    3e-323,
-    5e-324
-  ],
-  "w": 51,
+  "I_star": {
+    "value": [
+      1.0,
+      3e-323,
+      5e-324
+    ],
+    "origin": "array(I_star)",
+    "source": "FROM_DATA"
+  },
+  "w": {
+    "value": 51,
+    "origin": "counted(w)",
+    "source": "FROM_DATA"
+  },
   "results": [
     {
       "dir": "u1",
-      "alpha": 5.243467664992988e-06,
-      "chi": 0.0,
-      "log_alpha": -5.280381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 5.243467664992988e-06,
+        "origin": "normalized(results[0].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[0].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -5.280381405824685,
+        "origin": "computed(results[0].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[0].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u1",
-      "alpha": 1.658130065882258e-05,
-      "chi": 0.0,
-      "log_alpha": -4.780381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 1.658130065882258e-05,
+        "origin": "normalized(results[1].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[1].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -4.780381405824685,
+        "origin": "computed(results[1].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[1].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u1",
-      "alpha": 5.243467664992988e-05,
-      "chi": 0.0,
-      "log_alpha": -4.280381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 5.243467664992988e-05,
+        "origin": "normalized(results[2].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[2].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -4.280381405824685,
+        "origin": "computed(results[2].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[2].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u1",
-      "alpha": 0.00016581300658822582,
-      "chi": 0.0,
-      "log_alpha": -3.780381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 0.00016581300658822582,
+        "origin": "normalized(results[3].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[3].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -3.780381405824685,
+        "origin": "computed(results[3].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[3].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u1",
-      "alpha": 0.0005243467664992988,
-      "chi": 0.0,
-      "log_alpha": -3.280381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 0.0005243467664992988,
+        "origin": "normalized(results[4].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[4].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -3.280381405824685,
+        "origin": "computed(results[4].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[4].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u1",
-      "alpha": 0.0016581300658822583,
-      "chi": 0.0,
-      "log_alpha": -2.780381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 0.0016581300658822583,
+        "origin": "normalized(results[5].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[5].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -2.780381405824685,
+        "origin": "computed(results[5].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[5].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u1",
-      "alpha": 0.005243467664992988,
-      "chi": 0.0,
-      "log_alpha": -2.280381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 0.005243467664992988,
+        "origin": "normalized(results[6].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[6].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -2.280381405824685,
+        "origin": "computed(results[6].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[6].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u1",
-      "alpha": 0.01658130065882258,
-      "chi": 0.0,
-      "log_alpha": -1.7803814058246852,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 0.01658130065882258,
+        "origin": "normalized(results[7].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[7].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -1.7803814058246852,
+        "origin": "computed(results[7].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[7].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u1",
-      "alpha": 0.05243467664992988,
-      "chi": 0.0,
-      "log_alpha": -1.280381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 0.05243467664992988,
+        "origin": "normalized(results[8].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[8].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -1.280381405824685,
+        "origin": "computed(results[8].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[8].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u1",
-      "alpha": 0.16581300658822581,
-      "chi": 0.0,
-      "log_alpha": -0.7803814058246851,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 0.16581300658822581,
+        "origin": "normalized(results[9].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[9].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -0.7803814058246851,
+        "origin": "computed(results[9].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[9].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u2",
-      "alpha": 5.243467664992988e-06,
-      "chi": 0.0,
-      "log_alpha": -5.280381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 5.243467664992988e-06,
+        "origin": "normalized(results[10].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[10].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -5.280381405824685,
+        "origin": "computed(results[10].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[10].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u2",
-      "alpha": 1.658130065882258e-05,
-      "chi": 0.0,
-      "log_alpha": -4.780381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 1.658130065882258e-05,
+        "origin": "normalized(results[11].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[11].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -4.780381405824685,
+        "origin": "computed(results[11].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[11].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u2",
-      "alpha": 5.243467664992988e-05,
-      "chi": 0.0,
-      "log_alpha": -4.280381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 5.243467664992988e-05,
+        "origin": "normalized(results[12].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[12].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -4.280381405824685,
+        "origin": "computed(results[12].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[12].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u2",
-      "alpha": 0.00016581300658822582,
-      "chi": 0.0,
-      "log_alpha": -3.780381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 0.00016581300658822582,
+        "origin": "normalized(results[13].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[13].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -3.780381405824685,
+        "origin": "computed(results[13].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[13].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u2",
-      "alpha": 0.0005243467664992988,
-      "chi": 0.0,
-      "log_alpha": -3.280381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 0.0005243467664992988,
+        "origin": "normalized(results[14].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[14].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -3.280381405824685,
+        "origin": "computed(results[14].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[14].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u2",
-      "alpha": 0.0016581300658822583,
-      "chi": 0.0,
-      "log_alpha": -2.780381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 0.0016581300658822583,
+        "origin": "normalized(results[15].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[15].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -2.780381405824685,
+        "origin": "computed(results[15].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[15].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u2",
-      "alpha": 0.005243467664992988,
-      "chi": 0.0,
-      "log_alpha": -2.280381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 0.005243467664992988,
+        "origin": "normalized(results[16].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[16].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -2.280381405824685,
+        "origin": "computed(results[16].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[16].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u2",
-      "alpha": 0.01658130065882258,
-      "chi": 0.0,
-      "log_alpha": -1.7803814058246852,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 0.01658130065882258,
+        "origin": "normalized(results[17].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[17].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -1.7803814058246852,
+        "origin": "computed(results[17].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[17].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u2",
-      "alpha": 0.05243467664992988,
-      "chi": 0.0,
-      "log_alpha": -1.280381405824685,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 0.05243467664992988,
+        "origin": "normalized(results[18].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[18].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -1.280381405824685,
+        "origin": "computed(results[18].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[18].log_chi)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "dir": "u2",
-      "alpha": 0.16581300658822581,
-      "chi": 0.0,
-      "log_alpha": -0.7803814058246851,
-      "log_chi": -20.0
+      "alpha": {
+        "value": 0.16581300658822581,
+        "origin": "normalized(results[19].alpha)",
+        "source": "FROM_MATH"
+      },
+      "chi": {
+        "value": 0.0,
+        "origin": "normalized(results[19].chi)",
+        "source": "FROM_MATH"
+      },
+      "log_alpha": {
+        "value": -0.7803814058246851,
+        "origin": "computed(results[19].log_alpha)",
+        "source": "FROM_MATH"
+      },
+      "log_chi": {
+        "value": -20.0,
+        "origin": "computed(results[19].log_chi)",
+        "source": "FROM_MATH"
+      }
     }
-  ]
+  ],
+  "metadata": {
+    "experiment_id": {
+      "value": "a443b0294834",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:33.354560",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/susceptibility_refined.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:33.354766",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 202,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 231,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 202,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 231,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
 }

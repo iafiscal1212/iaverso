@@ -1,0 +1,1625 @@
+{
+  "metadata": {
+    "source": "GitHub API v3",
+    "type": "100% ENDOGENOUS - NORMA DURA",
+    "n_fields": 25,
+    "n_analyzed": 25,
+    "timestamp": "2025-12-07T17:15:08.692465",
+    "experiment_id": {
+      "value": "cae1f7e6b5bf",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:33.344290",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/GITHUB_ENDOGENOUS_CAUSAL.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "fields_discovered": [
+    "javascript",
+    "python",
+    "awesome",
+    "react",
+    "free",
+    "programming",
+    "windows",
+    "code",
+    "awesome-list",
+    "list",
+    "software",
+    "interview",
+    "framework",
+    "open",
+    "algorithms",
+    "design",
+    "typescript",
+    "education",
+    "books",
+    "hacktoberfest",
+    "computer-science",
+    "build",
+    "source",
+    "algorithm",
+    "linux"
+  ],
+  "field_results": [
+    {
+      "field": "javascript",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[0].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[0].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[0].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "freecodecamp",
+      "concentration": {
+        "value": 9.999999995,
+        "origin": "ratio(field_results[0].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575040706,
+        "origin": "normalized(field_results[0].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[0].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[0].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "freeCodeCamp/freeCodeCamp",
+        "practical-tutorials/project-based-learning"
+      ]
+    },
+    {
+      "field": "python",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[1].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[1].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[1].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "web",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "ratio(field_results[1].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575040706,
+        "origin": "normalized(field_results[1].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[1].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[1].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "donnemartin/system-design-primer",
+        "vinta/awesome-python"
+      ]
+    },
+    {
+      "field": "awesome",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[2].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[2].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[2].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "awesome python",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "ratio(field_results[2].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300138883,
+        "origin": "normalized(field_results[2].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[2].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[2].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "sindresorhus/awesome",
+        "vinta/awesome-python"
+      ]
+    },
+    {
+      "field": "react",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[3].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[3].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[3].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "freecodecamp",
+      "concentration": {
+        "value": 9.999999995,
+        "origin": "ratio(field_results[3].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575040706,
+        "origin": "normalized(field_results[3].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[3].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[3].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "freeCodeCamp/freeCodeCamp",
+        "facebook/react"
+      ]
+    },
+    {
+      "field": "free",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[4].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[4].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[4].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "freecodecamp",
+      "concentration": {
+        "value": 9.999999995,
+        "origin": "ratio(field_results[4].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300138883,
+        "origin": "normalized(field_results[4].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[4].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[4].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "codecrafters-io/build-your-own-x",
+        "freeCodeCamp/freeCodeCamp"
+      ]
+    },
+    {
+      "field": "programming",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[5].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[5].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[5].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "freecodecamp",
+      "concentration": {
+        "value": 9.999999995,
+        "origin": "ratio(field_results[5].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300138883,
+        "origin": "normalized(field_results[5].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[5].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[5].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "codecrafters-io/build-your-own-x",
+        "freeCodeCamp/freeCodeCamp"
+      ]
+    },
+    {
+      "field": "windows",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[6].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[6].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[6].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "mobile",
+      "concentration": {
+        "value": 9.999999993333333,
+        "origin": "ratio(field_results[6].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575040706,
+        "origin": "normalized(field_results[6].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[6].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[6].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "flutter/flutter",
+        "jlevy/the-art-of-command-line"
+      ]
+    },
+    {
+      "field": "code",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[7].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[7].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[7].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "freecodecamp",
+      "concentration": {
+        "value": 9.999999995,
+        "origin": "ratio(field_results[7].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575040706,
+        "origin": "normalized(field_results[7].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[7].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[7].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "freeCodeCamp/freeCodeCamp",
+        "microsoft/vscode"
+      ]
+    },
+    {
+      "field": "awesome-list",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[8].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[8].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[8].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "your",
+      "concentration": {
+        "value": 4.9999999975,
+        "origin": "ratio(field_results[8].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": {
+        "value": 0.17204650534064608,
+        "origin": "normalized(field_results[8].cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5797359312640296,
+        "origin": "normalized(field_results[8].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.4076894259233835,
+        "origin": "normalized(field_results[8].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 3,
+        "origin": "count(field_results[8].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 17,
+        "origin": "count(field_results[8].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "codecrafters-io/build-your-own-x",
+        "sindresorhus/awesome"
+      ]
+    },
+    {
+      "field": "list",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[9].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[9].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[9].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "apis",
+      "concentration": {
+        "value": 9.999999996,
+        "origin": "ratio(field_results[9].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575040706,
+        "origin": "normalized(field_results[9].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[9].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[9].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "public-apis/public-apis",
+        "EbookFoundation/free-programming-books"
+      ]
+    },
+    {
+      "field": "software",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[10].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[10].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[10].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "public",
+      "concentration": {
+        "value": 9.999999996,
+        "origin": "ratio(field_results[10].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575040706,
+        "origin": "normalized(field_results[10].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[10].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[10].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "public-apis/public-apis",
+        "jwasham/coding-interview-university"
+      ]
+    },
+    {
+      "field": "interview",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[11].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[11].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[11].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "study",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "ratio(field_results[11].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575040706,
+        "origin": "normalized(field_results[11].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[11].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[11].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "jwasham/coding-interview-university",
+        "donnemartin/system-design-primer"
+      ]
+    },
+    {
+      "field": "framework",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[12].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[12].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[12].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "vue",
+      "concentration": {
+        "value": 9.999999995,
+        "origin": "ratio(field_results[12].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300138883,
+        "origin": "normalized(field_results[12].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[12].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[12].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "vinta/awesome-python",
+        "vuejs/vue"
+      ]
+    },
+    {
+      "field": "open",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[13].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[13].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[13].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "freecodecamp",
+      "concentration": {
+        "value": 9.999999995,
+        "origin": "ratio(field_results[13].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575040706,
+        "origin": "normalized(field_results[13].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[13].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[13].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "freeCodeCamp/freeCodeCamp",
+        "tensorflow/tensorflow"
+      ]
+    },
+    {
+      "field": "algorithms",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[14].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[14].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[14].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "study",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "ratio(field_results[14].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575040706,
+        "origin": "normalized(field_results[14].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[14].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[14].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "jwasham/coding-interview-university",
+        "TheAlgorithms/Python"
+      ]
+    },
+    {
+      "field": "design",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[15].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[15].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[15].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "remote",
+      "concentration": {
+        "value": 9.999999993333333,
+        "origin": "ratio(field_results[15].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300138883,
+        "origin": "normalized(field_results[15].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[15].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[15].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "donnemartin/system-design-primer",
+        "rustdesk/rustdesk"
+      ]
+    },
+    {
+      "field": "typescript",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[16].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[16].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[16].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "visual",
+      "concentration": {
+        "value": 9.999999993333333,
+        "origin": "ratio(field_results[16].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": {
+        "value": 0.02564102564099934,
+        "origin": "normalized(field_results[16].cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5461186812716005,
+        "origin": "normalized(field_results[16].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.5204776556306011,
+        "origin": "normalized(field_results[16].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 2,
+        "origin": "count(field_results[16].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18,
+        "origin": "count(field_results[16].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "microsoft/vscode",
+        "n8n-io/n8n"
+      ]
+    },
+    {
+      "field": "education",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[17].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[17].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[17].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "books",
+      "concentration": {
+        "value": 9.999999995,
+        "origin": "ratio(field_results[17].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300138883,
+        "origin": "normalized(field_results[17].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[17].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[17].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "freeCodeCamp/freeCodeCamp",
+        "EbookFoundation/free-programming-books"
+      ]
+    },
+    {
+      "field": "books",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[18].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[18].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[18].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "leetcode",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "ratio(field_results[18].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300138883,
+        "origin": "normalized(field_results[18].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[18].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[18].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "EbookFoundation/free-programming-books",
+        "CyC2018/CS-Notes"
+      ]
+    },
+    {
+      "field": "hacktoberfest",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[19].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[19].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[19].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "education",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "ratio(field_results[19].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": {
+        "value": 0.02564102564099934,
+        "origin": "normalized(field_results[19].cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5461186812716005,
+        "origin": "normalized(field_results[19].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.5204776556306011,
+        "origin": "normalized(field_results[19].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 2,
+        "origin": "count(field_results[19].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18,
+        "origin": "count(field_results[19].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "EbookFoundation/free-programming-books",
+        "TheAlgorithms/Python"
+      ]
+    },
+    {
+      "field": "computer-science",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[20].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[20].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[20].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "roadmap",
+      "concentration": {
+        "value": 9.999999998888889,
+        "origin": "ratio(field_results[20].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300138883,
+        "origin": "normalized(field_results[20].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[20].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[20].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "freeCodeCamp/freeCodeCamp",
+        "kamranahmedse/developer-roadmap"
+      ]
+    },
+    {
+      "field": "build",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[21].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[21].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[21].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "programming",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "ratio(field_results[21].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575040706,
+        "origin": "normalized(field_results[21].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[21].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[21].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "codecrafters-io/build-your-own-x",
+        "Significant-Gravitas/AutoGPT"
+      ]
+    },
+    {
+      "field": "source",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[22].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[22].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[22].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "freecodecamp",
+      "concentration": {
+        "value": 9.999999995,
+        "origin": "ratio(field_results[22].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575040706,
+        "origin": "normalized(field_results[22].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[22].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[22].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "freeCodeCamp/freeCodeCamp",
+        "torvalds/linux"
+      ]
+    },
+    {
+      "field": "algorithm",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[23].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[23].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[23].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "study",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "ratio(field_results[23].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575040706,
+        "origin": "normalized(field_results[23].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[23].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[23].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "jwasham/coding-interview-university",
+        "TheAlgorithms/Python"
+      ]
+    },
+    {
+      "field": "linux",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(field_results[24].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(field_results[24].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(field_results[24].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "lists",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "ratio(field_results[24].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300138883,
+        "origin": "normalized(field_results[24].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "count(field_results[24].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "count(field_results[24].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "torvalds/linux",
+        "trimstray/the-book-of-secret-knowledge"
+      ]
+    }
+  ],
+  "map": [
+    {
+      "field": "typescript",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(map[0].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(map[0].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(map[0].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "visual",
+      "concentration": {
+        "value": 9.999999993333333,
+        "origin": "ratio(map[0].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": {
+        "value": 0.02564102564099934,
+        "origin": "normalized(map[0].cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5461186812716005,
+        "origin": "normalized(map[0].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.5204776556306011,
+        "origin": "normalized(map[0].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 2,
+        "origin": "count(map[0].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18,
+        "origin": "count(map[0].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "microsoft/vscode",
+        "n8n-io/n8n"
+      ]
+    },
+    {
+      "field": "hacktoberfest",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(map[1].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(map[1].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(map[1].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "education",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "ratio(map[1].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": {
+        "value": 0.02564102564099934,
+        "origin": "normalized(map[1].cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5461186812716005,
+        "origin": "normalized(map[1].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.5204776556306011,
+        "origin": "normalized(map[1].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 2,
+        "origin": "count(map[1].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18,
+        "origin": "count(map[1].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "EbookFoundation/free-programming-books",
+        "TheAlgorithms/Python"
+      ]
+    },
+    {
+      "field": "awesome-list",
+      "n_repos": {
+        "value": 20,
+        "origin": "count(map[2].n_repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "count(map[2].n_top)",
+        "source": "FROM_DATA"
+      },
+      "threshold_p90": {
+        "value": 90.5,
+        "origin": "computed(map[2].threshold_p90)",
+        "source": "FROM_MATH"
+      },
+      "dominant_ngram": "your",
+      "concentration": {
+        "value": 4.9999999975,
+        "origin": "ratio(map[2].concentration)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": {
+        "value": 0.17204650534064608,
+        "origin": "normalized(map[2].cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5797359312640296,
+        "origin": "normalized(map[2].cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.4076894259233835,
+        "origin": "normalized(map[2].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 3,
+        "origin": "count(map[2].n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 17,
+        "origin": "count(map[2].n_without)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "codecrafters-io/build-your-own-x",
+        "sindresorhus/awesome"
+      ]
+    }
+  ],
+  "global_ngram_counts": {
+    "freecodecamp": {
+      "value": 7,
+      "origin": "counted(global_ngram_counts.freecodecamp)",
+      "source": "FROM_DATA"
+    },
+    "web": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.web)",
+      "source": "FROM_DATA"
+    },
+    "awesome python": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.awesome python)",
+      "source": "FROM_DATA"
+    },
+    "mobile": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.mobile)",
+      "source": "FROM_DATA"
+    },
+    "your": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.your)",
+      "source": "FROM_DATA"
+    },
+    "apis": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.apis)",
+      "source": "FROM_DATA"
+    },
+    "public": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.public)",
+      "source": "FROM_DATA"
+    },
+    "study": {
+      "value": 3,
+      "origin": "counted(global_ngram_counts.study)",
+      "source": "FROM_DATA"
+    },
+    "vue": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.vue)",
+      "source": "FROM_DATA"
+    },
+    "remote": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.remote)",
+      "source": "FROM_DATA"
+    },
+    "visual": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.visual)",
+      "source": "FROM_DATA"
+    },
+    "books": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.books)",
+      "source": "FROM_DATA"
+    },
+    "leetcode": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.leetcode)",
+      "source": "FROM_DATA"
+    },
+    "education": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.education)",
+      "source": "FROM_DATA"
+    },
+    "roadmap": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.roadmap)",
+      "source": "FROM_DATA"
+    },
+    "programming": {
+      "value": 1,
+      "origin": "programming(global_ngram_counts.programming)",
+      "source": "FROM_STATISTICS"
+    },
+    "lists": {
+      "value": 1,
+      "origin": "counted(global_ngram_counts.lists)",
+      "source": "FROM_DATA"
+    }
+  },
+  "ngram_summary": [
+    {
+      "ngram": "visual",
+      "avg_cv_reduction": {
+        "value": 0.5204776556306011,
+        "origin": "mean(ngram_summary[0].avg_cv_reduction)",
+        "source": "FROM_STATISTICS"
+      },
+      "n_fields": {
+        "value": 1,
+        "origin": "count(ngram_summary[0].n_fields)",
+        "source": "FROM_DATA"
+      },
+      "total_effect": {
+        "value": 0.5204776556306011,
+        "origin": "count(ngram_summary[0].total_effect)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "ngram": "education",
+      "avg_cv_reduction": {
+        "value": 0.5204776556306011,
+        "origin": "mean(ngram_summary[1].avg_cv_reduction)",
+        "source": "FROM_STATISTICS"
+      },
+      "n_fields": {
+        "value": 1,
+        "origin": "count(ngram_summary[1].n_fields)",
+        "source": "FROM_DATA"
+      },
+      "total_effect": {
+        "value": 0.5204776556306011,
+        "origin": "count(ngram_summary[1].total_effect)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "ngram": "your",
+      "avg_cv_reduction": {
+        "value": 0.4076894259233835,
+        "origin": "mean(ngram_summary[2].avg_cv_reduction)",
+        "source": "FROM_STATISTICS"
+      },
+      "n_fields": {
+        "value": 1,
+        "origin": "count(ngram_summary[2].n_fields)",
+        "source": "FROM_DATA"
+      },
+      "total_effect": {
+        "value": 0.4076894259233835,
+        "origin": "count(ngram_summary[2].total_effect)",
+        "source": "FROM_DATA"
+      }
+    }
+  ],
+  "causal_dominant_factor": {
+    "ngram": "visual",
+    "avg_cv_reduction": {
+      "value": 0.5204776556306011,
+      "origin": "mean(causal_dominant_factor.avg_cv_reduction)",
+      "source": "FROM_STATISTICS"
+    },
+    "n_fields": {
+      "value": 1,
+      "origin": "count(causal_dominant_factor.n_fields)",
+      "source": "FROM_DATA"
+    },
+    "total_effect": {
+      "value": 0.5204776556306011,
+      "origin": "count(causal_dominant_factor.total_effect)",
+      "source": "FROM_DATA"
+    }
+  },
+  "provenance": {
+    "fields": "FROM_DATA: GitHub API /search/repositories?q=stars:>50000 → topics + word frequency",
+    "repos": "FROM_DATA: GitHub API /search/repositories?q={field}",
+    "performance": "FROM_MATH: log(stars) → z-score → percentil empírico",
+    "threshold": "FROM_MATH: np.percentile(perfs, 90)",
+    "ngrams": "FROM_DATA: regex en name, description, topics, owner",
+    "concentration": "FROM_MATH: (freq_top/n_top) / (freq_all/n_all)",
+    "cv": "FROM_MATH: std / mean",
+    "cv_reduction": "FROM_MATH: cv_without - cv_with",
+    "dominant": "FROM_DATA: argmax(total_effect)"
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:33.344847",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 512,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 674,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 512,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 674,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
+}

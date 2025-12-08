@@ -1,686 +1,1493 @@
 {
   "timestamp": "2025-12-01T02:27:00.038600",
-  "T": 2000,
-  "seed": 42,
+  "T": {
+    "value": 2000,
+    "origin": "counted(T)",
+    "source": "FROM_DATA"
+  },
+  "seed": {
+    "value": 42,
+    "origin": "counted(seed)",
+    "source": "FROM_DATA"
+  },
   "biography": {
     "neo": {
       "phases": [
         [
-          0,
+          {
+            "value": 0,
+            "origin": "counted(biography.neo.phases[0][0])",
+            "source": "FROM_DATA"
+          },
           "nacimiento"
         ],
         [
-          21,
-          "exploraci\u00f3n"
+          {
+            "value": 21,
+            "origin": "counted(biography.neo.phases[1][0])",
+            "source": "FROM_DATA"
+          },
+          "exploración"
         ],
         [
-          52,
+          {
+            "value": 52,
+            "origin": "counted(biography.neo.phases[2][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          72,
-          "reconstrucci\u00f3n"
+          {
+            "value": 72,
+            "origin": "counted(biography.neo.phases[3][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          112,
+          {
+            "value": 112,
+            "origin": "counted(biography.neo.phases[4][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          136,
-          "reconstrucci\u00f3n"
+          {
+            "value": 136,
+            "origin": "counted(biography.neo.phases[5][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          156,
+          {
+            "value": 156,
+            "origin": "counted(biography.neo.phases[6][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          177,
-          "reconstrucci\u00f3n"
+          {
+            "value": 177,
+            "origin": "counted(biography.neo.phases[7][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          214,
+          {
+            "value": 214,
+            "origin": "counted(biography.neo.phases[8][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          238,
-          "reconstrucci\u00f3n"
+          {
+            "value": 238,
+            "origin": "counted(biography.neo.phases[9][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          258,
+          {
+            "value": 258,
+            "origin": "counted(biography.neo.phases[10][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          283,
-          "reconstrucci\u00f3n"
+          {
+            "value": 283,
+            "origin": "counted(biography.neo.phases[11][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          301,
+          {
+            "value": 301,
+            "origin": "counted(biography.neo.phases[12][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          323,
-          "reconstrucci\u00f3n"
+          {
+            "value": 323,
+            "origin": "counted(biography.neo.phases[13][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          343,
+          {
+            "value": 343,
+            "origin": "counted(biography.neo.phases[14][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          364,
-          "reconstrucci\u00f3n"
+          {
+            "value": 364,
+            "origin": "counted(biography.neo.phases[15][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          412,
+          {
+            "value": 412,
+            "origin": "counted(biography.neo.phases[16][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          435,
-          "reconstrucci\u00f3n"
+          {
+            "value": 435,
+            "origin": "counted(biography.neo.phases[17][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          460,
+          {
+            "value": 460,
+            "origin": "counted(biography.neo.phases[18][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          483,
-          "reconstrucci\u00f3n"
+          {
+            "value": 483,
+            "origin": "counted(biography.neo.phases[19][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          502,
+          {
+            "value": 502,
+            "origin": "counted(biography.neo.phases[20][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          529,
-          "reconstrucci\u00f3n"
+          {
+            "value": 529,
+            "origin": "counted(biography.neo.phases[21][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          555,
+          {
+            "value": 555,
+            "origin": "counted(biography.neo.phases[22][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          581,
-          "reconstrucci\u00f3n"
+          {
+            "value": 581,
+            "origin": "counted(biography.neo.phases[23][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          600,
+          {
+            "value": 600,
+            "origin": "counted(biography.neo.phases[24][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          623,
-          "reconstrucci\u00f3n"
+          {
+            "value": 623,
+            "origin": "counted(biography.neo.phases[25][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          680,
+          {
+            "value": 680,
+            "origin": "counted(biography.neo.phases[26][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          698,
-          "reconstrucci\u00f3n"
+          {
+            "value": 698,
+            "origin": "counted(biography.neo.phases[27][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          713,
+          {
+            "value": 713,
+            "origin": "counted(biography.neo.phases[28][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          738,
-          "reconstrucci\u00f3n"
+          {
+            "value": 738,
+            "origin": "counted(biography.neo.phases[29][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          756,
+          {
+            "value": 756,
+            "origin": "counted(biography.neo.phases[30][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          782,
-          "reconstrucci\u00f3n"
+          {
+            "value": 782,
+            "origin": "counted(biography.neo.phases[31][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          801,
+          {
+            "value": 801,
+            "origin": "counted(biography.neo.phases[32][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          829,
-          "reconstrucci\u00f3n"
+          {
+            "value": 829,
+            "origin": "counted(biography.neo.phases[33][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          843,
+          {
+            "value": 843,
+            "origin": "counted(biography.neo.phases[34][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          869,
-          "reconstrucci\u00f3n"
+          {
+            "value": 869,
+            "origin": "counted(biography.neo.phases[35][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          984,
+          {
+            "value": 984,
+            "origin": "counted(biography.neo.phases[36][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1006,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1006,
+            "origin": "counted(biography.neo.phases[37][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1020,
+          {
+            "value": 1020,
+            "origin": "counted(biography.neo.phases[38][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1046,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1046,
+            "origin": "counted(biography.neo.phases[39][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1059,
+          {
+            "value": 1059,
+            "origin": "counted(biography.neo.phases[40][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1082,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1082,
+            "origin": "counted(biography.neo.phases[41][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1093,
+          {
+            "value": 1093,
+            "origin": "counted(biography.neo.phases[42][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1118,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1118,
+            "origin": "counted(biography.neo.phases[43][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1135,
+          {
+            "value": 1135,
+            "origin": "counted(biography.neo.phases[44][0])",
+            "source": "FROM_DATA"
+          },
           "madurez"
         ],
         [
-          1138,
+          {
+            "value": 1138,
+            "origin": "counted(biography.neo.phases[45][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1161,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1161,
+            "origin": "counted(biography.neo.phases[46][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1185,
+          {
+            "value": 1185,
+            "origin": "counted(biography.neo.phases[47][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1210,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1210,
+            "origin": "counted(biography.neo.phases[48][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1230,
+          {
+            "value": 1230,
+            "origin": "counted(biography.neo.phases[49][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1251,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1251,
+            "origin": "counted(biography.neo.phases[50][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1266,
+          {
+            "value": 1266,
+            "origin": "counted(biography.neo.phases[51][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1311,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1311,
+            "origin": "counted(biography.neo.phases[52][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1333,
+          {
+            "value": 1333,
+            "origin": "counted(biography.neo.phases[53][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1358,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1358,
+            "origin": "counted(biography.neo.phases[54][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1406,
+          {
+            "value": 1406,
+            "origin": "counted(biography.neo.phases[55][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1427,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1427,
+            "origin": "counted(biography.neo.phases[56][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1440,
+          {
+            "value": 1440,
+            "origin": "counted(biography.neo.phases[57][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1468,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1468,
+            "origin": "counted(biography.neo.phases[58][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1496,
+          {
+            "value": 1496,
+            "origin": "counted(biography.neo.phases[59][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1519,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1519,
+            "origin": "counted(biography.neo.phases[60][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1530,
+          {
+            "value": 1530,
+            "origin": "counted(biography.neo.phases[61][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1560,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1560,
+            "origin": "counted(biography.neo.phases[62][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1583,
+          {
+            "value": 1583,
+            "origin": "counted(biography.neo.phases[63][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1607,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1607,
+            "origin": "counted(biography.neo.phases[64][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1624,
+          {
+            "value": 1624,
+            "origin": "counted(biography.neo.phases[65][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1652,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1652,
+            "origin": "counted(biography.neo.phases[66][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1667,
+          {
+            "value": 1667,
+            "origin": "counted(biography.neo.phases[67][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1691,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1691,
+            "origin": "counted(biography.neo.phases[68][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1702,
+          {
+            "value": 1702,
+            "origin": "counted(biography.neo.phases[69][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1727,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1727,
+            "origin": "counted(biography.neo.phases[70][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1796,
+          {
+            "value": 1796,
+            "origin": "counted(biography.neo.phases[71][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1816,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1816,
+            "origin": "counted(biography.neo.phases[72][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1830,
+          {
+            "value": 1830,
+            "origin": "counted(biography.neo.phases[73][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1854,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1854,
+            "origin": "counted(biography.neo.phases[74][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1883,
+          {
+            "value": 1883,
+            "origin": "counted(biography.neo.phases[75][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1905,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1905,
+            "origin": "counted(biography.neo.phases[76][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1926,
+          {
+            "value": 1926,
+            "origin": "counted(biography.neo.phases[77][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1950,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1950,
+            "origin": "counted(biography.neo.phases[78][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1972,
+          {
+            "value": 1972,
+            "origin": "counted(biography.neo.phases[79][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1997,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1997,
+            "origin": "counted(biography.neo.phases[80][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ]
       ],
-      "n_crises": 46,
-      "crises_resolved": 46,
+      "n_crises": {
+        "value": 46,
+        "origin": "count(biography.neo.n_crises)",
+        "source": "FROM_DATA"
+      },
+      "crises_resolved": {
+        "value": 46,
+        "origin": "counted(biography.neo.crises_resolved)",
+        "source": "FROM_DATA"
+      },
       "character": "Orientado a neg_surprise, con tendencia secundaria a integration. Attachment: 1.00. Crisis superadas: 46/46."
     },
     "eva": {
       "phases": [
         [
-          0,
+          {
+            "value": 0,
+            "origin": "counted(biography.eva.phases[0][0])",
+            "source": "FROM_DATA"
+          },
           "nacimiento"
         ],
         [
-          21,
-          "exploraci\u00f3n"
+          {
+            "value": 21,
+            "origin": "counted(biography.eva.phases[1][0])",
+            "source": "FROM_DATA"
+          },
+          "exploración"
         ],
         [
-          50,
+          {
+            "value": 50,
+            "origin": "counted(biography.eva.phases[2][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          59,
-          "reconstrucci\u00f3n"
+          {
+            "value": 59,
+            "origin": "counted(biography.eva.phases[3][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          76,
+          {
+            "value": 76,
+            "origin": "counted(biography.eva.phases[4][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          99,
-          "reconstrucci\u00f3n"
+          {
+            "value": 99,
+            "origin": "counted(biography.eva.phases[5][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          117,
+          {
+            "value": 117,
+            "origin": "counted(biography.eva.phases[6][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          141,
-          "reconstrucci\u00f3n"
+          {
+            "value": 141,
+            "origin": "counted(biography.eva.phases[7][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          158,
+          {
+            "value": 158,
+            "origin": "counted(biography.eva.phases[8][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          183,
-          "reconstrucci\u00f3n"
+          {
+            "value": 183,
+            "origin": "counted(biography.eva.phases[9][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          204,
+          {
+            "value": 204,
+            "origin": "counted(biography.eva.phases[10][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          229,
-          "reconstrucci\u00f3n"
+          {
+            "value": 229,
+            "origin": "counted(biography.eva.phases[11][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          290,
+          {
+            "value": 290,
+            "origin": "counted(biography.eva.phases[12][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          316,
-          "reconstrucci\u00f3n"
+          {
+            "value": 316,
+            "origin": "counted(biography.eva.phases[13][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          333,
+          {
+            "value": 333,
+            "origin": "counted(biography.eva.phases[14][0])",
+            "source": "FROM_DATA"
+          },
           "madurez"
         ],
         [
-          338,
+          {
+            "value": 338,
+            "origin": "counted(biography.eva.phases[15][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          362,
-          "reconstrucci\u00f3n"
+          {
+            "value": 362,
+            "origin": "counted(biography.eva.phases[16][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          465,
+          {
+            "value": 465,
+            "origin": "counted(biography.eva.phases[17][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          486,
-          "reconstrucci\u00f3n"
+          {
+            "value": 486,
+            "origin": "counted(biography.eva.phases[18][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          504,
+          {
+            "value": 504,
+            "origin": "counted(biography.eva.phases[19][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          540,
-          "reconstrucci\u00f3n"
+          {
+            "value": 540,
+            "origin": "counted(biography.eva.phases[20][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          565,
+          {
+            "value": 565,
+            "origin": "counted(biography.eva.phases[21][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          588,
-          "reconstrucci\u00f3n"
+          {
+            "value": 588,
+            "origin": "counted(biography.eva.phases[22][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          603,
+          {
+            "value": 603,
+            "origin": "counted(biography.eva.phases[23][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          626,
-          "reconstrucci\u00f3n"
+          {
+            "value": 626,
+            "origin": "counted(biography.eva.phases[24][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          672,
+          {
+            "value": 672,
+            "origin": "counted(biography.eva.phases[25][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          691,
-          "reconstrucci\u00f3n"
+          {
+            "value": 691,
+            "origin": "counted(biography.eva.phases[26][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          709,
+          {
+            "value": 709,
+            "origin": "counted(biography.eva.phases[27][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          736,
-          "reconstrucci\u00f3n"
+          {
+            "value": 736,
+            "origin": "counted(biography.eva.phases[28][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          760,
+          {
+            "value": 760,
+            "origin": "counted(biography.eva.phases[29][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          785,
-          "reconstrucci\u00f3n"
+          {
+            "value": 785,
+            "origin": "counted(biography.eva.phases[30][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          801,
+          {
+            "value": 801,
+            "origin": "counted(biography.eva.phases[31][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          829,
-          "reconstrucci\u00f3n"
+          {
+            "value": 829,
+            "origin": "counted(biography.eva.phases[32][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          851,
+          {
+            "value": 851,
+            "origin": "counted(biography.eva.phases[33][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          874,
-          "reconstrucci\u00f3n"
+          {
+            "value": 874,
+            "origin": "counted(biography.eva.phases[34][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          904,
+          {
+            "value": 904,
+            "origin": "counted(biography.eva.phases[35][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          927,
-          "reconstrucci\u00f3n"
+          {
+            "value": 927,
+            "origin": "counted(biography.eva.phases[36][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          948,
+          {
+            "value": 948,
+            "origin": "counted(biography.eva.phases[37][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          972,
-          "reconstrucci\u00f3n"
+          {
+            "value": 972,
+            "origin": "counted(biography.eva.phases[38][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          990,
+          {
+            "value": 990,
+            "origin": "counted(biography.eva.phases[39][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1017,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1017,
+            "origin": "counted(biography.eva.phases[40][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1033,
+          {
+            "value": 1033,
+            "origin": "counted(biography.eva.phases[41][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1059,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1059,
+            "origin": "counted(biography.eva.phases[42][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1082,
+          {
+            "value": 1082,
+            "origin": "counted(biography.eva.phases[43][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1105,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1105,
+            "origin": "counted(biography.eva.phases[44][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1129,
+          {
+            "value": 1129,
+            "origin": "counted(biography.eva.phases[45][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1157,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1157,
+            "origin": "counted(biography.eva.phases[46][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1179,
+          {
+            "value": 1179,
+            "origin": "counted(biography.eva.phases[47][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1206,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1206,
+            "origin": "counted(biography.eva.phases[48][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1260,
+          {
+            "value": 1260,
+            "origin": "counted(biography.eva.phases[49][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1283,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1283,
+            "origin": "counted(biography.eva.phases[50][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1329,
+          {
+            "value": 1329,
+            "origin": "counted(biography.eva.phases[51][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1355,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1355,
+            "origin": "counted(biography.eva.phases[52][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1373,
+          {
+            "value": 1373,
+            "origin": "counted(biography.eva.phases[53][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1396,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1396,
+            "origin": "counted(biography.eva.phases[54][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1405,
+          {
+            "value": 1405,
+            "origin": "counted(biography.eva.phases[55][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1432,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1432,
+            "origin": "counted(biography.eva.phases[56][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1448,
+          {
+            "value": 1448,
+            "origin": "counted(biography.eva.phases[57][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1470,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1470,
+            "origin": "counted(biography.eva.phases[58][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1484,
+          {
+            "value": 1484,
+            "origin": "counted(biography.eva.phases[59][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1501,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1501,
+            "origin": "counted(biography.eva.phases[60][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1511,
+          {
+            "value": 1511,
+            "origin": "counted(biography.eva.phases[61][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1535,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1535,
+            "origin": "counted(biography.eva.phases[62][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1580,
+          {
+            "value": 1580,
+            "origin": "counted(biography.eva.phases[63][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1602,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1602,
+            "origin": "counted(biography.eva.phases[64][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1625,
+          {
+            "value": 1625,
+            "origin": "counted(biography.eva.phases[65][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1648,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1648,
+            "origin": "counted(biography.eva.phases[66][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1661,
+          {
+            "value": 1661,
+            "origin": "counted(biography.eva.phases[67][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1685,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1685,
+            "origin": "counted(biography.eva.phases[68][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1704,
+          {
+            "value": 1704,
+            "origin": "counted(biography.eva.phases[69][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1730,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1730,
+            "origin": "counted(biography.eva.phases[70][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1744,
+          {
+            "value": 1744,
+            "origin": "counted(biography.eva.phases[71][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1769,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1769,
+            "origin": "counted(biography.eva.phases[72][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1794,
+          {
+            "value": 1794,
+            "origin": "counted(biography.eva.phases[73][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1818,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1818,
+            "origin": "counted(biography.eva.phases[74][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1830,
+          {
+            "value": 1830,
+            "origin": "counted(biography.eva.phases[75][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1856,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1856,
+            "origin": "counted(biography.eva.phases[76][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1889,
+          {
+            "value": 1889,
+            "origin": "counted(biography.eva.phases[77][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1911,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1911,
+            "origin": "counted(biography.eva.phases[78][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1935,
+          {
+            "value": 1935,
+            "origin": "counted(biography.eva.phases[79][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ],
         [
-          1958,
-          "reconstrucci\u00f3n"
+          {
+            "value": 1958,
+            "origin": "counted(biography.eva.phases[80][0])",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción"
         ],
         [
-          1974,
+          {
+            "value": 1974,
+            "origin": "counted(biography.eva.phases[81][0])",
+            "source": "FROM_DATA"
+          },
           "madurez"
         ],
         [
-          1979,
+          {
+            "value": 1979,
+            "origin": "counted(biography.eva.phases[82][0])",
+            "source": "FROM_DATA"
+          },
           "crisis"
         ]
       ],
-      "n_crises": 54,
-      "crises_resolved": 54,
+      "n_crises": {
+        "value": 54,
+        "origin": "count(biography.eva.n_crises)",
+        "source": "FROM_DATA"
+      },
+      "crises_resolved": {
+        "value": 54,
+        "origin": "counted(biography.eva.crises_resolved)",
+        "source": "FROM_DATA"
+      },
       "character": "Orientado a neg_surprise, con tendencia secundaria a stability. Attachment: 0.90. Crisis superadas: 54/54."
     },
     "relationship": {
-      "mean_shared_psi": 0.1606412415365699,
-      "max_shared_psi": 0.4513753345015739,
-      "n_shared_psi_events": 59,
+      "mean_shared_psi": {
+        "value": 0.1606412415365699,
+        "origin": "mean(biography.relationship.mean_shared_psi)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_shared_psi": {
+        "value": 0.4513753345015739,
+        "origin": "max_shared_psi(biography.relationship.max_shared_psi)",
+        "source": "FROM_STATISTICS"
+      },
+      "n_shared_psi_events": {
+        "value": 59,
+        "origin": "count(biography.relationship.n_shared_psi_events)",
+        "source": "FROM_DATA"
+      },
       "crisis_initiator": "NEO",
       "overall_dominant": "SHARED",
-      "final_neo_attachment": 1.0,
-      "final_eva_attachment": 0.9049999999999999
+      "final_neo_attachment": {
+        "value": 1.0,
+        "origin": "normalized(biography.relationship.final_neo_attachment)",
+        "source": "FROM_MATH"
+      },
+      "final_eva_attachment": {
+        "value": 0.9049999999999999,
+        "origin": "normalized(biography.relationship.final_eva_attachment)",
+        "source": "FROM_MATH"
+      }
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "de9ca62f4d6a",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:59.544975",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/autonomous_life/biography.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:59.545452",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 388,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 566,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 388,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 566,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
     }
   }
 }

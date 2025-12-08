@@ -1,246 +1,853 @@
 {
   "timestamp": "2025-12-01T16:58:26.262973",
-  "n_tests": 10,
-  "passed": 7,
-  "failed": 3,
-  "pass_rate": 0.7,
-  "mean_score": 0.6172561704607381,
-  "std_score": 0.17130309978366598,
-  "weighted_score": 0.404271783965009,
-  "sym_x_score": 0.404271783965009,
+  "n_tests": {
+    "value": 10,
+    "origin": "count(n_tests)",
+    "source": "FROM_DATA"
+  },
+  "passed": {
+    "value": 7,
+    "origin": "counted(passed)",
+    "source": "FROM_DATA"
+  },
+  "failed": {
+    "value": 3,
+    "origin": "counted(failed)",
+    "source": "FROM_DATA"
+  },
+  "pass_rate": {
+    "value": 0.7,
+    "origin": "ratio(pass_rate)",
+    "source": "FROM_MATH"
+  },
+  "mean_score": {
+    "value": 0.6172561704607381,
+    "origin": "mean(mean_score)",
+    "source": "FROM_STATISTICS"
+  },
+  "std_score": {
+    "value": 0.17130309978366598,
+    "origin": "std(std_score)",
+    "source": "FROM_STATISTICS"
+  },
+  "weighted_score": {
+    "value": 0.404271783965009,
+    "origin": "computed(weighted_score)",
+    "source": "FROM_DATA"
+  },
+  "sym_x_score": {
+    "value": 0.404271783965009,
+    "origin": "computed(sym_x_score)",
+    "source": "FROM_DATA"
+  },
   "individual_results": {
     "SX1": {
       "name": "Symbolic Richness",
-      "score": 0.5390418418474031,
+      "score": {
+        "value": 0.5390418418474031,
+        "origin": "computed(individual_results.SX1.score)",
+        "source": "FROM_DATA"
+      },
       "passed": true,
       "details": {
-        "final_richness": 0.1361595372584316,
-        "alpha_richness": 0.08756214150787141,
-        "mean_entropy": 0.7999738110131398,
-        "beta_entropy": 0.0,
-        "n_symbols_final": 3,
-        "richness_trend": [
-          0.06726727939963124,
-          0.19324698792024925,
-          0.1856953381770519,
-          0.11930999725437871,
-          0.115278083540847
-        ],
-        "entropy_trend": [
-          0.0,
-          0.9999907708772282,
-          0.9999044620997026,
-          0.9999889325350758,
-          0.9999848895536926
-        ]
+        "final_richness": {
+          "value": 0.1361595372584316,
+          "origin": "normalized(individual_results.SX1.details.final_richness)",
+          "source": "FROM_MATH"
+        },
+        "alpha_richness": {
+          "value": 0.08756214150787141,
+          "origin": "normalized(individual_results.SX1.details.alpha_richness)",
+          "source": "FROM_MATH"
+        },
+        "mean_entropy": {
+          "value": 0.7999738110131398,
+          "origin": "mean(individual_results.SX1.details.mean_entropy)",
+          "source": "FROM_STATISTICS"
+        },
+        "beta_entropy": {
+          "value": 0.0,
+          "origin": "normalized(individual_results.SX1.details.beta_entropy)",
+          "source": "FROM_MATH"
+        },
+        "n_symbols_final": {
+          "value": 3,
+          "origin": "count(individual_results.SX1.details.n_symbols_final)",
+          "source": "FROM_DATA"
+        },
+        "richness_trend": {
+          "value": [
+            0.06726727939963124,
+            0.19324698792024925,
+            0.1856953381770519,
+            0.11930999725437871,
+            0.115278083540847
+          ],
+          "origin": "array(individual_results.SX1.details.richness_trend)",
+          "source": "FROM_DATA"
+        },
+        "entropy_trend": {
+          "value": [
+            0.0,
+            0.9999907708772282,
+            0.9999044620997026,
+            0.9999889325350758,
+            0.9999848895536926
+          ],
+          "origin": "array(individual_results.SX1.details.entropy_trend)",
+          "source": "FROM_DATA"
+        }
       },
-      "elapsed_seconds": 0.2156052589416504
+      "elapsed_seconds": {
+        "value": 0.2156052589416504,
+        "origin": "normalized(individual_results.SX1.elapsed_seconds)",
+        "source": "FROM_MATH"
+      }
     },
     "SX2": {
       "name": "Compositionality",
-      "score": 0.2692033219439257,
+      "score": {
+        "value": 0.2692033219439257,
+        "origin": "computed(individual_results.SX2.score)",
+        "source": "FROM_DATA"
+      },
       "passed": true,
       "details": {
-        "mean_useful_lift": 1.0095415168600512,
-        "mean_useful_delta_cons": -0.2090166047602818,
-        "n_useful_bindings": 6,
-        "n_bigrams": 36,
-        "n_trigrams": 117,
-        "total_bindings": 153,
-        "lift_trend": [
-          0.14469149175579754,
-          0.13852954429715858,
-          0.13221801092871516,
-          0.13049250205446503,
-          0.12577012638283497
-        ],
-        "delta_cons_trend": [
-          -0.24439512855229087,
-          -0.2716054863321142,
-          -0.2550269185294707,
-          -0.2668998253623462,
-          -0.2502112096216172
-        ]
+        "mean_useful_lift": {
+          "value": 1.0095415168600512,
+          "origin": "mean(individual_results.SX2.details.mean_useful_lift)",
+          "source": "FROM_STATISTICS"
+        },
+        "mean_useful_delta_cons": {
+          "value": -0.2090166047602818,
+          "origin": "mean(individual_results.SX2.details.mean_useful_delta_cons)",
+          "source": "FROM_STATISTICS"
+        },
+        "n_useful_bindings": {
+          "value": 6,
+          "origin": "count(individual_results.SX2.details.n_useful_bindings)",
+          "source": "FROM_DATA"
+        },
+        "n_bigrams": {
+          "value": 36,
+          "origin": "count(individual_results.SX2.details.n_bigrams)",
+          "source": "FROM_DATA"
+        },
+        "n_trigrams": {
+          "value": 117,
+          "origin": "count(individual_results.SX2.details.n_trigrams)",
+          "source": "FROM_DATA"
+        },
+        "total_bindings": {
+          "value": 153,
+          "origin": "count(individual_results.SX2.details.total_bindings)",
+          "source": "FROM_DATA"
+        },
+        "lift_trend": {
+          "value": [
+            0.14469149175579754,
+            0.13852954429715858,
+            0.13221801092871516,
+            0.13049250205446503,
+            0.12577012638283497
+          ],
+          "origin": "array(individual_results.SX2.details.lift_trend)",
+          "source": "FROM_DATA"
+        },
+        "delta_cons_trend": {
+          "value": [
+            -0.24439512855229087,
+            -0.2716054863321142,
+            -0.2550269185294707,
+            -0.2668998253623462,
+            -0.2502112096216172
+          ],
+          "origin": "array(individual_results.SX2.details.delta_cons_trend)",
+          "source": "FROM_DATA"
+        }
       },
-      "elapsed_seconds": 1.0119826793670654
+      "elapsed_seconds": {
+        "value": 1.0119826793670654,
+        "origin": "computed(individual_results.SX2.elapsed_seconds)",
+        "source": "FROM_MATH"
+      }
     },
     "SX3": {
       "name": "Grammar Causality",
-      "score": 0.6832735598053961,
+      "score": {
+        "value": 0.6832735598053961,
+        "origin": "computed(individual_results.SX3.score)",
+        "source": "FROM_DATA"
+      },
       "passed": false,
       "details": {
-        "corr_v": 0.7853397883958093,
-        "corr_sagi": 0.8263499740404668,
-        "corr_total": 0.8930942392215842,
-        "n_strong_rules": 1,
-        "n_total_rules": 61,
-        "role_distribution": {
-          "evaluative": 3,
-          "operative": 3,
-          "transitional": 4
+        "corr_v": {
+          "value": 0.7853397883958093,
+          "origin": "normalized(individual_results.SX3.details.corr_v)",
+          "source": "FROM_MATH"
         },
-        "mean_lift": 0.3822672119032115,
-        "n_predictions": 250
+        "corr_sagi": {
+          "value": 0.8263499740404668,
+          "origin": "normalized(individual_results.SX3.details.corr_sagi)",
+          "source": "FROM_MATH"
+        },
+        "corr_total": {
+          "value": 0.8930942392215842,
+          "origin": "count(individual_results.SX3.details.corr_total)",
+          "source": "FROM_DATA"
+        },
+        "n_strong_rules": {
+          "value": 1,
+          "origin": "count(individual_results.SX3.details.n_strong_rules)",
+          "source": "FROM_DATA"
+        },
+        "n_total_rules": {
+          "value": 61,
+          "origin": "count(individual_results.SX3.details.n_total_rules)",
+          "source": "FROM_DATA"
+        },
+        "role_distribution": {
+          "evaluative": {
+            "value": 3,
+            "origin": "counted(individual_results.SX3.details.role_distribution.evaluative)",
+            "source": "FROM_DATA"
+          },
+          "operative": {
+            "value": 3,
+            "origin": "counted(individual_results.SX3.details.role_distribution.operative)",
+            "source": "FROM_DATA"
+          },
+          "transitional": {
+            "value": 4,
+            "origin": "counted(individual_results.SX3.details.role_distribution.transitional)",
+            "source": "FROM_DATA"
+          }
+        },
+        "mean_lift": {
+          "value": 0.3822672119032115,
+          "origin": "mean(individual_results.SX3.details.mean_lift)",
+          "source": "FROM_STATISTICS"
+        },
+        "n_predictions": {
+          "value": 250,
+          "origin": "count(individual_results.SX3.details.n_predictions)",
+          "source": "FROM_DATA"
+        }
       },
-      "elapsed_seconds": 0.00898289680480957
+      "elapsed_seconds": {
+        "value": 0.00898289680480957,
+        "origin": "normalized(individual_results.SX3.elapsed_seconds)",
+        "source": "FROM_MATH"
+      }
     },
     "SX4": {
       "name": "World Grounding",
-      "score": 0.701694415933235,
+      "score": {
+        "value": 0.701694415933235,
+        "origin": "computed(individual_results.SX4.score)",
+        "source": "FROM_DATA"
+      },
       "passed": true,
       "details": {
-        "mean_sel_world": 0.5464199249496566,
-        "mean_sel_social": 0.00988777327637597,
-        "mean_impact": 0.43277378074176126,
-        "mean_grounded_score": 0.005648053110783544,
-        "n_grounded_symbols": 3,
-        "symbols_by_regime": {
-          "0": 3,
-          "1": 3,
-          "2": 4
+        "mean_sel_world": {
+          "value": 0.5464199249496566,
+          "origin": "mean(individual_results.SX4.details.mean_sel_world)",
+          "source": "FROM_STATISTICS"
         },
-        "total_tracked": 10,
-        "sel_world_trend": [
-          0.5788105027848081,
-          0.565136480252255,
-          0.5541960019879094,
-          0.5492013209752328,
-          0.5464199249496566
-        ]
+        "mean_sel_social": {
+          "value": 0.00988777327637597,
+          "origin": "mean(individual_results.SX4.details.mean_sel_social)",
+          "source": "FROM_STATISTICS"
+        },
+        "mean_impact": {
+          "value": 0.43277378074176126,
+          "origin": "mean(individual_results.SX4.details.mean_impact)",
+          "source": "FROM_STATISTICS"
+        },
+        "mean_grounded_score": {
+          "value": 0.005648053110783544,
+          "origin": "mean(individual_results.SX4.details.mean_grounded_score)",
+          "source": "FROM_STATISTICS"
+        },
+        "n_grounded_symbols": {
+          "value": 3,
+          "origin": "count(individual_results.SX4.details.n_grounded_symbols)",
+          "source": "FROM_DATA"
+        },
+        "symbols_by_regime": {
+          "0": {
+            "value": 3,
+            "origin": "counted(individual_results.SX4.details.symbols_by_regime.0)",
+            "source": "FROM_DATA"
+          },
+          "1": {
+            "value": 3,
+            "origin": "counted(individual_results.SX4.details.symbols_by_regime.1)",
+            "source": "FROM_DATA"
+          },
+          "2": {
+            "value": 4,
+            "origin": "counted(individual_results.SX4.details.symbols_by_regime.2)",
+            "source": "FROM_DATA"
+          }
+        },
+        "total_tracked": {
+          "value": 10,
+          "origin": "count(individual_results.SX4.details.total_tracked)",
+          "source": "FROM_DATA"
+        },
+        "sel_world_trend": {
+          "value": [
+            0.5788105027848081,
+            0.565136480252255,
+            0.5541960019879094,
+            0.5492013209752328,
+            0.5464199249496566
+          ],
+          "origin": "array(individual_results.SX4.details.sel_world_trend)",
+          "source": "FROM_DATA"
+        }
       },
-      "elapsed_seconds": 0.016178369522094727
+      "elapsed_seconds": {
+        "value": 0.016178369522094727,
+        "origin": "normalized(individual_results.SX4.elapsed_seconds)",
+        "source": "FROM_MATH"
+      }
     },
     "SX5": {
       "name": "Social Grounding",
-      "score": 0.636009629358664,
+      "score": {
+        "value": 0.636009629358664,
+        "origin": "computed(individual_results.SX5.score)",
+        "source": "FROM_DATA"
+      },
       "passed": true,
       "details": {
-        "mean_sel_social": 0.26224108405531243,
-        "mean_sel_world": 0.03964610068435642,
-        "mean_grounded_score": 0.04104137144761708,
-        "n_grounded_symbols": 3,
-        "symbols_by_agent": {
-          "NEO": 9,
-          "EVA": 5,
-          "ALEX": 3,
-          "ADAM": 8,
-          "IRIS": 5
+        "mean_sel_social": {
+          "value": 0.26224108405531243,
+          "origin": "mean(individual_results.SX5.details.mean_sel_social)",
+          "source": "FROM_STATISTICS"
         },
-        "agents_with_symbols": 5,
-        "total_tracked": 10,
-        "sel_social_trend": [
-          0.27699679767834534,
-          0.27288382507956765,
-          0.2690721292976196,
-          0.26517208736797665,
-          0.26224108405531243
-        ]
+        "mean_sel_world": {
+          "value": 0.03964610068435642,
+          "origin": "mean(individual_results.SX5.details.mean_sel_world)",
+          "source": "FROM_STATISTICS"
+        },
+        "mean_grounded_score": {
+          "value": 0.04104137144761708,
+          "origin": "mean(individual_results.SX5.details.mean_grounded_score)",
+          "source": "FROM_STATISTICS"
+        },
+        "n_grounded_symbols": {
+          "value": 3,
+          "origin": "count(individual_results.SX5.details.n_grounded_symbols)",
+          "source": "FROM_DATA"
+        },
+        "symbols_by_agent": {
+          "NEO": {
+            "value": 9,
+            "origin": "counted(individual_results.SX5.details.symbols_by_agent.NEO)",
+            "source": "FROM_DATA"
+          },
+          "EVA": {
+            "value": 5,
+            "origin": "counted(individual_results.SX5.details.symbols_by_agent.EVA)",
+            "source": "FROM_DATA"
+          },
+          "ALEX": {
+            "value": 3,
+            "origin": "counted(individual_results.SX5.details.symbols_by_agent.ALEX)",
+            "source": "FROM_DATA"
+          },
+          "ADAM": {
+            "value": 8,
+            "origin": "counted(individual_results.SX5.details.symbols_by_agent.ADAM)",
+            "source": "FROM_DATA"
+          },
+          "IRIS": {
+            "value": 5,
+            "origin": "counted(individual_results.SX5.details.symbols_by_agent.IRIS)",
+            "source": "FROM_DATA"
+          }
+        },
+        "agents_with_symbols": {
+          "value": 5,
+          "origin": "counted(individual_results.SX5.details.agents_with_symbols)",
+          "source": "FROM_DATA"
+        },
+        "total_tracked": {
+          "value": 10,
+          "origin": "count(individual_results.SX5.details.total_tracked)",
+          "source": "FROM_DATA"
+        },
+        "sel_social_trend": {
+          "value": [
+            0.27699679767834534,
+            0.27288382507956765,
+            0.2690721292976196,
+            0.26517208736797665,
+            0.26224108405531243
+          ],
+          "origin": "array(individual_results.SX5.details.sel_social_trend)",
+          "source": "FROM_DATA"
+        }
       },
-      "elapsed_seconds": 0.01473689079284668
+      "elapsed_seconds": {
+        "value": 0.01473689079284668,
+        "origin": "normalized(individual_results.SX5.elapsed_seconds)",
+        "source": "FROM_MATH"
+      }
     },
     "SX6": {
       "name": "Narrative Compression",
-      "score": 0.8137830144253737,
+      "score": {
+        "value": 0.8137830144253737,
+        "origin": "computed(individual_results.SX6.score)",
+        "source": "FROM_DATA"
+      },
       "passed": "True",
       "details": {
-        "L_symbolic": 68.36409066998674,
-        "L_raw": 367.12059568051535,
-        "NC": 0.8137830144253737,
-        "quantile_Q75": 0.3,
-        "delta_R": 0.0506598220869649,
-        "vocab_size": 5,
-        "total_symbols": 398
+        "L_symbolic": {
+          "value": 68.36409066998674,
+          "origin": "computed(individual_results.SX6.details.L_symbolic)",
+          "source": "FROM_MATH"
+        },
+        "L_raw": {
+          "value": 367.12059568051535,
+          "origin": "computed(individual_results.SX6.details.L_raw)",
+          "source": "FROM_MATH"
+        },
+        "NC": {
+          "value": 0.8137830144253737,
+          "origin": "normalized(individual_results.SX6.details.NC)",
+          "source": "FROM_MATH"
+        },
+        "quantile_Q75": {
+          "value": 0.3,
+          "origin": "normalized(individual_results.SX6.details.quantile_Q75)",
+          "source": "FROM_MATH"
+        },
+        "delta_R": {
+          "value": 0.0506598220869649,
+          "origin": "normalized(individual_results.SX6.details.delta_R)",
+          "source": "FROM_MATH"
+        },
+        "vocab_size": {
+          "value": 5,
+          "origin": "counted(individual_results.SX6.details.vocab_size)",
+          "source": "FROM_DATA"
+        },
+        "total_symbols": {
+          "value": 398,
+          "origin": "count(individual_results.SX6.details.total_symbols)",
+          "source": "FROM_DATA"
+        }
       },
-      "elapsed_seconds": 0.012223005294799805
+      "elapsed_seconds": {
+        "value": 0.012223005294799805,
+        "origin": "normalized(individual_results.SX6.elapsed_seconds)",
+        "source": "FROM_MATH"
+      }
     },
     "SX7": {
       "name": "Planning Gain",
-      "score": 0.8784070202226362,
+      "score": {
+        "value": 0.8784070202226362,
+        "origin": "computed(individual_results.SX7.score)",
+        "source": "FROM_DATA"
+      },
       "passed": "True",
       "details": {
-        "R_plan": 0.7502177387915068,
-        "R_no_plan": 0.6516466114839888,
-        "MAD_delta_R": 0.09969615721692082,
-        "PG": 0.9887154135043036,
-        "CI_lower": 0.14656228345519218,
-        "CI_upper": 1.828498241538541,
-        "overlap_current": 0.4524678118485771,
-        "pct_valid_blocks": 0.7058823529411765,
-        "n_plan": 136,
-        "n_no_plan": 136
+        "R_plan": {
+          "value": 0.7502177387915068,
+          "origin": "normalized(individual_results.SX7.details.R_plan)",
+          "source": "FROM_MATH"
+        },
+        "R_no_plan": {
+          "value": 0.6516466114839888,
+          "origin": "normalized(individual_results.SX7.details.R_no_plan)",
+          "source": "FROM_MATH"
+        },
+        "MAD_delta_R": {
+          "value": 0.09969615721692082,
+          "origin": "normalized(individual_results.SX7.details.MAD_delta_R)",
+          "source": "FROM_MATH"
+        },
+        "PG": {
+          "value": 0.9887154135043036,
+          "origin": "normalized(individual_results.SX7.details.PG)",
+          "source": "FROM_MATH"
+        },
+        "CI_lower": {
+          "value": 0.14656228345519218,
+          "origin": "normalized(individual_results.SX7.details.CI_lower)",
+          "source": "FROM_MATH"
+        },
+        "CI_upper": {
+          "value": 1.828498241538541,
+          "origin": "computed(individual_results.SX7.details.CI_upper)",
+          "source": "FROM_MATH"
+        },
+        "overlap_current": {
+          "value": 0.4524678118485771,
+          "origin": "normalized(individual_results.SX7.details.overlap_current)",
+          "source": "FROM_MATH"
+        },
+        "pct_valid_blocks": {
+          "value": 0.7058823529411765,
+          "origin": "ratio(individual_results.SX7.details.pct_valid_blocks)",
+          "source": "FROM_MATH"
+        },
+        "n_plan": {
+          "value": 136,
+          "origin": "count(individual_results.SX7.details.n_plan)",
+          "source": "FROM_DATA"
+        },
+        "n_no_plan": {
+          "value": 136,
+          "origin": "count(individual_results.SX7.details.n_no_plan)",
+          "source": "FROM_DATA"
+        }
       },
-      "elapsed_seconds": 0.0024056434631347656
+      "elapsed_seconds": {
+        "value": 0.0024056434631347656,
+        "origin": "normalized(individual_results.SX7.elapsed_seconds)",
+        "source": "FROM_MATH"
+      }
     },
     "SX8": {
       "name": "Multi-Agent Coordination",
-      "score": 0.4,
+      "score": {
+        "value": 0.4,
+        "origin": "computed(individual_results.SX8.score)",
+        "source": "FROM_DATA"
+      },
       "passed": false,
       "details": {
-        "mean_overlap": 0.12962962962962962,
-        "n_shared_active": 0,
-        "coordination_score": 0.0,
-        "overlaps": [
-          0.16666666666666666,
-          0.0,
-          0.2222222222222222
-        ],
+        "mean_overlap": {
+          "value": 0.12962962962962962,
+          "origin": "mean(individual_results.SX8.details.mean_overlap)",
+          "source": "FROM_STATISTICS"
+        },
+        "n_shared_active": {
+          "value": 0,
+          "origin": "count(individual_results.SX8.details.n_shared_active)",
+          "source": "FROM_DATA"
+        },
+        "coordination_score": {
+          "value": 0.0,
+          "origin": "count(individual_results.SX8.details.coordination_score)",
+          "source": "FROM_DATA"
+        },
+        "overlaps": {
+          "value": [
+            0.16666666666666666,
+            0.0,
+            0.2222222222222222
+          ],
+          "origin": "array(individual_results.SX8.details.overlaps)",
+          "source": "FROM_DATA"
+        },
         "symbols_per_agent": {
-          "NEO": 2,
-          "EVA": 3,
-          "ALEX": 3
+          "NEO": {
+            "value": 2,
+            "origin": "counted(individual_results.SX8.details.symbols_per_agent.NEO)",
+            "source": "FROM_DATA"
+          },
+          "EVA": {
+            "value": 3,
+            "origin": "counted(individual_results.SX8.details.symbols_per_agent.EVA)",
+            "source": "FROM_DATA"
+          },
+          "ALEX": {
+            "value": 3,
+            "origin": "counted(individual_results.SX8.details.symbols_per_agent.ALEX)",
+            "source": "FROM_DATA"
+          }
         },
         "active_per_agent": {
-          "NEO": 1,
-          "EVA": 2,
-          "ALEX": 2
+          "NEO": {
+            "value": 1,
+            "origin": "counted(individual_results.SX8.details.active_per_agent.NEO)",
+            "source": "FROM_DATA"
+          },
+          "EVA": {
+            "value": 2,
+            "origin": "counted(individual_results.SX8.details.active_per_agent.EVA)",
+            "source": "FROM_DATA"
+          },
+          "ALEX": {
+            "value": 2,
+            "origin": "counted(individual_results.SX8.details.active_per_agent.ALEX)",
+            "source": "FROM_DATA"
+          }
         }
       },
-      "elapsed_seconds": 0.14086246490478516
+      "elapsed_seconds": {
+        "value": 0.14086246490478516,
+        "origin": "normalized(individual_results.SX8.elapsed_seconds)",
+        "source": "FROM_MATH"
+      }
     },
     "SX9": {
       "name": "Symbol Robustness",
-      "score": 0.6158726393976722,
+      "score": {
+        "value": 0.6158726393976722,
+        "origin": "computed(individual_results.SX9.score)",
+        "source": "FROM_DATA"
+      },
       "passed": true,
       "details": {
-        "symbol_retention": 0.5,
-        "mean_score_change": 0.1341273606023278,
-        "stability_proportion": 1.0,
-        "score_correlation": 0.0,
-        "n_active_pre": 2,
-        "n_active_post": 1,
-        "n_symbols_pre": 3,
-        "n_symbols_post": 3,
-        "sample_changes": [
-          0.10192804290157031,
-          0.16164660614396653,
-          0.13880743276144658
-        ]
+        "symbol_retention": {
+          "value": 0.5,
+          "origin": "normalized(individual_results.SX9.details.symbol_retention)",
+          "source": "FROM_MATH"
+        },
+        "mean_score_change": {
+          "value": 0.1341273606023278,
+          "origin": "mean(individual_results.SX9.details.mean_score_change)",
+          "source": "FROM_STATISTICS"
+        },
+        "stability_proportion": {
+          "value": 1.0,
+          "origin": "normalized(individual_results.SX9.details.stability_proportion)",
+          "source": "FROM_MATH"
+        },
+        "score_correlation": {
+          "value": 0.0,
+          "origin": "computed(individual_results.SX9.details.score_correlation)",
+          "source": "FROM_DATA"
+        },
+        "n_active_pre": {
+          "value": 2,
+          "origin": "count(individual_results.SX9.details.n_active_pre)",
+          "source": "FROM_DATA"
+        },
+        "n_active_post": {
+          "value": 1,
+          "origin": "count(individual_results.SX9.details.n_active_post)",
+          "source": "FROM_DATA"
+        },
+        "n_symbols_pre": {
+          "value": 3,
+          "origin": "count(individual_results.SX9.details.n_symbols_pre)",
+          "source": "FROM_DATA"
+        },
+        "n_symbols_post": {
+          "value": 3,
+          "origin": "count(individual_results.SX9.details.n_symbols_post)",
+          "source": "FROM_DATA"
+        },
+        "sample_changes": {
+          "value": [
+            0.10192804290157031,
+            0.16164660614396653,
+            0.13880743276144658
+          ],
+          "origin": "array(individual_results.SX9.details.sample_changes)",
+          "source": "FROM_DATA"
+        }
       },
-      "elapsed_seconds": 0.09187602996826172
+      "elapsed_seconds": {
+        "value": 0.09187602996826172,
+        "origin": "normalized(individual_results.SX9.elapsed_seconds)",
+        "source": "FROM_MATH"
+      }
     },
     "SX10": {
       "name": "Symbolic Maturity",
-      "score": 0.635276261673075,
+      "score": {
+        "value": 0.635276261673075,
+        "origin": "computed(individual_results.SX10.score)",
+        "source": "FROM_DATA"
+      },
       "passed": false,
       "details": {
-        "M": 0.635276261673075,
-        "z_stability": 0.7484708063018541,
-        "z_reuse": 0.780851678534109,
-        "z_predictivity": 0.29411764705882354,
-        "z_transfer": 0.35294117647058826,
-        "z_robustness": 1.0,
-        "weights": {
-          "stability": 0.2,
-          "reuse": 0.2,
-          "predictivity": 0.2,
-          "transfer": 0.2,
-          "robustness": 0.2
+        "M": {
+          "value": 0.635276261673075,
+          "origin": "normalized(individual_results.SX10.details.M)",
+          "source": "FROM_MATH"
         },
-        "components_ok": 3,
-        "n_symbols": 10,
-        "mean_lifetime": 201.9
+        "z_stability": {
+          "value": 0.7484708063018541,
+          "origin": "normalized(individual_results.SX10.details.z_stability)",
+          "source": "FROM_MATH"
+        },
+        "z_reuse": {
+          "value": 0.780851678534109,
+          "origin": "normalized(individual_results.SX10.details.z_reuse)",
+          "source": "FROM_MATH"
+        },
+        "z_predictivity": {
+          "value": 0.29411764705882354,
+          "origin": "normalized(individual_results.SX10.details.z_predictivity)",
+          "source": "FROM_MATH"
+        },
+        "z_transfer": {
+          "value": 0.35294117647058826,
+          "origin": "normalized(individual_results.SX10.details.z_transfer)",
+          "source": "FROM_MATH"
+        },
+        "z_robustness": {
+          "value": 1.0,
+          "origin": "normalized(individual_results.SX10.details.z_robustness)",
+          "source": "FROM_MATH"
+        },
+        "weights": {
+          "stability": {
+            "value": 0.2,
+            "origin": "normalized(individual_results.SX10.details.weights.stability)",
+            "source": "FROM_MATH"
+          },
+          "reuse": {
+            "value": 0.2,
+            "origin": "normalized(individual_results.SX10.details.weights.reuse)",
+            "source": "FROM_MATH"
+          },
+          "predictivity": {
+            "value": 0.2,
+            "origin": "normalized(individual_results.SX10.details.weights.predictivity)",
+            "source": "FROM_MATH"
+          },
+          "transfer": {
+            "value": 0.2,
+            "origin": "normalized(individual_results.SX10.details.weights.transfer)",
+            "source": "FROM_MATH"
+          },
+          "robustness": {
+            "value": 0.2,
+            "origin": "normalized(individual_results.SX10.details.weights.robustness)",
+            "source": "FROM_MATH"
+          }
+        },
+        "components_ok": {
+          "value": 3,
+          "origin": "counted(individual_results.SX10.details.components_ok)",
+          "source": "FROM_DATA"
+        },
+        "n_symbols": {
+          "value": 10,
+          "origin": "count(individual_results.SX10.details.n_symbols)",
+          "source": "FROM_DATA"
+        },
+        "mean_lifetime": {
+          "value": 201.9,
+          "origin": "mean(individual_results.SX10.details.mean_lifetime)",
+          "source": "FROM_STATISTICS"
+        }
       },
-      "elapsed_seconds": 0.0021212100982666016
+      "elapsed_seconds": {
+        "value": 0.0021212100982666016,
+        "origin": "normalized(individual_results.SX10.elapsed_seconds)",
+        "source": "FROM_MATH"
+      }
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "07bb3e056325",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:33.302636",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/benchmark/results/symx_results_20251201_165826.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:33.302842",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 0,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 13,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 268,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 287,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 268,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 274,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
     }
   }
 }

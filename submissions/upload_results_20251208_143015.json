@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "type": "LEADERBOARD_UPLOAD_RESULTS",
+    "source": "100% END\u00d3GENO",
+    "timestamp": {
+      "value": "2025-12-08T14:30:15.141837",
+      "origin": "datetime.now()",
+      "source": "FROM_DATA"
+    }
+  },
+  "uploads": {
+    "egoschema": {
+      "benchmark": {
+        "value": "EgoSchema",
+        "origin": "benchmark_name",
+        "source": "FROM_DATA"
+      },
+      "timestamp": {
+        "value": "2025-12-08T14:30:15.141844",
+        "origin": "datetime.now()",
+        "source": "FROM_DATA"
+      },
+      "status": {
+        "value": "error",
+        "origin": "initial_status",
+        "source": "FROM_DATA"
+      },
+      "error": {
+        "value": "EVALAI_TOKEN not found",
+        "origin": "discover_evalai_token()",
+        "source": "FROM_DATA"
+      },
+      "instructions": {
+        "value": "Set EVALAI_TOKEN env var or create ~/.evalai/token",
+        "origin": "evalai_auth_requirement",
+        "source": "FROM_DATA"
+      }
+    },
+    "ego4d": {
+      "benchmark": {
+        "value": "Ego4D_LTA",
+        "origin": "benchmark_name",
+        "source": "FROM_DATA"
+      },
+      "timestamp": {
+        "value": "2025-12-08T14:30:15.141846",
+        "origin": "datetime.now()",
+        "source": "FROM_DATA"
+      },
+      "status": {
+        "value": "error",
+        "origin": "initial_status",
+        "source": "FROM_DATA"
+      },
+      "error": {
+        "value": "EVALAI_TOKEN not found",
+        "origin": "discover_evalai_token()",
+        "source": "FROM_DATA"
+      }
+    },
+    "agentbench": {
+      "benchmark": {
+        "value": "AgentBench",
+        "origin": "benchmark_name",
+        "source": "FROM_DATA"
+      },
+      "timestamp": {
+        "value": "2025-12-08T14:30:15.141847",
+        "origin": "datetime.now()",
+        "source": "FROM_DATA"
+      },
+      "status": {
+        "value": "manual_required",
+        "origin": "initial_status",
+        "source": "FROM_DATA"
+      },
+      "message": {
+        "value": "No GitHub token - manual PR submission required",
+        "origin": "discover_github_token()",
+        "source": "FROM_DATA"
+      },
+      "instructions": {
+        "steps": [
+          {
+            "value": "1. Fork https://github.com/THUDM/AgentBench",
+            "origin": "agentbench_repo",
+            "source": "FROM_DATA"
+          },
+          {
+            "value": "2. Add agent implementation to agents/",
+            "origin": "submission_guide",
+            "source": "FROM_DATA"
+          },
+          {
+            "value": "3. Run evaluation locally",
+            "origin": "submission_guide",
+            "source": "FROM_DATA"
+          },
+          {
+            "value": "4. Create PR with results",
+            "origin": "submission_guide",
+            "source": "FROM_DATA"
+          }
+        ],
+        "origin": "agentbench_submission_protocol",
+        "source": "FROM_DATA"
+      },
+      "submission_file": {
+        "value": "/root/NEO_EVA/submissions/agentbench_submission.json",
+        "origin": "generated_path",
+        "source": "FROM_DATA"
+      }
+    }
+  },
+  "summary": {
+    "total": {
+      "value": 3,
+      "origin": "len(uploads)",
+      "source": "FROM_MATH"
+    },
+    "submitted": {
+      "value": 0,
+      "origin": "count(submitted)",
+      "source": "FROM_MATH"
+    },
+    "ready": {
+      "value": 0,
+      "origin": "count(ready)",
+      "source": "FROM_MATH"
+    },
+    "not_ready": {
+      "value": 0,
+      "origin": "count(not_ready)",
+      "source": "FROM_MATH"
+    },
+    "errors": {
+      "value": 2,
+      "origin": "count(error)",
+      "source": "FROM_MATH"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "type": "AGENTBENCH_SUBMISSION",
+    "source": "100% END\u00d3GENO",
+    "timestamp": {
+      "value": "2025-12-08T14:44:21.641427",
+      "origin": "datetime.now()",
+      "source": "FROM_DATA"
+    },
+    "model_name": {
+      "value": "NEO_EVA_300_Agents",
+      "origin": "project_config",
+      "source": "FROM_DATA"
+    },
+    "psila_composite": {
+      "value": 0.2742,
+      "origin": "psila_log.composite",
+      "source": "FROM_DATA"
+    }
+  },
+  "agent_config": {
+    "n_agents": {
+      "value": 300,
+      "origin": "agi_interna_loop.config",
+      "source": "FROM_DATA"
+    },
+    "architecture": {
+      "value": "endogenous_multi_agent",
+      "origin": "system_design",
+      "source": "FROM_DATA"
+    },
+    "training_paradigm": {
+      "value": "self_generated_data",
+      "origin": "norma_dura_protocol",
+      "source": "FROM_DATA"
+    }
+  },
+  "benchmarks_supported": {
+    "value": [
+      "os_interaction",
+      "db",
+      "kg",
+      "card_game"
+    ],
+    "origin": "agentbench_task_list",
+    "source": "FROM_DATA"
+  },
+  "submission_ready": {
+    "value": false,
+    "origin": "needs_agent_wrapper",
+    "source": "FROM_DATA"
+  }
+}

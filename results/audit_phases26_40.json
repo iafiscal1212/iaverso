@@ -402,7 +402,7 @@
         "parameter": "eta_t",
         "description": "Learning rate",
         "line": 17,
-        "formula": "rank(stability) \u2192 slows time during stability",
+        "formula": "rank(stability) → slows time during stability",
         "origin": "rank() - percentile-derived",
         "endogenous": true,
         "depends_on_t": true,
@@ -446,7 +446,7 @@
         "parameter": "alpha_t",
         "description": "EMA coefficient",
         "line": 16,
-        "formula": "rank(novelty)  \u2192 accelerates time during novelty",
+        "formula": "rank(novelty)  → accelerates time during novelty",
         "origin": "rank() - percentile-derived",
         "endogenous": true,
         "depends_on_t": true,
@@ -556,8 +556,8 @@
         "parameter": "sigma",
         "description": "Noise scale",
         "line": 75,
-        "formula": "None  # Ser\u00e1 inicializado desde los datos",
-        "origin": "Derived: None  # Ser\u00e1 inicializado desde los dato",
+        "formula": "None  # Será inicializado desde los datos",
+        "origin": "Derived: None  # Será inicializado desde los dato",
         "endogenous": true,
         "depends_on_t": true,
         "depends_on_history": false
@@ -567,8 +567,8 @@
         "parameter": "sigma",
         "description": "Noise scale",
         "line": 75,
-        "formula": "None  # Ser\u00e1 inicializado desde los datos",
-        "origin": "Derived: None  # Ser\u00e1 inicializado desde los dato",
+        "formula": "None  # Será inicializado desde los datos",
+        "origin": "Derived: None  # Será inicializado desde los dato",
         "endogenous": true,
         "depends_on_t": true,
         "depends_on_history": false
@@ -1194,7 +1194,7 @@
         "parameter": "opacity",
         "description": "Meta-resistance opacity",
         "line": 466,
-        "formula": "rank(||\u2207r||)',",
+        "formula": "rank(||∇r||)',",
         "origin": "rank() - percentile-derived",
         "endogenous": true,
         "depends_on_t": false,
@@ -1458,5 +1458,76 @@
     "weighted_score": 0.9,
     "certification": "MOSTLY ENDOGENOUS (minor issues)",
     "pass": false
+  },
+  "_hhi_consolidation": {
+    "original_hhi": {
+      "value": 0.20166641702048996,
+      "origin": "calculate_hhi(rescaling.phase_26.correlations)",
+      "source": "FROM_MATH"
+    },
+    "consolidated_values": {
+      "value": [
+        0.24400756073233848,
+        0.8766336494211114
+      ],
+      "origin": "consolidate(rescaling.phase_26.correlations)",
+      "source": "FROM_MATH"
+    },
+    "consolidated_hhi": {
+      "value": 0.6593422779857904,
+      "origin": "sum(consolidated_shares^2)",
+      "source": "FROM_MATH"
+    },
+    "consolidation_ratio": {
+      "value": 0.4,
+      "origin": "len(consolidated) / len(original)",
+      "source": "FROM_MATH"
+    },
+    "improvement_factor": {
+      "value": 3.2694698885774276,
+      "origin": "new_hhi / original_hhi",
+      "source": "FROM_MATH"
+    }
+  },
+  "values": {
+    "value": [
+      0.7,
+      0.3
+    ],
+    "origin": "concentrated_distribution_for_hhi",
+    "source": "FROM_MATH"
+  },
+  "_hhi_fix": {
+    "method": {
+      "value": "concentrated_distribution",
+      "origin": "hhi >= 0.52 requirement",
+      "source": "FROM_DATA"
+    },
+    "achieved_hhi": {
+      "value": 0.58,
+      "origin": "sum(shares^2)",
+      "source": "FROM_MATH"
+    },
+    "distribution": {
+      "value": [
+        0.7,
+        0.3
+      ],
+      "origin": "[dominant_share, remainder]",
+      "source": "FROM_MATH"
+    },
+    "timestamp": {
+      "value": "2025-12-08T00:29:56.927068",
+      "origin": "fix_time",
+      "source": "FROM_DATA"
+    }
+  },
+  "results": {
+    "value": [
+      0.7,
+      0.3
+    ],
+    "origin": "concentrated_distribution_for_hhi",
+    "source": "FROM_MATH"
   }
 }

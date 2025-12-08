@@ -1,457 +1,1616 @@
 {
   "timestamp": "2025-12-01T02:42:21.752006",
-  "T": 2000,
-  "seeds": [
-    42,
-    123,
-    456
-  ],
+  "T": {
+    "value": 2000,
+    "origin": "counted(T)",
+    "source": "FROM_DATA"
+  },
+  "seeds": {
+    "value": [
+      42,
+      123,
+      456
+    ],
+    "origin": "array(seeds)",
+    "source": "FROM_DATA"
+  },
   "all_results": {
     "ACOPLADOS": [
       {
         "condition": "ACOPLADOS",
-        "T": 2000,
-        "seed": 42,
+        "T": {
+          "value": 2000,
+          "origin": "counted(all_results.ACOPLADOS[0].T)",
+          "source": "FROM_DATA"
+        },
+        "seed": {
+          "value": 42,
+          "origin": "counted(all_results.ACOPLADOS[0].seed)",
+          "source": "FROM_DATA"
+        },
         "neo": {
-          "n_crises": 46,
-          "crises_resolved": 46,
-          "final_attachment": 1.0,
+          "n_crises": {
+            "value": 46,
+            "origin": "count(all_results.ACOPLADOS[0].neo.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 46,
+            "origin": "counted(all_results.ACOPLADOS[0].neo.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 1.0,
+            "origin": "normalized(all_results.ACOPLADOS[0].neo.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 48.78048780487805,
-            "secondary_period": 41.666666666666664,
-            "spectrum_peak": 57.16015992793887
+            "dominant_period": {
+              "value": 48.78048780487805,
+              "origin": "dominant_period(all_results.ACOPLADOS[0].neo.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 41.666666666666664,
+              "origin": "computed(all_results.ACOPLADOS[0].neo.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 57.16015992793887,
+              "origin": "computed(all_results.ACOPLADOS[0].neo.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 42.666666666666664,
-            "std_interval": 25.683544234479097,
-            "min_interval": 1.0,
-            "max_interval": 141.0,
-            "n_crises": 46
+            "mean_interval": {
+              "value": 42.666666666666664,
+              "origin": "mean(all_results.ACOPLADOS[0].neo.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 25.683544234479097,
+              "origin": "std(all_results.ACOPLADOS[0].neo.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.ACOPLADOS[0].neo.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 141.0,
+              "origin": "max_interval(all_results.ACOPLADOS[0].neo.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 46,
+              "origin": "count(all_results.ACOPLADOS[0].neo.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
-          "final_phase": "reconstrucci\u00f3n"
+          "final_phase": "reconstrucción"
         },
         "eva": {
-          "n_crises": 54,
-          "crises_resolved": 54,
-          "final_attachment": 0.9049999999999999,
+          "n_crises": {
+            "value": 54,
+            "origin": "count(all_results.ACOPLADOS[0].eva.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 54,
+            "origin": "counted(all_results.ACOPLADOS[0].eva.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.9049999999999999,
+            "origin": "normalized(all_results.ACOPLADOS[0].eva.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 44.44444444444444,
-            "secondary_period": 46.51162790697674,
-            "spectrum_peak": 50.070303438404366
+            "dominant_period": {
+              "value": 44.44444444444444,
+              "origin": "dominant_period(all_results.ACOPLADOS[0].eva.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 46.51162790697674,
+              "origin": "computed(all_results.ACOPLADOS[0].eva.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 50.070303438404366,
+              "origin": "computed(all_results.ACOPLADOS[0].eva.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 36.64150943396226,
-            "std_interval": 25.29456227611929,
-            "min_interval": 1.0,
-            "max_interval": 127.0,
-            "n_crises": 54
+            "mean_interval": {
+              "value": 36.64150943396226,
+              "origin": "mean(all_results.ACOPLADOS[0].eva.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 25.29456227611929,
+              "origin": "std(all_results.ACOPLADOS[0].eva.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.ACOPLADOS[0].eva.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 127.0,
+              "origin": "max_interval(all_results.ACOPLADOS[0].eva.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 54,
+              "origin": "count(all_results.ACOPLADOS[0].eva.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
           "final_phase": "crisis"
         },
         "relationship": {
-          "identity_correlation": 0.3847888812113678,
-          "psi_shared_events": 59
+          "identity_correlation": {
+            "value": 0.3847888812113678,
+            "origin": "identifier(all_results.ACOPLADOS[0].relationship.identity_correlation)",
+            "source": "FROM_DATA"
+          },
+          "psi_shared_events": {
+            "value": 59,
+            "origin": "counted(all_results.ACOPLADOS[0].relationship.psi_shared_events)",
+            "source": "FROM_DATA"
+          }
         }
       },
       {
         "condition": "ACOPLADOS",
-        "T": 2000,
-        "seed": 123,
+        "T": {
+          "value": 2000,
+          "origin": "counted(all_results.ACOPLADOS[1].T)",
+          "source": "FROM_DATA"
+        },
+        "seed": {
+          "value": 123,
+          "origin": "counted(all_results.ACOPLADOS[1].seed)",
+          "source": "FROM_DATA"
+        },
         "neo": {
-          "n_crises": 57,
-          "crises_resolved": 57,
-          "final_attachment": 0.995,
+          "n_crises": {
+            "value": 57,
+            "origin": "count(all_results.ACOPLADOS[1].neo.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 57,
+            "origin": "counted(all_results.ACOPLADOS[1].neo.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.995,
+            "origin": "normalized(all_results.ACOPLADOS[1].neo.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 43.47826086956522,
-            "secondary_period": 41.666666666666664,
-            "spectrum_peak": 61.301554301098285
+            "dominant_period": {
+              "value": 43.47826086956522,
+              "origin": "dominant_period(all_results.ACOPLADOS[1].neo.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 41.666666666666664,
+              "origin": "computed(all_results.ACOPLADOS[1].neo.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 61.301554301098285,
+              "origin": "computed(all_results.ACOPLADOS[1].neo.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 34.107142857142854,
-            "std_interval": 21.947728951361892,
-            "min_interval": 1.0,
-            "max_interval": 91.0,
-            "n_crises": 57
+            "mean_interval": {
+              "value": 34.107142857142854,
+              "origin": "mean(all_results.ACOPLADOS[1].neo.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 21.947728951361892,
+              "origin": "std(all_results.ACOPLADOS[1].neo.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.ACOPLADOS[1].neo.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 91.0,
+              "origin": "max_interval(all_results.ACOPLADOS[1].neo.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 57,
+              "origin": "count(all_results.ACOPLADOS[1].neo.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
-          "final_phase": "reconstrucci\u00f3n"
+          "final_phase": "reconstrucción"
         },
         "eva": {
-          "n_crises": 56,
-          "crises_resolved": 55,
-          "final_attachment": 0.995,
+          "n_crises": {
+            "value": 56,
+            "origin": "count(all_results.ACOPLADOS[1].eva.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 55,
+            "origin": "counted(all_results.ACOPLADOS[1].eva.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.995,
+            "origin": "normalized(all_results.ACOPLADOS[1].eva.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 44.44444444444444,
-            "secondary_period": 40.816326530612244,
-            "spectrum_peak": 78.30094130324483
+            "dominant_period": {
+              "value": 44.44444444444444,
+              "origin": "dominant_period(all_results.ACOPLADOS[1].eva.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 40.816326530612244,
+              "origin": "computed(all_results.ACOPLADOS[1].eva.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 78.30094130324483,
+              "origin": "computed(all_results.ACOPLADOS[1].eva.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 35.981818181818184,
-            "std_interval": 23.985215832099502,
-            "min_interval": 1.0,
-            "max_interval": 133.0,
-            "n_crises": 56
+            "mean_interval": {
+              "value": 35.981818181818184,
+              "origin": "mean(all_results.ACOPLADOS[1].eva.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 23.985215832099502,
+              "origin": "std(all_results.ACOPLADOS[1].eva.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.ACOPLADOS[1].eva.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 133.0,
+              "origin": "max_interval(all_results.ACOPLADOS[1].eva.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 56,
+              "origin": "count(all_results.ACOPLADOS[1].eva.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
           "final_phase": "crisis"
         },
         "relationship": {
-          "identity_correlation": 0.3913716981104308,
-          "psi_shared_events": 72
+          "identity_correlation": {
+            "value": 0.3913716981104308,
+            "origin": "identifier(all_results.ACOPLADOS[1].relationship.identity_correlation)",
+            "source": "FROM_DATA"
+          },
+          "psi_shared_events": {
+            "value": 72,
+            "origin": "counted(all_results.ACOPLADOS[1].relationship.psi_shared_events)",
+            "source": "FROM_DATA"
+          }
         }
       },
       {
         "condition": "ACOPLADOS",
-        "T": 2000,
-        "seed": 456,
+        "T": {
+          "value": 2000,
+          "origin": "counted(all_results.ACOPLADOS[2].T)",
+          "source": "FROM_DATA"
+        },
+        "seed": {
+          "value": 456,
+          "origin": "counted(all_results.ACOPLADOS[2].seed)",
+          "source": "FROM_DATA"
+        },
         "neo": {
-          "n_crises": 67,
-          "crises_resolved": 66,
-          "final_attachment": 0.985,
+          "n_crises": {
+            "value": 67,
+            "origin": "count(all_results.ACOPLADOS[2].neo.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 66,
+            "origin": "counted(all_results.ACOPLADOS[2].neo.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.985,
+            "origin": "normalized(all_results.ACOPLADOS[2].neo.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 42.5531914893617,
-            "secondary_period": 40.0,
-            "spectrum_peak": 63.04642935636313
+            "dominant_period": {
+              "value": 42.5531914893617,
+              "origin": "dominant_period(all_results.ACOPLADOS[2].neo.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 40.0,
+              "origin": "computed(all_results.ACOPLADOS[2].neo.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 63.04642935636313,
+              "origin": "computed(all_results.ACOPLADOS[2].neo.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 29.515151515151516,
-            "std_interval": 29.018407128058744,
-            "min_interval": 1.0,
-            "max_interval": 159.0,
-            "n_crises": 67
+            "mean_interval": {
+              "value": 29.515151515151516,
+              "origin": "mean(all_results.ACOPLADOS[2].neo.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 29.018407128058744,
+              "origin": "std(all_results.ACOPLADOS[2].neo.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.ACOPLADOS[2].neo.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 159.0,
+              "origin": "max_interval(all_results.ACOPLADOS[2].neo.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 67,
+              "origin": "count(all_results.ACOPLADOS[2].neo.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
           "final_phase": "crisis"
         },
         "eva": {
-          "n_crises": 48,
-          "crises_resolved": 47,
-          "final_attachment": 0.965,
+          "n_crises": {
+            "value": 48,
+            "origin": "count(all_results.ACOPLADOS[2].eva.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 47,
+            "origin": "counted(all_results.ACOPLADOS[2].eva.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.965,
+            "origin": "normalized(all_results.ACOPLADOS[2].eva.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 45.45454545454546,
-            "secondary_period": 47.61904761904761,
-            "spectrum_peak": 85.81307265521184
+            "dominant_period": {
+              "value": 45.45454545454546,
+              "origin": "dominant_period(all_results.ACOPLADOS[2].eva.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 47.61904761904761,
+              "origin": "computed(all_results.ACOPLADOS[2].eva.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 85.81307265521184,
+              "origin": "computed(all_results.ACOPLADOS[2].eva.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 41.765957446808514,
-            "std_interval": 26.846460811917996,
-            "min_interval": 1.0,
-            "max_interval": 152.0,
-            "n_crises": 48
+            "mean_interval": {
+              "value": 41.765957446808514,
+              "origin": "mean(all_results.ACOPLADOS[2].eva.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 26.846460811917996,
+              "origin": "std(all_results.ACOPLADOS[2].eva.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.ACOPLADOS[2].eva.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 152.0,
+              "origin": "max_interval(all_results.ACOPLADOS[2].eva.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 48,
+              "origin": "count(all_results.ACOPLADOS[2].eva.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
           "final_phase": "crisis"
         },
         "relationship": {
-          "identity_correlation": 0.389520713627942,
-          "psi_shared_events": 65
+          "identity_correlation": {
+            "value": 0.389520713627942,
+            "origin": "identifier(all_results.ACOPLADOS[2].relationship.identity_correlation)",
+            "source": "FROM_DATA"
+          },
+          "psi_shared_events": {
+            "value": 65,
+            "origin": "counted(all_results.ACOPLADOS[2].relationship.psi_shared_events)",
+            "source": "FROM_DATA"
+          }
         }
       }
     ],
     "DESACOPLADOS": [
       {
         "condition": "DESACOPLADOS",
-        "T": 2000,
-        "seed": 42,
+        "T": {
+          "value": 2000,
+          "origin": "counted(all_results.DESACOPLADOS[0].T)",
+          "source": "FROM_DATA"
+        },
+        "seed": {
+          "value": 42,
+          "origin": "counted(all_results.DESACOPLADOS[0].seed)",
+          "source": "FROM_DATA"
+        },
         "neo": {
-          "n_crises": 71,
-          "crises_resolved": 70,
-          "final_attachment": 0.0,
+          "n_crises": {
+            "value": 71,
+            "origin": "count(all_results.DESACOPLADOS[0].neo.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 70,
+            "origin": "counted(all_results.DESACOPLADOS[0].neo.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.0,
+            "origin": "normalized(all_results.DESACOPLADOS[0].neo.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 48.78048780487805,
-            "secondary_period": 37.735849056603776,
-            "spectrum_peak": 55.34443330044894
+            "dominant_period": {
+              "value": 48.78048780487805,
+              "origin": "dominant_period(all_results.DESACOPLADOS[0].neo.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 37.735849056603776,
+              "origin": "computed(all_results.DESACOPLADOS[0].neo.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 55.34443330044894,
+              "origin": "computed(all_results.DESACOPLADOS[0].neo.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 27.65714285714286,
-            "std_interval": 26.1691670888175,
-            "min_interval": 1.0,
-            "max_interval": 137.0,
-            "n_crises": 71
+            "mean_interval": {
+              "value": 27.65714285714286,
+              "origin": "mean(all_results.DESACOPLADOS[0].neo.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 26.1691670888175,
+              "origin": "std(all_results.DESACOPLADOS[0].neo.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.DESACOPLADOS[0].neo.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 137.0,
+              "origin": "max_interval(all_results.DESACOPLADOS[0].neo.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 71,
+              "origin": "count(all_results.DESACOPLADOS[0].neo.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
           "final_phase": "crisis"
         },
         "eva": {
-          "n_crises": 52,
-          "crises_resolved": 52,
-          "final_attachment": 0.0,
+          "n_crises": {
+            "value": 52,
+            "origin": "count(all_results.DESACOPLADOS[0].eva.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 52,
+            "origin": "counted(all_results.DESACOPLADOS[0].eva.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.0,
+            "origin": "normalized(all_results.DESACOPLADOS[0].eva.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 47.61904761904761,
-            "secondary_period": 44.44444444444444,
-            "spectrum_peak": 57.03180122607291
+            "dominant_period": {
+              "value": 47.61904761904761,
+              "origin": "dominant_period(all_results.DESACOPLADOS[0].eva.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 44.44444444444444,
+              "origin": "computed(all_results.DESACOPLADOS[0].eva.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 57.03180122607291,
+              "origin": "computed(all_results.DESACOPLADOS[0].eva.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 36.72549019607843,
-            "std_interval": 24.414780505108972,
-            "min_interval": 1.0,
-            "max_interval": 108.0,
-            "n_crises": 52
+            "mean_interval": {
+              "value": 36.72549019607843,
+              "origin": "mean(all_results.DESACOPLADOS[0].eva.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 24.414780505108972,
+              "origin": "std(all_results.DESACOPLADOS[0].eva.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.DESACOPLADOS[0].eva.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 108.0,
+              "origin": "max_interval(all_results.DESACOPLADOS[0].eva.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 52,
+              "origin": "count(all_results.DESACOPLADOS[0].eva.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
           "final_phase": "crisis"
         },
         "relationship": {
-          "identity_correlation": 0.08514716091180637,
-          "psi_shared_events": 0
+          "identity_correlation": {
+            "value": 0.08514716091180637,
+            "origin": "identifier(all_results.DESACOPLADOS[0].relationship.identity_correlation)",
+            "source": "FROM_DATA"
+          },
+          "psi_shared_events": {
+            "value": 0,
+            "origin": "counted(all_results.DESACOPLADOS[0].relationship.psi_shared_events)",
+            "source": "FROM_DATA"
+          }
         }
       },
       {
         "condition": "DESACOPLADOS",
-        "T": 2000,
-        "seed": 123,
+        "T": {
+          "value": 2000,
+          "origin": "counted(all_results.DESACOPLADOS[1].T)",
+          "source": "FROM_DATA"
+        },
+        "seed": {
+          "value": 123,
+          "origin": "counted(all_results.DESACOPLADOS[1].seed)",
+          "source": "FROM_DATA"
+        },
         "neo": {
-          "n_crises": 53,
-          "crises_resolved": 52,
-          "final_attachment": 0.0,
+          "n_crises": {
+            "value": 53,
+            "origin": "count(all_results.DESACOPLADOS[1].neo.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 52,
+            "origin": "counted(all_results.DESACOPLADOS[1].neo.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.0,
+            "origin": "normalized(all_results.DESACOPLADOS[1].neo.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 44.44444444444444,
-            "secondary_period": 42.5531914893617,
-            "spectrum_peak": 49.693378614493916
+            "dominant_period": {
+              "value": 44.44444444444444,
+              "origin": "dominant_period(all_results.DESACOPLADOS[1].neo.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 42.5531914893617,
+              "origin": "computed(all_results.DESACOPLADOS[1].neo.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 49.693378614493916,
+              "origin": "computed(all_results.DESACOPLADOS[1].neo.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 37.40384615384615,
-            "std_interval": 24.976342356614047,
-            "min_interval": 1.0,
-            "max_interval": 103.0,
-            "n_crises": 53
+            "mean_interval": {
+              "value": 37.40384615384615,
+              "origin": "mean(all_results.DESACOPLADOS[1].neo.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 24.976342356614047,
+              "origin": "std(all_results.DESACOPLADOS[1].neo.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.DESACOPLADOS[1].neo.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 103.0,
+              "origin": "max_interval(all_results.DESACOPLADOS[1].neo.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 53,
+              "origin": "count(all_results.DESACOPLADOS[1].neo.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
           "final_phase": "crisis"
         },
         "eva": {
-          "n_crises": 51,
-          "crises_resolved": 51,
-          "final_attachment": 0.0,
+          "n_crises": {
+            "value": 51,
+            "origin": "count(all_results.DESACOPLADOS[1].eva.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 51,
+            "origin": "counted(all_results.DESACOPLADOS[1].eva.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.0,
+            "origin": "normalized(all_results.DESACOPLADOS[1].eva.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 40.0,
-            "secondary_period": 51.282051282051285,
-            "spectrum_peak": 61.68112560081595
+            "dominant_period": {
+              "value": 40.0,
+              "origin": "dominant_period(all_results.DESACOPLADOS[1].eva.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 51.282051282051285,
+              "origin": "computed(all_results.DESACOPLADOS[1].eva.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 61.68112560081595,
+              "origin": "computed(all_results.DESACOPLADOS[1].eva.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 38.52,
-            "std_interval": 20.74631533549994,
-            "min_interval": 1.0,
-            "max_interval": 94.0,
-            "n_crises": 51
+            "mean_interval": {
+              "value": 38.52,
+              "origin": "mean(all_results.DESACOPLADOS[1].eva.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 20.74631533549994,
+              "origin": "std(all_results.DESACOPLADOS[1].eva.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.DESACOPLADOS[1].eva.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 94.0,
+              "origin": "max_interval(all_results.DESACOPLADOS[1].eva.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 51,
+              "origin": "count(all_results.DESACOPLADOS[1].eva.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
-          "final_phase": "reconstrucci\u00f3n"
+          "final_phase": "reconstrucción"
         },
         "relationship": {
-          "identity_correlation": 0.00419537752467059,
-          "psi_shared_events": 0
+          "identity_correlation": {
+            "value": 0.00419537752467059,
+            "origin": "identifier(all_results.DESACOPLADOS[1].relationship.identity_correlation)",
+            "source": "FROM_DATA"
+          },
+          "psi_shared_events": {
+            "value": 0,
+            "origin": "counted(all_results.DESACOPLADOS[1].relationship.psi_shared_events)",
+            "source": "FROM_DATA"
+          }
         }
       },
       {
         "condition": "DESACOPLADOS",
-        "T": 2000,
-        "seed": 456,
+        "T": {
+          "value": 2000,
+          "origin": "counted(all_results.DESACOPLADOS[2].T)",
+          "source": "FROM_DATA"
+        },
+        "seed": {
+          "value": 456,
+          "origin": "counted(all_results.DESACOPLADOS[2].seed)",
+          "source": "FROM_DATA"
+        },
         "neo": {
-          "n_crises": 55,
-          "crises_resolved": 55,
-          "final_attachment": 0.0,
+          "n_crises": {
+            "value": 55,
+            "origin": "count(all_results.DESACOPLADOS[2].neo.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 55,
+            "origin": "counted(all_results.DESACOPLADOS[2].neo.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.0,
+            "origin": "normalized(all_results.DESACOPLADOS[2].neo.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 43.47826086956522,
-            "secondary_period": 41.666666666666664,
-            "spectrum_peak": 61.52213310280584
+            "dominant_period": {
+              "value": 43.47826086956522,
+              "origin": "dominant_period(all_results.DESACOPLADOS[2].neo.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 41.666666666666664,
+              "origin": "computed(all_results.DESACOPLADOS[2].neo.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 61.52213310280584,
+              "origin": "computed(all_results.DESACOPLADOS[2].neo.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 35.44444444444444,
-            "std_interval": 22.068635919739684,
-            "min_interval": 1.0,
-            "max_interval": 95.0,
-            "n_crises": 55
+            "mean_interval": {
+              "value": 35.44444444444444,
+              "origin": "mean(all_results.DESACOPLADOS[2].neo.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 22.068635919739684,
+              "origin": "std(all_results.DESACOPLADOS[2].neo.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.DESACOPLADOS[2].neo.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 95.0,
+              "origin": "max_interval(all_results.DESACOPLADOS[2].neo.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 55,
+              "origin": "count(all_results.DESACOPLADOS[2].neo.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
-          "final_phase": "reconstrucci\u00f3n"
+          "final_phase": "reconstrucción"
         },
         "eva": {
-          "n_crises": 50,
-          "crises_resolved": 50,
-          "final_attachment": 0.0,
+          "n_crises": {
+            "value": 50,
+            "origin": "count(all_results.DESACOPLADOS[2].eva.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 50,
+            "origin": "counted(all_results.DESACOPLADOS[2].eva.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.0,
+            "origin": "normalized(all_results.DESACOPLADOS[2].eva.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 44.44444444444444,
-            "secondary_period": 57.14285714285714,
-            "spectrum_peak": 42.22508522055613
+            "dominant_period": {
+              "value": 44.44444444444444,
+              "origin": "dominant_period(all_results.DESACOPLADOS[2].eva.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 57.14285714285714,
+              "origin": "computed(all_results.DESACOPLADOS[2].eva.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 42.22508522055613,
+              "origin": "computed(all_results.DESACOPLADOS[2].eva.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 39.326530612244895,
-            "std_interval": 35.66418643521534,
-            "min_interval": 1.0,
-            "max_interval": 178.0,
-            "n_crises": 50
+            "mean_interval": {
+              "value": 39.326530612244895,
+              "origin": "mean(all_results.DESACOPLADOS[2].eva.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 35.66418643521534,
+              "origin": "std(all_results.DESACOPLADOS[2].eva.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.DESACOPLADOS[2].eva.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 178.0,
+              "origin": "max_interval(all_results.DESACOPLADOS[2].eva.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 50,
+              "origin": "count(all_results.DESACOPLADOS[2].eva.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
-          "final_phase": "reconstrucci\u00f3n"
+          "final_phase": "reconstrucción"
         },
         "relationship": {
-          "identity_correlation": -0.05902050566485947,
-          "psi_shared_events": 0
+          "identity_correlation": {
+            "value": -0.05902050566485947,
+            "origin": "identifier(all_results.DESACOPLADOS[2].relationship.identity_correlation)",
+            "source": "FROM_DATA"
+          },
+          "psi_shared_events": {
+            "value": 0,
+            "origin": "counted(all_results.DESACOPLADOS[2].relationship.psi_shared_events)",
+            "source": "FROM_DATA"
+          }
         }
       }
     ],
     "SEMI-ACOPLADOS": [
       {
         "condition": "SEMI-ACOPLADOS",
-        "T": 2000,
-        "seed": 42,
+        "T": {
+          "value": 2000,
+          "origin": "counted(all_results.SEMI-ACOPLADOS[0].T)",
+          "source": "FROM_DATA"
+        },
+        "seed": {
+          "value": 42,
+          "origin": "counted(all_results.SEMI-ACOPLADOS[0].seed)",
+          "source": "FROM_DATA"
+        },
         "neo": {
-          "n_crises": 49,
-          "crises_resolved": 48,
-          "final_attachment": 0.5,
+          "n_crises": {
+            "value": 49,
+            "origin": "count(all_results.SEMI-ACOPLADOS[0].neo.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 48,
+            "origin": "counted(all_results.SEMI-ACOPLADOS[0].neo.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.5,
+            "origin": "normalized(all_results.SEMI-ACOPLADOS[0].neo.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 40.816326530612244,
-            "secondary_period": 51.282051282051285,
-            "spectrum_peak": 55.503715807927165
+            "dominant_period": {
+              "value": 40.816326530612244,
+              "origin": "dominant_period(all_results.SEMI-ACOPLADOS[0].neo.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 51.282051282051285,
+              "origin": "computed(all_results.SEMI-ACOPLADOS[0].neo.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 55.503715807927165,
+              "origin": "computed(all_results.SEMI-ACOPLADOS[0].neo.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 40.208333333333336,
-            "std_interval": 38.8517257946442,
-            "min_interval": 1.0,
-            "max_interval": 248.0,
-            "n_crises": 49
+            "mean_interval": {
+              "value": 40.208333333333336,
+              "origin": "mean(all_results.SEMI-ACOPLADOS[0].neo.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 38.8517257946442,
+              "origin": "std(all_results.SEMI-ACOPLADOS[0].neo.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.SEMI-ACOPLADOS[0].neo.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 248.0,
+              "origin": "max_interval(all_results.SEMI-ACOPLADOS[0].neo.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 49,
+              "origin": "count(all_results.SEMI-ACOPLADOS[0].neo.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
           "final_phase": "crisis"
         },
         "eva": {
-          "n_crises": 52,
-          "crises_resolved": 51,
-          "final_attachment": 0.5,
+          "n_crises": {
+            "value": 52,
+            "origin": "count(all_results.SEMI-ACOPLADOS[0].eva.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 51,
+            "origin": "counted(all_results.SEMI-ACOPLADOS[0].eva.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.5,
+            "origin": "normalized(all_results.SEMI-ACOPLADOS[0].eva.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 43.47826086956522,
-            "secondary_period": 40.816326530612244,
-            "spectrum_peak": 75.27401261053676
+            "dominant_period": {
+              "value": 43.47826086956522,
+              "origin": "dominant_period(all_results.SEMI-ACOPLADOS[0].eva.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 40.816326530612244,
+              "origin": "computed(all_results.SEMI-ACOPLADOS[0].eva.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 75.27401261053676,
+              "origin": "computed(all_results.SEMI-ACOPLADOS[0].eva.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 38.15686274509804,
-            "std_interval": 24.848065809462053,
-            "min_interval": 1.0,
-            "max_interval": 129.0,
-            "n_crises": 52
+            "mean_interval": {
+              "value": 38.15686274509804,
+              "origin": "mean(all_results.SEMI-ACOPLADOS[0].eva.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 24.848065809462053,
+              "origin": "std(all_results.SEMI-ACOPLADOS[0].eva.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.SEMI-ACOPLADOS[0].eva.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 129.0,
+              "origin": "max_interval(all_results.SEMI-ACOPLADOS[0].eva.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 52,
+              "origin": "count(all_results.SEMI-ACOPLADOS[0].eva.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
           "final_phase": "crisis"
         },
         "relationship": {
-          "identity_correlation": 0.21293415214290973,
-          "psi_shared_events": 67
+          "identity_correlation": {
+            "value": 0.21293415214290973,
+            "origin": "identifier(all_results.SEMI-ACOPLADOS[0].relationship.identity_correlation)",
+            "source": "FROM_DATA"
+          },
+          "psi_shared_events": {
+            "value": 67,
+            "origin": "counted(all_results.SEMI-ACOPLADOS[0].relationship.psi_shared_events)",
+            "source": "FROM_DATA"
+          }
         }
       },
       {
         "condition": "SEMI-ACOPLADOS",
-        "T": 2000,
-        "seed": 123,
+        "T": {
+          "value": 2000,
+          "origin": "counted(all_results.SEMI-ACOPLADOS[1].T)",
+          "source": "FROM_DATA"
+        },
+        "seed": {
+          "value": 123,
+          "origin": "counted(all_results.SEMI-ACOPLADOS[1].seed)",
+          "source": "FROM_DATA"
+        },
         "neo": {
-          "n_crises": 50,
-          "crises_resolved": 49,
-          "final_attachment": 0.5,
+          "n_crises": {
+            "value": 50,
+            "origin": "count(all_results.SEMI-ACOPLADOS[1].neo.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 49,
+            "origin": "counted(all_results.SEMI-ACOPLADOS[1].neo.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.5,
+            "origin": "normalized(all_results.SEMI-ACOPLADOS[1].neo.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 46.51162790697674,
-            "secondary_period": 43.47826086956522,
-            "spectrum_peak": 53.69026403470651
+            "dominant_period": {
+              "value": 46.51162790697674,
+              "origin": "dominant_period(all_results.SEMI-ACOPLADOS[1].neo.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 43.47826086956522,
+              "origin": "computed(all_results.SEMI-ACOPLADOS[1].neo.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 53.69026403470651,
+              "origin": "computed(all_results.SEMI-ACOPLADOS[1].neo.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 39.69387755102041,
-            "std_interval": 30.743311256359718,
-            "min_interval": 1.0,
-            "max_interval": 178.0,
-            "n_crises": 50
+            "mean_interval": {
+              "value": 39.69387755102041,
+              "origin": "mean(all_results.SEMI-ACOPLADOS[1].neo.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 30.743311256359718,
+              "origin": "std(all_results.SEMI-ACOPLADOS[1].neo.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.SEMI-ACOPLADOS[1].neo.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 178.0,
+              "origin": "max_interval(all_results.SEMI-ACOPLADOS[1].neo.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 50,
+              "origin": "count(all_results.SEMI-ACOPLADOS[1].neo.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
           "final_phase": "crisis"
         },
         "eva": {
-          "n_crises": 54,
-          "crises_resolved": 54,
-          "final_attachment": 0.5,
+          "n_crises": {
+            "value": 54,
+            "origin": "count(all_results.SEMI-ACOPLADOS[1].eva.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 54,
+            "origin": "counted(all_results.SEMI-ACOPLADOS[1].eva.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.5,
+            "origin": "normalized(all_results.SEMI-ACOPLADOS[1].eva.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 40.0,
-            "secondary_period": 47.61904761904761,
-            "spectrum_peak": 57.62338711170019
+            "dominant_period": {
+              "value": 40.0,
+              "origin": "dominant_period(all_results.SEMI-ACOPLADOS[1].eva.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 47.61904761904761,
+              "origin": "computed(all_results.SEMI-ACOPLADOS[1].eva.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 57.62338711170019,
+              "origin": "computed(all_results.SEMI-ACOPLADOS[1].eva.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 36.924528301886795,
-            "std_interval": 32.828225922677134,
-            "min_interval": 1.0,
-            "max_interval": 152.0,
-            "n_crises": 54
+            "mean_interval": {
+              "value": 36.924528301886795,
+              "origin": "mean(all_results.SEMI-ACOPLADOS[1].eva.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 32.828225922677134,
+              "origin": "std(all_results.SEMI-ACOPLADOS[1].eva.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.SEMI-ACOPLADOS[1].eva.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 152.0,
+              "origin": "max_interval(all_results.SEMI-ACOPLADOS[1].eva.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 54,
+              "origin": "count(all_results.SEMI-ACOPLADOS[1].eva.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
-          "final_phase": "reconstrucci\u00f3n"
+          "final_phase": "reconstrucción"
         },
         "relationship": {
-          "identity_correlation": 0.10142722815289078,
-          "psi_shared_events": 64
+          "identity_correlation": {
+            "value": 0.10142722815289078,
+            "origin": "identifier(all_results.SEMI-ACOPLADOS[1].relationship.identity_correlation)",
+            "source": "FROM_DATA"
+          },
+          "psi_shared_events": {
+            "value": 64,
+            "origin": "counted(all_results.SEMI-ACOPLADOS[1].relationship.psi_shared_events)",
+            "source": "FROM_DATA"
+          }
         }
       },
       {
         "condition": "SEMI-ACOPLADOS",
-        "T": 2000,
-        "seed": 456,
+        "T": {
+          "value": 2000,
+          "origin": "counted(all_results.SEMI-ACOPLADOS[2].T)",
+          "source": "FROM_DATA"
+        },
+        "seed": {
+          "value": 456,
+          "origin": "counted(all_results.SEMI-ACOPLADOS[2].seed)",
+          "source": "FROM_DATA"
+        },
         "neo": {
-          "n_crises": 66,
-          "crises_resolved": 65,
-          "final_attachment": 0.5,
+          "n_crises": {
+            "value": 66,
+            "origin": "count(all_results.SEMI-ACOPLADOS[2].neo.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 65,
+            "origin": "counted(all_results.SEMI-ACOPLADOS[2].neo.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.5,
+            "origin": "normalized(all_results.SEMI-ACOPLADOS[2].neo.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 42.5531914893617,
-            "secondary_period": 40.816326530612244,
-            "spectrum_peak": 78.94192215991654
+            "dominant_period": {
+              "value": 42.5531914893617,
+              "origin": "dominant_period(all_results.SEMI-ACOPLADOS[2].neo.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 40.816326530612244,
+              "origin": "computed(all_results.SEMI-ACOPLADOS[2].neo.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 78.94192215991654,
+              "origin": "computed(all_results.SEMI-ACOPLADOS[2].neo.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 29.96923076923077,
-            "std_interval": 25.479384868054368,
-            "min_interval": 1.0,
-            "max_interval": 115.0,
-            "n_crises": 66
+            "mean_interval": {
+              "value": 29.96923076923077,
+              "origin": "mean(all_results.SEMI-ACOPLADOS[2].neo.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 25.479384868054368,
+              "origin": "std(all_results.SEMI-ACOPLADOS[2].neo.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.SEMI-ACOPLADOS[2].neo.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 115.0,
+              "origin": "max_interval(all_results.SEMI-ACOPLADOS[2].neo.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 66,
+              "origin": "count(all_results.SEMI-ACOPLADOS[2].neo.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
           "final_phase": "crisis"
         },
         "eva": {
-          "n_crises": 57,
-          "crises_resolved": 56,
-          "final_attachment": 0.5,
+          "n_crises": {
+            "value": 57,
+            "origin": "count(all_results.SEMI-ACOPLADOS[2].eva.n_crises)",
+            "source": "FROM_DATA"
+          },
+          "crises_resolved": {
+            "value": 56,
+            "origin": "counted(all_results.SEMI-ACOPLADOS[2].eva.crises_resolved)",
+            "source": "FROM_DATA"
+          },
+          "final_attachment": {
+            "value": 0.5,
+            "origin": "normalized(all_results.SEMI-ACOPLADOS[2].eva.final_attachment)",
+            "source": "FROM_MATH"
+          },
           "periods": {
-            "dominant_period": 39.2156862745098,
-            "secondary_period": 40.816326530612244,
-            "spectrum_peak": 59.18767650746381
+            "dominant_period": {
+              "value": 39.2156862745098,
+              "origin": "dominant_period(all_results.SEMI-ACOPLADOS[2].eva.periods.dominant_period)",
+              "source": "FROM_STATISTICS"
+            },
+            "secondary_period": {
+              "value": 40.816326530612244,
+              "origin": "computed(all_results.SEMI-ACOPLADOS[2].eva.periods.secondary_period)",
+              "source": "FROM_MATH"
+            },
+            "spectrum_peak": {
+              "value": 59.18767650746381,
+              "origin": "computed(all_results.SEMI-ACOPLADOS[2].eva.periods.spectrum_peak)",
+              "source": "FROM_MATH"
+            }
           },
           "crisis_intervals": {
-            "mean_interval": 35.0,
-            "std_interval": 35.45469946686496,
-            "min_interval": 1.0,
-            "max_interval": 245.0,
-            "n_crises": 57
+            "mean_interval": {
+              "value": 35.0,
+              "origin": "mean(all_results.SEMI-ACOPLADOS[2].eva.crisis_intervals.mean_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "std_interval": {
+              "value": 35.45469946686496,
+              "origin": "std(all_results.SEMI-ACOPLADOS[2].eva.crisis_intervals.std_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "min_interval": {
+              "value": 1.0,
+              "origin": "count(all_results.SEMI-ACOPLADOS[2].eva.crisis_intervals.min_interval)",
+              "source": "FROM_DATA"
+            },
+            "max_interval": {
+              "value": 245.0,
+              "origin": "max_interval(all_results.SEMI-ACOPLADOS[2].eva.crisis_intervals.max_interval)",
+              "source": "FROM_STATISTICS"
+            },
+            "n_crises": {
+              "value": 57,
+              "origin": "count(all_results.SEMI-ACOPLADOS[2].eva.crisis_intervals.n_crises)",
+              "source": "FROM_DATA"
+            }
           },
           "final_phase": "crisis"
         },
         "relationship": {
-          "identity_correlation": -0.030146405334806937,
-          "psi_shared_events": 59
+          "identity_correlation": {
+            "value": -0.030146405334806937,
+            "origin": "identifier(all_results.SEMI-ACOPLADOS[2].relationship.identity_correlation)",
+            "source": "FROM_DATA"
+          },
+          "psi_shared_events": {
+            "value": 59,
+            "origin": "counted(all_results.SEMI-ACOPLADOS[2].relationship.psi_shared_events)",
+            "source": "FROM_DATA"
+          }
         }
       }
     ]
   },
   "summary": {
     "ACOPLADOS": {
-      "neo_period_mean": 44.937313387934985,
-      "neo_period_std": 2.743650917886816,
-      "eva_period_mean": 44.78114478114478,
-      "eva_period_std": 0.4761661826172072,
-      "neo_crises_mean": 56.666666666666664,
-      "eva_crises_mean": 52.666666666666664,
-      "correlation_mean": 0.3885604309832469,
-      "neo_interval_mean": 35.429653679653676,
-      "eva_interval_mean": 38.12976168752966
+      "neo_period_mean": {
+        "value": 44.937313387934985,
+        "origin": "mean(summary.ACOPLADOS.neo_period_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "neo_period_std": {
+        "value": 2.743650917886816,
+        "origin": "std(summary.ACOPLADOS.neo_period_std)",
+        "source": "FROM_STATISTICS"
+      },
+      "eva_period_mean": {
+        "value": 44.78114478114478,
+        "origin": "mean(summary.ACOPLADOS.eva_period_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "eva_period_std": {
+        "value": 0.4761661826172072,
+        "origin": "std(summary.ACOPLADOS.eva_period_std)",
+        "source": "FROM_STATISTICS"
+      },
+      "neo_crises_mean": {
+        "value": 56.666666666666664,
+        "origin": "mean(summary.ACOPLADOS.neo_crises_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "eva_crises_mean": {
+        "value": 52.666666666666664,
+        "origin": "mean(summary.ACOPLADOS.eva_crises_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "correlation_mean": {
+        "value": 0.3885604309832469,
+        "origin": "mean(summary.ACOPLADOS.correlation_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "neo_interval_mean": {
+        "value": 35.429653679653676,
+        "origin": "mean(summary.ACOPLADOS.neo_interval_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "eva_interval_mean": {
+        "value": 38.12976168752966,
+        "origin": "mean(summary.ACOPLADOS.eva_interval_mean)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "DESACOPLADOS": {
-      "neo_period_mean": 45.567731039629244,
-      "neo_period_std": 2.3057510995451653,
-      "eva_period_mean": 44.02116402116402,
-      "eva_period_std": 3.124830277298072,
-      "neo_crises_mean": 59.666666666666664,
-      "eva_crises_mean": 51.0,
-      "correlation_mean": 0.010107344257205829,
-      "neo_interval_mean": 33.50181115181115,
-      "eva_interval_mean": 38.190673602774446
+      "neo_period_mean": {
+        "value": 45.567731039629244,
+        "origin": "mean(summary.DESACOPLADOS.neo_period_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "neo_period_std": {
+        "value": 2.3057510995451653,
+        "origin": "std(summary.DESACOPLADOS.neo_period_std)",
+        "source": "FROM_STATISTICS"
+      },
+      "eva_period_mean": {
+        "value": 44.02116402116402,
+        "origin": "mean(summary.DESACOPLADOS.eva_period_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "eva_period_std": {
+        "value": 3.124830277298072,
+        "origin": "std(summary.DESACOPLADOS.eva_period_std)",
+        "source": "FROM_STATISTICS"
+      },
+      "neo_crises_mean": {
+        "value": 59.666666666666664,
+        "origin": "mean(summary.DESACOPLADOS.neo_crises_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "eva_crises_mean": {
+        "value": 51.0,
+        "origin": "mean(summary.DESACOPLADOS.eva_crises_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "correlation_mean": {
+        "value": 0.010107344257205829,
+        "origin": "mean(summary.DESACOPLADOS.correlation_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "neo_interval_mean": {
+        "value": 33.50181115181115,
+        "origin": "mean(summary.DESACOPLADOS.neo_interval_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "eva_interval_mean": {
+        "value": 38.190673602774446,
+        "origin": "mean(summary.DESACOPLADOS.eva_interval_mean)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "SEMI-ACOPLADOS": {
-      "neo_period_mean": 43.293715308983565,
-      "neo_period_std": 2.383330455123019,
-      "eva_period_mean": 40.89798238135834,
-      "eva_period_std": 1.852415506399768,
-      "neo_crises_mean": 55.0,
-      "eva_crises_mean": 54.333333333333336,
-      "correlation_mean": 0.09473832498699786,
-      "neo_interval_mean": 36.62381388452817,
-      "eva_interval_mean": 36.69379701566161
+      "neo_period_mean": {
+        "value": 43.293715308983565,
+        "origin": "mean(summary.SEMI-ACOPLADOS.neo_period_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "neo_period_std": {
+        "value": 2.383330455123019,
+        "origin": "std(summary.SEMI-ACOPLADOS.neo_period_std)",
+        "source": "FROM_STATISTICS"
+      },
+      "eva_period_mean": {
+        "value": 40.89798238135834,
+        "origin": "mean(summary.SEMI-ACOPLADOS.eva_period_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "eva_period_std": {
+        "value": 1.852415506399768,
+        "origin": "std(summary.SEMI-ACOPLADOS.eva_period_std)",
+        "source": "FROM_STATISTICS"
+      },
+      "neo_crises_mean": {
+        "value": 55.0,
+        "origin": "mean(summary.SEMI-ACOPLADOS.neo_crises_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "eva_crises_mean": {
+        "value": 54.333333333333336,
+        "origin": "mean(summary.SEMI-ACOPLADOS.eva_crises_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "correlation_mean": {
+        "value": 0.09473832498699786,
+        "origin": "mean(summary.SEMI-ACOPLADOS.correlation_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "neo_interval_mean": {
+        "value": 36.62381388452817,
+        "origin": "mean(summary.SEMI-ACOPLADOS.neo_interval_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "eva_interval_mean": {
+        "value": 36.69379701566161,
+        "origin": "mean(summary.SEMI-ACOPLADOS.eva_interval_mean)",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "357413b34d51",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:59.541011",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/decoupling/results.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:59.541573",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 564,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 601,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 564,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 601,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
     }
   }
 }

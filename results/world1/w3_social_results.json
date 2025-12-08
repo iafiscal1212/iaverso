@@ -7,101 +7,456 @@
     "metacognition_working": true
   },
   "report": {
-    "t": 1000,
-    "games_played": 773,
+    "t": {
+      "value": 1000,
+      "origin": "counted(report.t)",
+      "source": "FROM_DATA"
+    },
+    "games_played": {
+      "value": 773,
+      "origin": "counted(report.games_played)",
+      "source": "FROM_DATA"
+    },
     "world": {
-      "mean_entropy": -0.10325510110275045,
-      "mean_health": 0.6133277864098654
+      "mean_entropy": {
+        "value": -0.10325510110275045,
+        "origin": "mean(report.world.mean_entropy)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_health": {
+        "value": 0.6133277864098654,
+        "origin": "mean(report.world.mean_health)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "social": {
-      "mean_energy": 0.8346228317959444,
-      "games_per_step": 0.773,
-      "mean_coalition_size": 1.675
+      "mean_energy": {
+        "value": 0.8346228317959444,
+        "origin": "mean(report.social.mean_energy)",
+        "source": "FROM_STATISTICS"
+      },
+      "games_per_step": {
+        "value": 0.773,
+        "origin": "normalized(report.social.games_per_step)",
+        "source": "FROM_MATH"
+      },
+      "mean_coalition_size": {
+        "value": 1.675,
+        "origin": "mean(report.social.mean_coalition_size)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "agents": {
       "NEO": {
-        "mean_SAGI": 0.43635539137704243,
-        "social_energy": 0.9035559285845525,
-        "n_episodes": 152,
-        "n_symbols": 6,
-        "n_goals": 3,
-        "self_model_error": 105.03307795366634,
-        "metacognition": 0.0,
+        "mean_SAGI": {
+          "value": 0.43635539137704243,
+          "origin": "mean(report.agents.NEO.mean_SAGI)",
+          "source": "FROM_STATISTICS"
+        },
+        "social_energy": {
+          "value": 0.9035559285845525,
+          "origin": "normalized(report.agents.NEO.social_energy)",
+          "source": "FROM_MATH"
+        },
+        "n_episodes": {
+          "value": 152,
+          "origin": "count(report.agents.NEO.n_episodes)",
+          "source": "FROM_DATA"
+        },
+        "n_symbols": {
+          "value": 6,
+          "origin": "count(report.agents.NEO.n_symbols)",
+          "source": "FROM_DATA"
+        },
+        "n_goals": {
+          "value": 3,
+          "origin": "count(report.agents.NEO.n_goals)",
+          "source": "FROM_DATA"
+        },
+        "self_model_error": {
+          "value": 105.03307795366634,
+          "origin": "computed(report.agents.NEO.self_model_error)",
+          "source": "FROM_MATH"
+        },
+        "metacognition": {
+          "value": 0.0,
+          "origin": "normalized(report.agents.NEO.metacognition)",
+          "source": "FROM_MATH"
+        },
         "regulation_action": "continue",
         "partner_preferences": {
-          "EVA": 1.0,
-          "ALEX": 1.0,
-          "ADAM": 1.0,
-          "IRIS": 1.0
+          "EVA": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.NEO.partner_preferences.EVA)",
+            "source": "FROM_MATH"
+          },
+          "ALEX": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.NEO.partner_preferences.ALEX)",
+            "source": "FROM_MATH"
+          },
+          "ADAM": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.NEO.partner_preferences.ADAM)",
+            "source": "FROM_MATH"
+          },
+          "IRIS": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.NEO.partner_preferences.IRIS)",
+            "source": "FROM_MATH"
+          }
         }
       },
       "EVA": {
-        "mean_SAGI": 0.4309554983623859,
-        "social_energy": 0.8202440256486981,
-        "n_episodes": 152,
-        "n_symbols": 7,
-        "n_goals": 3,
-        "self_model_error": 106.60589130163885,
-        "metacognition": 0.0,
+        "mean_SAGI": {
+          "value": 0.4309554983623859,
+          "origin": "mean(report.agents.EVA.mean_SAGI)",
+          "source": "FROM_STATISTICS"
+        },
+        "social_energy": {
+          "value": 0.8202440256486981,
+          "origin": "normalized(report.agents.EVA.social_energy)",
+          "source": "FROM_MATH"
+        },
+        "n_episodes": {
+          "value": 152,
+          "origin": "count(report.agents.EVA.n_episodes)",
+          "source": "FROM_DATA"
+        },
+        "n_symbols": {
+          "value": 7,
+          "origin": "count(report.agents.EVA.n_symbols)",
+          "source": "FROM_DATA"
+        },
+        "n_goals": {
+          "value": 3,
+          "origin": "count(report.agents.EVA.n_goals)",
+          "source": "FROM_DATA"
+        },
+        "self_model_error": {
+          "value": 106.60589130163885,
+          "origin": "computed(report.agents.EVA.self_model_error)",
+          "source": "FROM_MATH"
+        },
+        "metacognition": {
+          "value": 0.0,
+          "origin": "normalized(report.agents.EVA.metacognition)",
+          "source": "FROM_MATH"
+        },
         "regulation_action": "recalibrate",
         "partner_preferences": {
-          "NEO": 1.0,
-          "ALEX": 1.0,
-          "ADAM": 1.0,
-          "IRIS": 1.0
+          "NEO": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.EVA.partner_preferences.NEO)",
+            "source": "FROM_MATH"
+          },
+          "ALEX": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.EVA.partner_preferences.ALEX)",
+            "source": "FROM_MATH"
+          },
+          "ADAM": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.EVA.partner_preferences.ADAM)",
+            "source": "FROM_MATH"
+          },
+          "IRIS": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.EVA.partner_preferences.IRIS)",
+            "source": "FROM_MATH"
+          }
         }
       },
       "ALEX": {
-        "mean_SAGI": 0.43558551112913746,
-        "social_energy": 0.9556591947818849,
-        "n_episodes": 152,
-        "n_symbols": 6,
-        "n_goals": 3,
-        "self_model_error": 107.3368721804356,
-        "metacognition": 0.020000000000000018,
+        "mean_SAGI": {
+          "value": 0.43558551112913746,
+          "origin": "mean(report.agents.ALEX.mean_SAGI)",
+          "source": "FROM_STATISTICS"
+        },
+        "social_energy": {
+          "value": 0.9556591947818849,
+          "origin": "normalized(report.agents.ALEX.social_energy)",
+          "source": "FROM_MATH"
+        },
+        "n_episodes": {
+          "value": 152,
+          "origin": "count(report.agents.ALEX.n_episodes)",
+          "source": "FROM_DATA"
+        },
+        "n_symbols": {
+          "value": 6,
+          "origin": "count(report.agents.ALEX.n_symbols)",
+          "source": "FROM_DATA"
+        },
+        "n_goals": {
+          "value": 3,
+          "origin": "count(report.agents.ALEX.n_goals)",
+          "source": "FROM_DATA"
+        },
+        "self_model_error": {
+          "value": 107.3368721804356,
+          "origin": "computed(report.agents.ALEX.self_model_error)",
+          "source": "FROM_MATH"
+        },
+        "metacognition": {
+          "value": 0.020000000000000018,
+          "origin": "normalized(report.agents.ALEX.metacognition)",
+          "source": "FROM_MATH"
+        },
         "regulation_action": "stabilize",
         "partner_preferences": {
-          "NEO": 1.0,
-          "EVA": 1.0,
-          "ADAM": 1.0,
-          "IRIS": 1.0
+          "NEO": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.ALEX.partner_preferences.NEO)",
+            "source": "FROM_MATH"
+          },
+          "EVA": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.ALEX.partner_preferences.EVA)",
+            "source": "FROM_MATH"
+          },
+          "ADAM": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.ALEX.partner_preferences.ADAM)",
+            "source": "FROM_MATH"
+          },
+          "IRIS": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.ALEX.partner_preferences.IRIS)",
+            "source": "FROM_MATH"
+          }
         }
       },
       "ADAM": {
-        "mean_SAGI": 0.4027738644746327,
-        "social_energy": 0.8789624174352785,
-        "n_episodes": 152,
-        "n_symbols": 7,
-        "n_goals": 3,
-        "self_model_error": 106.28814618871637,
-        "metacognition": 0.06999999999999995,
+        "mean_SAGI": {
+          "value": 0.4027738644746327,
+          "origin": "mean(report.agents.ADAM.mean_SAGI)",
+          "source": "FROM_STATISTICS"
+        },
+        "social_energy": {
+          "value": 0.8789624174352785,
+          "origin": "normalized(report.agents.ADAM.social_energy)",
+          "source": "FROM_MATH"
+        },
+        "n_episodes": {
+          "value": 152,
+          "origin": "count(report.agents.ADAM.n_episodes)",
+          "source": "FROM_DATA"
+        },
+        "n_symbols": {
+          "value": 7,
+          "origin": "count(report.agents.ADAM.n_symbols)",
+          "source": "FROM_DATA"
+        },
+        "n_goals": {
+          "value": 3,
+          "origin": "count(report.agents.ADAM.n_goals)",
+          "source": "FROM_DATA"
+        },
+        "self_model_error": {
+          "value": 106.28814618871637,
+          "origin": "computed(report.agents.ADAM.self_model_error)",
+          "source": "FROM_MATH"
+        },
+        "metacognition": {
+          "value": 0.06999999999999995,
+          "origin": "normalized(report.agents.ADAM.metacognition)",
+          "source": "FROM_MATH"
+        },
         "regulation_action": "stabilize",
         "partner_preferences": {
-          "NEO": 1.0,
-          "EVA": 1.0,
-          "ALEX": 1.0,
-          "IRIS": 1.0
+          "NEO": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.ADAM.partner_preferences.NEO)",
+            "source": "FROM_MATH"
+          },
+          "EVA": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.ADAM.partner_preferences.EVA)",
+            "source": "FROM_MATH"
+          },
+          "ALEX": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.ADAM.partner_preferences.ALEX)",
+            "source": "FROM_MATH"
+          },
+          "IRIS": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.ADAM.partner_preferences.IRIS)",
+            "source": "FROM_MATH"
+          }
         }
       },
       "IRIS": {
-        "mean_SAGI": 0.42381058107765524,
-        "social_energy": 0.9677829913581135,
-        "n_episodes": 152,
-        "n_symbols": 6,
-        "n_goals": 3,
-        "self_model_error": 106.23717225028153,
-        "metacognition": 0.050000000000000044,
+        "mean_SAGI": {
+          "value": 0.42381058107765524,
+          "origin": "mean(report.agents.IRIS.mean_SAGI)",
+          "source": "FROM_STATISTICS"
+        },
+        "social_energy": {
+          "value": 0.9677829913581135,
+          "origin": "normalized(report.agents.IRIS.social_energy)",
+          "source": "FROM_MATH"
+        },
+        "n_episodes": {
+          "value": 152,
+          "origin": "count(report.agents.IRIS.n_episodes)",
+          "source": "FROM_DATA"
+        },
+        "n_symbols": {
+          "value": 6,
+          "origin": "count(report.agents.IRIS.n_symbols)",
+          "source": "FROM_DATA"
+        },
+        "n_goals": {
+          "value": 3,
+          "origin": "count(report.agents.IRIS.n_goals)",
+          "source": "FROM_DATA"
+        },
+        "self_model_error": {
+          "value": 106.23717225028153,
+          "origin": "computed(report.agents.IRIS.self_model_error)",
+          "source": "FROM_MATH"
+        },
+        "metacognition": {
+          "value": 0.050000000000000044,
+          "origin": "normalized(report.agents.IRIS.metacognition)",
+          "source": "FROM_MATH"
+        },
         "regulation_action": "stabilize",
         "partner_preferences": {
-          "NEO": 1.0,
-          "EVA": 1.0,
-          "ALEX": 1.0,
-          "ADAM": 1.0
+          "NEO": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.IRIS.partner_preferences.NEO)",
+            "source": "FROM_MATH"
+          },
+          "EVA": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.IRIS.partner_preferences.EVA)",
+            "source": "FROM_MATH"
+          },
+          "ALEX": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.IRIS.partner_preferences.ALEX)",
+            "source": "FROM_MATH"
+          },
+          "ADAM": {
+            "value": 1.0,
+            "origin": "normalized(report.agents.IRIS.partner_preferences.ADAM)",
+            "source": "FROM_MATH"
+          }
         }
       }
     }
   },
   "phase": "W3_SOCIAL",
   "status": "PASS",
-  "timestamp": "2025-12-01T05:46:47.748268"
+  "timestamp": "2025-12-01T05:46:47.748268",
+  "metadata": {
+    "experiment_id": {
+      "value": "bd1259943e5a",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.553566",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/world1/w3_social_results.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.553730",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 162,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 179,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 162,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 179,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
 }

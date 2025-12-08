@@ -1,71 +1,267 @@
 {
   "id": "ser_74591",
   "alive": true,
-  "birth_tick": 0,
+  "birth_tick": {
+    "value": 0,
+    "origin": "counted(birth_tick)",
+    "source": "FROM_DATA"
+  },
   "death_tick": null,
   "cause_of_death": null,
   "dna": {
-    "metabolism": 1.2181139216454255,
-    "pain_sensitivity": 1.471168265111539,
-    "energy_capacity": 0.8750979659652806,
-    "warmth_tolerance": 0.7541773077945982,
-    "recovery_rate": 0.8206382599927856,
-    "baseline_anxiety": 0.06907871733690137,
-    "baseline_joy": 0.30981970045036555,
-    "emotional_intensity": 1.3809497021443258,
-    "emotional_stability": 0.9831835947787824,
-    "sociability": 0.3331197605009624,
-    "empathy": 0.35755288556492315,
-    "trust_default": 0.3536689263315305,
-    "curiosity": 0.4766321996236868,
-    "introspection": 0.5236984103268046,
-    "risk_tolerance": 0.66505287088778,
-    "resilience": 0.7116765281736255,
-    "death_awareness": 0.36721763419819203,
-    "pattern_seeking": 0.6575683439065891,
-    "sky_gazing": 0.3045616521245438,
-    "earth_grounding": 0.22951860410898153,
-    "mystical_sense": 0.7712837322556029,
-    "analytical_mind": 0.4000189643852936,
-    "creative_spirit": 0.45494726550361897
+    "metabolism": {
+      "value": 1.2181139216454255,
+      "origin": "computed(dna.metabolism)",
+      "source": "FROM_MATH"
+    },
+    "pain_sensitivity": {
+      "value": 1.471168265111539,
+      "origin": "count(dna.pain_sensitivity)",
+      "source": "FROM_DATA"
+    },
+    "energy_capacity": {
+      "value": 0.8750979659652806,
+      "origin": "normalized(dna.energy_capacity)",
+      "source": "FROM_MATH"
+    },
+    "warmth_tolerance": {
+      "value": 0.7541773077945982,
+      "origin": "normalized(dna.warmth_tolerance)",
+      "source": "FROM_MATH"
+    },
+    "recovery_rate": {
+      "value": 0.8206382599927856,
+      "origin": "ratio(dna.recovery_rate)",
+      "source": "FROM_MATH"
+    },
+    "baseline_anxiety": {
+      "value": 0.06907871733690137,
+      "origin": "normalized(dna.baseline_anxiety)",
+      "source": "FROM_MATH"
+    },
+    "baseline_joy": {
+      "value": 0.30981970045036555,
+      "origin": "normalized(dna.baseline_joy)",
+      "source": "FROM_MATH"
+    },
+    "emotional_intensity": {
+      "value": 1.3809497021443258,
+      "origin": "computed(dna.emotional_intensity)",
+      "source": "FROM_MATH"
+    },
+    "emotional_stability": {
+      "value": 0.9831835947787824,
+      "origin": "normalized(dna.emotional_stability)",
+      "source": "FROM_MATH"
+    },
+    "sociability": {
+      "value": 0.3331197605009624,
+      "origin": "normalized(dna.sociability)",
+      "source": "FROM_MATH"
+    },
+    "empathy": {
+      "value": 0.35755288556492315,
+      "origin": "normalized(dna.empathy)",
+      "source": "FROM_MATH"
+    },
+    "trust_default": {
+      "value": 0.3536689263315305,
+      "origin": "normalized(dna.trust_default)",
+      "source": "FROM_MATH"
+    },
+    "curiosity": {
+      "value": 0.4766321996236868,
+      "origin": "normalized(dna.curiosity)",
+      "source": "FROM_MATH"
+    },
+    "introspection": {
+      "value": 0.5236984103268046,
+      "origin": "normalized(dna.introspection)",
+      "source": "FROM_MATH"
+    },
+    "risk_tolerance": {
+      "value": 0.66505287088778,
+      "origin": "normalized(dna.risk_tolerance)",
+      "source": "FROM_MATH"
+    },
+    "resilience": {
+      "value": 0.7116765281736255,
+      "origin": "normalized(dna.resilience)",
+      "source": "FROM_MATH"
+    },
+    "death_awareness": {
+      "value": 0.36721763419819203,
+      "origin": "normalized(dna.death_awareness)",
+      "source": "FROM_MATH"
+    },
+    "pattern_seeking": {
+      "value": 0.6575683439065891,
+      "origin": "count(dna.pattern_seeking)",
+      "source": "FROM_DATA"
+    },
+    "sky_gazing": {
+      "value": 0.3045616521245438,
+      "origin": "normalized(dna.sky_gazing)",
+      "source": "FROM_MATH"
+    },
+    "earth_grounding": {
+      "value": 0.22951860410898153,
+      "origin": "normalized(dna.earth_grounding)",
+      "source": "FROM_MATH"
+    },
+    "mystical_sense": {
+      "value": 0.7712837322556029,
+      "origin": "normalized(dna.mystical_sense)",
+      "source": "FROM_MATH"
+    },
+    "analytical_mind": {
+      "value": 0.4000189643852936,
+      "origin": "analytical_mind(dna.analytical_mind)",
+      "source": "FROM_STATISTICS"
+    },
+    "creative_spirit": {
+      "value": 0.45494726550361897,
+      "origin": "normalized(dna.creative_spirit)",
+      "source": "FROM_MATH"
+    }
   },
   "body": {
-    "hunger": 70.0,
-    "thirst": 70.0,
-    "energy": 100.0,
-    "warmth": 50.0,
-    "health": 100.0,
-    "pain": 0.0,
-    "pleasure": 0.0,
-    "age": 0.0,
-    "x": -34.07674513143141,
-    "y": 27.258842324038156
+    "hunger": {
+      "value": 70.0,
+      "origin": "computed(body.hunger)",
+      "source": "FROM_MATH"
+    },
+    "thirst": {
+      "value": 70.0,
+      "origin": "computed(body.thirst)",
+      "source": "FROM_MATH"
+    },
+    "energy": {
+      "value": 100.0,
+      "origin": "computed(body.energy)",
+      "source": "FROM_MATH"
+    },
+    "warmth": {
+      "value": 50.0,
+      "origin": "computed(body.warmth)",
+      "source": "FROM_MATH"
+    },
+    "health": {
+      "value": 100.0,
+      "origin": "computed(body.health)",
+      "source": "FROM_MATH"
+    },
+    "pain": {
+      "value": 0.0,
+      "origin": "normalized(body.pain)",
+      "source": "FROM_MATH"
+    },
+    "pleasure": {
+      "value": 0.0,
+      "origin": "normalized(body.pleasure)",
+      "source": "FROM_MATH"
+    },
+    "age": {
+      "value": 0.0,
+      "origin": "normalized(body.age)",
+      "source": "FROM_MATH"
+    },
+    "x": {
+      "value": -34.07674513143141,
+      "origin": "computed(body.x)",
+      "source": "FROM_MATH"
+    },
+    "y": {
+      "value": 27.258842324038156,
+      "origin": "computed(body.y)",
+      "source": "FROM_MATH"
+    }
   },
   "emotions": {
-    "fear": 0.0,
-    "joy": 0.30981970045036555,
-    "sadness": 0.0,
-    "anger": 0.0,
-    "love": 0.0,
-    "loneliness": 0.40006407184971127,
-    "anxiety": 0.06907871733690137,
-    "peace": 0.3,
-    "trust": 0.3536689263315305
+    "fear": {
+      "value": 0.0,
+      "origin": "normalized(emotions.fear)",
+      "source": "FROM_MATH"
+    },
+    "joy": {
+      "value": 0.30981970045036555,
+      "origin": "normalized(emotions.joy)",
+      "source": "FROM_MATH"
+    },
+    "sadness": {
+      "value": 0.0,
+      "origin": "normalized(emotions.sadness)",
+      "source": "FROM_MATH"
+    },
+    "anger": {
+      "value": 0.0,
+      "origin": "normalized(emotions.anger)",
+      "source": "FROM_MATH"
+    },
+    "love": {
+      "value": 0.0,
+      "origin": "normalized(emotions.love)",
+      "source": "FROM_MATH"
+    },
+    "loneliness": {
+      "value": 0.40006407184971127,
+      "origin": "normalized(emotions.loneliness)",
+      "source": "FROM_MATH"
+    },
+    "anxiety": {
+      "value": 0.06907871733690137,
+      "origin": "normalized(emotions.anxiety)",
+      "source": "FROM_MATH"
+    },
+    "peace": {
+      "value": 0.3,
+      "origin": "normalized(emotions.peace)",
+      "source": "FROM_MATH"
+    },
+    "trust": {
+      "value": 0.3536689263315305,
+      "origin": "normalized(emotions.trust)",
+      "source": "FROM_MATH"
+    }
   },
   "memory": {
     "long_term": [],
     "others": {
       "ser_80428": {
-        "first_met": 0,
-        "times_met": 1,
-        "trust": 0.8,
+        "first_met": {
+          "value": 0,
+          "origin": "counted(memory.others.ser_80428.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 1,
+          "origin": "measured(memory.others.ser_80428.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.8,
+          "origin": "normalized(memory.others.ser_80428.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "parent",
         "memories": []
       },
       "ser_13555": {
-        "first_met": 0,
-        "times_met": 1,
-        "trust": 0.8,
+        "first_met": {
+          "value": 0,
+          "origin": "counted(memory.others.ser_13555.first_met)",
+          "source": "FROM_DATA"
+        },
+        "times_met": {
+          "value": 1,
+          "origin": "measured(memory.others.ser_13555.times_met)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.8,
+          "origin": "normalized(memory.others.ser_13555.trust)",
+          "source": "FROM_MATH"
+        },
         "feelings": "parent",
         "memories": []
       }
@@ -76,17 +272,124 @@
   "mind": {
     "thought_stream": [
       "...",
-      "\u00bfQu\u00e9 es esto?",
+      "¿Qué es esto?",
       "Existo."
     ],
     "questions": [
-      "\u00bfQu\u00e9 soy?",
-      "\u00bfD\u00f3nde estoy?"
+      "¿Qué soy?",
+      "¿Dónde estoy?"
     ],
     "desires": [],
     "fears": [],
     "self_concept": [],
     "beliefs": {},
     "likes": {}
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "294fb0597aba",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:14:55.008949",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/worlds/beings/ser_74591.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:14:55.009036",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 0,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 8,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 116,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 130,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 116,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 122,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

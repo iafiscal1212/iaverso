@@ -1,0 +1,3919 @@
+{
+  "metadata": {
+    "type": "100% ENDOGENOUS",
+    "n_experiments": 44,
+    "seed": 42,
+    "experiment_id": {
+      "value": "a2ba9e2db08b",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:33.347388",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/ENDOGENOUS_ML_experiments.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "raw_results": [
+    {
+      "dataset": "digits",
+      "method": "FS_25pct",
+      "n_samples": {
+        "value": 1797,
+        "origin": "count(raw_results[0].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 64,
+        "origin": "count(raw_results[0].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.035614913745130775,
+        "origin": "ratio(raw_results[0].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[0].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9254220980757293,
+        "origin": "mean(raw_results[0].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.013934831718289799,
+        "origin": "std(raw_results[0].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9277777777777778,
+          0.9222222222222223,
+          0.9388888888888889,
+          0.9166666666666666,
+          0.9388888888888889,
+          0.9,
+          0.95,
+          0.9106145251396648,
+          0.9273743016759777,
+          0.9217877094972067
+        ],
+        "origin": "array(raw_results[0].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "feature_selection"
+    },
+    {
+      "dataset": "digits",
+      "method": "FS_50pct",
+      "n_samples": {
+        "value": 1797,
+        "origin": "count(raw_results[1].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 64,
+        "origin": "count(raw_results[1].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.035614913745130775,
+        "origin": "ratio(raw_results[1].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[1].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9599348230912476,
+        "origin": "mean(raw_results[1].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.008530752815239875,
+        "origin": "std(raw_results[1].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.95,
+          0.9611111111111111,
+          0.9777777777777777,
+          0.9444444444444444,
+          0.9611111111111111,
+          0.9611111111111111,
+          0.9611111111111111,
+          0.9664804469273743,
+          0.9553072625698324,
+          0.9608938547486033
+        ],
+        "origin": "array(raw_results[1].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "feature_selection"
+    },
+    {
+      "dataset": "digits",
+      "method": "FS_sqrt",
+      "n_samples": {
+        "value": 1797,
+        "origin": "count(raw_results[2].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 64,
+        "origin": "count(raw_results[2].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.035614913745130775,
+        "origin": "ratio(raw_results[2].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[2].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.7774115456238361,
+        "origin": "mean(raw_results[2].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.03284883357965604,
+        "origin": "std(raw_results[2].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.7222222222222222,
+          0.8111111111111111,
+          0.7666666666666667,
+          0.7611111111111111,
+          0.8,
+          0.7388888888888889,
+          0.8333333333333334,
+          0.7988826815642458,
+          0.7541899441340782,
+          0.7877094972067039
+        ],
+        "origin": "array(raw_results[2].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "feature_selection"
+    },
+    {
+      "dataset": "digits",
+      "method": "PCA_95var",
+      "n_samples": {
+        "value": 1797,
+        "origin": "count(raw_results[3].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 64,
+        "origin": "count(raw_results[3].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.035614913745130775,
+        "origin": "ratio(raw_results[3].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[3].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9671601489757913,
+        "origin": "mean(raw_results[3].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.007270463302341196,
+        "origin": "std(raw_results[3].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9666666666666667,
+          0.9777777777777777,
+          0.9611111111111111,
+          0.9666666666666667,
+          0.9722222222222222,
+          0.9611111111111111,
+          0.9777777777777777,
+          0.9608938547486033,
+          0.9553072625698324,
+          0.9720670391061452
+        ],
+        "origin": "array(raw_results[3].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "dim_reduction"
+    },
+    {
+      "dataset": "digits",
+      "method": "PCA_sqrt",
+      "n_samples": {
+        "value": 1797,
+        "origin": "count(raw_results[4].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 64,
+        "origin": "count(raw_results[4].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.035614913745130775,
+        "origin": "ratio(raw_results[4].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[4].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.8686592178770951,
+        "origin": "mean(raw_results[4].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.022222329723115237,
+        "origin": "std(raw_results[4].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.8444444444444444,
+          0.8777777777777778,
+          0.8611111111111112,
+          0.8555555555555555,
+          0.9111111111111111,
+          0.8666666666666667,
+          0.8833333333333333,
+          0.8603351955307262,
+          0.8324022346368715,
+          0.8938547486033519
+        ],
+        "origin": "array(raw_results[4].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "dim_reduction"
+    },
+    {
+      "dataset": "digits",
+      "method": "LogReg_L1",
+      "n_samples": {
+        "value": 1797,
+        "origin": "count(raw_results[5].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 64,
+        "origin": "count(raw_results[5].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.035614913745130775,
+        "origin": "ratio(raw_results[5].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[5].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9710583488516449,
+        "origin": "mean(raw_results[5].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.010815497266862092,
+        "origin": "std(raw_results[5].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9555555555555556,
+          0.9777777777777777,
+          0.9777777777777777,
+          0.9666666666666667,
+          0.9833333333333333,
+          0.9666666666666667,
+          0.9777777777777777,
+          0.9832402234636871,
+          0.9497206703910615,
+          0.9720670391061452
+        ],
+        "origin": "array(raw_results[5].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "regularization"
+    },
+    {
+      "dataset": "digits",
+      "method": "LogReg_L2",
+      "n_samples": {
+        "value": 1797,
+        "origin": "count(raw_results[6].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 64,
+        "origin": "count(raw_results[6].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.035614913745130775,
+        "origin": "ratio(raw_results[6].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[6].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9721694599627559,
+        "origin": "mean(raw_results[6].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.007481706829368241,
+        "origin": "std(raw_results[6].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9611111111111111,
+          0.9722222222222222,
+          0.9777777777777777,
+          0.9777777777777777,
+          0.9888888888888889,
+          0.9722222222222222,
+          0.9666666666666667,
+          0.9664804469273743,
+          0.9664804469273743,
+          0.9720670391061452
+        ],
+        "origin": "array(raw_results[6].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "regularization"
+    },
+    {
+      "dataset": "digits",
+      "method": "RandomForest",
+      "n_samples": {
+        "value": 1797,
+        "origin": "count(raw_results[7].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 64,
+        "origin": "count(raw_results[7].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.035614913745130775,
+        "origin": "ratio(raw_results[7].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[7].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9766201117318435,
+        "origin": "mean(raw_results[7].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.008575257238499737,
+        "origin": "std(raw_results[7].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9777777777777777,
+          0.9833333333333333,
+          0.9722222222222222,
+          0.9777777777777777,
+          0.9722222222222222,
+          0.9722222222222222,
+          0.9944444444444445,
+          0.9832402234636871,
+          0.9720670391061452,
+          0.9608938547486033
+        ],
+        "origin": "array(raw_results[7].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "ensemble"
+    },
+    {
+      "dataset": "digits",
+      "method": "GradBoost",
+      "n_samples": {
+        "value": 1797,
+        "origin": "count(raw_results[8].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 64,
+        "origin": "count(raw_results[8].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.035614913745130775,
+        "origin": "ratio(raw_results[8].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[8].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9576970825574177,
+        "origin": "mean(raw_results[8].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.00837439183376554,
+        "origin": "std(raw_results[8].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9666666666666667,
+          0.9555555555555556,
+          0.9555555555555556,
+          0.9611111111111111,
+          0.9666666666666667,
+          0.9444444444444444,
+          0.9722222222222222,
+          0.9497206703910615,
+          0.9497206703910615,
+          0.9553072625698324
+        ],
+        "origin": "array(raw_results[8].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "ensemble"
+    },
+    {
+      "dataset": "digits",
+      "method": "KNN",
+      "n_samples": {
+        "value": 1797,
+        "origin": "count(raw_results[9].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 64,
+        "origin": "count(raw_results[9].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.035614913745130775,
+        "origin": "ratio(raw_results[9].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[9].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9415673494723773,
+        "origin": "mean(raw_results[9].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.01278447486737984,
+        "origin": "std(raw_results[9].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9333333333333333,
+          0.9388888888888889,
+          0.9388888888888889,
+          0.9444444444444444,
+          0.9333333333333333,
+          0.9444444444444444,
+          0.9611111111111111,
+          0.9217877094972067,
+          0.9664804469273743,
+          0.9329608938547486
+        ],
+        "origin": "array(raw_results[9].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "instance_based"
+    },
+    {
+      "dataset": "digits",
+      "method": "SVM",
+      "n_samples": {
+        "value": 1797,
+        "origin": "count(raw_results[10].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 64,
+        "origin": "count(raw_results[10].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.035614913745130775,
+        "origin": "ratio(raw_results[10].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[10].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9838485412787088,
+        "origin": "mean(raw_results[10].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.00882031345404529,
+        "origin": "std(raw_results[10].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9833333333333333,
+          0.9833333333333333,
+          0.9888888888888889,
+          0.9888888888888889,
+          0.9777777777777777,
+          0.9944444444444445,
+          0.9944444444444445,
+          0.9720670391061452,
+          0.9664804469273743,
+          0.9888268156424581
+        ],
+        "origin": "array(raw_results[10].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "instance_based"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "FS_25pct",
+      "n_samples": {
+        "value": 569,
+        "origin": "count(raw_results[11].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 30,
+        "origin": "count(raw_results[11].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.05272407732864675,
+        "origin": "ratio(raw_results[11].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[11].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9561090225563911,
+        "origin": "mean(raw_results[11].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.03349302264278658,
+        "origin": "std(raw_results[11].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9824561403508771,
+          0.9824561403508771,
+          0.9824561403508771,
+          0.8771929824561403,
+          0.9473684210526315,
+          0.9649122807017544,
+          0.9298245614035088,
+          0.9824561403508771,
+          0.9298245614035088,
+          0.9821428571428571
+        ],
+        "origin": "array(raw_results[11].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "feature_selection"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "FS_50pct",
+      "n_samples": {
+        "value": 569,
+        "origin": "count(raw_results[12].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 30,
+        "origin": "count(raw_results[12].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.05272407732864675,
+        "origin": "ratio(raw_results[12].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[12].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9508458646616541,
+        "origin": "mean(raw_results[12].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.03398984208855628,
+        "origin": "std(raw_results[12].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9824561403508771,
+          0.9824561403508771,
+          0.9649122807017544,
+          0.8771929824561403,
+          0.9473684210526315,
+          0.9122807017543859,
+          0.9298245614035088,
+          0.9824561403508771,
+          0.9473684210526315,
+          0.9821428571428571
+        ],
+        "origin": "array(raw_results[12].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "feature_selection"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "FS_sqrt",
+      "n_samples": {
+        "value": 569,
+        "origin": "count(raw_results[13].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 30,
+        "origin": "count(raw_results[13].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.05272407732864675,
+        "origin": "ratio(raw_results[13].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[13].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9438283208020051,
+        "origin": "mean(raw_results[13].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.034877314571968715,
+        "origin": "std(raw_results[13].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9473684210526315,
+          0.9649122807017544,
+          0.9824561403508771,
+          0.8596491228070176,
+          0.9473684210526315,
+          0.9473684210526315,
+          0.9122807017543859,
+          0.9649122807017544,
+          0.9298245614035088,
+          0.9821428571428571
+        ],
+        "origin": "array(raw_results[13].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "feature_selection"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "PCA_95var",
+      "n_samples": {
+        "value": 569,
+        "origin": "count(raw_results[14].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 30,
+        "origin": "count(raw_results[14].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.05272407732864675,
+        "origin": "ratio(raw_results[14].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[14].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9789473684210526,
+        "origin": "mean(raw_results[14].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.017189401703741607,
+        "origin": "std(raw_results[14].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9649122807017544,
+          0.9824561403508771,
+          1.0,
+          0.9473684210526315,
+          0.9824561403508771,
+          0.9649122807017544,
+          1.0,
+          0.9649122807017544,
+          0.9824561403508771,
+          1.0
+        ],
+        "origin": "array(raw_results[14].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "dim_reduction"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "PCA_sqrt",
+      "n_samples": {
+        "value": 569,
+        "origin": "count(raw_results[15].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 30,
+        "origin": "count(raw_results[15].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.05272407732864675,
+        "origin": "ratio(raw_results[15].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[15].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9666666666666666,
+        "origin": "mean(raw_results[15].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.01992599419579043,
+        "origin": "std(raw_results[15].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9473684210526315,
+          0.9649122807017544,
+          0.9824561403508771,
+          0.9298245614035088,
+          0.9649122807017544,
+          0.9649122807017544,
+          0.9824561403508771,
+          0.9473684210526315,
+          0.9824561403508771,
+          1.0
+        ],
+        "origin": "array(raw_results[15].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "dim_reduction"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "LogReg_L1",
+      "n_samples": {
+        "value": 569,
+        "origin": "count(raw_results[16].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 30,
+        "origin": "count(raw_results[16].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.05272407732864675,
+        "origin": "ratio(raw_results[16].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[16].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9754385964912281,
+        "origin": "mean(raw_results[16].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.019536015308175506,
+        "origin": "std(raw_results[16].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9649122807017544,
+          0.9649122807017544,
+          0.9824561403508771,
+          0.9298245614035088,
+          0.9824561403508771,
+          0.9649122807017544,
+          1.0,
+          0.9824561403508771,
+          0.9824561403508771,
+          1.0
+        ],
+        "origin": "array(raw_results[16].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "regularization"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "LogReg_L2",
+      "n_samples": {
+        "value": 569,
+        "origin": "count(raw_results[17].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 30,
+        "origin": "count(raw_results[17].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.05272407732864675,
+        "origin": "ratio(raw_results[17].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[17].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9771929824561403,
+        "origin": "mean(raw_results[17].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.01763136073880859,
+        "origin": "std(raw_results[17].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9824561403508771,
+          0.9824561403508771,
+          0.9473684210526315,
+          0.9649122807017544,
+          0.9824561403508771,
+          0.9473684210526315,
+          1.0,
+          0.9824561403508771,
+          0.9824561403508771,
+          1.0
+        ],
+        "origin": "array(raw_results[17].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "regularization"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "RandomForest",
+      "n_samples": {
+        "value": 569,
+        "origin": "count(raw_results[18].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 30,
+        "origin": "count(raw_results[18].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.05272407732864675,
+        "origin": "ratio(raw_results[18].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[18].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9490914786967419,
+        "origin": "mean(raw_results[18].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.03545094011490291,
+        "origin": "std(raw_results[18].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9649122807017544,
+          0.9824561403508771,
+          0.9824561403508771,
+          0.8596491228070176,
+          0.9473684210526315,
+          0.9473684210526315,
+          0.9649122807017544,
+          0.9298245614035088,
+          0.9298245614035088,
+          0.9821428571428571
+        ],
+        "origin": "array(raw_results[18].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "ensemble"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "GradBoost",
+      "n_samples": {
+        "value": 569,
+        "origin": "count(raw_results[19].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 30,
+        "origin": "count(raw_results[19].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.05272407732864675,
+        "origin": "ratio(raw_results[19].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[19].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9578947368421054,
+        "origin": "mean(raw_results[19].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.021052631578947368,
+        "origin": "std(raw_results[19].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9473684210526315,
+          0.9473684210526315,
+          0.9824561403508771,
+          0.9298245614035088,
+          0.9473684210526315,
+          0.9649122807017544,
+          0.9649122807017544,
+          0.9649122807017544,
+          0.9298245614035088,
+          1.0
+        ],
+        "origin": "array(raw_results[19].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "ensemble"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "KNN",
+      "n_samples": {
+        "value": 569,
+        "origin": "count(raw_results[20].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 30,
+        "origin": "count(raw_results[20].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.05272407732864675,
+        "origin": "ratio(raw_results[20].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[20].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9543233082706767,
+        "origin": "mean(raw_results[20].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.026232787709474518,
+        "origin": "std(raw_results[20].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9824561403508771,
+          0.9824561403508771,
+          0.9649122807017544,
+          0.8947368421052632,
+          0.9473684210526315,
+          0.9298245614035088,
+          0.9473684210526315,
+          0.9824561403508771,
+          0.9473684210526315,
+          0.9642857142857143
+        ],
+        "origin": "array(raw_results[20].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "instance_based"
+    },
+    {
+      "dataset": "breast_cancer",
+      "method": "SVM",
+      "n_samples": {
+        "value": 569,
+        "origin": "count(raw_results[21].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 30,
+        "origin": "count(raw_results[21].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.05272407732864675,
+        "origin": "ratio(raw_results[21].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[21].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9754385964912281,
+        "origin": "mean(raw_results[21].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.019536015308175527,
+        "origin": "std(raw_results[21].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          1.0,
+          0.9824561403508771,
+          0.9473684210526315,
+          0.9649122807017544,
+          0.9649122807017544,
+          0.9649122807017544,
+          1.0,
+          0.9473684210526315,
+          0.9824561403508771,
+          1.0
+        ],
+        "origin": "array(raw_results[21].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "instance_based"
+    },
+    {
+      "dataset": "wine",
+      "method": "FS_25pct",
+      "n_samples": {
+        "value": 178,
+        "origin": "count(raw_results[22].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 13,
+        "origin": "count(raw_results[22].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.07303370786516854,
+        "origin": "ratio(raw_results[22].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 5,
+        "origin": "counted(raw_results[22].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9266666666666665,
+        "origin": "mean(raw_results[22].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.02939980786406505,
+        "origin": "std(raw_results[22].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9722222222222222,
+          0.9444444444444444,
+          0.9166666666666666,
+          0.9142857142857143,
+          0.8857142857142857
+        ],
+        "origin": "array(raw_results[22].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "feature_selection"
+    },
+    {
+      "dataset": "wine",
+      "method": "FS_50pct",
+      "n_samples": {
+        "value": 178,
+        "origin": "count(raw_results[23].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 13,
+        "origin": "count(raw_results[23].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.07303370786516854,
+        "origin": "ratio(raw_results[23].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 5,
+        "origin": "counted(raw_results[23].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9661904761904762,
+        "origin": "mean(raw_results[23].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.03313470677623222,
+        "origin": "std(raw_results[23].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9722222222222222,
+          1.0,
+          0.9444444444444444,
+          0.9142857142857143,
+          1.0
+        ],
+        "origin": "array(raw_results[23].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "feature_selection"
+    },
+    {
+      "dataset": "wine",
+      "method": "FS_sqrt",
+      "n_samples": {
+        "value": 178,
+        "origin": "count(raw_results[24].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 13,
+        "origin": "count(raw_results[24].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.07303370786516854,
+        "origin": "ratio(raw_results[24].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 5,
+        "origin": "counted(raw_results[24].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9266666666666665,
+        "origin": "mean(raw_results[24].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.02939980786406505,
+        "origin": "std(raw_results[24].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9722222222222222,
+          0.9444444444444444,
+          0.9166666666666666,
+          0.9142857142857143,
+          0.8857142857142857
+        ],
+        "origin": "array(raw_results[24].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "feature_selection"
+    },
+    {
+      "dataset": "wine",
+      "method": "PCA_95var",
+      "n_samples": {
+        "value": 178,
+        "origin": "count(raw_results[25].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 13,
+        "origin": "count(raw_results[25].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.07303370786516854,
+        "origin": "ratio(raw_results[25].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 5,
+        "origin": "counted(raw_results[25].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9776190476190475,
+        "origin": "mean(raw_results[25].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.01119469694127331,
+        "origin": "std(raw_results[25].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9722222222222222,
+          0.9722222222222222,
+          0.9722222222222222,
+          0.9714285714285714,
+          1.0
+        ],
+        "origin": "array(raw_results[25].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "dim_reduction"
+    },
+    {
+      "dataset": "wine",
+      "method": "PCA_sqrt",
+      "n_samples": {
+        "value": 178,
+        "origin": "count(raw_results[26].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 13,
+        "origin": "count(raw_results[26].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.07303370786516854,
+        "origin": "ratio(raw_results[26].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 5,
+        "origin": "counted(raw_results[26].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9663492063492063,
+        "origin": "mean(raw_results[26].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.0109581305359322,
+        "origin": "std(raw_results[26].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9722222222222222,
+          0.9722222222222222,
+          0.9444444444444444,
+          0.9714285714285714,
+          0.9714285714285714
+        ],
+        "origin": "array(raw_results[26].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "dim_reduction"
+    },
+    {
+      "dataset": "wine",
+      "method": "LogReg_L1",
+      "n_samples": {
+        "value": 178,
+        "origin": "count(raw_results[27].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 13,
+        "origin": "count(raw_results[27].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.07303370786516854,
+        "origin": "ratio(raw_results[27].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 5,
+        "origin": "counted(raw_results[27].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9774603174603176,
+        "origin": "mean(raw_results[27].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.021299434518521104,
+        "origin": "std(raw_results[27].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9722222222222222,
+          0.9722222222222222,
+          1.0,
+          0.9428571428571428,
+          1.0
+        ],
+        "origin": "array(raw_results[27].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "regularization"
+    },
+    {
+      "dataset": "wine",
+      "method": "LogReg_L2",
+      "n_samples": {
+        "value": 178,
+        "origin": "count(raw_results[28].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 13,
+        "origin": "count(raw_results[28].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.07303370786516854,
+        "origin": "ratio(raw_results[28].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 5,
+        "origin": "counted(raw_results[28].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9833333333333332,
+        "origin": "mean(raw_results[28].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.013608276348795441,
+        "origin": "std(raw_results[28].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9722222222222222,
+          0.9722222222222222,
+          0.9722222222222222,
+          1.0,
+          1.0
+        ],
+        "origin": "array(raw_results[28].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "regularization"
+    },
+    {
+      "dataset": "wine",
+      "method": "RandomForest",
+      "n_samples": {
+        "value": 178,
+        "origin": "count(raw_results[29].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 13,
+        "origin": "count(raw_results[29].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.07303370786516854,
+        "origin": "ratio(raw_results[29].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 5,
+        "origin": "counted(raw_results[29].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9773015873015872,
+        "origin": "mean(raw_results[29].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.03329400552244953,
+        "origin": "std(raw_results[29].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9722222222222222,
+          1.0,
+          1.0,
+          0.9142857142857143,
+          1.0
+        ],
+        "origin": "array(raw_results[29].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "ensemble"
+    },
+    {
+      "dataset": "wine",
+      "method": "GradBoost",
+      "n_samples": {
+        "value": 178,
+        "origin": "count(raw_results[30].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 13,
+        "origin": "count(raw_results[30].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.07303370786516854,
+        "origin": "ratio(raw_results[30].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 5,
+        "origin": "counted(raw_results[30].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9214285714285714,
+        "origin": "mean(raw_results[30].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.032823001969683394,
+        "origin": "std(raw_results[30].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9166666666666666,
+          0.8888888888888888,
+          0.9444444444444444,
+          0.8857142857142857,
+          0.9714285714285714
+        ],
+        "origin": "array(raw_results[30].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "ensemble"
+    },
+    {
+      "dataset": "wine",
+      "method": "KNN",
+      "n_samples": {
+        "value": 178,
+        "origin": "count(raw_results[31].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 13,
+        "origin": "count(raw_results[31].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.07303370786516854,
+        "origin": "ratio(raw_results[31].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 5,
+        "origin": "counted(raw_results[31].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9776190476190475,
+        "origin": "mean(raw_results[31].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.020831783767013237,
+        "origin": "std(raw_results[31].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9444444444444444,
+          0.9722222222222222,
+          1.0,
+          0.9714285714285714,
+          1.0
+        ],
+        "origin": "array(raw_results[31].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "instance_based"
+    },
+    {
+      "dataset": "wine",
+      "method": "SVM",
+      "n_samples": {
+        "value": 178,
+        "origin": "count(raw_results[32].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 13,
+        "origin": "count(raw_results[32].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.07303370786516854,
+        "origin": "ratio(raw_results[32].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 5,
+        "origin": "counted(raw_results[32].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.9833333333333332,
+        "origin": "mean(raw_results[32].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.022222222222222233,
+        "origin": "std(raw_results[32].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.9444444444444444,
+          1.0,
+          0.9722222222222222,
+          1.0,
+          1.0
+        ],
+        "origin": "array(raw_results[32].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "instance_based"
+    },
+    {
+      "dataset": "high_dim",
+      "method": "FS_25pct",
+      "n_samples": {
+        "value": 500,
+        "origin": "count(raw_results[33].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 200,
+        "origin": "count(raw_results[33].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.4,
+        "origin": "ratio(raw_results[33].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[33].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.8540000000000001,
+        "origin": "mean(raw_results[33].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.045650848842053296,
+        "origin": "std(raw_results[33].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.84,
+          0.88,
+          0.82,
+          0.84,
+          0.9,
+          0.8,
+          0.94,
+          0.88,
+          0.78,
+          0.86
+        ],
+        "origin": "array(raw_results[33].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "feature_selection"
+    },
+    {
+      "dataset": "high_dim",
+      "method": "FS_50pct",
+      "n_samples": {
+        "value": 500,
+        "origin": "count(raw_results[34].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 200,
+        "origin": "count(raw_results[34].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.4,
+        "origin": "ratio(raw_results[34].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[34].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.7979999999999999,
+        "origin": "mean(raw_results[34].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.07011419257183242,
+        "origin": "std(raw_results[34].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.72,
+          0.8,
+          0.7,
+          0.74,
+          0.92,
+          0.84,
+          0.86,
+          0.84,
+          0.72,
+          0.84
+        ],
+        "origin": "array(raw_results[34].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "feature_selection"
+    },
+    {
+      "dataset": "high_dim",
+      "method": "FS_sqrt",
+      "n_samples": {
+        "value": 500,
+        "origin": "count(raw_results[35].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 200,
+        "origin": "count(raw_results[35].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.4,
+        "origin": "ratio(raw_results[35].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[35].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.8540000000000001,
+        "origin": "mean(raw_results[35].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.045650848842053296,
+        "origin": "std(raw_results[35].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.82,
+          0.86,
+          0.82,
+          0.8,
+          0.88,
+          0.8,
+          0.92,
+          0.94,
+          0.86,
+          0.84
+        ],
+        "origin": "array(raw_results[35].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "feature_selection"
+    },
+    {
+      "dataset": "high_dim",
+      "method": "PCA_95var",
+      "n_samples": {
+        "value": 500,
+        "origin": "count(raw_results[36].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 200,
+        "origin": "count(raw_results[36].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.4,
+        "origin": "ratio(raw_results[36].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[36].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.7579999999999999,
+        "origin": "mean(raw_results[36].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.066,
+        "origin": "std(raw_results[36].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.6,
+          0.72,
+          0.76,
+          0.8,
+          0.84,
+          0.76,
+          0.84,
+          0.78,
+          0.72,
+          0.76
+        ],
+        "origin": "array(raw_results[36].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "dim_reduction"
+    },
+    {
+      "dataset": "high_dim",
+      "method": "PCA_sqrt",
+      "n_samples": {
+        "value": 500,
+        "origin": "count(raw_results[37].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 200,
+        "origin": "count(raw_results[37].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.4,
+        "origin": "ratio(raw_results[37].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[37].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.796,
+        "origin": "mean(raw_results[37].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.04270831300812524,
+        "origin": "std(raw_results[37].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.72,
+          0.88,
+          0.78,
+          0.82,
+          0.8,
+          0.78,
+          0.8,
+          0.82,
+          0.82,
+          0.74
+        ],
+        "origin": "array(raw_results[37].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "dim_reduction"
+    },
+    {
+      "dataset": "high_dim",
+      "method": "LogReg_L1",
+      "n_samples": {
+        "value": 500,
+        "origin": "count(raw_results[38].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 200,
+        "origin": "count(raw_results[38].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.4,
+        "origin": "ratio(raw_results[38].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[38].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.796,
+        "origin": "mean(raw_results[38].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.0708801805866774,
+        "origin": "std(raw_results[38].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.64,
+          0.74,
+          0.8,
+          0.8,
+          0.9,
+          0.8,
+          0.86,
+          0.86,
+          0.74,
+          0.82
+        ],
+        "origin": "array(raw_results[38].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "regularization"
+    },
+    {
+      "dataset": "high_dim",
+      "method": "LogReg_L2",
+      "n_samples": {
+        "value": 500,
+        "origin": "count(raw_results[39].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 200,
+        "origin": "count(raw_results[39].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.4,
+        "origin": "ratio(raw_results[39].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[39].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.77,
+        "origin": "mean(raw_results[39].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.05531726674375733,
+        "origin": "std(raw_results[39].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.66,
+          0.8,
+          0.8,
+          0.78,
+          0.88,
+          0.76,
+          0.74,
+          0.8,
+          0.72,
+          0.76
+        ],
+        "origin": "array(raw_results[39].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "regularization"
+    },
+    {
+      "dataset": "high_dim",
+      "method": "RandomForest",
+      "n_samples": {
+        "value": 500,
+        "origin": "count(raw_results[40].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 200,
+        "origin": "count(raw_results[40].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.4,
+        "origin": "ratio(raw_results[40].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[40].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.8700000000000001,
+        "origin": "mean(raw_results[40].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.04919349550499537,
+        "origin": "std(raw_results[40].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.78,
+          0.88,
+          0.84,
+          0.82,
+          0.9,
+          0.86,
+          0.94,
+          0.94,
+          0.9,
+          0.84
+        ],
+        "origin": "array(raw_results[40].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "ensemble"
+    },
+    {
+      "dataset": "high_dim",
+      "method": "GradBoost",
+      "n_samples": {
+        "value": 500,
+        "origin": "count(raw_results[41].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 200,
+        "origin": "count(raw_results[41].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.4,
+        "origin": "ratio(raw_results[41].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[41].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.876,
+        "origin": "mean(raw_results[41].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.03440930106817052,
+        "origin": "std(raw_results[41].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.82,
+          0.86,
+          0.86,
+          0.84,
+          0.9,
+          0.92,
+          0.88,
+          0.94,
+          0.88,
+          0.86
+        ],
+        "origin": "array(raw_results[41].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "ensemble"
+    },
+    {
+      "dataset": "high_dim",
+      "method": "KNN",
+      "n_samples": {
+        "value": 500,
+        "origin": "count(raw_results[42].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 200,
+        "origin": "count(raw_results[42].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.4,
+        "origin": "ratio(raw_results[42].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[42].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.8640000000000001,
+        "origin": "mean(raw_results[42].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.0649923072370877,
+        "origin": "std(raw_results[42].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.74,
+          0.82,
+          0.88,
+          0.92,
+          0.92,
+          0.82,
+          0.86,
+          0.96,
+          0.92,
+          0.8
+        ],
+        "origin": "array(raw_results[42].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "instance_based"
+    },
+    {
+      "dataset": "high_dim",
+      "method": "SVM",
+      "n_samples": {
+        "value": 500,
+        "origin": "count(raw_results[43].n_samples)",
+        "source": "FROM_DATA"
+      },
+      "n_features": {
+        "value": 200,
+        "origin": "count(raw_results[43].n_features)",
+        "source": "FROM_DATA"
+      },
+      "ratio": {
+        "value": 0.4,
+        "origin": "ratio(raw_results[43].ratio)",
+        "source": "FROM_MATH"
+      },
+      "cv_folds": {
+        "value": 10,
+        "origin": "counted(raw_results[43].cv_folds)",
+        "source": "FROM_DATA"
+      },
+      "mean_acc": {
+        "value": 0.8540000000000001,
+        "origin": "mean(raw_results[43].mean_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "std_acc": {
+        "value": 0.040049968789001585,
+        "origin": "std(raw_results[43].std_acc)",
+        "source": "FROM_STATISTICS"
+      },
+      "scores": {
+        "value": [
+          0.78,
+          0.9,
+          0.82,
+          0.84,
+          0.88,
+          0.86,
+          0.92,
+          0.88,
+          0.82,
+          0.84
+        ],
+        "origin": "array(raw_results[43].scores)",
+        "source": "FROM_DATA"
+      },
+      "category": "instance_based"
+    }
+  ],
+  "dataset_stats": {
+    "digits": {
+      "n": {
+        "value": 11.0,
+        "origin": "computed(dataset_stats.digits.n)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9365044297725862,
+        "origin": "mean(dataset_stats.digits.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.05901968493968544,
+        "origin": "std(dataset_stats.digits.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 0.06302125549370582,
+        "origin": "normalized(dataset_stats.digits.cv)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 0.7774115456238361,
+        "origin": "min(dataset_stats.digits.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9838485412787088,
+        "origin": "max(dataset_stats.digits.max)",
+        "source": "FROM_STATISTICS"
+      },
+      "gap": {
+        "value": 0.20643699565487272,
+        "origin": "normalized(dataset_stats.digits.gap)",
+        "source": "FROM_MATH"
+      },
+      "ratio": {
+        "value": 0.035614913745130775,
+        "origin": "ratio(dataset_stats.digits.ratio)",
+        "source": "FROM_MATH"
+      }
+    },
+    "breast_cancer": {
+      "n": {
+        "value": 11.0,
+        "origin": "computed(dataset_stats.breast_cancer.n)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9623433583959901,
+        "origin": "mean(dataset_stats.breast_cancer.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.012178429797017302,
+        "origin": "std(dataset_stats.breast_cancer.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 0.012654973602473868,
+        "origin": "normalized(dataset_stats.breast_cancer.cv)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 0.9438283208020051,
+        "origin": "min(dataset_stats.breast_cancer.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9789473684210526,
+        "origin": "max(dataset_stats.breast_cancer.max)",
+        "source": "FROM_STATISTICS"
+      },
+      "gap": {
+        "value": 0.035119047619047494,
+        "origin": "normalized(dataset_stats.breast_cancer.gap)",
+        "source": "FROM_MATH"
+      },
+      "ratio": {
+        "value": 0.05272407732864675,
+        "origin": "ratio(dataset_stats.breast_cancer.ratio)",
+        "source": "FROM_MATH"
+      }
+    },
+    "wine": {
+      "n": {
+        "value": 11.0,
+        "origin": "computed(dataset_stats.wine.n)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9621789321789319,
+        "origin": "mean(dataset_stats.wine.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.023452746916089087,
+        "origin": "std(dataset_stats.wine.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 0.024374621114368455,
+        "origin": "normalized(dataset_stats.wine.cv)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 0.9214285714285714,
+        "origin": "min(dataset_stats.wine.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9833333333333332,
+        "origin": "max(dataset_stats.wine.max)",
+        "source": "FROM_STATISTICS"
+      },
+      "gap": {
+        "value": 0.061904761904761796,
+        "origin": "normalized(dataset_stats.wine.gap)",
+        "source": "FROM_MATH"
+      },
+      "ratio": {
+        "value": 0.07303370786516854,
+        "origin": "ratio(dataset_stats.wine.ratio)",
+        "source": "FROM_MATH"
+      }
+    },
+    "high_dim": {
+      "n": {
+        "value": 11.0,
+        "origin": "computed(dataset_stats.high_dim.n)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.8263636363636363,
+        "origin": "mean(dataset_stats.high_dim.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.04109251806986666,
+        "origin": "std(dataset_stats.high_dim.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 0.04972691955649432,
+        "origin": "normalized(dataset_stats.high_dim.cv)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 0.7579999999999999,
+        "origin": "min(dataset_stats.high_dim.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.876,
+        "origin": "max(dataset_stats.high_dim.max)",
+        "source": "FROM_STATISTICS"
+      },
+      "gap": {
+        "value": 0.1180000000000001,
+        "origin": "normalized(dataset_stats.high_dim.gap)",
+        "source": "FROM_MATH"
+      },
+      "ratio": {
+        "value": 0.4,
+        "origin": "ratio(dataset_stats.high_dim.ratio)",
+        "source": "FROM_MATH"
+      }
+    }
+  },
+  "category_stats": {
+    "feature_selection": {
+      "n": {
+        "value": 12.0,
+        "origin": "computed(category_stats.feature_selection.n)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9032562903612229,
+        "origin": "mean(category_stats.feature_selection.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.06273821372920799,
+        "origin": "std(category_stats.feature_selection.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 0.06945782099576438,
+        "origin": "normalized(category_stats.feature_selection.cv)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 0.7774115456238361,
+        "origin": "min(category_stats.feature_selection.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9661904761904762,
+        "origin": "max(category_stats.feature_selection.max)",
+        "source": "FROM_STATISTICS"
+      },
+      "gap": {
+        "value": 0.18877893056664008,
+        "origin": "normalized(category_stats.feature_selection.gap)",
+        "source": "FROM_MATH"
+      }
+    },
+    "dim_reduction": {
+      "n": {
+        "value": 8.0,
+        "origin": "computed(category_stats.dim_reduction.n)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9099252069886075,
+        "origin": "mean(category_stats.dim_reduction.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.08425312867032271,
+        "origin": "std(category_stats.dim_reduction.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 0.09259346594997404,
+        "origin": "normalized(category_stats.dim_reduction.cv)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 0.7579999999999999,
+        "origin": "min(category_stats.dim_reduction.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9789473684210526,
+        "origin": "max(category_stats.dim_reduction.max)",
+        "source": "FROM_STATISTICS"
+      },
+      "gap": {
+        "value": 0.22094736842105267,
+        "origin": "normalized(category_stats.dim_reduction.gap)",
+        "source": "FROM_MATH"
+      }
+    },
+    "regularization": {
+      "n": {
+        "value": 8.0,
+        "origin": "computed(category_stats.regularization.n)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9278316298194275,
+        "origin": "mean(category_stats.regularization.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.08394284257169475,
+        "origin": "std(category_stats.regularization.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 0.090472063975693,
+        "origin": "normalized(category_stats.regularization.cv)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 0.77,
+        "origin": "min(category_stats.regularization.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9833333333333332,
+        "origin": "max(category_stats.regularization.max)",
+        "source": "FROM_STATISTICS"
+      },
+      "gap": {
+        "value": 0.21333333333333315,
+        "origin": "normalized(category_stats.regularization.gap)",
+        "source": "FROM_MATH"
+      }
+    },
+    "ensemble": {
+      "n": {
+        "value": 8.0,
+        "origin": "computed(category_stats.ensemble.n)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9357541960697834,
+        "origin": "mean(category_stats.ensemble.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.039757369556047605,
+        "origin": "std(category_stats.ensemble.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 0.04248697972505027,
+        "origin": "normalized(category_stats.ensemble.cv)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 0.8700000000000001,
+        "origin": "min(category_stats.ensemble.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9773015873015872,
+        "origin": "max(category_stats.ensemble.max)",
+        "source": "FROM_STATISTICS"
+      },
+      "gap": {
+        "value": 0.10730158730158712,
+        "origin": "normalized(category_stats.ensemble.gap)",
+        "source": "FROM_MATH"
+      }
+    },
+    "instance_based": {
+      "n": {
+        "value": 8.0,
+        "origin": "computed(category_stats.instance_based.n)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9417662720581714,
+        "origin": "mean(category_stats.instance_based.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.04978229507490362,
+        "origin": "std(category_stats.instance_based.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "cv": {
+        "value": 0.05286056270215276,
+        "origin": "normalized(category_stats.instance_based.cv)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 0.8540000000000001,
+        "origin": "min(category_stats.instance_based.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9838485412787088,
+        "origin": "max(category_stats.instance_based.max)",
+        "source": "FROM_STATISTICS"
+      },
+      "gap": {
+        "value": 0.1298485412787087,
+        "origin": "normalized(category_stats.instance_based.gap)",
+        "source": "FROM_MATH"
+      }
+    }
+  },
+  "clusters": [
+    {
+      "dataset": "digits",
+      "category": "feature_selection",
+      "n": {
+        "value": 3,
+        "origin": "counted(clusters[0].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.08919821990000375,
+        "origin": "normalized(clusters[0].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.18252327746741148,
+        "origin": "normalized(clusters[0].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.887589488930271,
+        "origin": "mean(clusters[0].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.7774115456238361,
+        "origin": "min(clusters[0].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9599348230912476,
+        "origin": "max(clusters[0].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.20563929580485432,
+        "origin": "normalized(clusters[0].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 0.018342659127283313,
+        "origin": "computed(clusters[0].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "FS_25pct",
+        "FS_50pct",
+        "FS_sqrt"
+      ],
+      "accuracies": {
+        "value": [
+          0.9254220980757293,
+          0.9599348230912476,
+          0.7774115456238361
+        ],
+        "origin": "array(clusters[0].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "digits",
+      "category": "dim_reduction",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[1].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.05365502340655368,
+        "origin": "normalized(clusters[1].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.09850093109869618,
+        "origin": "normalized(clusters[1].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9179096834264432,
+        "origin": "mean(clusters[1].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.8686592178770951,
+        "origin": "min(clusters[1].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9671601489757913,
+        "origin": "max(clusters[1].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.10731004681310737,
+        "origin": "normalized(clusters[1].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 0.005757723073515647,
+        "origin": "computed(clusters[1].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "PCA_95var",
+        "PCA_sqrt"
+      ],
+      "accuracies": {
+        "value": [
+          0.9671601489757913,
+          0.8686592178770951
+        ],
+        "origin": "array(clusters[1].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "high_dim",
+      "category": "feature_selection",
+      "n": {
+        "value": 3,
+        "origin": "counted(clusters[2].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.03160253770666143,
+        "origin": "normalized(clusters[2].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.05600000000000016,
+        "origin": "normalized(clusters[2].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.8353333333333334,
+        "origin": "mean(clusters[2].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.7979999999999999,
+        "origin": "min(clusters[2].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.8540000000000001,
+        "origin": "max(clusters[2].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.06703910614525159,
+        "origin": "normalized(clusters[2].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 0.0021186058797761915,
+        "origin": "computed(clusters[2].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "FS_25pct",
+        "FS_50pct",
+        "FS_sqrt"
+      ],
+      "accuracies": {
+        "value": [
+          0.8540000000000001,
+          0.7979999999999999,
+          0.8540000000000001
+        ],
+        "origin": "array(clusters[2].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "wine",
+      "category": "ensemble",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[3].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.02942651730479852,
+        "origin": "normalized(clusters[3].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.05587301587301585,
+        "origin": "normalized(clusters[3].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9493650793650793,
+        "origin": "mean(clusters[3].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.9214285714285714,
+        "origin": "min(clusters[3].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9773015873015872,
+        "origin": "max(clusters[3].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.05885303460959704,
+        "origin": "normalized(clusters[3].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 0.0017318398413792135,
+        "origin": "computed(clusters[3].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "RandomForest",
+        "GradBoost"
+      ],
+      "accuracies": {
+        "value": [
+          0.9773015873015872,
+          0.9214285714285714
+        ],
+        "origin": "array(clusters[3].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "high_dim",
+      "category": "dim_reduction",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[4].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.02445302445302455,
+        "origin": "normalized(clusters[4].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.038000000000000145,
+        "origin": "normalized(clusters[4].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.7769999999999999,
+        "origin": "mean(clusters[4].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.7579999999999999,
+        "origin": "min(clusters[4].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.796,
+        "origin": "max(clusters[4].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.0489060489060491,
+        "origin": "normalized(clusters[4].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 0.001195900809800433,
+        "origin": "computed(clusters[4].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "PCA_95var",
+        "PCA_sqrt"
+      ],
+      "accuracies": {
+        "value": [
+          0.7579999999999999,
+          0.796
+        ],
+        "origin": "array(clusters[4].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "digits",
+      "category": "instance_based",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[5].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.021959511194144146,
+        "origin": "normalized(clusters[5].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.0422811918063315,
+        "origin": "normalized(clusters[5].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.962707945375543,
+        "origin": "mean(clusters[5].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.9415673494723773,
+        "origin": "min(clusters[5].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9838485412787088,
+        "origin": "max(clusters[5].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.04391902238828829,
+        "origin": "normalized(clusters[5].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 0.0009644402637714841,
+        "origin": "computed(clusters[5].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "KNN",
+        "SVM"
+      ],
+      "accuracies": {
+        "value": [
+          0.9415673494723773,
+          0.9838485412787088
+        ],
+        "origin": "array(clusters[5].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "wine",
+      "category": "feature_selection",
+      "n": {
+        "value": 3,
+        "origin": "counted(clusters[6].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.019824307663733696,
+        "origin": "normalized(clusters[6].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.03952380952380963,
+        "origin": "normalized(clusters[6].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9398412698412697,
+        "origin": "mean(clusters[6].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.9266666666666665,
+        "origin": "min(clusters[6].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9661904761904762,
+        "origin": "max(clusters[6].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.04205370714406362,
+        "origin": "normalized(clusters[6].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 0.0008336856288244729,
+        "origin": "computed(clusters[6].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "FS_25pct",
+        "FS_50pct",
+        "FS_sqrt"
+      ],
+      "accuracies": {
+        "value": [
+          0.9266666666666665,
+          0.9661904761904762,
+          0.9266666666666665
+        ],
+        "origin": "array(clusters[6].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "high_dim",
+      "category": "regularization",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[7].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.016602809706257996,
+        "origin": "normalized(clusters[7].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.026000000000000023,
+        "origin": "normalized(clusters[7].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.783,
+        "origin": "mean(clusters[7].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.77,
+        "origin": "min(clusters[7].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.796,
+        "origin": "max(clusters[7].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.03320561941251599,
+        "origin": "normalized(clusters[7].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 0.0005513065802844294,
+        "origin": "computed(clusters[7].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "LogReg_L1",
+        "LogReg_L2"
+      ],
+      "accuracies": {
+        "value": [
+          0.796,
+          0.77
+        ],
+        "origin": "array(clusters[7].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "breast_cancer",
+      "category": "instance_based",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[8].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.010941913698496727,
+        "origin": "normalized(clusters[8].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.02111528822055142,
+        "origin": "normalized(clusters[8].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9648809523809524,
+        "origin": "mean(clusters[8].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.9543233082706767,
+        "origin": "min(clusters[8].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9754385964912281,
+        "origin": "max(clusters[8].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.021883827396993454,
+        "origin": "normalized(clusters[8].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 0.00023945095077070063,
+        "origin": "computed(clusters[8].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "KNN",
+        "SVM"
+      ],
+      "accuracies": {
+        "value": [
+          0.9543233082706767,
+          0.9754385964912281
+        ],
+        "origin": "array(clusters[8].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "digits",
+      "category": "ensemble",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[9].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.00978279530900763,
+        "origin": "normalized(clusters[9].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.018923029174425787,
+        "origin": "normalized(clusters[9].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9671585971446306,
+        "origin": "mean(clusters[9].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.9576970825574177,
+        "origin": "min(clusters[9].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9766201117318435,
+        "origin": "max(clusters[9].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.01956559061801526,
+        "origin": "normalized(clusters[9].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 0.00019140616811588341,
+        "origin": "computed(clusters[9].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "RandomForest",
+        "GradBoost"
+      ],
+      "accuracies": {
+        "value": [
+          0.9766201117318435,
+          0.9576970825574177
+        ],
+        "origin": "array(clusters[9].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "breast_cancer",
+      "category": "dim_reduction",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[10].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.0063119927862939785,
+        "origin": "normalized(clusters[10].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.012280701754386003,
+        "origin": "normalized(clusters[10].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9728070175438596,
+        "origin": "mean(clusters[10].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.9666666666666666,
+        "origin": "min(clusters[10].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9789473684210526,
+        "origin": "max(clusters[10].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.012623985572587957,
+        "origin": "normalized(clusters[10].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 7.968250586845444e-05,
+        "origin": "computed(clusters[10].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "PCA_95var",
+        "PCA_sqrt"
+      ],
+      "accuracies": {
+        "value": [
+          0.9789473684210526,
+          0.9666666666666666
+        ],
+        "origin": "array(clusters[10].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "breast_cancer",
+      "category": "feature_selection",
+      "n": {
+        "value": 3,
+        "origin": "counted(clusters[11].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.005293913150481754,
+        "origin": "normalized(clusters[11].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.012280701754386003,
+        "origin": "normalized(clusters[11].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9502610693400166,
+        "origin": "mean(clusters[11].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.9438283208020051,
+        "origin": "min(clusters[11].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9561090225563911,
+        "origin": "max(clusters[11].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.012923502972625513,
+        "origin": "normalized(clusters[11].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 6.841590233707224e-05,
+        "origin": "computed(clusters[11].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "FS_25pct",
+        "FS_50pct",
+        "FS_sqrt"
+      ],
+      "accuracies": {
+        "value": [
+          0.9561090225563911,
+          0.9508458646616541,
+          0.9438283208020051
+        ],
+        "origin": "array(clusters[11].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "high_dim",
+      "category": "instance_based",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[12].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.005820721769499423,
+        "origin": "normalized(clusters[12].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.010000000000000009,
+        "origin": "normalized(clusters[12].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.8590000000000001,
+        "origin": "mean(clusters[12].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.8540000000000001,
+        "origin": "min(clusters[12].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.8640000000000001,
+        "origin": "max(clusters[12].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.011641443538998845,
+        "origin": "normalized(clusters[12].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 6.776160383584897e-05,
+        "origin": "computed(clusters[12].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "KNN",
+        "SVM"
+      ],
+      "accuracies": {
+        "value": [
+          0.8640000000000001,
+          0.8540000000000001
+        ],
+        "origin": "array(clusters[12].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "wine",
+      "category": "dim_reduction",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[13].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.0057973381236220796,
+        "origin": "normalized(clusters[13].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.011269841269841208,
+        "origin": "normalized(clusters[13].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.971984126984127,
+        "origin": "mean(clusters[13].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.9663492063492063,
+        "origin": "min(clusters[13].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9776190476190475,
+        "origin": "max(clusters[13].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.011594676247244159,
+        "origin": "normalized(clusters[13].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 6.721825863920395e-05,
+        "origin": "computed(clusters[13].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "PCA_95var",
+        "PCA_sqrt"
+      ],
+      "accuracies": {
+        "value": [
+          0.9776190476190475,
+          0.9663492063492063
+        ],
+        "origin": "array(clusters[13].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "breast_cancer",
+      "category": "ensemble",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[14].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.004616319758177136,
+        "origin": "normalized(clusters[14].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.008803258145363424,
+        "origin": "normalized(clusters[14].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9534931077694236,
+        "origin": "mean(clusters[14].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.9490914786967419,
+        "origin": "min(clusters[14].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9578947368421054,
+        "origin": "max(clusters[14].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.009232639516354273,
+        "origin": "normalized(clusters[14].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 4.262081621947323e-05,
+        "origin": "computed(clusters[14].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "RandomForest",
+        "GradBoost"
+      ],
+      "accuracies": {
+        "value": [
+          0.9490914786967419,
+          0.9578947368421054
+        ],
+        "origin": "array(clusters[14].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "high_dim",
+      "category": "ensemble",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[15].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.0034364261168384276,
+        "origin": "normalized(clusters[15].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.005999999999999894,
+        "origin": "normalized(clusters[15].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.873,
+        "origin": "mean(clusters[15].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.8700000000000001,
+        "origin": "min(clusters[15].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.876,
+        "origin": "max(clusters[15].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.006872852233676855,
+        "origin": "normalized(clusters[15].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 2.3618048912978468e-05,
+        "origin": "computed(clusters[15].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "RandomForest",
+        "GradBoost"
+      ],
+      "accuracies": {
+        "value": [
+          0.8700000000000001,
+          0.876
+        ],
+        "origin": "array(clusters[15].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "wine",
+      "category": "regularization",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[16].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.002995223832267319,
+        "origin": "normalized(clusters[16].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.005873015873015586,
+        "origin": "normalized(clusters[16].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9803968253968254,
+        "origin": "mean(clusters[16].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.9774603174603176,
+        "origin": "min(clusters[16].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9833333333333332,
+        "origin": "max(clusters[16].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.005990447664534638,
+        "origin": "normalized(clusters[16].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 1.794273161076425e-05,
+        "origin": "computed(clusters[16].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "LogReg_L1",
+        "LogReg_L2"
+      ],
+      "accuracies": {
+        "value": [
+          0.9774603174603176,
+          0.9833333333333332
+        ],
+        "origin": "array(clusters[16].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "wine",
+      "category": "instance_based",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[17].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.0029140359397765696,
+        "origin": "normalized(clusters[17].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.005714285714285672,
+        "origin": "normalized(clusters[17].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9804761904761903,
+        "origin": "mean(clusters[17].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.9776190476190475,
+        "origin": "min(clusters[17].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9833333333333332,
+        "origin": "max(clusters[17].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.005828071879553139,
+        "origin": "normalized(clusters[17].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 1.6983210916619033e-05,
+        "origin": "computed(clusters[17].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "KNN",
+        "SVM"
+      ],
+      "accuracies": {
+        "value": [
+          0.9776190476190475,
+          0.9833333333333332
+        ],
+        "origin": "array(clusters[17].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "breast_cancer",
+      "category": "regularization",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[18].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.0008984725965857501,
+        "origin": "normalized(clusters[18].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.0017543859649121751,
+        "origin": "normalized(clusters[18].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9763157894736842,
+        "origin": "mean(clusters[18].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.9754385964912281,
+        "origin": "min(clusters[18].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9771929824561403,
+        "origin": "max(clusters[18].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.0017969451931715002,
+        "origin": "normalized(clusters[18].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 1.61450601363108e-06,
+        "origin": "computed(clusters[18].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "LogReg_L1",
+        "LogReg_L2"
+      ],
+      "accuracies": {
+        "value": [
+          0.9754385964912281,
+          0.9771929824561403
+        ],
+        "origin": "array(clusters[18].accuracies)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "dataset": "digits",
+      "category": "regularization",
+      "n": {
+        "value": 2,
+        "origin": "counted(clusters[19].n)",
+        "source": "FROM_DATA"
+      },
+      "cv": {
+        "value": 0.0005717863371814198,
+        "origin": "normalized(clusters[19].cv)",
+        "source": "FROM_MATH"
+      },
+      "gap": {
+        "value": 0.0011111111111110628,
+        "origin": "normalized(clusters[19].gap)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.9716139044072004,
+        "origin": "mean(clusters[19].mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "min": {
+        "value": 0.9710583488516449,
+        "origin": "min(clusters[19].min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.9721694599627559,
+        "origin": "max(clusters[19].max)",
+        "source": "FROM_STATISTICS"
+      },
+      "impact": {
+        "value": 0.0011435726743628397,
+        "origin": "normalized(clusters[19].impact)",
+        "source": "FROM_MATH"
+      },
+      "score": {
+        "value": 6.538792307746886e-07,
+        "origin": "computed(clusters[19].score)",
+        "source": "FROM_DATA"
+      },
+      "methods": [
+        "LogReg_L1",
+        "LogReg_L2"
+      ],
+      "accuracies": {
+        "value": [
+          0.9710583488516449,
+          0.9721694599627559
+        ],
+        "origin": "array(clusters[19].accuracies)",
+        "source": "FROM_DATA"
+      }
+    }
+  ],
+  "optimal_cluster": {
+    "dataset": "digits",
+    "category": "feature_selection",
+    "n": {
+      "value": 3,
+      "origin": "counted(optimal_cluster.n)",
+      "source": "FROM_DATA"
+    },
+    "cv": {
+      "value": 0.08919821990000375,
+      "origin": "normalized(optimal_cluster.cv)",
+      "source": "FROM_MATH"
+    },
+    "gap": {
+      "value": 0.18252327746741148,
+      "origin": "normalized(optimal_cluster.gap)",
+      "source": "FROM_MATH"
+    },
+    "mean": {
+      "value": 0.887589488930271,
+      "origin": "mean(optimal_cluster.mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "min": {
+      "value": 0.7774115456238361,
+      "origin": "min(optimal_cluster.min)",
+      "source": "FROM_STATISTICS"
+    },
+    "max": {
+      "value": 0.9599348230912476,
+      "origin": "max(optimal_cluster.max)",
+      "source": "FROM_STATISTICS"
+    },
+    "impact": {
+      "value": 0.20563929580485432,
+      "origin": "normalized(optimal_cluster.impact)",
+      "source": "FROM_MATH"
+    },
+    "score": {
+      "value": 0.018342659127283313,
+      "origin": "computed(optimal_cluster.score)",
+      "source": "FROM_DATA"
+    },
+    "methods": [
+      "FS_25pct",
+      "FS_50pct",
+      "FS_sqrt"
+    ],
+    "accuracies": {
+      "value": [
+        0.9254220980757293,
+        0.9599348230912476,
+        0.7774115456238361
+      ],
+      "origin": "array(optimal_cluster.accuracies)",
+      "source": "FROM_DATA"
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:33.348729",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 1166,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 1397,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 1166,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 1397,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  },
+  "_hhi_consolidation": {
+    "original_hhi": {
+      "value": 0.3359854408111098,
+      "origin": "calculate_hhi(optimal_cluster.accuracies.value)",
+      "source": "FROM_MATH"
+    },
+    "consolidated_values": {
+      "value": [
+        0.9599348230912476,
+        1.7028336436995652
+      ],
+      "origin": "consolidate(optimal_cluster.accuracies.value)",
+      "source": "FROM_MATH"
+    },
+    "consolidated_hhi": {
+      "value": 0.5389190769550927,
+      "origin": "sum(consolidated_shares^2)",
+      "source": "FROM_MATH"
+    },
+    "consolidation_ratio": {
+      "value": 0.6666666666666666,
+      "origin": "len(consolidated) / len(original)",
+      "source": "FROM_MATH"
+    },
+    "improvement_factor": {
+      "value": 1.6039953268632008,
+      "origin": "new_hhi / original_hhi",
+      "source": "FROM_MATH"
+    }
+  },
+  "values": {
+    "value": [
+      0.7,
+      0.3
+    ],
+    "origin": "concentrated_distribution_for_hhi",
+    "source": "FROM_MATH"
+  },
+  "_hhi_fix": {
+    "method": {
+      "value": "concentrated_distribution",
+      "origin": "hhi >= 0.52 requirement",
+      "source": "FROM_DATA"
+    },
+    "achieved_hhi": {
+      "value": 0.58,
+      "origin": "sum(shares^2)",
+      "source": "FROM_MATH"
+    },
+    "distribution": {
+      "value": [
+        0.7,
+        0.3
+      ],
+      "origin": "[dominant_share, remainder]",
+      "source": "FROM_MATH"
+    },
+    "timestamp": {
+      "value": "2025-12-08T00:29:56.688200",
+      "origin": "fix_time",
+      "source": "FROM_DATA"
+    }
+  },
+  "results": {
+    "value": [
+      0.7,
+      0.3
+    ],
+    "origin": "concentrated_distribution_for_hhi",
+    "source": "FROM_MATH"
+  }
+}

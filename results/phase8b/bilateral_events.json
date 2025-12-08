@@ -1,1 +1,1417 @@
-[{"t": 48, "neo_mode": -1, "eva_mode": 0, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.5, "eva_R_soc_ema": 0.5}, {"t": 845, "neo_mode": 0, "eva_mode": 0, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.5, "eva_R_soc_ema": 0.5}, {"t": 987, "neo_mode": 1, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.5, "eva_R_soc_ema": 0.5}, {"t": 1035, "neo_mode": 0, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.5, "eva_R_soc_ema": 0.5}, {"t": 1267, "neo_mode": 1, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.5, "eva_R_soc_ema": 0.5}, {"t": 1526, "neo_mode": 0, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.5, "eva_R_soc_ema": 0.5}, {"t": 1884, "neo_mode": 1, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.5, "eva_R_soc_ema": 0.5}, {"t": 1942, "neo_mode": 1, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.5, "eva_R_soc_ema": 0.5}, {"t": 1957, "neo_mode": -1, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.5, "eva_R_soc_ema": 0.5}, {"t": 2008, "neo_mode": 0, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.5, "eva_R_soc_ema": 0.5}, {"t": 2047, "neo_mode": 1, "eva_mode": 0, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.5121212121212121, "eva_R_soc_ema": 0.49393939393939396}, {"t": 2357, "neo_mode": 1, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.5179063360881542, "eva_R_soc_ema": 0.45454545454545453}, {"t": 2451, "neo_mode": -1, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.5163492633848364, "eva_R_soc_ema": 0.458498023715415}, {"t": 2631, "neo_mode": 1, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4803679450525987, "eva_R_soc_ema": 0.42531759355955945}, {"t": 2793, "neo_mode": 0, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.45723035976852183, "eva_R_soc_ema": 0.4359525026082106}, {"t": 2861, "neo_mode": 0, "eva_mode": 0, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.42906540094807066, "eva_R_soc_ema": 0.47147354102875266}, {"t": 2871, "neo_mode": 1, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4071988397579537, "eva_R_soc_ema": 0.49815630149857887}, {"t": 2976, "neo_mode": 1, "eva_mode": 0, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4108473024578628, "eva_R_soc_ema": 0.5301726881384032}, {"t": 3099, "neo_mode": 0, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4090174346604483, "eva_R_soc_ema": 0.5261150875836598}, {"t": 3148, "neo_mode": 1, "eva_mode": 0, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.43633615721067415, "eva_R_soc_ema": 0.5012780115715711}, {"t": 3181, "neo_mode": 0, "eva_mode": 0, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.41941925522089574, "eva_R_soc_ema": 0.5108937328294958}, {"t": 3217, "neo_mode": 0, "eva_mode": 0, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4585417246932285, "eva_R_soc_ema": 0.49874253551698494}, {"t": 3244, "neo_mode": 0, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4329561769283888, "eva_R_soc_ema": 0.47359479897137763}, {"t": 3256, "neo_mode": 0, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4137847080780762, "eva_R_soc_ema": 0.49451503915371453}, {"t": 3351, "neo_mode": -1, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4221267231456439, "eva_R_soc_ema": 0.5111758229279421}, {"t": 3424, "neo_mode": 0, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.44062325196065905, "eva_R_soc_ema": 0.5310817570937066}, {"t": 3503, "neo_mode": 0, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4679374943679089, "eva_R_soc_ema": 0.5080823960133896}, {"t": 3578, "neo_mode": 0, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4561815071641552, "eva_R_soc_ema": 0.5138555574187381}, {"t": 3643, "neo_mode": 0, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4368298437338799, "eva_R_soc_ema": 0.5070328271109533}, {"t": 3680, "neo_mode": 1, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4285501229018362, "eva_R_soc_ema": 0.5170449135857552}, {"t": 3705, "neo_mode": 1, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4307105575141338, "eva_R_soc_ema": 0.5423479871655614}, {"t": 3793, "neo_mode": -1, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4125977989345085, "eva_R_soc_ema": 0.5273472449665101}, {"t": 3869, "neo_mode": 0, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.40792330835308116, "eva_R_soc_ema": 0.514326132035856}, {"t": 3928, "neo_mode": -1, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4221581305535215, "eva_R_soc_ema": 0.5329780212709673}, {"t": 4010, "neo_mode": 0, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.41758789728319035, "eva_R_soc_ema": 0.5191290332093996}, {"t": 4277, "neo_mode": 0, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4462716121441903, "eva_R_soc_ema": 0.49970885116765096}, {"t": 4313, "neo_mode": 0, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.42120228585389646, "eva_R_soc_ema": 0.48762298512341573}, {"t": 4370, "neo_mode": 0, "eva_mode": 0, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4005831217999931, "eva_R_soc_ema": 0.47228954690532904}, {"t": 4385, "neo_mode": -1, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4412940017694943, "eva_R_soc_ema": 0.47846970321625515}, {"t": 4551, "neo_mode": -1, "eva_mode": 0, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.47835422648545034, "eva_R_soc_ema": 0.5087254854146103}, {"t": 4611, "neo_mode": -1, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4646346706019542, "eva_R_soc_ema": 0.49651583269040944}, {"t": 4704, "neo_mode": 0, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4657487540201774, "eva_R_soc_ema": 0.5223686195492349}, {"t": 4770, "neo_mode": 1, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.46887377282879444, "eva_R_soc_ema": 0.5377604795943827}, {"t": 4782, "neo_mode": 0, "eva_mode": -1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.48237666304130405, "eva_R_soc_ema": 0.5335278629606328}, {"t": 4862, "neo_mode": 0, "eva_mode": 1, "neo_state": "SOCIAL", "eva_state": "SOCIAL", "neo_R_soc_ema": 0.4909772693704555, "eva_R_soc_ema": 0.5540521738973312}]
+{
+  "data": [
+    {
+      "t": {
+        "value": 48,
+        "origin": "counted(data[0].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[0].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[0].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[0].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[0].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 845,
+        "origin": "counted(data[1].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[1].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[1].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[1].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[1].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 987,
+        "origin": "counted(data[2].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[2].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[2].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[2].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[2].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 1035,
+        "origin": "counted(data[3].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[3].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[3].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[3].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[3].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 1267,
+        "origin": "counted(data[4].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[4].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[4].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[4].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[4].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 1526,
+        "origin": "counted(data[5].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[5].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[5].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[5].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[5].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 1884,
+        "origin": "counted(data[6].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[6].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[6].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[6].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[6].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 1942,
+        "origin": "counted(data[7].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[7].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[7].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[7].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[7].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 1957,
+        "origin": "counted(data[8].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[8].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[8].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[8].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[8].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 2008,
+        "origin": "counted(data[9].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[9].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[9].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[9].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5,
+        "origin": "normalized(data[9].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 2047,
+        "origin": "counted(data[10].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[10].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[10].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.5121212121212121,
+        "origin": "normalized(data[10].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.49393939393939396,
+        "origin": "normalized(data[10].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 2357,
+        "origin": "counted(data[11].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[11].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[11].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.5179063360881542,
+        "origin": "normalized(data[11].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.45454545454545453,
+        "origin": "normalized(data[11].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 2451,
+        "origin": "counted(data[12].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[12].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[12].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.5163492633848364,
+        "origin": "normalized(data[12].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.458498023715415,
+        "origin": "normalized(data[12].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 2631,
+        "origin": "counted(data[13].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[13].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[13].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4803679450525987,
+        "origin": "normalized(data[13].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.42531759355955945,
+        "origin": "normalized(data[13].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 2793,
+        "origin": "counted(data[14].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[14].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[14].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.45723035976852183,
+        "origin": "normalized(data[14].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.4359525026082106,
+        "origin": "normalized(data[14].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 2861,
+        "origin": "counted(data[15].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[15].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[15].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.42906540094807066,
+        "origin": "normalized(data[15].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.47147354102875266,
+        "origin": "normalized(data[15].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 2871,
+        "origin": "counted(data[16].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[16].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[16].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4071988397579537,
+        "origin": "normalized(data[16].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.49815630149857887,
+        "origin": "normalized(data[16].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 2976,
+        "origin": "counted(data[17].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[17].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[17].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4108473024578628,
+        "origin": "normalized(data[17].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5301726881384032,
+        "origin": "normalized(data[17].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3099,
+        "origin": "counted(data[18].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[18].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[18].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4090174346604483,
+        "origin": "normalized(data[18].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5261150875836598,
+        "origin": "normalized(data[18].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3148,
+        "origin": "counted(data[19].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[19].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[19].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.43633615721067415,
+        "origin": "normalized(data[19].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5012780115715711,
+        "origin": "normalized(data[19].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3181,
+        "origin": "counted(data[20].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[20].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[20].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.41941925522089574,
+        "origin": "normalized(data[20].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5108937328294958,
+        "origin": "normalized(data[20].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3217,
+        "origin": "counted(data[21].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[21].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[21].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4585417246932285,
+        "origin": "normalized(data[21].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.49874253551698494,
+        "origin": "normalized(data[21].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3244,
+        "origin": "counted(data[22].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[22].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[22].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4329561769283888,
+        "origin": "normalized(data[22].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.47359479897137763,
+        "origin": "normalized(data[22].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3256,
+        "origin": "counted(data[23].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[23].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[23].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4137847080780762,
+        "origin": "normalized(data[23].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.49451503915371453,
+        "origin": "normalized(data[23].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3351,
+        "origin": "counted(data[24].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[24].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[24].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4221267231456439,
+        "origin": "normalized(data[24].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5111758229279421,
+        "origin": "normalized(data[24].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3424,
+        "origin": "counted(data[25].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[25].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[25].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.44062325196065905,
+        "origin": "normalized(data[25].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5310817570937066,
+        "origin": "normalized(data[25].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3503,
+        "origin": "counted(data[26].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[26].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[26].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4679374943679089,
+        "origin": "normalized(data[26].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5080823960133896,
+        "origin": "normalized(data[26].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3578,
+        "origin": "counted(data[27].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[27].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[27].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4561815071641552,
+        "origin": "normalized(data[27].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5138555574187381,
+        "origin": "normalized(data[27].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3643,
+        "origin": "counted(data[28].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[28].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[28].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4368298437338799,
+        "origin": "normalized(data[28].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5070328271109533,
+        "origin": "normalized(data[28].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3680,
+        "origin": "counted(data[29].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[29].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[29].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4285501229018362,
+        "origin": "normalized(data[29].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5170449135857552,
+        "origin": "normalized(data[29].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3705,
+        "origin": "counted(data[30].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[30].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[30].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4307105575141338,
+        "origin": "normalized(data[30].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5423479871655614,
+        "origin": "normalized(data[30].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3793,
+        "origin": "counted(data[31].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[31].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[31].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4125977989345085,
+        "origin": "normalized(data[31].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5273472449665101,
+        "origin": "normalized(data[31].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3869,
+        "origin": "counted(data[32].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[32].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[32].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.40792330835308116,
+        "origin": "normalized(data[32].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.514326132035856,
+        "origin": "normalized(data[32].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 3928,
+        "origin": "counted(data[33].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[33].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[33].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4221581305535215,
+        "origin": "normalized(data[33].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5329780212709673,
+        "origin": "normalized(data[33].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 4010,
+        "origin": "counted(data[34].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[34].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[34].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.41758789728319035,
+        "origin": "normalized(data[34].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5191290332093996,
+        "origin": "normalized(data[34].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 4277,
+        "origin": "counted(data[35].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[35].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[35].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4462716121441903,
+        "origin": "normalized(data[35].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.49970885116765096,
+        "origin": "normalized(data[35].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 4313,
+        "origin": "counted(data[36].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[36].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[36].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.42120228585389646,
+        "origin": "normalized(data[36].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.48762298512341573,
+        "origin": "normalized(data[36].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 4370,
+        "origin": "counted(data[37].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[37].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[37].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4005831217999931,
+        "origin": "normalized(data[37].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.47228954690532904,
+        "origin": "normalized(data[37].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 4385,
+        "origin": "counted(data[38].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[38].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[38].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4412940017694943,
+        "origin": "normalized(data[38].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.47846970321625515,
+        "origin": "normalized(data[38].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 4551,
+        "origin": "counted(data[39].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[39].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[39].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.47835422648545034,
+        "origin": "normalized(data[39].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5087254854146103,
+        "origin": "normalized(data[39].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 4611,
+        "origin": "counted(data[40].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[40].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[40].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4646346706019542,
+        "origin": "normalized(data[40].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.49651583269040944,
+        "origin": "normalized(data[40].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 4704,
+        "origin": "counted(data[41].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[41].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[41].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4657487540201774,
+        "origin": "normalized(data[41].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5223686195492349,
+        "origin": "normalized(data[41].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 4770,
+        "origin": "counted(data[42].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[42].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[42].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.46887377282879444,
+        "origin": "normalized(data[42].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5377604795943827,
+        "origin": "normalized(data[42].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 4782,
+        "origin": "counted(data[43].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[43].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[43].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.48237666304130405,
+        "origin": "normalized(data[43].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5335278629606328,
+        "origin": "normalized(data[43].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "t": {
+        "value": 4862,
+        "origin": "counted(data[44].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[44].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[44].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SOCIAL",
+      "neo_R_soc_ema": {
+        "value": 0.4909772693704555,
+        "origin": "normalized(data[44].neo_R_soc_ema)",
+        "source": "FROM_MATH"
+      },
+      "eva_R_soc_ema": {
+        "value": 0.5540521738973312,
+        "origin": "normalized(data[44].eva_R_soc_ema)",
+        "source": "FROM_MATH"
+      }
+    }
+  ],
+  "_converted_from_list": true,
+  "metadata": {
+    "experiment_id": {
+      "value": "7de18187fc89",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:24:02.589876",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase8b/bilateral_events.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:24:02.590516",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 488,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 587,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 488,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 587,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
+}

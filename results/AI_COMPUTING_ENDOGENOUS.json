@@ -1,0 +1,2186 @@
+{
+  "metadata": {
+    "source": "GitHub API",
+    "type": "IA Y COMPUTACI\u00d3N",
+    "norma_dura": true,
+    "timestamp": "2025-12-07T17:25:27.196130"
+  },
+  "fields": [
+    "artificial intelligence",
+    "machine learning",
+    "deep learning",
+    "neural network",
+    "computer vision",
+    "natural language processing",
+    "reinforcement learning",
+    "transformer",
+    "GPT",
+    "LLM",
+    "diffusion model",
+    "generative AI",
+    "robotics AI",
+    "autonomous systems",
+    "edge computing",
+    "quantum computing",
+    "distributed computing",
+    "parallel computing",
+    "GPU computing",
+    "high performance computing",
+    "cloud computing",
+    "serverless",
+    "MLOps",
+    "AutoML",
+    "federated learning"
+  ],
+  "results": [
+    {
+      "field": "artificial intelligence",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "roadmap",
+      "concentration": {
+        "value": 9.999999995,
+        "origin": "(4/2)/(4/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575051662,
+        "origin": "std(27.3861)/mean(50.0000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "AMAI-GmbH/AI-Expert-Roadmap",
+        "feder-cr/Jobs_Applier_AI_Agent_AIHawk"
+      ]
+    },
+    {
+      "field": "machine learning",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "framework for",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "(2/2)/(2/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": {
+        "value": 0.02564102564102564,
+        "origin": "std(2.5000)/mean(97.5000)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5461186812727502,
+        "origin": "std(25.9406)/mean(47.5000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.5204776556317245,
+        "origin": "cv_without(0.5461) - cv_with(0.0256)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 2,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "tensorflow/tensorflow",
+        "huggingface/transformers"
+      ]
+    },
+    {
+      "field": "deep learning",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "side",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "(2/2)/(2/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575051662,
+        "origin": "std(27.3861)/mean(50.0000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "labmlai/annotated_deep_learning_paper_implementations",
+        "keras-team/keras"
+      ]
+    },
+    {
+      "field": "neural network",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "numpy",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "(2/2)/(2/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": {
+        "value": 0.02564102564102564,
+        "origin": "std(2.5000)/mean(97.5000)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5461186812727502,
+        "origin": "std(25.9406)/mean(47.5000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.5204776556317245,
+        "origin": "cv_without(0.5461) - cv_with(0.0256)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 2,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "pytorch/pytorch",
+        "lutzroeder/netron"
+      ]
+    },
+    {
+      "field": "computer vision",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "plus",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "(2/2)/(2/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575051662,
+        "origin": "std(27.3861)/mean(50.0000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "opencv/opencv",
+        "roboflow/supervision"
+      ]
+    },
+    {
+      "field": "natural language processing",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "ner",
+      "concentration": {
+        "value": 9.999999995,
+        "origin": "(4/2)/(4/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575051662,
+        "origin": "std(27.3861)/mean(50.0000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "fighting41love/funNLP",
+        "hankcs/HanLP"
+      ]
+    },
+    {
+      "field": "reinforcement learning",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "deepseek",
+      "concentration": {
+        "value": 9.999999993333333,
+        "origin": "(3/2)/(3/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300149901,
+        "origin": "std(27.8376)/mean(50.2632)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "labmlai/annotated_deep_learning_paper_implementations",
+        "unslothai/unsloth"
+      ]
+    },
+    {
+      "field": "transformer",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "ner",
+      "concentration": {
+        "value": 9.999999995,
+        "origin": "(4/2)/(4/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300149901,
+        "origin": "std(27.8376)/mean(50.2632)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "huggingface/transformers",
+        "fighting41love/funNLP"
+      ]
+    },
+    {
+      "field": "GPT",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "autogpt",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "(2/2)/(2/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575051662,
+        "origin": "std(27.3861)/mean(50.0000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "Significant-Gravitas/AutoGPT",
+        "ollama/ollama"
+      ]
+    },
+    {
+      "field": "LLM",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "deepseek gemma",
+      "concentration": {
+        "value": 9.999999993333333,
+        "origin": "(3/2)/(3/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": {
+        "value": 0.02564102564102564,
+        "origin": "std(2.5000)/mean(97.5000)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5461186812727502,
+        "origin": "std(25.9406)/mean(47.5000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.5204776556317245,
+        "origin": "cv_without(0.5461) - cv_with(0.0256)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 2,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "ollama/ollama",
+        "huggingface/transformers"
+      ]
+    },
+    {
+      "field": "diffusion model",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "comfyui",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "(2/2)/(2/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575051662,
+        "origin": "std(27.3861)/mean(50.0000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "comfyanonymous/ComfyUI",
+        "CompVis/stable-diffusion"
+      ]
+    },
+    {
+      "field": "generative AI",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "beginners",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "(2/2)/(2/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575051662,
+        "origin": "std(27.3861)/mean(50.0000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "microsoft/generative-ai-for-beginners",
+        "Genesis-Embodied-AI/Genesis"
+      ]
+    },
+    {
+      "field": "robotics AI",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "audio",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "(2/2)/(2/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575051662,
+        "origin": "std(27.3861)/mean(50.0000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "mudler/LocalAI",
+        "Genesis-Embodied-AI/Genesis"
+      ]
+    },
+    {
+      "field": "autonomous systems",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "darc",
+      "concentration": {
+        "value": 9.999999993333333,
+        "origin": "(3/2)/(3/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5438158485032717,
+        "origin": "std(27.4770)/mean(50.5263)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "ruvnet/claude-flow",
+        "Project-DARC/DARC"
+      ]
+    },
+    {
+      "field": "edge computing",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "cncf",
+      "concentration": {
+        "value": 9.999999993333333,
+        "origin": "(3/2)/(3/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": {
+        "value": 0.02564102564102564,
+        "origin": "std(2.5000)/mean(97.5000)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5340802737246373,
+        "origin": "std(25.6655)/mean(48.0556)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.5084392480836116,
+        "origin": "cv_without(0.5341) - cv_with(0.0256)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 2,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "kubeedge/kubeedge",
+        "wasmCloud/wasmCloud"
+      ]
+    },
+    {
+      "field": "quantum computing",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "awesome",
+      "concentration": {
+        "value": 9.999999995,
+        "origin": "(4/2)/(4/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5447627860413701,
+        "origin": "std(27.5249)/mean(50.5263)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "microsoft/QuantumKatas",
+        "desireevl/awesome-quantum-computing"
+      ]
+    },
+    {
+      "field": "distributed computing",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "job",
+      "concentration": {
+        "value": 9.999999993333333,
+        "origin": "(3/2)/(3/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300149901,
+        "origin": "std(27.8376)/mean(50.2632)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "ray-project/ray",
+        "PowerJob/PowerJob"
+      ]
+    },
+    {
+      "field": "parallel computing",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "ray",
+      "concentration": {
+        "value": 9.999999996,
+        "origin": "(5/2)/(5/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575051662,
+        "origin": "std(27.3861)/mean(50.0000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "ray-project/ray",
+        "sogou/workflow"
+      ]
+    },
+    {
+      "field": "GPU computing",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "skypilot",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "(2/2)/(2/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575051662,
+        "origin": "std(27.3861)/mean(50.0000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "skypilot-org/skypilot",
+        "NVIDIA/warp"
+      ]
+    },
+    {
+      "field": "high performance computing",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "moltenvk",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "(2/2)/(2/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5385803588495555,
+        "origin": "std(27.0707)/mean(50.2632)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "KhronosGroup/MoltenVK",
+        "jofpin/turbit"
+      ]
+    },
+    {
+      "field": "cloud computing",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "ckad",
+      "concentration": {
+        "value": 9.999999993333333,
+        "origin": "(3/2)/(3/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300149901,
+        "origin": "std(27.8376)/mean(50.2632)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "ubicloud/ubicloud",
+        "dgkanatsios/CKAD-exercises"
+      ]
+    },
+    {
+      "field": "serverless",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "readme",
+      "concentration": {
+        "value": 9.999999995,
+        "origin": "(4/2)/(4/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5477225575051662,
+        "origin": "std(27.3861)/mean(50.0000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "anuraghazra/github-readme-stats",
+        "localstack/localstack"
+      ]
+    },
+    {
+      "field": "MLOps",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "airflow apache",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "(2/2)/(2/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300149901,
+        "origin": "std(27.8376)/mean(50.2632)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "GokuMohandas/Made-With-ML",
+        "apache/airflow"
+      ]
+    },
+    {
+      "field": "AutoML",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "compression",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "(2/2)/(2/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300149901,
+        "origin": "std(27.8376)/mean(50.2632)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "lukasmasuch/best-of-ml-python",
+        "microsoft/nni"
+      ]
+    },
+    {
+      "field": "federated learning",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "training",
+      "concentration": {
+        "value": 9.999999993333333,
+        "origin": "(3/2)/(3/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": null,
+      "cv_without": {
+        "value": 0.5538366300149901,
+        "origin": "std(27.8376)/mean(50.2632)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": null,
+      "n_with": {
+        "value": 1,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 19,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "FederatedAI/FATE",
+        "FedML-AI/FedML"
+      ]
+    }
+  ],
+  "map": [
+    {
+      "field": "machine learning",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "framework for",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "(2/2)/(2/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": {
+        "value": 0.02564102564102564,
+        "origin": "std(2.5000)/mean(97.5000)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5461186812727502,
+        "origin": "std(25.9406)/mean(47.5000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.5204776556317245,
+        "origin": "cv_without(0.5461) - cv_with(0.0256)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 2,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "tensorflow/tensorflow",
+        "huggingface/transformers"
+      ]
+    },
+    {
+      "field": "neural network",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "numpy",
+      "concentration": {
+        "value": 9.99999999,
+        "origin": "(2/2)/(2/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": {
+        "value": 0.02564102564102564,
+        "origin": "std(2.5000)/mean(97.5000)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5461186812727502,
+        "origin": "std(25.9406)/mean(47.5000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.5204776556317245,
+        "origin": "cv_without(0.5461) - cv_with(0.0256)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 2,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "pytorch/pytorch",
+        "lutzroeder/netron"
+      ]
+    },
+    {
+      "field": "LLM",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "deepseek gemma",
+      "concentration": {
+        "value": 9.999999993333333,
+        "origin": "(3/2)/(3/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": {
+        "value": 0.02564102564102564,
+        "origin": "std(2.5000)/mean(97.5000)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5461186812727502,
+        "origin": "std(25.9406)/mean(47.5000)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.5204776556317245,
+        "origin": "cv_without(0.5461) - cv_with(0.0256)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 2,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "ollama/ollama",
+        "huggingface/transformers"
+      ]
+    },
+    {
+      "field": "edge computing",
+      "n_repos": {
+        "value": 20,
+        "origin": "len(repos)",
+        "source": "FROM_DATA"
+      },
+      "n_top": {
+        "value": 2,
+        "origin": "len(top_repos)",
+        "source": "FROM_DATA"
+      },
+      "threshold": {
+        "value": 90.5,
+        "origin": "np.percentile(performances, 90)",
+        "source": "FROM_STATISTICS"
+      },
+      "dominant_ngram": "cncf",
+      "concentration": {
+        "value": 9.999999993333333,
+        "origin": "(3/2)/(3/20)",
+        "source": "FROM_MATH"
+      },
+      "cv_with": {
+        "value": 0.02564102564102564,
+        "origin": "std(2.5000)/mean(97.5000)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.5340802737246373,
+        "origin": "std(25.6655)/mean(48.0556)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.5084392480836116,
+        "origin": "cv_without(0.5341) - cv_with(0.0256)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 2,
+        "origin": "len(with_ngram)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18,
+        "origin": "len(without_ngram)",
+        "source": "FROM_DATA"
+      },
+      "top_repos": [
+        "kubeedge/kubeedge",
+        "wasmCloud/wasmCloud"
+      ]
+    }
+  ],
+  "ngram_summary": [
+    {
+      "ngram": "framework for",
+      "avg_cv_reduction": {
+        "value": 0.5204776556317245,
+        "origin": "mean([np.float64(0.5204776556317245)])",
+        "source": "FROM_STATISTICS"
+      },
+      "n_fields": {
+        "value": 1,
+        "origin": "len(effects)",
+        "source": "FROM_DATA"
+      },
+      "total_effect": {
+        "value": 0.5204776556317245,
+        "origin": "sum([np.float64(0.5204776556317245)])",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "ngram": "numpy",
+      "avg_cv_reduction": {
+        "value": 0.5204776556317245,
+        "origin": "mean([np.float64(0.5204776556317245)])",
+        "source": "FROM_STATISTICS"
+      },
+      "n_fields": {
+        "value": 1,
+        "origin": "len(effects)",
+        "source": "FROM_DATA"
+      },
+      "total_effect": {
+        "value": 0.5204776556317245,
+        "origin": "sum([np.float64(0.5204776556317245)])",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "ngram": "deepseek gemma",
+      "avg_cv_reduction": {
+        "value": 0.5204776556317245,
+        "origin": "mean([np.float64(0.5204776556317245)])",
+        "source": "FROM_STATISTICS"
+      },
+      "n_fields": {
+        "value": 1,
+        "origin": "len(effects)",
+        "source": "FROM_DATA"
+      },
+      "total_effect": {
+        "value": 0.5204776556317245,
+        "origin": "sum([np.float64(0.5204776556317245)])",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "ngram": "cncf",
+      "avg_cv_reduction": {
+        "value": 0.5084392480836116,
+        "origin": "mean([np.float64(0.5084392480836116)])",
+        "source": "FROM_STATISTICS"
+      },
+      "n_fields": {
+        "value": 1,
+        "origin": "len(effects)",
+        "source": "FROM_DATA"
+      },
+      "total_effect": {
+        "value": 0.5084392480836116,
+        "origin": "sum([np.float64(0.5084392480836116)])",
+        "source": "FROM_MATH"
+      }
+    }
+  ],
+  "dominant_factor": {
+    "ngram": "framework for",
+    "avg_cv_reduction": {
+      "value": 0.5204776556317245,
+      "origin": "mean([np.float64(0.5204776556317245)])",
+      "source": "FROM_STATISTICS"
+    },
+    "n_fields": {
+      "value": 1,
+      "origin": "len(effects)",
+      "source": "FROM_DATA"
+    },
+    "total_effect": {
+      "value": 0.5204776556317245,
+      "origin": "sum([np.float64(0.5204776556317245)])",
+      "source": "FROM_MATH"
+    }
+  },
+  "audit_log": [
+    {
+      "step": "discover_fields",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "source": "GitHub API"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:23.336983"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:23.873526"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:23.873816"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:23.873824"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:26.464505"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:26.464724"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:26.464733"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:28.944908"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:28.945131"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:28.945140"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:31.414045"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:31.414259"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:31.414267"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:34.000492"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:34.000722"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:34.000731"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:36.579370"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:36.579581"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:20:36.579589"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:39.159093"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:39.159308"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:39.159317"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:41.641944"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:41.642191"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:41.642200"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:44.198859"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:44.199076"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:44.199084"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:46.720335"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:46.720550"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:46.720558"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:49.188507"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:49.188723"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:49.188731"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:51.729176"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:51.729393"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:21:51.729400"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:22:54.300351"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:22:54.300564"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:22:54.300572"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:22:56.781805"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:22:56.782026"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:22:56.782033"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:22:59.217894"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:22:59.218110"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:22:59.218118"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:23:01.870889"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:23:01.871114"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:23:01.871123"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:23:04.393631"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:23:04.393845"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:23:04.393853"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:23:06.857728"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:23:06.857944"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:23:06.857951"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:09.445029"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:09.445260"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:09.445268"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:12.019120"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:12.019335"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:12.019342"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:14.739904"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:14.740155"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:14.740164"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:17.394316"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:17.394532"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:17.394539"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:19.917822"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:19.918051"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:19.918060"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:22.528809"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:22.529031"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:24:22.529038"
+    },
+    {
+      "step": "calculate_percentile",
+      "details": {
+        "decision_origin": "FROM_MATH",
+        "formula": "rank/n*100"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:25:25.193065"
+    },
+    {
+      "step": "threshold_p90",
+      "details": {
+        "decision_origin": "FROM_STATISTICS",
+        "value": 90.5
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:25:25.193279"
+    },
+    {
+      "step": "find_dominant_ngram",
+      "details": {
+        "decision_origin": "FROM_DATA",
+        "method": "max(concentration)"
+      },
+      "human_intervention": false,
+      "timestamp": "2025-12-07T17:25:25.193286"
+    }
+  ]
+}

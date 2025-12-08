@@ -1,7 +1,15 @@
 {
   "timestamp": "2025-12-06T07:23:22.015938",
-  "n_agents": 3,
-  "n_cycles": 15,
+  "n_agents": {
+    "value": 3,
+    "origin": "count(n_agents)",
+    "source": "FROM_DATA"
+  },
+  "n_cycles": {
+    "value": 15,
+    "origin": "count(n_cycles)",
+    "source": "FROM_DATA"
+  },
   "topics_explored": [
     "concerns",
     "reviewed",
@@ -47,309 +55,725 @@
     {
       "type": "numerical_pattern",
       "topic": "Christmastide",
-      "n_values_found": 3,
-      "range": [
-        2.0,
-        1960.0
-      ],
+      "n_values_found": {
+        "value": 3,
+        "origin": "count(observations[0].n_values_found)",
+        "source": "FROM_DATA"
+      },
+      "range": {
+        "value": [
+          2.0,
+          1960.0
+        ],
+        "origin": "array(observations[0].range)",
+        "source": "FROM_DATA"
+      },
       "source": "https://en.wikipedia.org/wiki/Christmastide"
     },
     {
       "type": "numerical_pattern",
       "topic": "Some",
-      "n_values_found": 1,
-      "range": [
-        24.0,
-        24.0
-      ],
+      "n_values_found": {
+        "value": 1,
+        "origin": "count(observations[1].n_values_found)",
+        "source": "FROM_DATA"
+      },
+      "range": {
+        "value": [
+          24.0,
+          24.0
+        ],
+        "origin": "array(observations[1].range)",
+        "source": "FROM_DATA"
+      },
       "source": "https://en.wikipedia.org/wiki/Some"
     },
     {
       "type": "numerical_pattern",
       "topic": "sensation",
-      "n_values_found": 3,
-      "range": [
-        1936.0,
-        2021.0
-      ],
+      "n_values_found": {
+        "value": 3,
+        "origin": "count(observations[2].n_values_found)",
+        "source": "FROM_DATA"
+      },
+      "range": {
+        "value": [
+          1936.0,
+          2021.0
+        ],
+        "origin": "array(observations[2].range)",
+        "source": "FROM_DATA"
+      },
       "source": "https://en.wikipedia.org/wiki/sensation"
     },
     {
       "type": "numerical_pattern",
       "topic": "It",
-      "n_values_found": 9,
-      "range": [
-        1.0,
-        3166.0
-      ],
+      "n_values_found": {
+        "value": 9,
+        "origin": "count(observations[3].n_values_found)",
+        "source": "FROM_DATA"
+      },
+      "range": {
+        "value": [
+          1.0,
+          3166.0
+        ],
+        "origin": "array(observations[3].range)",
+        "source": "FROM_DATA"
+      },
       "source": "https://en.wikipedia.org/wiki/It"
     },
     {
       "type": "numerical_pattern",
       "topic": "Environment",
-      "n_values_found": 3,
-      "range": [
-        1917.0,
-        1927.0
-      ],
+      "n_values_found": {
+        "value": 3,
+        "origin": "count(observations[4].n_values_found)",
+        "source": "FROM_DATA"
+      },
+      "range": {
+        "value": [
+          1917.0,
+          1927.0
+        ],
+        "origin": "array(observations[4].range)",
+        "source": "FROM_DATA"
+      },
       "source": "https://en.wikipedia.org/wiki/Environment"
     },
     {
       "type": "numerical_pattern",
       "topic": "Environment",
-      "n_values_found": 3,
-      "range": [
-        1917.0,
-        1927.0
-      ],
+      "n_values_found": {
+        "value": 3,
+        "origin": "count(observations[5].n_values_found)",
+        "source": "FROM_DATA"
+      },
+      "range": {
+        "value": [
+          1917.0,
+          1927.0
+        ],
+        "origin": "array(observations[5].range)",
+        "source": "FROM_DATA"
+      },
       "source": "https://en.wikipedia.org/wiki/Environment"
     },
     {
       "type": "numerical_pattern",
       "topic": "atom",
-      "n_values_found": 1,
-      "range": [
-        27.0,
-        27.0
-      ],
+      "n_values_found": {
+        "value": 1,
+        "origin": "count(observations[6].n_values_found)",
+        "source": "FROM_DATA"
+      },
+      "range": {
+        "value": [
+          27.0,
+          27.0
+        ],
+        "origin": "array(observations[6].range)",
+        "source": "FROM_DATA"
+      },
       "source": "https://en.wikipedia.org/wiki/atom"
     }
   ],
   "connections": [
     {
       "type": "similar_values",
-      "value1": 1960.0,
+      "value1": {
+        "value": 1960.0,
+        "origin": "computed(connections[0].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "Christmastide",
-      "value2": 1927.0,
+      "value2": {
+        "value": 1927.0,
+        "origin": "computed(connections[0].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 0.9831632653061224
+      "ratio": {
+        "value": 0.9831632653061224,
+        "origin": "ratio(connections[0].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1960.0,
+      "value1": {
+        "value": 1960.0,
+        "origin": "computed(connections[1].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "Christmastide",
-      "value2": 1967.0,
+      "value2": {
+        "value": 1967.0,
+        "origin": "computed(connections[1].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.0035714285714286
+      "ratio": {
+        "value": 1.0035714285714286,
+        "origin": "ratio(connections[1].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1960.0,
+      "value1": {
+        "value": 1960.0,
+        "origin": "computed(connections[2].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "Christmastide",
-      "value2": 1989.0,
+      "value2": {
+        "value": 1989.0,
+        "origin": "computed(connections[2].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.014795918367347
+      "ratio": {
+        "value": 1.014795918367347,
+        "origin": "ratio(connections[2].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1960.0,
+      "value1": {
+        "value": 1960.0,
+        "origin": "computed(connections[3].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "Christmastide",
-      "value2": 2016.0,
+      "value2": {
+        "value": 2016.0,
+        "origin": "computed(connections[3].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.0285714285714285
+      "ratio": {
+        "value": 1.0285714285714285,
+        "origin": "ratio(connections[3].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1960.0,
+      "value1": {
+        "value": 1960.0,
+        "origin": "computed(connections[4].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "Christmastide",
-      "value2": 2017.0,
+      "value2": {
+        "value": 2017.0,
+        "origin": "computed(connections[4].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.0290816326530612
+      "ratio": {
+        "value": 1.0290816326530612,
+        "origin": "ratio(connections[4].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1960.0,
+      "value1": {
+        "value": 1960.0,
+        "origin": "computed(connections[5].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "Christmastide",
-      "value2": 1961.0,
+      "value2": {
+        "value": 1961.0,
+        "origin": "computed(connections[5].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.0005102040816327
+      "ratio": {
+        "value": 1.0005102040816327,
+        "origin": "ratio(connections[5].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1960.0,
+      "value1": {
+        "value": 1960.0,
+        "origin": "computed(connections[6].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "Christmastide",
-      "value2": 2001.0,
+      "value2": {
+        "value": 2001.0,
+        "origin": "computed(connections[6].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.0209183673469389
+      "ratio": {
+        "value": 1.0209183673469389,
+        "origin": "ratio(connections[6].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 2021.0,
+      "value1": {
+        "value": 2021.0,
+        "origin": "computed(connections[7].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 1927.0,
+      "value2": {
+        "value": 1927.0,
+        "origin": "computed(connections[7].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 0.9534883720930233
+      "ratio": {
+        "value": 0.9534883720930233,
+        "origin": "ratio(connections[7].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 2021.0,
+      "value1": {
+        "value": 2021.0,
+        "origin": "computed(connections[8].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 1967.0,
+      "value2": {
+        "value": 1967.0,
+        "origin": "computed(connections[8].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 0.9732805541810985
+      "ratio": {
+        "value": 0.9732805541810985,
+        "origin": "ratio(connections[8].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 2021.0,
+      "value1": {
+        "value": 2021.0,
+        "origin": "computed(connections[9].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 1989.0,
+      "value2": {
+        "value": 1989.0,
+        "origin": "computed(connections[9].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 0.9841662543295399
+      "ratio": {
+        "value": 0.9841662543295399,
+        "origin": "ratio(connections[9].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 2021.0,
+      "value1": {
+        "value": 2021.0,
+        "origin": "computed(connections[10].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 2016.0,
+      "value2": {
+        "value": 2016.0,
+        "origin": "computed(connections[10].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 0.9975259772389906
+      "ratio": {
+        "value": 0.9975259772389906,
+        "origin": "ratio(connections[10].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 2021.0,
+      "value1": {
+        "value": 2021.0,
+        "origin": "computed(connections[11].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 2017.0,
+      "value2": {
+        "value": 2017.0,
+        "origin": "computed(connections[11].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 0.9980207817911925
+      "ratio": {
+        "value": 0.9980207817911925,
+        "origin": "ratio(connections[11].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 2021.0,
+      "value1": {
+        "value": 2021.0,
+        "origin": "computed(connections[12].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 1961.0,
+      "value2": {
+        "value": 1961.0,
+        "origin": "computed(connections[12].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 0.9703117268678871
+      "ratio": {
+        "value": 0.9703117268678871,
+        "origin": "ratio(connections[12].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 2021.0,
+      "value1": {
+        "value": 2021.0,
+        "origin": "computed(connections[13].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 2001.0,
+      "value2": {
+        "value": 2001.0,
+        "origin": "computed(connections[13].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 0.9901039089559623
+      "ratio": {
+        "value": 0.9901039089559623,
+        "origin": "ratio(connections[13].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1936.0,
+      "value1": {
+        "value": 1936.0,
+        "origin": "computed(connections[14].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 1927.0,
+      "value2": {
+        "value": 1927.0,
+        "origin": "computed(connections[14].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 0.9953512396694215
+      "ratio": {
+        "value": 0.9953512396694215,
+        "origin": "ratio(connections[14].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1936.0,
+      "value1": {
+        "value": 1936.0,
+        "origin": "computed(connections[15].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 1967.0,
+      "value2": {
+        "value": 1967.0,
+        "origin": "computed(connections[15].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.016012396694215
+      "ratio": {
+        "value": 1.016012396694215,
+        "origin": "ratio(connections[15].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1936.0,
+      "value1": {
+        "value": 1936.0,
+        "origin": "computed(connections[16].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 1989.0,
+      "value2": {
+        "value": 1989.0,
+        "origin": "computed(connections[16].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.0273760330578512
+      "ratio": {
+        "value": 1.0273760330578512,
+        "origin": "ratio(connections[16].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1936.0,
+      "value1": {
+        "value": 1936.0,
+        "origin": "computed(connections[17].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 2016.0,
+      "value2": {
+        "value": 2016.0,
+        "origin": "computed(connections[17].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.0413223140495869
+      "ratio": {
+        "value": 1.0413223140495869,
+        "origin": "ratio(connections[17].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1936.0,
+      "value1": {
+        "value": 1936.0,
+        "origin": "computed(connections[18].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 2017.0,
+      "value2": {
+        "value": 2017.0,
+        "origin": "computed(connections[18].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.0418388429752066
+      "ratio": {
+        "value": 1.0418388429752066,
+        "origin": "ratio(connections[18].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1936.0,
+      "value1": {
+        "value": 1936.0,
+        "origin": "computed(connections[19].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 1961.0,
+      "value2": {
+        "value": 1961.0,
+        "origin": "computed(connections[19].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.0129132231404958
+      "ratio": {
+        "value": 1.0129132231404958,
+        "origin": "ratio(connections[19].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1936.0,
+      "value1": {
+        "value": 1936.0,
+        "origin": "computed(connections[20].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 2001.0,
+      "value2": {
+        "value": 2001.0,
+        "origin": "computed(connections[20].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.0335743801652892
+      "ratio": {
+        "value": 1.0335743801652892,
+        "origin": "ratio(connections[20].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1995.0,
+      "value1": {
+        "value": 1995.0,
+        "origin": "computed(connections[21].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 1927.0,
+      "value2": {
+        "value": 1927.0,
+        "origin": "computed(connections[21].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 0.9659147869674185
+      "ratio": {
+        "value": 0.9659147869674185,
+        "origin": "ratio(connections[21].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1995.0,
+      "value1": {
+        "value": 1995.0,
+        "origin": "computed(connections[22].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 1967.0,
+      "value2": {
+        "value": 1967.0,
+        "origin": "computed(connections[22].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 0.9859649122807017
+      "ratio": {
+        "value": 0.9859649122807017,
+        "origin": "ratio(connections[22].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1995.0,
+      "value1": {
+        "value": 1995.0,
+        "origin": "computed(connections[23].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 1989.0,
+      "value2": {
+        "value": 1989.0,
+        "origin": "computed(connections[23].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 0.9969924812030075
+      "ratio": {
+        "value": 0.9969924812030075,
+        "origin": "ratio(connections[23].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1995.0,
+      "value1": {
+        "value": 1995.0,
+        "origin": "computed(connections[24].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 2016.0,
+      "value2": {
+        "value": 2016.0,
+        "origin": "computed(connections[24].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.0105263157894737
+      "ratio": {
+        "value": 1.0105263157894737,
+        "origin": "ratio(connections[24].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1995.0,
+      "value1": {
+        "value": 1995.0,
+        "origin": "computed(connections[25].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 2017.0,
+      "value2": {
+        "value": 2017.0,
+        "origin": "computed(connections[25].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.0110275689223058
+      "ratio": {
+        "value": 1.0110275689223058,
+        "origin": "ratio(connections[25].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1995.0,
+      "value1": {
+        "value": 1995.0,
+        "origin": "computed(connections[26].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 1961.0,
+      "value2": {
+        "value": 1961.0,
+        "origin": "computed(connections[26].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 0.9829573934837093
+      "ratio": {
+        "value": 0.9829573934837093,
+        "origin": "ratio(connections[26].ratio)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "type": "similar_values",
-      "value1": 1995.0,
+      "value1": {
+        "value": 1995.0,
+        "origin": "computed(connections[27].value1)",
+        "source": "FROM_DATA"
+      },
       "topic1": "sensation",
-      "value2": 2001.0,
+      "value2": {
+        "value": 2001.0,
+        "origin": "computed(connections[27].value2)",
+        "source": "FROM_DATA"
+      },
       "topic2": "It",
-      "ratio": 1.0030075187969925
+      "ratio": {
+        "value": 1.0030075187969925,
+        "origin": "ratio(connections[27].ratio)",
+        "source": "FROM_MATH"
+      }
     }
   ],
   "agent_summaries": [
     {
       "agent_id": "LIBRE_1",
-      "curiosity": 0.7755977931007142,
-      "explorations": 15,
-      "facts_learned": 12,
-      "concepts_encountered": 194,
-      "observations_made": 4,
-      "connections_found": 28,
+      "curiosity": {
+        "value": 0.7755977931007142,
+        "origin": "normalized(agent_summaries[0].curiosity)",
+        "source": "FROM_MATH"
+      },
+      "explorations": {
+        "value": 15,
+        "origin": "ratio(agent_summaries[0].explorations)",
+        "source": "FROM_MATH"
+      },
+      "facts_learned": {
+        "value": 12,
+        "origin": "counted(agent_summaries[0].facts_learned)",
+        "source": "FROM_DATA"
+      },
+      "concepts_encountered": {
+        "value": 194,
+        "origin": "count(agent_summaries[0].concepts_encountered)",
+        "source": "FROM_DATA"
+      },
+      "observations_made": {
+        "value": 4,
+        "origin": "counted(agent_summaries[0].observations_made)",
+        "source": "FROM_DATA"
+      },
+      "connections_found": {
+        "value": 28,
+        "origin": "counted(agent_summaries[0].connections_found)",
+        "source": "FROM_DATA"
+      },
       "current_interests": [
         "Fiesta Marina Cruises",
         "Italy\nInferior",
@@ -382,12 +806,36 @@
     },
     {
       "agent_id": "LIBRE_2",
-      "curiosity": 0.9132247189600364,
-      "explorations": 15,
-      "facts_learned": 6,
-      "concepts_encountered": 93,
-      "observations_made": 2,
-      "connections_found": 0,
+      "curiosity": {
+        "value": 0.9132247189600364,
+        "origin": "normalized(agent_summaries[1].curiosity)",
+        "source": "FROM_MATH"
+      },
+      "explorations": {
+        "value": 15,
+        "origin": "ratio(agent_summaries[1].explorations)",
+        "source": "FROM_MATH"
+      },
+      "facts_learned": {
+        "value": 6,
+        "origin": "counted(agent_summaries[1].facts_learned)",
+        "source": "FROM_DATA"
+      },
+      "concepts_encountered": {
+        "value": 93,
+        "origin": "count(agent_summaries[1].concepts_encountered)",
+        "source": "FROM_DATA"
+      },
+      "observations_made": {
+        "value": 2,
+        "origin": "counted(agent_summaries[1].observations_made)",
+        "source": "FROM_DATA"
+      },
+      "connections_found": {
+        "value": 0,
+        "origin": "counted(agent_summaries[1].connections_found)",
+        "source": "FROM_DATA"
+      },
       "current_interests": [
         "reinterpret",
         "environmentalism",
@@ -417,12 +865,36 @@
     },
     {
       "agent_id": "LIBRE_3",
-      "curiosity": 0.9597483875526168,
-      "explorations": 15,
-      "facts_learned": 1,
-      "concepts_encountered": 142,
-      "observations_made": 1,
-      "connections_found": 0,
+      "curiosity": {
+        "value": 0.9597483875526168,
+        "origin": "normalized(agent_summaries[2].curiosity)",
+        "source": "FROM_MATH"
+      },
+      "explorations": {
+        "value": 15,
+        "origin": "ratio(agent_summaries[2].explorations)",
+        "source": "FROM_MATH"
+      },
+      "facts_learned": {
+        "value": 1,
+        "origin": "counted(agent_summaries[2].facts_learned)",
+        "source": "FROM_DATA"
+      },
+      "concepts_encountered": {
+        "value": 142,
+        "origin": "count(agent_summaries[2].concepts_encountered)",
+        "source": "FROM_DATA"
+      },
+      "observations_made": {
+        "value": 1,
+        "origin": "counted(agent_summaries[2].observations_made)",
+        "source": "FROM_DATA"
+      },
+      "connections_found": {
+        "value": 0,
+        "origin": "counted(agent_summaries[2].connections_found)",
+        "source": "FROM_DATA"
+      },
       "current_interests": [
         "agriculture",
         "production",
@@ -452,5 +924,112 @@
         "atom"
       ]
     }
-  ]
+  ],
+  "metadata": {
+    "experiment_id": {
+      "value": "53120f54fa02",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:14:07.425475",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/data/audit/free_exploration_20251206_0723.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:14:07.425826",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 274,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 502,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 274,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 502,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
 }

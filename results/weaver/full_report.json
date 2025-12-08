@@ -1,117 +1,333 @@
 {
   "timestamp": "2025-12-01T01:07:52.617985",
   "global_state": {
-    "t": 200,
+    "t": {
+      "value": 200,
+      "origin": "counted(global_state.t)",
+      "source": "FROM_DATA"
+    },
     "phases": {
       "R1": {
         "go_status": false,
-        "criteria_passed": 0,
-        "criteria_total": 5,
+        "criteria_passed": {
+          "value": 0,
+          "origin": "counted(global_state.phases.R1.criteria_passed)",
+          "source": "FROM_DATA"
+        },
+        "criteria_total": {
+          "value": 5,
+          "origin": "count(global_state.phases.R1.criteria_total)",
+          "source": "FROM_DATA"
+        },
         "metrics": {}
       },
       "R2": {
         "go_status": false,
-        "criteria_passed": 0,
-        "criteria_total": 5,
+        "criteria_passed": {
+          "value": 0,
+          "origin": "counted(global_state.phases.R2.criteria_passed)",
+          "source": "FROM_DATA"
+        },
+        "criteria_total": {
+          "value": 5,
+          "origin": "count(global_state.phases.R2.criteria_total)",
+          "source": "FROM_DATA"
+        },
         "metrics": {}
       },
       "R3": {
         "go_status": false,
-        "criteria_passed": 0,
-        "criteria_total": 5,
+        "criteria_passed": {
+          "value": 0,
+          "origin": "counted(global_state.phases.R3.criteria_passed)",
+          "source": "FROM_DATA"
+        },
+        "criteria_total": {
+          "value": 5,
+          "origin": "count(global_state.phases.R3.criteria_total)",
+          "source": "FROM_DATA"
+        },
         "metrics": {}
       },
       "R4": {
         "go_status": false,
-        "criteria_passed": 0,
-        "criteria_total": 5,
+        "criteria_passed": {
+          "value": 0,
+          "origin": "counted(global_state.phases.R4.criteria_passed)",
+          "source": "FROM_DATA"
+        },
+        "criteria_total": {
+          "value": 5,
+          "origin": "count(global_state.phases.R4.criteria_total)",
+          "source": "FROM_DATA"
+        },
         "metrics": {}
       },
       "R5": {
         "go_status": false,
-        "criteria_passed": 0,
-        "criteria_total": 5,
+        "criteria_passed": {
+          "value": 0,
+          "origin": "counted(global_state.phases.R5.criteria_passed)",
+          "source": "FROM_DATA"
+        },
+        "criteria_total": {
+          "value": 5,
+          "origin": "count(global_state.phases.R5.criteria_total)",
+          "source": "FROM_DATA"
+        },
         "metrics": {}
       },
       "R6": {
         "go_status": false,
-        "criteria_passed": 0,
-        "criteria_total": 5,
+        "criteria_passed": {
+          "value": 0,
+          "origin": "counted(global_state.phases.R6.criteria_passed)",
+          "source": "FROM_DATA"
+        },
+        "criteria_total": {
+          "value": 5,
+          "origin": "count(global_state.phases.R6.criteria_total)",
+          "source": "FROM_DATA"
+        },
         "metrics": {}
       },
       "R7": {
         "go_status": false,
-        "criteria_passed": 0,
-        "criteria_total": 5,
+        "criteria_passed": {
+          "value": 0,
+          "origin": "counted(global_state.phases.R7.criteria_passed)",
+          "source": "FROM_DATA"
+        },
+        "criteria_total": {
+          "value": 5,
+          "origin": "count(global_state.phases.R7.criteria_total)",
+          "source": "FROM_DATA"
+        },
         "metrics": {}
       },
       "R8": {
         "go_status": false,
-        "criteria_passed": 0,
-        "criteria_total": 5,
+        "criteria_passed": {
+          "value": 0,
+          "origin": "counted(global_state.phases.R8.criteria_passed)",
+          "source": "FROM_DATA"
+        },
+        "criteria_total": {
+          "value": 5,
+          "origin": "count(global_state.phases.R8.criteria_total)",
+          "source": "FROM_DATA"
+        },
         "metrics": {}
       },
       "R9": {
         "go_status": false,
-        "criteria_passed": 0,
-        "criteria_total": 5,
+        "criteria_passed": {
+          "value": 0,
+          "origin": "counted(global_state.phases.R9.criteria_passed)",
+          "source": "FROM_DATA"
+        },
+        "criteria_total": {
+          "value": 5,
+          "origin": "count(global_state.phases.R9.criteria_total)",
+          "source": "FROM_DATA"
+        },
         "metrics": {}
       },
       "R10": {
         "go_status": false,
-        "criteria_passed": 0,
-        "criteria_total": 5,
+        "criteria_passed": {
+          "value": 0,
+          "origin": "counted(global_state.phases.R10.criteria_passed)",
+          "source": "FROM_DATA"
+        },
+        "criteria_total": {
+          "value": 5,
+          "origin": "count(global_state.phases.R10.criteria_total)",
+          "source": "FROM_DATA"
+        },
         "metrics": {}
       }
     },
     "system": {
-      "t": 200,
-      "phases_registered": 10,
-      "phases_go": 0,
+      "t": {
+        "value": 200,
+        "origin": "counted(global_state.system.t)",
+        "source": "FROM_DATA"
+      },
+      "phases_registered": {
+        "value": 10,
+        "origin": "counted(global_state.system.phases_registered)",
+        "source": "FROM_DATA"
+      },
+      "phases_go": {
+        "value": 0,
+        "origin": "counted(global_state.system.phases_go)",
+        "source": "FROM_DATA"
+      },
       "all_go": false,
       "system_ready": true,
-      "S_mean": 0.976403447222934,
-      "S_std": 0.11309573998972534
+      "S_mean": {
+        "value": 0.976403447222934,
+        "origin": "mean(global_state.system.S_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "S_std": {
+        "value": 0.11309573998972534,
+        "origin": "std(global_state.system.S_std)",
+        "source": "FROM_STATISTICS"
+      }
     },
-    "n_events": 0
+    "n_events": {
+      "value": 0,
+      "origin": "count(global_state.n_events)",
+      "source": "FROM_DATA"
+    }
   },
   "multiscale_views": {
-    "n_updates": 200,
+    "n_updates": {
+      "value": 200,
+      "origin": "count(multiscale_views.n_updates)",
+      "source": "FROM_DATA"
+    },
     "views": [
       {
-        "scale": 0,
-        "window": 14,
-        "S_mean": 0.6936906693908881,
-        "S_std": 0.05105153926633772,
-        "S_trend": -0.008125397245987188,
-        "z_dispersion": 0.036588429120693385
+        "scale": {
+          "value": 0,
+          "origin": "counted(multiscale_views.views[0].scale)",
+          "source": "FROM_DATA"
+        },
+        "window": {
+          "value": 14,
+          "origin": "counted(multiscale_views.views[0].window)",
+          "source": "FROM_DATA"
+        },
+        "S_mean": {
+          "value": 0.6936906693908881,
+          "origin": "mean(multiscale_views.views[0].S_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "S_std": {
+          "value": 0.05105153926633772,
+          "origin": "std(multiscale_views.views[0].S_std)",
+          "source": "FROM_STATISTICS"
+        },
+        "S_trend": {
+          "value": -0.008125397245987188,
+          "origin": "computed(multiscale_views.views[0].S_trend)",
+          "source": "FROM_MATH"
+        },
+        "z_dispersion": {
+          "value": 0.036588429120693385,
+          "origin": "normalized(multiscale_views.views[0].z_dispersion)",
+          "source": "FROM_MATH"
+        }
       },
       {
-        "scale": 1,
-        "window": 28,
-        "S_mean": 0.7572159193369095,
-        "S_std": 0.09705706801909311,
-        "S_trend": -0.010475959441713714,
-        "z_dispersion": 0.06327700921730099
+        "scale": {
+          "value": 1,
+          "origin": "counted(multiscale_views.views[1].scale)",
+          "source": "FROM_DATA"
+        },
+        "window": {
+          "value": 28,
+          "origin": "counted(multiscale_views.views[1].window)",
+          "source": "FROM_DATA"
+        },
+        "S_mean": {
+          "value": 0.7572159193369095,
+          "origin": "mean(multiscale_views.views[1].S_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "S_std": {
+          "value": 0.09705706801909311,
+          "origin": "std(multiscale_views.views[1].S_std)",
+          "source": "FROM_STATISTICS"
+        },
+        "S_trend": {
+          "value": -0.010475959441713714,
+          "origin": "computed(multiscale_views.views[1].S_trend)",
+          "source": "FROM_MATH"
+        },
+        "z_dispersion": {
+          "value": 0.06327700921730099,
+          "origin": "normalized(multiscale_views.views[1].z_dispersion)",
+          "source": "FROM_MATH"
+        }
       },
       {
-        "scale": 2,
-        "window": 56,
-        "S_mean": 0.8392416045245931,
-        "S_std": 0.1134296020349998,
-        "S_trend": -0.00540575587846554,
-        "z_dispersion": 0.09153961926244082
+        "scale": {
+          "value": 2,
+          "origin": "counted(multiscale_views.views[2].scale)",
+          "source": "FROM_DATA"
+        },
+        "window": {
+          "value": 56,
+          "origin": "counted(multiscale_views.views[2].window)",
+          "source": "FROM_DATA"
+        },
+        "S_mean": {
+          "value": 0.8392416045245931,
+          "origin": "mean(multiscale_views.views[2].S_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "S_std": {
+          "value": 0.1134296020349998,
+          "origin": "std(multiscale_views.views[2].S_std)",
+          "source": "FROM_STATISTICS"
+        },
+        "S_trend": {
+          "value": -0.00540575587846554,
+          "origin": "computed(multiscale_views.views[2].S_trend)",
+          "source": "FROM_MATH"
+        },
+        "z_dispersion": {
+          "value": 0.09153961926244082,
+          "origin": "normalized(multiscale_views.views[2].z_dispersion)",
+          "source": "FROM_MATH"
+        }
       }
     ],
-    "dominant_scale": 2,
+    "dominant_scale": {
+      "value": 2,
+      "origin": "dominant_scale(multiscale_views.dominant_scale)",
+      "source": "FROM_STATISTICS"
+    },
     "cross_scale": {
-      "var_ratio_0_1": 0.5259950697902274,
-      "trend_diff_0_1": 0.0023505621957265257,
-      "disp_ratio_0_1": 0.5782262716470091,
-      "var_ratio_1_2": 0.8556590720396358,
-      "trend_diff_1_2": -0.005070203563248174,
-      "disp_ratio_1_2": 0.6912527026782586,
-      "trend_coherence": 0.7411105800138282
+      "var_ratio_0_1": {
+        "value": 0.5259950697902274,
+        "origin": "std(multiscale_views.cross_scale.var_ratio_0_1)",
+        "source": "FROM_STATISTICS"
+      },
+      "trend_diff_0_1": {
+        "value": 0.0023505621957265257,
+        "origin": "normalized(multiscale_views.cross_scale.trend_diff_0_1)",
+        "source": "FROM_MATH"
+      },
+      "disp_ratio_0_1": {
+        "value": 0.5782262716470091,
+        "origin": "ratio(multiscale_views.cross_scale.disp_ratio_0_1)",
+        "source": "FROM_MATH"
+      },
+      "var_ratio_1_2": {
+        "value": 0.8556590720396358,
+        "origin": "std(multiscale_views.cross_scale.var_ratio_1_2)",
+        "source": "FROM_STATISTICS"
+      },
+      "trend_diff_1_2": {
+        "value": -0.005070203563248174,
+        "origin": "computed(multiscale_views.cross_scale.trend_diff_1_2)",
+        "source": "FROM_MATH"
+      },
+      "disp_ratio_1_2": {
+        "value": 0.6912527026782586,
+        "origin": "ratio(multiscale_views.cross_scale.disp_ratio_1_2)",
+        "source": "FROM_MATH"
+      },
+      "trend_coherence": {
+        "value": 0.7411105800138282,
+        "origin": "normalized(multiscale_views.cross_scale.trend_coherence)",
+        "source": "FROM_MATH"
+      }
     }
   },
   "phase_graph": {
@@ -127,8 +343,16 @@
       "R7",
       "R5"
     ],
-    "n_edges": 19,
-    "te_threshold": 0.003381246954501517,
+    "n_edges": {
+      "value": 19,
+      "origin": "count(phase_graph.n_edges)",
+      "source": "FROM_DATA"
+    },
+    "te_threshold": {
+      "value": 0.003381246954501517,
+      "origin": "normalized(phase_graph.te_threshold)",
+      "source": "FROM_MATH"
+    },
     "edges": {
       "R9": [
         "R3",
@@ -163,16 +387,56 @@
       ]
     },
     "centrality": {
-      "R9": 0.020696275442240633,
-      "R10": 0.020696275442240633,
-      "R3": 0.03564911426041331,
-      "R2": 0.025087210424157323,
-      "R1": 0.015000000000000003,
-      "R4": 0.03560191914408466,
-      "R6": 0.026806002081132384,
-      "R8": 0.04134538970265394,
-      "R7": 0.03535613721382775,
-      "R5": 0.022108042953511244
+      "R9": {
+        "value": 0.020696275442240633,
+        "origin": "normalized(phase_graph.centrality.R9)",
+        "source": "FROM_MATH"
+      },
+      "R10": {
+        "value": 0.020696275442240633,
+        "origin": "normalized(phase_graph.centrality.R10)",
+        "source": "FROM_MATH"
+      },
+      "R3": {
+        "value": 0.03564911426041331,
+        "origin": "normalized(phase_graph.centrality.R3)",
+        "source": "FROM_MATH"
+      },
+      "R2": {
+        "value": 0.025087210424157323,
+        "origin": "normalized(phase_graph.centrality.R2)",
+        "source": "FROM_MATH"
+      },
+      "R1": {
+        "value": 0.015000000000000003,
+        "origin": "normalized(phase_graph.centrality.R1)",
+        "source": "FROM_MATH"
+      },
+      "R4": {
+        "value": 0.03560191914408466,
+        "origin": "normalized(phase_graph.centrality.R4)",
+        "source": "FROM_MATH"
+      },
+      "R6": {
+        "value": 0.026806002081132384,
+        "origin": "normalized(phase_graph.centrality.R6)",
+        "source": "FROM_MATH"
+      },
+      "R8": {
+        "value": 0.04134538970265394,
+        "origin": "normalized(phase_graph.centrality.R8)",
+        "source": "FROM_MATH"
+      },
+      "R7": {
+        "value": 0.03535613721382775,
+        "origin": "normalized(phase_graph.centrality.R7)",
+        "source": "FROM_MATH"
+      },
+      "R5": {
+        "value": 0.022108042953511244,
+        "origin": "normalized(phase_graph.centrality.R5)",
+        "source": "FROM_MATH"
+      }
     },
     "cycles": [
       [
@@ -197,23 +461,75 @@
   },
   "indices": {
     "current": {
-      "MSI": 0.9595571304713659,
-      "SCI": 0.881279137280035,
-      "EGI": 0.6811249191501063
+      "MSI": {
+        "value": 0.9595571304713659,
+        "origin": "normalized(indices.current.MSI)",
+        "source": "FROM_MATH"
+      },
+      "SCI": {
+        "value": 0.881279137280035,
+        "origin": "normalized(indices.current.SCI)",
+        "source": "FROM_MATH"
+      },
+      "EGI": {
+        "value": 0.6811249191501063,
+        "origin": "normalized(indices.current.EGI)",
+        "source": "FROM_MATH"
+      }
     },
-    "history_length": 200,
+    "history_length": {
+      "value": 200,
+      "origin": "count(indices.history_length)",
+      "source": "FROM_DATA"
+    },
     "summary": {
       "computed": true,
-      "MSI": 0.9595571304713659,
-      "SCI": 0.881279137280035,
-      "EGI": 0.6811249191501063,
-      "MSI_mean": 0.8564195983216986,
-      "SCI_mean": 0.8780731383870863,
-      "EGI_mean": 0.6868893415013434,
+      "MSI": {
+        "value": 0.9595571304713659,
+        "origin": "normalized(indices.summary.MSI)",
+        "source": "FROM_MATH"
+      },
+      "SCI": {
+        "value": 0.881279137280035,
+        "origin": "normalized(indices.summary.SCI)",
+        "source": "FROM_MATH"
+      },
+      "EGI": {
+        "value": 0.6811249191501063,
+        "origin": "normalized(indices.summary.EGI)",
+        "source": "FROM_MATH"
+      },
+      "MSI_mean": {
+        "value": 0.8564195983216986,
+        "origin": "mean(indices.summary.MSI_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "SCI_mean": {
+        "value": 0.8780731383870863,
+        "origin": "mean(indices.summary.SCI_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "EGI_mean": {
+        "value": 0.6868893415013434,
+        "origin": "mean(indices.summary.EGI_mean)",
+        "source": "FROM_STATISTICS"
+      },
       "trends": {
-        "MSI_trend": 0.0005010902663711732,
-        "SCI_trend": 3.27955754054249e-05,
-        "EGI_trend": -3.169208690963143e-05
+        "MSI_trend": {
+          "value": 0.0005010902663711732,
+          "origin": "normalized(indices.summary.trends.MSI_trend)",
+          "source": "FROM_MATH"
+        },
+        "SCI_trend": {
+          "value": 3.27955754054249e-05,
+          "origin": "normalized(indices.summary.trends.SCI_trend)",
+          "source": "FROM_MATH"
+        },
+        "EGI_trend": {
+          "value": -3.169208690963143e-05,
+          "origin": "computed(indices.summary.trends.EGI_trend)",
+          "source": "FROM_MATH"
+        }
       }
     }
   },
@@ -227,154 +543,541 @@
   ],
   "recent_decisions": [
     {
-      "t": 191,
+      "t": {
+        "value": 191,
+        "origin": "counted(recent_decisions[0].t)",
+        "source": "FROM_DATA"
+      },
       "action": "reinforce_goals",
       "reason": "Goals emergentes en declive",
       "indices": {
-        "MSI": 0.9450971543353702,
-        "SCI": 0.8808890963054706,
-        "EGI": 0.6821076233980662
+        "MSI": {
+          "value": 0.9450971543353702,
+          "origin": "normalized(recent_decisions[0].indices.MSI)",
+          "source": "FROM_MATH"
+        },
+        "SCI": {
+          "value": 0.8808890963054706,
+          "origin": "normalized(recent_decisions[0].indices.SCI)",
+          "source": "FROM_MATH"
+        },
+        "EGI": {
+          "value": 0.6821076233980662,
+          "origin": "normalized(recent_decisions[0].indices.EGI)",
+          "source": "FROM_MATH"
+        }
       },
       "trends": {
-        "MSI_trend": 0.00042517000874810673,
-        "SCI_trend": 3.3018056718684174e-05,
-        "EGI_trend": -2.8086384654747204e-05
+        "MSI_trend": {
+          "value": 0.00042517000874810673,
+          "origin": "normalized(recent_decisions[0].trends.MSI_trend)",
+          "source": "FROM_MATH"
+        },
+        "SCI_trend": {
+          "value": 3.3018056718684174e-05,
+          "origin": "normalized(recent_decisions[0].trends.SCI_trend)",
+          "source": "FROM_MATH"
+        },
+        "EGI_trend": {
+          "value": -2.8086384654747204e-05,
+          "origin": "computed(recent_decisions[0].trends.EGI_trend)",
+          "source": "FROM_MATH"
+        }
       }
     },
     {
-      "t": 192,
+      "t": {
+        "value": 192,
+        "origin": "counted(recent_decisions[1].t)",
+        "source": "FROM_DATA"
+      },
       "action": "reinforce_goals",
       "reason": "Goals emergentes en declive",
       "indices": {
-        "MSI": 0.9467456592834953,
-        "SCI": 0.8808505454434545,
-        "EGI": 0.6820462875796323
+        "MSI": {
+          "value": 0.9467456592834953,
+          "origin": "normalized(recent_decisions[1].indices.MSI)",
+          "source": "FROM_MATH"
+        },
+        "SCI": {
+          "value": 0.8808505454434545,
+          "origin": "normalized(recent_decisions[1].indices.SCI)",
+          "source": "FROM_MATH"
+        },
+        "EGI": {
+          "value": 0.6820462875796323,
+          "origin": "normalized(recent_decisions[1].indices.EGI)",
+          "source": "FROM_MATH"
+        }
       },
       "trends": {
-        "MSI_trend": 0.00043392473395032275,
-        "SCI_trend": 3.2977324795978036e-05,
-        "EGI_trend": -2.847477402615773e-05
+        "MSI_trend": {
+          "value": 0.00043392473395032275,
+          "origin": "normalized(recent_decisions[1].trends.MSI_trend)",
+          "source": "FROM_MATH"
+        },
+        "SCI_trend": {
+          "value": 3.2977324795978036e-05,
+          "origin": "normalized(recent_decisions[1].trends.SCI_trend)",
+          "source": "FROM_MATH"
+        },
+        "EGI_trend": {
+          "value": -2.847477402615773e-05,
+          "origin": "computed(recent_decisions[1].trends.EGI_trend)",
+          "source": "FROM_MATH"
+        }
       }
     },
     {
-      "t": 193,
+      "t": {
+        "value": 193,
+        "origin": "counted(recent_decisions[2].t)",
+        "source": "FROM_DATA"
+      },
       "action": "reinforce_goals",
       "reason": "Goals emergentes en declive",
       "indices": {
-        "MSI": 0.9483941859512274,
-        "SCI": 0.880875017306683,
-        "EGI": 0.6818997162758831
+        "MSI": {
+          "value": 0.9483941859512274,
+          "origin": "normalized(recent_decisions[2].indices.MSI)",
+          "source": "FROM_MATH"
+        },
+        "SCI": {
+          "value": 0.880875017306683,
+          "origin": "normalized(recent_decisions[2].indices.SCI)",
+          "source": "FROM_MATH"
+        },
+        "EGI": {
+          "value": 0.6818997162758831,
+          "origin": "normalized(recent_decisions[2].indices.EGI)",
+          "source": "FROM_MATH"
+        }
       },
       "trends": {
-        "MSI_trend": 0.000442604734729957,
-        "SCI_trend": 3.293648311432774e-05,
-        "EGI_trend": -2.887013830869074e-05
+        "MSI_trend": {
+          "value": 0.000442604734729957,
+          "origin": "normalized(recent_decisions[2].trends.MSI_trend)",
+          "source": "FROM_MATH"
+        },
+        "SCI_trend": {
+          "value": 3.293648311432774e-05,
+          "origin": "normalized(recent_decisions[2].trends.SCI_trend)",
+          "source": "FROM_MATH"
+        },
+        "EGI_trend": {
+          "value": -2.887013830869074e-05,
+          "origin": "computed(recent_decisions[2].trends.EGI_trend)",
+          "source": "FROM_MATH"
+        }
       }
     },
     {
-      "t": 194,
+      "t": {
+        "value": 194,
+        "origin": "counted(recent_decisions[3].t)",
+        "source": "FROM_DATA"
+      },
       "action": "reinforce_goals",
       "reason": "Goals emergentes en declive",
       "indices": {
-        "MSI": 0.950062453538021,
-        "SCI": 0.8810342282221522,
-        "EGI": 0.6818409239103382
+        "MSI": {
+          "value": 0.950062453538021,
+          "origin": "normalized(recent_decisions[3].indices.MSI)",
+          "source": "FROM_MATH"
+        },
+        "SCI": {
+          "value": 0.8810342282221522,
+          "origin": "normalized(recent_decisions[3].indices.SCI)",
+          "source": "FROM_MATH"
+        },
+        "EGI": {
+          "value": 0.6818409239103382,
+          "origin": "normalized(recent_decisions[3].indices.EGI)",
+          "source": "FROM_MATH"
+        }
       },
       "trends": {
-        "MSI_trend": 0.0004512134306248378,
-        "SCI_trend": 3.2916919287858864e-05,
-        "EGI_trend": -2.925814603622002e-05
+        "MSI_trend": {
+          "value": 0.0004512134306248378,
+          "origin": "normalized(recent_decisions[3].trends.MSI_trend)",
+          "source": "FROM_MATH"
+        },
+        "SCI_trend": {
+          "value": 3.2916919287858864e-05,
+          "origin": "normalized(recent_decisions[3].trends.SCI_trend)",
+          "source": "FROM_MATH"
+        },
+        "EGI_trend": {
+          "value": -2.925814603622002e-05,
+          "origin": "computed(recent_decisions[3].trends.EGI_trend)",
+          "source": "FROM_MATH"
+        }
       }
     },
     {
-      "t": 195,
+      "t": {
+        "value": 195,
+        "origin": "counted(recent_decisions[4].t)",
+        "source": "FROM_DATA"
+      },
       "action": "reinforce_goals",
       "reason": "Goals emergentes en declive",
       "indices": {
-        "MSI": 0.9516212312656781,
-        "SCI": 0.8810449710750892,
-        "EGI": 0.6817104173484615
+        "MSI": {
+          "value": 0.9516212312656781,
+          "origin": "normalized(recent_decisions[4].indices.MSI)",
+          "source": "FROM_MATH"
+        },
+        "SCI": {
+          "value": 0.8810449710750892,
+          "origin": "normalized(recent_decisions[4].indices.SCI)",
+          "source": "FROM_MATH"
+        },
+        "EGI": {
+          "value": 0.6817104173484615,
+          "origin": "normalized(recent_decisions[4].indices.EGI)",
+          "source": "FROM_MATH"
+        }
       },
       "trends": {
-        "MSI_trend": 0.00045973381840250466,
-        "SCI_trend": 3.2894470267660344e-05,
-        "EGI_trend": -2.9650231458691835e-05
+        "MSI_trend": {
+          "value": 0.00045973381840250466,
+          "origin": "normalized(recent_decisions[4].trends.MSI_trend)",
+          "source": "FROM_MATH"
+        },
+        "SCI_trend": {
+          "value": 3.2894470267660344e-05,
+          "origin": "normalized(recent_decisions[4].trends.SCI_trend)",
+          "source": "FROM_MATH"
+        },
+        "EGI_trend": {
+          "value": -2.9650231458691835e-05,
+          "origin": "computed(recent_decisions[4].trends.EGI_trend)",
+          "source": "FROM_MATH"
+        }
       }
     },
     {
-      "t": 196,
+      "t": {
+        "value": 196,
+        "origin": "counted(recent_decisions[5].t)",
+        "source": "FROM_DATA"
+      },
       "action": "reinforce_goals",
       "reason": "Goals emergentes en declive",
       "indices": {
-        "MSI": 0.9531452369207388,
-        "SCI": 0.881049819662827,
-        "EGI": 0.681555743188508
+        "MSI": {
+          "value": 0.9531452369207388,
+          "origin": "normalized(recent_decisions[5].indices.MSI)",
+          "source": "FROM_MATH"
+        },
+        "SCI": {
+          "value": 0.881049819662827,
+          "origin": "normalized(recent_decisions[5].indices.SCI)",
+          "source": "FROM_MATH"
+        },
+        "EGI": {
+          "value": 0.681555743188508,
+          "origin": "normalized(recent_decisions[5].indices.EGI)",
+          "source": "FROM_MATH"
+        }
       },
       "trends": {
-        "MSI_trend": 0.00046816140542705025,
-        "SCI_trend": 3.2868343376819374e-05,
-        "EGI_trend": -3.0049863851692357e-05
+        "MSI_trend": {
+          "value": 0.00046816140542705025,
+          "origin": "normalized(recent_decisions[5].trends.MSI_trend)",
+          "source": "FROM_MATH"
+        },
+        "SCI_trend": {
+          "value": 3.2868343376819374e-05,
+          "origin": "normalized(recent_decisions[5].trends.SCI_trend)",
+          "source": "FROM_MATH"
+        },
+        "EGI_trend": {
+          "value": -3.0049863851692357e-05,
+          "origin": "computed(recent_decisions[5].trends.EGI_trend)",
+          "source": "FROM_MATH"
+        }
       }
     },
     {
-      "t": 197,
+      "t": {
+        "value": 197,
+        "origin": "counted(recent_decisions[6].t)",
+        "source": "FROM_DATA"
+      },
       "action": "reinforce_goals",
       "reason": "Goals emergentes en declive",
       "indices": {
-        "MSI": 0.9547543165227833,
-        "SCI": 0.8810830828362238,
-        "EGI": 0.6813382700756937
+        "MSI": {
+          "value": 0.9547543165227833,
+          "origin": "normalized(recent_decisions[6].indices.MSI)",
+          "source": "FROM_MATH"
+        },
+        "SCI": {
+          "value": 0.8810830828362238,
+          "origin": "normalized(recent_decisions[6].indices.SCI)",
+          "source": "FROM_MATH"
+        },
+        "EGI": {
+          "value": 0.6813382700756937,
+          "origin": "normalized(recent_decisions[6].indices.EGI)",
+          "source": "FROM_MATH"
+        }
       },
       "trends": {
-        "MSI_trend": 0.00047651040625559555,
-        "SCI_trend": 3.2843064924769984e-05,
-        "EGI_trend": -3.0466277555257524e-05
+        "MSI_trend": {
+          "value": 0.00047651040625559555,
+          "origin": "normalized(recent_decisions[6].trends.MSI_trend)",
+          "source": "FROM_MATH"
+        },
+        "SCI_trend": {
+          "value": 3.2843064924769984e-05,
+          "origin": "normalized(recent_decisions[6].trends.SCI_trend)",
+          "source": "FROM_MATH"
+        },
+        "EGI_trend": {
+          "value": -3.0466277555257524e-05,
+          "origin": "computed(recent_decisions[6].trends.EGI_trend)",
+          "source": "FROM_MATH"
+        }
       }
     },
     {
-      "t": 198,
+      "t": {
+        "value": 198,
+        "origin": "counted(recent_decisions[7].t)",
+        "source": "FROM_DATA"
+      },
       "action": "reinforce_goals",
       "reason": "Goals emergentes en declive",
       "indices": {
-        "MSI": 0.9563645875233787,
-        "SCI": 0.8811075976969803,
-        "EGI": 0.681222550061597
+        "MSI": {
+          "value": 0.9563645875233787,
+          "origin": "normalized(recent_decisions[7].indices.MSI)",
+          "source": "FROM_MATH"
+        },
+        "SCI": {
+          "value": 0.8811075976969803,
+          "origin": "normalized(recent_decisions[7].indices.SCI)",
+          "source": "FROM_MATH"
+        },
+        "EGI": {
+          "value": 0.681222550061597,
+          "origin": "normalized(recent_decisions[7].indices.EGI)",
+          "source": "FROM_MATH"
+        }
       },
       "trends": {
-        "MSI_trend": 0.0004847815949067554,
-        "SCI_trend": 3.281727659772919e-05,
-        "EGI_trend": -3.088318162534281e-05
+        "MSI_trend": {
+          "value": 0.0004847815949067554,
+          "origin": "normalized(recent_decisions[7].trends.MSI_trend)",
+          "source": "FROM_MATH"
+        },
+        "SCI_trend": {
+          "value": 3.281727659772919e-05,
+          "origin": "normalized(recent_decisions[7].trends.SCI_trend)",
+          "source": "FROM_MATH"
+        },
+        "EGI_trend": {
+          "value": -3.088318162534281e-05,
+          "origin": "computed(recent_decisions[7].trends.EGI_trend)",
+          "source": "FROM_MATH"
+        }
       }
     },
     {
-      "t": 199,
+      "t": {
+        "value": 199,
+        "origin": "counted(recent_decisions[8].t)",
+        "source": "FROM_DATA"
+      },
       "action": "reinforce_goals",
       "reason": "Goals emergentes en declive",
       "indices": {
-        "MSI": 0.9579851442580315,
-        "SCI": 0.8812201584542397,
-        "EGI": 0.6811462791973877
+        "MSI": {
+          "value": 0.9579851442580315,
+          "origin": "normalized(recent_decisions[8].indices.MSI)",
+          "source": "FROM_MATH"
+        },
+        "SCI": {
+          "value": 0.8812201584542397,
+          "origin": "normalized(recent_decisions[8].indices.SCI)",
+          "source": "FROM_MATH"
+        },
+        "EGI": {
+          "value": 0.6811462791973877,
+          "origin": "normalized(recent_decisions[8].indices.EGI)",
+          "source": "FROM_MATH"
+        }
       },
       "trends": {
-        "MSI_trend": 0.0004929771171941168,
-        "SCI_trend": 3.2804279663055077e-05,
-        "EGI_trend": -3.129448378739527e-05
+        "MSI_trend": {
+          "value": 0.0004929771171941168,
+          "origin": "normalized(recent_decisions[8].trends.MSI_trend)",
+          "source": "FROM_MATH"
+        },
+        "SCI_trend": {
+          "value": 3.2804279663055077e-05,
+          "origin": "normalized(recent_decisions[8].trends.SCI_trend)",
+          "source": "FROM_MATH"
+        },
+        "EGI_trend": {
+          "value": -3.129448378739527e-05,
+          "origin": "computed(recent_decisions[8].trends.EGI_trend)",
+          "source": "FROM_MATH"
+        }
       }
     },
     {
-      "t": 200,
+      "t": {
+        "value": 200,
+        "origin": "counted(recent_decisions[9].t)",
+        "source": "FROM_DATA"
+      },
       "action": "reinforce_goals",
       "reason": "Goals emergentes en declive",
       "indices": {
-        "MSI": 0.9595571304713659,
-        "SCI": 0.881279137280035,
-        "EGI": 0.6811249191501063
+        "MSI": {
+          "value": 0.9595571304713659,
+          "origin": "normalized(recent_decisions[9].indices.MSI)",
+          "source": "FROM_MATH"
+        },
+        "SCI": {
+          "value": 0.881279137280035,
+          "origin": "normalized(recent_decisions[9].indices.SCI)",
+          "source": "FROM_MATH"
+        },
+        "EGI": {
+          "value": 0.6811249191501063,
+          "origin": "normalized(recent_decisions[9].indices.EGI)",
+          "source": "FROM_MATH"
+        }
       },
       "trends": {
-        "MSI_trend": 0.0005010902663711732,
-        "SCI_trend": 3.27955754054249e-05,
-        "EGI_trend": -3.169208690963143e-05
+        "MSI_trend": {
+          "value": 0.0005010902663711732,
+          "origin": "normalized(recent_decisions[9].trends.MSI_trend)",
+          "source": "FROM_MATH"
+        },
+        "SCI_trend": {
+          "value": 3.27955754054249e-05,
+          "origin": "normalized(recent_decisions[9].trends.SCI_trend)",
+          "source": "FROM_MATH"
+        },
+        "EGI_trend": {
+          "value": -3.169208690963143e-05,
+          "origin": "computed(recent_decisions[9].trends.EGI_trend)",
+          "source": "FROM_MATH"
+        }
       }
     }
-  ]
+  ],
+  "metadata": {
+    "experiment_id": {
+      "value": "1083859ced1c",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:59.537072",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/weaver/full_report.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:59.537460",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 336,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 411,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 336,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 411,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
 }

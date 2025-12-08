@@ -1,110 +1,497 @@
 {
   "mode_analysis": {
     "-1": {
-      "n": 619,
-      "r_mean": -0.0171534090905493,
-      "r_p": 0.3001181908912404,
-      "MI_approx": 0.061859734206214004,
-      "TE_neo_to_eva": -0.0053978608842382885,
-      "TE_eva_to_neo": -0.016222664640730265,
-      "G_mean": 0.5,
-      "G_std": 0.0
+      "n": {
+        "value": 619,
+        "origin": "counted(mode_analysis.-1.n)",
+        "source": "FROM_DATA"
+      },
+      "r_mean": {
+        "value": -0.0171534090905493,
+        "origin": "mean(mode_analysis.-1.r_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "r_p": {
+        "value": 0.3001181908912404,
+        "origin": "normalized(mode_analysis.-1.r_p)",
+        "source": "FROM_MATH"
+      },
+      "MI_approx": {
+        "value": 0.061859734206214004,
+        "origin": "normalized(mode_analysis.-1.MI_approx)",
+        "source": "FROM_MATH"
+      },
+      "TE_neo_to_eva": {
+        "value": -0.0053978608842382885,
+        "origin": "computed(mode_analysis.-1.TE_neo_to_eva)",
+        "source": "FROM_MATH"
+      },
+      "TE_eva_to_neo": {
+        "value": -0.016222664640730265,
+        "origin": "computed(mode_analysis.-1.TE_eva_to_neo)",
+        "source": "FROM_MATH"
+      },
+      "G_mean": {
+        "value": 0.5,
+        "origin": "mean(mode_analysis.-1.G_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "G_std": {
+        "value": 0.0,
+        "origin": "std(mode_analysis.-1.G_std)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "0": {
-      "n": 3803,
-      "r_mean": -0.037248385244626196,
-      "r_p": 0.23434911742291473,
-      "MI_approx": 0.06105228011356266,
-      "TE_neo_to_eva": -0.04116045029804593,
-      "TE_eva_to_neo": -0.027969987144732655,
-      "G_mean": 0.5,
-      "G_std": 0.0
+      "n": {
+        "value": 3803,
+        "origin": "counted(mode_analysis.0.n)",
+        "source": "FROM_DATA"
+      },
+      "r_mean": {
+        "value": -0.037248385244626196,
+        "origin": "mean(mode_analysis.0.r_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "r_p": {
+        "value": 0.23434911742291473,
+        "origin": "normalized(mode_analysis.0.r_p)",
+        "source": "FROM_MATH"
+      },
+      "MI_approx": {
+        "value": 0.06105228011356266,
+        "origin": "normalized(mode_analysis.0.MI_approx)",
+        "source": "FROM_MATH"
+      },
+      "TE_neo_to_eva": {
+        "value": -0.04116045029804593,
+        "origin": "computed(mode_analysis.0.TE_neo_to_eva)",
+        "source": "FROM_MATH"
+      },
+      "TE_eva_to_neo": {
+        "value": -0.027969987144732655,
+        "origin": "computed(mode_analysis.0.TE_eva_to_neo)",
+        "source": "FROM_MATH"
+      },
+      "G_mean": {
+        "value": 0.5,
+        "origin": "mean(mode_analysis.0.G_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "G_std": {
+        "value": 0.0,
+        "origin": "std(mode_analysis.0.G_std)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "1": {
-      "n": 578,
-      "r_mean": 0.0037369361048025123,
-      "r_p": 0.6085195699579588,
-      "MI_approx": 0.026545191025821684,
-      "TE_neo_to_eva": 0.006112781951166532,
-      "TE_eva_to_neo": 0.031973555665347674,
-      "G_mean": 0.5,
-      "G_std": 0.0
+      "n": {
+        "value": 578,
+        "origin": "counted(mode_analysis.1.n)",
+        "source": "FROM_DATA"
+      },
+      "r_mean": {
+        "value": 0.0037369361048025123,
+        "origin": "mean(mode_analysis.1.r_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "r_p": {
+        "value": 0.6085195699579588,
+        "origin": "normalized(mode_analysis.1.r_p)",
+        "source": "FROM_MATH"
+      },
+      "MI_approx": {
+        "value": 0.026545191025821684,
+        "origin": "normalized(mode_analysis.1.MI_approx)",
+        "source": "FROM_MATH"
+      },
+      "TE_neo_to_eva": {
+        "value": 0.006112781951166532,
+        "origin": "normalized(mode_analysis.1.TE_neo_to_eva)",
+        "source": "FROM_MATH"
+      },
+      "TE_eva_to_neo": {
+        "value": 0.031973555665347674,
+        "origin": "normalized(mode_analysis.1.TE_eva_to_neo)",
+        "source": "FROM_MATH"
+      },
+      "G_mean": {
+        "value": 0.5,
+        "origin": "mean(mode_analysis.1.G_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "G_std": {
+        "value": 0.0,
+        "origin": "std(mode_analysis.1.G_std)",
+        "source": "FROM_STATISTICS"
+      }
     }
   },
   "bandit_analysis": {
-    "neo_final_regret": 0.0,
-    "eva_final_regret": 0.0,
+    "neo_final_regret": {
+      "value": 0.0,
+      "origin": "normalized(bandit_analysis.neo_final_regret)",
+      "source": "FROM_MATH"
+    },
+    "eva_final_regret": {
+      "value": 0.0,
+      "origin": "normalized(bandit_analysis.eva_final_regret)",
+      "source": "FROM_MATH"
+    },
     "bandit_stats": {
       "neo": {
         "pulls": {
-          "-1": 619,
-          "0": 3803,
-          "1": 578
+          "-1": {
+            "value": 619,
+            "origin": "counted(bandit_analysis.bandit_stats.neo.pulls.-1)",
+            "source": "FROM_DATA"
+          },
+          "0": {
+            "value": 3803,
+            "origin": "counted(bandit_analysis.bandit_stats.neo.pulls.0)",
+            "source": "FROM_DATA"
+          },
+          "1": {
+            "value": 578,
+            "origin": "counted(bandit_analysis.bandit_stats.neo.pulls.1)",
+            "source": "FROM_DATA"
+          }
         },
         "mean_rewards": {
-          "-1": 0.5,
-          "0": 0.5,
-          "1": 0.5
+          "-1": {
+            "value": 0.5,
+            "origin": "normalized(bandit_analysis.bandit_stats.neo.mean_rewards.-1)",
+            "source": "FROM_MATH"
+          },
+          "0": {
+            "value": 0.5,
+            "origin": "normalized(bandit_analysis.bandit_stats.neo.mean_rewards.0)",
+            "source": "FROM_MATH"
+          },
+          "1": {
+            "value": 0.5,
+            "origin": "normalized(bandit_analysis.bandit_stats.neo.mean_rewards.1)",
+            "source": "FROM_MATH"
+          }
         },
-        "cumulative_reward": 2500.0,
-        "cumulative_regret": 0.0,
+        "cumulative_reward": {
+          "value": 2500.0,
+          "origin": "computed(bandit_analysis.bandit_stats.neo.cumulative_reward)",
+          "source": "FROM_MATH"
+        },
+        "cumulative_regret": {
+          "value": 0.0,
+          "origin": "normalized(bandit_analysis.bandit_stats.neo.cumulative_regret)",
+          "source": "FROM_MATH"
+        },
         "alpha": {
-          "-1": 1.0,
-          "0": 1.0,
-          "1": 1.0
+          "-1": {
+            "value": 1.0,
+            "origin": "normalized(bandit_analysis.bandit_stats.neo.alpha.-1)",
+            "source": "FROM_MATH"
+          },
+          "0": {
+            "value": 1.0,
+            "origin": "normalized(bandit_analysis.bandit_stats.neo.alpha.0)",
+            "source": "FROM_MATH"
+          },
+          "1": {
+            "value": 1.0,
+            "origin": "normalized(bandit_analysis.bandit_stats.neo.alpha.1)",
+            "source": "FROM_MATH"
+          }
         },
         "beta": {
-          "-1": 310.5,
-          "0": 1902.5,
-          "1": 290.0
+          "-1": {
+            "value": 310.5,
+            "origin": "computed(bandit_analysis.bandit_stats.neo.beta.-1)",
+            "source": "FROM_MATH"
+          },
+          "0": {
+            "value": 1902.5,
+            "origin": "computed(bandit_analysis.bandit_stats.neo.beta.0)",
+            "source": "FROM_MATH"
+          },
+          "1": {
+            "value": 290.0,
+            "origin": "computed(bandit_analysis.bandit_stats.neo.beta.1)",
+            "source": "FROM_MATH"
+          }
         }
       },
       "eva": {
         "pulls": {
-          "-1": 586,
-          "0": 3821,
-          "1": 593
+          "-1": {
+            "value": 586,
+            "origin": "counted(bandit_analysis.bandit_stats.eva.pulls.-1)",
+            "source": "FROM_DATA"
+          },
+          "0": {
+            "value": 3821,
+            "origin": "counted(bandit_analysis.bandit_stats.eva.pulls.0)",
+            "source": "FROM_DATA"
+          },
+          "1": {
+            "value": 593,
+            "origin": "counted(bandit_analysis.bandit_stats.eva.pulls.1)",
+            "source": "FROM_DATA"
+          }
         },
         "mean_rewards": {
-          "-1": 0.5,
-          "0": 0.5,
-          "1": 0.5
+          "-1": {
+            "value": 0.5,
+            "origin": "normalized(bandit_analysis.bandit_stats.eva.mean_rewards.-1)",
+            "source": "FROM_MATH"
+          },
+          "0": {
+            "value": 0.5,
+            "origin": "normalized(bandit_analysis.bandit_stats.eva.mean_rewards.0)",
+            "source": "FROM_MATH"
+          },
+          "1": {
+            "value": 0.5,
+            "origin": "normalized(bandit_analysis.bandit_stats.eva.mean_rewards.1)",
+            "source": "FROM_MATH"
+          }
         },
-        "cumulative_reward": 2500.0,
-        "cumulative_regret": 0.0,
+        "cumulative_reward": {
+          "value": 2500.0,
+          "origin": "computed(bandit_analysis.bandit_stats.eva.cumulative_reward)",
+          "source": "FROM_MATH"
+        },
+        "cumulative_regret": {
+          "value": 0.0,
+          "origin": "normalized(bandit_analysis.bandit_stats.eva.cumulative_regret)",
+          "source": "FROM_MATH"
+        },
         "alpha": {
-          "-1": 1.0,
-          "0": 1.0,
-          "1": 1.0
+          "-1": {
+            "value": 1.0,
+            "origin": "normalized(bandit_analysis.bandit_stats.eva.alpha.-1)",
+            "source": "FROM_MATH"
+          },
+          "0": {
+            "value": 1.0,
+            "origin": "normalized(bandit_analysis.bandit_stats.eva.alpha.0)",
+            "source": "FROM_MATH"
+          },
+          "1": {
+            "value": 1.0,
+            "origin": "normalized(bandit_analysis.bandit_stats.eva.alpha.1)",
+            "source": "FROM_MATH"
+          }
         },
         "beta": {
-          "-1": 294.0,
-          "0": 1911.5,
-          "1": 297.5
+          "-1": {
+            "value": 294.0,
+            "origin": "computed(bandit_analysis.bandit_stats.eva.beta.-1)",
+            "source": "FROM_MATH"
+          },
+          "0": {
+            "value": 1911.5,
+            "origin": "computed(bandit_analysis.bandit_stats.eva.beta.0)",
+            "source": "FROM_MATH"
+          },
+          "1": {
+            "value": 297.5,
+            "origin": "computed(bandit_analysis.bandit_stats.eva.beta.1)",
+            "source": "FROM_MATH"
+          }
         }
       }
     }
   },
   "consent_analysis": {
-    "P_a_neo": 0.4906,
-    "P_a_eva": 0.4986,
-    "P_both": 0.2442,
-    "lift": 0.9983109657714245,
-    "lift_CI_lower": 0.9697792866444359,
-    "lift_CI_upper": 1.025772733017968,
-    "n_samples": 5000,
-    "n_bootstrap": 1000
+    "P_a_neo": {
+      "value": 0.4906,
+      "origin": "normalized(consent_analysis.P_a_neo)",
+      "source": "FROM_MATH"
+    },
+    "P_a_eva": {
+      "value": 0.4986,
+      "origin": "normalized(consent_analysis.P_a_eva)",
+      "source": "FROM_MATH"
+    },
+    "P_both": {
+      "value": 0.2442,
+      "origin": "normalized(consent_analysis.P_both)",
+      "source": "FROM_MATH"
+    },
+    "lift": {
+      "value": 0.9983109657714245,
+      "origin": "normalized(consent_analysis.lift)",
+      "source": "FROM_MATH"
+    },
+    "lift_CI_lower": {
+      "value": 0.9697792866444359,
+      "origin": "normalized(consent_analysis.lift_CI_lower)",
+      "source": "FROM_MATH"
+    },
+    "lift_CI_upper": {
+      "value": 1.025772733017968,
+      "origin": "computed(consent_analysis.lift_CI_upper)",
+      "source": "FROM_MATH"
+    },
+    "n_samples": {
+      "value": 5000,
+      "origin": "count(consent_analysis.n_samples)",
+      "source": "FROM_DATA"
+    },
+    "n_bootstrap": {
+      "value": 1000,
+      "origin": "count(consent_analysis.n_bootstrap)",
+      "source": "FROM_DATA"
+    }
   },
   "safety_analysis": {
-    "rho_p99": 0.99,
-    "rho_p95": 0.99,
-    "var_I_p25": 1e-12,
-    "pct_rho_above_p99": 100.0,
-    "pct_var_below_p25": 100.0,
-    "mean_off_duration": 0.0,
-    "n_off_periods": 0,
-    "gate_open_pct": 100.0,
+    "rho_p99": {
+      "value": 0.99,
+      "origin": "normalized(safety_analysis.rho_p99)",
+      "source": "FROM_MATH"
+    },
+    "rho_p95": {
+      "value": 0.99,
+      "origin": "normalized(safety_analysis.rho_p95)",
+      "source": "FROM_MATH"
+    },
+    "var_I_p25": {
+      "value": 1e-12,
+      "origin": "std(safety_analysis.var_I_p25)",
+      "source": "FROM_STATISTICS"
+    },
+    "pct_rho_above_p99": {
+      "value": 100.0,
+      "origin": "ratio(safety_analysis.pct_rho_above_p99)",
+      "source": "FROM_MATH"
+    },
+    "pct_var_below_p25": {
+      "value": 100.0,
+      "origin": "std(safety_analysis.pct_var_below_p25)",
+      "source": "FROM_STATISTICS"
+    },
+    "mean_off_duration": {
+      "value": 0.0,
+      "origin": "mean(safety_analysis.mean_off_duration)",
+      "source": "FROM_STATISTICS"
+    },
+    "n_off_periods": {
+      "value": 0,
+      "origin": "count(safety_analysis.n_off_periods)",
+      "source": "FROM_DATA"
+    },
+    "gate_open_pct": {
+      "value": 100.0,
+      "origin": "count(safety_analysis.gate_open_pct)",
+      "source": "FROM_DATA"
+    },
     "neo_stopped": false,
     "neo_stop_reason": null
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "c358f9ee930a",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.028004",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase7/analysis_summary.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.028182",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 178,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 187,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 178,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 187,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

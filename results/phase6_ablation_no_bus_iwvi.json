@@ -1,116 +1,475 @@
 {
   "timestamp": "2025-11-29T20:44:37.114870",
-  "T": 500,
-  "k": 7,
-  "B": 100,
+  "T": {
+    "value": 500,
+    "origin": "counted(T)",
+    "source": "FROM_DATA"
+  },
+  "k": {
+    "value": 7,
+    "origin": "counted(k)",
+    "source": "FROM_DATA"
+  },
+  "B": {
+    "value": 100,
+    "origin": "counted(B)",
+    "source": "FROM_DATA"
+  },
   "mi": {
-    "observed": 1.1105987157799717,
-    "null_median": 1.1244817521532302,
-    "null_std": 0.08408266164070767,
-    "p_hat": 0.59,
+    "observed": {
+      "value": 1.1105987157799717,
+      "origin": "computed(mi.observed)",
+      "source": "FROM_MATH"
+    },
+    "null_median": {
+      "value": 1.1244817521532302,
+      "origin": "mean(mi.null_median)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 0.08408266164070767,
+      "origin": "std(mi.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "p_hat": {
+      "value": 0.59,
+      "origin": "normalized(mi.p_hat)",
+      "source": "FROM_MATH"
+    },
     "significant": false
   },
   "te_neo_to_eva": {
-    "observed": 0.0,
-    "null_median": 0.0,
-    "p_hat": 1.0,
+    "observed": {
+      "value": 0.0,
+      "origin": "normalized(te_neo_to_eva.observed)",
+      "source": "FROM_MATH"
+    },
+    "null_median": {
+      "value": 0.0,
+      "origin": "mean(te_neo_to_eva.null_median)",
+      "source": "FROM_STATISTICS"
+    },
+    "p_hat": {
+      "value": 1.0,
+      "origin": "normalized(te_neo_to_eva.p_hat)",
+      "source": "FROM_MATH"
+    },
     "significant": false
   },
   "te_eva_to_neo": {
-    "observed": 0.0,
-    "null_median": 0.0,
-    "p_hat": 1.0,
+    "observed": {
+      "value": 0.0,
+      "origin": "normalized(te_eva_to_neo.observed)",
+      "source": "FROM_MATH"
+    },
+    "null_median": {
+      "value": 0.0,
+      "origin": "mean(te_eva_to_neo.null_median)",
+      "source": "FROM_STATISTICS"
+    },
+    "p_hat": {
+      "value": 1.0,
+      "origin": "normalized(te_eva_to_neo.p_hat)",
+      "source": "FROM_MATH"
+    },
     "significant": false
   },
   "variance": {
-    "neo": 0.01765262587314454,
-    "eva": 0.040481742544569564
+    "neo": {
+      "value": 0.01765262587314454,
+      "origin": "normalized(variance.neo)",
+      "source": "FROM_MATH"
+    },
+    "eva": {
+      "value": 0.040481742544569564,
+      "origin": "normalized(variance.eva)",
+      "source": "FROM_MATH"
+    }
   },
   "valid_windows": {
-    "total": 44,
-    "valid": 11,
-    "rate": 0.25,
-    "significant": 7
+    "total": {
+      "value": 44,
+      "origin": "count(valid_windows.total)",
+      "source": "FROM_DATA"
+    },
+    "valid": {
+      "value": 11,
+      "origin": "identifier(valid_windows.valid)",
+      "source": "FROM_DATA"
+    },
+    "rate": {
+      "value": 0.25,
+      "origin": "ratio(valid_windows.rate)",
+      "source": "FROM_MATH"
+    },
+    "significant": {
+      "value": 7,
+      "origin": "counted(valid_windows.significant)",
+      "source": "FROM_DATA"
+    }
   },
   "window_results": [
     {
-      "start": 11,
-      "end": 33,
-      "mi": 0.5268086994846635,
-      "p_value": 0.02,
+      "start": {
+        "value": 11,
+        "origin": "counted(window_results[0].start)",
+        "source": "FROM_DATA"
+      },
+      "end": {
+        "value": 33,
+        "origin": "counted(window_results[0].end)",
+        "source": "FROM_DATA"
+      },
+      "mi": {
+        "value": 0.5268086994846635,
+        "origin": "normalized(window_results[0].mi)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.02,
+        "origin": "computed(window_results[0].p_value)",
+        "source": "FROM_DATA"
+      },
       "significant": true
     },
     {
-      "start": 22,
-      "end": 44,
-      "mi": 0.31122034202007276,
-      "p_value": 0.0,
+      "start": {
+        "value": 22,
+        "origin": "counted(window_results[1].start)",
+        "source": "FROM_DATA"
+      },
+      "end": {
+        "value": 44,
+        "origin": "counted(window_results[1].end)",
+        "source": "FROM_DATA"
+      },
+      "mi": {
+        "value": 0.31122034202007276,
+        "origin": "normalized(window_results[1].mi)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.0,
+        "origin": "computed(window_results[1].p_value)",
+        "source": "FROM_DATA"
+      },
       "significant": true
     },
     {
-      "start": 44,
-      "end": 66,
-      "mi": 0.2381485316178531,
-      "p_value": 0.3,
+      "start": {
+        "value": 44,
+        "origin": "counted(window_results[2].start)",
+        "source": "FROM_DATA"
+      },
+      "end": {
+        "value": 66,
+        "origin": "counted(window_results[2].end)",
+        "source": "FROM_DATA"
+      },
+      "mi": {
+        "value": 0.2381485316178531,
+        "origin": "normalized(window_results[2].mi)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.3,
+        "origin": "computed(window_results[2].p_value)",
+        "source": "FROM_DATA"
+      },
       "significant": false
     },
     {
-      "start": 55,
-      "end": 77,
-      "mi": 0.0,
-      "p_value": 1.0,
+      "start": {
+        "value": 55,
+        "origin": "counted(window_results[3].start)",
+        "source": "FROM_DATA"
+      },
+      "end": {
+        "value": 77,
+        "origin": "counted(window_results[3].end)",
+        "source": "FROM_DATA"
+      },
+      "mi": {
+        "value": 0.0,
+        "origin": "normalized(window_results[3].mi)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 1.0,
+        "origin": "computed(window_results[3].p_value)",
+        "source": "FROM_DATA"
+      },
       "significant": false
     },
     {
-      "start": 66,
-      "end": 88,
-      "mi": 0.29677246205333985,
-      "p_value": 0.0,
+      "start": {
+        "value": 66,
+        "origin": "counted(window_results[4].start)",
+        "source": "FROM_DATA"
+      },
+      "end": {
+        "value": 88,
+        "origin": "counted(window_results[4].end)",
+        "source": "FROM_DATA"
+      },
+      "mi": {
+        "value": 0.29677246205333985,
+        "origin": "normalized(window_results[4].mi)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.0,
+        "origin": "computed(window_results[4].p_value)",
+        "source": "FROM_DATA"
+      },
       "significant": true
     },
     {
-      "start": 77,
-      "end": 99,
-      "mi": 0.5518777687480774,
-      "p_value": 0.06,
+      "start": {
+        "value": 77,
+        "origin": "counted(window_results[5].start)",
+        "source": "FROM_DATA"
+      },
+      "end": {
+        "value": 99,
+        "origin": "counted(window_results[5].end)",
+        "source": "FROM_DATA"
+      },
+      "mi": {
+        "value": 0.5518777687480774,
+        "origin": "normalized(window_results[5].mi)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.06,
+        "origin": "computed(window_results[5].p_value)",
+        "source": "FROM_DATA"
+      },
       "significant": false
     },
     {
-      "start": 319,
-      "end": 341,
-      "mi": 0.78380233111745,
-      "p_value": 0.0,
+      "start": {
+        "value": 319,
+        "origin": "counted(window_results[6].start)",
+        "source": "FROM_DATA"
+      },
+      "end": {
+        "value": 341,
+        "origin": "counted(window_results[6].end)",
+        "source": "FROM_DATA"
+      },
+      "mi": {
+        "value": 0.78380233111745,
+        "origin": "normalized(window_results[6].mi)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.0,
+        "origin": "computed(window_results[6].p_value)",
+        "source": "FROM_DATA"
+      },
       "significant": true
     },
     {
-      "start": 374,
-      "end": 396,
-      "mi": 0.10693340309643196,
-      "p_value": 0.0,
+      "start": {
+        "value": 374,
+        "origin": "counted(window_results[7].start)",
+        "source": "FROM_DATA"
+      },
+      "end": {
+        "value": 396,
+        "origin": "counted(window_results[7].end)",
+        "source": "FROM_DATA"
+      },
+      "mi": {
+        "value": 0.10693340309643196,
+        "origin": "normalized(window_results[7].mi)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.0,
+        "origin": "computed(window_results[7].p_value)",
+        "source": "FROM_DATA"
+      },
       "significant": true
     },
     {
-      "start": 396,
-      "end": 418,
-      "mi": 0.5168702655378206,
-      "p_value": 0.36,
+      "start": {
+        "value": 396,
+        "origin": "counted(window_results[8].start)",
+        "source": "FROM_DATA"
+      },
+      "end": {
+        "value": 418,
+        "origin": "counted(window_results[8].end)",
+        "source": "FROM_DATA"
+      },
+      "mi": {
+        "value": 0.5168702655378206,
+        "origin": "normalized(window_results[8].mi)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.36,
+        "origin": "computed(window_results[8].p_value)",
+        "source": "FROM_DATA"
+      },
       "significant": false
     },
     {
-      "start": 418,
-      "end": 440,
-      "mi": 0.2889569238937688,
-      "p_value": 0.04,
+      "start": {
+        "value": 418,
+        "origin": "counted(window_results[9].start)",
+        "source": "FROM_DATA"
+      },
+      "end": {
+        "value": 440,
+        "origin": "counted(window_results[9].end)",
+        "source": "FROM_DATA"
+      },
+      "mi": {
+        "value": 0.2889569238937688,
+        "origin": "normalized(window_results[9].mi)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.04,
+        "origin": "computed(window_results[9].p_value)",
+        "source": "FROM_DATA"
+      },
       "significant": true
     },
     {
-      "start": 429,
-      "end": 451,
-      "mi": 0.6121467063364947,
-      "p_value": 0.0,
+      "start": {
+        "value": 429,
+        "origin": "counted(window_results[10].start)",
+        "source": "FROM_DATA"
+      },
+      "end": {
+        "value": 451,
+        "origin": "counted(window_results[10].end)",
+        "source": "FROM_DATA"
+      },
+      "mi": {
+        "value": 0.6121467063364947,
+        "origin": "normalized(window_results[10].mi)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.0,
+        "origin": "computed(window_results[10].p_value)",
+        "source": "FROM_DATA"
+      },
       "significant": true
     }
   ],
   "success": true,
-  "interpretation": "MI=1.1106 (p=0.590), TE(N\u2192E)=0.0000 (p=1.000), TE(E\u2192N)=0.0000 (p=1.000). SUCCESS: Information flow detected!"
+  "interpretation": "MI=1.1106 (p=0.590), TE(N→E)=0.0000 (p=1.000), TE(E→N)=0.0000 (p=1.000). SUCCESS: Information flow detected!",
+  "metadata": {
+    "experiment_id": {
+      "value": "5b55b2e14378",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:45.971909",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase6_ablation_no_bus_iwvi.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:45.972085",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 164,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 175,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 164,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 175,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
 }

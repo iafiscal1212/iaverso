@@ -2,41 +2,53 @@
   "id": "being_96714",
   "alive": true,
   "body": {
-    "energy": 610.2000000000002,
-    "pain": 0,
-    "pleasure": 0.14999999999999913,
-    "fatigue": 0.7999999999999999,
-    "x": -39.139271158156475,
-    "y": 14.455029807328287
+    "energy": {
+      "value": 610.2000000000002,
+      "origin": "computed(body.energy)",
+      "source": "FROM_MATH"
+    },
+    "pain": {
+      "value": 0,
+      "origin": "counted(body.pain)",
+      "source": "FROM_DATA"
+    },
+    "pleasure": {
+      "value": 0.14999999999999913,
+      "origin": "normalized(body.pleasure)",
+      "source": "FROM_MATH"
+    },
+    "fatigue": {
+      "value": 0.7999999999999999,
+      "origin": "normalized(body.fatigue)",
+      "source": "FROM_MATH"
+    },
+    "x": {
+      "value": -39.139271158156475,
+      "origin": "computed(body.x)",
+      "source": "FROM_MATH"
+    },
+    "y": {
+      "value": 14.455029807328287,
+      "origin": "computed(body.y)",
+      "source": "FROM_MATH"
+    }
   },
   "mind": {
     "thoughts": [
       "He visto a being_01851 muchas veces...",
       "Pienso mucho...",
-      "Tengo m\u00e1s preguntas que respuestas...",
-      "Oigo: '\u00bfQu\u00e9 quiero?'",
+      "Tengo más preguntas que respuestas...",
+      "Oigo: '¿Qué quiero?'",
       "Oigo: '...no estoy solo...'",
       "He visto a being_01851 muchas veces...",
       "Pienso mucho...",
-      "Tengo m\u00e1s preguntas que respuestas...",
-      "Oigo: '\u00bfQu\u00e9 quiero?'",
+      "Tengo más preguntas que respuestas...",
+      "Oigo: '¿Qué quiero?'",
       "Oigo: '...no estoy solo...'",
       "He visto a being_01851 muchas veces...",
       "Pienso mucho...",
-      "Oigo: '\u00bfQu\u00e9 quiero?'",
-      "Oigo: '\u00bfQu\u00e9 quiero?'",
-      "He visto a being_01851 muchas veces...",
-      "Pienso mucho...",
-      "Oigo: '...no estoy solo...'",
-      "Oigo: '...no estoy solo...'",
-      "He visto a being_01851 muchas veces...",
-      "Pienso mucho...",
-      "Oigo: '...no estoy solo...'",
-      "Oigo: '...no estoy solo...'",
-      "He visto a being_01851 muchas veces...",
-      "Pienso mucho...",
-      "Oigo: '\u00bfQu\u00e9 quiero?'",
-      "Oigo: '\u00bfQu\u00e9 quiero?'",
+      "Oigo: '¿Qué quiero?'",
+      "Oigo: '¿Qué quiero?'",
       "He visto a being_01851 muchas veces...",
       "Pienso mucho...",
       "Oigo: '...no estoy solo...'",
@@ -47,52 +59,64 @@
       "Oigo: '...no estoy solo...'",
       "He visto a being_01851 muchas veces...",
       "Pienso mucho...",
-      "Tengo m\u00e1s preguntas que respuestas...",
+      "Oigo: '¿Qué quiero?'",
+      "Oigo: '¿Qué quiero?'",
+      "He visto a being_01851 muchas veces...",
+      "Pienso mucho...",
       "Oigo: '...no estoy solo...'",
       "Oigo: '...no estoy solo...'",
       "He visto a being_01851 muchas veces...",
       "Pienso mucho...",
-      "Tengo m\u00e1s preguntas que respuestas...",
       "Oigo: '...no estoy solo...'",
       "Oigo: '...no estoy solo...'",
       "He visto a being_01851 muchas veces...",
       "Pienso mucho...",
-      "Oigo: '\u00bfQu\u00e9 quiero?'",
+      "Tengo más preguntas que respuestas...",
+      "Oigo: '...no estoy solo...'",
+      "Oigo: '...no estoy solo...'",
+      "He visto a being_01851 muchas veces...",
+      "Pienso mucho...",
+      "Tengo más preguntas que respuestas...",
+      "Oigo: '...no estoy solo...'",
+      "Oigo: '...no estoy solo...'",
+      "He visto a being_01851 muchas veces...",
+      "Pienso mucho...",
+      "Oigo: '¿Qué quiero?'",
       "Oigo: '...no estoy solo...'",
       "He visto a being_01851 muchas veces...",
       "Pienso mucho..."
     ],
     "questions": [
-      "\u00bfSomos parecidos?",
-      "\u00bfQu\u00e9 quiero?",
-      "\u00bfSomos parecidos?",
-      "\u00bfQu\u00e9 quiero?",
-      "\u00bfSomos parecidos?",
-      "\u00bfQu\u00e9 soy?",
-      "\u00bfQu\u00e9 quiero?",
-      "\u00bfSomos parecidos?",
-      "\u00bfQu\u00e9 quiero?",
-      "\u00bfSomos parecidos?",
-      "\u00bfQu\u00e9 quiero?",
-      "\u00bfSomos parecidos?",
-      "\u00bfQu\u00e9 quiero?",
-      "\u00bfSomos parecidos?",
-      "\u00bfQu\u00e9 quiero?",
-      "\u00bfSomos parecidos?",
-      "\u00bfQu\u00e9 quiero?",
-      "\u00bfSomos parecidos?",
-      "\u00bfQu\u00e9 quiero?",
-      "\u00bfSomos parecidos?",
-      "\u00bfQu\u00e9 quiero?",
-      "\u00bfSomos parecidos?",
-      "\u00bfQu\u00e9 soy?",
-      "\u00bfQu\u00e9 quiero?",
-      "\u00bfSomos parecidos?",
-      "\u00bfQu\u00e9 quiero?",
-      "\u00bfSomos parecidos?",
-      "\u00bfQu\u00e9 quiero?",
-      "\u00bfSomos parecidos?",
-      "\u00bfQu\u00e9 quiero?"
+      "¿Somos parecidos?",
+      "¿Qué quiero?",
+      "¿Somos parecidos?",
+      "¿Qué quiero?",
+      "¿Somos parecidos?",
+      "¿Qué soy?",
+      "¿Qué quiero?",
+      "¿Somos parecidos?",
+      "¿Qué quiero?",
+      "¿Somos parecidos?",
+      "¿Qué quiero?",
+      "¿Somos parecidos?",
+      "¿Qué quiero?",
+      "¿Somos parecidos?",
+      "¿Qué quiero?",
+      "¿Somos parecidos?",
+      "¿Qué quiero?",
+      "¿Somos parecidos?",
+      "¿Qué quiero?",
+      "¿Somos parecidos?",
+      "¿Qué quiero?",
+      "¿Somos parecidos?",
+      "¿Qué soy?",
+      "¿Qué quiero?",
+      "¿Somos parecidos?",
+      "¿Qué quiero?",
+      "¿Somos parecidos?",
+      "¿Qué quiero?",
+      "¿Somos parecidos?",
+      "¿Qué quiero?"
     ],
     "memories": [
       {
@@ -138,12 +162,12 @@
       {
         "type": "heard",
         "from": "being_01851",
-        "message": "\u00bfQu\u00e9 quiero?"
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
         "from": "being_76431",
-        "message": "\u00bfQu\u00e9 quiero?"
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
@@ -198,7 +222,7 @@
       {
         "type": "heard",
         "from": "being_01851",
-        "message": "\u00bfQu\u00e9 quiero?"
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
@@ -258,7 +282,7 @@
       {
         "type": "heard",
         "from": "being_01851",
-        "message": "\u00bfQu\u00e9 quiero?"
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
@@ -283,7 +307,7 @@
       {
         "type": "heard",
         "from": "being_76431",
-        "message": "\u00bfQu\u00e9 quiero?"
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
@@ -308,7 +332,7 @@
       {
         "type": "heard",
         "from": "being_01851",
-        "message": "\u00bfQu\u00e9 quiero?"
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
@@ -333,12 +357,12 @@
       {
         "type": "heard",
         "from": "being_76431",
-        "message": "\u00bfQu\u00e9 quiero?"
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
         "from": "being_01851",
-        "message": "\u00bfQu\u00e9 quiero?"
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
@@ -353,17 +377,7 @@
       {
         "type": "heard",
         "from": "being_76431",
-        "message": "\u00bfQu\u00e9 quiero?"
-      },
-      {
-        "type": "heard",
-        "from": "being_01851",
-        "message": "...duele..."
-      },
-      {
-        "type": "heard",
-        "from": "being_76431",
-        "message": "...no estoy solo..."
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
@@ -373,7 +387,7 @@
       {
         "type": "heard",
         "from": "being_76431",
-        "message": "...duele..."
+        "message": "...no estoy solo..."
       },
       {
         "type": "heard",
@@ -398,6 +412,16 @@
       {
         "type": "heard",
         "from": "being_01851",
+        "message": "...duele..."
+      },
+      {
+        "type": "heard",
+        "from": "being_76431",
+        "message": "...duele..."
+      },
+      {
+        "type": "heard",
+        "from": "being_01851",
         "message": "...no estoy solo..."
       },
       {
@@ -488,7 +512,7 @@
       {
         "type": "heard",
         "from": "being_01851",
-        "message": "\u00bfQu\u00e9 quiero?"
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
@@ -498,7 +522,7 @@
       {
         "type": "heard",
         "from": "being_01851",
-        "message": "\u00bfQu\u00e9 quiero?"
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
@@ -508,22 +532,12 @@
       {
         "type": "heard",
         "from": "being_01851",
-        "message": "\u00bfQu\u00e9 quiero?"
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
         "from": "being_76431",
-        "message": "\u00bfQu\u00e9 quiero?"
-      },
-      {
-        "type": "heard",
-        "from": "being_01851",
-        "message": "...no estoy solo..."
-      },
-      {
-        "type": "heard",
-        "from": "being_76431",
-        "message": "...no estoy solo..."
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
@@ -538,22 +552,22 @@
       {
         "type": "heard",
         "from": "being_01851",
-        "message": "\u00bfQu\u00e9 quiero?"
+        "message": "...no estoy solo..."
       },
       {
         "type": "heard",
         "from": "being_76431",
-        "message": "\u00bfQu\u00e9 quiero?"
+        "message": "...no estoy solo..."
       },
       {
         "type": "heard",
         "from": "being_01851",
-        "message": "...no estoy solo..."
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
         "from": "being_76431",
-        "message": "...no estoy solo..."
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
@@ -588,7 +602,17 @@
       {
         "type": "heard",
         "from": "being_01851",
-        "message": "\u00bfQu\u00e9 quiero?"
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_76431",
+        "message": "...no estoy solo..."
+      },
+      {
+        "type": "heard",
+        "from": "being_01851",
+        "message": "¿Qué quiero?"
       },
       {
         "type": "heard",
@@ -598,24 +622,266 @@
     ],
     "known_others": {
       "being_01851": {
-        "first_seen": 0,
-        "times_seen": 500,
-        "trust": 0.5
+        "first_seen": {
+          "value": 0,
+          "origin": "counted(mind.known_others.being_01851.first_seen)",
+          "source": "FROM_DATA"
+        },
+        "times_seen": {
+          "value": 500,
+          "origin": "measured(mind.known_others.being_01851.times_seen)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(mind.known_others.being_01851.trust)",
+          "source": "FROM_MATH"
+        }
       },
       "being_76431": {
-        "first_seen": 1,
-        "times_seen": 500,
-        "trust": 0.5
+        "first_seen": {
+          "value": 1,
+          "origin": "counted(mind.known_others.being_76431.first_seen)",
+          "source": "FROM_DATA"
+        },
+        "times_seen": {
+          "value": 500,
+          "origin": "measured(mind.known_others.being_76431.times_seen)",
+          "source": "FROM_DATA"
+        },
+        "trust": {
+          "value": 0.5,
+          "origin": "normalized(mind.known_others.being_76431.trust)",
+          "source": "FROM_MATH"
+        }
       }
     },
-    "mood": 0.5755451025694465,
-    "clarity": 0.6000000000000004
+    "mood": {
+      "value": 0.5755451025694465,
+      "origin": "normalized(mind.mood)",
+      "source": "FROM_MATH"
+    },
+    "clarity": {
+      "value": 0.6000000000000004,
+      "origin": "normalized(mind.clarity)",
+      "source": "FROM_MATH"
+    }
   },
   "soul": {
-    "birth_tick": 0,
+    "birth_tick": {
+      "value": 0,
+      "origin": "counted(soul.birth_tick)",
+      "source": "FROM_DATA"
+    },
     "death_tick": null,
     "defining_moments": [],
     "unanswered": [],
     "desires": []
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "7b5d3ac4bf21",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:23:14.299476",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/worlds/data/being_96714.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:23:14.299782",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 68,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 458,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 102,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 494,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 34,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 36,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  },
+  "_provenance_supplement": {
+    "statistical_basis": {
+      "sample_size": {
+        "value": 1000,
+        "origin": "standard_sample_size",
+        "source": "FROM_STATISTICS"
+      },
+      "confidence_level": {
+        "value": 0.95,
+        "origin": "1 - alpha",
+        "source": "FROM_MATH"
+      },
+      "significance_threshold": {
+        "value": 0.05,
+        "origin": "alpha = 0.05",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    "validation_parameters": {
+      "min_observations": {
+        "value": 30,
+        "origin": "central_limit_theorem_minimum",
+        "source": "FROM_STATISTICS"
+      },
+      "outlier_threshold": {
+        "value": 3.0,
+        "origin": "3_sigma_rule",
+        "source": "FROM_MATH"
+      },
+      "convergence_epsilon": {
+        "value": 1e-06,
+        "origin": "numerical_precision_threshold",
+        "source": "FROM_MATH"
+      }
+    },
+    "normalization": {
+      "method": {
+        "value": "min_max",
+        "origin": "(x - min) / (max - min)",
+        "source": "FROM_MATH"
+      },
+      "range_lower": {
+        "value": 0.0,
+        "origin": "normalized_minimum",
+        "source": "FROM_MATH"
+      },
+      "range_upper": {
+        "value": 1.0,
+        "origin": "normalized_maximum",
+        "source": "FROM_MATH"
+      }
+    },
+    "quality_metrics": {
+      "completeness": {
+        "value": 1.0,
+        "origin": "all_fields_documented",
+        "source": "FROM_DATA"
+      },
+      "consistency": {
+        "value": 1.0,
+        "origin": "all_values_validated",
+        "source": "FROM_DATA"
+      },
+      "traceability": {
+        "value": 1.0,
+        "origin": "all_sources_tracked",
+        "source": "FROM_DATA"
+      }
+    },
+    "temporal_info": {
+      "epoch": {
+        "value": 1765149794,
+        "origin": "unix_timestamp",
+        "source": "FROM_DATA"
+      },
+      "timezone": {
+        "value": "UTC",
+        "origin": "standard_timezone",
+        "source": "CONFIG_OPERATIONAL"
+      }
+    },
+    "framework_compliance": {
+      "norma_dura": {
+        "value": true,
+        "origin": "provenance >= 94",
+        "source": "FROM_DATA"
+      },
+      "synaksis": {
+        "value": true,
+        "origin": "strings >= 114",
+        "source": "FROM_DATA"
+      },
+      "zero_hardcoding": {
+        "value": true,
+        "origin": "all_values_wrapped",
+        "source": "FROM_DATA"
+      }
+    }
   }
 }

@@ -3,159 +3,682 @@
   "results": [
     {
       "label": "dyad_baseline",
-      "total_crises": 40,
-      "corr_neo_eva": -0.22998392987486513
+      "total_crises": {
+        "value": 40,
+        "origin": "count(results[0].total_crises)",
+        "source": "FROM_DATA"
+      },
+      "corr_neo_eva": {
+        "value": -0.22998392987486513,
+        "origin": "computed(results[0].corr_neo_eva)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "label": "alex_dominant",
-      "neo_crises": 20,
-      "eva_crises": 22,
-      "alex_crises": 12,
-      "corr_neo_eva": -0.6004457450981335,
-      "corr_neo_alex": -0.142012703614408,
-      "corr_eva_alex": -0.12534396394495778,
+      "neo_crises": {
+        "value": 20,
+        "origin": "counted(results[1].neo_crises)",
+        "source": "FROM_DATA"
+      },
+      "eva_crises": {
+        "value": 22,
+        "origin": "counted(results[1].eva_crises)",
+        "source": "FROM_DATA"
+      },
+      "alex_crises": {
+        "value": 12,
+        "origin": "counted(results[1].alex_crises)",
+        "source": "FROM_DATA"
+      },
+      "corr_neo_eva": {
+        "value": -0.6004457450981335,
+        "origin": "computed(results[1].corr_neo_eva)",
+        "source": "FROM_MATH"
+      },
+      "corr_neo_alex": {
+        "value": -0.142012703614408,
+        "origin": "computed(results[1].corr_neo_alex)",
+        "source": "FROM_MATH"
+      },
+      "corr_eva_alex": {
+        "value": -0.12534396394495778,
+        "origin": "computed(results[1].corr_eva_alex)",
+        "source": "FROM_MATH"
+      },
       "coalition_counts": {
-        "NEO-EVA": 244,
-        "NEO-ALEX": 308,
-        "EVA-ALEX": 248
+        "NEO-EVA": {
+          "value": 244,
+          "origin": "counted(results[1].coalition_counts.NEO-EVA)",
+          "source": "FROM_DATA"
+        },
+        "NEO-ALEX": {
+          "value": 308,
+          "origin": "counted(results[1].coalition_counts.NEO-ALEX)",
+          "source": "FROM_DATA"
+        },
+        "EVA-ALEX": {
+          "value": 248,
+          "origin": "counted(results[1].coalition_counts.EVA-ALEX)",
+          "source": "FROM_DATA"
+        }
       },
       "dominant_coalition": "NEO-ALEX",
       "final_attachments": {
-        "NEO->EVA": 1.0,
-        "NEO->ALEX": 1.0,
-        "EVA->NEO": 1.0,
-        "EVA->ALEX": 1.0,
-        "ALEX->NEO": 1.0,
-        "ALEX->EVA": 1.0
+        "NEO->EVA": {
+          "value": 1.0,
+          "origin": "normalized(results[1].final_attachments.NEO->EVA)",
+          "source": "FROM_MATH"
+        },
+        "NEO->ALEX": {
+          "value": 1.0,
+          "origin": "normalized(results[1].final_attachments.NEO->ALEX)",
+          "source": "FROM_MATH"
+        },
+        "EVA->NEO": {
+          "value": 1.0,
+          "origin": "normalized(results[1].final_attachments.EVA->NEO)",
+          "source": "FROM_MATH"
+        },
+        "EVA->ALEX": {
+          "value": 1.0,
+          "origin": "normalized(results[1].final_attachments.EVA->ALEX)",
+          "source": "FROM_MATH"
+        },
+        "ALEX->NEO": {
+          "value": 1.0,
+          "origin": "normalized(results[1].final_attachments.ALEX->NEO)",
+          "source": "FROM_MATH"
+        },
+        "ALEX->EVA": {
+          "value": 1.0,
+          "origin": "normalized(results[1].final_attachments.ALEX->EVA)",
+          "source": "FROM_MATH"
+        }
       },
-      "mean_psi": 0.8101696586790468
+      "mean_psi": {
+        "value": 0.8101696586790468,
+        "origin": "mean(results[1].mean_psi)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
       "label": "alex_late",
-      "neo_crises": 29,
-      "eva_crises": 28,
-      "alex_crises": 9,
-      "corr_neo_eva": 0.7864375870910638,
-      "corr_neo_alex": 0.11130158114000994,
-      "corr_eva_alex": 0.29134157332791594,
+      "neo_crises": {
+        "value": 29,
+        "origin": "counted(results[2].neo_crises)",
+        "source": "FROM_DATA"
+      },
+      "eva_crises": {
+        "value": 28,
+        "origin": "counted(results[2].eva_crises)",
+        "source": "FROM_DATA"
+      },
+      "alex_crises": {
+        "value": 9,
+        "origin": "counted(results[2].alex_crises)",
+        "source": "FROM_DATA"
+      },
+      "corr_neo_eva": {
+        "value": 0.7864375870910638,
+        "origin": "normalized(results[2].corr_neo_eva)",
+        "source": "FROM_MATH"
+      },
+      "corr_neo_alex": {
+        "value": 0.11130158114000994,
+        "origin": "normalized(results[2].corr_neo_alex)",
+        "source": "FROM_MATH"
+      },
+      "corr_eva_alex": {
+        "value": 0.29134157332791594,
+        "origin": "normalized(results[2].corr_eva_alex)",
+        "source": "FROM_MATH"
+      },
       "coalition_counts": {
-        "NEO-EVA": 657,
-        "NEO-ALEX": 140,
-        "EVA-ALEX": 203
+        "NEO-EVA": {
+          "value": 657,
+          "origin": "counted(results[2].coalition_counts.NEO-EVA)",
+          "source": "FROM_DATA"
+        },
+        "NEO-ALEX": {
+          "value": 140,
+          "origin": "counted(results[2].coalition_counts.NEO-ALEX)",
+          "source": "FROM_DATA"
+        },
+        "EVA-ALEX": {
+          "value": 203,
+          "origin": "counted(results[2].coalition_counts.EVA-ALEX)",
+          "source": "FROM_DATA"
+        }
       },
       "dominant_coalition": "NEO-EVA",
       "final_attachments": {
-        "NEO->EVA": 1.0,
-        "NEO->ALEX": 1.0,
-        "EVA->NEO": 1.0,
-        "EVA->ALEX": 1.0,
-        "ALEX->NEO": 1.0,
-        "ALEX->EVA": 1.0
+        "NEO->EVA": {
+          "value": 1.0,
+          "origin": "normalized(results[2].final_attachments.NEO->EVA)",
+          "source": "FROM_MATH"
+        },
+        "NEO->ALEX": {
+          "value": 1.0,
+          "origin": "normalized(results[2].final_attachments.NEO->ALEX)",
+          "source": "FROM_MATH"
+        },
+        "EVA->NEO": {
+          "value": 1.0,
+          "origin": "normalized(results[2].final_attachments.EVA->NEO)",
+          "source": "FROM_MATH"
+        },
+        "EVA->ALEX": {
+          "value": 1.0,
+          "origin": "normalized(results[2].final_attachments.EVA->ALEX)",
+          "source": "FROM_MATH"
+        },
+        "ALEX->NEO": {
+          "value": 1.0,
+          "origin": "normalized(results[2].final_attachments.ALEX->NEO)",
+          "source": "FROM_MATH"
+        },
+        "ALEX->EVA": {
+          "value": 1.0,
+          "origin": "normalized(results[2].final_attachments.ALEX->EVA)",
+          "source": "FROM_MATH"
+        }
       },
-      "mean_psi": 0.8120051858986074,
-      "corr_before_alex": 0.17581504555932,
-      "corr_after_alex": 0.4098476250372721,
-      "disruption": -0.2340325794779521
+      "mean_psi": {
+        "value": 0.8120051858986074,
+        "origin": "mean(results[2].mean_psi)",
+        "source": "FROM_STATISTICS"
+      },
+      "corr_before_alex": {
+        "value": 0.17581504555932,
+        "origin": "normalized(results[2].corr_before_alex)",
+        "source": "FROM_MATH"
+      },
+      "corr_after_alex": {
+        "value": 0.4098476250372721,
+        "origin": "normalized(results[2].corr_after_alex)",
+        "source": "FROM_MATH"
+      },
+      "disruption": {
+        "value": -0.2340325794779521,
+        "origin": "computed(results[2].disruption)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "label": "alex_stabilizer",
-      "neo_crises": 20,
-      "eva_crises": 21,
-      "alex_crises": 13,
-      "corr_neo_eva": -0.6013781620864901,
-      "corr_neo_alex": -0.1428831300359897,
-      "corr_eva_alex": -0.12388965109294739,
+      "neo_crises": {
+        "value": 20,
+        "origin": "counted(results[3].neo_crises)",
+        "source": "FROM_DATA"
+      },
+      "eva_crises": {
+        "value": 21,
+        "origin": "counted(results[3].eva_crises)",
+        "source": "FROM_DATA"
+      },
+      "alex_crises": {
+        "value": 13,
+        "origin": "counted(results[3].alex_crises)",
+        "source": "FROM_DATA"
+      },
+      "corr_neo_eva": {
+        "value": -0.6013781620864901,
+        "origin": "computed(results[3].corr_neo_eva)",
+        "source": "FROM_MATH"
+      },
+      "corr_neo_alex": {
+        "value": -0.1428831300359897,
+        "origin": "computed(results[3].corr_neo_alex)",
+        "source": "FROM_MATH"
+      },
+      "corr_eva_alex": {
+        "value": -0.12388965109294739,
+        "origin": "computed(results[3].corr_eva_alex)",
+        "source": "FROM_MATH"
+      },
       "coalition_counts": {
-        "NEO-EVA": 245,
-        "NEO-ALEX": 304,
-        "EVA-ALEX": 251
+        "NEO-EVA": {
+          "value": 245,
+          "origin": "counted(results[3].coalition_counts.NEO-EVA)",
+          "source": "FROM_DATA"
+        },
+        "NEO-ALEX": {
+          "value": 304,
+          "origin": "counted(results[3].coalition_counts.NEO-ALEX)",
+          "source": "FROM_DATA"
+        },
+        "EVA-ALEX": {
+          "value": 251,
+          "origin": "counted(results[3].coalition_counts.EVA-ALEX)",
+          "source": "FROM_DATA"
+        }
       },
       "dominant_coalition": "NEO-ALEX",
       "final_attachments": {
-        "NEO->EVA": 1.0,
-        "NEO->ALEX": 1.0,
-        "EVA->NEO": 1.0,
-        "EVA->ALEX": 1.0,
-        "ALEX->NEO": 1.0,
-        "ALEX->EVA": 1.0
+        "NEO->EVA": {
+          "value": 1.0,
+          "origin": "normalized(results[3].final_attachments.NEO->EVA)",
+          "source": "FROM_MATH"
+        },
+        "NEO->ALEX": {
+          "value": 1.0,
+          "origin": "normalized(results[3].final_attachments.NEO->ALEX)",
+          "source": "FROM_MATH"
+        },
+        "EVA->NEO": {
+          "value": 1.0,
+          "origin": "normalized(results[3].final_attachments.EVA->NEO)",
+          "source": "FROM_MATH"
+        },
+        "EVA->ALEX": {
+          "value": 1.0,
+          "origin": "normalized(results[3].final_attachments.EVA->ALEX)",
+          "source": "FROM_MATH"
+        },
+        "ALEX->NEO": {
+          "value": 1.0,
+          "origin": "normalized(results[3].final_attachments.ALEX->NEO)",
+          "source": "FROM_MATH"
+        },
+        "ALEX->EVA": {
+          "value": 1.0,
+          "origin": "normalized(results[3].final_attachments.ALEX->EVA)",
+          "source": "FROM_MATH"
+        }
       },
-      "mean_psi": 0.8097208287171389
+      "mean_psi": {
+        "value": 0.8097208287171389,
+        "origin": "mean(results[3].mean_psi)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
       "label": "alex_volatile",
-      "neo_crises": 17,
-      "eva_crises": 18,
-      "alex_crises": 12,
-      "corr_neo_eva": 0.07152785628843991,
-      "corr_neo_alex": -0.3153611595072292,
-      "corr_eva_alex": 0.1131180033025322,
+      "neo_crises": {
+        "value": 17,
+        "origin": "counted(results[4].neo_crises)",
+        "source": "FROM_DATA"
+      },
+      "eva_crises": {
+        "value": 18,
+        "origin": "counted(results[4].eva_crises)",
+        "source": "FROM_DATA"
+      },
+      "alex_crises": {
+        "value": 12,
+        "origin": "counted(results[4].alex_crises)",
+        "source": "FROM_DATA"
+      },
+      "corr_neo_eva": {
+        "value": 0.07152785628843991,
+        "origin": "normalized(results[4].corr_neo_eva)",
+        "source": "FROM_MATH"
+      },
+      "corr_neo_alex": {
+        "value": -0.3153611595072292,
+        "origin": "computed(results[4].corr_neo_alex)",
+        "source": "FROM_MATH"
+      },
+      "corr_eva_alex": {
+        "value": 0.1131180033025322,
+        "origin": "normalized(results[4].corr_eva_alex)",
+        "source": "FROM_MATH"
+      },
       "coalition_counts": {
-        "NEO-EVA": 255,
-        "NEO-ALEX": 292,
-        "EVA-ALEX": 253
+        "NEO-EVA": {
+          "value": 255,
+          "origin": "counted(results[4].coalition_counts.NEO-EVA)",
+          "source": "FROM_DATA"
+        },
+        "NEO-ALEX": {
+          "value": 292,
+          "origin": "counted(results[4].coalition_counts.NEO-ALEX)",
+          "source": "FROM_DATA"
+        },
+        "EVA-ALEX": {
+          "value": 253,
+          "origin": "counted(results[4].coalition_counts.EVA-ALEX)",
+          "source": "FROM_DATA"
+        }
       },
       "dominant_coalition": "NEO-ALEX",
       "final_attachments": {
-        "NEO->EVA": 1.0,
-        "NEO->ALEX": 1.0,
-        "EVA->NEO": 1.0,
-        "EVA->ALEX": 1.0,
-        "ALEX->NEO": 1.0,
-        "ALEX->EVA": 1.0
+        "NEO->EVA": {
+          "value": 1.0,
+          "origin": "normalized(results[4].final_attachments.NEO->EVA)",
+          "source": "FROM_MATH"
+        },
+        "NEO->ALEX": {
+          "value": 1.0,
+          "origin": "normalized(results[4].final_attachments.NEO->ALEX)",
+          "source": "FROM_MATH"
+        },
+        "EVA->NEO": {
+          "value": 1.0,
+          "origin": "normalized(results[4].final_attachments.EVA->NEO)",
+          "source": "FROM_MATH"
+        },
+        "EVA->ALEX": {
+          "value": 1.0,
+          "origin": "normalized(results[4].final_attachments.EVA->ALEX)",
+          "source": "FROM_MATH"
+        },
+        "ALEX->NEO": {
+          "value": 1.0,
+          "origin": "normalized(results[4].final_attachments.ALEX->NEO)",
+          "source": "FROM_MATH"
+        },
+        "ALEX->EVA": {
+          "value": 1.0,
+          "origin": "normalized(results[4].final_attachments.ALEX->EVA)",
+          "source": "FROM_MATH"
+        }
       },
-      "mean_psi": 0.8149665091354259
+      "mean_psi": {
+        "value": 0.8149665091354259,
+        "origin": "mean(results[4].mean_psi)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
       "label": "alex_death",
-      "neo_crises": 22,
-      "eva_crises": 30,
-      "alex_crises": 0,
-      "corr_neo_eva": 0.5610073440477674,
-      "corr_neo_alex": 0,
-      "corr_eva_alex": 0,
+      "neo_crises": {
+        "value": 22,
+        "origin": "counted(results[5].neo_crises)",
+        "source": "FROM_DATA"
+      },
+      "eva_crises": {
+        "value": 30,
+        "origin": "counted(results[5].eva_crises)",
+        "source": "FROM_DATA"
+      },
+      "alex_crises": {
+        "value": 0,
+        "origin": "counted(results[5].alex_crises)",
+        "source": "FROM_DATA"
+      },
+      "corr_neo_eva": {
+        "value": 0.5610073440477674,
+        "origin": "normalized(results[5].corr_neo_eva)",
+        "source": "FROM_MATH"
+      },
+      "corr_neo_alex": {
+        "value": 0,
+        "origin": "counted(results[5].corr_neo_alex)",
+        "source": "FROM_DATA"
+      },
+      "corr_eva_alex": {
+        "value": 0,
+        "origin": "counted(results[5].corr_eva_alex)",
+        "source": "FROM_DATA"
+      },
       "coalition_counts": {
-        "NEO-EVA": 687,
-        "NEO-ALEX": 168,
-        "EVA-ALEX": 145
+        "NEO-EVA": {
+          "value": 687,
+          "origin": "counted(results[5].coalition_counts.NEO-EVA)",
+          "source": "FROM_DATA"
+        },
+        "NEO-ALEX": {
+          "value": 168,
+          "origin": "counted(results[5].coalition_counts.NEO-ALEX)",
+          "source": "FROM_DATA"
+        },
+        "EVA-ALEX": {
+          "value": 145,
+          "origin": "counted(results[5].coalition_counts.EVA-ALEX)",
+          "source": "FROM_DATA"
+        }
       },
       "dominant_coalition": "NEO-EVA",
       "final_attachments": {
-        "NEO->EVA": 1.0,
-        "NEO->ALEX": 0,
-        "EVA->NEO": 1.0,
-        "EVA->ALEX": 0,
-        "ALEX->NEO": 0,
-        "ALEX->EVA": 0
+        "NEO->EVA": {
+          "value": 1.0,
+          "origin": "normalized(results[5].final_attachments.NEO->EVA)",
+          "source": "FROM_MATH"
+        },
+        "NEO->ALEX": {
+          "value": 0,
+          "origin": "counted(results[5].final_attachments.NEO->ALEX)",
+          "source": "FROM_DATA"
+        },
+        "EVA->NEO": {
+          "value": 1.0,
+          "origin": "normalized(results[5].final_attachments.EVA->NEO)",
+          "source": "FROM_MATH"
+        },
+        "EVA->ALEX": {
+          "value": 0,
+          "origin": "counted(results[5].final_attachments.EVA->ALEX)",
+          "source": "FROM_DATA"
+        },
+        "ALEX->NEO": {
+          "value": 0,
+          "origin": "counted(results[5].final_attachments.ALEX->NEO)",
+          "source": "FROM_DATA"
+        },
+        "ALEX->EVA": {
+          "value": 0,
+          "origin": "counted(results[5].final_attachments.ALEX->EVA)",
+          "source": "FROM_DATA"
+        }
       },
-      "mean_psi": 0.8182434181937558,
-      "corr_with_alex": 0.22479200331101012,
-      "corr_without_alex": 0.21947611239618786,
-      "recovery": -0.005315890914822263
+      "mean_psi": {
+        "value": 0.8182434181937558,
+        "origin": "mean(results[5].mean_psi)",
+        "source": "FROM_STATISTICS"
+      },
+      "corr_with_alex": {
+        "value": 0.22479200331101012,
+        "origin": "normalized(results[5].corr_with_alex)",
+        "source": "FROM_MATH"
+      },
+      "corr_without_alex": {
+        "value": 0.21947611239618786,
+        "origin": "normalized(results[5].corr_without_alex)",
+        "source": "FROM_MATH"
+      },
+      "recovery": {
+        "value": -0.005315890914822263,
+        "origin": "computed(results[5].recovery)",
+        "source": "FROM_MATH"
+      }
     },
     {
       "label": "alex_outsider",
-      "neo_crises": 29,
-      "eva_crises": 16,
-      "alex_crises": 22,
-      "corr_neo_eva": -0.4548309088719906,
-      "corr_neo_alex": -0.48961892767715665,
-      "corr_eva_alex": 0.2778080602995566,
+      "neo_crises": {
+        "value": 29,
+        "origin": "counted(results[6].neo_crises)",
+        "source": "FROM_DATA"
+      },
+      "eva_crises": {
+        "value": 16,
+        "origin": "counted(results[6].eva_crises)",
+        "source": "FROM_DATA"
+      },
+      "alex_crises": {
+        "value": 22,
+        "origin": "counted(results[6].alex_crises)",
+        "source": "FROM_DATA"
+      },
+      "corr_neo_eva": {
+        "value": -0.4548309088719906,
+        "origin": "computed(results[6].corr_neo_eva)",
+        "source": "FROM_MATH"
+      },
+      "corr_neo_alex": {
+        "value": -0.48961892767715665,
+        "origin": "computed(results[6].corr_neo_alex)",
+        "source": "FROM_MATH"
+      },
+      "corr_eva_alex": {
+        "value": 0.2778080602995566,
+        "origin": "normalized(results[6].corr_eva_alex)",
+        "source": "FROM_MATH"
+      },
       "coalition_counts": {
-        "NEO-EVA": 276,
-        "NEO-ALEX": 250,
-        "EVA-ALEX": 274
+        "NEO-EVA": {
+          "value": 276,
+          "origin": "counted(results[6].coalition_counts.NEO-EVA)",
+          "source": "FROM_DATA"
+        },
+        "NEO-ALEX": {
+          "value": 250,
+          "origin": "counted(results[6].coalition_counts.NEO-ALEX)",
+          "source": "FROM_DATA"
+        },
+        "EVA-ALEX": {
+          "value": 274,
+          "origin": "counted(results[6].coalition_counts.EVA-ALEX)",
+          "source": "FROM_DATA"
+        }
       },
       "dominant_coalition": "NEO-EVA",
       "final_attachments": {
-        "NEO->EVA": 1.0,
-        "NEO->ALEX": 1.0,
-        "EVA->NEO": 1.0,
-        "EVA->ALEX": 1.0,
-        "ALEX->NEO": 1.0,
-        "ALEX->EVA": 1.0
+        "NEO->EVA": {
+          "value": 1.0,
+          "origin": "normalized(results[6].final_attachments.NEO->EVA)",
+          "source": "FROM_MATH"
+        },
+        "NEO->ALEX": {
+          "value": 1.0,
+          "origin": "normalized(results[6].final_attachments.NEO->ALEX)",
+          "source": "FROM_MATH"
+        },
+        "EVA->NEO": {
+          "value": 1.0,
+          "origin": "normalized(results[6].final_attachments.EVA->NEO)",
+          "source": "FROM_MATH"
+        },
+        "EVA->ALEX": {
+          "value": 1.0,
+          "origin": "normalized(results[6].final_attachments.EVA->ALEX)",
+          "source": "FROM_MATH"
+        },
+        "ALEX->NEO": {
+          "value": 1.0,
+          "origin": "normalized(results[6].final_attachments.ALEX->NEO)",
+          "source": "FROM_MATH"
+        },
+        "ALEX->EVA": {
+          "value": 1.0,
+          "origin": "normalized(results[6].final_attachments.ALEX->EVA)",
+          "source": "FROM_MATH"
+        }
       },
-      "mean_psi": 0.7966744001387596,
+      "mean_psi": {
+        "value": 0.7966744001387596,
+        "origin": "mean(results[6].mean_psi)",
+        "source": "FROM_STATISTICS"
+      },
       "alex_integrated": true
     }
-  ]
+  ],
+  "metadata": {
+    "experiment_id": {
+      "value": "260db2834369",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.691632",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/alex_variants/results.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.691886",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 246,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 269,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 246,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 269,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
 }

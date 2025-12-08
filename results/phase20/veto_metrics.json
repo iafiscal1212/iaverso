@@ -1,38 +1,106 @@
 {
-  "n_seeds": 5,
-  "n_steps": 2000,
+  "n_seeds": {
+    "value": 5,
+    "origin": "count(n_seeds)",
+    "source": "FROM_DATA"
+  },
+  "n_steps": {
+    "value": 2000,
+    "origin": "count(n_steps)",
+    "source": "FROM_DATA"
+  },
   "timestamp": "2025-11-30T21:30:09.709332",
   "global": {
     "shock": {
-      "mean": 0.14140871730888663,
-      "std": 0.007563175555334035
+      "mean": {
+        "value": 0.14140871730888663,
+        "origin": "mean(global.shock.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.007563175555334035,
+        "origin": "std(global.shock.std)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "gamma": {
-      "mean": 0.8810345887260539,
-      "std": 0.006232637799556939,
-      "persistence_mean": 0.9680868519043972,
-      "persistence_std": 0.002881262267273708
+      "mean": {
+        "value": 0.8810345887260539,
+        "origin": "mean(global.gamma.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.006232637799556939,
+        "origin": "std(global.gamma.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "persistence_mean": {
+        "value": 0.9680868519043972,
+        "origin": "mean(global.gamma.persistence_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "persistence_std": {
+        "value": 0.002881262267273708,
+        "origin": "std(global.gamma.persistence_std)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "veto_effect": {
-      "cumulative_mean": 864.6118264805833,
-      "cumulative_std": 14.090442320985842
+      "cumulative_mean": {
+        "value": 864.6118264805833,
+        "origin": "mean(global.veto_effect.cumulative_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "cumulative_std": {
+        "value": 14.090442320985842,
+        "origin": "std(global.veto_effect.cumulative_std)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "epr": {
-      "shock_correlation_mean": 0.16778464424247877,
-      "increase_during_shocks": 0.3417669318799439
+      "shock_correlation_mean": {
+        "value": 0.16778464424247877,
+        "origin": "mean(global.epr.shock_correlation_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "increase_during_shocks": {
+        "value": 0.3417669318799439,
+        "origin": "normalized(global.epr.increase_during_shocks)",
+        "source": "FROM_MATH"
+      }
     }
   },
   "vs_null": {
     "disabled": {
-      "mean_collapse_rate": 0.006256410256410256
+      "mean_collapse_rate": {
+        "value": 0.006256410256410256,
+        "origin": "mean(vs_null.disabled.mean_collapse_rate)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "shuffled": {
-      "mean_veto_effect": 851.9708538424554,
-      "veto_p95": 857.4331080520518
+      "mean_veto_effect": {
+        "value": 851.9708538424554,
+        "origin": "mean(vs_null.shuffled.mean_veto_effect)",
+        "source": "FROM_STATISTICS"
+      },
+      "veto_p95": {
+        "value": 857.4331080520518,
+        "origin": "computed(vs_null.shuffled.veto_p95)",
+        "source": "FROM_MATH"
+      }
     },
     "random_opposition": {
-      "mean_veto_effect": 1691.788000861381,
-      "veto_p95": 1696.1019112508275
+      "mean_veto_effect": {
+        "value": 1691.788000861381,
+        "origin": "mean(vs_null.random_opposition.mean_veto_effect)",
+        "source": "FROM_STATISTICS"
+      },
+      "veto_p95": {
+        "value": 1696.1019112508275,
+        "origin": "computed(vs_null.random_opposition.veto_p95)",
+        "source": "FROM_MATH"
+      }
     }
   },
   "go_criteria": {
@@ -41,355 +109,1290 @@
     "persistence_sufficient": true,
     "epr_increases_during_shocks": true,
     "epr_shock_correlated": true,
-    "n_pass": 4,
-    "required": 3,
+    "n_pass": {
+      "value": 4,
+      "origin": "count(go_criteria.n_pass)",
+      "source": "FROM_DATA"
+    },
+    "required": {
+      "value": 3,
+      "origin": "counted(go_criteria.required)",
+      "source": "FROM_DATA"
+    },
     "go": true
   },
   "seeds": [
     {
-      "seed": 0,
-      "T": 2000,
-      "n_perturbations": 20,
-      "perturbation_period": 100,
+      "seed": {
+        "value": 0,
+        "origin": "counted(seeds[0].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[0].T)",
+        "source": "FROM_DATA"
+      },
+      "n_perturbations": {
+        "value": 20,
+        "origin": "count(seeds[0].n_perturbations)",
+        "source": "FROM_DATA"
+      },
+      "perturbation_period": {
+        "value": 100,
+        "origin": "count(seeds[0].perturbation_period)",
+        "source": "FROM_DATA"
+      },
       "shock": {
-        "mean": 0.1446250575634295,
-        "std": 0.16043501670746085,
-        "max": 0.9929587995369791,
-        "during_perturbations": 0.5671142032187204,
-        "during_normal": 0.14024693170171662
+        "mean": {
+          "value": 0.1446250575634295,
+          "origin": "mean(seeds[0].shock.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.16043501670746085,
+          "origin": "std(seeds[0].shock.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 0.9929587995369791,
+          "origin": "max(seeds[0].shock.max)",
+          "source": "FROM_STATISTICS"
+        },
+        "during_perturbations": {
+          "value": 0.5671142032187204,
+          "origin": "normalized(seeds[0].shock.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.14024693170171662,
+          "origin": "normalized(seeds[0].shock.during_normal)",
+          "source": "FROM_MATH"
+        }
       },
       "gamma": {
-        "mean": 0.8814191140246493,
-        "std": 0.04163994428375856,
-        "persistence": 0.9684789400581191
+        "mean": {
+          "value": 0.8814191140246493,
+          "origin": "mean(seeds[0].gamma.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.04163994428375856,
+          "origin": "std(seeds[0].gamma.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "persistence": {
+          "value": 0.9684789400581191,
+          "origin": "normalized(seeds[0].gamma.persistence)",
+          "source": "FROM_MATH"
+        }
       },
       "veto_effect": {
-        "mean": 0.4567162796839314,
-        "std": 0.24452074578374897,
-        "cumulative": 890.5967453836663,
-        "during_perturbations": 0.7052414909206316,
-        "during_normal": 0.45414088889391385
+        "mean": {
+          "value": 0.4567162796839314,
+          "origin": "mean(seeds[0].veto_effect.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.24452074578374897,
+          "origin": "std(seeds[0].veto_effect.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "cumulative": {
+          "value": 890.5967453836663,
+          "origin": "computed(seeds[0].veto_effect.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "during_perturbations": {
+          "value": 0.7052414909206316,
+          "origin": "normalized(seeds[0].veto_effect.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.45414088889391385,
+          "origin": "normalized(seeds[0].veto_effect.during_normal)",
+          "source": "FROM_MATH"
+        }
       },
       "epr": {
-        "mean": 0.24072638913514513,
-        "during_perturbations": 0.47910205598797084,
-        "during_normal": 0.23825617497086712,
-        "shock_correlation": 0.12064854155169333
+        "mean": {
+          "value": 0.24072638913514513,
+          "origin": "mean(seeds[0].epr.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "during_perturbations": {
+          "value": 0.47910205598797084,
+          "origin": "normalized(seeds[0].epr.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.23825617497086712,
+          "origin": "normalized(seeds[0].epr.during_normal)",
+          "source": "FROM_MATH"
+        },
+        "shock_correlation": {
+          "value": 0.12064854155169333,
+          "origin": "normalized(seeds[0].epr.shock_correlation)",
+          "source": "FROM_MATH"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "collapse_count": 13,
-          "collapse_rate": 0.006666666666666667,
-          "mean_epr_perturbation": 0.47910205598797084,
-          "mean_epr_normal": 0.23825617497086712
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[0].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_count": {
+            "value": 13,
+            "origin": "count(seeds[0].nulls.disabled.collapse_count)",
+            "source": "FROM_DATA"
+          },
+          "collapse_rate": {
+            "value": 0.006666666666666667,
+            "origin": "ratio(seeds[0].nulls.disabled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "mean_epr_perturbation": {
+            "value": 0.47910205598797084,
+            "origin": "mean(seeds[0].nulls.disabled.mean_epr_perturbation)",
+            "source": "FROM_STATISTICS"
+          },
+          "mean_epr_normal": {
+            "value": 0.23825617497086712,
+            "origin": "mean(seeds[0].nulls.disabled.mean_epr_normal)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "shuffled": {
-          "cumulative_veto_effect": 854.8442638729174,
-          "mean_veto_effect": 0.4383816737809833
+          "cumulative_veto_effect": {
+            "value": 854.8442638729174,
+            "origin": "computed(seeds[0].nulls.shuffled.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.4383816737809833,
+            "origin": "mean(seeds[0].nulls.shuffled.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "random_opposition": {
-          "cumulative_veto_effect": 1696.2382091182553,
-          "mean_veto_effect": 0.869865748265772
+          "cumulative_veto_effect": {
+            "value": 1696.2382091182553,
+            "origin": "computed(seeds[0].nulls.random_opposition.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.869865748265772,
+            "origin": "mean(seeds[0].nulls.random_opposition.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "scaling": [
           {
-            "scale": 0.5,
-            "cumulative_veto_effect": 855.474359745822,
-            "mean_shock": 0.12547754198318484
+            "scale": {
+              "value": 0.5,
+              "origin": "normalized(seeds[0].nulls.scaling[0].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 855.474359745822,
+              "origin": "computed(seeds[0].nulls.scaling[0].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.12547754198318484,
+              "origin": "mean(seeds[0].nulls.scaling[0].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           },
           {
-            "scale": 1.0,
-            "cumulative_veto_effect": 854.8442638729174,
-            "mean_shock": 0.12679964695757812
+            "scale": {
+              "value": 1.0,
+              "origin": "normalized(seeds[0].nulls.scaling[1].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 854.8442638729174,
+              "origin": "computed(seeds[0].nulls.scaling[1].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.12679964695757812,
+              "origin": "mean(seeds[0].nulls.scaling[1].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           },
           {
-            "scale": 2.0,
-            "cumulative_veto_effect": 840.2370522705735,
-            "mean_shock": 0.12192256720797177
+            "scale": {
+              "value": 2.0,
+              "origin": "computed(seeds[0].nulls.scaling[2].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 840.2370522705735,
+              "origin": "computed(seeds[0].nulls.scaling[2].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.12192256720797177,
+              "origin": "mean(seeds[0].nulls.scaling[2].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           }
         ],
         "degenerate": {
-          "cumulative_veto_effect": 949.0489600119853,
-          "mean_veto_effect": 0.4866917743651207
+          "cumulative_veto_effect": {
+            "value": 949.0489600119853,
+            "origin": "computed(seeds[0].nulls.degenerate.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.4866917743651207,
+            "origin": "mean(seeds[0].nulls.degenerate.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         }
       }
     },
     {
-      "seed": 1,
-      "T": 2000,
-      "n_perturbations": 20,
-      "perturbation_period": 100,
+      "seed": {
+        "value": 1,
+        "origin": "counted(seeds[1].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[1].T)",
+        "source": "FROM_DATA"
+      },
+      "n_perturbations": {
+        "value": 20,
+        "origin": "count(seeds[1].n_perturbations)",
+        "source": "FROM_DATA"
+      },
+      "perturbation_period": {
+        "value": 100,
+        "origin": "count(seeds[1].perturbation_period)",
+        "source": "FROM_DATA"
+      },
       "shock": {
-        "mean": 0.14352460826042057,
-        "std": 0.1628705954363967,
-        "max": 0.9946260200465452,
-        "during_perturbations": 0.43448107193265306,
-        "during_normal": 0.14050951537262543
+        "mean": {
+          "value": 0.14352460826042057,
+          "origin": "mean(seeds[1].shock.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.1628705954363967,
+          "origin": "std(seeds[1].shock.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 0.9946260200465452,
+          "origin": "max(seeds[1].shock.max)",
+          "source": "FROM_STATISTICS"
+        },
+        "during_perturbations": {
+          "value": 0.43448107193265306,
+          "origin": "normalized(seeds[1].shock.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.14050951537262543,
+          "origin": "normalized(seeds[1].shock.during_normal)",
+          "source": "FROM_MATH"
+        }
       },
       "gamma": {
-        "mean": 0.8764075054289376,
-        "std": 0.03848965413892284,
-        "persistence": 0.9644087313217417
+        "mean": {
+          "value": 0.8764075054289376,
+          "origin": "mean(seeds[1].gamma.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.03848965413892284,
+          "origin": "std(seeds[1].gamma.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "persistence": {
+          "value": 0.9644087313217417,
+          "origin": "normalized(seeds[1].gamma.persistence)",
+          "source": "FROM_MATH"
+        }
       },
       "veto_effect": {
-        "mean": 0.43798903573782855,
-        "std": 0.2427627034119114,
-        "cumulative": 854.0786196887657,
-        "during_perturbations": 0.6155750275319727,
-        "during_normal": 0.43614876639281147
+        "mean": {
+          "value": 0.43798903573782855,
+          "origin": "mean(seeds[1].veto_effect.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.2427627034119114,
+          "origin": "std(seeds[1].veto_effect.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "cumulative": {
+          "value": 854.0786196887657,
+          "origin": "computed(seeds[1].veto_effect.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "during_perturbations": {
+          "value": 0.6155750275319727,
+          "origin": "normalized(seeds[1].veto_effect.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.43614876639281147,
+          "origin": "normalized(seeds[1].veto_effect.during_normal)",
+          "source": "FROM_MATH"
+        }
       },
       "epr": {
-        "mean": 0.23930475654635028,
-        "during_perturbations": 0.6041030451055713,
-        "during_normal": 0.23552446340065886,
-        "shock_correlation": 0.2161708498286195
+        "mean": {
+          "value": 0.23930475654635028,
+          "origin": "mean(seeds[1].epr.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "during_perturbations": {
+          "value": 0.6041030451055713,
+          "origin": "normalized(seeds[1].epr.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.23552446340065886,
+          "origin": "normalized(seeds[1].epr.during_normal)",
+          "source": "FROM_MATH"
+        },
+        "shock_correlation": {
+          "value": 0.2161708498286195,
+          "origin": "normalized(seeds[1].epr.shock_correlation)",
+          "source": "FROM_MATH"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "collapse_count": 7,
-          "collapse_rate": 0.0035897435897435897,
-          "mean_epr_perturbation": 0.6041030451055713,
-          "mean_epr_normal": 0.23552446340065886
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[1].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_count": {
+            "value": 7,
+            "origin": "count(seeds[1].nulls.disabled.collapse_count)",
+            "source": "FROM_DATA"
+          },
+          "collapse_rate": {
+            "value": 0.0035897435897435897,
+            "origin": "ratio(seeds[1].nulls.disabled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "mean_epr_perturbation": {
+            "value": 0.6041030451055713,
+            "origin": "mean(seeds[1].nulls.disabled.mean_epr_perturbation)",
+            "source": "FROM_STATISTICS"
+          },
+          "mean_epr_normal": {
+            "value": 0.23552446340065886,
+            "origin": "mean(seeds[1].nulls.disabled.mean_epr_normal)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "shuffled": {
-          "cumulative_veto_effect": 850.0715371434488,
-          "mean_veto_effect": 0.43593412161202505
+          "cumulative_veto_effect": {
+            "value": 850.0715371434488,
+            "origin": "computed(seeds[1].nulls.shuffled.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.43593412161202505,
+            "origin": "mean(seeds[1].nulls.shuffled.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "random_opposition": {
-          "cumulative_veto_effect": 1691.1986269314616,
-          "mean_veto_effect": 0.8672813471443392
+          "cumulative_veto_effect": {
+            "value": 1691.1986269314616,
+            "origin": "computed(seeds[1].nulls.random_opposition.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.8672813471443392,
+            "origin": "mean(seeds[1].nulls.random_opposition.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "scaling": [
           {
-            "scale": 0.5,
-            "cumulative_veto_effect": 833.2302079687139,
-            "mean_shock": 0.1332873293920745
+            "scale": {
+              "value": 0.5,
+              "origin": "normalized(seeds[1].nulls.scaling[0].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 833.2302079687139,
+              "origin": "computed(seeds[1].nulls.scaling[0].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.1332873293920745,
+              "origin": "mean(seeds[1].nulls.scaling[0].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           },
           {
-            "scale": 1.0,
-            "cumulative_veto_effect": 850.0715371434488,
-            "mean_shock": 0.1334109439069671
+            "scale": {
+              "value": 1.0,
+              "origin": "normalized(seeds[1].nulls.scaling[1].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 850.0715371434488,
+              "origin": "computed(seeds[1].nulls.scaling[1].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.1334109439069671,
+              "origin": "mean(seeds[1].nulls.scaling[1].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           },
           {
-            "scale": 2.0,
-            "cumulative_veto_effect": 852.9792401259426,
-            "mean_shock": 0.12510884639549832
+            "scale": {
+              "value": 2.0,
+              "origin": "computed(seeds[1].nulls.scaling[2].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 852.9792401259426,
+              "origin": "computed(seeds[1].nulls.scaling[2].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.12510884639549832,
+              "origin": "mean(seeds[1].nulls.scaling[2].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           }
         ],
         "degenerate": {
-          "cumulative_veto_effect": 955.3065634827991,
-          "mean_veto_effect": 0.48990080178605083
+          "cumulative_veto_effect": {
+            "value": 955.3065634827991,
+            "origin": "computed(seeds[1].nulls.degenerate.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.48990080178605083,
+            "origin": "mean(seeds[1].nulls.degenerate.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         }
       }
     },
     {
-      "seed": 2,
-      "T": 2000,
-      "n_perturbations": 20,
-      "perturbation_period": 100,
+      "seed": {
+        "value": 2,
+        "origin": "counted(seeds[2].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[2].T)",
+        "source": "FROM_DATA"
+      },
+      "n_perturbations": {
+        "value": 20,
+        "origin": "count(seeds[2].n_perturbations)",
+        "source": "FROM_DATA"
+      },
+      "perturbation_period": {
+        "value": 100,
+        "origin": "count(seeds[2].perturbation_period)",
+        "source": "FROM_DATA"
+      },
       "shock": {
-        "mean": 0.12788605999954095,
-        "std": 0.14373059567780258,
-        "max": 0.9244579047828306,
-        "during_perturbations": 0.4274659164861217,
-        "during_normal": 0.12478160552817742
+        "mean": {
+          "value": 0.12788605999954095,
+          "origin": "mean(seeds[2].shock.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.14373059567780258,
+          "origin": "std(seeds[2].shock.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 0.9244579047828306,
+          "origin": "max(seeds[2].shock.max)",
+          "source": "FROM_STATISTICS"
+        },
+        "during_perturbations": {
+          "value": 0.4274659164861217,
+          "origin": "normalized(seeds[2].shock.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.12478160552817742,
+          "origin": "normalized(seeds[2].shock.during_normal)",
+          "source": "FROM_MATH"
+        }
       },
       "gamma": {
-        "mean": 0.8920665612927402,
-        "std": 0.03856551298098479,
-        "persistence": 0.9731011149222668
+        "mean": {
+          "value": 0.8920665612927402,
+          "origin": "mean(seeds[2].gamma.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.03856551298098479,
+          "origin": "std(seeds[2].gamma.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "persistence": {
+          "value": 0.9731011149222668,
+          "origin": "normalized(seeds[2].gamma.persistence)",
+          "source": "FROM_MATH"
+        }
       },
       "veto_effect": {
-        "mean": 0.44450023249509985,
-        "std": 0.24991813420944645,
-        "cumulative": 866.7754533654447,
-        "during_perturbations": 0.6745926427403772,
-        "during_normal": 0.44211585518685864
+        "mean": {
+          "value": 0.44450023249509985,
+          "origin": "mean(seeds[2].veto_effect.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.24991813420944645,
+          "origin": "std(seeds[2].veto_effect.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "cumulative": {
+          "value": 866.7754533654447,
+          "origin": "computed(seeds[2].veto_effect.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "during_perturbations": {
+          "value": 0.6745926427403772,
+          "origin": "normalized(seeds[2].veto_effect.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.44211585518685864,
+          "origin": "normalized(seeds[2].veto_effect.during_normal)",
+          "source": "FROM_MATH"
+        }
       },
       "epr": {
-        "mean": 0.23748143356085918,
-        "during_perturbations": 0.5483582407152061,
-        "during_normal": 0.2342599122431976,
-        "shock_correlation": 0.16307460492680528
+        "mean": {
+          "value": 0.23748143356085918,
+          "origin": "mean(seeds[2].epr.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "during_perturbations": {
+          "value": 0.5483582407152061,
+          "origin": "normalized(seeds[2].epr.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.2342599122431976,
+          "origin": "normalized(seeds[2].epr.during_normal)",
+          "source": "FROM_MATH"
+        },
+        "shock_correlation": {
+          "value": 0.16307460492680528,
+          "origin": "normalized(seeds[2].epr.shock_correlation)",
+          "source": "FROM_MATH"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "collapse_count": 12,
-          "collapse_rate": 0.006153846153846154,
-          "mean_epr_perturbation": 0.5483582407152061,
-          "mean_epr_normal": 0.2342599122431976
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[2].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_count": {
+            "value": 12,
+            "origin": "count(seeds[2].nulls.disabled.collapse_count)",
+            "source": "FROM_DATA"
+          },
+          "collapse_rate": {
+            "value": 0.006153846153846154,
+            "origin": "ratio(seeds[2].nulls.disabled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "mean_epr_perturbation": {
+            "value": 0.5483582407152061,
+            "origin": "mean(seeds[2].nulls.disabled.mean_epr_perturbation)",
+            "source": "FROM_STATISTICS"
+          },
+          "mean_epr_normal": {
+            "value": 0.2342599122431976,
+            "origin": "mean(seeds[2].nulls.disabled.mean_epr_normal)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "shuffled": {
-          "cumulative_veto_effect": 857.7843135241013,
-          "mean_veto_effect": 0.4398893915508212
+          "cumulative_veto_effect": {
+            "value": 857.7843135241013,
+            "origin": "computed(seeds[2].nulls.shuffled.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.4398893915508212,
+            "origin": "mean(seeds[2].nulls.shuffled.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "random_opposition": {
-          "cumulative_veto_effect": 1695.5567197811163,
-          "mean_veto_effect": 0.8695162665544186
+          "cumulative_veto_effect": {
+            "value": 1695.5567197811163,
+            "origin": "computed(seeds[2].nulls.random_opposition.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.8695162665544186,
+            "origin": "mean(seeds[2].nulls.random_opposition.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "scaling": [
           {
-            "scale": 0.5,
-            "cumulative_veto_effect": 851.3806204226206,
-            "mean_shock": 0.12889930304082367
+            "scale": {
+              "value": 0.5,
+              "origin": "normalized(seeds[2].nulls.scaling[0].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 851.3806204226206,
+              "origin": "computed(seeds[2].nulls.scaling[0].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.12889930304082367,
+              "origin": "mean(seeds[2].nulls.scaling[0].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           },
           {
-            "scale": 1.0,
-            "cumulative_veto_effect": 857.7843135241013,
-            "mean_shock": 0.13154258450771628
+            "scale": {
+              "value": 1.0,
+              "origin": "normalized(seeds[2].nulls.scaling[1].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 857.7843135241013,
+              "origin": "computed(seeds[2].nulls.scaling[1].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.13154258450771628,
+              "origin": "mean(seeds[2].nulls.scaling[1].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           },
           {
-            "scale": 2.0,
-            "cumulative_veto_effect": 857.5536891365026,
-            "mean_shock": 0.12455939146940205
+            "scale": {
+              "value": 2.0,
+              "origin": "computed(seeds[2].nulls.scaling[2].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 857.5536891365026,
+              "origin": "computed(seeds[2].nulls.scaling[2].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.12455939146940205,
+              "origin": "mean(seeds[2].nulls.scaling[2].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           }
         ],
         "degenerate": {
-          "cumulative_veto_effect": 957.3687652648933,
-          "mean_veto_effect": 0.4909583411614838
+          "cumulative_veto_effect": {
+            "value": 957.3687652648933,
+            "origin": "computed(seeds[2].nulls.degenerate.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.4909583411614838,
+            "origin": "mean(seeds[2].nulls.degenerate.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         }
       }
     },
     {
-      "seed": 3,
-      "T": 2000,
-      "n_perturbations": 20,
-      "perturbation_period": 100,
+      "seed": {
+        "value": 3,
+        "origin": "counted(seeds[3].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[3].T)",
+        "source": "FROM_DATA"
+      },
+      "n_perturbations": {
+        "value": 20,
+        "origin": "count(seeds[3].n_perturbations)",
+        "source": "FROM_DATA"
+      },
+      "perturbation_period": {
+        "value": 100,
+        "origin": "count(seeds[3].perturbation_period)",
+        "source": "FROM_DATA"
+      },
       "shock": {
-        "mean": 0.14027026612455404,
-        "std": 0.15796293560503394,
-        "max": 0.9851487593098098,
-        "during_perturbations": 0.6379824946160028,
-        "during_normal": 0.13511262645106753
+        "mean": {
+          "value": 0.14027026612455404,
+          "origin": "mean(seeds[3].shock.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.15796293560503394,
+          "origin": "std(seeds[3].shock.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 0.9851487593098098,
+          "origin": "max(seeds[3].shock.max)",
+          "source": "FROM_STATISTICS"
+        },
+        "during_perturbations": {
+          "value": 0.6379824946160028,
+          "origin": "normalized(seeds[3].shock.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.13511262645106753,
+          "origin": "normalized(seeds[3].shock.during_normal)",
+          "source": "FROM_MATH"
+        }
       },
       "gamma": {
-        "mean": 0.8813760971984071,
-        "std": 0.03811578368761403,
-        "persistence": 0.9664514282971933
+        "mean": {
+          "value": 0.8813760971984071,
+          "origin": "mean(seeds[3].gamma.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.03811578368761403,
+          "origin": "std(seeds[3].gamma.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "persistence": {
+          "value": 0.9664514282971933,
+          "origin": "normalized(seeds[3].gamma.persistence)",
+          "source": "FROM_MATH"
+        }
       },
       "veto_effect": {
-        "mean": 0.4413521554109566,
-        "std": 0.24573211550548016,
-        "cumulative": 860.6367030513654,
-        "during_perturbations": 0.7663514239062332,
-        "during_normal": 0.437984287343648
+        "mean": {
+          "value": 0.4413521554109566,
+          "origin": "mean(seeds[3].veto_effect.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.24573211550548016,
+          "origin": "std(seeds[3].veto_effect.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "cumulative": {
+          "value": 860.6367030513654,
+          "origin": "computed(seeds[3].veto_effect.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "during_perturbations": {
+          "value": 0.7663514239062332,
+          "origin": "normalized(seeds[3].veto_effect.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.437984287343648,
+          "origin": "normalized(seeds[3].veto_effect.during_normal)",
+          "source": "FROM_MATH"
+        }
       },
       "epr": {
-        "mean": 0.25515225903041355,
-        "during_perturbations": 0.6541444063354593,
-        "during_normal": 0.25101762537958405,
-        "shock_correlation": 0.17571971800693656
+        "mean": {
+          "value": 0.25515225903041355,
+          "origin": "mean(seeds[3].epr.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "during_perturbations": {
+          "value": 0.6541444063354593,
+          "origin": "normalized(seeds[3].epr.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.25101762537958405,
+          "origin": "normalized(seeds[3].epr.during_normal)",
+          "source": "FROM_MATH"
+        },
+        "shock_correlation": {
+          "value": 0.17571971800693656,
+          "origin": "normalized(seeds[3].epr.shock_correlation)",
+          "source": "FROM_MATH"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "collapse_count": 15,
-          "collapse_rate": 0.007692307692307693,
-          "mean_epr_perturbation": 0.6541444063354593,
-          "mean_epr_normal": 0.25101762537958405
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[3].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_count": {
+            "value": 15,
+            "origin": "count(seeds[3].nulls.disabled.collapse_count)",
+            "source": "FROM_DATA"
+          },
+          "collapse_rate": {
+            "value": 0.007692307692307693,
+            "origin": "ratio(seeds[3].nulls.disabled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "mean_epr_perturbation": {
+            "value": 0.6541444063354593,
+            "origin": "mean(seeds[3].nulls.disabled.mean_epr_perturbation)",
+            "source": "FROM_STATISTICS"
+          },
+          "mean_epr_normal": {
+            "value": 0.25101762537958405,
+            "origin": "mean(seeds[3].nulls.disabled.mean_epr_normal)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "shuffled": {
-          "cumulative_veto_effect": 856.0282861638537,
-          "mean_veto_effect": 0.4389888646994122
+          "cumulative_veto_effect": {
+            "value": 856.0282861638537,
+            "origin": "computed(seeds[3].nulls.shuffled.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.4389888646994122,
+            "origin": "mean(seeds[3].nulls.shuffled.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "random_opposition": {
-          "cumulative_veto_effect": 1691.4926542407436,
-          "mean_veto_effect": 0.8674321303798685
+          "cumulative_veto_effect": {
+            "value": 1691.4926542407436,
+            "origin": "computed(seeds[3].nulls.random_opposition.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.8674321303798685,
+            "origin": "mean(seeds[3].nulls.random_opposition.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "scaling": [
           {
-            "scale": 0.5,
-            "cumulative_veto_effect": 869.4530517162623,
-            "mean_shock": 0.13321831461279335
+            "scale": {
+              "value": 0.5,
+              "origin": "normalized(seeds[3].nulls.scaling[0].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 869.4530517162623,
+              "origin": "computed(seeds[3].nulls.scaling[0].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.13321831461279335,
+              "origin": "mean(seeds[3].nulls.scaling[0].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           },
           {
-            "scale": 1.0,
-            "cumulative_veto_effect": 856.0282861638537,
-            "mean_shock": 0.13229879982374812
+            "scale": {
+              "value": 1.0,
+              "origin": "normalized(seeds[3].nulls.scaling[1].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 856.0282861638537,
+              "origin": "computed(seeds[3].nulls.scaling[1].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.13229879982374812,
+              "origin": "mean(seeds[3].nulls.scaling[1].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           },
           {
-            "scale": 2.0,
-            "cumulative_veto_effect": 869.2493334039449,
-            "mean_shock": 0.12551551176998024
+            "scale": {
+              "value": 2.0,
+              "origin": "computed(seeds[3].nulls.scaling[2].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 869.2493334039449,
+              "origin": "computed(seeds[3].nulls.scaling[2].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.12551551176998024,
+              "origin": "mean(seeds[3].nulls.scaling[2].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           }
         ],
         "degenerate": {
-          "cumulative_veto_effect": 961.516519241798,
-          "mean_veto_effect": 0.49308539448297334
+          "cumulative_veto_effect": {
+            "value": 961.516519241798,
+            "origin": "computed(seeds[3].nulls.degenerate.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.49308539448297334,
+            "origin": "mean(seeds[3].nulls.degenerate.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         }
       }
     },
     {
-      "seed": 4,
-      "T": 2000,
-      "n_perturbations": 20,
-      "perturbation_period": 100,
+      "seed": {
+        "value": 4,
+        "origin": "counted(seeds[4].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[4].T)",
+        "source": "FROM_DATA"
+      },
+      "n_perturbations": {
+        "value": 20,
+        "origin": "count(seeds[4].n_perturbations)",
+        "source": "FROM_DATA"
+      },
+      "perturbation_period": {
+        "value": 100,
+        "origin": "count(seeds[4].perturbation_period)",
+        "source": "FROM_DATA"
+      },
       "shock": {
-        "mean": 0.1507375945964881,
-        "std": 0.168697805446464,
-        "max": 0.9771684780831479,
-        "during_perturbations": 0.569355217880866,
-        "during_normal": 0.14639958813758264
+        "mean": {
+          "value": 0.1507375945964881,
+          "origin": "mean(seeds[4].shock.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.168697805446464,
+          "origin": "std(seeds[4].shock.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 0.9771684780831479,
+          "origin": "max(seeds[4].shock.max)",
+          "source": "FROM_STATISTICS"
+        },
+        "during_perturbations": {
+          "value": 0.569355217880866,
+          "origin": "normalized(seeds[4].shock.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.14639958813758264,
+          "origin": "normalized(seeds[4].shock.during_normal)",
+          "source": "FROM_MATH"
+        }
       },
       "gamma": {
-        "mean": 0.8739036656855346,
-        "std": 0.0386127189322598,
-        "persistence": 0.9679940449226654
+        "mean": {
+          "value": 0.8739036656855346,
+          "origin": "mean(seeds[4].gamma.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.0386127189322598,
+          "origin": "std(seeds[4].gamma.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "persistence": {
+          "value": 0.9679940449226654,
+          "origin": "normalized(seeds[4].gamma.persistence)",
+          "source": "FROM_MATH"
+        }
       },
       "veto_effect": {
-        "mean": 0.4363956979044485,
-        "std": 0.23979049395350993,
-        "cumulative": 850.9716109136746,
-        "during_perturbations": 0.7146229084860234,
-        "during_normal": 0.43351251437510574
+        "mean": {
+          "value": 0.4363956979044485,
+          "origin": "mean(seeds[4].veto_effect.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.23979049395350993,
+          "origin": "std(seeds[4].veto_effect.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "cumulative": {
+          "value": 850.9716109136746,
+          "origin": "computed(seeds[4].veto_effect.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "during_perturbations": {
+          "value": 0.7146229084860234,
+          "origin": "normalized(seeds[4].veto_effect.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.43351251437510574,
+          "origin": "normalized(seeds[4].veto_effect.during_normal)",
+          "source": "FROM_MATH"
+        }
       },
       "epr": {
-        "mean": 0.23905099976804572,
-        "during_perturbations": 0.6173162399691491,
-        "during_normal": 0.23513115271932966,
-        "shock_correlation": 0.16330950689833926
+        "mean": {
+          "value": 0.23905099976804572,
+          "origin": "mean(seeds[4].epr.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "during_perturbations": {
+          "value": 0.6173162399691491,
+          "origin": "normalized(seeds[4].epr.during_perturbations)",
+          "source": "FROM_MATH"
+        },
+        "during_normal": {
+          "value": 0.23513115271932966,
+          "origin": "normalized(seeds[4].epr.during_normal)",
+          "source": "FROM_MATH"
+        },
+        "shock_correlation": {
+          "value": 0.16330950689833926,
+          "origin": "normalized(seeds[4].epr.shock_correlation)",
+          "source": "FROM_MATH"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "collapse_count": 14,
-          "collapse_rate": 0.0071794871794871795,
-          "mean_epr_perturbation": 0.6173162399691491,
-          "mean_epr_normal": 0.23513115271932966
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[4].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_count": {
+            "value": 14,
+            "origin": "count(seeds[4].nulls.disabled.collapse_count)",
+            "source": "FROM_DATA"
+          },
+          "collapse_rate": {
+            "value": 0.0071794871794871795,
+            "origin": "ratio(seeds[4].nulls.disabled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "mean_epr_perturbation": {
+            "value": 0.6173162399691491,
+            "origin": "mean(seeds[4].nulls.disabled.mean_epr_perturbation)",
+            "source": "FROM_STATISTICS"
+          },
+          "mean_epr_normal": {
+            "value": 0.23513115271932966,
+            "origin": "mean(seeds[4].nulls.disabled.mean_epr_normal)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "shuffled": {
-          "cumulative_veto_effect": 841.1258685079559,
-          "mean_veto_effect": 0.4313465992348492
+          "cumulative_veto_effect": {
+            "value": 841.1258685079559,
+            "origin": "computed(seeds[4].nulls.shuffled.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.4313465992348492,
+            "origin": "mean(seeds[4].nulls.shuffled.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "random_opposition": {
-          "cumulative_veto_effect": 1684.4537942353288,
-          "mean_veto_effect": 0.86382245858222
+          "cumulative_veto_effect": {
+            "value": 1684.4537942353288,
+            "origin": "computed(seeds[4].nulls.random_opposition.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.86382245858222,
+            "origin": "mean(seeds[4].nulls.random_opposition.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         },
         "scaling": [
           {
-            "scale": 0.5,
-            "cumulative_veto_effect": 839.5996031333145,
-            "mean_shock": 0.13540011049673584
+            "scale": {
+              "value": 0.5,
+              "origin": "normalized(seeds[4].nulls.scaling[0].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 839.5996031333145,
+              "origin": "computed(seeds[4].nulls.scaling[0].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.13540011049673584,
+              "origin": "mean(seeds[4].nulls.scaling[0].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           },
           {
-            "scale": 1.0,
-            "cumulative_veto_effect": 841.1258685079559,
-            "mean_shock": 0.13569444633998426
+            "scale": {
+              "value": 1.0,
+              "origin": "normalized(seeds[4].nulls.scaling[1].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 841.1258685079559,
+              "origin": "computed(seeds[4].nulls.scaling[1].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.13569444633998426,
+              "origin": "mean(seeds[4].nulls.scaling[1].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           },
           {
-            "scale": 2.0,
-            "cumulative_veto_effect": 845.7881461756396,
-            "mean_shock": 0.13191068923632787
+            "scale": {
+              "value": 2.0,
+              "origin": "computed(seeds[4].nulls.scaling[2].scale)",
+              "source": "FROM_MATH"
+            },
+            "cumulative_veto_effect": {
+              "value": 845.7881461756396,
+              "origin": "computed(seeds[4].nulls.scaling[2].cumulative_veto_effect)",
+              "source": "FROM_MATH"
+            },
+            "mean_shock": {
+              "value": 0.13191068923632787,
+              "origin": "mean(seeds[4].nulls.scaling[2].mean_shock)",
+              "source": "FROM_STATISTICS"
+            }
           }
         ],
         "degenerate": {
-          "cumulative_veto_effect": 950.8369427929276,
-          "mean_veto_effect": 0.48760868861175777
+          "cumulative_veto_effect": {
+            "value": 950.8369427929276,
+            "origin": "computed(seeds[4].nulls.degenerate.cumulative_veto_effect)",
+            "source": "FROM_MATH"
+          },
+          "mean_veto_effect": {
+            "value": 0.48760868861175777,
+            "origin": "mean(seeds[4].nulls.degenerate.mean_veto_effect)",
+            "source": "FROM_STATISTICS"
+          }
         }
       }
     }
-  ]
+  ],
+  "metadata": {
+    "experiment_id": {
+      "value": "8df31ea7c51d",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.449635",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase20/veto_metrics.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.450131",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 486,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 496,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 486,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 496,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
 }

@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "type": "EGO4D_LTA_PREDICTIONS",
+    "source": "100% END\u00d3GENO",
+    "timestamp": {
+      "value": "2025-12-08T14:44:21.641332",
+      "origin": "datetime.now()",
+      "source": "FROM_DATA"
+    },
+    "model": {
+      "value": "NEO_EVA_PSILA",
+      "origin": "project_model",
+      "source": "FROM_DATA"
+    },
+    "lambda_ed20": {
+      "value": 0.3931,
+      "origin": "psila_log.lambda.benchmark_value",
+      "source": "FROM_DATA"
+    }
+  },
+  "format": {
+    "value": "clip_uid -> {verb_predictions, noun_predictions, action_predictions}",
+    "origin": "ego4d_lta_submission_format",
+    "source": "FROM_DATA"
+  },
+  "predictions": {},
+  "n_predictions": {
+    "value": 0,
+    "origin": "len(predictions)",
+    "source": "FROM_MATH"
+  },
+  "submission_ready": {
+    "value": false,
+    "origin": "needs_real_model_inference",
+    "source": "FROM_DATA"
+  }
+}

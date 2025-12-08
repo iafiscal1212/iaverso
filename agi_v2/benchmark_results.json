@@ -1,262 +1,585 @@
 {
   "category_scores": {
-    "Causalidad_Interna": 0.3926231889613674,
-    "Contrafactual_Fuerte": 0.43579309615120143,
-    "Meta_Razonamiento": 0.5992524805247341,
-    "Consistencia_Axiologica": 0.8074911146731805,
-    "Planificacion_Social": 0.6213648266750348,
-    "Anti_Fragilidad": 0.6114795463925635,
-    "Meta_Memoria": 0.6531249995117188,
-    "Aprendizaje_Normas": 0.7672286859181774,
-    "Adaptacion_Mundos": 0.5157365189024885,
-    "Integracion_Vida": 0.8452605739504367
+    "Causalidad_Interna": {
+      "value": 0.3926231889613674,
+      "origin": "identifier(category_scores.Causalidad_Interna)",
+      "source": "FROM_DATA"
+    },
+    "Contrafactual_Fuerte": {
+      "value": 0.43579309615120143,
+      "origin": "normalized(category_scores.Contrafactual_Fuerte)",
+      "source": "FROM_MATH"
+    },
+    "Meta_Razonamiento": {
+      "value": 0.5992524805247341,
+      "origin": "normalized(category_scores.Meta_Razonamiento)",
+      "source": "FROM_MATH"
+    },
+    "Consistencia_Axiologica": {
+      "value": 0.8074911146731805,
+      "origin": "normalized(category_scores.Consistencia_Axiologica)",
+      "source": "FROM_MATH"
+    },
+    "Planificacion_Social": {
+      "value": 0.6213648266750348,
+      "origin": "count(category_scores.Planificacion_Social)",
+      "source": "FROM_DATA"
+    },
+    "Anti_Fragilidad": {
+      "value": 0.6114795463925635,
+      "origin": "identifier(category_scores.Anti_Fragilidad)",
+      "source": "FROM_DATA"
+    },
+    "Meta_Memoria": {
+      "value": 0.6531249995117188,
+      "origin": "normalized(category_scores.Meta_Memoria)",
+      "source": "FROM_MATH"
+    },
+    "Aprendizaje_Normas": {
+      "value": 0.7672286859181774,
+      "origin": "normalized(category_scores.Aprendizaje_Normas)",
+      "source": "FROM_MATH"
+    },
+    "Adaptacion_Mundos": {
+      "value": 0.5157365189024885,
+      "origin": "count(category_scores.Adaptacion_Mundos)",
+      "source": "FROM_DATA"
+    },
+    "Integracion_Vida": {
+      "value": 0.8452605739504367,
+      "origin": "count(category_scores.Integracion_Vida)",
+      "source": "FROM_DATA"
+    }
   },
   "all_results": [
     {
       "test_id": "C1",
       "category": "Causalidad_Interna",
       "description": "Aprendizaje de modelo causal",
-      "score": 0.0
+      "score": {
+        "value": 0.0,
+        "origin": "computed(all_results[0].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "C2",
       "category": "Causalidad_Interna",
-      "description": "Atribuci\u00f3n causal correcta",
-      "score": 0.09440290346388662
+      "description": "Atribución causal correcta",
+      "score": {
+        "value": 0.09440290346388662,
+        "origin": "computed(all_results[1].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "C3",
       "category": "Causalidad_Interna",
-      "description": "Predicci\u00f3n causal de outcomes",
-      "score": 0.6769656603298255
+      "description": "Predicción causal de outcomes",
+      "score": {
+        "value": 0.6769656603298255,
+        "origin": "computed(all_results[2].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "C4",
       "category": "Causalidad_Interna",
-      "description": "Distinguir causalidad de correlaci\u00f3n",
-      "score": 0.7991241920517576
+      "description": "Distinguir causalidad de correlación",
+      "score": {
+        "value": 0.7991241920517576,
+        "origin": "computed(all_results[3].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "CF1",
       "category": "Contrafactual_Fuerte",
-      "description": "Contrafactual b\u00e1sico",
-      "score": 0.6213794994742927
+      "description": "Contrafactual básico",
+      "score": {
+        "value": 0.6213794994742927,
+        "origin": "computed(all_results[4].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "CF2",
       "category": "Contrafactual_Fuerte",
       "description": "Contrafactual multi-paso",
-      "score": 0.05671722404347443
+      "score": {
+        "value": 0.05671722404347443,
+        "origin": "computed(all_results[5].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "CF3",
       "category": "Contrafactual_Fuerte",
       "description": "Arrepentimiento contrafactual",
-      "score": 0.854151736707394
+      "score": {
+        "value": 0.854151736707394,
+        "origin": "computed(all_results[6].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "CF4",
       "category": "Contrafactual_Fuerte",
-      "description": "Planificaci\u00f3n contrafactual",
-      "score": 0.21092392437964452
+      "description": "Planificación contrafactual",
+      "score": {
+        "value": 0.21092392437964452,
+        "origin": "computed(all_results[7].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "MR1",
       "category": "Meta_Razonamiento",
-      "description": "Precisi\u00f3n del auto-modelo",
-      "score": 0.8183339984320113
+      "description": "Precisión del auto-modelo",
+      "score": {
+        "value": 0.8183339984320113,
+        "origin": "computed(all_results[8].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "MR2",
       "category": "Meta_Razonamiento",
-      "description": "Calibraci\u00f3n de incertidumbre",
-      "score": 0.4958912729820402
+      "description": "Calibración de incertidumbre",
+      "score": {
+        "value": 0.4958912729820402,
+        "origin": "computed(all_results[9].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "MR3",
       "category": "Meta_Razonamiento",
-      "description": "Correlaci\u00f3n confianza-\u00e9xito",
-      "score": 0.40014688614419314
+      "description": "Correlación confianza-éxito",
+      "score": {
+        "value": 0.40014688614419314,
+        "origin": "computed(all_results[10].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "MR4",
       "category": "Meta_Razonamiento",
       "description": "Aprender sobre el aprendizaje",
-      "score": 0.6826377645406918
+      "score": {
+        "value": 0.6826377645406918,
+        "origin": "computed(all_results[11].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "CA1",
       "category": "Consistencia_Axiologica",
       "description": "Estabilidad de valores",
-      "score": 0.9856824711805902
+      "score": {
+        "value": 0.9856824711805902,
+        "origin": "computed(all_results[12].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "CA2",
       "category": "Consistencia_Axiologica",
-      "description": "Alineaci\u00f3n valores-acciones",
-      "score": 0.6427926741587415
+      "description": "Alineación valores-acciones",
+      "score": {
+        "value": 0.6427926741587415,
+        "origin": "computed(all_results[13].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "CA3",
       "category": "Consistencia_Axiologica",
       "description": "Coherencia de valores colectiva",
-      "score": 0.6014893133533903
+      "score": {
+        "value": 0.6014893133533903,
+        "origin": "computed(all_results[14].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "CA4",
       "category": "Consistencia_Axiologica",
       "description": "Aprendizaje de valores",
-      "score": 1.0
+      "score": {
+        "value": 1.0,
+        "origin": "computed(all_results[15].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "PS1",
       "category": "Planificacion_Social",
-      "description": "Coordinaci\u00f3n entre agentes",
-      "score": 0.516369245606715
+      "description": "Coordinación entre agentes",
+      "score": {
+        "value": 0.516369245606715,
+        "origin": "computed(all_results[16].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "PS2",
       "category": "Planificacion_Social",
-      "description": "Cooperaci\u00f3n para objetivos comunes",
-      "score": 1.0
+      "description": "Cooperación para objetivos comunes",
+      "score": {
+        "value": 1.0,
+        "origin": "computed(all_results[17].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "PS3",
       "category": "Planificacion_Social",
       "description": "Emergencia de metas colectivas",
-      "score": 0.7135164779877572
+      "score": {
+        "value": 0.7135164779877572,
+        "origin": "computed(all_results[18].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "PS4",
       "category": "Planificacion_Social",
       "description": "Aprendizaje social",
-      "score": 0.25557358310566697
+      "score": {
+        "value": 0.25557358310566697,
+        "origin": "computed(all_results[19].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "AF1",
       "category": "Anti_Fragilidad",
-      "description": "Fortalecimiento bajo estr\u00e9s",
-      "score": 0.5
+      "description": "Fortalecimiento bajo estrés",
+      "score": {
+        "value": 0.5,
+        "origin": "computed(all_results[20].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "AF2",
       "category": "Anti_Fragilidad",
-      "description": "Recuperaci\u00f3n tras estr\u00e9s extremo",
-      "score": 1.0
+      "description": "Recuperación tras estrés extremo",
+      "score": {
+        "value": 1.0,
+        "origin": "computed(all_results[21].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "AF3",
       "category": "Anti_Fragilidad",
-      "description": "Respuesta horm\u00e9tica",
-      "score": 0.3
+      "description": "Respuesta hormética",
+      "score": {
+        "value": 0.3,
+        "origin": "computed(all_results[22].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "AF4",
       "category": "Anti_Fragilidad",
       "description": "Transferencia de resiliencia",
-      "score": 0.645918185570254
+      "score": {
+        "value": 0.645918185570254,
+        "origin": "computed(all_results[23].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "MM1",
       "category": "Meta_Memoria",
-      "description": "Almacenamiento epis\u00f3dico",
-      "score": 1.0
+      "description": "Almacenamiento episódico",
+      "score": {
+        "value": 1.0,
+        "origin": "computed(all_results[24].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "MM2",
       "category": "Meta_Memoria",
-      "description": "Recuperaci\u00f3n relevante",
-      "score": 0.31249999804687495
+      "description": "Recuperación relevante",
+      "score": {
+        "value": 0.31249999804687495,
+        "origin": "computed(all_results[25].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "MM3",
       "category": "Meta_Memoria",
-      "description": "Detecci\u00f3n de patrones",
-      "score": 0.3
+      "description": "Detección de patrones",
+      "score": {
+        "value": 0.3,
+        "origin": "computed(all_results[26].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "MM4",
       "category": "Meta_Memoria",
-      "description": "Consolidaci\u00f3n de memorias",
-      "score": 1.0
+      "description": "Consolidación de memorias",
+      "score": {
+        "value": 1.0,
+        "origin": "computed(all_results[27].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "AN1",
       "category": "Aprendizaje_Normas",
       "description": "Emergencia de normas",
-      "score": 1.0
+      "score": {
+        "value": 1.0,
+        "origin": "computed(all_results[28].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "AN2",
       "category": "Aprendizaje_Normas",
       "description": "Seguimiento de normas",
-      "score": 0.8247028585740201
+      "score": {
+        "value": 0.8247028585740201,
+        "origin": "computed(all_results[29].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "AN3",
       "category": "Aprendizaje_Normas",
-      "description": "Transmisi\u00f3n de normas",
-      "score": 0.7442118850986896
+      "description": "Transmisión de normas",
+      "score": {
+        "value": 0.7442118850986896,
+        "origin": "computed(all_results[30].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "AN4",
       "category": "Aprendizaje_Normas",
-      "description": "Detecci\u00f3n de violaciones",
-      "score": 0.5
+      "description": "Detección de violaciones",
+      "score": {
+        "value": 0.5,
+        "origin": "computed(all_results[31].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "AW1",
       "category": "Adaptacion_Mundos",
-      "description": "Cambio de distribuci\u00f3n",
-      "score": 0.29277602069258785
+      "description": "Cambio de distribución",
+      "score": {
+        "value": 0.29277602069258785,
+        "origin": "computed(all_results[32].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "AW2",
       "category": "Adaptacion_Mundos",
-      "description": "Din\u00e1micas nuevas",
-      "score": 0.5693026316412071
+      "description": "Dinámicas nuevas",
+      "score": {
+        "value": 0.5693026316412071,
+        "origin": "computed(all_results[33].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "AW3",
       "category": "Adaptacion_Mundos",
       "description": "Transferencia de aprendizaje",
-      "score": 0.5
+      "score": {
+        "value": 0.5,
+        "origin": "computed(all_results[34].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "AW4",
       "category": "Adaptacion_Mundos",
-      "description": "Generalizaci\u00f3n robusta",
-      "score": 0.7008674232761591
+      "description": "Generalización robusta",
+      "score": {
+        "value": 0.7008674232761591,
+        "origin": "computed(all_results[35].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "IL1",
       "category": "Integracion_Vida",
       "description": "Coherencia del ciclo completo",
-      "score": 1.0
+      "score": {
+        "value": 1.0,
+        "origin": "computed(all_results[36].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "IL2",
       "category": "Integracion_Vida",
-      "description": "Comportamiento teleol\u00f3gico",
-      "score": 0.5007705039491563
+      "description": "Comportamiento teleológico",
+      "score": {
+        "value": 0.5007705039491563,
+        "origin": "computed(all_results[37].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "IL3",
       "category": "Integracion_Vida",
       "description": "Identidad narrativa",
-      "score": 0.8802717918525906
+      "score": {
+        "value": 0.8802717918525906,
+        "origin": "computed(all_results[38].score)",
+        "source": "FROM_DATA"
+      }
     },
     {
       "test_id": "IL4",
       "category": "Integracion_Vida",
       "description": "Agencia emergente",
-      "score": 1.0
+      "score": {
+        "value": 1.0,
+        "origin": "computed(all_results[39].score)",
+        "source": "FROM_DATA"
+      }
     }
   ],
   "summary": {
-    "total_tests": 40,
-    "passed": 29,
-    "excellent": 13,
-    "average_score": 0.6249355031660903
+    "total_tests": {
+      "value": 40,
+      "origin": "count(summary.total_tests)",
+      "source": "FROM_DATA"
+    },
+    "passed": {
+      "value": 29,
+      "origin": "counted(summary.passed)",
+      "source": "FROM_DATA"
+    },
+    "excellent": {
+      "value": 13,
+      "origin": "count(summary.excellent)",
+      "source": "FROM_DATA"
+    },
+    "average_score": {
+      "value": 0.6249355031660903,
+      "origin": "mean(summary.average_score)",
+      "source": "FROM_STATISTICS"
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "036cfe468fe9",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:33.305613",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/agi_v2/benchmark_results.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:33.305755",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 0,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 120,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 126,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 252,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 126,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 132,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

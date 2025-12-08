@@ -1,0 +1,618 @@
+{
+  "n_fields": {
+    "value": 24,
+    "origin": "count(n_fields)",
+    "source": "FROM_DATA"
+  },
+  "n_experiments": {
+    "value": 24,
+    "origin": "count(n_experiments)",
+    "source": "FROM_DATA"
+  },
+  "threshold_p90": {
+    "value": 0.9713333333333333,
+    "origin": "normalized(threshold_p90)",
+    "source": "FROM_MATH"
+  },
+  "n_top": {
+    "value": 3,
+    "origin": "count(n_top)",
+    "source": "FROM_DATA"
+  },
+  "concentration_ranking": [
+    {
+      "ngram": "logreg_scaled",
+      "freq_top": {
+        "value": 2,
+        "origin": "counted(concentration_ranking[0].freq_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_all": {
+        "value": 4,
+        "origin": "counted(concentration_ranking[0].freq_all)",
+        "source": "FROM_DATA"
+      },
+      "concentration": {
+        "value": 3.9999999976,
+        "origin": "ratio(concentration_ranking[0].concentration)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "ngram": "wine_logreg",
+      "freq_top": {
+        "value": 1,
+        "origin": "counted(concentration_ranking[1].freq_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_all": {
+        "value": 3,
+        "origin": "counted(concentration_ranking[1].freq_all)",
+        "source": "FROM_DATA"
+      },
+      "concentration": {
+        "value": 2.666666664533333,
+        "origin": "ratio(concentration_ranking[1].concentration)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "ngram": "breast_cancer_logreg",
+      "freq_top": {
+        "value": 1,
+        "origin": "counted(concentration_ranking[2].freq_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_all": {
+        "value": 3,
+        "origin": "counted(concentration_ranking[2].freq_all)",
+        "source": "FROM_DATA"
+      },
+      "concentration": {
+        "value": 2.666666664533333,
+        "origin": "ratio(concentration_ranking[2].concentration)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "ngram": "iris_logreg",
+      "freq_top": {
+        "value": 1,
+        "origin": "counted(concentration_ranking[3].freq_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_all": {
+        "value": 3,
+        "origin": "counted(concentration_ranking[3].freq_all)",
+        "source": "FROM_DATA"
+      },
+      "concentration": {
+        "value": 2.666666664533333,
+        "origin": "ratio(concentration_ranking[3].concentration)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "ngram": "logreg",
+      "freq_top": {
+        "value": 3,
+        "origin": "counted(concentration_ranking[4].freq_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_all": {
+        "value": 12,
+        "origin": "counted(concentration_ranking[4].freq_all)",
+        "source": "FROM_DATA"
+      },
+      "concentration": {
+        "value": 1.9999999996,
+        "origin": "ratio(concentration_ranking[4].concentration)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "ngram": "scaled",
+      "freq_top": {
+        "value": 2,
+        "origin": "counted(concentration_ranking[5].freq_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_all": {
+        "value": 8,
+        "origin": "counted(concentration_ranking[5].freq_all)",
+        "source": "FROM_DATA"
+      },
+      "concentration": {
+        "value": 1.9999999994,
+        "origin": "ratio(concentration_ranking[5].concentration)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "ngram": "logreg_raw",
+      "freq_top": {
+        "value": 1,
+        "origin": "counted(concentration_ranking[6].freq_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_all": {
+        "value": 4,
+        "origin": "counted(concentration_ranking[6].freq_all)",
+        "source": "FROM_DATA"
+      },
+      "concentration": {
+        "value": 1.9999999988,
+        "origin": "ratio(concentration_ranking[6].concentration)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "ngram": "wine",
+      "freq_top": {
+        "value": 1,
+        "origin": "counted(concentration_ranking[7].freq_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_all": {
+        "value": 6,
+        "origin": "counted(concentration_ranking[7].freq_all)",
+        "source": "FROM_DATA"
+      },
+      "concentration": {
+        "value": 1.3333333327999999,
+        "origin": "ratio(concentration_ranking[7].concentration)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "ngram": "breast_cancer",
+      "freq_top": {
+        "value": 1,
+        "origin": "counted(concentration_ranking[8].freq_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_all": {
+        "value": 6,
+        "origin": "counted(concentration_ranking[8].freq_all)",
+        "source": "FROM_DATA"
+      },
+      "concentration": {
+        "value": 1.3333333327999999,
+        "origin": "ratio(concentration_ranking[8].concentration)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "ngram": "iris",
+      "freq_top": {
+        "value": 1,
+        "origin": "counted(concentration_ranking[9].freq_top)",
+        "source": "FROM_DATA"
+      },
+      "freq_all": {
+        "value": 6,
+        "origin": "counted(concentration_ranking[9].freq_all)",
+        "source": "FROM_DATA"
+      },
+      "concentration": {
+        "value": 1.3333333327999999,
+        "origin": "ratio(concentration_ranking[9].concentration)",
+        "source": "FROM_MATH"
+      }
+    }
+  ],
+  "cv_analysis": {
+    "logreg_scaled": {
+      "cv_with": {
+        "value": 0.018965525466002067,
+        "origin": "normalized(cv_analysis.logreg_scaled.cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.07273205310038501,
+        "origin": "normalized(cv_analysis.logreg_scaled.cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.05376652763438294,
+        "origin": "normalized(cv_analysis.logreg_scaled.cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 4.0,
+        "origin": "count(cv_analysis.logreg_scaled.n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 20.0,
+        "origin": "count(cv_analysis.logreg_scaled.n_without)",
+        "source": "FROM_DATA"
+      }
+    },
+    "wine_logreg": {
+      "cv_with": {
+        "value": 0.0651609652296194,
+        "origin": "normalized(cv_analysis.wine_logreg.cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.07133623612819605,
+        "origin": "normalized(cv_analysis.wine_logreg.cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.006175270898576654,
+        "origin": "normalized(cv_analysis.wine_logreg.cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 3.0,
+        "origin": "count(cv_analysis.wine_logreg.n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 21.0,
+        "origin": "count(cv_analysis.wine_logreg.n_without)",
+        "source": "FROM_DATA"
+      }
+    },
+    "breast_cancer_logreg": {
+      "cv_with": {
+        "value": 0.029190347042700605,
+        "origin": "normalized(cv_analysis.breast_cancer_logreg.cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.07362855409286008,
+        "origin": "normalized(cv_analysis.breast_cancer_logreg.cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.044438207050159474,
+        "origin": "normalized(cv_analysis.breast_cancer_logreg.cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 3.0,
+        "origin": "count(cv_analysis.breast_cancer_logreg.n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 21.0,
+        "origin": "count(cv_analysis.breast_cancer_logreg.n_without)",
+        "source": "FROM_DATA"
+      }
+    },
+    "iris_logreg": {
+      "cv_with": {
+        "value": 0.07691634458014812,
+        "origin": "normalized(cv_analysis.iris_logreg.cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.06960388896748426,
+        "origin": "normalized(cv_analysis.iris_logreg.cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": -0.00731245561266386,
+        "origin": "computed(cv_analysis.iris_logreg.cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 3.0,
+        "origin": "count(cv_analysis.iris_logreg.n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 21.0,
+        "origin": "count(cv_analysis.iris_logreg.n_without)",
+        "source": "FROM_DATA"
+      }
+    },
+    "logreg": {
+      "cv_with": {
+        "value": 0.06999029671080328,
+        "origin": "normalized(cv_analysis.logreg.cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.07108225298511599,
+        "origin": "normalized(cv_analysis.logreg.cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.0010919562743127026,
+        "origin": "normalized(cv_analysis.logreg.cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 12.0,
+        "origin": "count(cv_analysis.logreg.n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 12.0,
+        "origin": "count(cv_analysis.logreg.n_without)",
+        "source": "FROM_DATA"
+      }
+    },
+    "scaled": {
+      "cv_with": {
+        "value": 0.021432688077540802,
+        "origin": "normalized(cv_analysis.scaled.cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.07775228185162511,
+        "origin": "normalized(cv_analysis.scaled.cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.05631959377408431,
+        "origin": "normalized(cv_analysis.scaled.cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 8.0,
+        "origin": "count(cv_analysis.scaled.n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 16.0,
+        "origin": "count(cv_analysis.scaled.n_without)",
+        "source": "FROM_DATA"
+      }
+    },
+    "logreg_raw": {
+      "cv_with": {
+        "value": 0.017855876140022986,
+        "origin": "normalized(cv_analysis.logreg_raw.cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.07504992296329,
+        "origin": "normalized(cv_analysis.logreg_raw.cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.05719404682326701,
+        "origin": "normalized(cv_analysis.logreg_raw.cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 4.0,
+        "origin": "count(cv_analysis.logreg_raw.n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 20.0,
+        "origin": "count(cv_analysis.logreg_raw.n_without)",
+        "source": "FROM_DATA"
+      }
+    },
+    "wine": {
+      "cv_with": {
+        "value": 0.051661059230592755,
+        "origin": "normalized(cv_analysis.wine.cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.07590068781811497,
+        "origin": "normalized(cv_analysis.wine.cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.024239628587522218,
+        "origin": "normalized(cv_analysis.wine.cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 6.0,
+        "origin": "count(cv_analysis.wine.n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18.0,
+        "origin": "count(cv_analysis.wine.n_without)",
+        "source": "FROM_DATA"
+      }
+    },
+    "breast_cancer": {
+      "cv_with": {
+        "value": 0.022269326201418808,
+        "origin": "normalized(cv_analysis.breast_cancer.cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.07726167631060142,
+        "origin": "normalized(cv_analysis.breast_cancer.cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.05499235010918262,
+        "origin": "normalized(cv_analysis.breast_cancer.cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 6.0,
+        "origin": "count(cv_analysis.breast_cancer.n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18.0,
+        "origin": "count(cv_analysis.breast_cancer.n_without)",
+        "source": "FROM_DATA"
+      }
+    },
+    "iris": {
+      "cv_with": {
+        "value": 0.10235760963142927,
+        "origin": "normalized(cv_analysis.iris.cv_with)",
+        "source": "FROM_MATH"
+      },
+      "cv_without": {
+        "value": 0.05621713763738767,
+        "origin": "normalized(cv_analysis.iris.cv_without)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": -0.0461404719940416,
+        "origin": "computed(cv_analysis.iris.cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 6.0,
+        "origin": "count(cv_analysis.iris.n_with)",
+        "source": "FROM_DATA"
+      },
+      "n_without": {
+        "value": 18.0,
+        "origin": "count(cv_analysis.iris.n_without)",
+        "source": "FROM_DATA"
+      }
+    }
+  },
+  "dominant_factor": {
+    "factor": "logreg_raw",
+    "cv_with": {
+      "value": 0.017855876140022986,
+      "origin": "normalized(dominant_factor.cv_with)",
+      "source": "FROM_MATH"
+    },
+    "cv_without": {
+      "value": 0.07504992296329,
+      "origin": "normalized(dominant_factor.cv_without)",
+      "source": "FROM_MATH"
+    },
+    "cv_reduction": {
+      "value": 0.05719404682326701,
+      "origin": "normalized(dominant_factor.cv_reduction)",
+      "source": "FROM_MATH"
+    },
+    "n_with": {
+      "value": 4.0,
+      "origin": "count(dominant_factor.n_with)",
+      "source": "FROM_DATA"
+    },
+    "n_without": {
+      "value": 20.0,
+      "origin": "count(dominant_factor.n_without)",
+      "source": "FROM_DATA"
+    }
+  },
+  "provenance": {
+    "datasets": "FROM_DATA: sklearn.datasets",
+    "accuracy": "FROM_DATA: cross_val_score(cv=3)",
+    "percentile": "FROM_MATH: empirical CDF",
+    "concentration": "FROM_MATH: (f_top/n_top)/(f_all/n_all)",
+    "cv": "FROM_MATH: std/mean"
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "7a3f17b110c5",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:46.085244",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/ENDOGENOUS_NgramCausal_COMPLETE.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:46.085459",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 216,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 241,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 216,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 241,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
+}

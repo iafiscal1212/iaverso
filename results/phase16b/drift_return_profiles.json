@@ -1,108 +1,511 @@
 {
   "seeds": [
     {
-      "seed": 0,
-      "drift_rms_mean": 0.4391649355893857,
-      "drift_rms_p95": 0.6202377524417089,
-      "return_penalty_mean": 0.004254911074386351,
-      "fast_drift_mean": 0.28154680295392437,
-      "slow_drift_mean": 0.1657915353683724
+      "seed": {
+        "value": 0,
+        "origin": "counted(seeds[0].seed)",
+        "source": "FROM_DATA"
+      },
+      "drift_rms_mean": {
+        "value": 0.4391649355893857,
+        "origin": "mean(seeds[0].drift_rms_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "drift_rms_p95": {
+        "value": 0.6202377524417089,
+        "origin": "normalized(seeds[0].drift_rms_p95)",
+        "source": "FROM_MATH"
+      },
+      "return_penalty_mean": {
+        "value": 0.004254911074386351,
+        "origin": "mean(seeds[0].return_penalty_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "fast_drift_mean": {
+        "value": 0.28154680295392437,
+        "origin": "mean(seeds[0].fast_drift_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "slow_drift_mean": {
+        "value": 0.1657915353683724,
+        "origin": "mean(seeds[0].slow_drift_mean)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 1,
-      "drift_rms_mean": 0.47853966500541534,
-      "drift_rms_p95": 0.7221192217182706,
-      "return_penalty_mean": 0.0038605654856445895,
-      "fast_drift_mean": 0.4610911327171202,
-      "slow_drift_mean": 0.16179460378227742
+      "seed": {
+        "value": 1,
+        "origin": "counted(seeds[1].seed)",
+        "source": "FROM_DATA"
+      },
+      "drift_rms_mean": {
+        "value": 0.47853966500541534,
+        "origin": "mean(seeds[1].drift_rms_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "drift_rms_p95": {
+        "value": 0.7221192217182706,
+        "origin": "normalized(seeds[1].drift_rms_p95)",
+        "source": "FROM_MATH"
+      },
+      "return_penalty_mean": {
+        "value": 0.0038605654856445895,
+        "origin": "mean(seeds[1].return_penalty_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "fast_drift_mean": {
+        "value": 0.4610911327171202,
+        "origin": "mean(seeds[1].fast_drift_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "slow_drift_mean": {
+        "value": 0.16179460378227742,
+        "origin": "mean(seeds[1].slow_drift_mean)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 2,
-      "drift_rms_mean": 0.4113628775504088,
-      "drift_rms_p95": 0.6399188667089643,
-      "return_penalty_mean": 0.0043817105726271085,
-      "fast_drift_mean": 0.3640247431582697,
-      "slow_drift_mean": 0.11191963803665247
+      "seed": {
+        "value": 2,
+        "origin": "counted(seeds[2].seed)",
+        "source": "FROM_DATA"
+      },
+      "drift_rms_mean": {
+        "value": 0.4113628775504088,
+        "origin": "mean(seeds[2].drift_rms_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "drift_rms_p95": {
+        "value": 0.6399188667089643,
+        "origin": "normalized(seeds[2].drift_rms_p95)",
+        "source": "FROM_MATH"
+      },
+      "return_penalty_mean": {
+        "value": 0.0043817105726271085,
+        "origin": "mean(seeds[2].return_penalty_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "fast_drift_mean": {
+        "value": 0.3640247431582697,
+        "origin": "mean(seeds[2].fast_drift_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "slow_drift_mean": {
+        "value": 0.11191963803665247,
+        "origin": "mean(seeds[2].slow_drift_mean)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 3,
-      "drift_rms_mean": 0.5806543753659171,
-      "drift_rms_p95": 0.8715593108113625,
-      "return_penalty_mean": 0.004835531617763628,
-      "fast_drift_mean": 0.30159336306680673,
-      "slow_drift_mean": 0.20715622203517503
+      "seed": {
+        "value": 3,
+        "origin": "counted(seeds[3].seed)",
+        "source": "FROM_DATA"
+      },
+      "drift_rms_mean": {
+        "value": 0.5806543753659171,
+        "origin": "mean(seeds[3].drift_rms_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "drift_rms_p95": {
+        "value": 0.8715593108113625,
+        "origin": "normalized(seeds[3].drift_rms_p95)",
+        "source": "FROM_MATH"
+      },
+      "return_penalty_mean": {
+        "value": 0.004835531617763628,
+        "origin": "mean(seeds[3].return_penalty_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "fast_drift_mean": {
+        "value": 0.30159336306680673,
+        "origin": "mean(seeds[3].fast_drift_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "slow_drift_mean": {
+        "value": 0.20715622203517503,
+        "origin": "mean(seeds[3].slow_drift_mean)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 4,
-      "drift_rms_mean": 0.530165477833263,
-      "drift_rms_p95": 0.8108619552927306,
-      "return_penalty_mean": 0.005155382451799575,
-      "fast_drift_mean": 0.5002185399956459,
-      "slow_drift_mean": 0.1843098468208874
+      "seed": {
+        "value": 4,
+        "origin": "counted(seeds[4].seed)",
+        "source": "FROM_DATA"
+      },
+      "drift_rms_mean": {
+        "value": 0.530165477833263,
+        "origin": "mean(seeds[4].drift_rms_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "drift_rms_p95": {
+        "value": 0.8108619552927306,
+        "origin": "normalized(seeds[4].drift_rms_p95)",
+        "source": "FROM_MATH"
+      },
+      "return_penalty_mean": {
+        "value": 0.005155382451799575,
+        "origin": "mean(seeds[4].return_penalty_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "fast_drift_mean": {
+        "value": 0.5002185399956459,
+        "origin": "mean(seeds[4].fast_drift_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "slow_drift_mean": {
+        "value": 0.1843098468208874,
+        "origin": "mean(seeds[4].slow_drift_mean)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 5,
-      "drift_rms_mean": 0.4423678494211996,
-      "drift_rms_p95": 0.7725604665790822,
-      "return_penalty_mean": 0.004183775235376879,
-      "fast_drift_mean": 0.3324349685686476,
-      "slow_drift_mean": 0.18578054214611134
+      "seed": {
+        "value": 5,
+        "origin": "counted(seeds[5].seed)",
+        "source": "FROM_DATA"
+      },
+      "drift_rms_mean": {
+        "value": 0.4423678494211996,
+        "origin": "mean(seeds[5].drift_rms_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "drift_rms_p95": {
+        "value": 0.7725604665790822,
+        "origin": "normalized(seeds[5].drift_rms_p95)",
+        "source": "FROM_MATH"
+      },
+      "return_penalty_mean": {
+        "value": 0.004183775235376879,
+        "origin": "mean(seeds[5].return_penalty_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "fast_drift_mean": {
+        "value": 0.3324349685686476,
+        "origin": "mean(seeds[5].fast_drift_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "slow_drift_mean": {
+        "value": 0.18578054214611134,
+        "origin": "mean(seeds[5].slow_drift_mean)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 6,
-      "drift_rms_mean": 0.43819899140675855,
-      "drift_rms_p95": 0.6281435422185399,
-      "return_penalty_mean": 0.003968319263646696,
-      "fast_drift_mean": 0.44319917712118817,
-      "slow_drift_mean": 0.14893926257376233
+      "seed": {
+        "value": 6,
+        "origin": "counted(seeds[6].seed)",
+        "source": "FROM_DATA"
+      },
+      "drift_rms_mean": {
+        "value": 0.43819899140675855,
+        "origin": "mean(seeds[6].drift_rms_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "drift_rms_p95": {
+        "value": 0.6281435422185399,
+        "origin": "normalized(seeds[6].drift_rms_p95)",
+        "source": "FROM_MATH"
+      },
+      "return_penalty_mean": {
+        "value": 0.003968319263646696,
+        "origin": "mean(seeds[6].return_penalty_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "fast_drift_mean": {
+        "value": 0.44319917712118817,
+        "origin": "mean(seeds[6].fast_drift_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "slow_drift_mean": {
+        "value": 0.14893926257376233,
+        "origin": "mean(seeds[6].slow_drift_mean)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 7,
-      "drift_rms_mean": 0.4868924859110631,
-      "drift_rms_p95": 0.7300519268741479,
-      "return_penalty_mean": 0.003863132849072015,
-      "fast_drift_mean": 0.5076667641660133,
-      "slow_drift_mean": 0.12201757628843005
+      "seed": {
+        "value": 7,
+        "origin": "counted(seeds[7].seed)",
+        "source": "FROM_DATA"
+      },
+      "drift_rms_mean": {
+        "value": 0.4868924859110631,
+        "origin": "mean(seeds[7].drift_rms_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "drift_rms_p95": {
+        "value": 0.7300519268741479,
+        "origin": "normalized(seeds[7].drift_rms_p95)",
+        "source": "FROM_MATH"
+      },
+      "return_penalty_mean": {
+        "value": 0.003863132849072015,
+        "origin": "mean(seeds[7].return_penalty_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "fast_drift_mean": {
+        "value": 0.5076667641660133,
+        "origin": "mean(seeds[7].fast_drift_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "slow_drift_mean": {
+        "value": 0.12201757628843005,
+        "origin": "mean(seeds[7].slow_drift_mean)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 8,
-      "drift_rms_mean": 0.34847202041663744,
-      "drift_rms_p95": 0.5010368992259164,
-      "return_penalty_mean": 0.003468161184255853,
-      "fast_drift_mean": 0.3518909059587263,
-      "slow_drift_mean": 0.12288831195382058
+      "seed": {
+        "value": 8,
+        "origin": "counted(seeds[8].seed)",
+        "source": "FROM_DATA"
+      },
+      "drift_rms_mean": {
+        "value": 0.34847202041663744,
+        "origin": "mean(seeds[8].drift_rms_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "drift_rms_p95": {
+        "value": 0.5010368992259164,
+        "origin": "normalized(seeds[8].drift_rms_p95)",
+        "source": "FROM_MATH"
+      },
+      "return_penalty_mean": {
+        "value": 0.003468161184255853,
+        "origin": "mean(seeds[8].return_penalty_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "fast_drift_mean": {
+        "value": 0.3518909059587263,
+        "origin": "mean(seeds[8].fast_drift_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "slow_drift_mean": {
+        "value": 0.12288831195382058,
+        "origin": "mean(seeds[8].slow_drift_mean)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 9,
-      "drift_rms_mean": 0.5005086058283028,
-      "drift_rms_p95": 0.8597394991295566,
-      "return_penalty_mean": 0.004966791148406902,
-      "fast_drift_mean": 0.35034310782321665,
-      "slow_drift_mean": 0.23695324960980818
+      "seed": {
+        "value": 9,
+        "origin": "counted(seeds[9].seed)",
+        "source": "FROM_DATA"
+      },
+      "drift_rms_mean": {
+        "value": 0.5005086058283028,
+        "origin": "mean(seeds[9].drift_rms_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "drift_rms_p95": {
+        "value": 0.8597394991295566,
+        "origin": "normalized(seeds[9].drift_rms_p95)",
+        "source": "FROM_MATH"
+      },
+      "return_penalty_mean": {
+        "value": 0.004966791148406902,
+        "origin": "mean(seeds[9].return_penalty_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "fast_drift_mean": {
+        "value": 0.35034310782321665,
+        "origin": "mean(seeds[9].fast_drift_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "slow_drift_mean": {
+        "value": 0.23695324960980818,
+        "origin": "mean(seeds[9].slow_drift_mean)",
+        "source": "FROM_STATISTICS"
+      }
     }
   ],
   "drift_rms": {
-    "mean": 0.4656327284328351,
-    "std": 0.0615594062109972,
-    "median": 0.4604537572133075,
-    "p95": 0.5579343714762227
+    "mean": {
+      "value": 0.4656327284328351,
+      "origin": "mean(drift_rms.mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "std": {
+      "value": 0.0615594062109972,
+      "origin": "std(drift_rms.std)",
+      "source": "FROM_STATISTICS"
+    },
+    "median": {
+      "value": 0.4604537572133075,
+      "origin": "mean(drift_rms.median)",
+      "source": "FROM_STATISTICS"
+    },
+    "p95": {
+      "value": 0.5579343714762227,
+      "origin": "normalized(drift_rms.p95)",
+      "source": "FROM_MATH"
+    }
   },
   "return_penalty": {
-    "mean": 0.0042938280882979605,
-    "std": 0.0005168021008220987,
-    "median": 0.004219343154881615,
+    "mean": {
+      "value": 0.0042938280882979605,
+      "origin": "mean(return_penalty.mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "std": {
+      "value": 0.0005168021008220987,
+      "origin": "std(return_penalty.std)",
+      "source": "FROM_STATISTICS"
+    },
+    "median": {
+      "value": 0.004219343154881615,
+      "origin": "mean(return_penalty.median)",
+      "source": "FROM_STATISTICS"
+    },
     "all_positive": true
   },
   "dual_memory": {
-    "fast_drift_mean": 0.38940095055295587,
-    "slow_drift_mean": 0.16475507886152974,
-    "fast_slow_ratio": 2.363514090171878
+    "fast_drift_mean": {
+      "value": 0.38940095055295587,
+      "origin": "mean(dual_memory.fast_drift_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "slow_drift_mean": {
+      "value": 0.16475507886152974,
+      "origin": "mean(dual_memory.slow_drift_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "fast_slow_ratio": {
+      "value": 2.363514090171878,
+      "origin": "ratio(dual_memory.fast_slow_ratio)",
+      "source": "FROM_MATH"
+    }
   },
   "vs_null": {
-    "null_mean": 0.4729347040452116,
-    "null_std": 0.07229011957619777,
-    "null_p95": 0.5943506977817538,
-    "real_mean": 0.4656327284328351,
+    "null_mean": {
+      "value": 0.4729347040452116,
+      "origin": "mean(vs_null.null_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 0.07229011957619777,
+      "origin": "std(vs_null.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_p95": {
+      "value": 0.5943506977817538,
+      "origin": "normalized(vs_null.null_p95)",
+      "source": "FROM_MATH"
+    },
+    "real_mean": {
+      "value": 0.4656327284328351,
+      "origin": "mean(vs_null.real_mean)",
+      "source": "FROM_STATISTICS"
+    },
     "above_p95": false
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "5de9326f3885",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.439850",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase16b/drift_return_profiles.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.440037",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 186,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 195,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 186,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 195,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

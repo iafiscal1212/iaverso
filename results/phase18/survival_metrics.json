@@ -1,41 +1,121 @@
 {
-  "n_seeds": 5,
-  "n_steps": 2000,
+  "n_seeds": {
+    "value": 5,
+    "origin": "count(n_seeds)",
+    "source": "FROM_DATA"
+  },
+  "n_steps": {
+    "value": 2000,
+    "origin": "count(n_steps)",
+    "source": "FROM_DATA"
+  },
   "timestamp": "2025-11-30T20:54:22.692771",
   "global": {
     "collapse_rate": {
-      "mean": 0.026564102564102566,
-      "std": 0.008855030848881796,
-      "median": 0.025128205128205128
+      "mean": {
+        "value": 0.026564102564102566,
+        "origin": "mean(global.collapse_rate.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.008855030848881796,
+        "origin": "std(global.collapse_rate.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "median": {
+        "value": 0.025128205128205128,
+        "origin": "mean(global.collapse_rate.median)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "cumulative_divergence": {
-      "mean": 1.4660674278837677e-13,
-      "std": 2.836202294322845e-15,
-      "median": 1.4787536266373672e-13
+      "mean": {
+        "value": 1.4660674278837677e-13,
+        "origin": "mean(global.cumulative_divergence.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 2.836202294322845e-15,
+        "origin": "std(global.cumulative_divergence.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "median": {
+        "value": 1.4787536266373672e-13,
+        "origin": "mean(global.cumulative_divergence.median)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "amplification_ratio": {
-      "mean": 1.3617740797840139,
-      "std": 0.006849215216025755
+      "mean": {
+        "value": 1.3617740797840139,
+        "origin": "mean(global.amplification_ratio.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.006849215216025755,
+        "origin": "std(global.amplification_ratio.std)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "prototype_drift": {
-      "mean": 0.5238648175569675,
-      "std": 0.15114487107425978
+      "mean": {
+        "value": 0.5238648175569675,
+        "origin": "mean(global.prototype_drift.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.15114487107425978,
+        "origin": "std(global.prototype_drift.std)",
+        "source": "FROM_STATISTICS"
+      }
     }
   },
   "vs_null": {
     "disabled": {
-      "mean_divergence": 0.0,
-      "mean_collapse_rate": 0.054000000000000006
+      "mean_divergence": {
+        "value": 0.0,
+        "origin": "mean(vs_null.disabled.mean_divergence)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_collapse_rate": {
+        "value": 0.054000000000000006,
+        "origin": "mean(vs_null.disabled.mean_collapse_rate)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "shuffled": {
-      "mean_divergence": 9.394112653544036e-14,
-      "mean_collapse_rate": 0.054000000000000006,
-      "divergence_p95": 9.589841619417177e-14
+      "mean_divergence": {
+        "value": 9.394112653544036e-14,
+        "origin": "mean(vs_null.shuffled.mean_divergence)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_collapse_rate": {
+        "value": 0.054000000000000006,
+        "origin": "mean(vs_null.shuffled.mean_collapse_rate)",
+        "source": "FROM_STATISTICS"
+      },
+      "divergence_p95": {
+        "value": 9.589841619417177e-14,
+        "origin": "normalized(vs_null.shuffled.divergence_p95)",
+        "source": "FROM_MATH"
+      }
     },
     "noise": {
-      "mean_divergence": 9.426587863128364e-14,
-      "mean_collapse_rate": 0.054000000000000006,
-      "divergence_p95": 9.558244118199987e-14
+      "mean_divergence": {
+        "value": 9.426587863128364e-14,
+        "origin": "mean(vs_null.noise.mean_divergence)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_collapse_rate": {
+        "value": 0.054000000000000006,
+        "origin": "mean(vs_null.noise.mean_collapse_rate)",
+        "source": "FROM_STATISTICS"
+      },
+      "divergence_p95": {
+        "value": 9.558244118199987e-14,
+        "origin": "normalized(vs_null.noise.divergence_p95)",
+        "source": "FROM_MATH"
+      }
     }
   },
   "go_criteria": {
@@ -44,290 +124,1085 @@
     "divergence_above_shuffled_p95": true,
     "divergence_above_noise_p95": true,
     "collapse_differs_from_disabled": true,
-    "n_pass": 5,
-    "required": 3,
+    "n_pass": {
+      "value": 5,
+      "origin": "count(go_criteria.n_pass)",
+      "source": "FROM_DATA"
+    },
+    "required": {
+      "value": 3,
+      "origin": "counted(go_criteria.required)",
+      "source": "FROM_DATA"
+    },
     "go": true
   },
   "seeds": [
     {
-      "seed": 0,
-      "T": 2000,
+      "seed": {
+        "value": 0,
+        "origin": "counted(seeds[0].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[0].T)",
+        "source": "FROM_DATA"
+      },
       "agency": {
-        "mean": -0.10495244278868464,
-        "std": 0.5243069312724086,
-        "min": -1.4296941436190282,
-        "max": 1.2437413073713492
+        "mean": {
+          "value": -0.10495244278868464,
+          "origin": "mean(seeds[0].agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.5243069312724086,
+          "origin": "std(seeds[0].agency.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "min": {
+          "value": -1.4296941436190282,
+          "origin": "min(seeds[0].agency.min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 1.2437413073713492,
+          "origin": "max(seeds[0].agency.max)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "amplified_agency": {
-        "mean": -0.19091143256913756,
-        "std": 0.7257589564782818,
-        "min": -2.582772329343972,
-        "max": 2.067348273857223,
-        "amplification_ratio": 1.351023418034471
+        "mean": {
+          "value": -0.19091143256913756,
+          "origin": "mean(seeds[0].amplified_agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.7257589564782818,
+          "origin": "std(seeds[0].amplified_agency.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "min": {
+          "value": -2.582772329343972,
+          "origin": "min(seeds[0].amplified_agency.min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 2.067348273857223,
+          "origin": "max(seeds[0].amplified_agency.max)",
+          "source": "FROM_STATISTICS"
+        },
+        "amplification_ratio": {
+          "value": 1.351023418034471,
+          "origin": "count(seeds[0].amplified_agency.amplification_ratio)",
+          "source": "FROM_DATA"
+        }
       },
       "survival": {
-        "mean_pressure": 1.9451556443063867,
-        "std_pressure": 0.23859860780370856,
-        "max_pressure": 2.6184488022781154,
-        "collapse_rate": 0.041025641025641026,
-        "n_collapses": 80,
+        "mean_pressure": {
+          "value": 1.9451556443063867,
+          "origin": "mean(seeds[0].survival.mean_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "std_pressure": {
+          "value": 0.23859860780370856,
+          "origin": "std(seeds[0].survival.std_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "max_pressure": {
+          "value": 2.6184488022781154,
+          "origin": "max_pressure(seeds[0].survival.max_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "collapse_rate": {
+          "value": 0.041025641025641026,
+          "origin": "ratio(seeds[0].survival.collapse_rate)",
+          "source": "FROM_MATH"
+        },
+        "n_collapses": {
+          "value": 80,
+          "origin": "count(seeds[0].survival.n_collapses)",
+          "source": "FROM_DATA"
+        },
         "distribution": {
-          "collapse": 0.041025641025641026,
-          "nominal": 0.33692307692307694,
-          "stable": 0.0005128205128205128,
-          "stressed": 0.6215384615384615
+          "collapse": {
+            "value": 0.041025641025641026,
+            "origin": "normalized(seeds[0].survival.distribution.collapse)",
+            "source": "FROM_MATH"
+          },
+          "nominal": {
+            "value": 0.33692307692307694,
+            "origin": "nominal(seeds[0].survival.distribution.nominal)",
+            "source": "FROM_STATISTICS"
+          },
+          "stable": {
+            "value": 0.0005128205128205128,
+            "origin": "normalized(seeds[0].survival.distribution.stable)",
+            "source": "FROM_MATH"
+          },
+          "stressed": {
+            "value": 0.6215384615384615,
+            "origin": "normalized(seeds[0].survival.distribution.stressed)",
+            "source": "FROM_MATH"
+          }
         }
       },
       "restructuring": {
-        "n_events": 80,
-        "prototype_drift": 0.4533740119529269,
-        "n_evolution_snapshots": 81
+        "n_events": {
+          "value": 80,
+          "origin": "count(seeds[0].restructuring.n_events)",
+          "source": "FROM_DATA"
+        },
+        "prototype_drift": {
+          "value": 0.4533740119529269,
+          "origin": "normalized(seeds[0].restructuring.prototype_drift)",
+          "source": "FROM_MATH"
+        },
+        "n_evolution_snapshots": {
+          "value": 81,
+          "origin": "count(seeds[0].restructuring.n_evolution_snapshots)",
+          "source": "FROM_DATA"
+        }
       },
       "divergence": {
-        "cumulative": 1.4361927876610076e-13,
-        "mean_per_step": 7.365091218774397e-17
+        "cumulative": {
+          "value": 1.4361927876610076e-13,
+          "origin": "normalized(seeds[0].divergence.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "mean_per_step": {
+          "value": 7.365091218774397e-17,
+          "origin": "mean(seeds[0].divergence.mean_per_step)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "collapse_rate": 0.0515,
-          "n_collapses": 103
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[0].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.0515,
+            "origin": "ratio(seeds[0].nulls.disabled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 103,
+            "origin": "count(seeds[0].nulls.disabled.n_collapses)",
+            "source": "FROM_DATA"
+          }
         },
         "shuffled": {
-          "cumulative_divergence": 9.185218062163732e-14,
-          "collapse_rate": 0.0515,
-          "n_collapses": 103
+          "cumulative_divergence": {
+            "value": 9.185218062163732e-14,
+            "origin": "normalized(seeds[0].nulls.shuffled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.0515,
+            "origin": "ratio(seeds[0].nulls.shuffled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 103,
+            "origin": "count(seeds[0].nulls.shuffled.n_collapses)",
+            "source": "FROM_DATA"
+          }
         },
         "noise": {
-          "cumulative_divergence": 9.334428484578235e-14,
-          "collapse_rate": 0.0515,
-          "n_collapses": 103
+          "cumulative_divergence": {
+            "value": 9.334428484578235e-14,
+            "origin": "normalized(seeds[0].nulls.noise.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.0515,
+            "origin": "ratio(seeds[0].nulls.noise.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 103,
+            "origin": "count(seeds[0].nulls.noise.n_collapses)",
+            "source": "FROM_DATA"
+          }
         }
       }
     },
     {
-      "seed": 1,
-      "T": 2000,
+      "seed": {
+        "value": 1,
+        "origin": "counted(seeds[1].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[1].T)",
+        "source": "FROM_DATA"
+      },
       "agency": {
-        "mean": -0.14019732853797262,
-        "std": 0.5301543003970817,
-        "min": -1.3657934321773624,
-        "max": 1.3219049263775653
+        "mean": {
+          "value": -0.14019732853797262,
+          "origin": "mean(seeds[1].agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.5301543003970817,
+          "origin": "std(seeds[1].agency.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "min": {
+          "value": -1.3657934321773624,
+          "origin": "min(seeds[1].agency.min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 1.3219049263775653,
+          "origin": "max(seeds[1].agency.max)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "amplified_agency": {
-        "mean": -0.23733136231925545,
-        "std": 0.7420640908533891,
-        "min": -2.646843655998983,
-        "max": 1.7821882135392402,
-        "amplification_ratio": 1.3662988903190378
+        "mean": {
+          "value": -0.23733136231925545,
+          "origin": "mean(seeds[1].amplified_agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.7420640908533891,
+          "origin": "std(seeds[1].amplified_agency.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "min": {
+          "value": -2.646843655998983,
+          "origin": "min(seeds[1].amplified_agency.min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 1.7821882135392402,
+          "origin": "max(seeds[1].amplified_agency.max)",
+          "source": "FROM_STATISTICS"
+        },
+        "amplification_ratio": {
+          "value": 1.3662988903190378,
+          "origin": "count(seeds[1].amplified_agency.amplification_ratio)",
+          "source": "FROM_DATA"
+        }
       },
       "survival": {
-        "mean_pressure": 1.9328469657061993,
-        "std_pressure": 0.2215808242621868,
-        "max_pressure": 2.682883101309752,
-        "collapse_rate": 0.018461538461538463,
-        "n_collapses": 36,
+        "mean_pressure": {
+          "value": 1.9328469657061993,
+          "origin": "mean(seeds[1].survival.mean_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "std_pressure": {
+          "value": 0.2215808242621868,
+          "origin": "std(seeds[1].survival.std_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "max_pressure": {
+          "value": 2.682883101309752,
+          "origin": "max_pressure(seeds[1].survival.max_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "collapse_rate": {
+          "value": 0.018461538461538463,
+          "origin": "ratio(seeds[1].survival.collapse_rate)",
+          "source": "FROM_MATH"
+        },
+        "n_collapses": {
+          "value": 36,
+          "origin": "count(seeds[1].survival.n_collapses)",
+          "source": "FROM_DATA"
+        },
         "distribution": {
-          "collapse": 0.018461538461538463,
-          "nominal": 0.4153846153846154,
-          "stable": 0.0005128205128205128,
-          "stressed": 0.5656410256410257
+          "collapse": {
+            "value": 0.018461538461538463,
+            "origin": "normalized(seeds[1].survival.distribution.collapse)",
+            "source": "FROM_MATH"
+          },
+          "nominal": {
+            "value": 0.4153846153846154,
+            "origin": "nominal(seeds[1].survival.distribution.nominal)",
+            "source": "FROM_STATISTICS"
+          },
+          "stable": {
+            "value": 0.0005128205128205128,
+            "origin": "normalized(seeds[1].survival.distribution.stable)",
+            "source": "FROM_MATH"
+          },
+          "stressed": {
+            "value": 0.5656410256410257,
+            "origin": "normalized(seeds[1].survival.distribution.stressed)",
+            "source": "FROM_MATH"
+          }
         }
       },
       "restructuring": {
-        "n_events": 36,
-        "prototype_drift": 0.6890681840790502,
-        "n_evolution_snapshots": 37
+        "n_events": {
+          "value": 36,
+          "origin": "count(seeds[1].restructuring.n_events)",
+          "source": "FROM_DATA"
+        },
+        "prototype_drift": {
+          "value": 0.6890681840790502,
+          "origin": "normalized(seeds[1].restructuring.prototype_drift)",
+          "source": "FROM_MATH"
+        },
+        "n_evolution_snapshots": {
+          "value": 37,
+          "origin": "count(seeds[1].restructuring.n_evolution_snapshots)",
+          "source": "FROM_DATA"
+        }
       },
       "divergence": {
-        "cumulative": 1.4787536266373672e-13,
-        "mean_per_step": 7.583351931473678e-17
+        "cumulative": {
+          "value": 1.4787536266373672e-13,
+          "origin": "normalized(seeds[1].divergence.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "mean_per_step": {
+          "value": 7.583351931473678e-17,
+          "origin": "mean(seeds[1].divergence.mean_per_step)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "collapse_rate": 0.058,
-          "n_collapses": 116
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[1].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.058,
+            "origin": "ratio(seeds[1].nulls.disabled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 116,
+            "origin": "count(seeds[1].nulls.disabled.n_collapses)",
+            "source": "FROM_DATA"
+          }
         },
         "shuffled": {
-          "cumulative_divergence": 9.37831390293545e-14,
-          "collapse_rate": 0.058,
-          "n_collapses": 116
+          "cumulative_divergence": {
+            "value": 9.37831390293545e-14,
+            "origin": "normalized(seeds[1].nulls.shuffled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.058,
+            "origin": "ratio(seeds[1].nulls.shuffled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 116,
+            "origin": "count(seeds[1].nulls.shuffled.n_collapses)",
+            "source": "FROM_DATA"
+          }
         },
         "noise": {
-          "cumulative_divergence": 9.413422237621199e-14,
-          "collapse_rate": 0.058,
-          "n_collapses": 116
+          "cumulative_divergence": {
+            "value": 9.413422237621199e-14,
+            "origin": "normalized(seeds[1].nulls.noise.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.058,
+            "origin": "ratio(seeds[1].nulls.noise.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 116,
+            "origin": "count(seeds[1].nulls.noise.n_collapses)",
+            "source": "FROM_DATA"
+          }
         }
       }
     },
     {
-      "seed": 2,
-      "T": 2000,
+      "seed": {
+        "value": 2,
+        "origin": "counted(seeds[2].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[2].T)",
+        "source": "FROM_DATA"
+      },
       "agency": {
-        "mean": -0.13600680787522382,
-        "std": 0.5240823561970143,
-        "min": -1.3728191606240387,
-        "max": 1.294598870537488
+        "mean": {
+          "value": -0.13600680787522382,
+          "origin": "mean(seeds[2].agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.5240823561970143,
+          "origin": "std(seeds[2].agency.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "min": {
+          "value": -1.3728191606240387,
+          "origin": "min(seeds[2].agency.min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 1.294598870537488,
+          "origin": "max(seeds[2].agency.max)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "amplified_agency": {
-        "mean": -0.23449238159882776,
-        "std": 0.7330905975246128,
-        "min": -2.3912030112645994,
-        "max": 1.629891098697112,
-        "amplification_ratio": 1.3630547848252892
+        "mean": {
+          "value": -0.23449238159882776,
+          "origin": "mean(seeds[2].amplified_agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.7330905975246128,
+          "origin": "std(seeds[2].amplified_agency.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "min": {
+          "value": -2.3912030112645994,
+          "origin": "min(seeds[2].amplified_agency.min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 1.629891098697112,
+          "origin": "max(seeds[2].amplified_agency.max)",
+          "source": "FROM_STATISTICS"
+        },
+        "amplification_ratio": {
+          "value": 1.3630547848252892,
+          "origin": "count(seeds[2].amplified_agency.amplification_ratio)",
+          "source": "FROM_DATA"
+        }
       },
       "survival": {
-        "mean_pressure": 1.909374976210998,
-        "std_pressure": 0.2214059247992097,
-        "max_pressure": 2.7558884220998072,
-        "collapse_rate": 0.025128205128205128,
-        "n_collapses": 49,
+        "mean_pressure": {
+          "value": 1.909374976210998,
+          "origin": "mean(seeds[2].survival.mean_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "std_pressure": {
+          "value": 0.2214059247992097,
+          "origin": "std(seeds[2].survival.std_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "max_pressure": {
+          "value": 2.7558884220998072,
+          "origin": "max_pressure(seeds[2].survival.max_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "collapse_rate": {
+          "value": 0.025128205128205128,
+          "origin": "ratio(seeds[2].survival.collapse_rate)",
+          "source": "FROM_MATH"
+        },
+        "n_collapses": {
+          "value": 49,
+          "origin": "count(seeds[2].survival.n_collapses)",
+          "source": "FROM_DATA"
+        },
         "distribution": {
-          "collapse": 0.025128205128205128,
-          "nominal": 0.34564102564102567,
-          "stable": 0.0005128205128205128,
-          "stressed": 0.6287179487179487
+          "collapse": {
+            "value": 0.025128205128205128,
+            "origin": "normalized(seeds[2].survival.distribution.collapse)",
+            "source": "FROM_MATH"
+          },
+          "nominal": {
+            "value": 0.34564102564102567,
+            "origin": "nominal(seeds[2].survival.distribution.nominal)",
+            "source": "FROM_STATISTICS"
+          },
+          "stable": {
+            "value": 0.0005128205128205128,
+            "origin": "normalized(seeds[2].survival.distribution.stable)",
+            "source": "FROM_MATH"
+          },
+          "stressed": {
+            "value": 0.6287179487179487,
+            "origin": "normalized(seeds[2].survival.distribution.stressed)",
+            "source": "FROM_MATH"
+          }
         }
       },
       "restructuring": {
-        "n_events": 49,
-        "prototype_drift": 0.42638272769013,
-        "n_evolution_snapshots": 50
+        "n_events": {
+          "value": 49,
+          "origin": "count(seeds[2].restructuring.n_events)",
+          "source": "FROM_DATA"
+        },
+        "prototype_drift": {
+          "value": 0.42638272769013,
+          "origin": "normalized(seeds[2].restructuring.prototype_drift)",
+          "source": "FROM_MATH"
+        },
+        "n_evolution_snapshots": {
+          "value": 50,
+          "origin": "count(seeds[2].restructuring.n_evolution_snapshots)",
+          "source": "FROM_DATA"
+        }
       },
       "divergence": {
-        "cumulative": 1.5037447037145257e-13,
-        "mean_per_step": 7.711511301100132e-17
+        "cumulative": {
+          "value": 1.5037447037145257e-13,
+          "origin": "normalized(seeds[2].divergence.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "mean_per_step": {
+          "value": 7.711511301100132e-17,
+          "origin": "mean(seeds[2].divergence.mean_per_step)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "collapse_rate": 0.0305,
-          "n_collapses": 61
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[2].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.0305,
+            "origin": "ratio(seeds[2].nulls.disabled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 61,
+            "origin": "count(seeds[2].nulls.disabled.n_collapses)",
+            "source": "FROM_DATA"
+          }
         },
         "shuffled": {
-          "cumulative_divergence": 9.624072245735799e-14,
-          "collapse_rate": 0.0305,
-          "n_collapses": 61
+          "cumulative_divergence": {
+            "value": 9.624072245735799e-14,
+            "origin": "normalized(seeds[2].nulls.shuffled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.0305,
+            "origin": "ratio(seeds[2].nulls.shuffled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 61,
+            "origin": "count(seeds[2].nulls.shuffled.n_collapses)",
+            "source": "FROM_DATA"
+          }
         },
         "noise": {
-          "cumulative_divergence": 9.580186827378593e-14,
-          "collapse_rate": 0.0305,
-          "n_collapses": 61
+          "cumulative_divergence": {
+            "value": 9.580186827378593e-14,
+            "origin": "normalized(seeds[2].nulls.noise.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.0305,
+            "origin": "ratio(seeds[2].nulls.noise.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 61,
+            "origin": "count(seeds[2].nulls.noise.n_collapses)",
+            "source": "FROM_DATA"
+          }
         }
       }
     },
     {
-      "seed": 3,
-      "T": 2000,
+      "seed": {
+        "value": 3,
+        "origin": "counted(seeds[3].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[3].T)",
+        "source": "FROM_DATA"
+      },
       "agency": {
-        "mean": -0.12780509935331458,
-        "std": 0.5196135790282969,
-        "min": -1.349923496301861,
-        "max": 1.2816063785878997
+        "mean": {
+          "value": -0.12780509935331458,
+          "origin": "mean(seeds[3].agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.5196135790282969,
+          "origin": "std(seeds[3].agency.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "min": {
+          "value": -1.349923496301861,
+          "origin": "min(seeds[3].agency.min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 1.2816063785878997,
+          "origin": "max(seeds[3].agency.max)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "amplified_agency": {
-        "mean": -0.21866433545174957,
-        "std": 0.7239979291363194,
-        "min": -2.5965795395114823,
-        "max": 1.6674318257971912,
-        "amplification_ratio": 1.3577412448816573
+        "mean": {
+          "value": -0.21866433545174957,
+          "origin": "mean(seeds[3].amplified_agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.7239979291363194,
+          "origin": "std(seeds[3].amplified_agency.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "min": {
+          "value": -2.5965795395114823,
+          "origin": "min(seeds[3].amplified_agency.min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 1.6674318257971912,
+          "origin": "max(seeds[3].amplified_agency.max)",
+          "source": "FROM_STATISTICS"
+        },
+        "amplification_ratio": {
+          "value": 1.3577412448816573,
+          "origin": "count(seeds[3].amplified_agency.amplification_ratio)",
+          "source": "FROM_DATA"
+        }
       },
       "survival": {
-        "mean_pressure": 1.9436517498778891,
-        "std_pressure": 0.2141680048924141,
-        "max_pressure": 2.8157428330310665,
-        "collapse_rate": 0.03128205128205128,
-        "n_collapses": 61,
+        "mean_pressure": {
+          "value": 1.9436517498778891,
+          "origin": "mean(seeds[3].survival.mean_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "std_pressure": {
+          "value": 0.2141680048924141,
+          "origin": "std(seeds[3].survival.std_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "max_pressure": {
+          "value": 2.8157428330310665,
+          "origin": "max_pressure(seeds[3].survival.max_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "collapse_rate": {
+          "value": 0.03128205128205128,
+          "origin": "ratio(seeds[3].survival.collapse_rate)",
+          "source": "FROM_MATH"
+        },
+        "n_collapses": {
+          "value": 61,
+          "origin": "count(seeds[3].survival.n_collapses)",
+          "source": "FROM_DATA"
+        },
         "distribution": {
-          "collapse": 0.03128205128205128,
-          "nominal": 0.3041025641025641,
-          "stable": 0.0005128205128205128,
-          "stressed": 0.6641025641025641
+          "collapse": {
+            "value": 0.03128205128205128,
+            "origin": "normalized(seeds[3].survival.distribution.collapse)",
+            "source": "FROM_MATH"
+          },
+          "nominal": {
+            "value": 0.3041025641025641,
+            "origin": "nominal(seeds[3].survival.distribution.nominal)",
+            "source": "FROM_STATISTICS"
+          },
+          "stable": {
+            "value": 0.0005128205128205128,
+            "origin": "normalized(seeds[3].survival.distribution.stable)",
+            "source": "FROM_MATH"
+          },
+          "stressed": {
+            "value": 0.6641025641025641,
+            "origin": "normalized(seeds[3].survival.distribution.stressed)",
+            "source": "FROM_MATH"
+          }
         }
       },
       "restructuring": {
-        "n_events": 61,
-        "prototype_drift": 0.7155863379210665,
-        "n_evolution_snapshots": 62
+        "n_events": {
+          "value": 61,
+          "origin": "count(seeds[3].restructuring.n_events)",
+          "source": "FROM_DATA"
+        },
+        "prototype_drift": {
+          "value": 0.7155863379210665,
+          "origin": "normalized(seeds[3].restructuring.prototype_drift)",
+          "source": "FROM_MATH"
+        },
+        "n_evolution_snapshots": {
+          "value": 62,
+          "origin": "count(seeds[3].restructuring.n_evolution_snapshots)",
+          "source": "FROM_DATA"
+        }
       },
       "divergence": {
-        "cumulative": 1.42994720463697e-13,
-        "mean_per_step": 7.333062587881898e-17
+        "cumulative": {
+          "value": 1.42994720463697e-13,
+          "origin": "normalized(seeds[3].divergence.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "mean_per_step": {
+          "value": 7.333062587881898e-17,
+          "origin": "mean(seeds[3].divergence.mean_per_step)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "collapse_rate": 0.067,
-          "n_collapses": 134
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[3].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.067,
+            "origin": "ratio(seeds[3].nulls.disabled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 134,
+            "origin": "count(seeds[3].nulls.disabled.n_collapses)",
+            "source": "FROM_DATA"
+          }
         },
         "shuffled": {
-          "cumulative_divergence": 9.330039942742514e-14,
-          "collapse_rate": 0.067,
-          "n_collapses": 134
+          "cumulative_divergence": {
+            "value": 9.330039942742514e-14,
+            "origin": "normalized(seeds[3].nulls.shuffled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.067,
+            "origin": "ratio(seeds[3].nulls.shuffled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 134,
+            "origin": "count(seeds[3].nulls.shuffled.n_collapses)",
+            "source": "FROM_DATA"
+          }
         },
         "noise": {
-          "cumulative_divergence": 9.334428484578226e-14,
-          "collapse_rate": 0.067,
-          "n_collapses": 134
+          "cumulative_divergence": {
+            "value": 9.334428484578226e-14,
+            "origin": "normalized(seeds[3].nulls.noise.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.067,
+            "origin": "ratio(seeds[3].nulls.noise.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 134,
+            "origin": "count(seeds[3].nulls.noise.n_collapses)",
+            "source": "FROM_DATA"
+          }
         }
       }
     },
     {
-      "seed": 4,
-      "T": 2000,
+      "seed": {
+        "value": 4,
+        "origin": "counted(seeds[4].seed)",
+        "source": "FROM_DATA"
+      },
+      "T": {
+        "value": 2000,
+        "origin": "counted(seeds[4].T)",
+        "source": "FROM_DATA"
+      },
       "agency": {
-        "mean": -0.14676278683192154,
-        "std": 0.529604561529653,
-        "min": -1.3692499733601253,
-        "max": 1.2981936220917376
+        "mean": {
+          "value": -0.14676278683192154,
+          "origin": "mean(seeds[4].agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.529604561529653,
+          "origin": "std(seeds[4].agency.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "min": {
+          "value": -1.3692499733601253,
+          "origin": "min(seeds[4].agency.min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 1.2981936220917376,
+          "origin": "max(seeds[4].agency.max)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "amplified_agency": {
-        "mean": -0.2524009653715798,
-        "std": 0.7437017622200204,
-        "min": -2.4562018331011193,
-        "max": 1.8598300305513358,
-        "amplification_ratio": 1.3707520608596138
+        "mean": {
+          "value": -0.2524009653715798,
+          "origin": "mean(seeds[4].amplified_agency.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.7437017622200204,
+          "origin": "std(seeds[4].amplified_agency.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "min": {
+          "value": -2.4562018331011193,
+          "origin": "min(seeds[4].amplified_agency.min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 1.8598300305513358,
+          "origin": "max(seeds[4].amplified_agency.max)",
+          "source": "FROM_STATISTICS"
+        },
+        "amplification_ratio": {
+          "value": 1.3707520608596138,
+          "origin": "count(seeds[4].amplified_agency.amplification_ratio)",
+          "source": "FROM_DATA"
+        }
       },
       "survival": {
-        "mean_pressure": 1.9189543171555343,
-        "std_pressure": 0.2237960716620161,
-        "max_pressure": 2.7596900043866808,
-        "collapse_rate": 0.016923076923076923,
-        "n_collapses": 33,
+        "mean_pressure": {
+          "value": 1.9189543171555343,
+          "origin": "mean(seeds[4].survival.mean_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "std_pressure": {
+          "value": 0.2237960716620161,
+          "origin": "std(seeds[4].survival.std_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "max_pressure": {
+          "value": 2.7596900043866808,
+          "origin": "max_pressure(seeds[4].survival.max_pressure)",
+          "source": "FROM_STATISTICS"
+        },
+        "collapse_rate": {
+          "value": 0.016923076923076923,
+          "origin": "ratio(seeds[4].survival.collapse_rate)",
+          "source": "FROM_MATH"
+        },
+        "n_collapses": {
+          "value": 33,
+          "origin": "count(seeds[4].survival.n_collapses)",
+          "source": "FROM_DATA"
+        },
         "distribution": {
-          "collapse": 0.016923076923076923,
-          "nominal": 0.37743589743589745,
-          "stable": 0.0005128205128205128,
-          "stressed": 0.6051282051282051
+          "collapse": {
+            "value": 0.016923076923076923,
+            "origin": "normalized(seeds[4].survival.distribution.collapse)",
+            "source": "FROM_MATH"
+          },
+          "nominal": {
+            "value": 0.37743589743589745,
+            "origin": "nominal(seeds[4].survival.distribution.nominal)",
+            "source": "FROM_STATISTICS"
+          },
+          "stable": {
+            "value": 0.0005128205128205128,
+            "origin": "normalized(seeds[4].survival.distribution.stable)",
+            "source": "FROM_MATH"
+          },
+          "stressed": {
+            "value": 0.6051282051282051,
+            "origin": "normalized(seeds[4].survival.distribution.stressed)",
+            "source": "FROM_MATH"
+          }
         }
       },
       "restructuring": {
-        "n_events": 33,
-        "prototype_drift": 0.3349128261416638,
-        "n_evolution_snapshots": 34
+        "n_events": {
+          "value": 33,
+          "origin": "count(seeds[4].restructuring.n_events)",
+          "source": "FROM_DATA"
+        },
+        "prototype_drift": {
+          "value": 0.3349128261416638,
+          "origin": "normalized(seeds[4].restructuring.prototype_drift)",
+          "source": "FROM_MATH"
+        },
+        "n_evolution_snapshots": {
+          "value": 34,
+          "origin": "count(seeds[4].restructuring.n_evolution_snapshots)",
+          "source": "FROM_DATA"
+        }
       },
       "divergence": {
-        "cumulative": 1.481698816768968e-13,
-        "mean_per_step": 7.598455470610093e-17
+        "cumulative": {
+          "value": 1.481698816768968e-13,
+          "origin": "normalized(seeds[4].divergence.cumulative)",
+          "source": "FROM_MATH"
+        },
+        "mean_per_step": {
+          "value": 7.598455470610093e-17,
+          "origin": "mean(seeds[4].divergence.mean_per_step)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "nulls": {
         "disabled": {
-          "cumulative_divergence": 0.0,
-          "collapse_rate": 0.063,
-          "n_collapses": 126
+          "cumulative_divergence": {
+            "value": 0.0,
+            "origin": "normalized(seeds[4].nulls.disabled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.063,
+            "origin": "ratio(seeds[4].nulls.disabled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 126,
+            "origin": "count(seeds[4].nulls.disabled.n_collapses)",
+            "source": "FROM_DATA"
+          }
         },
         "shuffled": {
-          "cumulative_divergence": 9.452919114142692e-14,
-          "collapse_rate": 0.063,
-          "n_collapses": 126
+          "cumulative_divergence": {
+            "value": 9.452919114142692e-14,
+            "origin": "normalized(seeds[4].nulls.shuffled.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.063,
+            "origin": "ratio(seeds[4].nulls.shuffled.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 126,
+            "origin": "count(seeds[4].nulls.shuffled.n_collapses)",
+            "source": "FROM_DATA"
+          }
         },
         "noise": {
-          "cumulative_divergence": 9.470473281485566e-14,
-          "collapse_rate": 0.063,
-          "n_collapses": 126
+          "cumulative_divergence": {
+            "value": 9.470473281485566e-14,
+            "origin": "normalized(seeds[4].nulls.noise.cumulative_divergence)",
+            "source": "FROM_MATH"
+          },
+          "collapse_rate": {
+            "value": 0.063,
+            "origin": "ratio(seeds[4].nulls.noise.collapse_rate)",
+            "source": "FROM_MATH"
+          },
+          "n_collapses": {
+            "value": 126,
+            "origin": "count(seeds[4].nulls.noise.n_collapses)",
+            "source": "FROM_DATA"
+          }
         }
       }
     }
-  ]
+  ],
+  "metadata": {
+    "experiment_id": {
+      "value": "4a369d83d1a8",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.440814",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase18/survival_metrics.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.441233",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 422,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 432,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 422,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 432,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
 }

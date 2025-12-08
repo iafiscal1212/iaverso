@@ -1,325 +1,917 @@
 {
   "timestamp": "2025-11-30T19:44:04.976215",
-  "n_steps": 1000,
-  "n_nulls": 100,
+  "n_steps": {
+    "value": 1000,
+    "origin": "count(n_steps)",
+    "source": "FROM_DATA"
+  },
+  "n_nulls": {
+    "value": 100,
+    "origin": "count(n_nulls)",
+    "source": "FROM_DATA"
+  },
   "irreversibility": {
     "neo": {
       "real": {
-        "kl": 0.8044472957158241,
-        "entropy_production": 0.004723457686179734
+        "kl": {
+          "value": 0.8044472957158241,
+          "origin": "normalized(irreversibility.neo.real.kl)",
+          "source": "FROM_MATH"
+        },
+        "entropy_production": {
+          "value": 0.004723457686179734,
+          "origin": "normalized(irreversibility.neo.real.entropy_production)",
+          "source": "FROM_MATH"
+        }
       },
       "null": {
-        "kl_mean": 1.2269548863783444,
-        "kl_std": 0.7127241105112377,
-        "entropy_mean": 0.009359154863585805,
-        "entropy_std": 0.006000665849225388
+        "kl_mean": {
+          "value": 1.2269548863783444,
+          "origin": "mean(irreversibility.neo.null.kl_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "kl_std": {
+          "value": 0.7127241105112377,
+          "origin": "std(irreversibility.neo.null.kl_std)",
+          "source": "FROM_STATISTICS"
+        },
+        "entropy_mean": {
+          "value": 0.009359154863585805,
+          "origin": "mean(irreversibility.neo.null.entropy_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "entropy_std": {
+          "value": 0.006000665849225388,
+          "origin": "std(irreversibility.neo.null.entropy_std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "statistics": {
-        "kl_z_score": -0.5928066476654691,
-        "kl_p_value": 0.66,
-        "entropy_z_score": -0.7725304647657245,
-        "entropy_p_value": 0.74,
+        "kl_z_score": {
+          "value": -0.5928066476654691,
+          "origin": "computed(irreversibility.neo.statistics.kl_z_score)",
+          "source": "FROM_DATA"
+        },
+        "kl_p_value": {
+          "value": 0.66,
+          "origin": "computed(irreversibility.neo.statistics.kl_p_value)",
+          "source": "FROM_DATA"
+        },
+        "entropy_z_score": {
+          "value": -0.7725304647657245,
+          "origin": "computed(irreversibility.neo.statistics.entropy_z_score)",
+          "source": "FROM_DATA"
+        },
+        "entropy_p_value": {
+          "value": 0.74,
+          "origin": "computed(irreversibility.neo.statistics.entropy_p_value)",
+          "source": "FROM_DATA"
+        },
         "kl_significant": false,
         "entropy_significant": false
       },
-      "n_nulls": 100
+      "n_nulls": {
+        "value": 100,
+        "origin": "count(irreversibility.neo.n_nulls)",
+        "source": "FROM_DATA"
+      }
     },
     "eva": {
       "real": {
-        "kl": 0.9253380457614576,
-        "entropy_production": 0.0031673113644359713
+        "kl": {
+          "value": 0.9253380457614576,
+          "origin": "normalized(irreversibility.eva.real.kl)",
+          "source": "FROM_MATH"
+        },
+        "entropy_production": {
+          "value": 0.0031673113644359713,
+          "origin": "normalized(irreversibility.eva.real.entropy_production)",
+          "source": "FROM_MATH"
+        }
       },
       "null": {
-        "kl_mean": 0.9037107789560692,
-        "kl_std": 0.6469457046188789,
-        "entropy_mean": 0.006790596770785281,
-        "entropy_std": 0.005034474458342893
+        "kl_mean": {
+          "value": 0.9037107789560692,
+          "origin": "mean(irreversibility.eva.null.kl_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "kl_std": {
+          "value": 0.6469457046188789,
+          "origin": "std(irreversibility.eva.null.kl_std)",
+          "source": "FROM_STATISTICS"
+        },
+        "entropy_mean": {
+          "value": 0.006790596770785281,
+          "origin": "mean(irreversibility.eva.null.entropy_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "entropy_std": {
+          "value": 0.005034474458342893,
+          "origin": "std(irreversibility.eva.null.entropy_std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "statistics": {
-        "kl_z_score": 0.03342980199262502,
-        "kl_p_value": 0.44,
-        "entropy_z_score": -0.719694863153951,
-        "entropy_p_value": 0.74,
+        "kl_z_score": {
+          "value": 0.03342980199262502,
+          "origin": "computed(irreversibility.eva.statistics.kl_z_score)",
+          "source": "FROM_DATA"
+        },
+        "kl_p_value": {
+          "value": 0.44,
+          "origin": "computed(irreversibility.eva.statistics.kl_p_value)",
+          "source": "FROM_DATA"
+        },
+        "entropy_z_score": {
+          "value": -0.719694863153951,
+          "origin": "computed(irreversibility.eva.statistics.entropy_z_score)",
+          "source": "FROM_DATA"
+        },
+        "entropy_p_value": {
+          "value": 0.74,
+          "origin": "computed(irreversibility.eva.statistics.entropy_p_value)",
+          "source": "FROM_DATA"
+        },
         "kl_significant": false,
         "entropy_significant": false
       },
-      "n_nulls": 100
+      "n_nulls": {
+        "value": 100,
+        "origin": "count(irreversibility.eva.n_nulls)",
+        "source": "FROM_DATA"
+      }
     }
   },
   "directionality": {
-    "real_mean_directionality": 0.9407887985726939,
-    "null": {
-      "mean": 0.9329830837311905,
-      "std": 0.005532654578085011,
-      "p95": 0.9416066736747136
+    "real_mean_directionality": {
+      "value": 0.9407887985726939,
+      "origin": "mean(directionality.real_mean_directionality)",
+      "source": "FROM_STATISTICS"
     },
-    "z_score": 1.4108444204020458,
-    "p_value": 0.07,
+    "null": {
+      "mean": {
+        "value": 0.9329830837311905,
+        "origin": "mean(directionality.null.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.005532654578085011,
+        "origin": "std(directionality.null.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "p95": {
+        "value": 0.9416066736747136,
+        "origin": "normalized(directionality.null.p95)",
+        "source": "FROM_MATH"
+      }
+    },
+    "z_score": {
+      "value": 1.4108444204020458,
+      "origin": "computed(directionality.z_score)",
+      "source": "FROM_DATA"
+    },
+    "p_value": {
+      "value": 0.07,
+      "origin": "computed(directionality.p_value)",
+      "source": "FROM_DATA"
+    },
     "significant": false,
     "above_null_p95": false,
-    "n_nulls": 100
+    "n_nulls": {
+      "value": 100,
+      "origin": "count(directionality.n_nulls)",
+      "source": "FROM_DATA"
+    }
   },
   "drift": {
     "neo": {
       "drift": {
-        "n_prototypes": 663,
-        "total_updates": 1000,
-        "drift_norms": {
-          "mean": 0.0,
-          "std": 0.0,
-          "max": 0.0,
-          "min": 0.0
+        "n_prototypes": {
+          "value": 663,
+          "origin": "count(drift.neo.drift.n_prototypes)",
+          "source": "FROM_DATA"
         },
-        "cumulative_drift": 0.0,
-        "history_length": 1000
+        "total_updates": {
+          "value": 1000,
+          "origin": "count(drift.neo.drift.total_updates)",
+          "source": "FROM_DATA"
+        },
+        "drift_norms": {
+          "mean": {
+            "value": 0.0,
+            "origin": "mean(drift.neo.drift.drift_norms.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.0,
+            "origin": "std(drift.neo.drift.drift_norms.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.0,
+            "origin": "max(drift.neo.drift.drift_norms.max)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(drift.neo.drift.drift_norms.min)",
+            "source": "FROM_STATISTICS"
+          }
+        },
+        "cumulative_drift": {
+          "value": 0.0,
+          "origin": "normalized(drift.neo.drift.cumulative_drift)",
+          "source": "FROM_MATH"
+        },
+        "history_length": {
+          "value": 1000,
+          "origin": "count(drift.neo.drift.history_length)",
+          "source": "FROM_DATA"
+        }
       },
       "penalty": {
-        "n_penalties": 337,
-        "mean": 0.17549846555784596,
-        "std": 0.08368061337756715,
-        "median": 0.16402267556376304,
-        "max": 0.691008352392252,
-        "p25": 0.1180406220263801,
-        "p75": 0.21610689507256153,
-        "n_prototypes_visited": 663
+        "n_penalties": {
+          "value": 337,
+          "origin": "count(drift.neo.penalty.n_penalties)",
+          "source": "FROM_DATA"
+        },
+        "mean": {
+          "value": 0.17549846555784596,
+          "origin": "mean(drift.neo.penalty.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.08368061337756715,
+          "origin": "std(drift.neo.penalty.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "median": {
+          "value": 0.16402267556376304,
+          "origin": "mean(drift.neo.penalty.median)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 0.691008352392252,
+          "origin": "max(drift.neo.penalty.max)",
+          "source": "FROM_STATISTICS"
+        },
+        "p25": {
+          "value": 0.1180406220263801,
+          "origin": "normalized(drift.neo.penalty.p25)",
+          "source": "FROM_MATH"
+        },
+        "p75": {
+          "value": 0.21610689507256153,
+          "origin": "normalized(drift.neo.penalty.p75)",
+          "source": "FROM_MATH"
+        },
+        "n_prototypes_visited": {
+          "value": 663,
+          "origin": "count(drift.neo.penalty.n_prototypes_visited)",
+          "source": "FROM_DATA"
+        }
       }
     },
     "eva": {
       "drift": {
-        "n_prototypes": 653,
-        "total_updates": 1000,
-        "drift_norms": {
-          "mean": 0.0,
-          "std": 0.0,
-          "max": 0.0,
-          "min": 0.0
+        "n_prototypes": {
+          "value": 653,
+          "origin": "count(drift.eva.drift.n_prototypes)",
+          "source": "FROM_DATA"
         },
-        "cumulative_drift": 0.0,
-        "history_length": 1000
+        "total_updates": {
+          "value": 1000,
+          "origin": "count(drift.eva.drift.total_updates)",
+          "source": "FROM_DATA"
+        },
+        "drift_norms": {
+          "mean": {
+            "value": 0.0,
+            "origin": "mean(drift.eva.drift.drift_norms.mean)",
+            "source": "FROM_STATISTICS"
+          },
+          "std": {
+            "value": 0.0,
+            "origin": "std(drift.eva.drift.drift_norms.std)",
+            "source": "FROM_STATISTICS"
+          },
+          "max": {
+            "value": 0.0,
+            "origin": "max(drift.eva.drift.drift_norms.max)",
+            "source": "FROM_STATISTICS"
+          },
+          "min": {
+            "value": 0.0,
+            "origin": "min(drift.eva.drift.drift_norms.min)",
+            "source": "FROM_STATISTICS"
+          }
+        },
+        "cumulative_drift": {
+          "value": 0.0,
+          "origin": "normalized(drift.eva.drift.cumulative_drift)",
+          "source": "FROM_MATH"
+        },
+        "history_length": {
+          "value": 1000,
+          "origin": "count(drift.eva.drift.history_length)",
+          "source": "FROM_DATA"
+        }
       },
       "penalty": {
-        "n_penalties": 347,
-        "mean": 0.18222647617617496,
-        "std": 0.08254692307108949,
-        "median": 0.1736834151636032,
-        "max": 0.8639177131605207,
-        "p25": 0.132683509340631,
-        "p75": 0.22098971842014153,
-        "n_prototypes_visited": 653
+        "n_penalties": {
+          "value": 347,
+          "origin": "count(drift.eva.penalty.n_penalties)",
+          "source": "FROM_DATA"
+        },
+        "mean": {
+          "value": 0.18222647617617496,
+          "origin": "mean(drift.eva.penalty.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.08254692307108949,
+          "origin": "std(drift.eva.penalty.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "median": {
+          "value": 0.1736834151636032,
+          "origin": "mean(drift.eva.penalty.median)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 0.8639177131605207,
+          "origin": "max(drift.eva.penalty.max)",
+          "source": "FROM_STATISTICS"
+        },
+        "p25": {
+          "value": 0.132683509340631,
+          "origin": "normalized(drift.eva.penalty.p25)",
+          "source": "FROM_MATH"
+        },
+        "p75": {
+          "value": 0.22098971842014153,
+          "origin": "normalized(drift.eva.penalty.p75)",
+          "source": "FROM_MATH"
+        },
+        "n_prototypes_visited": {
+          "value": 653,
+          "origin": "count(drift.eva.penalty.n_prototypes_visited)",
+          "source": "FROM_DATA"
+        }
       }
     },
-    "n_steps": 1000
+    "n_steps": {
+      "value": 1000,
+      "origin": "count(drift.n_steps)",
+      "source": "FROM_DATA"
+    }
   },
   "return_cost": {
     "neo": {
-      "n_penalties": 337,
-      "mean": 0.17549846555784596,
-      "std": 0.08368061337756715,
-      "median": 0.16402267556376304,
-      "max": 0.691008352392252,
-      "p25": 0.1180406220263801,
-      "p75": 0.21610689507256153,
-      "n_prototypes_visited": 663
+      "n_penalties": {
+        "value": 337,
+        "origin": "count(return_cost.neo.n_penalties)",
+        "source": "FROM_DATA"
+      },
+      "mean": {
+        "value": 0.17549846555784596,
+        "origin": "mean(return_cost.neo.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.08368061337756715,
+        "origin": "std(return_cost.neo.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "median": {
+        "value": 0.16402267556376304,
+        "origin": "mean(return_cost.neo.median)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.691008352392252,
+        "origin": "max(return_cost.neo.max)",
+        "source": "FROM_STATISTICS"
+      },
+      "p25": {
+        "value": 0.1180406220263801,
+        "origin": "normalized(return_cost.neo.p25)",
+        "source": "FROM_MATH"
+      },
+      "p75": {
+        "value": 0.21610689507256153,
+        "origin": "normalized(return_cost.neo.p75)",
+        "source": "FROM_MATH"
+      },
+      "n_prototypes_visited": {
+        "value": 663,
+        "origin": "count(return_cost.neo.n_prototypes_visited)",
+        "source": "FROM_DATA"
+      }
     },
     "eva": {
-      "n_penalties": 347,
-      "mean": 0.18222647617617496,
-      "std": 0.08254692307108949,
-      "median": 0.1736834151636032,
-      "max": 0.8639177131605207,
-      "p25": 0.132683509340631,
-      "p75": 0.22098971842014153,
-      "n_prototypes_visited": 653
+      "n_penalties": {
+        "value": 347,
+        "origin": "count(return_cost.eva.n_penalties)",
+        "source": "FROM_DATA"
+      },
+      "mean": {
+        "value": 0.18222647617617496,
+        "origin": "mean(return_cost.eva.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.08254692307108949,
+        "origin": "std(return_cost.eva.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "median": {
+        "value": 0.1736834151636032,
+        "origin": "mean(return_cost.eva.median)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.8639177131605207,
+        "origin": "max(return_cost.eva.max)",
+        "source": "FROM_STATISTICS"
+      },
+      "p25": {
+        "value": 0.132683509340631,
+        "origin": "normalized(return_cost.eva.p25)",
+        "source": "FROM_MATH"
+      },
+      "p75": {
+        "value": 0.22098971842014153,
+        "origin": "normalized(return_cost.eva.p75)",
+        "source": "FROM_MATH"
+      },
+      "n_prototypes_visited": {
+        "value": 653,
+        "origin": "count(return_cost.eva.n_prototypes_visited)",
+        "source": "FROM_DATA"
+      }
     }
   },
   "gnt_summary": {
     "gnt": {
-      "gnt": [
-        0.4438670812943616,
-        0.4196371828344956,
-        0.4459031329274198,
-        0.48572545952322044,
-        0.46104544152040217,
-        0.5616872057382879,
-        0.4459031329274198,
-        0.9121930872186393
-      ],
-      "t": 1000,
-      "momentum": 0.02791345624581515,
-      "stability": 0.6604586473450024,
-      "inertia": 0.9683930229379493,
-      "curvature": 28.996169773533023,
+      "gnt": {
+        "value": [
+          0.4438670812943616,
+          0.4196371828344956,
+          0.4459031329274198,
+          0.48572545952322044,
+          0.46104544152040217,
+          0.5616872057382879,
+          0.4459031329274198,
+          0.9121930872186393
+        ],
+        "origin": "array(gnt_summary.gnt.gnt)",
+        "source": "FROM_DATA"
+      },
+      "t": {
+        "value": 1000,
+        "origin": "counted(gnt_summary.gnt.t)",
+        "source": "FROM_DATA"
+      },
+      "momentum": {
+        "value": 0.02791345624581515,
+        "origin": "normalized(gnt_summary.gnt.momentum)",
+        "source": "FROM_MATH"
+      },
+      "stability": {
+        "value": 0.6604586473450024,
+        "origin": "normalized(gnt_summary.gnt.stability)",
+        "source": "FROM_MATH"
+      },
+      "inertia": {
+        "value": 0.9683930229379493,
+        "origin": "normalized(gnt_summary.gnt.inertia)",
+        "source": "FROM_MATH"
+      },
+      "curvature": {
+        "value": 28.996169773533023,
+        "origin": "computed(gnt_summary.gnt.curvature)",
+        "source": "FROM_MATH"
+      },
       "attractor": {
         "in_attractor": true,
-        "confidence": 0.9838707380674526,
-        "threshold": 0.025485753501128576,
-        "median_velocity": 0.022810220976076566
+        "confidence": {
+          "value": 0.9838707380674526,
+          "origin": "identifier(gnt_summary.gnt.attractor.confidence)",
+          "source": "FROM_DATA"
+        },
+        "threshold": {
+          "value": 0.025485753501128576,
+          "origin": "normalized(gnt_summary.gnt.attractor.threshold)",
+          "source": "FROM_MATH"
+        },
+        "median_velocity": {
+          "value": 0.022810220976076566,
+          "origin": "mean(gnt_summary.gnt.attractor.median_velocity)",
+          "source": "FROM_STATISTICS"
+        }
       },
-      "n_history": 1000
+      "n_history": {
+        "value": 1000,
+        "origin": "count(gnt_summary.gnt.n_history)",
+        "source": "FROM_DATA"
+      }
     },
     "trajectory": {
       "total": {
-        "path_length": 44.711338207065324,
-        "displacement": 0.43691154898230977,
-        "tortuosity": 102.33498819431678
+        "path_length": {
+          "value": 44.711338207065324,
+          "origin": "count(gnt_summary.trajectory.total.path_length)",
+          "source": "FROM_DATA"
+        },
+        "displacement": {
+          "value": 0.43691154898230977,
+          "origin": "normalized(gnt_summary.trajectory.total.displacement)",
+          "source": "FROM_MATH"
+        },
+        "tortuosity": {
+          "value": 102.33498819431678,
+          "origin": "computed(gnt_summary.trajectory.total.tortuosity)",
+          "source": "FROM_MATH"
+        }
       },
       "recent": {
-        "window": 31,
-        "path_length": 0.695803137339928,
-        "displacement": 0.09872618753116347,
-        "tortuosity": 7.047807220554262
+        "window": {
+          "value": 31,
+          "origin": "counted(gnt_summary.trajectory.recent.window)",
+          "source": "FROM_DATA"
+        },
+        "path_length": {
+          "value": 0.695803137339928,
+          "origin": "count(gnt_summary.trajectory.recent.path_length)",
+          "source": "FROM_DATA"
+        },
+        "displacement": {
+          "value": 0.09872618753116347,
+          "origin": "normalized(gnt_summary.trajectory.recent.displacement)",
+          "source": "FROM_MATH"
+        },
+        "tortuosity": {
+          "value": 7.047807220554262,
+          "origin": "computed(gnt_summary.trajectory.recent.tortuosity)",
+          "source": "FROM_MATH"
+        }
       },
-      "n_turning_points": 100,
+      "n_turning_points": {
+        "value": 100,
+        "origin": "count(gnt_summary.trajectory.n_turning_points)",
+        "source": "FROM_DATA"
+      },
       "turning_points_sample": [
         {
-          "t": 185,
-          "acceleration": 0.12297554177311794,
-          "gnt": [
-            0.46646161644915746,
-            0.406167631829742,
-            0.43179869770504636,
-            0.11461512045122861,
-            0.42157556603362273,
-            0.5463487707807617,
-            0.43179869770504636,
-            0.6451066898407665
-          ]
+          "t": {
+            "value": 185,
+            "origin": "counted(gnt_summary.trajectory.turning_points_sample[0].t)",
+            "source": "FROM_DATA"
+          },
+          "acceleration": {
+            "value": 0.12297554177311794,
+            "origin": "ratio(gnt_summary.trajectory.turning_points_sample[0].acceleration)",
+            "source": "FROM_MATH"
+          },
+          "gnt": {
+            "value": [
+              0.46646161644915746,
+              0.406167631829742,
+              0.43179869770504636,
+              0.11461512045122861,
+              0.42157556603362273,
+              0.5463487707807617,
+              0.43179869770504636,
+              0.6451066898407665
+            ],
+            "origin": "array(gnt_summary.trajectory.turning_points_sample[0].gnt)",
+            "source": "FROM_DATA"
+          }
         },
         {
-          "t": 189,
-          "acceleration": 0.11959653353637384,
-          "gnt": [
-            0.5031930028692897,
-            0.4578348423710672,
-            0.48061396753458935,
-            0.08672482497886083,
-            0.46692650161858557,
-            0.524243369242357,
-            0.48061396753458935,
-            0.5807479297815314
-          ]
+          "t": {
+            "value": 189,
+            "origin": "counted(gnt_summary.trajectory.turning_points_sample[1].t)",
+            "source": "FROM_DATA"
+          },
+          "acceleration": {
+            "value": 0.11959653353637384,
+            "origin": "ratio(gnt_summary.trajectory.turning_points_sample[1].acceleration)",
+            "source": "FROM_MATH"
+          },
+          "gnt": {
+            "value": [
+              0.5031930028692897,
+              0.4578348423710672,
+              0.48061396753458935,
+              0.08672482497886083,
+              0.46692650161858557,
+              0.524243369242357,
+              0.48061396753458935,
+              0.5807479297815314
+            ],
+            "origin": "array(gnt_summary.trajectory.turning_points_sample[1].gnt)",
+            "source": "FROM_DATA"
+          }
         },
         {
-          "t": 212,
-          "acceleration": 0.1158355688607341,
-          "gnt": [
-            0.48690150403086924,
-            0.4974626085592036,
-            0.46906486653096435,
-            0.03993159713185374,
-            0.46839092510268515,
-            0.4600866808464379,
-            0.46906486653096435,
-            0.6862384084679535
-          ]
+          "t": {
+            "value": 212,
+            "origin": "counted(gnt_summary.trajectory.turning_points_sample[2].t)",
+            "source": "FROM_DATA"
+          },
+          "acceleration": {
+            "value": 0.1158355688607341,
+            "origin": "ratio(gnt_summary.trajectory.turning_points_sample[2].acceleration)",
+            "source": "FROM_MATH"
+          },
+          "gnt": {
+            "value": [
+              0.48690150403086924,
+              0.4974626085592036,
+              0.46906486653096435,
+              0.03993159713185374,
+              0.46839092510268515,
+              0.4600866808464379,
+              0.46906486653096435,
+              0.6862384084679535
+            ],
+            "origin": "array(gnt_summary.trajectory.turning_points_sample[2].gnt)",
+            "source": "FROM_DATA"
+          }
         },
         {
-          "t": 232,
-          "acceleration": 0.11166493238326174,
-          "gnt": [
-            0.4394711460702968,
-            0.4940383063065861,
-            0.44068815158974706,
-            0.06187722718644963,
-            0.45488941429761914,
-            0.49513795052181153,
-            0.44068815158974706,
-            0.36697957586283897
-          ]
+          "t": {
+            "value": 232,
+            "origin": "counted(gnt_summary.trajectory.turning_points_sample[3].t)",
+            "source": "FROM_DATA"
+          },
+          "acceleration": {
+            "value": 0.11166493238326174,
+            "origin": "ratio(gnt_summary.trajectory.turning_points_sample[3].acceleration)",
+            "source": "FROM_MATH"
+          },
+          "gnt": {
+            "value": [
+              0.4394711460702968,
+              0.4940383063065861,
+              0.44068815158974706,
+              0.06187722718644963,
+              0.45488941429761914,
+              0.49513795052181153,
+              0.44068815158974706,
+              0.36697957586283897
+            ],
+            "origin": "array(gnt_summary.trajectory.turning_points_sample[3].gnt)",
+            "source": "FROM_DATA"
+          }
         },
         {
-          "t": 263,
-          "acceleration": 0.11241370714187225,
-          "gnt": [
-            0.45193159673615885,
-            0.5801839488137234,
-            0.4614396465730748,
-            0.19517705464694027,
-            0.4595374857356758,
-            0.5172542370839586,
-            0.4614396465730748,
-            0.24003441701781825
-          ]
+          "t": {
+            "value": 263,
+            "origin": "counted(gnt_summary.trajectory.turning_points_sample[4].t)",
+            "source": "FROM_DATA"
+          },
+          "acceleration": {
+            "value": 0.11241370714187225,
+            "origin": "ratio(gnt_summary.trajectory.turning_points_sample[4].acceleration)",
+            "source": "FROM_MATH"
+          },
+          "gnt": {
+            "value": [
+              0.45193159673615885,
+              0.5801839488137234,
+              0.4614396465730748,
+              0.19517705464694027,
+              0.4595374857356758,
+              0.5172542370839586,
+              0.4614396465730748,
+              0.24003441701781825
+            ],
+            "origin": "array(gnt_summary.trajectory.turning_points_sample[4].gnt)",
+            "source": "FROM_DATA"
+          }
         }
       ]
     },
-    "n_events": 75,
+    "n_events": {
+      "value": 75,
+      "origin": "count(gnt_summary.n_events)",
+      "source": "FROM_DATA"
+    },
     "recent_events": [
       {
-        "t": 777,
+        "t": {
+          "value": 777,
+          "origin": "counted(gnt_summary.recent_events[0].t)",
+          "source": "FROM_DATA"
+        },
         "event": "exit_attractor",
-        "confidence": 0.9795186005399135
+        "confidence": {
+          "value": 0.9795186005399135,
+          "origin": "identifier(gnt_summary.recent_events[0].confidence)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "t": 799,
+        "t": {
+          "value": 799,
+          "origin": "counted(gnt_summary.recent_events[1].t)",
+          "source": "FROM_DATA"
+        },
         "event": "enter_attractor",
-        "confidence": 0.981296214564207
+        "confidence": {
+          "value": 0.981296214564207,
+          "origin": "identifier(gnt_summary.recent_events[1].confidence)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "t": 854,
+        "t": {
+          "value": 854,
+          "origin": "counted(gnt_summary.recent_events[2].t)",
+          "source": "FROM_DATA"
+        },
         "event": "exit_attractor",
-        "confidence": 0.9800064222430165
+        "confidence": {
+          "value": 0.9800064222430165,
+          "origin": "identifier(gnt_summary.recent_events[2].confidence)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "t": 856,
+        "t": {
+          "value": 856,
+          "origin": "counted(gnt_summary.recent_events[3].t)",
+          "source": "FROM_DATA"
+        },
         "event": "enter_attractor",
-        "confidence": 0.982151268068414
+        "confidence": {
+          "value": 0.982151268068414,
+          "origin": "identifier(gnt_summary.recent_events[3].confidence)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "t": 871,
+        "t": {
+          "value": 871,
+          "origin": "counted(gnt_summary.recent_events[4].t)",
+          "source": "FROM_DATA"
+        },
         "event": "exit_attractor",
-        "confidence": 0.9804401705573524
+        "confidence": {
+          "value": 0.9804401705573524,
+          "origin": "identifier(gnt_summary.recent_events[4].confidence)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "t": 875,
+        "t": {
+          "value": 875,
+          "origin": "counted(gnt_summary.recent_events[5].t)",
+          "source": "FROM_DATA"
+        },
         "event": "enter_attractor",
-        "confidence": 0.9814913828872323
+        "confidence": {
+          "value": 0.9814913828872323,
+          "origin": "identifier(gnt_summary.recent_events[5].confidence)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "t": 928,
+        "t": {
+          "value": 928,
+          "origin": "counted(gnt_summary.recent_events[6].t)",
+          "source": "FROM_DATA"
+        },
         "event": "exit_attractor",
-        "confidence": 0.981310655066247
+        "confidence": {
+          "value": 0.981310655066247,
+          "origin": "identifier(gnt_summary.recent_events[6].confidence)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "t": 931,
+        "t": {
+          "value": 931,
+          "origin": "counted(gnt_summary.recent_events[7].t)",
+          "source": "FROM_DATA"
+        },
         "event": "enter_attractor",
-        "confidence": 0.9845662471260078
+        "confidence": {
+          "value": 0.9845662471260078,
+          "origin": "identifier(gnt_summary.recent_events[7].confidence)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "t": 980,
+        "t": {
+          "value": 980,
+          "origin": "counted(gnt_summary.recent_events[8].t)",
+          "source": "FROM_DATA"
+        },
         "event": "exit_attractor",
-        "confidence": 0.9816062816380065
+        "confidence": {
+          "value": 0.9816062816380065,
+          "origin": "identifier(gnt_summary.recent_events[8].confidence)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "t": 984,
+        "t": {
+          "value": 984,
+          "origin": "counted(gnt_summary.recent_events[9].t)",
+          "source": "FROM_DATA"
+        },
         "event": "enter_attractor",
-        "confidence": 0.9845673686207465
+        "confidence": {
+          "value": 0.9845673686207465,
+          "origin": "identifier(gnt_summary.recent_events[9].confidence)",
+          "source": "FROM_DATA"
+        }
       }
     ],
     "directional_momentum": {
       "directionality": {
-        "mean": 0.9407887985726939,
-        "std": 0.11557362404046187,
-        "median": 0.979069118535891,
-        "p25": 0.9466029812074807,
-        "p75": 0.9906662721249947,
-        "fraction_positive": 0.996996996996997
+        "mean": {
+          "value": 0.9407887985726939,
+          "origin": "mean(gnt_summary.directional_momentum.directionality.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.11557362404046187,
+          "origin": "std(gnt_summary.directional_momentum.directionality.std)",
+          "source": "FROM_STATISTICS"
+        },
+        "median": {
+          "value": 0.979069118535891,
+          "origin": "mean(gnt_summary.directional_momentum.directionality.median)",
+          "source": "FROM_STATISTICS"
+        },
+        "p25": {
+          "value": 0.9466029812074807,
+          "origin": "normalized(gnt_summary.directional_momentum.directionality.p25)",
+          "source": "FROM_MATH"
+        },
+        "p75": {
+          "value": 0.9906662721249947,
+          "origin": "normalized(gnt_summary.directional_momentum.directionality.p75)",
+          "source": "FROM_MATH"
+        },
+        "fraction_positive": {
+          "value": 0.996996996996997,
+          "origin": "count(gnt_summary.directional_momentum.directionality.fraction_positive)",
+          "source": "FROM_DATA"
+        }
       },
       "gradient_norm": {
-        "mean": 0.044756094301366636,
-        "std": 0.04099224976512128
+        "mean": {
+          "value": 0.044756094301366636,
+          "origin": "mean(gnt_summary.directional_momentum.gradient_norm.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.04099224976512128,
+          "origin": "std(gnt_summary.directional_momentum.gradient_norm.std)",
+          "source": "FROM_STATISTICS"
+        }
       },
       "momentum_norm": {
-        "mean": 0.01184334836865219,
-        "std": 0.023421863019044035
+        "mean": {
+          "value": 0.01184334836865219,
+          "origin": "mean(gnt_summary.directional_momentum.momentum_norm.mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.023421863019044035,
+          "origin": "std(gnt_summary.directional_momentum.momentum_norm.std)",
+          "source": "FROM_STATISTICS"
+        }
       },
-      "n_samples": 999
+      "n_samples": {
+        "value": 999,
+        "origin": "count(gnt_summary.directional_momentum.n_samples)",
+        "source": "FROM_DATA"
+      }
     }
   },
   "autonomy": {
-    "history_mean": 0.1714119646079989,
-    "history_std": 0.05915370069994782,
-    "final": 0.1046046046046046,
+    "history_mean": {
+      "value": 0.1714119646079989,
+      "origin": "mean(autonomy.history_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "history_std": {
+      "value": 0.05915370069994782,
+      "origin": "std(autonomy.history_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "final": {
+      "value": 0.1046046046046046,
+      "origin": "normalized(autonomy.final)",
+      "source": "FROM_MATH"
+    },
     "trend": "increasing"
   },
   "go_criteria": {
@@ -329,7 +921,122 @@
     "drift_stable": false,
     "return_cost_nonzero": true,
     "autonomy_not_decreasing": true,
-    "total_passed": 2.0,
-    "total_criteria": 6
+    "total_passed": {
+      "value": 2.0,
+      "origin": "count(go_criteria.total_passed)",
+      "source": "FROM_DATA"
+    },
+    "total_criteria": {
+      "value": 6,
+      "origin": "count(go_criteria.total_criteria)",
+      "source": "FROM_DATA"
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "145bab1d8cf5",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.547527",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase16/phase16_results.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.547899",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 338,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 359,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 338,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 359,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

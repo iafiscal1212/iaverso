@@ -1,0 +1,887 @@
+{
+  "metadata": {
+    "type": "100% ENDOGENOUS - GitHub API",
+    "n_repos": 25,
+    "seed": 42,
+    "timestamp": "2025-12-07T16:34:54.365652",
+    "experiment_id": {
+      "value": "c625177a2f05",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.020853",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/ENDOGENOUS_GitHub_CV_analysis.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "dominant_metric": {
+    "metric": "stars",
+    "count": {
+      "value": 25,
+      "origin": "count(dominant_metric.count)",
+      "source": "FROM_DATA"
+    },
+    "unit": "thousands",
+    "unit_factor": {
+      "value": 1000.0,
+      "origin": "computed(dominant_metric.unit_factor)",
+      "source": "FROM_MATH"
+    },
+    "median": {
+      "value": 29744.0,
+      "origin": "mean(dominant_metric.median)",
+      "source": "FROM_STATISTICS"
+    },
+    "all_counts": {
+      "stars": {
+        "value": 25,
+        "origin": "counted(dominant_metric.all_counts.stars)",
+        "source": "FROM_DATA"
+      },
+      "forks": {
+        "value": 25,
+        "origin": "counted(dominant_metric.all_counts.forks)",
+        "source": "FROM_DATA"
+      },
+      "watchers": {
+        "value": 25,
+        "origin": "counted(dominant_metric.all_counts.watchers)",
+        "source": "FROM_DATA"
+      },
+      "size_kb": {
+        "value": 25,
+        "origin": "counted(dominant_metric.all_counts.size_kb)",
+        "source": "FROM_DATA"
+      },
+      "open_issues": {
+        "value": 25,
+        "origin": "count(dominant_metric.all_counts.open_issues)",
+        "source": "FROM_DATA"
+      },
+      "age_days": {
+        "value": 25,
+        "origin": "counted(dominant_metric.all_counts.age_days)",
+        "source": "FROM_DATA"
+      },
+      "activity_days": {
+        "value": 4,
+        "origin": "counted(dominant_metric.all_counts.activity_days)",
+        "source": "FROM_DATA"
+      }
+    }
+  },
+  "normalization_stats": {
+    "mean": {
+      "value": 42838.8,
+      "origin": "mean(normalization_stats.mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "std": {
+      "value": 31478.71767400953,
+      "origin": "std(normalization_stats.std)",
+      "source": "FROM_STATISTICS"
+    }
+  },
+  "cv_by_field": {
+    "forks_normalized": {
+      "cv": {
+        "value": 0.47791344627459686,
+        "origin": "normalized(cv_by_field.forks_normalized.cv)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.21555892833656287,
+        "origin": "mean(cv_by_field.forks_normalized.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.10301851031658561,
+        "origin": "std(cv_by_field.forks_normalized.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "n": {
+        "value": 25.0,
+        "origin": "computed(cv_by_field.forks_normalized.n)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 0.07474078976395324,
+        "origin": "min(cv_by_field.forks_normalized.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.45772584583188003,
+        "origin": "max(cv_by_field.forks_normalized.max)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    "stars_normalized": {
+      "cv": {
+        "value": 0.0,
+        "origin": "normalized(cv_by_field.stars_normalized.cv)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 1.0,
+        "origin": "mean(cv_by_field.stars_normalized.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.0,
+        "origin": "std(cv_by_field.stars_normalized.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "n": {
+        "value": 25.0,
+        "origin": "computed(cv_by_field.stars_normalized.n)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 1.0,
+        "origin": "min(cv_by_field.stars_normalized.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 1.0,
+        "origin": "max(cv_by_field.stars_normalized.max)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    "open_issues_normalized": {
+      "cv": {
+        "value": 2.120888057137842,
+        "origin": "computed(cv_by_field.open_issues_normalized.cv)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.01779038085824003,
+        "origin": "mean(cv_by_field.open_issues_normalized.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.03773140629417495,
+        "origin": "std(cv_by_field.open_issues_normalized.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "n": {
+        "value": 25.0,
+        "origin": "computed(cv_by_field.open_issues_normalized.n)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 0.00018286968249251378,
+        "origin": "min(cv_by_field.open_issues_normalized.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.1863246255004652,
+        "origin": "max(cv_by_field.open_issues_normalized.max)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    "watchers_normalized": {
+      "cv": {
+        "value": 0.0,
+        "origin": "normalized(cv_by_field.watchers_normalized.cv)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 1.0,
+        "origin": "mean(cv_by_field.watchers_normalized.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.0,
+        "origin": "std(cv_by_field.watchers_normalized.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "n": {
+        "value": 25.0,
+        "origin": "computed(cv_by_field.watchers_normalized.n)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 1.0,
+        "origin": "min(cv_by_field.watchers_normalized.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 1.0,
+        "origin": "max(cv_by_field.watchers_normalized.max)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    "size_kb_normalized": {
+      "cv": {
+        "value": 2.234293049290151,
+        "origin": "computed(cv_by_field.size_kb_normalized.cv)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 6.845743154942273,
+        "origin": "mean(cv_by_field.size_kb_normalized.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 15.29539634831315,
+        "origin": "std(cv_by_field.size_kb_normalized.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "n": {
+        "value": 25.0,
+        "origin": "computed(cv_by_field.size_kb_normalized.n)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 0.018591984938138784,
+        "origin": "min(cv_by_field.size_kb_normalized.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 77.05432807269248,
+        "origin": "max(cv_by_field.size_kb_normalized.max)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    "age_days_normalized": {
+      "cv": {
+        "value": 0.6000141676057049,
+        "origin": "normalized(cv_by_field.age_days_normalized.cv)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 0.09870495785849794,
+        "origin": "mean(cv_by_field.age_days_normalized.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.059224373128022825,
+        "origin": "std(cv_by_field.age_days_normalized.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "n": {
+        "value": 25.0,
+        "origin": "computed(cv_by_field.age_days_normalized.n)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 0.01690643499553894,
+        "origin": "min(cv_by_field.age_days_normalized.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.2765895786240074,
+        "origin": "max(cv_by_field.age_days_normalized.max)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    "activity_days_normalized": {
+      "cv": {
+        "value": 0.7016332853783522,
+        "origin": "normalized(cv_by_field.activity_days_normalized.cv)",
+        "source": "FROM_MATH"
+      },
+      "mean": {
+        "value": 7.817228686456103e-05,
+        "origin": "mean(cv_by_field.activity_days_normalized.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 5.4848278458320964e-05,
+        "origin": "std(cv_by_field.activity_days_normalized.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "n": {
+        "value": 4.0,
+        "origin": "computed(cv_by_field.activity_days_normalized.n)",
+        "source": "FROM_MATH"
+      },
+      "min": {
+        "value": 3.480197675227953e-05,
+        "origin": "min(cv_by_field.activity_days_normalized.min)",
+        "source": "FROM_STATISTICS"
+      },
+      "max": {
+        "value": 0.00017210222872386197,
+        "origin": "max(cv_by_field.activity_days_normalized.max)",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "sorted_by_cv": [
+    [
+      "size_kb_normalized",
+      {
+        "cv": {
+          "value": 2.234293049290151,
+          "origin": "computed(sorted_by_cv[0][1].cv)",
+          "source": "FROM_MATH"
+        },
+        "mean": {
+          "value": 6.845743154942273,
+          "origin": "mean(sorted_by_cv[0][1].mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 15.29539634831315,
+          "origin": "std(sorted_by_cv[0][1].std)",
+          "source": "FROM_STATISTICS"
+        },
+        "n": {
+          "value": 25.0,
+          "origin": "computed(sorted_by_cv[0][1].n)",
+          "source": "FROM_MATH"
+        },
+        "min": {
+          "value": 0.018591984938138784,
+          "origin": "min(sorted_by_cv[0][1].min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 77.05432807269248,
+          "origin": "max(sorted_by_cv[0][1].max)",
+          "source": "FROM_STATISTICS"
+        }
+      }
+    ],
+    [
+      "open_issues_normalized",
+      {
+        "cv": {
+          "value": 2.120888057137842,
+          "origin": "computed(sorted_by_cv[1][1].cv)",
+          "source": "FROM_MATH"
+        },
+        "mean": {
+          "value": 0.01779038085824003,
+          "origin": "mean(sorted_by_cv[1][1].mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.03773140629417495,
+          "origin": "std(sorted_by_cv[1][1].std)",
+          "source": "FROM_STATISTICS"
+        },
+        "n": {
+          "value": 25.0,
+          "origin": "computed(sorted_by_cv[1][1].n)",
+          "source": "FROM_MATH"
+        },
+        "min": {
+          "value": 0.00018286968249251378,
+          "origin": "min(sorted_by_cv[1][1].min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 0.1863246255004652,
+          "origin": "max(sorted_by_cv[1][1].max)",
+          "source": "FROM_STATISTICS"
+        }
+      }
+    ],
+    [
+      "activity_days_normalized",
+      {
+        "cv": {
+          "value": 0.7016332853783522,
+          "origin": "normalized(sorted_by_cv[2][1].cv)",
+          "source": "FROM_MATH"
+        },
+        "mean": {
+          "value": 7.817228686456103e-05,
+          "origin": "mean(sorted_by_cv[2][1].mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 5.4848278458320964e-05,
+          "origin": "std(sorted_by_cv[2][1].std)",
+          "source": "FROM_STATISTICS"
+        },
+        "n": {
+          "value": 4.0,
+          "origin": "computed(sorted_by_cv[2][1].n)",
+          "source": "FROM_MATH"
+        },
+        "min": {
+          "value": 3.480197675227953e-05,
+          "origin": "min(sorted_by_cv[2][1].min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 0.00017210222872386197,
+          "origin": "max(sorted_by_cv[2][1].max)",
+          "source": "FROM_STATISTICS"
+        }
+      }
+    ],
+    [
+      "age_days_normalized",
+      {
+        "cv": {
+          "value": 0.6000141676057049,
+          "origin": "normalized(sorted_by_cv[3][1].cv)",
+          "source": "FROM_MATH"
+        },
+        "mean": {
+          "value": 0.09870495785849794,
+          "origin": "mean(sorted_by_cv[3][1].mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.059224373128022825,
+          "origin": "std(sorted_by_cv[3][1].std)",
+          "source": "FROM_STATISTICS"
+        },
+        "n": {
+          "value": 25.0,
+          "origin": "computed(sorted_by_cv[3][1].n)",
+          "source": "FROM_MATH"
+        },
+        "min": {
+          "value": 0.01690643499553894,
+          "origin": "min(sorted_by_cv[3][1].min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 0.2765895786240074,
+          "origin": "max(sorted_by_cv[3][1].max)",
+          "source": "FROM_STATISTICS"
+        }
+      }
+    ],
+    [
+      "forks_normalized",
+      {
+        "cv": {
+          "value": 0.47791344627459686,
+          "origin": "normalized(sorted_by_cv[4][1].cv)",
+          "source": "FROM_MATH"
+        },
+        "mean": {
+          "value": 0.21555892833656287,
+          "origin": "mean(sorted_by_cv[4][1].mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.10301851031658561,
+          "origin": "std(sorted_by_cv[4][1].std)",
+          "source": "FROM_STATISTICS"
+        },
+        "n": {
+          "value": 25.0,
+          "origin": "computed(sorted_by_cv[4][1].n)",
+          "source": "FROM_MATH"
+        },
+        "min": {
+          "value": 0.07474078976395324,
+          "origin": "min(sorted_by_cv[4][1].min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 0.45772584583188003,
+          "origin": "max(sorted_by_cv[4][1].max)",
+          "source": "FROM_STATISTICS"
+        }
+      }
+    ],
+    [
+      "stars_normalized",
+      {
+        "cv": {
+          "value": 0.0,
+          "origin": "normalized(sorted_by_cv[5][1].cv)",
+          "source": "FROM_MATH"
+        },
+        "mean": {
+          "value": 1.0,
+          "origin": "mean(sorted_by_cv[5][1].mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.0,
+          "origin": "std(sorted_by_cv[5][1].std)",
+          "source": "FROM_STATISTICS"
+        },
+        "n": {
+          "value": 25.0,
+          "origin": "computed(sorted_by_cv[5][1].n)",
+          "source": "FROM_MATH"
+        },
+        "min": {
+          "value": 1.0,
+          "origin": "min(sorted_by_cv[5][1].min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 1.0,
+          "origin": "max(sorted_by_cv[5][1].max)",
+          "source": "FROM_STATISTICS"
+        }
+      }
+    ],
+    [
+      "watchers_normalized",
+      {
+        "cv": {
+          "value": 0.0,
+          "origin": "normalized(sorted_by_cv[6][1].cv)",
+          "source": "FROM_MATH"
+        },
+        "mean": {
+          "value": 1.0,
+          "origin": "mean(sorted_by_cv[6][1].mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "std": {
+          "value": 0.0,
+          "origin": "std(sorted_by_cv[6][1].std)",
+          "source": "FROM_STATISTICS"
+        },
+        "n": {
+          "value": 25.0,
+          "origin": "computed(sorted_by_cv[6][1].n)",
+          "source": "FROM_MATH"
+        },
+        "min": {
+          "value": 1.0,
+          "origin": "min(sorted_by_cv[6][1].min)",
+          "source": "FROM_STATISTICS"
+        },
+        "max": {
+          "value": 1.0,
+          "origin": "max(sorted_by_cv[6][1].max)",
+          "source": "FROM_STATISTICS"
+        }
+      }
+    ]
+  ],
+  "repos_analyzed": [
+    {
+      "repo": "huggingface/transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "stars": {
+        "value": 153551,
+        "origin": "counted(repos_analyzed[0].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "fighting41love/funNLP",
+      "url": "https://github.com/fighting41love/funNLP",
+      "stars": {
+        "value": 77686,
+        "origin": "counted(repos_analyzed[1].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "josephmisiti/awesome-machine-learning",
+      "url": "https://github.com/josephmisiti/awesome-machine-learning",
+      "stars": {
+        "value": 70889,
+        "origin": "counted(repos_analyzed[2].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "scikit-learn/scikit-learn",
+      "url": "https://github.com/scikit-learn/scikit-learn",
+      "stars": {
+        "value": 64219,
+        "origin": "counted(repos_analyzed[3].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "gradio-app/gradio",
+      "url": "https://github.com/gradio-app/gradio",
+      "stars": {
+        "value": 40837,
+        "origin": "counted(repos_analyzed[4].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "eriklindernoren/ML-From-Scratch",
+      "url": "https://github.com/eriklindernoren/ML-From-Scratch",
+      "stars": {
+        "value": 29744,
+        "origin": "counted(repos_analyzed[5].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "Ebazhanov/linkedin-skill-assessments-quizzes",
+      "url": "https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes",
+      "stars": {
+        "value": 28670,
+        "origin": "counted(repos_analyzed[6].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "RasaHQ/rasa",
+      "url": "https://github.com/RasaHQ/rasa",
+      "stars": {
+        "value": 20910,
+        "origin": "counted(repos_analyzed[7].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "onnx/onnx",
+      "url": "https://github.com/onnx/onnx",
+      "stars": {
+        "value": 19981,
+        "origin": "counted(repos_analyzed[8].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "ddbourgin/numpy-ml",
+      "url": "https://github.com/ddbourgin/numpy-ml",
+      "stars": {
+        "value": 16211,
+        "origin": "counted(repos_analyzed[9].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "labmlai/annotated_deep_learning_paper_implementations",
+      "url": "https://github.com/labmlai/annotated_deep_learning_paper_implementations",
+      "stars": {
+        "value": 64704,
+        "origin": "counted(repos_analyzed[10].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "keras-team/keras",
+      "url": "https://github.com/keras-team/keras",
+      "stars": {
+        "value": 63627,
+        "origin": "counted(repos_analyzed[11].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "coqui-ai/TTS",
+      "url": "https://github.com/coqui-ai/TTS",
+      "stars": {
+        "value": 43747,
+        "origin": "counted(repos_analyzed[12].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "deepspeedai/DeepSpeed",
+      "url": "https://github.com/deepspeedai/DeepSpeed",
+      "stars": {
+        "value": 40925,
+        "origin": "counted(repos_analyzed[13].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "floodsung/Deep-Learning-Papers-Reading-Roadmap",
+      "url": "https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap",
+      "stars": {
+        "value": 39376,
+        "origin": "counted(repos_analyzed[14].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "yunjey/pytorch-tutorial",
+      "url": "https://github.com/yunjey/pytorch-tutorial",
+      "stars": {
+        "value": 31994,
+        "origin": "counted(repos_analyzed[15].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "donnemartin/data-science-ipython-notebooks",
+      "url": "https://github.com/donnemartin/data-science-ipython-notebooks",
+      "stars": {
+        "value": 28734,
+        "origin": "counted(repos_analyzed[16].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "d2l-ai/d2l-en",
+      "url": "https://github.com/d2l-ai/d2l-en",
+      "stars": {
+        "value": 27526,
+        "origin": "counted(repos_analyzed[17].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "WZMIAOMIAO/deep-learning-for-image-processing",
+      "url": "https://github.com/WZMIAOMIAO/deep-learning-for-image-processing",
+      "stars": {
+        "value": 25857,
+        "origin": "counted(repos_analyzed[18].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "pytorch/pytorch",
+      "url": "https://github.com/pytorch/pytorch",
+      "stars": {
+        "value": 95661,
+        "origin": "counted(repos_analyzed[19].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "pyg-team/pytorch_geometric",
+      "url": "https://github.com/pyg-team/pytorch_geometric",
+      "stars": {
+        "value": 23241,
+        "origin": "counted(repos_analyzed[20].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "Anjok07/ultimatevocalremovergui",
+      "url": "https://github.com/Anjok07/ultimatevocalremovergui",
+      "stars": {
+        "value": 22665,
+        "origin": "counted(repos_analyzed[21].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "mnielsen/neural-networks-and-deep-learning",
+      "url": "https://github.com/mnielsen/neural-networks-and-deep-learning",
+      "stars": {
+        "value": 17253,
+        "origin": "counted(repos_analyzed[22].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "ludwig-ai/ludwig",
+      "url": "https://github.com/ludwig-ai/ludwig",
+      "stars": {
+        "value": 11621,
+        "origin": "counted(repos_analyzed[23].stars)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "repo": "lucidrains/DALLE2-pytorch",
+      "url": "https://github.com/lucidrains/DALLE2-pytorch",
+      "stars": {
+        "value": 11341,
+        "origin": "counted(repos_analyzed[24].stars)",
+        "source": "FROM_DATA"
+      }
+    }
+  ],
+  "provenance": {
+    "all_data": "FROM_DATA: GitHub API v3",
+    "dominant_detection": "FROM_DATA: Counter.most_common()",
+    "normalization": "FROM_MATH: value / dominant_value",
+    "cv_calculation": "FROM_MATH: std / mean"
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.021162",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 280,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 354,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 280,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 354,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
+}

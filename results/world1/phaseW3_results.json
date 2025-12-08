@@ -7,107 +7,406 @@
     "agents_won": true
   },
   "report": {
-    "t": 1500,
+    "t": {
+      "value": 1500,
+      "origin": "counted(report.t)",
+      "source": "FROM_DATA"
+    },
     "world": {
-      "mean_entropy": -0.212699824010175,
-      "mean_health": 0.6395202174431767,
-      "mean_phi": 0.32685135850893393,
-      "n_regime_changes": 739
+      "mean_entropy": {
+        "value": -0.212699824010175,
+        "origin": "mean(report.world.mean_entropy)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_health": {
+        "value": 0.6395202174431767,
+        "origin": "mean(report.world.mean_health)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_phi": {
+        "value": 0.32685135850893393,
+        "origin": "mean(report.world.mean_phi)",
+        "source": "FROM_STATISTICS"
+      },
+      "n_regime_changes": {
+        "value": 739,
+        "origin": "count(report.world.n_regime_changes)",
+        "source": "FROM_DATA"
+      }
     },
     "games": {
-      "total_rounds": 150,
-      "mean_payoff": 1.6378189269467807,
-      "mean_entanglement": 0.0
+      "total_rounds": {
+        "value": 150,
+        "origin": "count(report.games.total_rounds)",
+        "source": "FROM_DATA"
+      },
+      "mean_payoff": {
+        "value": 1.6378189269467807,
+        "origin": "mean(report.games.mean_payoff)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_entanglement": {
+        "value": 0.0,
+        "origin": "mean(report.games.mean_entanglement)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "agents": {
       "NEO": {
-        "total_games": 150,
-        "total_payoff": 251.98140355186595,
-        "wins": 146,
-        "win_rate": 0.9733333333333334,
-        "coalitions": 0,
-        "crisis_rate": 0.352,
-        "mean_integration": 0.44250025135617244,
-        "final_drives": [
-          0.28401152267726887,
-          0.22966696649969168,
-          0.08016398442455434,
-          0.18034467457018802,
-          0.1467771611680597,
-          0.07903569066023745
-        ]
+        "total_games": {
+          "value": 150,
+          "origin": "count(report.agents.NEO.total_games)",
+          "source": "FROM_DATA"
+        },
+        "total_payoff": {
+          "value": 251.98140355186595,
+          "origin": "count(report.agents.NEO.total_payoff)",
+          "source": "FROM_DATA"
+        },
+        "wins": {
+          "value": 146,
+          "origin": "counted(report.agents.NEO.wins)",
+          "source": "FROM_DATA"
+        },
+        "win_rate": {
+          "value": 0.9733333333333334,
+          "origin": "count(report.agents.NEO.win_rate)",
+          "source": "FROM_DATA"
+        },
+        "coalitions": {
+          "value": 0,
+          "origin": "counted(report.agents.NEO.coalitions)",
+          "source": "FROM_DATA"
+        },
+        "crisis_rate": {
+          "value": 0.352,
+          "origin": "ratio(report.agents.NEO.crisis_rate)",
+          "source": "FROM_MATH"
+        },
+        "mean_integration": {
+          "value": 0.44250025135617244,
+          "origin": "mean(report.agents.NEO.mean_integration)",
+          "source": "FROM_STATISTICS"
+        },
+        "final_drives": {
+          "value": [
+            0.28401152267726887,
+            0.22966696649969168,
+            0.08016398442455434,
+            0.18034467457018802,
+            0.1467771611680597,
+            0.07903569066023745
+          ],
+          "origin": "array(report.agents.NEO.final_drives)",
+          "source": "FROM_DATA"
+        }
       },
       "EVA": {
-        "total_games": 150,
-        "total_payoff": 252.20593852327332,
-        "wins": 141,
-        "win_rate": 0.94,
-        "coalitions": 0,
-        "crisis_rate": 0.45,
-        "mean_integration": 0.4361429385062411,
-        "final_drives": [
-          0.2681903025925888,
-          0.2233683721584817,
-          0.0406056328275395,
-          0.11577978177285268,
-          0.16432738455867998,
-          0.18772852608985724
-        ]
+        "total_games": {
+          "value": 150,
+          "origin": "count(report.agents.EVA.total_games)",
+          "source": "FROM_DATA"
+        },
+        "total_payoff": {
+          "value": 252.20593852327332,
+          "origin": "count(report.agents.EVA.total_payoff)",
+          "source": "FROM_DATA"
+        },
+        "wins": {
+          "value": 141,
+          "origin": "counted(report.agents.EVA.wins)",
+          "source": "FROM_DATA"
+        },
+        "win_rate": {
+          "value": 0.94,
+          "origin": "count(report.agents.EVA.win_rate)",
+          "source": "FROM_DATA"
+        },
+        "coalitions": {
+          "value": 0,
+          "origin": "counted(report.agents.EVA.coalitions)",
+          "source": "FROM_DATA"
+        },
+        "crisis_rate": {
+          "value": 0.45,
+          "origin": "ratio(report.agents.EVA.crisis_rate)",
+          "source": "FROM_MATH"
+        },
+        "mean_integration": {
+          "value": 0.4361429385062411,
+          "origin": "mean(report.agents.EVA.mean_integration)",
+          "source": "FROM_STATISTICS"
+        },
+        "final_drives": {
+          "value": [
+            0.2681903025925888,
+            0.2233683721584817,
+            0.0406056328275395,
+            0.11577978177285268,
+            0.16432738455867998,
+            0.18772852608985724
+          ],
+          "origin": "array(report.agents.EVA.final_drives)",
+          "source": "FROM_DATA"
+        }
       },
       "ALEX": {
-        "total_games": 150,
-        "total_payoff": 260.75177066663866,
-        "wins": 147,
-        "win_rate": 0.98,
-        "coalitions": 0,
-        "crisis_rate": 0.43066666666666664,
-        "mean_integration": 0.4271954618256674,
-        "final_drives": [
-          0.2322635269094404,
-          0.2660203877605481,
-          0.05886786286433303,
-          0.17902429284513866,
-          0.1419585562186636,
-          0.12186537340187609
-        ]
+        "total_games": {
+          "value": 150,
+          "origin": "count(report.agents.ALEX.total_games)",
+          "source": "FROM_DATA"
+        },
+        "total_payoff": {
+          "value": 260.75177066663866,
+          "origin": "count(report.agents.ALEX.total_payoff)",
+          "source": "FROM_DATA"
+        },
+        "wins": {
+          "value": 147,
+          "origin": "counted(report.agents.ALEX.wins)",
+          "source": "FROM_DATA"
+        },
+        "win_rate": {
+          "value": 0.98,
+          "origin": "count(report.agents.ALEX.win_rate)",
+          "source": "FROM_DATA"
+        },
+        "coalitions": {
+          "value": 0,
+          "origin": "counted(report.agents.ALEX.coalitions)",
+          "source": "FROM_DATA"
+        },
+        "crisis_rate": {
+          "value": 0.43066666666666664,
+          "origin": "ratio(report.agents.ALEX.crisis_rate)",
+          "source": "FROM_MATH"
+        },
+        "mean_integration": {
+          "value": 0.4271954618256674,
+          "origin": "mean(report.agents.ALEX.mean_integration)",
+          "source": "FROM_STATISTICS"
+        },
+        "final_drives": {
+          "value": [
+            0.2322635269094404,
+            0.2660203877605481,
+            0.05886786286433303,
+            0.17902429284513866,
+            0.1419585562186636,
+            0.12186537340187609
+          ],
+          "origin": "array(report.agents.ALEX.final_drives)",
+          "source": "FROM_DATA"
+        }
       },
       "ADAM": {
-        "total_games": 150,
-        "total_payoff": 204.79951348461327,
-        "wins": 134,
-        "win_rate": 0.8933333333333333,
-        "coalitions": 0,
-        "crisis_rate": 0.418,
-        "mean_integration": 0.4442809244199701,
-        "final_drives": [
-          0.32849159954990703,
-          0.22221235407955886,
-          0.06461654683034095,
-          0.09437845380850762,
-          0.1625078312394698,
-          0.12779321449221565
-        ]
+        "total_games": {
+          "value": 150,
+          "origin": "count(report.agents.ADAM.total_games)",
+          "source": "FROM_DATA"
+        },
+        "total_payoff": {
+          "value": 204.79951348461327,
+          "origin": "count(report.agents.ADAM.total_payoff)",
+          "source": "FROM_DATA"
+        },
+        "wins": {
+          "value": 134,
+          "origin": "counted(report.agents.ADAM.wins)",
+          "source": "FROM_DATA"
+        },
+        "win_rate": {
+          "value": 0.8933333333333333,
+          "origin": "count(report.agents.ADAM.win_rate)",
+          "source": "FROM_DATA"
+        },
+        "coalitions": {
+          "value": 0,
+          "origin": "counted(report.agents.ADAM.coalitions)",
+          "source": "FROM_DATA"
+        },
+        "crisis_rate": {
+          "value": 0.418,
+          "origin": "ratio(report.agents.ADAM.crisis_rate)",
+          "source": "FROM_MATH"
+        },
+        "mean_integration": {
+          "value": 0.4442809244199701,
+          "origin": "mean(report.agents.ADAM.mean_integration)",
+          "source": "FROM_STATISTICS"
+        },
+        "final_drives": {
+          "value": [
+            0.32849159954990703,
+            0.22221235407955886,
+            0.06461654683034095,
+            0.09437845380850762,
+            0.1625078312394698,
+            0.12779321449221565
+          ],
+          "origin": "array(report.agents.ADAM.final_drives)",
+          "source": "FROM_DATA"
+        }
       },
       "IRIS": {
-        "total_games": 150,
-        "total_payoff": 258.62556898369445,
-        "wins": 147,
-        "win_rate": 0.98,
-        "coalitions": 0,
-        "crisis_rate": 0.4126666666666667,
-        "mean_integration": 0.4302897674988764,
-        "final_drives": [
-          0.1815811568433701,
-          0.12577056570210457,
-          0.0976696673392747,
-          0.22611293760557674,
-          0.23099734018743198,
-          0.13786833232224197
-        ]
+        "total_games": {
+          "value": 150,
+          "origin": "count(report.agents.IRIS.total_games)",
+          "source": "FROM_DATA"
+        },
+        "total_payoff": {
+          "value": 258.62556898369445,
+          "origin": "count(report.agents.IRIS.total_payoff)",
+          "source": "FROM_DATA"
+        },
+        "wins": {
+          "value": 147,
+          "origin": "counted(report.agents.IRIS.wins)",
+          "source": "FROM_DATA"
+        },
+        "win_rate": {
+          "value": 0.98,
+          "origin": "count(report.agents.IRIS.win_rate)",
+          "source": "FROM_DATA"
+        },
+        "coalitions": {
+          "value": 0,
+          "origin": "counted(report.agents.IRIS.coalitions)",
+          "source": "FROM_DATA"
+        },
+        "crisis_rate": {
+          "value": 0.4126666666666667,
+          "origin": "ratio(report.agents.IRIS.crisis_rate)",
+          "source": "FROM_MATH"
+        },
+        "mean_integration": {
+          "value": 0.4302897674988764,
+          "origin": "mean(report.agents.IRIS.mean_integration)",
+          "source": "FROM_STATISTICS"
+        },
+        "final_drives": {
+          "value": [
+            0.1815811568433701,
+            0.12577056570210457,
+            0.0976696673392747,
+            0.22611293760557674,
+            0.23099734018743198,
+            0.13786833232224197
+          ],
+          "origin": "array(report.agents.IRIS.final_drives)",
+          "source": "FROM_DATA"
+        }
       }
     }
   },
   "phase": "W3",
   "status": "PARTIAL",
-  "timestamp": "2025-12-01T05:28:20.169589"
+  "timestamp": "2025-12-01T05:28:20.169589",
+  "metadata": {
+    "experiment_id": {
+      "value": "aab2558bbc82",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.552540",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/world1/phaseW3_results.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.552694",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 134,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 146,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 134,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 146,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
 }

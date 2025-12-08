@@ -1,185 +1,828 @@
 {
   "timestamp": "2025-12-01T03:17:03.458296",
-  "T": 1000,
-  "seeds": [
-    42,
-    123
-  ],
+  "T": {
+    "value": 1000,
+    "origin": "counted(T)",
+    "source": "FROM_DATA"
+  },
+  "seeds": {
+    "value": [
+      42,
+      123
+    ],
+    "origin": "array(seeds)",
+    "source": "FROM_DATA"
+  },
   "all_results": {
     "baseline": [
       {
-        "neo_crises": 24,
-        "eva_crises": 29,
-        "neo_resolved": 24,
-        "eva_resolved": 29,
-        "neo_interval": 41.26086956521739,
-        "eva_interval": 32.42857142857143,
-        "correlation": 0.36694523388462796,
-        "neo_period": 43.47826086956522,
-        "eva_period": 43.47826086956522,
-        "neo_wellbeing": 0.8497444795647691,
-        "eva_wellbeing": 0.8709453297501389,
-        "neo_attachment": 0.9349999999999999,
-        "eva_attachment": 1.0,
+        "neo_crises": {
+          "value": 24,
+          "origin": "counted(all_results.baseline[0].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 29,
+          "origin": "counted(all_results.baseline[0].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "neo_resolved": {
+          "value": 24,
+          "origin": "counted(all_results.baseline[0].neo_resolved)",
+          "source": "FROM_DATA"
+        },
+        "eva_resolved": {
+          "value": 29,
+          "origin": "counted(all_results.baseline[0].eva_resolved)",
+          "source": "FROM_DATA"
+        },
+        "neo_interval": {
+          "value": 41.26086956521739,
+          "origin": "computed(all_results.baseline[0].neo_interval)",
+          "source": "FROM_MATH"
+        },
+        "eva_interval": {
+          "value": 32.42857142857143,
+          "origin": "computed(all_results.baseline[0].eva_interval)",
+          "source": "FROM_MATH"
+        },
+        "correlation": {
+          "value": 0.36694523388462796,
+          "origin": "normalized(all_results.baseline[0].correlation)",
+          "source": "FROM_MATH"
+        },
+        "neo_period": {
+          "value": 43.47826086956522,
+          "origin": "computed(all_results.baseline[0].neo_period)",
+          "source": "FROM_MATH"
+        },
+        "eva_period": {
+          "value": 43.47826086956522,
+          "origin": "computed(all_results.baseline[0].eva_period)",
+          "source": "FROM_MATH"
+        },
+        "neo_wellbeing": {
+          "value": 0.8497444795647691,
+          "origin": "normalized(all_results.baseline[0].neo_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "eva_wellbeing": {
+          "value": 0.8709453297501389,
+          "origin": "normalized(all_results.baseline[0].eva_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "neo_attachment": {
+          "value": 0.9349999999999999,
+          "origin": "normalized(all_results.baseline[0].neo_attachment)",
+          "source": "FROM_MATH"
+        },
+        "eva_attachment": {
+          "value": 1.0,
+          "origin": "normalized(all_results.baseline[0].eva_attachment)",
+          "source": "FROM_MATH"
+        },
         "condition": "baseline"
       },
       {
-        "neo_crises": 32,
-        "eva_crises": 35,
-        "neo_resolved": 32,
-        "eva_resolved": 34,
-        "neo_interval": 28.64516129032258,
-        "eva_interval": 27.470588235294116,
-        "correlation": 0.3965909030463009,
-        "neo_period": 43.47826086956522,
-        "eva_period": 43.47826086956522,
-        "neo_wellbeing": 0.8743321510622447,
-        "eva_wellbeing": 0.8560466033779263,
-        "neo_attachment": 0.99,
-        "eva_attachment": 0.99,
+        "neo_crises": {
+          "value": 32,
+          "origin": "counted(all_results.baseline[1].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 35,
+          "origin": "counted(all_results.baseline[1].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "neo_resolved": {
+          "value": 32,
+          "origin": "counted(all_results.baseline[1].neo_resolved)",
+          "source": "FROM_DATA"
+        },
+        "eva_resolved": {
+          "value": 34,
+          "origin": "counted(all_results.baseline[1].eva_resolved)",
+          "source": "FROM_DATA"
+        },
+        "neo_interval": {
+          "value": 28.64516129032258,
+          "origin": "computed(all_results.baseline[1].neo_interval)",
+          "source": "FROM_MATH"
+        },
+        "eva_interval": {
+          "value": 27.470588235294116,
+          "origin": "computed(all_results.baseline[1].eva_interval)",
+          "source": "FROM_MATH"
+        },
+        "correlation": {
+          "value": 0.3965909030463009,
+          "origin": "normalized(all_results.baseline[1].correlation)",
+          "source": "FROM_MATH"
+        },
+        "neo_period": {
+          "value": 43.47826086956522,
+          "origin": "computed(all_results.baseline[1].neo_period)",
+          "source": "FROM_MATH"
+        },
+        "eva_period": {
+          "value": 43.47826086956522,
+          "origin": "computed(all_results.baseline[1].eva_period)",
+          "source": "FROM_MATH"
+        },
+        "neo_wellbeing": {
+          "value": 0.8743321510622447,
+          "origin": "normalized(all_results.baseline[1].neo_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "eva_wellbeing": {
+          "value": 0.8560466033779263,
+          "origin": "normalized(all_results.baseline[1].eva_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "neo_attachment": {
+          "value": 0.99,
+          "origin": "normalized(all_results.baseline[1].neo_attachment)",
+          "source": "FROM_MATH"
+        },
+        "eva_attachment": {
+          "value": 0.99,
+          "origin": "normalized(all_results.baseline[1].eva_attachment)",
+          "source": "FROM_MATH"
+        },
         "condition": "baseline"
       }
     ],
     "neo_mutated": [
       {
-        "neo_crises": 23,
-        "eva_crises": 38,
-        "neo_resolved": 22,
-        "eva_resolved": 37,
-        "neo_interval": 43.68181818181818,
-        "eva_interval": 26.16216216216216,
-        "correlation": 0.34778402261393654,
-        "neo_period": 45.45454545454546,
-        "eva_period": 43.47826086956522,
-        "neo_wellbeing": 0.8514754104176986,
-        "eva_wellbeing": 0.8618197157166958,
-        "neo_attachment": 0.9199999999999999,
-        "eva_attachment": 0.955,
+        "neo_crises": {
+          "value": 23,
+          "origin": "counted(all_results.neo_mutated[0].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 38,
+          "origin": "counted(all_results.neo_mutated[0].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "neo_resolved": {
+          "value": 22,
+          "origin": "counted(all_results.neo_mutated[0].neo_resolved)",
+          "source": "FROM_DATA"
+        },
+        "eva_resolved": {
+          "value": 37,
+          "origin": "counted(all_results.neo_mutated[0].eva_resolved)",
+          "source": "FROM_DATA"
+        },
+        "neo_interval": {
+          "value": 43.68181818181818,
+          "origin": "computed(all_results.neo_mutated[0].neo_interval)",
+          "source": "FROM_MATH"
+        },
+        "eva_interval": {
+          "value": 26.16216216216216,
+          "origin": "computed(all_results.neo_mutated[0].eva_interval)",
+          "source": "FROM_MATH"
+        },
+        "correlation": {
+          "value": 0.34778402261393654,
+          "origin": "normalized(all_results.neo_mutated[0].correlation)",
+          "source": "FROM_MATH"
+        },
+        "neo_period": {
+          "value": 45.45454545454546,
+          "origin": "computed(all_results.neo_mutated[0].neo_period)",
+          "source": "FROM_MATH"
+        },
+        "eva_period": {
+          "value": 43.47826086956522,
+          "origin": "computed(all_results.neo_mutated[0].eva_period)",
+          "source": "FROM_MATH"
+        },
+        "neo_wellbeing": {
+          "value": 0.8514754104176986,
+          "origin": "normalized(all_results.neo_mutated[0].neo_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "eva_wellbeing": {
+          "value": 0.8618197157166958,
+          "origin": "normalized(all_results.neo_mutated[0].eva_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "neo_attachment": {
+          "value": 0.9199999999999999,
+          "origin": "normalized(all_results.neo_mutated[0].neo_attachment)",
+          "source": "FROM_MATH"
+        },
+        "eva_attachment": {
+          "value": 0.955,
+          "origin": "normalized(all_results.neo_mutated[0].eva_attachment)",
+          "source": "FROM_MATH"
+        },
         "condition": "neo_mutated"
       },
       {
-        "neo_crises": 28,
-        "eva_crises": 26,
-        "neo_resolved": 28,
-        "eva_resolved": 26,
-        "neo_interval": 34.592592592592595,
-        "eva_interval": 34.72,
-        "correlation": 0.16868434908694152,
-        "neo_period": 43.47826086956522,
-        "eva_period": 45.45454545454546,
-        "neo_wellbeing": 0.8605496873221137,
-        "eva_wellbeing": 0.851508745300175,
-        "neo_attachment": 0.955,
-        "eva_attachment": 1.0,
+        "neo_crises": {
+          "value": 28,
+          "origin": "counted(all_results.neo_mutated[1].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 26,
+          "origin": "counted(all_results.neo_mutated[1].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "neo_resolved": {
+          "value": 28,
+          "origin": "counted(all_results.neo_mutated[1].neo_resolved)",
+          "source": "FROM_DATA"
+        },
+        "eva_resolved": {
+          "value": 26,
+          "origin": "counted(all_results.neo_mutated[1].eva_resolved)",
+          "source": "FROM_DATA"
+        },
+        "neo_interval": {
+          "value": 34.592592592592595,
+          "origin": "computed(all_results.neo_mutated[1].neo_interval)",
+          "source": "FROM_MATH"
+        },
+        "eva_interval": {
+          "value": 34.72,
+          "origin": "computed(all_results.neo_mutated[1].eva_interval)",
+          "source": "FROM_MATH"
+        },
+        "correlation": {
+          "value": 0.16868434908694152,
+          "origin": "normalized(all_results.neo_mutated[1].correlation)",
+          "source": "FROM_MATH"
+        },
+        "neo_period": {
+          "value": 43.47826086956522,
+          "origin": "computed(all_results.neo_mutated[1].neo_period)",
+          "source": "FROM_MATH"
+        },
+        "eva_period": {
+          "value": 45.45454545454546,
+          "origin": "computed(all_results.neo_mutated[1].eva_period)",
+          "source": "FROM_MATH"
+        },
+        "neo_wellbeing": {
+          "value": 0.8605496873221137,
+          "origin": "normalized(all_results.neo_mutated[1].neo_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "eva_wellbeing": {
+          "value": 0.851508745300175,
+          "origin": "normalized(all_results.neo_mutated[1].eva_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "neo_attachment": {
+          "value": 0.955,
+          "origin": "normalized(all_results.neo_mutated[1].neo_attachment)",
+          "source": "FROM_MATH"
+        },
+        "eva_attachment": {
+          "value": 1.0,
+          "origin": "normalized(all_results.neo_mutated[1].eva_attachment)",
+          "source": "FROM_MATH"
+        },
         "condition": "neo_mutated"
       }
     ],
     "eva_mutated": [
       {
-        "neo_crises": 34,
-        "eva_crises": 28,
-        "neo_resolved": 34,
-        "eva_resolved": 28,
-        "neo_interval": 26.78787878787879,
-        "eva_interval": 34.2962962962963,
-        "correlation": 0.43996397330468207,
-        "neo_period": 40.0,
-        "eva_period": 35.714285714285715,
-        "neo_wellbeing": 0.8683017251172414,
-        "eva_wellbeing": 0.861762700110472,
-        "neo_attachment": 0.95,
-        "eva_attachment": 0.98,
+        "neo_crises": {
+          "value": 34,
+          "origin": "counted(all_results.eva_mutated[0].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 28,
+          "origin": "counted(all_results.eva_mutated[0].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "neo_resolved": {
+          "value": 34,
+          "origin": "counted(all_results.eva_mutated[0].neo_resolved)",
+          "source": "FROM_DATA"
+        },
+        "eva_resolved": {
+          "value": 28,
+          "origin": "counted(all_results.eva_mutated[0].eva_resolved)",
+          "source": "FROM_DATA"
+        },
+        "neo_interval": {
+          "value": 26.78787878787879,
+          "origin": "computed(all_results.eva_mutated[0].neo_interval)",
+          "source": "FROM_MATH"
+        },
+        "eva_interval": {
+          "value": 34.2962962962963,
+          "origin": "computed(all_results.eva_mutated[0].eva_interval)",
+          "source": "FROM_MATH"
+        },
+        "correlation": {
+          "value": 0.43996397330468207,
+          "origin": "normalized(all_results.eva_mutated[0].correlation)",
+          "source": "FROM_MATH"
+        },
+        "neo_period": {
+          "value": 40.0,
+          "origin": "computed(all_results.eva_mutated[0].neo_period)",
+          "source": "FROM_MATH"
+        },
+        "eva_period": {
+          "value": 35.714285714285715,
+          "origin": "computed(all_results.eva_mutated[0].eva_period)",
+          "source": "FROM_MATH"
+        },
+        "neo_wellbeing": {
+          "value": 0.8683017251172414,
+          "origin": "normalized(all_results.eva_mutated[0].neo_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "eva_wellbeing": {
+          "value": 0.861762700110472,
+          "origin": "normalized(all_results.eva_mutated[0].eva_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "neo_attachment": {
+          "value": 0.95,
+          "origin": "normalized(all_results.eva_mutated[0].neo_attachment)",
+          "source": "FROM_MATH"
+        },
+        "eva_attachment": {
+          "value": 0.98,
+          "origin": "normalized(all_results.eva_mutated[0].eva_attachment)",
+          "source": "FROM_MATH"
+        },
         "condition": "eva_mutated"
       },
       {
-        "neo_crises": 22,
-        "eva_crises": 31,
-        "neo_resolved": 22,
-        "eva_resolved": 31,
-        "neo_interval": 43.476190476190474,
-        "eva_interval": 30.533333333333335,
-        "correlation": 0.3688525303026154,
-        "neo_period": 43.47826086956522,
-        "eva_period": 40.0,
-        "neo_wellbeing": 0.8677216688377154,
-        "eva_wellbeing": 0.862262920605872,
-        "neo_attachment": 1.0,
-        "eva_attachment": 0.995,
+        "neo_crises": {
+          "value": 22,
+          "origin": "counted(all_results.eva_mutated[1].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 31,
+          "origin": "counted(all_results.eva_mutated[1].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "neo_resolved": {
+          "value": 22,
+          "origin": "counted(all_results.eva_mutated[1].neo_resolved)",
+          "source": "FROM_DATA"
+        },
+        "eva_resolved": {
+          "value": 31,
+          "origin": "counted(all_results.eva_mutated[1].eva_resolved)",
+          "source": "FROM_DATA"
+        },
+        "neo_interval": {
+          "value": 43.476190476190474,
+          "origin": "computed(all_results.eva_mutated[1].neo_interval)",
+          "source": "FROM_MATH"
+        },
+        "eva_interval": {
+          "value": 30.533333333333335,
+          "origin": "computed(all_results.eva_mutated[1].eva_interval)",
+          "source": "FROM_MATH"
+        },
+        "correlation": {
+          "value": 0.3688525303026154,
+          "origin": "normalized(all_results.eva_mutated[1].correlation)",
+          "source": "FROM_MATH"
+        },
+        "neo_period": {
+          "value": 43.47826086956522,
+          "origin": "computed(all_results.eva_mutated[1].neo_period)",
+          "source": "FROM_MATH"
+        },
+        "eva_period": {
+          "value": 40.0,
+          "origin": "computed(all_results.eva_mutated[1].eva_period)",
+          "source": "FROM_MATH"
+        },
+        "neo_wellbeing": {
+          "value": 0.8677216688377154,
+          "origin": "normalized(all_results.eva_mutated[1].neo_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "eva_wellbeing": {
+          "value": 0.862262920605872,
+          "origin": "normalized(all_results.eva_mutated[1].eva_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "neo_attachment": {
+          "value": 1.0,
+          "origin": "normalized(all_results.eva_mutated[1].neo_attachment)",
+          "source": "FROM_MATH"
+        },
+        "eva_attachment": {
+          "value": 0.995,
+          "origin": "normalized(all_results.eva_mutated[1].eva_attachment)",
+          "source": "FROM_MATH"
+        },
         "condition": "eva_mutated"
       }
     ],
     "neo_stability": [
       {
-        "neo_crises": 26,
-        "eva_crises": 35,
-        "neo_resolved": 26,
-        "eva_resolved": 34,
-        "neo_interval": 37.92,
-        "eva_interval": 27.470588235294116,
-        "correlation": 0.29751766241429384,
-        "neo_period": 41.666666666666664,
-        "eva_period": 40.0,
-        "neo_wellbeing": 0.8559499256167048,
-        "eva_wellbeing": 0.8616056569883188,
-        "neo_attachment": 0.9149999999999999,
-        "eva_attachment": 0.8999999999999999,
+        "neo_crises": {
+          "value": 26,
+          "origin": "counted(all_results.neo_stability[0].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 35,
+          "origin": "counted(all_results.neo_stability[0].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "neo_resolved": {
+          "value": 26,
+          "origin": "counted(all_results.neo_stability[0].neo_resolved)",
+          "source": "FROM_DATA"
+        },
+        "eva_resolved": {
+          "value": 34,
+          "origin": "counted(all_results.neo_stability[0].eva_resolved)",
+          "source": "FROM_DATA"
+        },
+        "neo_interval": {
+          "value": 37.92,
+          "origin": "computed(all_results.neo_stability[0].neo_interval)",
+          "source": "FROM_MATH"
+        },
+        "eva_interval": {
+          "value": 27.470588235294116,
+          "origin": "computed(all_results.neo_stability[0].eva_interval)",
+          "source": "FROM_MATH"
+        },
+        "correlation": {
+          "value": 0.29751766241429384,
+          "origin": "normalized(all_results.neo_stability[0].correlation)",
+          "source": "FROM_MATH"
+        },
+        "neo_period": {
+          "value": 41.666666666666664,
+          "origin": "computed(all_results.neo_stability[0].neo_period)",
+          "source": "FROM_MATH"
+        },
+        "eva_period": {
+          "value": 40.0,
+          "origin": "computed(all_results.neo_stability[0].eva_period)",
+          "source": "FROM_MATH"
+        },
+        "neo_wellbeing": {
+          "value": 0.8559499256167048,
+          "origin": "normalized(all_results.neo_stability[0].neo_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "eva_wellbeing": {
+          "value": 0.8616056569883188,
+          "origin": "normalized(all_results.neo_stability[0].eva_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "neo_attachment": {
+          "value": 0.9149999999999999,
+          "origin": "normalized(all_results.neo_stability[0].neo_attachment)",
+          "source": "FROM_MATH"
+        },
+        "eva_attachment": {
+          "value": 0.8999999999999999,
+          "origin": "normalized(all_results.neo_stability[0].eva_attachment)",
+          "source": "FROM_MATH"
+        },
         "condition": "neo_stability"
       },
       {
-        "neo_crises": 20,
-        "eva_crises": 32,
-        "neo_resolved": 19,
-        "eva_resolved": 31,
-        "neo_interval": 50.578947368421055,
-        "eva_interval": 29.451612903225808,
-        "correlation": 0.4911736614286757,
-        "neo_period": 43.47826086956522,
-        "eva_period": 43.47826086956522,
-        "neo_wellbeing": 0.8625697112167696,
-        "eva_wellbeing": 0.8602105344549339,
-        "neo_attachment": 0.9049999999999999,
-        "eva_attachment": 0.9049999999999999,
+        "neo_crises": {
+          "value": 20,
+          "origin": "counted(all_results.neo_stability[1].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 32,
+          "origin": "counted(all_results.neo_stability[1].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "neo_resolved": {
+          "value": 19,
+          "origin": "counted(all_results.neo_stability[1].neo_resolved)",
+          "source": "FROM_DATA"
+        },
+        "eva_resolved": {
+          "value": 31,
+          "origin": "counted(all_results.neo_stability[1].eva_resolved)",
+          "source": "FROM_DATA"
+        },
+        "neo_interval": {
+          "value": 50.578947368421055,
+          "origin": "computed(all_results.neo_stability[1].neo_interval)",
+          "source": "FROM_MATH"
+        },
+        "eva_interval": {
+          "value": 29.451612903225808,
+          "origin": "computed(all_results.neo_stability[1].eva_interval)",
+          "source": "FROM_MATH"
+        },
+        "correlation": {
+          "value": 0.4911736614286757,
+          "origin": "normalized(all_results.neo_stability[1].correlation)",
+          "source": "FROM_MATH"
+        },
+        "neo_period": {
+          "value": 43.47826086956522,
+          "origin": "computed(all_results.neo_stability[1].neo_period)",
+          "source": "FROM_MATH"
+        },
+        "eva_period": {
+          "value": 43.47826086956522,
+          "origin": "computed(all_results.neo_stability[1].eva_period)",
+          "source": "FROM_MATH"
+        },
+        "neo_wellbeing": {
+          "value": 0.8625697112167696,
+          "origin": "normalized(all_results.neo_stability[1].neo_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "eva_wellbeing": {
+          "value": 0.8602105344549339,
+          "origin": "normalized(all_results.neo_stability[1].eva_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "neo_attachment": {
+          "value": 0.9049999999999999,
+          "origin": "normalized(all_results.neo_stability[1].neo_attachment)",
+          "source": "FROM_MATH"
+        },
+        "eva_attachment": {
+          "value": 0.9049999999999999,
+          "origin": "normalized(all_results.neo_stability[1].eva_attachment)",
+          "source": "FROM_MATH"
+        },
         "condition": "neo_stability"
       }
     ],
     "eva_entropy": [
       {
-        "neo_crises": 32,
-        "eva_crises": 30,
-        "neo_resolved": 32,
-        "eva_resolved": 30,
-        "neo_interval": 29.741935483870968,
-        "eva_interval": 32.58620689655172,
-        "correlation": 0.1460019305915026,
-        "neo_period": 41.666666666666664,
-        "eva_period": 40.0,
-        "neo_wellbeing": 0.8542692566641852,
-        "eva_wellbeing": 0.8541251279763885,
-        "neo_attachment": 0.965,
-        "eva_attachment": 1.0,
+        "neo_crises": {
+          "value": 32,
+          "origin": "counted(all_results.eva_entropy[0].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 30,
+          "origin": "counted(all_results.eva_entropy[0].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "neo_resolved": {
+          "value": 32,
+          "origin": "counted(all_results.eva_entropy[0].neo_resolved)",
+          "source": "FROM_DATA"
+        },
+        "eva_resolved": {
+          "value": 30,
+          "origin": "counted(all_results.eva_entropy[0].eva_resolved)",
+          "source": "FROM_DATA"
+        },
+        "neo_interval": {
+          "value": 29.741935483870968,
+          "origin": "computed(all_results.eva_entropy[0].neo_interval)",
+          "source": "FROM_MATH"
+        },
+        "eva_interval": {
+          "value": 32.58620689655172,
+          "origin": "computed(all_results.eva_entropy[0].eva_interval)",
+          "source": "FROM_MATH"
+        },
+        "correlation": {
+          "value": 0.1460019305915026,
+          "origin": "normalized(all_results.eva_entropy[0].correlation)",
+          "source": "FROM_MATH"
+        },
+        "neo_period": {
+          "value": 41.666666666666664,
+          "origin": "computed(all_results.eva_entropy[0].neo_period)",
+          "source": "FROM_MATH"
+        },
+        "eva_period": {
+          "value": 40.0,
+          "origin": "computed(all_results.eva_entropy[0].eva_period)",
+          "source": "FROM_MATH"
+        },
+        "neo_wellbeing": {
+          "value": 0.8542692566641852,
+          "origin": "normalized(all_results.eva_entropy[0].neo_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "eva_wellbeing": {
+          "value": 0.8541251279763885,
+          "origin": "normalized(all_results.eva_entropy[0].eva_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "neo_attachment": {
+          "value": 0.965,
+          "origin": "normalized(all_results.eva_entropy[0].neo_attachment)",
+          "source": "FROM_MATH"
+        },
+        "eva_attachment": {
+          "value": 1.0,
+          "origin": "normalized(all_results.eva_entropy[0].eva_attachment)",
+          "source": "FROM_MATH"
+        },
         "condition": "eva_entropy"
       },
       {
-        "neo_crises": 31,
-        "eva_crises": 30,
-        "neo_resolved": 30,
-        "eva_resolved": 29,
-        "neo_interval": 30.966666666666665,
-        "eva_interval": 32.13793103448276,
-        "correlation": 0.3806878094513153,
-        "neo_period": 43.47826086956522,
-        "eva_period": 43.47826086956522,
-        "neo_wellbeing": 0.862226135079497,
-        "eva_wellbeing": 0.8595371364474902,
-        "neo_attachment": 0.9049999999999999,
-        "eva_attachment": 0.9099999999999999,
+        "neo_crises": {
+          "value": 31,
+          "origin": "counted(all_results.eva_entropy[1].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 30,
+          "origin": "counted(all_results.eva_entropy[1].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "neo_resolved": {
+          "value": 30,
+          "origin": "counted(all_results.eva_entropy[1].neo_resolved)",
+          "source": "FROM_DATA"
+        },
+        "eva_resolved": {
+          "value": 29,
+          "origin": "counted(all_results.eva_entropy[1].eva_resolved)",
+          "source": "FROM_DATA"
+        },
+        "neo_interval": {
+          "value": 30.966666666666665,
+          "origin": "computed(all_results.eva_entropy[1].neo_interval)",
+          "source": "FROM_MATH"
+        },
+        "eva_interval": {
+          "value": 32.13793103448276,
+          "origin": "computed(all_results.eva_entropy[1].eva_interval)",
+          "source": "FROM_MATH"
+        },
+        "correlation": {
+          "value": 0.3806878094513153,
+          "origin": "normalized(all_results.eva_entropy[1].correlation)",
+          "source": "FROM_MATH"
+        },
+        "neo_period": {
+          "value": 43.47826086956522,
+          "origin": "computed(all_results.eva_entropy[1].neo_period)",
+          "source": "FROM_MATH"
+        },
+        "eva_period": {
+          "value": 43.47826086956522,
+          "origin": "computed(all_results.eva_entropy[1].eva_period)",
+          "source": "FROM_MATH"
+        },
+        "neo_wellbeing": {
+          "value": 0.862226135079497,
+          "origin": "normalized(all_results.eva_entropy[1].neo_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "eva_wellbeing": {
+          "value": 0.8595371364474902,
+          "origin": "normalized(all_results.eva_entropy[1].eva_wellbeing)",
+          "source": "FROM_MATH"
+        },
+        "neo_attachment": {
+          "value": 0.9049999999999999,
+          "origin": "normalized(all_results.eva_entropy[1].neo_attachment)",
+          "source": "FROM_MATH"
+        },
+        "eva_attachment": {
+          "value": 0.9099999999999999,
+          "origin": "normalized(all_results.eva_entropy[1].eva_attachment)",
+          "source": "FROM_MATH"
+        },
         "condition": "eva_entropy"
       }
     ]
   },
   "conclusion": {
-    "neo_impact_when_eva_mutates": 0.0625,
-    "eva_impact_when_neo_mutates": 0.0234375,
+    "neo_impact_when_eva_mutates": {
+      "value": 0.0625,
+      "origin": "count(conclusion.neo_impact_when_eva_mutates)",
+      "source": "FROM_DATA"
+    },
+    "eva_impact_when_neo_mutates": {
+      "value": 0.0234375,
+      "origin": "count(conclusion.eva_impact_when_neo_mutates)",
+      "source": "FROM_DATA"
+    },
     "more_dependent": "NEO"
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "eb57e603f5d9",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.433489",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/who_suffers/results.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.433783",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 306,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 327,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 306,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 327,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

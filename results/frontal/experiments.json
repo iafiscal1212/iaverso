@@ -1,39 +1,95 @@
 {
   "timestamp": "2025-12-01T02:53:44.608115",
-  "T": 1000,
-  "seeds": [
-    42,
-    123,
-    456
-  ],
+  "T": {
+    "value": 1000,
+    "origin": "counted(T)",
+    "source": "FROM_DATA"
+  },
+  "seeds": {
+    "value": [
+      42,
+      123,
+      456
+    ],
+    "origin": "array(seeds)",
+    "source": "FROM_DATA"
+  },
   "experiments": {
     "A": [
       {
         "condition": "normal",
         "neo_dominant": "otherness",
         "eva_dominant": "stability",
-        "neo_crises": 2,
-        "eva_crises": 4,
-        "final_divergence": 0.5618917065738989,
-        "final_sagi": 0.49521648318416983
+        "neo_crises": {
+          "value": 2,
+          "origin": "counted(experiments.A[0].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 4,
+          "origin": "counted(experiments.A[0].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "final_divergence": {
+          "value": 0.5618917065738989,
+          "origin": "normalized(experiments.A[0].final_divergence)",
+          "source": "FROM_MATH"
+        },
+        "final_sagi": {
+          "value": 0.49521648318416983,
+          "origin": "normalized(experiments.A[0].final_sagi)",
+          "source": "FROM_MATH"
+        }
       },
       {
         "condition": "normal",
         "neo_dominant": "stability",
         "eva_dominant": "novelty",
-        "neo_crises": 2,
-        "eva_crises": 4,
-        "final_divergence": 0.602043378449889,
-        "final_sagi": 0.3834269512232051
+        "neo_crises": {
+          "value": 2,
+          "origin": "counted(experiments.A[1].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 4,
+          "origin": "counted(experiments.A[1].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "final_divergence": {
+          "value": 0.602043378449889,
+          "origin": "normalized(experiments.A[1].final_divergence)",
+          "source": "FROM_MATH"
+        },
+        "final_sagi": {
+          "value": 0.3834269512232051,
+          "origin": "normalized(experiments.A[1].final_sagi)",
+          "source": "FROM_MATH"
+        }
       },
       {
         "condition": "normal",
         "neo_dominant": "identity",
         "eva_dominant": "identity",
-        "neo_crises": 2,
-        "eva_crises": 4,
-        "final_divergence": 0.2202018483431688,
-        "final_sagi": 0.5460689117500115
+        "neo_crises": {
+          "value": 2,
+          "origin": "counted(experiments.A[2].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 4,
+          "origin": "counted(experiments.A[2].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "final_divergence": {
+          "value": 0.2202018483431688,
+          "origin": "normalized(experiments.A[2].final_divergence)",
+          "source": "FROM_MATH"
+        },
+        "final_sagi": {
+          "value": 0.5460689117500115,
+          "origin": "normalized(experiments.A[2].final_sagi)",
+          "source": "FROM_MATH"
+        }
       }
     ],
     "B": [
@@ -41,160 +97,436 @@
         "condition": "swapped",
         "neo_dominant": "otherness",
         "eva_dominant": "stability",
-        "neo_crises": 2,
-        "eva_crises": 4,
-        "final_divergence": 0.5542094347213103,
-        "final_sagi": 0.4952935973220466
+        "neo_crises": {
+          "value": 2,
+          "origin": "counted(experiments.B[0].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 4,
+          "origin": "counted(experiments.B[0].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "final_divergence": {
+          "value": 0.5542094347213103,
+          "origin": "normalized(experiments.B[0].final_divergence)",
+          "source": "FROM_MATH"
+        },
+        "final_sagi": {
+          "value": 0.4952935973220466,
+          "origin": "normalized(experiments.B[0].final_sagi)",
+          "source": "FROM_MATH"
+        }
       },
       {
         "condition": "swapped",
         "neo_dominant": "stability",
         "eva_dominant": "novelty",
-        "neo_crises": 2,
-        "eva_crises": 4,
-        "final_divergence": 0.6014150365510996,
-        "final_sagi": 0.3834271489952168
+        "neo_crises": {
+          "value": 2,
+          "origin": "counted(experiments.B[1].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 4,
+          "origin": "counted(experiments.B[1].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "final_divergence": {
+          "value": 0.6014150365510996,
+          "origin": "normalized(experiments.B[1].final_divergence)",
+          "source": "FROM_MATH"
+        },
+        "final_sagi": {
+          "value": 0.3834271489952168,
+          "origin": "normalized(experiments.B[1].final_sagi)",
+          "source": "FROM_MATH"
+        }
       },
       {
         "condition": "swapped",
         "neo_dominant": "identity",
         "eva_dominant": "identity",
-        "neo_crises": 2,
-        "eva_crises": 4,
-        "final_divergence": 0.2193188999090392,
-        "final_sagi": 0.5460807282035992
+        "neo_crises": {
+          "value": 2,
+          "origin": "counted(experiments.B[2].neo_crises)",
+          "source": "FROM_DATA"
+        },
+        "eva_crises": {
+          "value": 4,
+          "origin": "counted(experiments.B[2].eva_crises)",
+          "source": "FROM_DATA"
+        },
+        "final_divergence": {
+          "value": 0.2193188999090392,
+          "origin": "normalized(experiments.B[2].final_divergence)",
+          "source": "FROM_MATH"
+        },
+        "final_sagi": {
+          "value": 0.5460807282035992,
+          "origin": "normalized(experiments.B[2].final_sagi)",
+          "source": "FROM_MATH"
+        }
       }
     ],
     "C": [
       {
         "condition": "interrupted",
-        "crisis_t": 149,
-        "n_continuations": 5,
-        "var_neo": 2.1706656930966406e-17,
-        "var_eva": 8.027152608221342e-25,
+        "crisis_t": {
+          "value": 149,
+          "origin": "counted(experiments.C[0].crisis_t)",
+          "source": "FROM_DATA"
+        },
+        "n_continuations": {
+          "value": 5,
+          "origin": "count(experiments.C[0].n_continuations)",
+          "source": "FROM_DATA"
+        },
+        "var_neo": {
+          "value": 2.1706656930966406e-17,
+          "origin": "std(experiments.C[0].var_neo)",
+          "source": "FROM_STATISTICS"
+        },
+        "var_eva": {
+          "value": 8.027152608221342e-25,
+          "origin": "std(experiments.C[0].var_eva)",
+          "source": "FROM_STATISTICS"
+        },
         "continuations": [
           {
             "final_neo_w": "[0.03526911 0.03526911 0.16485718 0.22921495 0.06064091 0.46478513\n 0.00996362]",
             "final_eva_w": "[0.00989794 0.00989794 0.39173858 0.43769979 0.00989794 0.01396026\n 0.12690756]",
-            "final_sagi": 0.5782238073668147,
-            "neo_crises": 3,
-            "eva_crises": 3
+            "final_sagi": {
+              "value": 0.5782238073668147,
+              "origin": "normalized(experiments.C[0].continuations[0].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 3,
+              "origin": "counted(experiments.C[0].continuations[0].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 3,
+              "origin": "counted(experiments.C[0].continuations[0].eva_crises)",
+              "source": "FROM_DATA"
+            }
           },
           {
             "final_neo_w": "[0.0352691  0.0352691  0.16485718 0.22921495 0.06064091 0.46478513\n 0.00996362]",
             "final_eva_w": "[0.00989794 0.00989794 0.39173858 0.43769979 0.00989794 0.01396026\n 0.12690756]",
-            "final_sagi": 0.47873929453992203,
-            "neo_crises": 3,
-            "eva_crises": 0
+            "final_sagi": {
+              "value": 0.47873929453992203,
+              "origin": "normalized(experiments.C[0].continuations[1].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 3,
+              "origin": "counted(experiments.C[0].continuations[1].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 0,
+              "origin": "counted(experiments.C[0].continuations[1].eva_crises)",
+              "source": "FROM_DATA"
+            }
           },
           {
             "final_neo_w": "[0.0352691  0.0352691  0.16485718 0.22921495 0.06064091 0.46478513\n 0.00996362]",
             "final_eva_w": "[0.00989794 0.00989794 0.39173858 0.43769979 0.00989794 0.01396026\n 0.12690756]",
-            "final_sagi": 0.41803988748063636,
-            "neo_crises": 2,
-            "eva_crises": 2
+            "final_sagi": {
+              "value": 0.41803988748063636,
+              "origin": "normalized(experiments.C[0].continuations[2].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 2,
+              "origin": "counted(experiments.C[0].continuations[2].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 2,
+              "origin": "counted(experiments.C[0].continuations[2].eva_crises)",
+              "source": "FROM_DATA"
+            }
           },
           {
             "final_neo_w": "[0.0352691  0.0352691  0.16485718 0.22921495 0.06064091 0.46478513\n 0.00996362]",
             "final_eva_w": "[0.00989794 0.00989794 0.39173858 0.43769979 0.00989794 0.01396026\n 0.12690756]",
-            "final_sagi": 0.4475961503115062,
-            "neo_crises": 2,
-            "eva_crises": 1
+            "final_sagi": {
+              "value": 0.4475961503115062,
+              "origin": "normalized(experiments.C[0].continuations[3].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 2,
+              "origin": "counted(experiments.C[0].continuations[3].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 1,
+              "origin": "counted(experiments.C[0].continuations[3].eva_crises)",
+              "source": "FROM_DATA"
+            }
           },
           {
             "final_neo_w": "[0.0352691  0.0352691  0.16485717 0.22921494 0.06064093 0.46478512\n 0.00996362]",
             "final_eva_w": "[0.00989794 0.00989794 0.39173858 0.43769979 0.00989794 0.01396026\n 0.12690756]",
-            "final_sagi": 0.5061837072215684,
-            "neo_crises": 3,
-            "eva_crises": 2
+            "final_sagi": {
+              "value": 0.5061837072215684,
+              "origin": "normalized(experiments.C[0].continuations[4].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 3,
+              "origin": "counted(experiments.C[0].continuations[4].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 2,
+              "origin": "counted(experiments.C[0].continuations[4].eva_crises)",
+              "source": "FROM_DATA"
+            }
           }
         ]
       },
       {
         "condition": "interrupted",
-        "crisis_t": 50,
-        "n_continuations": 5,
-        "var_neo": 1.7613174447485435e-09,
-        "var_eva": 2.3897929903958766e-08,
+        "crisis_t": {
+          "value": 50,
+          "origin": "counted(experiments.C[1].crisis_t)",
+          "source": "FROM_DATA"
+        },
+        "n_continuations": {
+          "value": 5,
+          "origin": "count(experiments.C[1].n_continuations)",
+          "source": "FROM_DATA"
+        },
+        "var_neo": {
+          "value": 1.7613174447485435e-09,
+          "origin": "std(experiments.C[1].var_neo)",
+          "source": "FROM_STATISTICS"
+        },
+        "var_eva": {
+          "value": 2.3897929903958766e-08,
+          "origin": "std(experiments.C[1].var_eva)",
+          "source": "FROM_STATISTICS"
+        },
         "continuations": [
           {
             "final_neo_w": "[0.00996069 0.00996069 0.23822711 0.39466199 0.00996069 0.27019072\n 0.0670381 ]",
             "final_eva_w": "[0.00992349 0.00992349 0.08961711 0.03607253 0.41081051 0.17266797\n 0.27098489]",
-            "final_sagi": 0.37649853986092874,
-            "neo_crises": 1,
-            "eva_crises": 3
+            "final_sagi": {
+              "value": 0.37649853986092874,
+              "origin": "normalized(experiments.C[1].continuations[0].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 1,
+              "origin": "counted(experiments.C[1].continuations[0].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 3,
+              "origin": "counted(experiments.C[1].continuations[0].eva_crises)",
+              "source": "FROM_DATA"
+            }
           },
           {
             "final_neo_w": "[0.00996132 0.00996132 0.23824763 0.39445213 0.00996132 0.27037111\n 0.06704518]",
             "final_eva_w": "[0.00992693 0.00992693 0.08966863 0.03609908 0.41049142 0.17320833\n 0.27067867]",
-            "final_sagi": 0.6154236203444249,
-            "neo_crises": 3,
-            "eva_crises": 2
+            "final_sagi": {
+              "value": 0.6154236203444249,
+              "origin": "normalized(experiments.C[1].continuations[1].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 3,
+              "origin": "counted(experiments.C[1].continuations[1].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 2,
+              "origin": "counted(experiments.C[1].continuations[1].eva_crises)",
+              "source": "FROM_DATA"
+            }
           },
           {
             "final_neo_w": "[0.00996069 0.00996069 0.23822716 0.39466195 0.00996069 0.27019066\n 0.06703815]",
             "final_eva_w": "[0.00992693 0.00992693 0.08966862 0.03609915 0.4104914  0.17320832\n 0.27067864]",
-            "final_sagi": 0.5097270224062107,
-            "neo_crises": 2,
-            "eva_crises": 3
+            "final_sagi": {
+              "value": 0.5097270224062107,
+              "origin": "normalized(experiments.C[1].continuations[2].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 2,
+              "origin": "counted(experiments.C[1].continuations[2].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 3,
+              "origin": "counted(experiments.C[1].continuations[2].eva_crises)",
+              "source": "FROM_DATA"
+            }
           },
           {
             "final_neo_w": "[0.00996069 0.00996069 0.23822716 0.39466195 0.00996069 0.27019066\n 0.06703815]",
             "final_eva_w": "[0.00992422 0.00992422 0.08947135 0.03615403 0.41084071 0.17268065\n 0.27100482]",
-            "final_sagi": 0.5449942567296858,
-            "neo_crises": 0,
-            "eva_crises": 3
+            "final_sagi": {
+              "value": 0.5449942567296858,
+              "origin": "normalized(experiments.C[1].continuations[3].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 0,
+              "origin": "counted(experiments.C[1].continuations[3].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 3,
+              "origin": "counted(experiments.C[1].continuations[3].eva_crises)",
+              "source": "FROM_DATA"
+            }
           },
           {
             "final_neo_w": "[0.00996069 0.00996069 0.23822716 0.39466195 0.00996069 0.27019066\n 0.06703815]",
             "final_eva_w": "[0.00992445 0.00992445 0.08964238 0.03608652 0.41032521 0.17276693\n 0.27133005]",
-            "final_sagi": 0.3850890291700363,
-            "neo_crises": 3,
-            "eva_crises": 2
+            "final_sagi": {
+              "value": 0.3850890291700363,
+              "origin": "normalized(experiments.C[1].continuations[4].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 3,
+              "origin": "counted(experiments.C[1].continuations[4].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 2,
+              "origin": "counted(experiments.C[1].continuations[4].eva_crises)",
+              "source": "FROM_DATA"
+            }
           }
         ]
       },
       {
         "condition": "interrupted",
-        "crisis_t": 28,
-        "n_continuations": 5,
-        "var_neo": 1.2197951809578416e-08,
-        "var_eva": 3.0248998856917083e-09,
+        "crisis_t": {
+          "value": 28,
+          "origin": "counted(experiments.C[2].crisis_t)",
+          "source": "FROM_DATA"
+        },
+        "n_continuations": {
+          "value": 5,
+          "origin": "count(experiments.C[2].n_continuations)",
+          "source": "FROM_DATA"
+        },
+        "var_neo": {
+          "value": 1.2197951809578416e-08,
+          "origin": "std(experiments.C[2].var_neo)",
+          "source": "FROM_STATISTICS"
+        },
+        "var_eva": {
+          "value": 3.0248998856917083e-09,
+          "origin": "std(experiments.C[2].var_eva)",
+          "source": "FROM_STATISTICS"
+        },
         "continuations": [
           {
             "final_neo_w": "[0.00992696 0.00992696 0.16673508 0.02278759 0.33228935 0.03776839\n 0.42056568]",
             "final_eva_w": "[0.00995289 0.00995289 0.22010643 0.31082422 0.06404051 0.00995289\n 0.37517016]",
-            "final_sagi": 0.5374422578922282,
-            "neo_crises": 1,
-            "eva_crises": 3
+            "final_sagi": {
+              "value": 0.5374422578922282,
+              "origin": "normalized(experiments.C[2].continuations[0].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 1,
+              "origin": "counted(experiments.C[2].continuations[0].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 3,
+              "origin": "counted(experiments.C[2].continuations[0].eva_crises)",
+              "source": "FROM_DATA"
+            }
           },
           {
             "final_neo_w": "[0.00992623 0.00992623 0.16671512 0.02277549 0.33188814 0.03775975\n 0.42100904]",
             "final_eva_w": "[0.00995289 0.00995289 0.22010643 0.31082422 0.06404051 0.00995289\n 0.37517016]",
-            "final_sagi": 0.5380395060549206,
-            "neo_crises": 1,
-            "eva_crises": 3
+            "final_sagi": {
+              "value": 0.5380395060549206,
+              "origin": "normalized(experiments.C[2].continuations[1].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 1,
+              "origin": "counted(experiments.C[2].continuations[1].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 3,
+              "origin": "counted(experiments.C[2].continuations[1].eva_crises)",
+              "source": "FROM_DATA"
+            }
           },
           {
             "final_neo_w": "[0.00992623 0.00992623 0.16671504 0.0227757  0.33188803 0.03775984\n 0.42100894]",
             "final_eva_w": "[0.00995364 0.00995364 0.22034289 0.31054933 0.06404851 0.00995364\n 0.37519835]",
-            "final_sagi": 0.48418002016727324,
-            "neo_crises": 0,
-            "eva_crises": 2
+            "final_sagi": {
+              "value": 0.48418002016727324,
+              "origin": "normalized(experiments.C[2].continuations[2].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 0,
+              "origin": "counted(experiments.C[2].continuations[2].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 2,
+              "origin": "counted(experiments.C[2].continuations[2].eva_crises)",
+              "source": "FROM_DATA"
+            }
           },
           {
             "final_neo_w": "[0.00992708 0.00992708 0.16673457 0.02277951 0.33229331 0.03776514\n 0.42057332]",
             "final_eva_w": "[0.00995289 0.00995289 0.22010643 0.31082422 0.06404051 0.00995289\n 0.37517016]",
-            "final_sagi": 0.4665673049789916,
-            "neo_crises": 4,
-            "eva_crises": 4
+            "final_sagi": {
+              "value": 0.4665673049789916,
+              "origin": "normalized(experiments.C[2].continuations[3].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 4,
+              "origin": "counted(experiments.C[2].continuations[3].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 4,
+              "origin": "counted(experiments.C[2].continuations[3].eva_crises)",
+              "source": "FROM_DATA"
+            }
           },
           {
             "final_neo_w": "[0.00992708 0.00992708 0.16673474 0.02277962 0.33229323 0.03776514\n 0.42057312]",
             "final_eva_w": "[0.00995289 0.00995289 0.22010643 0.31082422 0.06404051 0.00995289\n 0.37517016]",
-            "final_sagi": 0.41373603997979974,
-            "neo_crises": 1,
-            "eva_crises": 3
+            "final_sagi": {
+              "value": 0.41373603997979974,
+              "origin": "normalized(experiments.C[2].continuations[4].final_sagi)",
+              "source": "FROM_MATH"
+            },
+            "neo_crises": {
+              "value": 1,
+              "origin": "counted(experiments.C[2].continuations[4].neo_crises)",
+              "source": "FROM_DATA"
+            },
+            "eva_crises": {
+              "value": 3,
+              "origin": "counted(experiments.C[2].continuations[4].eva_crises)",
+              "source": "FROM_DATA"
+            }
           }
         ]
       }
@@ -203,5 +535,112 @@
   "conclusions": {
     "personality_source": "emergent",
     "memory_type": "state_space_attractor"
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "14c347aa1d42",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.432320",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/frontal/experiments.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.432550",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 204,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 267,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 204,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 267,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

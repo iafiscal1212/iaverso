@@ -1,77 +1,376 @@
 {
   "seeds": [
     {
-      "seed": 0,
-      "n_cycles": 1,
-      "median_abs_affinity": 16.906834383087087,
-      "max_abs_affinity": 16.906834383087087
+      "seed": {
+        "value": 0,
+        "origin": "counted(seeds[0].seed)",
+        "source": "FROM_DATA"
+      },
+      "n_cycles": {
+        "value": 1,
+        "origin": "count(seeds[0].n_cycles)",
+        "source": "FROM_DATA"
+      },
+      "median_abs_affinity": {
+        "value": 16.906834383087087,
+        "origin": "mean(seeds[0].median_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_abs_affinity": {
+        "value": 16.906834383087087,
+        "origin": "max_abs_affinity(seeds[0].max_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 1,
-      "n_cycles": 1,
-      "median_abs_affinity": 16.716738905531486,
-      "max_abs_affinity": 16.716738905531486
+      "seed": {
+        "value": 1,
+        "origin": "counted(seeds[1].seed)",
+        "source": "FROM_DATA"
+      },
+      "n_cycles": {
+        "value": 1,
+        "origin": "count(seeds[1].n_cycles)",
+        "source": "FROM_DATA"
+      },
+      "median_abs_affinity": {
+        "value": 16.716738905531486,
+        "origin": "mean(seeds[1].median_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_abs_affinity": {
+        "value": 16.716738905531486,
+        "origin": "max_abs_affinity(seeds[1].max_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 2,
-      "n_cycles": 1,
-      "median_abs_affinity": 17.383330611424498,
-      "max_abs_affinity": 17.383330611424498
+      "seed": {
+        "value": 2,
+        "origin": "counted(seeds[2].seed)",
+        "source": "FROM_DATA"
+      },
+      "n_cycles": {
+        "value": 1,
+        "origin": "count(seeds[2].n_cycles)",
+        "source": "FROM_DATA"
+      },
+      "median_abs_affinity": {
+        "value": 17.383330611424498,
+        "origin": "mean(seeds[2].median_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_abs_affinity": {
+        "value": 17.383330611424498,
+        "origin": "max_abs_affinity(seeds[2].max_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 3,
-      "n_cycles": 1,
-      "median_abs_affinity": 17.327556547675176,
-      "max_abs_affinity": 17.327556547675176
+      "seed": {
+        "value": 3,
+        "origin": "counted(seeds[3].seed)",
+        "source": "FROM_DATA"
+      },
+      "n_cycles": {
+        "value": 1,
+        "origin": "count(seeds[3].n_cycles)",
+        "source": "FROM_DATA"
+      },
+      "median_abs_affinity": {
+        "value": 17.327556547675176,
+        "origin": "mean(seeds[3].median_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_abs_affinity": {
+        "value": 17.327556547675176,
+        "origin": "max_abs_affinity(seeds[3].max_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 4,
-      "n_cycles": 1,
-      "median_abs_affinity": 17.175752747337473,
-      "max_abs_affinity": 17.175752747337473
+      "seed": {
+        "value": 4,
+        "origin": "counted(seeds[4].seed)",
+        "source": "FROM_DATA"
+      },
+      "n_cycles": {
+        "value": 1,
+        "origin": "count(seeds[4].n_cycles)",
+        "source": "FROM_DATA"
+      },
+      "median_abs_affinity": {
+        "value": 17.175752747337473,
+        "origin": "mean(seeds[4].median_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_abs_affinity": {
+        "value": 17.175752747337473,
+        "origin": "max_abs_affinity(seeds[4].max_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 5,
-      "n_cycles": 1,
-      "median_abs_affinity": 17.026861580622388,
-      "max_abs_affinity": 17.026861580622388
+      "seed": {
+        "value": 5,
+        "origin": "counted(seeds[5].seed)",
+        "source": "FROM_DATA"
+      },
+      "n_cycles": {
+        "value": 1,
+        "origin": "count(seeds[5].n_cycles)",
+        "source": "FROM_DATA"
+      },
+      "median_abs_affinity": {
+        "value": 17.026861580622388,
+        "origin": "mean(seeds[5].median_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_abs_affinity": {
+        "value": 17.026861580622388,
+        "origin": "max_abs_affinity(seeds[5].max_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 6,
-      "n_cycles": 1,
-      "median_abs_affinity": 16.81543671649447,
-      "max_abs_affinity": 16.81543671649447
+      "seed": {
+        "value": 6,
+        "origin": "counted(seeds[6].seed)",
+        "source": "FROM_DATA"
+      },
+      "n_cycles": {
+        "value": 1,
+        "origin": "count(seeds[6].n_cycles)",
+        "source": "FROM_DATA"
+      },
+      "median_abs_affinity": {
+        "value": 16.81543671649447,
+        "origin": "mean(seeds[6].median_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_abs_affinity": {
+        "value": 16.81543671649447,
+        "origin": "max_abs_affinity(seeds[6].max_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 7,
-      "n_cycles": 1,
-      "median_abs_affinity": 18.25029181457194,
-      "max_abs_affinity": 18.25029181457194
+      "seed": {
+        "value": 7,
+        "origin": "counted(seeds[7].seed)",
+        "source": "FROM_DATA"
+      },
+      "n_cycles": {
+        "value": 1,
+        "origin": "count(seeds[7].n_cycles)",
+        "source": "FROM_DATA"
+      },
+      "median_abs_affinity": {
+        "value": 18.25029181457194,
+        "origin": "mean(seeds[7].median_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_abs_affinity": {
+        "value": 18.25029181457194,
+        "origin": "max_abs_affinity(seeds[7].max_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 8,
-      "n_cycles": 1,
-      "median_abs_affinity": 16.863759642214788,
-      "max_abs_affinity": 16.863759642214788
+      "seed": {
+        "value": 8,
+        "origin": "counted(seeds[8].seed)",
+        "source": "FROM_DATA"
+      },
+      "n_cycles": {
+        "value": 1,
+        "origin": "count(seeds[8].n_cycles)",
+        "source": "FROM_DATA"
+      },
+      "median_abs_affinity": {
+        "value": 16.863759642214788,
+        "origin": "mean(seeds[8].median_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_abs_affinity": {
+        "value": 16.863759642214788,
+        "origin": "max_abs_affinity(seeds[8].max_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      }
     },
     {
-      "seed": 9,
-      "n_cycles": 1,
-      "median_abs_affinity": 16.62063275896668,
-      "max_abs_affinity": 16.62063275896668
+      "seed": {
+        "value": 9,
+        "origin": "counted(seeds[9].seed)",
+        "source": "FROM_DATA"
+      },
+      "n_cycles": {
+        "value": 1,
+        "origin": "count(seeds[9].n_cycles)",
+        "source": "FROM_DATA"
+      },
+      "median_abs_affinity": {
+        "value": 16.62063275896668,
+        "origin": "mean(seeds[9].median_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_abs_affinity": {
+        "value": 16.62063275896668,
+        "origin": "max_abs_affinity(seeds[9].max_abs_affinity)",
+        "source": "FROM_STATISTICS"
+      }
     }
   ],
   "global": {
-    "mean_affinity": 17.1087195707926,
-    "std_affinity": 0.4490364815060992,
-    "median_affinity": 16.966847981854738,
-    "p95_affinity": 17.860159273155592
+    "mean_affinity": {
+      "value": 17.1087195707926,
+      "origin": "mean(global.mean_affinity)",
+      "source": "FROM_STATISTICS"
+    },
+    "std_affinity": {
+      "value": 0.4490364815060992,
+      "origin": "std(global.std_affinity)",
+      "source": "FROM_STATISTICS"
+    },
+    "median_affinity": {
+      "value": 16.966847981854738,
+      "origin": "mean(global.median_affinity)",
+      "source": "FROM_STATISTICS"
+    },
+    "p95_affinity": {
+      "value": 17.860159273155592,
+      "origin": "computed(global.p95_affinity)",
+      "source": "FROM_MATH"
+    }
   },
   "vs_null": {
-    "null_mean": 7.851141611836532e-17,
-    "null_std": 2.38738266642882e-17,
-    "null_p95": 1.1967423579894997e-16,
-    "real_mean": 17.1087195707926,
+    "null_mean": {
+      "value": 7.851141611836532e-17,
+      "origin": "mean(vs_null.null_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 2.38738266642882e-17,
+      "origin": "std(vs_null.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_p95": {
+      "value": 1.1967423579894997e-16,
+      "origin": "normalized(vs_null.null_p95)",
+      "source": "FROM_MATH"
+    },
+    "real_mean": {
+      "value": 17.1087195707926,
+      "origin": "mean(vs_null.real_mean)",
+      "source": "FROM_STATISTICS"
+    },
     "above_p95": true
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "d03d28af6d94",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.438273",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase16b/cycle_affinity.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.438409",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 134,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 143,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 134,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 143,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

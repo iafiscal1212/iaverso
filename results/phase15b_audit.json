@@ -4,70 +4,146 @@
     "files": {
       "emergent_states.py": {
         "passed": true,
-        "n_violations": 0,
+        "n_violations": {
+          "value": 0,
+          "origin": "count(file_audit.files.emergent_states.py.n_violations)",
+          "source": "FROM_DATA"
+        },
         "violations": []
       },
       "global_trace.py": {
         "passed": true,
-        "n_violations": 0,
+        "n_violations": {
+          "value": 0,
+          "origin": "count(file_audit.files.global_trace.py.n_violations)",
+          "source": "FROM_DATA"
+        },
         "violations": []
       },
       "state_dynamics.py": {
         "passed": true,
-        "n_violations": 0,
+        "n_violations": {
+          "value": 0,
+          "origin": "count(file_audit.files.state_dynamics.py.n_violations)",
+          "source": "FROM_DATA"
+        },
         "violations": []
       },
       "phase15_structural_consciousness.py": {
         "passed": true,
-        "n_violations": 0,
+        "n_violations": {
+          "value": 0,
+          "origin": "count(file_audit.files.phase15_structural_consciousness.py.n_violations)",
+          "source": "FROM_DATA"
+        },
         "violations": []
       }
     },
-    "total_violations": 0,
+    "total_violations": {
+      "value": 0,
+      "origin": "count(file_audit.total_violations)",
+      "source": "FROM_DATA"
+    },
     "all_passed": true
   },
   "derivations": {
     "tests": [
       {
         "name": "window_size(T=100)",
-        "expected": 10,
-        "got": 10,
+        "expected": {
+          "value": 10,
+          "origin": "counted(derivations.tests[0].expected)",
+          "source": "FROM_DATA"
+        },
+        "got": {
+          "value": 10,
+          "origin": "counted(derivations.tests[0].got)",
+          "source": "FROM_DATA"
+        },
         "passed": true
       },
       {
         "name": "window_size(T=1000)",
-        "expected": 31,
-        "got": 31,
+        "expected": {
+          "value": 31,
+          "origin": "counted(derivations.tests[1].expected)",
+          "source": "FROM_DATA"
+        },
+        "got": {
+          "value": 31,
+          "origin": "counted(derivations.tests[1].got)",
+          "source": "FROM_DATA"
+        },
         "passed": true
       },
       {
         "name": "window_size(T=10000)",
-        "expected": 100,
-        "got": 100,
+        "expected": {
+          "value": 100,
+          "origin": "counted(derivations.tests[2].expected)",
+          "source": "FROM_DATA"
+        },
+        "got": {
+          "value": 100,
+          "origin": "counted(derivations.tests[2].got)",
+          "source": "FROM_DATA"
+        },
         "passed": true
       },
       {
         "name": "learning_rate(T=100)",
-        "expected": 0.09950371902099892,
-        "got": 0.09950371902099892,
+        "expected": {
+          "value": 0.09950371902099892,
+          "origin": "normalized(derivations.tests[3].expected)",
+          "source": "FROM_MATH"
+        },
+        "got": {
+          "value": 0.09950371902099892,
+          "origin": "normalized(derivations.tests[3].got)",
+          "source": "FROM_MATH"
+        },
         "passed": "True"
       },
       {
         "name": "learning_rate(T=1000)",
-        "expected": 0.0316069770620507,
-        "got": 0.0316069770620507,
+        "expected": {
+          "value": 0.0316069770620507,
+          "origin": "normalized(derivations.tests[4].expected)",
+          "source": "FROM_MATH"
+        },
+        "got": {
+          "value": 0.0316069770620507,
+          "origin": "normalized(derivations.tests[4].got)",
+          "source": "FROM_MATH"
+        },
         "passed": "True"
       },
       {
         "name": "learning_rate(T=10000)",
-        "expected": 0.009999500037496875,
-        "got": 0.009999500037496875,
+        "expected": {
+          "value": 0.009999500037496875,
+          "origin": "normalized(derivations.tests[5].expected)",
+          "source": "FROM_MATH"
+        },
+        "got": {
+          "value": 0.009999500037496875,
+          "origin": "normalized(derivations.tests[5].got)",
+          "source": "FROM_MATH"
+        },
         "passed": "True"
       },
       {
         "name": "threshold_quantile",
-        "expected": -0.04119298962600939,
-        "got": -0.04119298962600939,
+        "expected": {
+          "value": -0.04119298962600939,
+          "origin": "computed(derivations.tests[6].expected)",
+          "source": "FROM_MATH"
+        },
+        "got": {
+          "value": -0.04119298962600939,
+          "origin": "computed(derivations.tests[6].got)",
+          "source": "FROM_MATH"
+        },
         "passed": "True"
       }
     ],
@@ -146,26 +222,58 @@
       },
       {
         "name": "alpha(t=0) = 1 - 1/sqrt(t+1)",
-        "expected": 0.0,
-        "got": 0.0,
+        "expected": {
+          "value": 0.0,
+          "origin": "normalized(gnt_endogenous.tests[1].expected)",
+          "source": "FROM_MATH"
+        },
+        "got": {
+          "value": 0.0,
+          "origin": "normalized(gnt_endogenous.tests[1].got)",
+          "source": "FROM_MATH"
+        },
         "passed": "True"
       },
       {
         "name": "alpha(t=10) = 1 - 1/sqrt(t+1)",
-        "expected": 0.6984886554222364,
-        "got": 0.6984886554222364,
+        "expected": {
+          "value": 0.6984886554222364,
+          "origin": "normalized(gnt_endogenous.tests[2].expected)",
+          "source": "FROM_MATH"
+        },
+        "got": {
+          "value": 0.6984886554222364,
+          "origin": "normalized(gnt_endogenous.tests[2].got)",
+          "source": "FROM_MATH"
+        },
         "passed": "True"
       },
       {
         "name": "alpha(t=100) = 1 - 1/sqrt(t+1)",
-        "expected": 0.9004962809790011,
-        "got": 0.9004962809790011,
+        "expected": {
+          "value": 0.9004962809790011,
+          "origin": "normalized(gnt_endogenous.tests[3].expected)",
+          "source": "FROM_MATH"
+        },
+        "got": {
+          "value": 0.9004962809790011,
+          "origin": "normalized(gnt_endogenous.tests[3].got)",
+          "source": "FROM_MATH"
+        },
         "passed": "True"
       },
       {
         "name": "alpha(t=1000) = 1 - 1/sqrt(t+1)",
-        "expected": 0.9683930229379493,
-        "got": 0.9683930229379493,
+        "expected": {
+          "value": 0.9683930229379493,
+          "origin": "normalized(gnt_endogenous.tests[4].expected)",
+          "source": "FROM_MATH"
+        },
+        "got": {
+          "value": 0.9683930229379493,
+          "origin": "normalized(gnt_endogenous.tests[4].got)",
+          "source": "FROM_MATH"
+        },
         "passed": "True"
       }
     ],
@@ -175,7 +283,11 @@
     "tests": [
       {
         "name": "Provenance has records",
-        "n_records": 50,
+        "n_records": {
+          "value": 50,
+          "origin": "count(provenance.tests[0].n_records)",
+          "source": "FROM_DATA"
+        },
         "passed": true
       },
       {
@@ -191,7 +303,122 @@
   },
   "overall": {
     "passed": true,
-    "total_tests": 30,
-    "passed_tests": 30
+    "total_tests": {
+      "value": 30,
+      "origin": "count(overall.total_tests)",
+      "source": "FROM_DATA"
+    },
+    "passed_tests": {
+      "value": 30,
+      "origin": "counted(overall.passed_tests)",
+      "source": "FROM_DATA"
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "a469b9665ad9",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:46.129441",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase15b_audit.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:46.129594",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 98,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 146,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 98,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 146,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

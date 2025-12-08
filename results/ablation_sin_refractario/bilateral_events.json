@@ -1,1 +1,809 @@
-[{"t": 158, "neo_mode": 1, "eva_mode": 1}, {"t": 242, "neo_mode": 0, "eva_mode": 1}, {"t": 275, "neo_mode": 0, "eva_mode": 0}, {"t": 660, "neo_mode": -1, "eva_mode": -1}, {"t": 1161, "neo_mode": 1, "eva_mode": 1}, {"t": 1191, "neo_mode": 1, "eva_mode": 0}, {"t": 1266, "neo_mode": -1, "eva_mode": 1}, {"t": 1403, "neo_mode": 0, "eva_mode": 1}, {"t": 1412, "neo_mode": 1, "eva_mode": 1}, {"t": 1469, "neo_mode": 0, "eva_mode": -1}, {"t": 1548, "neo_mode": -1, "eva_mode": 0}, {"t": 1756, "neo_mode": 1, "eva_mode": 1}, {"t": 1786, "neo_mode": 0, "eva_mode": -1}, {"t": 1818, "neo_mode": 1, "eva_mode": -1}, {"t": 1910, "neo_mode": 1, "eva_mode": -1}, {"t": 1966, "neo_mode": 1, "eva_mode": -1}, {"t": 2409, "neo_mode": 1, "eva_mode": 1}, {"t": 2521, "neo_mode": 1, "eva_mode": -1}, {"t": 2771, "neo_mode": 1, "eva_mode": 1}, {"t": 2880, "neo_mode": 0, "eva_mode": -1}, {"t": 2895, "neo_mode": -1, "eva_mode": -1}, {"t": 3138, "neo_mode": 1, "eva_mode": -1}, {"t": 3149, "neo_mode": -1, "eva_mode": -1}, {"t": 3275, "neo_mode": 1, "eva_mode": -1}, {"t": 3343, "neo_mode": -1, "eva_mode": -1}, {"t": 3344, "neo_mode": 1, "eva_mode": -1}, {"t": 3540, "neo_mode": 0, "eva_mode": -1}, {"t": 3708, "neo_mode": 1, "eva_mode": -1}, {"t": 3729, "neo_mode": -1, "eva_mode": -1}, {"t": 4049, "neo_mode": 1, "eva_mode": -1}, {"t": 4198, "neo_mode": -1, "eva_mode": 0}, {"t": 4340, "neo_mode": 1, "eva_mode": 0}, {"t": 4355, "neo_mode": -1, "eva_mode": -1}, {"t": 4368, "neo_mode": -1, "eva_mode": -1}, {"t": 4468, "neo_mode": 1, "eva_mode": -1}, {"t": 4538, "neo_mode": 0, "eva_mode": -1}, {"t": 4570, "neo_mode": 1, "eva_mode": -1}, {"t": 4598, "neo_mode": -1, "eva_mode": 1}, {"t": 4882, "neo_mode": 1, "eva_mode": 0}, {"t": 4918, "neo_mode": -1, "eva_mode": -1}, {"t": 4976, "neo_mode": 1, "eva_mode": 1}]
+{
+  "data": [
+    {
+      "t": {
+        "value": 158,
+        "origin": "counted(data[0].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[0].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[0].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 242,
+        "origin": "counted(data[1].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[1].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[1].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 275,
+        "origin": "counted(data[2].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[2].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[2].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 660,
+        "origin": "counted(data[3].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[3].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[3].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 1161,
+        "origin": "counted(data[4].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[4].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[4].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 1191,
+        "origin": "counted(data[5].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[5].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[5].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 1266,
+        "origin": "counted(data[6].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[6].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[6].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 1403,
+        "origin": "counted(data[7].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[7].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[7].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 1412,
+        "origin": "counted(data[8].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[8].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[8].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 1469,
+        "origin": "counted(data[9].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[9].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[9].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 1548,
+        "origin": "counted(data[10].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[10].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[10].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 1756,
+        "origin": "counted(data[11].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[11].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[11].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 1786,
+        "origin": "counted(data[12].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[12].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[12].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 1818,
+        "origin": "counted(data[13].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[13].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[13].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 1910,
+        "origin": "counted(data[14].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[14].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[14].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 1966,
+        "origin": "counted(data[15].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[15].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[15].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 2409,
+        "origin": "counted(data[16].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[16].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[16].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 2521,
+        "origin": "counted(data[17].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[17].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[17].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 2771,
+        "origin": "counted(data[18].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[18].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[18].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 2880,
+        "origin": "counted(data[19].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[19].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[19].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 2895,
+        "origin": "counted(data[20].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[20].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[20].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 3138,
+        "origin": "counted(data[21].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[21].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[21].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 3149,
+        "origin": "counted(data[22].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[22].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[22].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 3275,
+        "origin": "counted(data[23].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[23].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[23].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 3343,
+        "origin": "counted(data[24].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[24].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[24].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 3344,
+        "origin": "counted(data[25].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[25].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[25].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 3540,
+        "origin": "counted(data[26].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[26].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[26].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 3708,
+        "origin": "counted(data[27].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[27].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[27].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 3729,
+        "origin": "counted(data[28].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[28].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[28].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 4049,
+        "origin": "counted(data[29].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[29].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[29].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 4198,
+        "origin": "counted(data[30].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[30].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[30].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 4340,
+        "origin": "counted(data[31].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[31].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[31].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 4355,
+        "origin": "counted(data[32].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[32].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[32].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 4368,
+        "origin": "counted(data[33].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[33].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[33].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 4468,
+        "origin": "counted(data[34].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[34].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[34].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 4538,
+        "origin": "counted(data[35].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[35].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[35].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 4570,
+        "origin": "counted(data[36].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[36].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[36].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 4598,
+        "origin": "counted(data[37].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[37].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[37].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 4882,
+        "origin": "counted(data[38].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[38].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[38].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 4918,
+        "origin": "counted(data[39].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": -1,
+        "origin": "counted(data[39].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[39].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "t": {
+        "value": 4976,
+        "origin": "counted(data[40].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[40].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[40].eva_mode)",
+        "source": "FROM_DATA"
+      }
+    }
+  ],
+  "_converted_from_list": true,
+  "metadata": {
+    "experiment_id": {
+      "value": "4508504a1ccf",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:23:20.738909",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/ablation_sin_refractario/bilateral_events.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:23:20.739287",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 284,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 293,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 284,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 293,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
+}

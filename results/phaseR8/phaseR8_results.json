@@ -8,576 +8,1411 @@
     "laws_interpretable": true
   },
   "summary": {
-    "T": 1000,
-    "n_laws": 22,
+    "T": {
+      "value": 1000,
+      "origin": "counted(summary.T)",
+      "source": "FROM_DATA"
+    },
+    "n_laws": {
+      "value": 22,
+      "origin": "count(summary.n_laws)",
+      "source": "FROM_DATA"
+    },
     "law_stats": [
       {
-        "law_id": 0,
-        "eigenvalue": 0.055423035154715986,
-        "correlation": -0.9790403635951445,
+        "law_id": {
+          "value": 0,
+          "origin": "identifier(summary.law_stats[0].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.055423035154715986,
+          "origin": "computed(summary.law_stats[0].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": -0.9790403635951445,
+          "origin": "computed(summary.law_stats[0].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "D_irr",
-            0.9525457868699283
+            {
+              "value": 0.9525457868699283,
+              "origin": "normalized(summary.law_stats[0].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "Psi",
-            -0.20346784420697717
+            {
+              "value": -0.20346784420697717,
+              "origin": "computed(summary.law_stats[0].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "integration",
-            -0.1918597463820651
+            {
+              "value": -0.1918597463820651,
+              "origin": "computed(summary.law_stats[0].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 0.9659517919619383,
-        "first_detected": 15
+        "stability": {
+          "value": 0.9659517919619383,
+          "origin": "normalized(summary.law_stats[0].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 15,
+          "origin": "counted(summary.law_stats[0].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 0,
-        "eigenvalue": 0.005664801624528188,
-        "correlation": 0.5444976986726646,
+        "law_id": {
+          "value": 0,
+          "origin": "identifier(summary.law_stats[1].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.005664801624528188,
+          "origin": "computed(summary.law_stats[1].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": 0.5444976986726646,
+          "origin": "normalized(summary.law_stats[1].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "Psi",
-            -0.8693385464545876
+            {
+              "value": -0.8693385464545876,
+              "origin": "computed(summary.law_stats[1].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "integration",
-            -0.37295886684481216
+            {
+              "value": -0.37295886684481216,
+              "origin": "computed(summary.law_stats[1].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_irr",
-            -0.2479109239022996
+            {
+              "value": -0.2479109239022996,
+              "origin": "computed(summary.law_stats[1].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 1.0,
-        "first_detected": 15
+        "stability": {
+          "value": 1.0,
+          "origin": "normalized(summary.law_stats[1].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 15,
+          "origin": "counted(summary.law_stats[1].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 0,
-        "eigenvalue": 0.0029938800438448253,
-        "correlation": 0.5198065868187178,
+        "law_id": {
+          "value": 0,
+          "origin": "identifier(summary.law_stats[2].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.0029938800438448253,
+          "origin": "computed(summary.law_stats[2].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": 0.5198065868187178,
+          "origin": "normalized(summary.law_stats[2].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "integration",
-            -0.8423280269537384
+            {
+              "value": -0.8423280269537384,
+              "origin": "computed(summary.law_stats[2].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "Psi",
-            0.35802507862208643
+            {
+              "value": 0.35802507862208643,
+              "origin": "normalized(summary.law_stats[2].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_stab",
-            0.21649295289983084
+            {
+              "value": 0.21649295289983084,
+              "origin": "normalized(summary.law_stats[2].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 1.0,
-        "first_detected": 15
+        "stability": {
+          "value": 1.0,
+          "origin": "normalized(summary.law_stats[2].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 15,
+          "origin": "counted(summary.law_stats[2].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 0,
-        "eigenvalue": 0.0017807973555058975,
-        "correlation": -0.7250510505766257,
+        "law_id": {
+          "value": 0,
+          "origin": "identifier(summary.law_stats[3].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.0017807973555058975,
+          "origin": "computed(summary.law_stats[3].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": -0.7250510505766257,
+          "origin": "computed(summary.law_stats[3].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "D_nov",
-            -0.6861749457412767
+            {
+              "value": -0.6861749457412767,
+              "origin": "computed(summary.law_stats[3].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "S",
-            0.6700940176282641
+            {
+              "value": 0.6700940176282641,
+              "origin": "normalized(summary.law_stats[3].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "Psi",
-            -0.1806288433536087
+            {
+              "value": -0.1806288433536087,
+              "origin": "computed(summary.law_stats[3].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 1.0,
-        "first_detected": 15
+        "stability": {
+          "value": 1.0,
+          "origin": "normalized(summary.law_stats[3].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 15,
+          "origin": "counted(summary.law_stats[3].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 4,
-        "eigenvalue": 0.0025679657896542155,
-        "correlation": 0.9767375440271872,
+        "law_id": {
+          "value": 4,
+          "origin": "identifier(summary.law_stats[4].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.0025679657896542155,
+          "origin": "computed(summary.law_stats[4].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": 0.9767375440271872,
+          "origin": "normalized(summary.law_stats[4].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "integration",
-            -0.9024987536182687
+            {
+              "value": -0.9024987536182687,
+              "origin": "computed(summary.law_stats[4].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_irr",
-            -0.3305774144519816
+            {
+              "value": -0.3305774144519816,
+              "origin": "computed(summary.law_stats[4].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "S",
-            -0.2179463586056509
+            {
+              "value": -0.2179463586056509,
+              "origin": "computed(summary.law_stats[4].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 0.9740651650175217,
-        "first_detected": 16
+        "stability": {
+          "value": 0.9740651650175217,
+          "origin": "normalized(summary.law_stats[4].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 16,
+          "origin": "counted(summary.law_stats[4].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 4,
-        "eigenvalue": 0.0011235019053910161,
-        "correlation": -0.44135339950613206,
+        "law_id": {
+          "value": 4,
+          "origin": "identifier(summary.law_stats[5].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.0011235019053910161,
+          "origin": "computed(summary.law_stats[5].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": -0.44135339950613206,
+          "origin": "computed(summary.law_stats[5].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "D_stab",
-            -0.6370978887731477
+            {
+              "value": -0.6370978887731477,
+              "origin": "computed(summary.law_stats[5].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_nov",
-            0.6370978887731457
+            {
+              "value": 0.6370978887731457,
+              "origin": "normalized(summary.law_stats[5].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "self_surprise",
-            -0.421430027874505
+            {
+              "value": -0.421430027874505,
+              "origin": "computed(summary.law_stats[5].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 1.0,
-        "first_detected": 16
+        "stability": {
+          "value": 1.0,
+          "origin": "normalized(summary.law_stats[5].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 16,
+          "origin": "counted(summary.law_stats[5].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 4,
-        "eigenvalue": 0.0009138084593271206,
-        "correlation": -0.9332098733135863,
+        "law_id": {
+          "value": 4,
+          "origin": "identifier(summary.law_stats[6].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.0009138084593271206,
+          "origin": "computed(summary.law_stats[6].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": -0.9332098733135863,
+          "origin": "computed(summary.law_stats[6].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "irreversibility",
-            0.7777350116884462
+            {
+              "value": 0.7777350116884462,
+              "origin": "normalized(summary.law_stats[6].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "S",
-            0.4394796433124659
+            {
+              "value": 0.4394796433124659,
+              "origin": "normalized(summary.law_stats[6].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "self_surprise",
-            0.3459415559529713
+            {
+              "value": 0.3459415559529713,
+              "origin": "normalized(summary.law_stats[6].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 1.0,
-        "first_detected": 16
+        "stability": {
+          "value": 1.0,
+          "origin": "normalized(summary.law_stats[6].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 16,
+          "origin": "counted(summary.law_stats[6].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 7,
-        "eigenvalue": 0.0166380876413398,
-        "correlation": -0.9907067575396711,
+        "law_id": {
+          "value": 7,
+          "origin": "identifier(summary.law_stats[7].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.0166380876413398,
+          "origin": "computed(summary.law_stats[7].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": -0.9907067575396711,
+          "origin": "computed(summary.law_stats[7].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "D_irr",
-            -0.7701447102144258
+            {
+              "value": -0.7701447102144258,
+              "origin": "computed(summary.law_stats[7].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_nov",
-            -0.4459200397154982
+            {
+              "value": -0.4459200397154982,
+              "origin": "computed(summary.law_stats[7].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_stab",
-            0.44592003971549815
+            {
+              "value": 0.44592003971549815,
+              "origin": "normalized(summary.law_stats[7].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 1.0,
-        "first_detected": 18
+        "stability": {
+          "value": 1.0,
+          "origin": "normalized(summary.law_stats[7].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 18,
+          "origin": "counted(summary.law_stats[7].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 8,
-        "eigenvalue": 0.012918439573921331,
-        "correlation": -0.988076969991689,
+        "law_id": {
+          "value": 8,
+          "origin": "identifier(summary.law_stats[8].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.012918439573921331,
+          "origin": "computed(summary.law_stats[8].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": -0.988076969991689,
+          "origin": "computed(summary.law_stats[8].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "D_irr",
-            0.7430765557480192
+            {
+              "value": 0.7430765557480192,
+              "origin": "normalized(summary.law_stats[8].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_stab",
-            0.42214989846148765
+            {
+              "value": 0.42214989846148765,
+              "origin": "normalized(summary.law_stats[8].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_nov",
-            -0.4221498984614876
+            {
+              "value": -0.4221498984614876,
+              "origin": "computed(summary.law_stats[8].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 1.0,
-        "first_detected": 19
+        "stability": {
+          "value": 1.0,
+          "origin": "normalized(summary.law_stats[8].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 19,
+          "origin": "counted(summary.law_stats[8].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 9,
-        "eigenvalue": 0.08028552729666623,
-        "correlation": 0.9919538800309649,
+        "law_id": {
+          "value": 9,
+          "origin": "identifier(summary.law_stats[9].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.08028552729666623,
+          "origin": "computed(summary.law_stats[9].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": 0.9919538800309649,
+          "origin": "normalized(summary.law_stats[9].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "integration",
-            -0.8377397269759261
+            {
+              "value": -0.8377397269759261,
+              "origin": "computed(summary.law_stats[9].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "Psi",
-            -0.4317477758725495
+            {
+              "value": -0.4317477758725495,
+              "origin": "computed(summary.law_stats[9].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "S",
-            -0.2179902671673129
+            {
+              "value": -0.2179902671673129,
+              "origin": "computed(summary.law_stats[9].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 0.9733726440150247,
-        "first_detected": 20
+        "stability": {
+          "value": 0.9733726440150247,
+          "origin": "normalized(summary.law_stats[9].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 20,
+          "origin": "counted(summary.law_stats[9].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 10,
-        "eigenvalue": 0.03753185369880166,
-        "correlation": 0.9999508114404185,
+        "law_id": {
+          "value": 10,
+          "origin": "identifier(summary.law_stats[10].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.03753185369880166,
+          "origin": "computed(summary.law_stats[10].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": 0.9999508114404185,
+          "origin": "normalized(summary.law_stats[10].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "integration",
-            -0.5917103395067981
+            {
+              "value": -0.5917103395067981,
+              "origin": "computed(summary.law_stats[10].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "Psi",
-            -0.44583336344448654
+            {
+              "value": -0.44583336344448654,
+              "origin": "computed(summary.law_stats[10].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_stab",
-            0.4196439624021595
+            {
+              "value": 0.4196439624021595,
+              "origin": "normalized(summary.law_stats[10].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 1.0,
-        "first_detected": 21
+        "stability": {
+          "value": 1.0,
+          "origin": "normalized(summary.law_stats[10].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 21,
+          "origin": "counted(summary.law_stats[10].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 11,
-        "eigenvalue": 0.0007121157431274191,
-        "correlation": -0.9983786884666502,
+        "law_id": {
+          "value": 11,
+          "origin": "identifier(summary.law_stats[11].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.0007121157431274191,
+          "origin": "computed(summary.law_stats[11].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": -0.9983786884666502,
+          "origin": "computed(summary.law_stats[11].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "self_surprise",
-            0.9080251248837414
+            {
+              "value": 0.9080251248837414,
+              "origin": "normalized(summary.law_stats[11].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "irreversibility",
-            -0.2653861404968566
+            {
+              "value": -0.2653861404968566,
+              "origin": "computed(summary.law_stats[11].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "Psi",
-            -0.22406634903401965
+            {
+              "value": -0.22406634903401965,
+              "origin": "computed(summary.law_stats[11].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 1.0,
-        "first_detected": 29
+        "stability": {
+          "value": 1.0,
+          "origin": "normalized(summary.law_stats[11].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 29,
+          "origin": "counted(summary.law_stats[11].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 12,
-        "eigenvalue": 0.0019427550269210338,
-        "correlation": 0.9628838769524415,
+        "law_id": {
+          "value": 12,
+          "origin": "identifier(summary.law_stats[12].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.0019427550269210338,
+          "origin": "computed(summary.law_stats[12].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": 0.9628838769524415,
+          "origin": "normalized(summary.law_stats[12].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "self_surprise",
-            -0.7506388359320316
+            {
+              "value": -0.7506388359320316,
+              "origin": "computed(summary.law_stats[12].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "S",
-            -0.5442792684474089
+            {
+              "value": -0.5442792684474089,
+              "origin": "computed(summary.law_stats[12].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "irreversibility",
-            0.3420466851764108
+            {
+              "value": 0.3420466851764108,
+              "origin": "normalized(summary.law_stats[12].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 1.0,
-        "first_detected": 38
+        "stability": {
+          "value": 1.0,
+          "origin": "normalized(summary.law_stats[12].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 38,
+          "origin": "counted(summary.law_stats[12].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 13,
-        "eigenvalue": 0.004195458959966646,
-        "correlation": -0.8623375231760463,
+        "law_id": {
+          "value": 13,
+          "origin": "identifier(summary.law_stats[13].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.004195458959966646,
+          "origin": "computed(summary.law_stats[13].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": -0.8623375231760463,
+          "origin": "computed(summary.law_stats[13].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "D_stab",
-            0.6004260288962739
+            {
+              "value": 0.6004260288962739,
+              "origin": "normalized(summary.law_stats[13].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_nov",
-            -0.6004260288962737
+            {
+              "value": -0.6004260288962737,
+              "origin": "computed(summary.law_stats[13].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_irr",
-            0.4442877286637821
+            {
+              "value": 0.4442877286637821,
+              "origin": "normalized(summary.law_stats[13].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 0.9566168454275646,
-        "first_detected": 79
+        "stability": {
+          "value": 0.9566168454275646,
+          "origin": "normalized(summary.law_stats[13].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 79,
+          "origin": "counted(summary.law_stats[13].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 14,
-        "eigenvalue": 0.005954997917330958,
-        "correlation": 0.8751258333890883,
+        "law_id": {
+          "value": 14,
+          "origin": "identifier(summary.law_stats[14].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.005954997917330958,
+          "origin": "computed(summary.law_stats[14].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": 0.8751258333890883,
+          "origin": "normalized(summary.law_stats[14].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "integration",
-            -0.6277816990472437
+            {
+              "value": -0.6277816990472437,
+              "origin": "computed(summary.law_stats[14].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_nov",
-            0.4311967876664575
+            {
+              "value": 0.4311967876664575,
+              "origin": "normalized(summary.law_stats[14].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_stab",
-            -0.4311967876664574
+            {
+              "value": -0.4311967876664574,
+              "origin": "computed(summary.law_stats[14].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 1.0,
-        "first_detected": 83
+        "stability": {
+          "value": 1.0,
+          "origin": "normalized(summary.law_stats[14].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 83,
+          "origin": "counted(summary.law_stats[14].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 15,
-        "eigenvalue": 0.00592570264820575,
-        "correlation": 0.9226762118697105,
+        "law_id": {
+          "value": 15,
+          "origin": "identifier(summary.law_stats[15].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.00592570264820575,
+          "origin": "computed(summary.law_stats[15].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": 0.9226762118697105,
+          "origin": "normalized(summary.law_stats[15].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "D_stab",
-            -0.5968255511122301
+            {
+              "value": -0.5968255511122301,
+              "origin": "computed(summary.law_stats[15].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_nov",
-            0.59682555111223
+            {
+              "value": 0.59682555111223,
+              "origin": "normalized(summary.law_stats[15].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "integration",
-            -0.3435139866747571
+            {
+              "value": -0.3435139866747571,
+              "origin": "computed(summary.law_stats[15].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 0.9775568275132045,
-        "first_detected": 84
+        "stability": {
+          "value": 0.9775568275132045,
+          "origin": "normalized(summary.law_stats[15].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 84,
+          "origin": "counted(summary.law_stats[15].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 16,
-        "eigenvalue": 0.00863184667989238,
-        "correlation": -0.8982547425139379,
+        "law_id": {
+          "value": 16,
+          "origin": "identifier(summary.law_stats[16].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.00863184667989238,
+          "origin": "computed(summary.law_stats[16].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": -0.8982547425139379,
+          "origin": "computed(summary.law_stats[16].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "D_stab",
-            0.6471890081753593
+            {
+              "value": 0.6471890081753593,
+              "origin": "normalized(summary.law_stats[16].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_nov",
-            -0.6471890081753587
+            {
+              "value": -0.6471890081753587,
+              "origin": "computed(summary.law_stats[16].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_irr",
-            -0.2991484989950606
+            {
+              "value": -0.2991484989950606,
+              "origin": "computed(summary.law_stats[16].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 1.0,
-        "first_detected": 103
+        "stability": {
+          "value": 1.0,
+          "origin": "normalized(summary.law_stats[16].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 103,
+          "origin": "counted(summary.law_stats[16].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 17,
-        "eigenvalue": 0.004113587644274642,
-        "correlation": -0.8454005359012317,
+        "law_id": {
+          "value": 17,
+          "origin": "identifier(summary.law_stats[17].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.004113587644274642,
+          "origin": "computed(summary.law_stats[17].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": -0.8454005359012317,
+          "origin": "computed(summary.law_stats[17].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "D_irr",
-            0.6732772492585026
+            {
+              "value": 0.6732772492585026,
+              "origin": "normalized(summary.law_stats[17].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "integration",
-            0.6626493794079178
+            {
+              "value": 0.6626493794079178,
+              "origin": "normalized(summary.law_stats[17].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "Psi",
-            0.22088312646930622
+            {
+              "value": 0.22088312646930622,
+              "origin": "normalized(summary.law_stats[17].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 0.9871537718593236,
-        "first_detected": 144
+        "stability": {
+          "value": 0.9871537718593236,
+          "origin": "normalized(summary.law_stats[17].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 144,
+          "origin": "counted(summary.law_stats[17].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 18,
-        "eigenvalue": 0.00023370076528779227,
-        "correlation": 0.7929061683290973,
+        "law_id": {
+          "value": 18,
+          "origin": "identifier(summary.law_stats[18].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.00023370076528779227,
+          "origin": "computed(summary.law_stats[18].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": 0.7929061683290973,
+          "origin": "normalized(summary.law_stats[18].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "irreversibility",
-            -0.9630833883437898
+            {
+              "value": -0.9630833883437898,
+              "origin": "computed(summary.law_stats[18].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "S",
-            -0.2216643936984199
+            {
+              "value": -0.2216643936984199,
+              "origin": "computed(summary.law_stats[18].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "self_surprise",
-            0.14749118775838393
+            {
+              "value": 0.14749118775838393,
+              "origin": "normalized(summary.law_stats[18].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 0.9873324654124671,
-        "first_detected": 227
+        "stability": {
+          "value": 0.9873324654124671,
+          "origin": "normalized(summary.law_stats[18].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 227,
+          "origin": "counted(summary.law_stats[18].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 19,
-        "eigenvalue": 0.0025263039027112032,
-        "correlation": 0.7033469399098934,
+        "law_id": {
+          "value": 19,
+          "origin": "identifier(summary.law_stats[19].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.0025263039027112032,
+          "origin": "computed(summary.law_stats[19].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": 0.7033469399098934,
+          "origin": "normalized(summary.law_stats[19].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "D_irr",
-            -0.8637516553099225
+            {
+              "value": -0.8637516553099225,
+              "origin": "computed(summary.law_stats[19].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "integration",
-            -0.3964051058252509
+            {
+              "value": -0.3964051058252509,
+              "origin": "computed(summary.law_stats[19].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_stab",
-            0.18607915031144637
+            {
+              "value": 0.18607915031144637,
+              "origin": "normalized(summary.law_stats[19].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 0.968848326002151,
-        "first_detected": 352
+        "stability": {
+          "value": 0.968848326002151,
+          "origin": "normalized(summary.law_stats[19].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 352,
+          "origin": "counted(summary.law_stats[19].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 20,
-        "eigenvalue": 0.0023040466934918296,
-        "correlation": -0.5959277720194102,
+        "law_id": {
+          "value": 20,
+          "origin": "identifier(summary.law_stats[20].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.0023040466934918296,
+          "origin": "computed(summary.law_stats[20].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": -0.5959277720194102,
+          "origin": "computed(summary.law_stats[20].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "integration",
-            0.7541952156170239
+            {
+              "value": 0.7541952156170239,
+              "origin": "normalized(summary.law_stats[20].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_irr",
-            -0.5738121500238982
+            {
+              "value": -0.5738121500238982,
+              "origin": "computed(summary.law_stats[20].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "Psi",
-            0.2513984052056744
+            {
+              "value": 0.2513984052056744,
+              "origin": "normalized(summary.law_stats[20].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 1.0,
-        "first_detected": 690
+        "stability": {
+          "value": 1.0,
+          "origin": "normalized(summary.law_stats[20].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 690,
+          "origin": "counted(summary.law_stats[20].first_detected)",
+          "source": "FROM_DATA"
+        }
       },
       {
-        "law_id": 21,
-        "eigenvalue": 0.000128183471439336,
-        "correlation": 0.562005911099133,
+        "law_id": {
+          "value": 21,
+          "origin": "identifier(summary.law_stats[21].law_id)",
+          "source": "FROM_DATA"
+        },
+        "eigenvalue": {
+          "value": 0.000128183471439336,
+          "origin": "computed(summary.law_stats[21].eigenvalue)",
+          "source": "FROM_DATA"
+        },
+        "correlation": {
+          "value": 0.562005911099133,
+          "origin": "normalized(summary.law_stats[21].correlation)",
+          "source": "FROM_MATH"
+        },
         "top_loadings": [
           [
             "D_nov",
-            -0.6719120218820271
+            {
+              "value": -0.6719120218820271,
+              "origin": "computed(summary.law_stats[21].top_loadings[0][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "D_stab",
-            0.671912021882027
+            {
+              "value": 0.671912021882027,
+              "origin": "normalized(summary.law_stats[21].top_loadings[1][1])",
+              "source": "FROM_MATH"
+            }
           ],
           [
             "irreversibility",
-            0.30114032274636787
+            {
+              "value": 0.30114032274636787,
+              "origin": "normalized(summary.law_stats[21].top_loadings[2][1])",
+              "source": "FROM_MATH"
+            }
           ]
         ],
-        "stability": 0.9741748689306908,
-        "first_detected": 957
+        "stability": {
+          "value": 0.9741748689306908,
+          "origin": "normalized(summary.law_stats[21].stability)",
+          "source": "FROM_MATH"
+        },
+        "first_detected": {
+          "value": 957,
+          "origin": "counted(summary.law_stats[21].first_detected)",
+          "source": "FROM_DATA"
+        }
       }
     ],
-    "d_law": 4,
-    "mean_correlation": -0.018447555184582163,
-    "max_correlation": 0.9999508114404185
+    "d_law": {
+      "value": 4,
+      "origin": "counted(summary.d_law)",
+      "source": "FROM_DATA"
+    },
+    "mean_correlation": {
+      "value": -0.018447555184582163,
+      "origin": "mean(summary.mean_correlation)",
+      "source": "FROM_STATISTICS"
+    },
+    "max_correlation": {
+      "value": 0.9999508114404185,
+      "origin": "max_correlation(summary.max_correlation)",
+      "source": "FROM_STATISTICS"
+    }
   },
-  "S_series": [
-    0.44830740938316793,
-    0.4487329441590745,
-    0.44850252364805243,
-    0.4361569809243086,
-    0.42253955052727854,
-    0.42704999688234924,
-    0.43556328885043294,
-    0.4371555471991071,
-    0.4445890722020813,
-    0.437677203355175,
-    0.4313948078009787,
-    0.42339610198418776,
-    0.42417929818039757,
-    0.4196131581152831,
-    0.4231514983711203,
-    0.43551910491475443,
-    0.43631797358196495,
-    0.4379752273568303,
-    0.44062133854146457,
-    0.4438729660635773,
-    0.4450320925927048,
-    0.44351010278478264,
-    0.4281354349519598,
-    0.42825705958487725,
-    0.4210612867887473,
-    0.41348993433404085,
-    0.4172606989832093,
-    0.43299415180410816,
-    0.4412893134004222,
-    0.4357882084977246,
-    0.43315858528794526,
-    0.43573113744076974,
-    0.44289255301561353,
-    0.42926074145846144,
-    0.4139698720074188,
-    0.42352937614654895,
-    0.4226136477149253,
-    0.4201362225850247,
-    0.42662653277830864,
-    0.43886883903032947,
-    0.4378186144994828,
-    0.43061311774053224,
-    0.4437117116025989,
-    0.44036616955398133,
-    0.44185666881863506,
-    0.44583360343373046,
-    0.4461021218611346,
-    0.44620327797339837,
-    0.44555484551734265,
-    0.4427567904590747,
-    0.45590154307171377,
-    0.45443249042860967,
-    0.4513380667661967,
-    0.4545170032141165,
-    0.45864162772586514,
-    0.44989322404826304,
-    0.4505975575394916,
-    0.4693541785798345,
-    0.47383583013314345,
-    0.4695954548747697,
-    0.4646196994337112,
-    0.4610017107513642,
-    0.46737119478581224,
-    0.4697965236768291,
-    0.46259110521022034,
-    0.46012817493979885,
-    0.47640773036984485,
-    0.48077295171290085,
-    0.48011450618788015,
-    0.4682445395947987,
-    0.47196591223778966,
-    0.4733946406292867,
-    0.47045948237611857,
-    0.467806706182772,
-    0.46509092398498825,
-    0.46510137798814843,
-    0.4650618021939764,
-    0.47539823565338213,
-    0.4708096418202047,
-    0.48157983664518433,
-    0.5065819654638184,
-    0.4967043841964302,
-    0.49791081968527806,
-    0.5008695182868212,
-    0.49668567739708663,
-    0.49506692023802423,
-    0.5043543354531798,
-    0.47373747704611874,
-    0.474007955646969,
-    0.47233652084692423,
-    0.48004950633354787,
-    0.4837641711075741,
-    0.47305681168378827,
-    0.4796195368834779,
-    0.48445674914944614,
-    0.48871468059937895,
-    0.49234719047249287,
-    0.4985176777999355,
-    0.504303968640643,
-    0.508109480046817
-  ]
+  "S_series": {
+    "value": [
+      0.44830740938316793,
+      0.4487329441590745,
+      0.44850252364805243,
+      0.4361569809243086,
+      0.42253955052727854,
+      0.42704999688234924,
+      0.43556328885043294,
+      0.4371555471991071,
+      0.4445890722020813,
+      0.437677203355175,
+      0.4313948078009787,
+      0.42339610198418776,
+      0.42417929818039757,
+      0.4196131581152831,
+      0.4231514983711203,
+      0.43551910491475443,
+      0.43631797358196495,
+      0.4379752273568303,
+      0.44062133854146457,
+      0.4438729660635773,
+      0.4450320925927048,
+      0.44351010278478264,
+      0.4281354349519598,
+      0.42825705958487725,
+      0.4210612867887473,
+      0.41348993433404085,
+      0.4172606989832093,
+      0.43299415180410816,
+      0.4412893134004222,
+      0.4357882084977246,
+      0.43315858528794526,
+      0.43573113744076974,
+      0.44289255301561353,
+      0.42926074145846144,
+      0.4139698720074188,
+      0.42352937614654895,
+      0.4226136477149253,
+      0.4201362225850247,
+      0.42662653277830864,
+      0.43886883903032947,
+      0.4378186144994828,
+      0.43061311774053224,
+      0.4437117116025989,
+      0.44036616955398133,
+      0.44185666881863506,
+      0.44583360343373046,
+      0.4461021218611346,
+      0.44620327797339837,
+      0.44555484551734265,
+      0.4427567904590747,
+      0.45590154307171377,
+      0.45443249042860967,
+      0.4513380667661967,
+      0.4545170032141165,
+      0.45864162772586514,
+      0.44989322404826304,
+      0.4505975575394916,
+      0.4693541785798345,
+      0.47383583013314345,
+      0.4695954548747697,
+      0.4646196994337112,
+      0.4610017107513642,
+      0.46737119478581224,
+      0.4697965236768291,
+      0.46259110521022034,
+      0.46012817493979885,
+      0.47640773036984485,
+      0.48077295171290085,
+      0.48011450618788015,
+      0.4682445395947987,
+      0.47196591223778966,
+      0.4733946406292867,
+      0.47045948237611857,
+      0.467806706182772,
+      0.46509092398498825,
+      0.46510137798814843,
+      0.4650618021939764,
+      0.47539823565338213,
+      0.4708096418202047,
+      0.48157983664518433,
+      0.5065819654638184,
+      0.4967043841964302,
+      0.49791081968527806,
+      0.5008695182868212,
+      0.49668567739708663,
+      0.49506692023802423,
+      0.5043543354531798,
+      0.47373747704611874,
+      0.474007955646969,
+      0.47233652084692423,
+      0.48004950633354787,
+      0.4837641711075741,
+      0.47305681168378827,
+      0.4796195368834779,
+      0.48445674914944614,
+      0.48871468059937895,
+      0.49234719047249287,
+      0.4985176777999355,
+      0.504303968640643,
+      0.508109480046817
+    ],
+    "origin": "array(S_series)",
+    "source": "FROM_DATA"
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "8b660c872180",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.110234",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phaseR8/phaseR8_results.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.110721",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 402,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 477,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 402,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 477,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
 }

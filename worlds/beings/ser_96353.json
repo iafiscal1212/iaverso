@@ -9,24 +9,24 @@
     "pain_sensitivity": 0.6662672246219349,
     "energy_capacity": 0.8142973718386893,
     "warmth_tolerance": 0.9066908424189868,
-    "recovery_rate": 0.8392024170701698,
+    "recovery_rate": 1.1178066937520776,
     "baseline_anxiety": 0.24691276685532448,
-    "baseline_joy": 0.3551855747995679,
+    "baseline_joy": 0.22848073887872894,
     "emotional_intensity": 1.2508469398353652,
-    "emotional_stability": 0.6415394883332167,
-    "sociability": 0.38163240051662894,
-    "empathy": 0.33509220404459794,
+    "emotional_stability": 0.8132222885829217,
+    "sociability": 0.7251266843619615,
+    "empathy": 0.4452573067039174,
     "trust_default": 0.5228643101157939,
-    "curiosity": 0.9254547901696661,
-    "introspection": 0.46212364285239793,
-    "risk_tolerance": 0.3630049735794428,
-    "resilience": 0.7735662066403974,
+    "curiosity": 0.3698571540960265,
+    "introspection": 0.7519296181217114,
+    "risk_tolerance": 0.4579477723098483,
+    "resilience": 0.8158116751326767,
     "death_awareness": 0.5312900499779405,
     "pattern_seeking": 0.6324710710762476,
     "sky_gazing": 0.6548051735222088,
-    "earth_grounding": 0.4495574307010124,
+    "earth_grounding": 0.2642921084248231,
     "mystical_sense": 0.2567375407432632,
-    "analytical_mind": 0.917015772626026,
+    "analytical_mind": 0.8598509444391425,
     "creative_spirit": 0.40635100898343535
   },
   "body": {
@@ -38,16 +38,16 @@
     "pain": 0.0,
     "pleasure": 0.0,
     "age": 0.0,
-    "x": 5.23529158832432,
-    "y": 43.50213707505757
+    "x": 11.646873363047371,
+    "y": 48.29818527812063
   },
   "emotions": {
     "fear": 0.0,
-    "joy": 0.3551855747995679,
+    "joy": 0.22848073887872894,
     "sadness": 0.0,
     "anger": 0.0,
     "love": 0.0,
-    "loneliness": 0.3855102798450113,
+    "loneliness": 0.28246199469141153,
     "anxiety": 0.24691276685532448,
     "peace": 0.3,
     "trust": 0.5228643101157939
@@ -55,7 +55,7 @@
   "memory": {
     "long_term": [],
     "others": {
-      "ser_11461": {
+      "ser_07142": {
         "first_met": 0,
         "times_met": 1,
         "trust": 0.8,

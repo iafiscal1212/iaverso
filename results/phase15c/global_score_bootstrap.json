@@ -1,132 +1,535 @@
 {
-  "n_bootstrap": 10000,
-  "n_nulls": 500,
+  "n_bootstrap": {
+    "value": 10000,
+    "origin": "count(n_bootstrap)",
+    "source": "FROM_DATA"
+  },
+  "n_nulls": {
+    "value": 500,
+    "origin": "count(n_nulls)",
+    "source": "FROM_DATA"
+  },
   "real": {
-    "integration": 0.5011311973982132,
-    "differentiation": 0.9399282402101818,
-    "temporality": 0.499105542565564,
-    "unity": 0.4134976876731436,
-    "self_reference": 0.030515257628814407,
-    "global_score": 0.4768355850951834
+    "integration": {
+      "value": 0.5011311973982132,
+      "origin": "ratio(real.integration)",
+      "source": "FROM_MATH"
+    },
+    "differentiation": {
+      "value": 0.9399282402101818,
+      "origin": "normalized(real.differentiation)",
+      "source": "FROM_MATH"
+    },
+    "temporality": {
+      "value": 0.499105542565564,
+      "origin": "normalized(real.temporality)",
+      "source": "FROM_MATH"
+    },
+    "unity": {
+      "value": 0.4134976876731436,
+      "origin": "normalized(real.unity)",
+      "source": "FROM_MATH"
+    },
+    "self_reference": {
+      "value": 0.030515257628814407,
+      "origin": "normalized(real.self_reference)",
+      "source": "FROM_MATH"
+    },
+    "global_score": {
+      "value": 0.4768355850951834,
+      "origin": "computed(real.global_score)",
+      "source": "FROM_DATA"
+    }
   },
   "bootstrap": {
     "integration": {
-      "mean": 0.5011360851308667,
-      "std": 0.001803257014575161,
-      "ci_lower": 0.49763235752653256,
-      "ci_upper": 0.504640237367721
+      "mean": {
+        "value": 0.5011360851308667,
+        "origin": "mean(bootstrap.integration.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.001803257014575161,
+        "origin": "std(bootstrap.integration.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "ci_lower": {
+        "value": 0.49763235752653256,
+        "origin": "normalized(bootstrap.integration.ci_lower)",
+        "source": "FROM_MATH"
+      },
+      "ci_upper": {
+        "value": 0.504640237367721,
+        "origin": "normalized(bootstrap.integration.ci_upper)",
+        "source": "FROM_MATH"
+      }
     },
     "differentiation": {
-      "mean": 0.9380945445180127,
-      "std": 0.003003153481599644,
-      "ci_lower": 0.9320903394369526,
-      "ci_upper": 0.9438356882609227
+      "mean": {
+        "value": 0.9380945445180127,
+        "origin": "mean(bootstrap.differentiation.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.003003153481599644,
+        "origin": "std(bootstrap.differentiation.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "ci_lower": {
+        "value": 0.9320903394369526,
+        "origin": "normalized(bootstrap.differentiation.ci_lower)",
+        "source": "FROM_MATH"
+      },
+      "ci_upper": {
+        "value": 0.9438356882609227,
+        "origin": "normalized(bootstrap.differentiation.ci_upper)",
+        "source": "FROM_MATH"
+      }
     },
     "temporality": {
-      "mean": 0.49967886370508224,
-      "std": 0.011256899257183367,
-      "ci_lower": 0.47695840894015806,
-      "ci_upper": 0.521344536658344
+      "mean": {
+        "value": 0.49967886370508224,
+        "origin": "mean(bootstrap.temporality.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.011256899257183367,
+        "origin": "std(bootstrap.temporality.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "ci_lower": {
+        "value": 0.47695840894015806,
+        "origin": "normalized(bootstrap.temporality.ci_lower)",
+        "source": "FROM_MATH"
+      },
+      "ci_upper": {
+        "value": 0.521344536658344,
+        "origin": "normalized(bootstrap.temporality.ci_upper)",
+        "source": "FROM_MATH"
+      }
     },
     "unity": {
-      "mean": 0.41356668297231974,
-      "std": 0.0020652284718978564,
-      "ci_lower": 0.4095415230676763,
-      "ci_upper": 0.41753225076443173
+      "mean": {
+        "value": 0.41356668297231974,
+        "origin": "mean(bootstrap.unity.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.0020652284718978564,
+        "origin": "std(bootstrap.unity.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "ci_lower": {
+        "value": 0.4095415230676763,
+        "origin": "normalized(bootstrap.unity.ci_lower)",
+        "source": "FROM_MATH"
+      },
+      "ci_upper": {
+        "value": 0.41753225076443173,
+        "origin": "normalized(bootstrap.unity.ci_upper)",
+        "source": "FROM_MATH"
+      }
     },
     "self_reference": {
-      "mean": 0.0028316158079039516,
-      "std": 0.0012010662594209695,
-      "ci_lower": 0.0010005002501250625,
-      "ci_upper": 0.005502751375687844
+      "mean": {
+        "value": 0.0028316158079039516,
+        "origin": "mean(bootstrap.self_reference.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.0012010662594209695,
+        "origin": "std(bootstrap.self_reference.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "ci_lower": {
+        "value": 0.0010005002501250625,
+        "origin": "normalized(bootstrap.self_reference.ci_lower)",
+        "source": "FROM_MATH"
+      },
+      "ci_upper": {
+        "value": 0.005502751375687844,
+        "origin": "normalized(bootstrap.self_reference.ci_upper)",
+        "source": "FROM_MATH"
+      }
     },
     "global_score": {
-      "mean": 0.4710615584268371,
-      "std": 0.0024552578381057282,
-      "ci_lower": 0.4661121071680362,
-      "ci_upper": 0.4757160872566511
+      "mean": {
+        "value": 0.4710615584268371,
+        "origin": "mean(bootstrap.global_score.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.0024552578381057282,
+        "origin": "std(bootstrap.global_score.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "ci_lower": {
+        "value": 0.4661121071680362,
+        "origin": "normalized(bootstrap.global_score.ci_lower)",
+        "source": "FROM_MATH"
+      },
+      "ci_upper": {
+        "value": 0.4757160872566511,
+        "origin": "normalized(bootstrap.global_score.ci_upper)",
+        "source": "FROM_MATH"
+      }
     }
   },
   "null": {
     "integration": {
-      "mean": 0.5011311973982133,
-      "std": 8.95090418262362e-17,
-      "ci_lower": 0.5011311973982132,
-      "ci_upper": 0.5011311973982133
+      "mean": {
+        "value": 0.5011311973982133,
+        "origin": "mean(null.integration.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 8.95090418262362e-17,
+        "origin": "std(null.integration.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "ci_lower": {
+        "value": 0.5011311973982132,
+        "origin": "normalized(null.integration.ci_lower)",
+        "source": "FROM_MATH"
+      },
+      "ci_upper": {
+        "value": 0.5011311973982133,
+        "origin": "normalized(null.integration.ci_upper)",
+        "source": "FROM_MATH"
+      }
     },
     "differentiation": {
-      "mean": 0.939928240210182,
-      "std": 1.1223690382511464e-16,
-      "ci_lower": 0.9399282402101817,
-      "ci_upper": 0.9399282402101821
+      "mean": {
+        "value": 0.939928240210182,
+        "origin": "mean(null.differentiation.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 1.1223690382511464e-16,
+        "origin": "std(null.differentiation.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "ci_lower": {
+        "value": 0.9399282402101817,
+        "origin": "normalized(null.differentiation.ci_lower)",
+        "source": "FROM_MATH"
+      },
+      "ci_upper": {
+        "value": 0.9399282402101821,
+        "origin": "normalized(null.differentiation.ci_upper)",
+        "source": "FROM_MATH"
+      }
     },
     "temporality": {
-      "mean": 0.4992746863046448,
-      "std": 0.00026006806634304604,
-      "ci_lower": 0.49868028481712473,
-      "ci_upper": 0.49985044772342696
+      "mean": {
+        "value": 0.4992746863046448,
+        "origin": "mean(null.temporality.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.00026006806634304604,
+        "origin": "std(null.temporality.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "ci_lower": {
+        "value": 0.49868028481712473,
+        "origin": "normalized(null.temporality.ci_lower)",
+        "source": "FROM_MATH"
+      },
+      "ci_upper": {
+        "value": 0.49985044772342696,
+        "origin": "normalized(null.temporality.ci_upper)",
+        "source": "FROM_MATH"
+      }
     },
     "unity": {
-      "mean": 0.4134979662017275,
-      "std": 1.952388758935295e-07,
-      "ci_lower": 0.4134976881609765,
-      "ci_upper": 0.4134982380923874
+      "mean": {
+        "value": 0.4134979662017275,
+        "origin": "mean(null.unity.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 1.952388758935295e-07,
+        "origin": "std(null.unity.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "ci_lower": {
+        "value": 0.4134976881609765,
+        "origin": "normalized(null.unity.ci_lower)",
+        "source": "FROM_MATH"
+      },
+      "ci_upper": {
+        "value": 0.4134982380923874,
+        "origin": "normalized(null.unity.ci_upper)",
+        "source": "FROM_MATH"
+      }
     },
     "self_reference": {
-      "mean": 0.002303151575787894,
-      "std": 0.001057787613326157,
-      "ci_lower": 0.0005002501250625312,
-      "ci_upper": 0.004502251125562781
+      "mean": {
+        "value": 0.002303151575787894,
+        "origin": "mean(null.self_reference.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.001057787613326157,
+        "origin": "std(null.self_reference.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "ci_lower": {
+        "value": 0.0005002501250625312,
+        "origin": "normalized(null.self_reference.ci_lower)",
+        "source": "FROM_MATH"
+      },
+      "ci_upper": {
+        "value": 0.004502251125562781,
+        "origin": "normalized(null.self_reference.ci_upper)",
+        "source": "FROM_MATH"
+      }
     },
     "global_score": {
-      "mean": 0.47122704833811097,
-      "std": 0.00021587756937443468,
-      "ci_lower": 0.4708566081209199,
-      "ci_upper": 0.4716732512679372
+      "mean": {
+        "value": 0.47122704833811097,
+        "origin": "mean(null.global_score.mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "std": {
+        "value": 0.00021587756937443468,
+        "origin": "std(null.global_score.std)",
+        "source": "FROM_STATISTICS"
+      },
+      "ci_lower": {
+        "value": 0.4708566081209199,
+        "origin": "normalized(null.global_score.ci_lower)",
+        "source": "FROM_MATH"
+      },
+      "ci_upper": {
+        "value": 0.4716732512679372,
+        "origin": "normalized(null.global_score.ci_upper)",
+        "source": "FROM_MATH"
+      }
     }
   },
   "comparison": {
     "integration": {
-      "delta": -1.1102230246251565e-16,
-      "p_value": 0.65,
-      "effect_size": -0.3563505149761627,
+      "delta": {
+        "value": -1.1102230246251565e-16,
+        "origin": "computed(comparison.integration.delta)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.65,
+        "origin": "computed(comparison.integration.p_value)",
+        "source": "FROM_DATA"
+      },
+      "effect_size": {
+        "value": -0.3563505149761627,
+        "origin": "computed(comparison.integration.effect_size)",
+        "source": "FROM_MATH"
+      },
       "significant": false,
       "direction": "lower"
     },
     "differentiation": {
-      "delta": -1.1102230246251565e-16,
-      "p_value": 0.872,
-      "effect_size": -0.33212217713633013,
+      "delta": {
+        "value": -1.1102230246251565e-16,
+        "origin": "computed(comparison.differentiation.delta)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.872,
+        "origin": "computed(comparison.differentiation.p_value)",
+        "source": "FROM_DATA"
+      },
+      "effect_size": {
+        "value": -0.33212217713633013,
+        "origin": "computed(comparison.differentiation.effect_size)",
+        "source": "FROM_MATH"
+      },
       "significant": false,
       "direction": "lower"
     },
     "temporality": {
-      "delta": -0.0001691437390807793,
-      "p_value": 0.338,
-      "effect_size": -0.6503825766040945,
+      "delta": {
+        "value": -0.0001691437390807793,
+        "origin": "computed(comparison.temporality.delta)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.338,
+        "origin": "computed(comparison.temporality.p_value)",
+        "source": "FROM_DATA"
+      },
+      "effect_size": {
+        "value": -0.6503825766040945,
+        "origin": "computed(comparison.temporality.effect_size)",
+        "source": "FROM_MATH"
+      },
       "significant": false,
       "direction": "lower"
     },
     "unity": {
-      "delta": -2.7852858391907986e-07,
-      "p_value": 0.0,
-      "effect_size": -1.4266041142041883,
+      "delta": {
+        "value": -2.7852858391907986e-07,
+        "origin": "computed(comparison.unity.delta)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.0,
+        "origin": "computed(comparison.unity.p_value)",
+        "source": "FROM_DATA"
+      },
+      "effect_size": {
+        "value": -1.4266041142041883,
+        "origin": "computed(comparison.unity.effect_size)",
+        "source": "FROM_MATH"
+      },
       "significant": true,
       "direction": "lower"
     },
     "self_reference": {
-      "delta": 0.028212106053026514,
-      "p_value": 0.0,
-      "effect_size": 26.67086066957158,
+      "delta": {
+        "value": 0.028212106053026514,
+        "origin": "normalized(comparison.self_reference.delta)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.0,
+        "origin": "computed(comparison.self_reference.p_value)",
+        "source": "FROM_DATA"
+      },
+      "effect_size": {
+        "value": 26.67086066957158,
+        "origin": "computed(comparison.self_reference.effect_size)",
+        "source": "FROM_MATH"
+      },
       "significant": true,
       "direction": "higher"
     },
     "global_score": {
-      "delta": 0.005608536757072458,
-      "p_value": 0.0,
-      "effect_size": 25.980173731430202,
+      "delta": {
+        "value": 0.005608536757072458,
+        "origin": "normalized(comparison.global_score.delta)",
+        "source": "FROM_MATH"
+      },
+      "p_value": {
+        "value": 0.0,
+        "origin": "computed(comparison.global_score.p_value)",
+        "source": "FROM_DATA"
+      },
+      "effect_size": {
+        "value": 25.980173731430202,
+        "origin": "computed(comparison.global_score.effect_size)",
+        "source": "FROM_MATH"
+      },
       "significant": true,
       "direction": "higher"
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "8361c82781d3",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.112981",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase15c/global_score_bootstrap.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.113172",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 186,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 201,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 186,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 201,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
     }
   }
 }

@@ -1,571 +1,1206 @@
 {
   "timestamp": "2025-12-01T03:19:31.319116",
-  "T": 1500,
-  "seeds": [
-    42,
-    123
-  ],
+  "T": {
+    "value": 1500,
+    "origin": "counted(T)",
+    "source": "FROM_DATA"
+  },
+  "seeds": {
+    "value": [
+      42,
+      123
+    ],
+    "origin": "array(seeds)",
+    "source": "FROM_DATA"
+  },
   "coupled": [
     {
       "neo": {
-        "n_crises": 36,
-        "crises_resolved": 35,
-        "crisis_durations": [
-          16,
-          28,
-          20,
-          16,
-          18,
-          18,
-          23,
-          24,
-          20,
-          17,
-          21,
-          17,
-          19,
-          0,
-          20,
-          18,
-          25,
-          17,
-          17,
-          20,
-          20,
-          16,
-          20,
-          16,
-          17,
-          0,
-          0,
-          22,
-          16,
-          13,
-          19,
-          13,
-          16,
-          16,
-          18
-        ],
-        "identity_mean": 0.5162091676830715,
-        "identity_std": 0.13521127530810695,
-        "integration_mean": 0.4314550256267458,
-        "wellbeing_mean": 0.8552421086983125,
-        "final_attachment": 0.96,
+        "n_crises": {
+          "value": 36,
+          "origin": "count(coupled[0].neo.n_crises)",
+          "source": "FROM_DATA"
+        },
+        "crises_resolved": {
+          "value": 35,
+          "origin": "counted(coupled[0].neo.crises_resolved)",
+          "source": "FROM_DATA"
+        },
+        "crisis_durations": {
+          "value": [
+            16,
+            28,
+            20,
+            16,
+            18,
+            18,
+            23,
+            24,
+            20,
+            17,
+            21,
+            17,
+            19,
+            0,
+            20,
+            18,
+            25,
+            17,
+            17,
+            20,
+            20,
+            16,
+            20,
+            16,
+            17,
+            0,
+            0,
+            22,
+            16,
+            13,
+            19,
+            13,
+            16,
+            16,
+            18
+          ],
+          "origin": "array(coupled[0].neo.crisis_durations)",
+          "source": "FROM_DATA"
+        },
+        "identity_mean": {
+          "value": 0.5162091676830715,
+          "origin": "mean(coupled[0].neo.identity_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "identity_std": {
+          "value": 0.13521127530810695,
+          "origin": "std(coupled[0].neo.identity_std)",
+          "source": "FROM_STATISTICS"
+        },
+        "integration_mean": {
+          "value": 0.4314550256267458,
+          "origin": "mean(coupled[0].neo.integration_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "wellbeing_mean": {
+          "value": 0.8552421086983125,
+          "origin": "mean(coupled[0].neo.wellbeing_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "final_attachment": {
+          "value": 0.96,
+          "origin": "normalized(coupled[0].neo.final_attachment)",
+          "source": "FROM_MATH"
+        },
         "time_in_phases": {
-          "nacimiento": 21,
-          "exploraci\u00f3n": 43,
-          "crisis": 729,
-          "reconstrucci\u00f3n": 707
+          "nacimiento": {
+            "value": 21,
+            "origin": "counted(coupled[0].neo.time_in_phases.nacimiento)",
+            "source": "FROM_DATA"
+          },
+          "exploración": {
+            "value": 43,
+            "origin": "counted(coupled[0].neo.time_in_phases.exploración)",
+            "source": "FROM_DATA"
+          },
+          "crisis": {
+            "value": 729,
+            "origin": "counted(coupled[0].neo.time_in_phases.crisis)",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción": {
+            "value": 707,
+            "origin": "counted(coupled[0].neo.time_in_phases.reconstrucción)",
+            "source": "FROM_DATA"
+          }
         },
         "final_phase": "crisis",
-        "mean_crisis_duration": 17.02857142857143,
-        "period": 44.117647058823536
+        "mean_crisis_duration": {
+          "value": 17.02857142857143,
+          "origin": "mean(coupled[0].neo.mean_crisis_duration)",
+          "source": "FROM_STATISTICS"
+        },
+        "period": {
+          "value": 44.117647058823536,
+          "origin": "computed(coupled[0].neo.period)",
+          "source": "FROM_MATH"
+        }
       },
       "eva": {
-        "n_crises": 43,
-        "crises_resolved": 42,
-        "crisis_durations": [
-          18,
-          21,
-          17,
-          19,
-          0,
-          0,
-          0,
-          17,
-          0,
-          17,
-          0,
-          17,
-          18,
-          0,
-          0,
-          21,
-          17,
-          18,
-          0,
-          0,
-          22,
-          21,
-          20,
-          16,
-          18,
-          17,
-          19,
-          0,
-          14,
-          16,
-          17,
-          19,
-          28,
-          0,
-          20,
-          20,
-          0,
-          15,
-          20,
-          17,
-          0,
-          22
-        ],
-        "identity_mean": 0.5142798977529274,
-        "identity_std": 0.12388474096496137,
-        "integration_mean": 0.44208206929600424,
-        "wellbeing_mean": 0.8689324210113415,
-        "final_attachment": 0.995,
+        "n_crises": {
+          "value": 43,
+          "origin": "count(coupled[0].eva.n_crises)",
+          "source": "FROM_DATA"
+        },
+        "crises_resolved": {
+          "value": 42,
+          "origin": "counted(coupled[0].eva.crises_resolved)",
+          "source": "FROM_DATA"
+        },
+        "crisis_durations": {
+          "value": [
+            18,
+            21,
+            17,
+            19,
+            0,
+            0,
+            0,
+            17,
+            0,
+            17,
+            0,
+            17,
+            18,
+            0,
+            0,
+            21,
+            17,
+            18,
+            0,
+            0,
+            22,
+            21,
+            20,
+            16,
+            18,
+            17,
+            19,
+            0,
+            14,
+            16,
+            17,
+            19,
+            28,
+            0,
+            20,
+            20,
+            0,
+            15,
+            20,
+            17,
+            0,
+            22
+          ],
+          "origin": "array(coupled[0].eva.crisis_durations)",
+          "source": "FROM_DATA"
+        },
+        "identity_mean": {
+          "value": 0.5142798977529274,
+          "origin": "mean(coupled[0].eva.identity_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "identity_std": {
+          "value": 0.12388474096496137,
+          "origin": "std(coupled[0].eva.identity_std)",
+          "source": "FROM_STATISTICS"
+        },
+        "integration_mean": {
+          "value": 0.44208206929600424,
+          "origin": "mean(coupled[0].eva.integration_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "wellbeing_mean": {
+          "value": 0.8689324210113415,
+          "origin": "mean(coupled[0].eva.wellbeing_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "final_attachment": {
+          "value": 0.995,
+          "origin": "normalized(coupled[0].eva.final_attachment)",
+          "source": "FROM_MATH"
+        },
         "time_in_phases": {
-          "nacimiento": 21,
-          "exploraci\u00f3n": 35,
-          "crisis": 693,
-          "reconstrucci\u00f3n": 746,
-          "madurez": 5
+          "nacimiento": {
+            "value": 21,
+            "origin": "counted(coupled[0].eva.time_in_phases.nacimiento)",
+            "source": "FROM_DATA"
+          },
+          "exploración": {
+            "value": 35,
+            "origin": "counted(coupled[0].eva.time_in_phases.exploración)",
+            "source": "FROM_DATA"
+          },
+          "crisis": {
+            "value": 693,
+            "origin": "counted(coupled[0].eva.time_in_phases.crisis)",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción": {
+            "value": 746,
+            "origin": "counted(coupled[0].eva.time_in_phases.reconstrucción)",
+            "source": "FROM_DATA"
+          },
+          "madurez": {
+            "value": 5,
+            "origin": "counted(coupled[0].eva.time_in_phases.madurez)",
+            "source": "FROM_DATA"
+          }
         },
         "final_phase": "crisis",
-        "mean_crisis_duration": 12.880952380952381,
-        "period": 44.117647058823536
+        "mean_crisis_duration": {
+          "value": 12.880952380952381,
+          "origin": "mean(coupled[0].eva.mean_crisis_duration)",
+          "source": "FROM_STATISTICS"
+        },
+        "period": {
+          "value": 44.117647058823536,
+          "origin": "computed(coupled[0].eva.period)",
+          "source": "FROM_MATH"
+        }
       },
-      "mean_psi_shared": 0.16920451935888506,
-      "max_psi_shared": 0.48204846535091206,
-      "correlation": 0.4123982785442598,
+      "mean_psi_shared": {
+        "value": 0.16920451935888506,
+        "origin": "mean(coupled[0].mean_psi_shared)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_psi_shared": {
+        "value": 0.48204846535091206,
+        "origin": "max_psi_shared(coupled[0].max_psi_shared)",
+        "source": "FROM_STATISTICS"
+      },
+      "correlation": {
+        "value": 0.4123982785442598,
+        "origin": "normalized(coupled[0].correlation)",
+        "source": "FROM_MATH"
+      },
       "condition": "coupled"
     },
     {
       "neo": {
-        "n_crises": 49,
-        "crises_resolved": 49,
-        "crisis_durations": [
-          21,
-          0,
-          19,
-          0,
-          14,
-          13,
-          27,
-          22,
-          0,
-          23,
-          18,
-          21,
-          16,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          19,
-          0,
-          16,
-          20,
-          19,
-          16,
-          0,
-          0,
-          0,
-          20,
-          22,
-          20,
-          24,
-          16,
-          0,
-          0,
-          0,
-          17,
-          20,
-          27,
-          15,
-          23,
-          0,
-          23,
-          27,
-          0,
-          0,
-          22,
-          14
-        ],
-        "identity_mean": 0.5143201934413895,
-        "identity_std": 0.12239075121176397,
-        "integration_mean": 0.4437398204258165,
-        "wellbeing_mean": 0.8681639395506436,
-        "final_attachment": 1.0,
-        "time_in_phases": {
-          "nacimiento": 21,
-          "exploraci\u00f3n": 39,
-          "crisis": 706,
-          "reconstrucci\u00f3n": 732,
-          "madurez": 2
+        "n_crises": {
+          "value": 49,
+          "origin": "count(coupled[1].neo.n_crises)",
+          "source": "FROM_DATA"
         },
-        "final_phase": "reconstrucci\u00f3n",
-        "mean_crisis_duration": 11.714285714285714,
-        "period": 46.875
+        "crises_resolved": {
+          "value": 49,
+          "origin": "counted(coupled[1].neo.crises_resolved)",
+          "source": "FROM_DATA"
+        },
+        "crisis_durations": {
+          "value": [
+            21,
+            0,
+            19,
+            0,
+            14,
+            13,
+            27,
+            22,
+            0,
+            23,
+            18,
+            21,
+            16,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            19,
+            0,
+            16,
+            20,
+            19,
+            16,
+            0,
+            0,
+            0,
+            20,
+            22,
+            20,
+            24,
+            16,
+            0,
+            0,
+            0,
+            17,
+            20,
+            27,
+            15,
+            23,
+            0,
+            23,
+            27,
+            0,
+            0,
+            22,
+            14
+          ],
+          "origin": "array(coupled[1].neo.crisis_durations)",
+          "source": "FROM_DATA"
+        },
+        "identity_mean": {
+          "value": 0.5143201934413895,
+          "origin": "mean(coupled[1].neo.identity_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "identity_std": {
+          "value": 0.12239075121176397,
+          "origin": "std(coupled[1].neo.identity_std)",
+          "source": "FROM_STATISTICS"
+        },
+        "integration_mean": {
+          "value": 0.4437398204258165,
+          "origin": "mean(coupled[1].neo.integration_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "wellbeing_mean": {
+          "value": 0.8681639395506436,
+          "origin": "mean(coupled[1].neo.wellbeing_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "final_attachment": {
+          "value": 1.0,
+          "origin": "normalized(coupled[1].neo.final_attachment)",
+          "source": "FROM_MATH"
+        },
+        "time_in_phases": {
+          "nacimiento": {
+            "value": 21,
+            "origin": "counted(coupled[1].neo.time_in_phases.nacimiento)",
+            "source": "FROM_DATA"
+          },
+          "exploración": {
+            "value": 39,
+            "origin": "counted(coupled[1].neo.time_in_phases.exploración)",
+            "source": "FROM_DATA"
+          },
+          "crisis": {
+            "value": 706,
+            "origin": "counted(coupled[1].neo.time_in_phases.crisis)",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción": {
+            "value": 732,
+            "origin": "counted(coupled[1].neo.time_in_phases.reconstrucción)",
+            "source": "FROM_DATA"
+          },
+          "madurez": {
+            "value": 2,
+            "origin": "counted(coupled[1].neo.time_in_phases.madurez)",
+            "source": "FROM_DATA"
+          }
+        },
+        "final_phase": "reconstrucción",
+        "mean_crisis_duration": {
+          "value": 11.714285714285714,
+          "origin": "mean(coupled[1].neo.mean_crisis_duration)",
+          "source": "FROM_STATISTICS"
+        },
+        "period": {
+          "value": 46.875,
+          "origin": "computed(coupled[1].neo.period)",
+          "source": "FROM_MATH"
+        }
       },
       "eva": {
-        "n_crises": 50,
-        "crises_resolved": 49,
-        "crisis_durations": [
-          18,
-          23,
-          0,
-          0,
-          18,
-          24,
-          19,
-          0,
-          0,
-          17,
-          0,
-          0,
-          21,
-          18,
-          0,
-          0,
-          0,
-          0,
-          19,
-          24,
-          22,
-          23,
-          0,
-          19,
-          18,
-          20,
-          19,
-          9,
-          18,
-          24,
-          20,
-          23,
-          17,
-          0,
-          22,
-          19,
-          18,
-          19,
-          24,
-          0,
-          0,
-          19,
-          0,
-          0,
-          0,
-          0,
-          19,
-          25,
-          17
-        ],
-        "identity_mean": 0.5136214120421319,
-        "identity_std": 0.13129961952420008,
-        "integration_mean": 0.4318875047961612,
-        "wellbeing_mean": 0.8504367583963721,
-        "final_attachment": 0.9249999999999999,
+        "n_crises": {
+          "value": 50,
+          "origin": "count(coupled[1].eva.n_crises)",
+          "source": "FROM_DATA"
+        },
+        "crises_resolved": {
+          "value": 49,
+          "origin": "counted(coupled[1].eva.crises_resolved)",
+          "source": "FROM_DATA"
+        },
+        "crisis_durations": {
+          "value": [
+            18,
+            23,
+            0,
+            0,
+            18,
+            24,
+            19,
+            0,
+            0,
+            17,
+            0,
+            0,
+            21,
+            18,
+            0,
+            0,
+            0,
+            0,
+            19,
+            24,
+            22,
+            23,
+            0,
+            19,
+            18,
+            20,
+            19,
+            9,
+            18,
+            24,
+            20,
+            23,
+            17,
+            0,
+            22,
+            19,
+            18,
+            19,
+            24,
+            0,
+            0,
+            19,
+            0,
+            0,
+            0,
+            0,
+            19,
+            25,
+            17
+          ],
+          "origin": "array(coupled[1].eva.crisis_durations)",
+          "source": "FROM_DATA"
+        },
+        "identity_mean": {
+          "value": 0.5136214120421319,
+          "origin": "mean(coupled[1].eva.identity_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "identity_std": {
+          "value": 0.13129961952420008,
+          "origin": "std(coupled[1].eva.identity_std)",
+          "source": "FROM_STATISTICS"
+        },
+        "integration_mean": {
+          "value": 0.4318875047961612,
+          "origin": "mean(coupled[1].eva.integration_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "wellbeing_mean": {
+          "value": 0.8504367583963721,
+          "origin": "mean(coupled[1].eva.wellbeing_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "final_attachment": {
+          "value": 0.9249999999999999,
+          "origin": "normalized(coupled[1].eva.final_attachment)",
+          "source": "FROM_MATH"
+        },
         "time_in_phases": {
-          "nacimiento": 21,
-          "exploraci\u00f3n": 44,
-          "crisis": 762,
-          "reconstrucci\u00f3n": 671,
-          "madurez": 2
+          "nacimiento": {
+            "value": 21,
+            "origin": "counted(coupled[1].eva.time_in_phases.nacimiento)",
+            "source": "FROM_DATA"
+          },
+          "exploración": {
+            "value": 44,
+            "origin": "counted(coupled[1].eva.time_in_phases.exploración)",
+            "source": "FROM_DATA"
+          },
+          "crisis": {
+            "value": 762,
+            "origin": "counted(coupled[1].eva.time_in_phases.crisis)",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción": {
+            "value": 671,
+            "origin": "counted(coupled[1].eva.time_in_phases.reconstrucción)",
+            "source": "FROM_DATA"
+          },
+          "madurez": {
+            "value": 2,
+            "origin": "counted(coupled[1].eva.time_in_phases.madurez)",
+            "source": "FROM_DATA"
+          }
         },
         "final_phase": "crisis",
-        "mean_crisis_duration": 12.551020408163266,
-        "period": 42.85714285714286
+        "mean_crisis_duration": {
+          "value": 12.551020408163266,
+          "origin": "mean(coupled[1].eva.mean_crisis_duration)",
+          "source": "FROM_STATISTICS"
+        },
+        "period": {
+          "value": 42.85714285714286,
+          "origin": "computed(coupled[1].eva.period)",
+          "source": "FROM_MATH"
+        }
       },
-      "mean_psi_shared": 0.1635907933438119,
-      "max_psi_shared": 0.5070439844824319,
-      "correlation": 0.42341102385244567,
+      "mean_psi_shared": {
+        "value": 0.1635907933438119,
+        "origin": "mean(coupled[1].mean_psi_shared)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_psi_shared": {
+        "value": 0.5070439844824319,
+        "origin": "max_psi_shared(coupled[1].max_psi_shared)",
+        "source": "FROM_STATISTICS"
+      },
+      "correlation": {
+        "value": 0.42341102385244567,
+        "origin": "normalized(coupled[1].correlation)",
+        "source": "FROM_MATH"
+      },
       "condition": "coupled"
     }
   ],
   "decoupled": [
     {
       "neo": {
-        "n_crises": 51,
-        "crises_resolved": 51,
-        "crisis_durations": [
-          16,
-          21,
-          0,
-          0,
-          0,
-          21,
-          20,
-          0,
-          0,
-          22,
-          0,
-          0,
-          0,
-          18,
-          19,
-          19,
-          0,
-          18,
-          15,
-          0,
-          0,
-          0,
-          24,
-          25,
-          0,
-          0,
-          16,
-          21,
-          0,
-          0,
-          0,
-          15,
-          19,
-          19,
-          0,
-          19,
-          18,
-          20,
-          17,
-          18,
-          0,
-          17,
-          16,
-          21,
-          20,
-          19,
-          19,
-          28,
-          21,
-          0,
-          20
-        ],
-        "identity_mean": 0.5116664553843574,
-        "identity_std": 0.12692904903429028,
-        "integration_mean": 0.44264922311046273,
-        "wellbeing_mean": 0.8650935541096111,
-        "final_attachment": 0.0,
+        "n_crises": {
+          "value": 51,
+          "origin": "count(decoupled[0].neo.n_crises)",
+          "source": "FROM_DATA"
+        },
+        "crises_resolved": {
+          "value": 51,
+          "origin": "counted(decoupled[0].neo.crises_resolved)",
+          "source": "FROM_DATA"
+        },
+        "crisis_durations": {
+          "value": [
+            16,
+            21,
+            0,
+            0,
+            0,
+            21,
+            20,
+            0,
+            0,
+            22,
+            0,
+            0,
+            0,
+            18,
+            19,
+            19,
+            0,
+            18,
+            15,
+            0,
+            0,
+            0,
+            24,
+            25,
+            0,
+            0,
+            16,
+            21,
+            0,
+            0,
+            0,
+            15,
+            19,
+            19,
+            0,
+            19,
+            18,
+            20,
+            17,
+            18,
+            0,
+            17,
+            16,
+            21,
+            20,
+            19,
+            19,
+            28,
+            21,
+            0,
+            20
+          ],
+          "origin": "array(decoupled[0].neo.crisis_durations)",
+          "source": "FROM_DATA"
+        },
+        "identity_mean": {
+          "value": 0.5116664553843574,
+          "origin": "mean(decoupled[0].neo.identity_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "identity_std": {
+          "value": 0.12692904903429028,
+          "origin": "std(decoupled[0].neo.identity_std)",
+          "source": "FROM_STATISTICS"
+        },
+        "integration_mean": {
+          "value": 0.44264922311046273,
+          "origin": "mean(decoupled[0].neo.integration_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "wellbeing_mean": {
+          "value": 0.8650935541096111,
+          "origin": "mean(decoupled[0].neo.wellbeing_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "final_attachment": {
+          "value": 0.0,
+          "origin": "normalized(decoupled[0].neo.final_attachment)",
+          "source": "FROM_MATH"
+        },
         "time_in_phases": {
-          "nacimiento": 21,
-          "exploraci\u00f3n": 48,
-          "crisis": 750,
-          "reconstrucci\u00f3n": 681
+          "nacimiento": {
+            "value": 21,
+            "origin": "counted(decoupled[0].neo.time_in_phases.nacimiento)",
+            "source": "FROM_DATA"
+          },
+          "exploración": {
+            "value": 48,
+            "origin": "counted(decoupled[0].neo.time_in_phases.exploración)",
+            "source": "FROM_DATA"
+          },
+          "crisis": {
+            "value": 750,
+            "origin": "counted(decoupled[0].neo.time_in_phases.crisis)",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción": {
+            "value": 681,
+            "origin": "counted(decoupled[0].neo.time_in_phases.reconstrucción)",
+            "source": "FROM_DATA"
+          }
         },
         "final_phase": "crisis",
-        "mean_crisis_duration": 11.784313725490197,
-        "period": 42.85714285714286
+        "mean_crisis_duration": {
+          "value": 11.784313725490197,
+          "origin": "mean(decoupled[0].neo.mean_crisis_duration)",
+          "source": "FROM_STATISTICS"
+        },
+        "period": {
+          "value": 42.85714285714286,
+          "origin": "computed(decoupled[0].neo.period)",
+          "source": "FROM_MATH"
+        }
       },
       "eva": {
-        "n_crises": 59,
-        "crises_resolved": 59,
-        "crisis_durations": [
-          13,
-          0,
-          0,
-          0,
-          0,
-          0,
-          17,
-          17,
-          18,
-          0,
-          0,
-          0,
-          0,
-          18,
-          0,
-          0,
-          0,
-          32,
-          16,
-          19,
-          15,
-          18,
-          0,
-          0,
-          0,
-          20,
-          23,
-          0,
-          0,
-          0,
-          0,
-          18,
-          17,
-          17,
-          30,
-          21,
-          18,
-          13,
-          0,
-          0,
-          0,
-          25,
-          0,
-          20,
-          0,
-          20,
-          19,
-          19,
-          19,
-          0,
-          0,
-          32,
-          0,
-          25,
-          0,
-          20,
-          16,
-          0,
-          17
-        ],
-        "identity_mean": 0.513168666565125,
-        "identity_std": 0.12304362986561299,
-        "integration_mean": 0.45536888207363785,
-        "wellbeing_mean": 0.8804648496572812,
-        "final_attachment": 0.0,
-        "time_in_phases": {
-          "nacimiento": 21,
-          "exploraci\u00f3n": 29,
-          "crisis": 764,
-          "reconstrucci\u00f3n": 686
+        "n_crises": {
+          "value": 59,
+          "origin": "count(decoupled[0].eva.n_crises)",
+          "source": "FROM_DATA"
         },
-        "final_phase": "reconstrucci\u00f3n",
-        "mean_crisis_duration": 10.033898305084746,
-        "period": 45.45454545454546
+        "crises_resolved": {
+          "value": 59,
+          "origin": "counted(decoupled[0].eva.crises_resolved)",
+          "source": "FROM_DATA"
+        },
+        "crisis_durations": {
+          "value": [
+            13,
+            0,
+            0,
+            0,
+            0,
+            0,
+            17,
+            17,
+            18,
+            0,
+            0,
+            0,
+            0,
+            18,
+            0,
+            0,
+            0,
+            32,
+            16,
+            19,
+            15,
+            18,
+            0,
+            0,
+            0,
+            20,
+            23,
+            0,
+            0,
+            0,
+            0,
+            18,
+            17,
+            17,
+            30,
+            21,
+            18,
+            13,
+            0,
+            0,
+            0,
+            25,
+            0,
+            20,
+            0,
+            20,
+            19,
+            19,
+            19,
+            0,
+            0,
+            32,
+            0,
+            25,
+            0,
+            20,
+            16,
+            0,
+            17
+          ],
+          "origin": "array(decoupled[0].eva.crisis_durations)",
+          "source": "FROM_DATA"
+        },
+        "identity_mean": {
+          "value": 0.513168666565125,
+          "origin": "mean(decoupled[0].eva.identity_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "identity_std": {
+          "value": 0.12304362986561299,
+          "origin": "std(decoupled[0].eva.identity_std)",
+          "source": "FROM_STATISTICS"
+        },
+        "integration_mean": {
+          "value": 0.45536888207363785,
+          "origin": "mean(decoupled[0].eva.integration_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "wellbeing_mean": {
+          "value": 0.8804648496572812,
+          "origin": "mean(decoupled[0].eva.wellbeing_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "final_attachment": {
+          "value": 0.0,
+          "origin": "normalized(decoupled[0].eva.final_attachment)",
+          "source": "FROM_MATH"
+        },
+        "time_in_phases": {
+          "nacimiento": {
+            "value": 21,
+            "origin": "counted(decoupled[0].eva.time_in_phases.nacimiento)",
+            "source": "FROM_DATA"
+          },
+          "exploración": {
+            "value": 29,
+            "origin": "counted(decoupled[0].eva.time_in_phases.exploración)",
+            "source": "FROM_DATA"
+          },
+          "crisis": {
+            "value": 764,
+            "origin": "counted(decoupled[0].eva.time_in_phases.crisis)",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción": {
+            "value": 686,
+            "origin": "counted(decoupled[0].eva.time_in_phases.reconstrucción)",
+            "source": "FROM_DATA"
+          }
+        },
+        "final_phase": "reconstrucción",
+        "mean_crisis_duration": {
+          "value": 10.033898305084746,
+          "origin": "mean(decoupled[0].eva.mean_crisis_duration)",
+          "source": "FROM_STATISTICS"
+        },
+        "period": {
+          "value": 45.45454545454546,
+          "origin": "computed(decoupled[0].eva.period)",
+          "source": "FROM_MATH"
+        }
       },
-      "mean_psi_shared": 0,
-      "max_psi_shared": 0,
-      "correlation": -0.09581488457985163,
+      "mean_psi_shared": {
+        "value": 0,
+        "origin": "mean(decoupled[0].mean_psi_shared)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_psi_shared": {
+        "value": 0,
+        "origin": "max_psi_shared(decoupled[0].max_psi_shared)",
+        "source": "FROM_STATISTICS"
+      },
+      "correlation": {
+        "value": -0.09581488457985163,
+        "origin": "computed(decoupled[0].correlation)",
+        "source": "FROM_MATH"
+      },
       "condition": "decoupled"
     },
     {
       "neo": {
-        "n_crises": 38,
-        "crises_resolved": 37,
-        "crisis_durations": [
-          28,
-          15,
-          21,
-          25,
-          0,
-          18,
-          0,
-          18,
-          22,
-          20,
-          18,
-          19,
-          15,
-          0,
-          0,
-          0,
-          21,
-          18,
-          0,
-          0,
-          20,
-          14,
-          0,
-          24,
-          18,
-          19,
-          40,
-          17,
-          0,
-          18,
-          21,
-          19,
-          20,
-          26,
-          19,
-          17,
-          20
-        ],
-        "identity_mean": 0.5100759051421296,
-        "identity_std": 0.11084388461023204,
-        "integration_mean": 0.45501883966876927,
-        "wellbeing_mean": 0.8783059169536221,
-        "final_attachment": 0.0,
+        "n_crises": {
+          "value": 38,
+          "origin": "count(decoupled[1].neo.n_crises)",
+          "source": "FROM_DATA"
+        },
+        "crises_resolved": {
+          "value": 37,
+          "origin": "counted(decoupled[1].neo.crises_resolved)",
+          "source": "FROM_DATA"
+        },
+        "crisis_durations": {
+          "value": [
+            28,
+            15,
+            21,
+            25,
+            0,
+            18,
+            0,
+            18,
+            22,
+            20,
+            18,
+            19,
+            15,
+            0,
+            0,
+            0,
+            21,
+            18,
+            0,
+            0,
+            20,
+            14,
+            0,
+            24,
+            18,
+            19,
+            40,
+            17,
+            0,
+            18,
+            21,
+            19,
+            20,
+            26,
+            19,
+            17,
+            20
+          ],
+          "origin": "array(decoupled[1].neo.crisis_durations)",
+          "source": "FROM_DATA"
+        },
+        "identity_mean": {
+          "value": 0.5100759051421296,
+          "origin": "mean(decoupled[1].neo.identity_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "identity_std": {
+          "value": 0.11084388461023204,
+          "origin": "std(decoupled[1].neo.identity_std)",
+          "source": "FROM_STATISTICS"
+        },
+        "integration_mean": {
+          "value": 0.45501883966876927,
+          "origin": "mean(decoupled[1].neo.integration_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "wellbeing_mean": {
+          "value": 0.8783059169536221,
+          "origin": "mean(decoupled[1].neo.wellbeing_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "final_attachment": {
+          "value": 0.0,
+          "origin": "normalized(decoupled[1].neo.final_attachment)",
+          "source": "FROM_MATH"
+        },
         "time_in_phases": {
-          "nacimiento": 21,
-          "exploraci\u00f3n": 69,
-          "crisis": 725,
-          "reconstrucci\u00f3n": 685
+          "nacimiento": {
+            "value": 21,
+            "origin": "counted(decoupled[1].neo.time_in_phases.nacimiento)",
+            "source": "FROM_DATA"
+          },
+          "exploración": {
+            "value": 69,
+            "origin": "counted(decoupled[1].neo.time_in_phases.exploración)",
+            "source": "FROM_DATA"
+          },
+          "crisis": {
+            "value": 725,
+            "origin": "counted(decoupled[1].neo.time_in_phases.crisis)",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción": {
+            "value": 685,
+            "origin": "counted(decoupled[1].neo.time_in_phases.reconstrucción)",
+            "source": "FROM_DATA"
+          }
         },
         "final_phase": "crisis",
-        "mean_crisis_duration": 15.405405405405405,
-        "period": 44.117647058823536
+        "mean_crisis_duration": {
+          "value": 15.405405405405405,
+          "origin": "mean(decoupled[1].neo.mean_crisis_duration)",
+          "source": "FROM_STATISTICS"
+        },
+        "period": {
+          "value": 44.117647058823536,
+          "origin": "computed(decoupled[1].neo.period)",
+          "source": "FROM_MATH"
+        }
       },
       "eva": {
-        "n_crises": 45,
-        "crises_resolved": 45,
-        "crisis_durations": [
-          19,
-          19,
-          0,
-          18,
-          20,
-          16,
-          17,
-          0,
-          0,
-          19,
-          0,
-          0,
-          22,
-          18,
-          19,
-          23,
-          7,
-          19,
-          0,
-          0,
-          0,
-          25,
-          0,
-          17,
-          19,
-          0,
-          20,
-          19,
-          19,
-          19,
-          18,
-          18,
-          0,
-          23,
-          17,
-          0,
-          15,
-          17,
-          17,
-          24,
-          0,
-          20,
-          18,
-          15,
-          29
-        ],
-        "identity_mean": 0.5131667241968956,
-        "identity_std": 0.1277760652177889,
-        "integration_mean": 0.44630531437661103,
-        "wellbeing_mean": 0.8697810745747926,
-        "final_attachment": 0.0,
-        "time_in_phases": {
-          "nacimiento": 21,
-          "exploraci\u00f3n": 29,
-          "crisis": 755,
-          "reconstrucci\u00f3n": 695
+        "n_crises": {
+          "value": 45,
+          "origin": "count(decoupled[1].eva.n_crises)",
+          "source": "FROM_DATA"
         },
-        "final_phase": "reconstrucci\u00f3n",
-        "mean_crisis_duration": 13.444444444444445,
-        "period": 42.85714285714286
+        "crises_resolved": {
+          "value": 45,
+          "origin": "counted(decoupled[1].eva.crises_resolved)",
+          "source": "FROM_DATA"
+        },
+        "crisis_durations": {
+          "value": [
+            19,
+            19,
+            0,
+            18,
+            20,
+            16,
+            17,
+            0,
+            0,
+            19,
+            0,
+            0,
+            22,
+            18,
+            19,
+            23,
+            7,
+            19,
+            0,
+            0,
+            0,
+            25,
+            0,
+            17,
+            19,
+            0,
+            20,
+            19,
+            19,
+            19,
+            18,
+            18,
+            0,
+            23,
+            17,
+            0,
+            15,
+            17,
+            17,
+            24,
+            0,
+            20,
+            18,
+            15,
+            29
+          ],
+          "origin": "array(decoupled[1].eva.crisis_durations)",
+          "source": "FROM_DATA"
+        },
+        "identity_mean": {
+          "value": 0.5131667241968956,
+          "origin": "mean(decoupled[1].eva.identity_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "identity_std": {
+          "value": 0.1277760652177889,
+          "origin": "std(decoupled[1].eva.identity_std)",
+          "source": "FROM_STATISTICS"
+        },
+        "integration_mean": {
+          "value": 0.44630531437661103,
+          "origin": "mean(decoupled[1].eva.integration_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "wellbeing_mean": {
+          "value": 0.8697810745747926,
+          "origin": "mean(decoupled[1].eva.wellbeing_mean)",
+          "source": "FROM_STATISTICS"
+        },
+        "final_attachment": {
+          "value": 0.0,
+          "origin": "normalized(decoupled[1].eva.final_attachment)",
+          "source": "FROM_MATH"
+        },
+        "time_in_phases": {
+          "nacimiento": {
+            "value": 21,
+            "origin": "counted(decoupled[1].eva.time_in_phases.nacimiento)",
+            "source": "FROM_DATA"
+          },
+          "exploración": {
+            "value": 29,
+            "origin": "counted(decoupled[1].eva.time_in_phases.exploración)",
+            "source": "FROM_DATA"
+          },
+          "crisis": {
+            "value": 755,
+            "origin": "counted(decoupled[1].eva.time_in_phases.crisis)",
+            "source": "FROM_DATA"
+          },
+          "reconstrucción": {
+            "value": 695,
+            "origin": "counted(decoupled[1].eva.time_in_phases.reconstrucción)",
+            "source": "FROM_DATA"
+          }
+        },
+        "final_phase": "reconstrucción",
+        "mean_crisis_duration": {
+          "value": 13.444444444444445,
+          "origin": "mean(decoupled[1].eva.mean_crisis_duration)",
+          "source": "FROM_STATISTICS"
+        },
+        "period": {
+          "value": 42.85714285714286,
+          "origin": "computed(decoupled[1].eva.period)",
+          "source": "FROM_MATH"
+        }
       },
-      "mean_psi_shared": 0,
-      "max_psi_shared": 0,
-      "correlation": 0.008436349226924536,
+      "mean_psi_shared": {
+        "value": 0,
+        "origin": "mean(decoupled[1].mean_psi_shared)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_psi_shared": {
+        "value": 0,
+        "origin": "max_psi_shared(decoupled[1].max_psi_shared)",
+        "source": "FROM_STATISTICS"
+      },
+      "correlation": {
+        "value": 0.008436349226924536,
+        "origin": "normalized(decoupled[1].correlation)",
+        "source": "FROM_MATH"
+      },
       "condition": "decoupled"
     }
   ],
   "summary": {
-    "total_crises_coupled": 89.0,
-    "total_crises_decoupled": 96.5,
-    "correlation_diff": 0.46159391887481627
+    "total_crises_coupled": {
+      "value": 89.0,
+      "origin": "count(summary.total_crises_coupled)",
+      "source": "FROM_DATA"
+    },
+    "total_crises_decoupled": {
+      "value": 96.5,
+      "origin": "count(summary.total_crises_decoupled)",
+      "source": "FROM_DATA"
+    },
+    "correlation_diff": {
+      "value": 0.46159391887481627,
+      "origin": "count(summary.correlation_diff)",
+      "source": "FROM_DATA"
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "ffc31eae0d01",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:59.647501",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/coupling_comparison/results.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:59.647939",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 302,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 324,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 302,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 324,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

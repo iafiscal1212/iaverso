@@ -1,0 +1,2955 @@
+{
+  "metadata": {
+    "source": "GitHub API",
+    "n_fields": 25,
+    "timestamp": "2025-12-07T17:34:32.772871",
+    "norma_dura": true
+  },
+  "inv1_coherence_vs_performance": [
+    {
+      "field": "distributed computing",
+      "cv": {
+        "value": 2.5602882377976175,
+        "origin": "std(8589.38)/mean(3354.85)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 30.673700803851037,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "AI safety",
+      "cv": {
+        "value": 2.5089469566153135,
+        "origin": "std(2171.62)/mean(865.55)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 29.5461802654727,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "recommendation system",
+      "cv": {
+        "value": 1.7166727591043383,
+        "origin": "std(9247.46)/mean(5386.85)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 11.873957322781893,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "edge computing",
+      "cv": {
+        "value": 1.2761731712039466,
+        "origin": "std(1513.03)/mean(1185.60)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 7.857678938755744,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "autonomous driving",
+      "cv": {
+        "value": 1.3143655560643206,
+        "origin": "std(5895.26)/mean(4485.25)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 7.699379214098202,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "OOD detection",
+      "cv": {
+        "value": 1.2599688713834303,
+        "origin": "std(218.92)/mean(173.75)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 7.360393694700327,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "speech recognition",
+      "cv": {
+        "value": 1.381469622074469,
+        "origin": "std(23780.62)/mean(17214.00)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 7.35700387268693,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "generative AI",
+      "cv": {
+        "value": 1.1651453532476752,
+        "origin": "std(20657.74)/mean(17729.75)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 6.750446604469956,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "robotics AI",
+      "cv": {
+        "value": 1.1404796387130904,
+        "origin": "std(9562.18)/mean(8384.35)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 5.4306546239101925,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "computer vision",
+      "cv": {
+        "value": 1.058227323663325,
+        "origin": "std(17647.05)/mean(16676.05)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 5.404964249069777,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "diffusion model",
+      "cv": {
+        "value": 1.0317141580765652,
+        "origin": "std(23129.64)/mean(22418.65)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 4.418137846479719,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "quantum computing",
+      "cv": {
+        "value": 0.9996611581257246,
+        "origin": "std(1135.62)/mean(1136.00)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 4.22568035327441,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "neural network",
+      "cv": {
+        "value": 0.8215538143390897,
+        "origin": "std(17868.38)/mean(21749.50)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 3.613522266770286,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "transformer",
+      "cv": {
+        "value": 0.8464202610448343,
+        "origin": "std(31944.75)/mean(37741.00)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 3.443722315888725,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "machine learning",
+      "cv": {
+        "value": 0.8650715273004227,
+        "origin": "std(44841.11)/mean(51835.15)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 3.2160340747239653,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "NLP",
+      "cv": {
+        "value": 0.7881374968561804,
+        "origin": "std(30341.01)/mean(38497.10)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 3.143615724749662,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "federated learning",
+      "cv": {
+        "value": 0.7924992351407818,
+        "origin": "std(1291.69)/mean(1629.90)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 2.925619914008273,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "reinforcement learning",
+      "cv": {
+        "value": 0.7193973449734294,
+        "origin": "std(14122.09)/mean(19630.45)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 2.3712449386797427,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "protein prediction",
+      "cv": {
+        "value": 0.6450256954557169,
+        "origin": "std(211.83)/mean(328.40)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 2.164489392180877,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "AutoML",
+      "cv": {
+        "value": 0.6503722543344705,
+        "origin": "std(4596.21)/mean(7067.05)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 2.108104121244326,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "medical diagnosis",
+      "cv": {
+        "value": 0.6974681178324115,
+        "origin": "std(93.79)/mean(134.47)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 1.7998094606707766,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "MLOps",
+      "cv": {
+        "value": 0.4869420373496992,
+        "origin": "std(9457.39)/mean(19422.00)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 1.1196507828216902,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "GPT",
+      "cv": {
+        "value": 0.43502138882468405,
+        "origin": "std(34388.85)/mean(79050.95)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 0.9914076089547283,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "LLM",
+      "cv": {
+        "value": 0.3435161030308612,
+        "origin": "std(31077.97)/mean(90470.20)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 0.5969314765921234,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "deep learning",
+      "cv": {
+        "value": 0.3257475471495215,
+        "origin": "std(11825.48)/mean(36302.60)",
+        "source": "FROM_MATH"
+      },
+      "break_score": {
+        "value": 0.5806056601540878,
+        "origin": "(max/mean) * CV",
+        "source": "FROM_MATH"
+      }
+    }
+  ],
+  "inv2_consensus": [
+    {
+      "field": "LLM",
+      "consensus": {
+        "value": 0.5834874299601552,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "deep learning",
+      "consensus": {
+        "value": 0.5511720805590175,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "GPT",
+      "consensus": {
+        "value": 0.3483364725674418,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "AutoML",
+      "consensus": {
+        "value": 0.3331226321577029,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "reinforcement learning",
+      "consensus": {
+        "value": 0.3271943049048406,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "MLOps",
+      "consensus": {
+        "value": 0.2456006429236337,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "protein prediction",
+      "consensus": {
+        "value": 0.19894669662444153,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "NLP",
+      "consensus": {
+        "value": 0.1335499407582832,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "federated learning",
+      "consensus": {
+        "value": 0.13344018172838734,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "medical diagnosis",
+      "consensus": {
+        "value": 0.09649718951389974,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "robotics AI",
+      "consensus": {
+        "value": 0.0242378205961985,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "transformer",
+      "consensus": {
+        "value": 0.014169699709603911,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "machine learning",
+      "consensus": {
+        "value": 0,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "neural network",
+      "consensus": {
+        "value": 0,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "computer vision",
+      "consensus": {
+        "value": 0,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "diffusion model",
+      "consensus": {
+        "value": 0,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "generative AI",
+      "consensus": {
+        "value": 0,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "edge computing",
+      "consensus": {
+        "value": 0,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "quantum computing",
+      "consensus": {
+        "value": 0,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "distributed computing",
+      "consensus": {
+        "value": 0,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "AI safety",
+      "consensus": {
+        "value": 0,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "OOD detection",
+      "consensus": {
+        "value": 0,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "autonomous driving",
+      "consensus": {
+        "value": 0,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "speech recognition",
+      "consensus": {
+        "value": 0,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "recommendation system",
+      "consensus": {
+        "value": 0,
+        "origin": "1 - avg(CV_stars, CV_forks)",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  ],
+  "inv3_unit_effect": [
+    {
+      "field": "distributed computing",
+      "cv_raw": {
+        "value": 2.5602882377976175,
+        "origin": "std(8589.38)/mean(3354.85)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 2.5602882377976184,
+        "origin": "std(21.37)/mean(8.35)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.14891422558662332,
+        "origin": "std(1.06)/mean(7.12)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 2.4113740122109943,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "AI safety",
+      "cv_raw": {
+        "value": 2.5089469566153135,
+        "origin": "std(2171.62)/mean(865.55)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 2.5089469566153135,
+        "origin": "std(21.31)/mean(8.49)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.1724013586359187,
+        "origin": "std(1.00)/mean(5.83)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 2.336545597979395,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "recommendation system",
+      "cv_raw": {
+        "value": 1.7166727591043383,
+        "origin": "std(9247.46)/mean(5386.85)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 1.716672759104338,
+        "origin": "std(24.82)/mean(14.46)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.1711847205129132,
+        "origin": "std(1.29)/mean(7.56)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 1.5454880385914251,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "speech recognition",
+      "cv_raw": {
+        "value": 1.381469622074469,
+        "origin": "std(23780.62)/mean(17214.00)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 1.3814696220744687,
+        "origin": "std(25.94)/mean(18.78)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.10196386166779219,
+        "origin": "std(0.94)/mean(9.19)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 1.2795057604066769,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "autonomous driving",
+      "cv_raw": {
+        "value": 1.3143655560643206,
+        "origin": "std(5895.26)/mean(4485.25)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 1.3143655560643206,
+        "origin": "std(22.44)/mean(17.07)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.10886066670858928,
+        "origin": "std(0.86)/mean(7.93)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 1.2055048893557314,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "edge computing",
+      "cv_raw": {
+        "value": 1.2761731712039466,
+        "origin": "std(1513.03)/mean(1185.60)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 1.2761731712039466,
+        "origin": "std(20.73)/mean(16.24)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.11781841935824217,
+        "origin": "std(0.79)/mean(6.68)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 1.1583547518457045,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "OOD detection",
+      "cv_raw": {
+        "value": 1.2599688713834303,
+        "origin": "std(218.92)/mean(173.75)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 1.25996887138343,
+        "origin": "std(21.57)/mean(17.12)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.16079032416807987,
+        "origin": "std(0.77)/mean(4.76)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 1.0991785472153504,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "generative AI",
+      "cv_raw": {
+        "value": 1.1651453532476752,
+        "origin": "std(20657.74)/mean(17729.75)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 1.1651453532476752,
+        "origin": "std(20.11)/mean(17.26)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.07392872137505875,
+        "origin": "std(0.70)/mean(9.46)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 1.0912166318726164,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "robotics AI",
+      "cv_raw": {
+        "value": 1.1404796387130904,
+        "origin": "std(9562.18)/mean(8384.35)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 1.1404796387130909,
+        "origin": "std(23.95)/mean(21.00)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.09116126010392331,
+        "origin": "std(0.79)/mean(8.64)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 1.049318378609167,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "computer vision",
+      "cv_raw": {
+        "value": 1.058227323663325,
+        "origin": "std(17647.05)/mean(16676.05)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 1.0582273236633248,
+        "origin": "std(20.72)/mean(19.58)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.07273378782183587,
+        "origin": "std(0.69)/mean(9.42)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.9854935358414891,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "diffusion model",
+      "cv_raw": {
+        "value": 1.0317141580765652,
+        "origin": "std(23129.64)/mean(22418.65)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 1.0317141580765654,
+        "origin": "std(24.09)/mean(23.35)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.08109929270047403,
+        "origin": "std(0.78)/mean(9.65)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.9506148653760912,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "quantum computing",
+      "cv_raw": {
+        "value": 0.9996611581257246,
+        "origin": "std(1135.62)/mean(1136.00)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 0.9996611581257245,
+        "origin": "std(23.65)/mean(23.66)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.10789923746841706,
+        "origin": "std(0.72)/mean(6.71)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.8917619206573075,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "machine learning",
+      "cv_raw": {
+        "value": 0.8650715273004227,
+        "origin": "std(44841.11)/mean(51835.15)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 0.8650715273004228,
+        "origin": "std(23.27)/mean(26.90)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.0593118535365012,
+        "origin": "std(0.63)/mean(10.61)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.8057596737639214,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "transformer",
+      "cv_raw": {
+        "value": 0.8464202610448343,
+        "origin": "std(31944.75)/mean(37741.00)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 0.8464202610448343,
+        "origin": "std(20.80)/mean(24.58)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.05884888315051316,
+        "origin": "std(0.61)/mean(10.31)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.7875713778943211,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "neural network",
+      "cv_raw": {
+        "value": 0.8215538143390897,
+        "origin": "std(17868.38)/mean(21749.50)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 0.8215538143390897,
+        "origin": "std(18.68)/mean(22.74)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.04941859952610407,
+        "origin": "std(0.49)/mean(9.83)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.7721352148129856,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "NLP",
+      "cv_raw": {
+        "value": 0.7881374968561804,
+        "origin": "std(30341.01)/mean(38497.10)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 0.7881374968561805,
+        "origin": "std(19.76)/mean(25.07)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.05070579847194114,
+        "origin": "std(0.53)/mean(10.38)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.7374316983842393,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "federated learning",
+      "cv_raw": {
+        "value": 0.7924992351407818,
+        "origin": "std(1291.69)/mean(1629.90)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 0.7924992351407815,
+        "origin": "std(21.47)/mean(27.09)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.08675894912328644,
+        "origin": "std(0.62)/mean(7.18)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.7057402860174954,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "reinforcement learning",
+      "cv_raw": {
+        "value": 0.7193973449734294,
+        "origin": "std(14122.09)/mean(19630.45)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 0.7193973449734296,
+        "origin": "std(21.83)/mean(30.34)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.05479851336113531,
+        "origin": "std(0.53)/mean(9.71)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.6645988316122942,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "AutoML",
+      "cv_raw": {
+        "value": 0.6503722543344705,
+        "origin": "std(4596.21)/mean(7067.05)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 0.6503722543344705,
+        "origin": "std(20.06)/mean(30.85)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.05862071459960005,
+        "origin": "std(0.51)/mean(8.71)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.5917515397348705,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "medical diagnosis",
+      "cv_raw": {
+        "value": 0.6974681178324115,
+        "origin": "std(93.79)/mean(134.47)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 0.6974681178324116,
+        "origin": "std(27.03)/mean(38.75)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.13018976781498431,
+        "origin": "std(0.61)/mean(4.71)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.5672783500174272,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "protein prediction",
+      "cv_raw": {
+        "value": 0.6450256954557169,
+        "origin": "std(211.83)/mean(328.40)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 0.6450256954557168,
+        "origin": "std(19.22)/mean(29.80)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.08632894887683495,
+        "origin": "std(0.49)/mean(5.66)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.5586967465788819,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "MLOps",
+      "cv_raw": {
+        "value": 0.4869420373496992,
+        "origin": "std(9457.39)/mean(19422.00)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 0.4869420373496992,
+        "origin": "std(21.18)/mean(43.49)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.04144748283054619,
+        "origin": "std(0.41)/mean(9.78)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.44549455451915304,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "GPT",
+      "cv_raw": {
+        "value": 0.43502138882468405,
+        "origin": "std(34388.85)/mean(79050.95)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 0.4350213888246839,
+        "origin": "std(19.09)/mean(43.88)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.031011822199457608,
+        "origin": "std(0.35)/mean(11.21)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.40400956662522647,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "LLM",
+      "cv_raw": {
+        "value": 0.3435161030308612,
+        "origin": "std(31077.97)/mean(90470.20)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 0.34351610303086116,
+        "origin": "std(19.77)/mean(57.55)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.02739214876356343,
+        "origin": "std(0.31)/mean(11.36)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.3161239542672978,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "deep learning",
+      "cv_raw": {
+        "value": 0.3257475471495215,
+        "origin": "std(11825.48)/mean(36302.60)",
+        "source": "FROM_MATH"
+      },
+      "cv_pct": {
+        "value": 0.32574754714952137,
+        "origin": "std(18.28)/mean(56.10)",
+        "source": "FROM_MATH"
+      },
+      "cv_log": {
+        "value": 0.02696698416838707,
+        "origin": "std(0.28)/mean(10.46)",
+        "source": "FROM_MATH"
+      },
+      "effect": {
+        "value": 0.2987805629811344,
+        "origin": "cv_raw - cv_log",
+        "source": "FROM_MATH"
+      }
+    }
+  ],
+  "inv4_structural_similarity": [
+    {
+      "pair": [
+        "computer vision",
+        "generative AI"
+      ],
+      "similarity": {
+        "value": 0.9999417322225591,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "neural network",
+        "medical diagnosis"
+      ],
+      "similarity": {
+        "value": 0.999822793561969,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "machine learning",
+        "transformer"
+      ],
+      "similarity": {
+        "value": 0.9996676730955809,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "diffusion model",
+        "quantum computing"
+      ],
+      "similarity": {
+        "value": 0.9995506082196064,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "OOD detection",
+        "autonomous driving"
+      ],
+      "similarity": {
+        "value": 0.9994068262304773,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "NLP",
+        "federated learning"
+      ],
+      "similarity": {
+        "value": 0.9991736235997661,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "protein prediction",
+        "medical diagnosis"
+      ],
+      "similarity": {
+        "value": 0.9990661231790331,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "edge computing",
+        "OOD detection"
+      ],
+      "similarity": {
+        "value": 0.9988058938522295,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "machine learning",
+        "medical diagnosis"
+      ],
+      "similarity": {
+        "value": 0.9983973945293083,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "machine learning",
+        "neural network"
+      ],
+      "similarity": {
+        "value": 0.9983514395023743,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "federated learning",
+        "quantum computing"
+      ],
+      "similarity": {
+        "value": 0.9981720716924363,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "neural network",
+        "protein prediction"
+      ],
+      "similarity": {
+        "value": 0.998094693479216,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "diffusion model",
+        "speech recognition"
+      ],
+      "similarity": {
+        "value": 0.9979792736372755,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "transformer",
+        "federated learning"
+      ],
+      "similarity": {
+        "value": 0.997849556263573,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "machine learning",
+        "protein prediction"
+      ],
+      "similarity": {
+        "value": 0.99769275876868,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "deep learning",
+        "LLM"
+      ],
+      "similarity": {
+        "value": 0.9975962195216123,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "diffusion model",
+        "federated learning"
+      ],
+      "similarity": {
+        "value": 0.9973873166724744,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "transformer",
+        "protein prediction"
+      ],
+      "similarity": {
+        "value": 0.9968805660282868,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "transformer",
+        "medical diagnosis"
+      ],
+      "similarity": {
+        "value": 0.9968667769429282,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "pair": [
+        "edge computing",
+        "autonomous driving"
+      ],
+      "similarity": {
+        "value": 0.9966240087975577,
+        "origin": "cosine(v1, v2)",
+        "source": "FROM_MATH"
+      }
+    }
+  ],
+  "inv5_bimodality": [
+    {
+      "field": "AI safety",
+      "bimodality": {
+        "value": 0.9724815449525992,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (3.94\u00b2+1)/(14.02+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "distributed computing",
+      "bimodality": {
+        "value": 0.9718470304183832,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (3.93\u00b2+1)/(13.93+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "speech recognition",
+      "bimodality": {
+        "value": 0.9070190115875822,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.30\u00b2+1)/(3.96+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "neural network",
+      "bimodality": {
+        "value": 0.8963779912435685,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (3.49\u00b2+1)/(11.68+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "generative AI",
+      "bimodality": {
+        "value": 0.8887281043189955,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (3.43\u00b2+1)/(11.36+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "edge computing",
+      "bimodality": {
+        "value": 0.8669732420470844,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (3.26\u00b2+1)/(10.38+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "robotics AI",
+      "bimodality": {
+        "value": 0.8496558064943678,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.21\u00b2+1)/(3.92+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "OOD detection",
+      "bimodality": {
+        "value": 0.8490835132812605,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.90\u00b2+1)/(8.09+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "autonomous driving",
+      "bimodality": {
+        "value": 0.8471040256527781,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.69\u00b2+1)/(6.69+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "recommendation system",
+      "bimodality": {
+        "value": 0.8384068180630674,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.33\u00b2+1)/(4.67+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "computer vision",
+      "bimodality": {
+        "value": 0.8366226031596479,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.93\u00b2+1)/(8.48+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "machine learning",
+      "bimodality": {
+        "value": 0.8282648579311844,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.05\u00b2+1)/(3.27+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "reinforcement learning",
+      "bimodality": {
+        "value": 0.8249037184441091,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.05\u00b2+1)/(3.32+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "NLP",
+      "bimodality": {
+        "value": 0.8243809066696934,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.77\u00b2+1)/(7.55+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "GPT",
+      "bimodality": {
+        "value": 0.8205500331898368,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (1.83\u00b2+1)/(2.28+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "quantum computing",
+      "bimodality": {
+        "value": 0.8198759312424725,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.02\u00b2+1)/(3.20+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "diffusion model",
+      "bimodality": {
+        "value": 0.8090661444456462,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.02\u00b2+1)/(3.28+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "deep learning",
+      "bimodality": {
+        "value": 0.8036768759092402,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (1.41\u00b2+1)/(0.70+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "LLM",
+      "bimodality": {
+        "value": 0.7890425474389731,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (0.99\u00b2+1)/(-0.49+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "medical diagnosis",
+      "bimodality": {
+        "value": 0.7792526290809239,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (1.23\u00b2+1)/(0.22+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "transformer",
+      "bimodality": {
+        "value": 0.7781572288486542,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.43\u00b2+1)/(5.88+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "MLOps",
+      "bimodality": {
+        "value": 0.7626810944674488,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (1.63\u00b2+1)/(1.80+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "federated learning",
+      "bimodality": {
+        "value": 0.7539097912548568,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.13\u00b2+1)/(4.32+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "protein prediction",
+      "bimodality": {
+        "value": 0.7399735754120753,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.39\u00b2+1)/(6.08+3)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "AutoML",
+      "bimodality": {
+        "value": 0.7298752318455983,
+        "origin": "(skew\u00b2+1)/(kurt+3) = (2.11\u00b2+1)/(4.49+3)",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  ],
+  "inv6_temporal": [
+    {
+      "field": "distributed computing",
+      "cv_years": {
+        "value": 0.0017607806071135855,
+        "origin": "std(3.55)/mean(2018.15)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 15,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2008,
+      "newest": 2023
+    },
+    {
+      "field": "computer vision",
+      "cv_years": {
+        "value": 0.0017948611500750184,
+        "origin": "std(3.62)/mean(2017.30)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 14,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2010,
+      "newest": 2024
+    },
+    {
+      "field": "edge computing",
+      "cv_years": {
+        "value": 0.0014612422204657825,
+        "origin": "std(2.95)/mean(2019.70)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 14,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2011,
+      "newest": 2025
+    },
+    {
+      "field": "AI safety",
+      "cv_years": {
+        "value": 0.0016313213703099511,
+        "origin": "std(3.30)/mean(2022.90)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 14,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2011,
+      "newest": 2025
+    },
+    {
+      "field": "deep learning",
+      "cv_years": {
+        "value": 0.001435676337347833,
+        "origin": "std(2.90)/mean(2017.25)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 13,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2010,
+      "newest": 2023
+    },
+    {
+      "field": "neural network",
+      "cv_years": {
+        "value": 0.0014070181957957955,
+        "origin": "std(2.84)/mean(2016.50)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 12,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2010,
+      "newest": 2022
+    },
+    {
+      "field": "machine learning",
+      "cv_years": {
+        "value": 0.0014783134033294239,
+        "origin": "std(2.98)/mean(2016.90)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 11,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2010,
+      "newest": 2021
+    },
+    {
+      "field": "quantum computing",
+      "cv_years": {
+        "value": 0.0014721795154801452,
+        "origin": "std(2.97)/mean(2019.60)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 11,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2014,
+      "newest": 2025
+    },
+    {
+      "field": "speech recognition",
+      "cv_years": {
+        "value": 0.0017213557188951573,
+        "origin": "std(3.48)/mean(2019.75)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 11,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2013,
+      "newest": 2024
+    },
+    {
+      "field": "NLP",
+      "cv_years": {
+        "value": 0.001495890509743846,
+        "origin": "std(3.02)/mean(2019.65)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 10,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2014,
+      "newest": 2024
+    },
+    {
+      "field": "AutoML",
+      "cv_years": {
+        "value": 0.0011733015586592372,
+        "origin": "std(2.37)/mean(2018.70)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 10,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2014,
+      "newest": 2024
+    },
+    {
+      "field": "MLOps",
+      "cv_years": {
+        "value": 0.0011665452280343604,
+        "origin": "std(2.36)/mean(2019.05)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 10,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2015,
+      "newest": 2025
+    },
+    {
+      "field": "reinforcement learning",
+      "cv_years": {
+        "value": 0.0012559143322603938,
+        "origin": "std(2.54)/mean(2018.65)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 9,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2015,
+      "newest": 2024
+    },
+    {
+      "field": "protein prediction",
+      "cv_years": {
+        "value": 0.0013267119566366754,
+        "origin": "std(2.68)/mean(2021.10)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 9,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2016,
+      "newest": 2025
+    },
+    {
+      "field": "medical diagnosis",
+      "cv_years": {
+        "value": 0.0011775451056017167,
+        "origin": "std(2.38)/mean(2020.53)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 9,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2016,
+      "newest": 2025
+    },
+    {
+      "field": "autonomous driving",
+      "cv_years": {
+        "value": 0.0014471855003428305,
+        "origin": "std(2.92)/mean(2020.50)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 9,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2015,
+      "newest": 2024
+    },
+    {
+      "field": "robotics AI",
+      "cv_years": {
+        "value": 0.0013275001413725355,
+        "origin": "std(2.68)/mean(2019.90)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 9,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2015,
+      "newest": 2024
+    },
+    {
+      "field": "recommendation system",
+      "cv_years": {
+        "value": 0.0013313199850219196,
+        "origin": "std(2.69)/mean(2019.35)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 9,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2016,
+      "newest": 2025
+    },
+    {
+      "field": "transformer",
+      "cv_years": {
+        "value": 0.0009189302233365739,
+        "origin": "std(1.86)/mean(2020.55)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 6,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2018,
+      "newest": 2024
+    },
+    {
+      "field": "LLM",
+      "cv_years": {
+        "value": 0.0006832587611156006,
+        "origin": "std(1.38)/mean(2022.70)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 6,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2018,
+      "newest": 2024
+    },
+    {
+      "field": "GPT",
+      "cv_years": {
+        "value": 0.0005870540409866968,
+        "origin": "std(1.19)/mean(2022.70)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 6,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2018,
+      "newest": 2024
+    },
+    {
+      "field": "diffusion model",
+      "cv_years": {
+        "value": 0.0006744229896640221,
+        "origin": "std(1.36)/mean(2022.20)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 6,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2019,
+      "newest": 2025
+    },
+    {
+      "field": "OOD detection",
+      "cv_years": {
+        "value": 0.000917453353333568,
+        "origin": "std(1.85)/mean(2021.60)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 6,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2019,
+      "newest": 2025
+    },
+    {
+      "field": "generative AI",
+      "cv_years": {
+        "value": 0.000816510249668195,
+        "origin": "std(1.65)/mean(2022.65)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 5,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2019,
+      "newest": 2024
+    },
+    {
+      "field": "federated learning",
+      "cv_years": {
+        "value": 0.0006728683556876408,
+        "origin": "std(1.36)/mean(2020.05)",
+        "source": "FROM_MATH"
+      },
+      "age_range": {
+        "value": 5,
+        "origin": "max-min years",
+        "source": "FROM_DATA"
+      },
+      "oldest": 2018,
+      "newest": 2023
+    }
+  ],
+  "inv7_symmetry": [
+    {
+      "field": "distributed computing",
+      "gini": {
+        "value": 0.7144693503435325,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "ESPECIALIZADO"
+    },
+    {
+      "field": "AI safety",
+      "gini": {
+        "value": 0.6996158511928829,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "ESPECIALIZADO"
+    },
+    {
+      "field": "recommendation system",
+      "gini": {
+        "value": 0.6973328568644013,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "ESPECIALIZADO"
+    },
+    {
+      "field": "speech recognition",
+      "gini": {
+        "value": 0.5667320204484722,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "autonomous driving",
+      "gini": {
+        "value": 0.528918677888635,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "OOD detection",
+      "gini": {
+        "value": 0.49141007194244535,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "edge computing",
+      "gini": {
+        "value": 0.48956224696356265,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "robotics AI",
+      "gini": {
+        "value": 0.486662353074478,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "diffusion model",
+      "gini": {
+        "value": 0.4681170587881072,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "quantum computing",
+      "gini": {
+        "value": 0.44367077464788723,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "generative AI",
+      "gini": {
+        "value": 0.43582946742057843,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "computer vision",
+      "gini": {
+        "value": 0.4296516561176058,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "machine learning",
+      "gini": {
+        "value": 0.3844967652259133,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "transformer",
+      "gini": {
+        "value": 0.37367385601865344,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "federated learning",
+      "gini": {
+        "value": 0.3693263390392048,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "medical diagnosis",
+      "gini": {
+        "value": 0.35731562966393815,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "NLP",
+      "gini": {
+        "value": 0.32853279857443807,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "reinforcement learning",
+      "gini": {
+        "value": 0.3263632519886197,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "AutoML",
+      "gini": {
+        "value": 0.3065490551220099,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "neural network",
+      "gini": {
+        "value": 0.30305018506172554,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "MIXTO"
+    },
+    {
+      "field": "protein prediction",
+      "gini": {
+        "value": 0.2960261875761265,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "SIM\u00c9TRICO"
+    },
+    {
+      "field": "MLOps",
+      "gini": {
+        "value": 0.2406436000411904,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "SIM\u00c9TRICO"
+    },
+    {
+      "field": "GPT",
+      "gini": {
+        "value": 0.20421433898011346,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "SIM\u00c9TRICO"
+    },
+    {
+      "field": "LLM",
+      "gini": {
+        "value": 0.1795669181675292,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "SIM\u00c9TRICO"
+    },
+    {
+      "field": "deep learning",
+      "gini": {
+        "value": 0.1630114647435721,
+        "origin": "Gini coefficient",
+        "source": "FROM_STATISTICS"
+      },
+      "type": "SIM\u00c9TRICO"
+    }
+  ],
+  "inv8_outliers": [
+    {
+      "field": "AI safety",
+      "outlier_influence": {
+        "value": 0.9972270187475912,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "distributed computing",
+      "outlier_influence": {
+        "value": 0.9954105727196214,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "recommendation system",
+      "outlier_influence": {
+        "value": 0.9736359223536856,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "autonomous driving",
+      "outlier_influence": {
+        "value": 0.9655532583453041,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "quantum computing",
+      "outlier_influence": {
+        "value": 0.9627917291058478,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "speech recognition",
+      "outlier_influence": {
+        "value": 0.9617041186530142,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "robotics AI",
+      "outlier_influence": {
+        "value": 0.9397074485936027,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "OOD detection",
+      "outlier_influence": {
+        "value": 0.9387139253370942,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "reinforcement learning",
+      "outlier_influence": {
+        "value": 0.9119521871505016,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "neural network",
+      "outlier_influence": {
+        "value": 0.8953496584493228,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "generative AI",
+      "outlier_influence": {
+        "value": 0.8851367656594695,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "computer vision",
+      "outlier_influence": {
+        "value": 0.8699639320367037,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "GPT",
+      "outlier_influence": {
+        "value": 0.865305869085386,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "NLP",
+      "outlier_influence": {
+        "value": 0.8602196431168897,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "edge computing",
+      "outlier_influence": {
+        "value": 0.8521315317760126,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "machine learning",
+      "outlier_influence": {
+        "value": 0.8133751265309862,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "deep learning",
+      "outlier_influence": {
+        "value": 0.8003303006706856,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "federated learning",
+      "outlier_influence": {
+        "value": 0.7987021170578823,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "diffusion model",
+      "outlier_influence": {
+        "value": 0.7935076558455693,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "transformer",
+      "outlier_influence": {
+        "value": 0.7793178827067239,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "MLOps",
+      "outlier_influence": {
+        "value": 0.7267174328447387,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "protein prediction",
+      "outlier_influence": {
+        "value": 0.68628496052288,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "medical diagnosis",
+      "outlier_influence": {
+        "value": 0.6104078376352405,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "AutoML",
+      "outlier_influence": {
+        "value": 0.6053747450930853,
+        "origin": "(var_total-var_clean)/var_total",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "field": "LLM",
+      "outlier_influence": {
+        "value": 0,
+        "origin": "no outliers",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  ],
+  "inv9_incompatible": [
+    {
+      "field": "reinforcement learning",
+      "corr_stars_forks": {
+        "value": 0.5433166483756922,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.9994068291234418,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "deep learning",
+      "corr_stars_forks": {
+        "value": 0.46921869371336944,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.9962831187269392,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "LLM",
+      "corr_stars_forks": {
+        "value": 0.8405991335820792,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.979253424750647,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "protein prediction",
+      "corr_stars_forks": {
+        "value": 0.9685182435865042,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.9749019580978915,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "edge computing",
+      "corr_stars_forks": {
+        "value": 0.9469648598696176,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.9506536637760012,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "recommendation system",
+      "corr_stars_forks": {
+        "value": 0.9760422489327059,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.9481796407504707,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "robotics AI",
+      "corr_stars_forks": {
+        "value": 0.7767789556740478,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.9187422534673472,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "MLOps",
+      "corr_stars_forks": {
+        "value": 0.7169611135886538,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.9184638941255695,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "AutoML",
+      "corr_stars_forks": {
+        "value": 0.8966488489988372,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.9170659845473188,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "AI safety",
+      "corr_stars_forks": {
+        "value": 0.8047401127897397,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.915785990304619,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "quantum computing",
+      "corr_stars_forks": {
+        "value": 0.9016031351181497,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.9149064050236759,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "NLP",
+      "corr_stars_forks": {
+        "value": 0.9542029022816099,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.8986276170433862,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "GPT",
+      "corr_stars_forks": {
+        "value": 0.6579957222652835,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.8769840501206294,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "speech recognition",
+      "corr_stars_forks": {
+        "value": 0.9283400901265869,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.85642473091531,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "diffusion model",
+      "corr_stars_forks": {
+        "value": 0.9646946115307082,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.8338159476521662,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "medical diagnosis",
+      "corr_stars_forks": {
+        "value": 0.798898763130238,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.8208794244056385,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "OOD detection",
+      "corr_stars_forks": {
+        "value": 0.9725513748561714,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.7334498489278476,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "computer vision",
+      "corr_stars_forks": {
+        "value": 0.9231769877649586,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.6996097321680441,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "federated learning",
+      "corr_stars_forks": {
+        "value": 0.95192731702235,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.47674608067796753,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "machine learning",
+      "corr_stars_forks": {
+        "value": 0.9194606387680395,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.4370199543106773,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "neural network",
+      "corr_stars_forks": {
+        "value": 0.8068291563698042,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.3618200642988403,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "transformer",
+      "corr_stars_forks": {
+        "value": 0.9556142930430549,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.27609535991621414,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "distributed computing",
+      "corr_stars_forks": {
+        "value": 0.998500712291795,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.2395086521745291,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "autonomous driving",
+      "corr_stars_forks": {
+        "value": 0.9921270207900773,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.10947635637381081,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "field": "generative AI",
+      "corr_stars_forks": {
+        "value": 0.9607439100207915,
+        "origin": "pearson(stars, forks)",
+        "source": "FROM_STATISTICS"
+      },
+      "incompatibility": {
+        "value": 0.10034031247468833,
+        "origin": "1 - |corr_sf * corr_ss|",
+        "source": "FROM_MATH"
+      }
+    }
+  ],
+  "inv10_endogeneity": [
+    {
+      "field": "robotics AI",
+      "autocorr": {
+        "value": 0.9908668950115719,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "reinforcement learning",
+      "autocorr": {
+        "value": 0.9885886340498148,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "GPT",
+      "autocorr": {
+        "value": 0.9857130602959404,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "diffusion model",
+      "autocorr": {
+        "value": 0.9814060079378054,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "LLM",
+      "autocorr": {
+        "value": 0.9793116730321495,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "recommendation system",
+      "autocorr": {
+        "value": 0.9778297794199899,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "deep learning",
+      "autocorr": {
+        "value": 0.9741008947514382,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "medical diagnosis",
+      "autocorr": {
+        "value": 0.9720560827210727,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "federated learning",
+      "autocorr": {
+        "value": 0.9686914358490948,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "quantum computing",
+      "autocorr": {
+        "value": 0.9665481576753966,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "distributed computing",
+      "autocorr": {
+        "value": 0.9644294307399967,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "OOD detection",
+      "autocorr": {
+        "value": 0.9624957078664633,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "AutoML",
+      "autocorr": {
+        "value": 0.9610287536215407,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "machine learning",
+      "autocorr": {
+        "value": 0.952828239003232,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "autonomous driving",
+      "autocorr": {
+        "value": 0.9516828233485333,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "NLP",
+      "autocorr": {
+        "value": 0.9484928062666765,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "speech recognition",
+      "autocorr": {
+        "value": 0.944817624245819,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "MLOps",
+      "autocorr": {
+        "value": 0.9417981434983933,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "transformer",
+      "autocorr": {
+        "value": 0.9276318022810774,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "computer vision",
+      "autocorr": {
+        "value": 0.9233511868113699,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "AI safety",
+      "autocorr": {
+        "value": 0.9050713122614226,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "protein prediction",
+      "autocorr": {
+        "value": 0.8748947614611319,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "edge computing",
+      "autocorr": {
+        "value": 0.7953614290118615,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "neural network",
+      "autocorr": {
+        "value": 0.7924906429175519,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    },
+    {
+      "field": "generative AI",
+      "autocorr": {
+        "value": 0.7386766175631464,
+        "origin": "pearson(x[:-1], x[1:])",
+        "source": "FROM_STATISTICS"
+      },
+      "endogeneity": "FUERTE"
+    }
+  ],
+  "audit_log": [
+    {
+      "step": "data_collection",
+      "origin": "FROM_DATA: GitHub API",
+      "ts": "2025-12-07T17:34:32.740989"
+    },
+    {
+      "step": "inv1_coherence_vs_performance",
+      "origin": "FROM_MATH",
+      "ts": "2025-12-07T17:34:32.742530"
+    },
+    {
+      "step": "inv2_consensus",
+      "origin": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:34:32.743981"
+    },
+    {
+      "step": "inv3_unit_effect",
+      "origin": "FROM_MATH",
+      "ts": "2025-12-07T17:34:32.746290"
+    },
+    {
+      "step": "inv4_structural_similarity",
+      "origin": "FROM_MATH",
+      "ts": "2025-12-07T17:34:32.758900"
+    },
+    {
+      "step": "inv5_bimodality",
+      "origin": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:34:32.768428"
+    },
+    {
+      "step": "inv6_temporal_maturation",
+      "origin": "FROM_DATA",
+      "ts": "2025-12-07T17:34:32.769271"
+    },
+    {
+      "step": "inv7_symmetry_vs_specialization",
+      "origin": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:34:32.769552"
+    },
+    {
+      "step": "inv8_outlier_influence",
+      "origin": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:34:32.770987"
+    },
+    {
+      "step": "inv9_incompatible_metrics",
+      "origin": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:34:32.772281"
+    },
+    {
+      "step": "inv10_endogeneity",
+      "origin": "FROM_STATISTICS",
+      "ts": "2025-12-07T17:34:32.772869"
+    }
+  ]
+}

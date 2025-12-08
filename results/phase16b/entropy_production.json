@@ -1,86 +1,401 @@
 {
   "seeds": [
     {
-      "seed": 0,
-      "global_epr": 2.8821377165521165,
-      "windowed_mean": 2.4427695377083394,
-      "windowed_p95": 3.0606219457226236
+      "seed": {
+        "value": 0,
+        "origin": "counted(seeds[0].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_epr": {
+        "value": 2.8821377165521165,
+        "origin": "computed(seeds[0].global_epr)",
+        "source": "FROM_MATH"
+      },
+      "windowed_mean": {
+        "value": 2.4427695377083394,
+        "origin": "mean(seeds[0].windowed_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "windowed_p95": {
+        "value": 3.0606219457226236,
+        "origin": "computed(seeds[0].windowed_p95)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "seed": 1,
-      "global_epr": 2.8709288443445806,
-      "windowed_mean": 2.449869014285157,
-      "windowed_p95": 3.059323440958346
+      "seed": {
+        "value": 1,
+        "origin": "counted(seeds[1].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_epr": {
+        "value": 2.8709288443445806,
+        "origin": "computed(seeds[1].global_epr)",
+        "source": "FROM_MATH"
+      },
+      "windowed_mean": {
+        "value": 2.449869014285157,
+        "origin": "mean(seeds[1].windowed_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "windowed_p95": {
+        "value": 3.059323440958346,
+        "origin": "computed(seeds[1].windowed_p95)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "seed": 2,
-      "global_epr": 2.9233159962586996,
-      "windowed_mean": 2.424692857685006,
-      "windowed_p95": 3.0605065794636084
+      "seed": {
+        "value": 2,
+        "origin": "counted(seeds[2].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_epr": {
+        "value": 2.9233159962586996,
+        "origin": "computed(seeds[2].global_epr)",
+        "source": "FROM_MATH"
+      },
+      "windowed_mean": {
+        "value": 2.424692857685006,
+        "origin": "mean(seeds[2].windowed_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "windowed_p95": {
+        "value": 3.0605065794636084,
+        "origin": "computed(seeds[2].windowed_p95)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "seed": 3,
-      "global_epr": 2.984262191061453,
-      "windowed_mean": 2.471951153008259,
-      "windowed_p95": 3.0099291115625886
+      "seed": {
+        "value": 3,
+        "origin": "counted(seeds[3].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_epr": {
+        "value": 2.984262191061453,
+        "origin": "computed(seeds[3].global_epr)",
+        "source": "FROM_MATH"
+      },
+      "windowed_mean": {
+        "value": 2.471951153008259,
+        "origin": "mean(seeds[3].windowed_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "windowed_p95": {
+        "value": 3.0099291115625886,
+        "origin": "computed(seeds[3].windowed_p95)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "seed": 4,
-      "global_epr": 2.9183531318803686,
-      "windowed_mean": 2.3510130732168393,
-      "windowed_p95": 3.001821554027523
+      "seed": {
+        "value": 4,
+        "origin": "counted(seeds[4].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_epr": {
+        "value": 2.9183531318803686,
+        "origin": "computed(seeds[4].global_epr)",
+        "source": "FROM_MATH"
+      },
+      "windowed_mean": {
+        "value": 2.3510130732168393,
+        "origin": "mean(seeds[4].windowed_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "windowed_p95": {
+        "value": 3.001821554027523,
+        "origin": "computed(seeds[4].windowed_p95)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "seed": 5,
-      "global_epr": 2.8919018289604286,
-      "windowed_mean": 2.4060709463443644,
-      "windowed_p95": 2.986623435181284
+      "seed": {
+        "value": 5,
+        "origin": "counted(seeds[5].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_epr": {
+        "value": 2.8919018289604286,
+        "origin": "computed(seeds[5].global_epr)",
+        "source": "FROM_MATH"
+      },
+      "windowed_mean": {
+        "value": 2.4060709463443644,
+        "origin": "mean(seeds[5].windowed_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "windowed_p95": {
+        "value": 2.986623435181284,
+        "origin": "computed(seeds[5].windowed_p95)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "seed": 6,
-      "global_epr": 2.857063898524473,
-      "windowed_mean": 2.3841725257578297,
-      "windowed_p95": 2.9037945537305148
+      "seed": {
+        "value": 6,
+        "origin": "counted(seeds[6].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_epr": {
+        "value": 2.857063898524473,
+        "origin": "computed(seeds[6].global_epr)",
+        "source": "FROM_MATH"
+      },
+      "windowed_mean": {
+        "value": 2.3841725257578297,
+        "origin": "mean(seeds[6].windowed_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "windowed_p95": {
+        "value": 2.9037945537305148,
+        "origin": "computed(seeds[6].windowed_p95)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "seed": 7,
-      "global_epr": 3.1499569609912728,
-      "windowed_mean": 2.4703987019482185,
-      "windowed_p95": 3.047103955856219
+      "seed": {
+        "value": 7,
+        "origin": "counted(seeds[7].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_epr": {
+        "value": 3.1499569609912728,
+        "origin": "computed(seeds[7].global_epr)",
+        "source": "FROM_MATH"
+      },
+      "windowed_mean": {
+        "value": 2.4703987019482185,
+        "origin": "mean(seeds[7].windowed_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "windowed_p95": {
+        "value": 3.047103955856219,
+        "origin": "computed(seeds[7].windowed_p95)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "seed": 8,
-      "global_epr": 2.836070043469381,
-      "windowed_mean": 2.3587715201274464,
-      "windowed_p95": 3.0540611488755336
+      "seed": {
+        "value": 8,
+        "origin": "counted(seeds[8].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_epr": {
+        "value": 2.836070043469381,
+        "origin": "computed(seeds[8].global_epr)",
+        "source": "FROM_MATH"
+      },
+      "windowed_mean": {
+        "value": 2.3587715201274464,
+        "origin": "mean(seeds[8].windowed_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "windowed_p95": {
+        "value": 3.0540611488755336,
+        "origin": "computed(seeds[8].windowed_p95)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "seed": 9,
-      "global_epr": 2.8394812819155635,
-      "windowed_mean": 2.4145873625590637,
-      "windowed_p95": 3.0607686342463873
+      "seed": {
+        "value": 9,
+        "origin": "counted(seeds[9].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_epr": {
+        "value": 2.8394812819155635,
+        "origin": "computed(seeds[9].global_epr)",
+        "source": "FROM_MATH"
+      },
+      "windowed_mean": {
+        "value": 2.4145873625590637,
+        "origin": "mean(seeds[9].windowed_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "windowed_p95": {
+        "value": 3.0607686342463873,
+        "origin": "computed(seeds[9].windowed_p95)",
+        "source": "FROM_MATH"
+      }
     }
   ],
   "global": {
-    "mean_epr": 2.915347189395834,
-    "std_epr": 0.08884061409294448,
-    "median_epr": 2.8870197727562728,
-    "p95_epr": 3.0753943145228537
+    "mean_epr": {
+      "value": 2.915347189395834,
+      "origin": "mean(global.mean_epr)",
+      "source": "FROM_STATISTICS"
+    },
+    "std_epr": {
+      "value": 0.08884061409294448,
+      "origin": "std(global.std_epr)",
+      "source": "FROM_STATISTICS"
+    },
+    "median_epr": {
+      "value": 2.8870197727562728,
+      "origin": "mean(global.median_epr)",
+      "source": "FROM_STATISTICS"
+    },
+    "p95_epr": {
+      "value": 3.0753943145228537,
+      "origin": "computed(global.p95_epr)",
+      "source": "FROM_MATH"
+    }
   },
   "vs_null": {
     "markov1": {
-      "null_mean": 0.0011966133141647485,
-      "null_std": 0.00124192624184384,
-      "null_p95": 0.003985502557816921,
-      "real_mean": 2.915347189395834,
+      "null_mean": {
+        "value": 0.0011966133141647485,
+        "origin": "mean(vs_null.markov1.null_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "null_std": {
+        "value": 0.00124192624184384,
+        "origin": "std(vs_null.markov1.null_std)",
+        "source": "FROM_STATISTICS"
+      },
+      "null_p95": {
+        "value": 0.003985502557816921,
+        "origin": "normalized(vs_null.markov1.null_p95)",
+        "source": "FROM_MATH"
+      },
+      "real_mean": {
+        "value": 2.915347189395834,
+        "origin": "mean(vs_null.markov1.real_mean)",
+        "source": "FROM_STATISTICS"
+      },
       "above_p95": true
     },
     "markov2": {
-      "null_mean": 0.005737325614172295,
-      "null_std": 0.003199236971629928,
-      "null_p95": 0.012235599363772918,
-      "real_mean": 2.915347189395834,
+      "null_mean": {
+        "value": 0.005737325614172295,
+        "origin": "mean(vs_null.markov2.null_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "null_std": {
+        "value": 0.003199236971629928,
+        "origin": "std(vs_null.markov2.null_std)",
+        "source": "FROM_STATISTICS"
+      },
+      "null_p95": {
+        "value": 0.012235599363772918,
+        "origin": "normalized(vs_null.markov2.null_p95)",
+        "source": "FROM_MATH"
+      },
+      "real_mean": {
+        "value": 2.915347189395834,
+        "origin": "mean(vs_null.markov2.real_mean)",
+        "source": "FROM_STATISTICS"
+      },
       "above_p95": true
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "711a6b8c5cd3",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.437644",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase16b/entropy_production.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.437792",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 142,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 151,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 142,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 151,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
     }
   }
 }

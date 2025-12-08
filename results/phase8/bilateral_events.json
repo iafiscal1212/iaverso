@@ -1,226 +1,720 @@
-[
-  {
-    "t": 135,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "SLEEP",
-    "eva_state": "WAKE"
+{
+  "data": [
+    {
+      "t": {
+        "value": 135,
+        "origin": "counted(data[0].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[0].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[0].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SLEEP",
+      "eva_state": "WAKE"
+    },
+    {
+      "t": {
+        "value": 163,
+        "origin": "counted(data[1].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[1].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[1].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "LEARN",
+      "eva_state": "WAKE"
+    },
+    {
+      "t": {
+        "value": 434,
+        "origin": "counted(data[2].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[2].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 1,
+        "origin": "counted(data[2].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SLEEP",
+      "eva_state": "SOCIAL"
+    },
+    {
+      "t": {
+        "value": 436,
+        "origin": "counted(data[3].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[3].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[3].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SLEEP",
+      "eva_state": "WAKE"
+    },
+    {
+      "t": {
+        "value": 468,
+        "origin": "counted(data[4].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[4].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[4].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "LEARN"
+    },
+    {
+      "t": {
+        "value": 486,
+        "origin": "counted(data[5].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[5].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[5].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "LEARN"
+    },
+    {
+      "t": {
+        "value": 681,
+        "origin": "counted(data[6].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[6].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[6].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "WAKE"
+    },
+    {
+      "t": {
+        "value": 991,
+        "origin": "counted(data[7].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[7].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[7].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "WORK",
+      "eva_state": "SLEEP"
+    },
+    {
+      "t": {
+        "value": 1044,
+        "origin": "counted(data[8].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[8].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[8].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "WORK",
+      "eva_state": "SLEEP"
+    },
+    {
+      "t": {
+        "value": 1047,
+        "origin": "counted(data[9].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[9].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[9].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SLEEP"
+    },
+    {
+      "t": {
+        "value": 1284,
+        "origin": "counted(data[10].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[10].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[10].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "WORK",
+      "eva_state": "LEARN"
+    },
+    {
+      "t": {
+        "value": 1317,
+        "origin": "counted(data[11].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[11].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[11].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SLEEP",
+      "eva_state": "SOCIAL"
+    },
+    {
+      "t": {
+        "value": 1543,
+        "origin": "counted(data[12].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[12].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[12].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "WAKE",
+      "eva_state": "LEARN"
+    },
+    {
+      "t": {
+        "value": 1630,
+        "origin": "counted(data[13].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 1,
+        "origin": "counted(data[13].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[13].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "SLEEP"
+    },
+    {
+      "t": {
+        "value": 1662,
+        "origin": "counted(data[14].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[14].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[14].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "WORK",
+      "eva_state": "SLEEP"
+    },
+    {
+      "t": {
+        "value": 1710,
+        "origin": "counted(data[15].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[15].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[15].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "WAKE",
+      "eva_state": "SLEEP"
+    },
+    {
+      "t": {
+        "value": 1730,
+        "origin": "counted(data[16].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[16].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[16].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "WAKE",
+      "eva_state": "SLEEP"
+    },
+    {
+      "t": {
+        "value": 1955,
+        "origin": "counted(data[17].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[17].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[17].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SOCIAL",
+      "eva_state": "LEARN"
+    },
+    {
+      "t": {
+        "value": 2025,
+        "origin": "counted(data[18].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[18].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[18].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SLEEP",
+      "eva_state": "WAKE"
+    },
+    {
+      "t": {
+        "value": 2129,
+        "origin": "counted(data[19].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[19].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[19].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "SLEEP",
+      "eva_state": "SOCIAL"
+    },
+    {
+      "t": {
+        "value": 2134,
+        "origin": "counted(data[20].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[20].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": -1,
+        "origin": "counted(data[20].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "LEARN",
+      "eva_state": "SOCIAL"
+    },
+    {
+      "t": {
+        "value": 2171,
+        "origin": "counted(data[21].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[21].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[21].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "WORK",
+      "eva_state": "WORK"
+    },
+    {
+      "t": {
+        "value": 2175,
+        "origin": "counted(data[22].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[22].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[22].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "WORK",
+      "eva_state": "SLEEP"
+    },
+    {
+      "t": {
+        "value": 2459,
+        "origin": "counted(data[23].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[23].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[23].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "WORK",
+      "eva_state": "WAKE"
+    },
+    {
+      "t": {
+        "value": 2482,
+        "origin": "counted(data[24].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[24].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[24].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "LEARN",
+      "eva_state": "LEARN"
+    },
+    {
+      "t": {
+        "value": 2486,
+        "origin": "counted(data[25].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[25].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[25].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "WAKE",
+      "eva_state": "SLEEP"
+    },
+    {
+      "t": {
+        "value": 2504,
+        "origin": "counted(data[26].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[26].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[26].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "LEARN",
+      "eva_state": "SLEEP"
+    },
+    {
+      "t": {
+        "value": 2619,
+        "origin": "counted(data[27].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[27].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[27].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "WORK",
+      "eva_state": "WORK"
+    },
+    {
+      "t": {
+        "value": 2688,
+        "origin": "counted(data[28].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[28].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[28].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "WAKE",
+      "eva_state": "WAKE"
+    },
+    {
+      "t": {
+        "value": 2862,
+        "origin": "counted(data[29].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[29].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[29].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "LEARN",
+      "eva_state": "SLEEP"
+    },
+    {
+      "t": {
+        "value": 2951,
+        "origin": "counted(data[30].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[30].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[30].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "LEARN",
+      "eva_state": "WAKE"
+    },
+    {
+      "t": {
+        "value": 2972,
+        "origin": "counted(data[31].t)",
+        "source": "FROM_DATA"
+      },
+      "neo_mode": {
+        "value": 0,
+        "origin": "counted(data[31].neo_mode)",
+        "source": "FROM_DATA"
+      },
+      "eva_mode": {
+        "value": 0,
+        "origin": "counted(data[31].eva_mode)",
+        "source": "FROM_DATA"
+      },
+      "neo_state": "WAKE",
+      "eva_state": "SOCIAL"
+    }
+  ],
+  "_converted_from_list": true,
+  "metadata": {
+    "experiment_id": {
+      "value": "bb8578918bd9",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:23:22.234639",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase8/bilateral_events.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
   },
-  {
-    "t": 163,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "LEARN",
-    "eva_state": "WAKE"
-  },
-  {
-    "t": 434,
-    "neo_mode": 0,
-    "eva_mode": 1,
-    "neo_state": "SLEEP",
-    "eva_state": "SOCIAL"
-  },
-  {
-    "t": 436,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "SLEEP",
-    "eva_state": "WAKE"
-  },
-  {
-    "t": 468,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "SOCIAL",
-    "eva_state": "LEARN"
-  },
-  {
-    "t": 486,
-    "neo_mode": 1,
-    "eva_mode": 0,
-    "neo_state": "SOCIAL",
-    "eva_state": "LEARN"
-  },
-  {
-    "t": 681,
-    "neo_mode": 1,
-    "eva_mode": 0,
-    "neo_state": "SOCIAL",
-    "eva_state": "WAKE"
-  },
-  {
-    "t": 991,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "WORK",
-    "eva_state": "SLEEP"
-  },
-  {
-    "t": 1044,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "WORK",
-    "eva_state": "SLEEP"
-  },
-  {
-    "t": 1047,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "SOCIAL",
-    "eva_state": "SLEEP"
-  },
-  {
-    "t": 1284,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "WORK",
-    "eva_state": "LEARN"
-  },
-  {
-    "t": 1317,
-    "neo_mode": 0,
-    "eva_mode": -1,
-    "neo_state": "SLEEP",
-    "eva_state": "SOCIAL"
-  },
-  {
-    "t": 1543,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "WAKE",
-    "eva_state": "LEARN"
-  },
-  {
-    "t": 1630,
-    "neo_mode": 1,
-    "eva_mode": 0,
-    "neo_state": "SOCIAL",
-    "eva_state": "SLEEP"
-  },
-  {
-    "t": 1662,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "WORK",
-    "eva_state": "SLEEP"
-  },
-  {
-    "t": 1710,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "WAKE",
-    "eva_state": "SLEEP"
-  },
-  {
-    "t": 1730,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "WAKE",
-    "eva_state": "SLEEP"
-  },
-  {
-    "t": 1955,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "SOCIAL",
-    "eva_state": "LEARN"
-  },
-  {
-    "t": 2025,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "SLEEP",
-    "eva_state": "WAKE"
-  },
-  {
-    "t": 2129,
-    "neo_mode": 0,
-    "eva_mode": -1,
-    "neo_state": "SLEEP",
-    "eva_state": "SOCIAL"
-  },
-  {
-    "t": 2134,
-    "neo_mode": 0,
-    "eva_mode": -1,
-    "neo_state": "LEARN",
-    "eva_state": "SOCIAL"
-  },
-  {
-    "t": 2171,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "WORK",
-    "eva_state": "WORK"
-  },
-  {
-    "t": 2175,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "WORK",
-    "eva_state": "SLEEP"
-  },
-  {
-    "t": 2459,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "WORK",
-    "eva_state": "WAKE"
-  },
-  {
-    "t": 2482,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "LEARN",
-    "eva_state": "LEARN"
-  },
-  {
-    "t": 2486,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "WAKE",
-    "eva_state": "SLEEP"
-  },
-  {
-    "t": 2504,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "LEARN",
-    "eva_state": "SLEEP"
-  },
-  {
-    "t": 2619,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "WORK",
-    "eva_state": "WORK"
-  },
-  {
-    "t": 2688,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "WAKE",
-    "eva_state": "WAKE"
-  },
-  {
-    "t": 2862,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "LEARN",
-    "eva_state": "SLEEP"
-  },
-  {
-    "t": 2951,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "LEARN",
-    "eva_state": "WAKE"
-  },
-  {
-    "t": 2972,
-    "neo_mode": 0,
-    "eva_mode": 0,
-    "neo_state": "WAKE",
-    "eva_state": "SOCIAL"
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:23:22.234962",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 230,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 303,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 230,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 303,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
-]
+}

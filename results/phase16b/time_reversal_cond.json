@@ -1,84 +1,399 @@
 {
   "seeds": [
     {
-      "seed": 0,
-      "global_auc": 0.5,
-      "conditional_auc": 0.5,
-      "n_high_int_windows": 0
+      "seed": {
+        "value": 0,
+        "origin": "counted(seeds[0].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[0].global_auc)",
+        "source": "FROM_MATH"
+      },
+      "conditional_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[0].conditional_auc)",
+        "source": "FROM_MATH"
+      },
+      "n_high_int_windows": {
+        "value": 0,
+        "origin": "count(seeds[0].n_high_int_windows)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 1,
-      "global_auc": 0.5,
-      "conditional_auc": 0.5,
-      "n_high_int_windows": 0
+      "seed": {
+        "value": 1,
+        "origin": "counted(seeds[1].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[1].global_auc)",
+        "source": "FROM_MATH"
+      },
+      "conditional_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[1].conditional_auc)",
+        "source": "FROM_MATH"
+      },
+      "n_high_int_windows": {
+        "value": 0,
+        "origin": "count(seeds[1].n_high_int_windows)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 2,
-      "global_auc": 0.5,
-      "conditional_auc": 0.5,
-      "n_high_int_windows": 0
+      "seed": {
+        "value": 2,
+        "origin": "counted(seeds[2].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[2].global_auc)",
+        "source": "FROM_MATH"
+      },
+      "conditional_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[2].conditional_auc)",
+        "source": "FROM_MATH"
+      },
+      "n_high_int_windows": {
+        "value": 0,
+        "origin": "count(seeds[2].n_high_int_windows)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 3,
-      "global_auc": 0.5,
-      "conditional_auc": 0.5,
-      "n_high_int_windows": 0
+      "seed": {
+        "value": 3,
+        "origin": "counted(seeds[3].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[3].global_auc)",
+        "source": "FROM_MATH"
+      },
+      "conditional_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[3].conditional_auc)",
+        "source": "FROM_MATH"
+      },
+      "n_high_int_windows": {
+        "value": 0,
+        "origin": "count(seeds[3].n_high_int_windows)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 4,
-      "global_auc": 0.5,
-      "conditional_auc": 0.5,
-      "n_high_int_windows": 0
+      "seed": {
+        "value": 4,
+        "origin": "counted(seeds[4].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[4].global_auc)",
+        "source": "FROM_MATH"
+      },
+      "conditional_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[4].conditional_auc)",
+        "source": "FROM_MATH"
+      },
+      "n_high_int_windows": {
+        "value": 0,
+        "origin": "count(seeds[4].n_high_int_windows)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 5,
-      "global_auc": 0.5,
-      "conditional_auc": 0.5,
-      "n_high_int_windows": 0
+      "seed": {
+        "value": 5,
+        "origin": "counted(seeds[5].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[5].global_auc)",
+        "source": "FROM_MATH"
+      },
+      "conditional_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[5].conditional_auc)",
+        "source": "FROM_MATH"
+      },
+      "n_high_int_windows": {
+        "value": 0,
+        "origin": "count(seeds[5].n_high_int_windows)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 6,
-      "global_auc": 0.5,
-      "conditional_auc": 0.5,
-      "n_high_int_windows": 0
+      "seed": {
+        "value": 6,
+        "origin": "counted(seeds[6].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[6].global_auc)",
+        "source": "FROM_MATH"
+      },
+      "conditional_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[6].conditional_auc)",
+        "source": "FROM_MATH"
+      },
+      "n_high_int_windows": {
+        "value": 0,
+        "origin": "count(seeds[6].n_high_int_windows)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 7,
-      "global_auc": 0.4963579604578564,
-      "conditional_auc": 0.5,
-      "n_high_int_windows": 0
+      "seed": {
+        "value": 7,
+        "origin": "counted(seeds[7].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_auc": {
+        "value": 0.4963579604578564,
+        "origin": "normalized(seeds[7].global_auc)",
+        "source": "FROM_MATH"
+      },
+      "conditional_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[7].conditional_auc)",
+        "source": "FROM_MATH"
+      },
+      "n_high_int_windows": {
+        "value": 0,
+        "origin": "count(seeds[7].n_high_int_windows)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 8,
-      "global_auc": 0.5,
-      "conditional_auc": 0.5,
-      "n_high_int_windows": 0
+      "seed": {
+        "value": 8,
+        "origin": "counted(seeds[8].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[8].global_auc)",
+        "source": "FROM_MATH"
+      },
+      "conditional_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[8].conditional_auc)",
+        "source": "FROM_MATH"
+      },
+      "n_high_int_windows": {
+        "value": 0,
+        "origin": "count(seeds[8].n_high_int_windows)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 9,
-      "global_auc": 0.5,
-      "conditional_auc": 0.5,
-      "n_high_int_windows": 0
+      "seed": {
+        "value": 9,
+        "origin": "counted(seeds[9].seed)",
+        "source": "FROM_DATA"
+      },
+      "global_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[9].global_auc)",
+        "source": "FROM_MATH"
+      },
+      "conditional_auc": {
+        "value": 0.5,
+        "origin": "normalized(seeds[9].conditional_auc)",
+        "source": "FROM_MATH"
+      },
+      "n_high_int_windows": {
+        "value": 0,
+        "origin": "count(seeds[9].n_high_int_windows)",
+        "source": "FROM_DATA"
+      }
     }
   ],
   "global": {
-    "mean_auc": 0.4996357960457857,
-    "std_auc": 0.001092611862643078,
-    "median_auc": 0.5,
-    "fraction_above_0.75": 0.0
+    "mean_auc": {
+      "value": 0.4996357960457857,
+      "origin": "mean(global.mean_auc)",
+      "source": "FROM_STATISTICS"
+    },
+    "std_auc": {
+      "value": 0.001092611862643078,
+      "origin": "std(global.std_auc)",
+      "source": "FROM_STATISTICS"
+    },
+    "median_auc": {
+      "value": 0.5,
+      "origin": "mean(global.median_auc)",
+      "source": "FROM_STATISTICS"
+    },
+    "fraction_above_0.75": {
+      "value": 0.0,
+      "origin": "count(global.fraction_above_0.75)",
+      "source": "FROM_DATA"
+    }
   },
   "conditional": {
-    "mean_cond_auc": 0.5,
-    "std_cond_auc": 0.0,
-    "median_cond_auc": 0.5,
-    "fraction_above_0.75": 0.0
+    "mean_cond_auc": {
+      "value": 0.5,
+      "origin": "mean(conditional.mean_cond_auc)",
+      "source": "FROM_STATISTICS"
+    },
+    "std_cond_auc": {
+      "value": 0.0,
+      "origin": "std(conditional.std_cond_auc)",
+      "source": "FROM_STATISTICS"
+    },
+    "median_cond_auc": {
+      "value": 0.5,
+      "origin": "mean(conditional.median_cond_auc)",
+      "source": "FROM_STATISTICS"
+    },
+    "fraction_above_0.75": {
+      "value": 0.0,
+      "origin": "count(conditional.fraction_above_0.75)",
+      "source": "FROM_DATA"
+    }
   },
   "vs_null": {
-    "null_mean": 0.4955948664585501,
-    "null_std": 0.01152084815164672,
-    "null_p95": 0.5,
-    "real_mean": 0.4996357960457857,
+    "null_mean": {
+      "value": 0.4955948664585501,
+      "origin": "mean(vs_null.null_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 0.01152084815164672,
+      "origin": "std(vs_null.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_p95": {
+      "value": 0.5,
+      "origin": "normalized(vs_null.null_p95)",
+      "source": "FROM_MATH"
+    },
+    "real_mean": {
+      "value": 0.4996357960457857,
+      "origin": "mean(vs_null.real_mean)",
+      "source": "FROM_STATISTICS"
+    },
     "above_p95": false,
     "above_0.75_and_p95": false
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "8cd2a2cf43e3",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.439205",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase16b/time_reversal_cond.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.439349",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 142,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 151,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 142,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 151,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }

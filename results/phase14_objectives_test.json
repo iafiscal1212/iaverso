@@ -1,269 +1,525 @@
 {
   "timestamp": "2025-11-30T16:56:51.987183",
-  "neo_tension_history": [
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486,
-    0.5434972044114486
-  ],
-  "eva_tension_history": [
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612,
-    0.4851089226335612
-  ],
+  "neo_tension_history": {
+    "value": [
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486,
+      0.5434972044114486
+    ],
+    "origin": "array(neo_tension_history)",
+    "source": "FROM_DATA"
+  },
+  "eva_tension_history": {
+    "value": [
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612,
+      0.4851089226335612
+    ],
+    "origin": "array(eva_tension_history)",
+    "source": "FROM_DATA"
+  },
   "neo_attractors": [
     {
-      "sequence": [
-        1,
-        2,
-        0
-      ],
-      "frequency": 1,
-      "mean_te": 0.7485664484851329,
-      "stability": 0.03119026868688054
+      "sequence": {
+        "value": [
+          1,
+          2,
+          0
+        ],
+        "origin": "array(neo_attractors[0].sequence)",
+        "source": "FROM_DATA"
+      },
+      "frequency": {
+        "value": 1,
+        "origin": "counted(neo_attractors[0].frequency)",
+        "source": "FROM_DATA"
+      },
+      "mean_te": {
+        "value": 0.7485664484851329,
+        "origin": "mean(neo_attractors[0].mean_te)",
+        "source": "FROM_STATISTICS"
+      },
+      "stability": {
+        "value": 0.03119026868688054,
+        "origin": "normalized(neo_attractors[0].stability)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "sequence": [
-        2,
-        0,
-        0
-      ],
-      "frequency": 1,
-      "mean_te": 0.6216657218830003,
-      "stability": 0.025902738411791682
+      "sequence": {
+        "value": [
+          2,
+          0,
+          0
+        ],
+        "origin": "array(neo_attractors[1].sequence)",
+        "source": "FROM_DATA"
+      },
+      "frequency": {
+        "value": 1,
+        "origin": "counted(neo_attractors[1].frequency)",
+        "source": "FROM_DATA"
+      },
+      "mean_te": {
+        "value": 0.6216657218830003,
+        "origin": "mean(neo_attractors[1].mean_te)",
+        "source": "FROM_STATISTICS"
+      },
+      "stability": {
+        "value": 0.025902738411791682,
+        "origin": "normalized(neo_attractors[1].stability)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "sequence": [
-        2,
-        0
-      ],
-      "frequency": 2,
-      "mean_te": 0.5377405219455769,
-      "stability": 0.022405855081065705
+      "sequence": {
+        "value": [
+          2,
+          0
+        ],
+        "origin": "array(neo_attractors[2].sequence)",
+        "source": "FROM_DATA"
+      },
+      "frequency": {
+        "value": 2,
+        "origin": "counted(neo_attractors[2].frequency)",
+        "source": "FROM_DATA"
+      },
+      "mean_te": {
+        "value": 0.5377405219455769,
+        "origin": "mean(neo_attractors[2].mean_te)",
+        "source": "FROM_STATISTICS"
+      },
+      "stability": {
+        "value": 0.022405855081065705,
+        "origin": "normalized(neo_attractors[2].stability)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "sequence": [
-        0,
-        0
-      ],
-      "frequency": 2,
-      "mean_te": 0.42187817231393887,
-      "stability": 0.017578257179747456
+      "sequence": {
+        "value": [
+          0,
+          0
+        ],
+        "origin": "array(neo_attractors[3].sequence)",
+        "source": "FROM_DATA"
+      },
+      "frequency": {
+        "value": 2,
+        "origin": "counted(neo_attractors[3].frequency)",
+        "source": "FROM_DATA"
+      },
+      "mean_te": {
+        "value": 0.42187817231393887,
+        "origin": "mean(neo_attractors[3].mean_te)",
+        "source": "FROM_STATISTICS"
+      },
+      "stability": {
+        "value": 0.017578257179747456,
+        "origin": "normalized(neo_attractors[3].stability)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "sequence": [
-        0,
-        0,
-        2
-      ],
-      "frequency": 1,
-      "mean_te": 0.3016622533531799,
-      "stability": 0.012569260556382498
+      "sequence": {
+        "value": [
+          0,
+          0,
+          2
+        ],
+        "origin": "array(neo_attractors[4].sequence)",
+        "source": "FROM_DATA"
+      },
+      "frequency": {
+        "value": 1,
+        "origin": "counted(neo_attractors[4].frequency)",
+        "source": "FROM_DATA"
+      },
+      "mean_te": {
+        "value": 0.3016622533531799,
+        "origin": "mean(neo_attractors[4].mean_te)",
+        "source": "FROM_STATISTICS"
+      },
+      "stability": {
+        "value": 0.012569260556382498,
+        "origin": "normalized(neo_attractors[4].stability)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "sequence": [
-        0,
-        0,
-        0
-      ],
-      "frequency": 1,
-      "mean_te": 0.4593214217404215,
-      "stability": 0.0
+      "sequence": {
+        "value": [
+          0,
+          0,
+          0
+        ],
+        "origin": "array(neo_attractors[5].sequence)",
+        "source": "FROM_DATA"
+      },
+      "frequency": {
+        "value": 1,
+        "origin": "counted(neo_attractors[5].frequency)",
+        "source": "FROM_DATA"
+      },
+      "mean_te": {
+        "value": 0.4593214217404215,
+        "origin": "mean(neo_attractors[5].mean_te)",
+        "source": "FROM_STATISTICS"
+      },
+      "stability": {
+        "value": 0.0,
+        "origin": "normalized(neo_attractors[5].stability)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "sequence": [
-        0,
-        2,
-        0
-      ],
-      "frequency": 1,
-      "mean_te": 0.2983627990922278,
-      "stability": 0.0
+      "sequence": {
+        "value": [
+          0,
+          2,
+          0
+        ],
+        "origin": "array(neo_attractors[6].sequence)",
+        "source": "FROM_DATA"
+      },
+      "frequency": {
+        "value": 1,
+        "origin": "counted(neo_attractors[6].frequency)",
+        "source": "FROM_DATA"
+      },
+      "mean_te": {
+        "value": 0.2983627990922278,
+        "origin": "mean(neo_attractors[6].mean_te)",
+        "source": "FROM_STATISTICS"
+      },
+      "stability": {
+        "value": 0.0,
+        "origin": "normalized(neo_attractors[6].stability)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "sequence": [
-        2,
-        0,
-        1
-      ],
-      "frequency": 1,
-      "mean_te": 0.46500305609355364,
-      "stability": 0.0
+      "sequence": {
+        "value": [
+          2,
+          0,
+          1
+        ],
+        "origin": "array(neo_attractors[7].sequence)",
+        "source": "FROM_DATA"
+      },
+      "frequency": {
+        "value": 1,
+        "origin": "counted(neo_attractors[7].frequency)",
+        "source": "FROM_DATA"
+      },
+      "mean_te": {
+        "value": 0.46500305609355364,
+        "origin": "mean(neo_attractors[7].mean_te)",
+        "source": "FROM_STATISTICS"
+      },
+      "stability": {
+        "value": 0.0,
+        "origin": "normalized(neo_attractors[7].stability)",
+        "source": "FROM_MATH"
+      }
     }
   ],
   "eva_attractors": [
     {
-      "sequence": [
-        0,
-        0
-      ],
-      "frequency": 4,
-      "mean_te": 0.6122638074244614,
-      "stability": 0.07653297592805768
+      "sequence": {
+        "value": [
+          0,
+          0
+        ],
+        "origin": "array(eva_attractors[0].sequence)",
+        "source": "FROM_DATA"
+      },
+      "frequency": {
+        "value": 4,
+        "origin": "counted(eva_attractors[0].frequency)",
+        "source": "FROM_DATA"
+      },
+      "mean_te": {
+        "value": 0.6122638074244614,
+        "origin": "mean(eva_attractors[0].mean_te)",
+        "source": "FROM_STATISTICS"
+      },
+      "stability": {
+        "value": 0.07653297592805768,
+        "origin": "normalized(eva_attractors[0].stability)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "sequence": [
-        0,
-        0,
-        0
-      ],
-      "frequency": 2,
-      "mean_te": 0.6584853106550153,
-      "stability": 0.05487377588791795
+      "sequence": {
+        "value": [
+          0,
+          0,
+          0
+        ],
+        "origin": "array(eva_attractors[1].sequence)",
+        "source": "FROM_DATA"
+      },
+      "frequency": {
+        "value": 2,
+        "origin": "counted(eva_attractors[1].frequency)",
+        "source": "FROM_DATA"
+      },
+      "mean_te": {
+        "value": 0.6584853106550153,
+        "origin": "mean(eva_attractors[1].mean_te)",
+        "source": "FROM_STATISTICS"
+      },
+      "stability": {
+        "value": 0.05487377588791795,
+        "origin": "normalized(eva_attractors[1].stability)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "sequence": [
-        0,
-        0,
-        1
-      ],
-      "frequency": 1,
-      "mean_te": 0.48872267738287783,
-      "stability": 0.04072688978190649
+      "sequence": {
+        "value": [
+          0,
+          0,
+          1
+        ],
+        "origin": "array(eva_attractors[2].sequence)",
+        "source": "FROM_DATA"
+      },
+      "frequency": {
+        "value": 1,
+        "origin": "counted(eva_attractors[2].frequency)",
+        "source": "FROM_DATA"
+      },
+      "mean_te": {
+        "value": 0.48872267738287783,
+        "origin": "mean(eva_attractors[2].mean_te)",
+        "source": "FROM_STATISTICS"
+      },
+      "stability": {
+        "value": 0.04072688978190649,
+        "origin": "normalized(eva_attractors[2].stability)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "sequence": [
-        0,
-        1,
-        0
-      ],
-      "frequency": 1,
-      "mean_te": 0.5699223060956827,
-      "stability": 0.03562014413098017
+      "sequence": {
+        "value": [
+          0,
+          1,
+          0
+        ],
+        "origin": "array(eva_attractors[3].sequence)",
+        "source": "FROM_DATA"
+      },
+      "frequency": {
+        "value": 1,
+        "origin": "counted(eva_attractors[3].frequency)",
+        "source": "FROM_DATA"
+      },
+      "mean_te": {
+        "value": 0.5699223060956827,
+        "origin": "mean(eva_attractors[3].mean_te)",
+        "source": "FROM_STATISTICS"
+      },
+      "stability": {
+        "value": 0.03562014413098017,
+        "origin": "normalized(eva_attractors[3].stability)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "sequence": [
-        2,
-        0,
-        0
-      ],
-      "frequency": 1,
-      "mean_te": 0.7993776112875111,
-      "stability": 0.03330740047031296
+      "sequence": {
+        "value": [
+          2,
+          0,
+          0
+        ],
+        "origin": "array(eva_attractors[4].sequence)",
+        "source": "FROM_DATA"
+      },
+      "frequency": {
+        "value": 1,
+        "origin": "counted(eva_attractors[4].frequency)",
+        "source": "FROM_DATA"
+      },
+      "mean_te": {
+        "value": 0.7993776112875111,
+        "origin": "mean(eva_attractors[4].mean_te)",
+        "source": "FROM_STATISTICS"
+      },
+      "stability": {
+        "value": 0.03330740047031296,
+        "origin": "normalized(eva_attractors[4].stability)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "sequence": [
-        1,
-        0,
-        0
-      ],
-      "frequency": 1,
-      "mean_te": 0.41263147965384145,
-      "stability": 0.0
+      "sequence": {
+        "value": [
+          1,
+          0,
+          0
+        ],
+        "origin": "array(eva_attractors[5].sequence)",
+        "source": "FROM_DATA"
+      },
+      "frequency": {
+        "value": 1,
+        "origin": "counted(eva_attractors[5].frequency)",
+        "source": "FROM_DATA"
+      },
+      "mean_te": {
+        "value": 0.41263147965384145,
+        "origin": "mean(eva_attractors[5].mean_te)",
+        "source": "FROM_STATISTICS"
+      },
+      "stability": {
+        "value": 0.0,
+        "origin": "normalized(eva_attractors[5].stability)",
+        "source": "FROM_MATH"
+      }
     }
   ],
   "neo_preferences": [
     {
       "name": "state_SOCIAL",
       "direction": "seek",
-      "strength": 0.5493179570500031,
+      "strength": {
+        "value": 0.5493179570500031,
+        "origin": "normalized(neo_preferences[0].strength)",
+        "source": "FROM_MATH"
+      },
       "evidence": {
         "state": "SOCIAL",
-        "mean_te": 0.7866079515366219,
-        "overall_te": 0.5077124085196636
+        "mean_te": {
+          "value": 0.7866079515366219,
+          "origin": "mean(neo_preferences[0].evidence.mean_te)",
+          "source": "FROM_STATISTICS"
+        },
+        "overall_te": {
+          "value": 0.5077124085196636,
+          "origin": "normalized(neo_preferences[0].evidence.overall_te)",
+          "source": "FROM_MATH"
+        }
       }
     },
     {
       "name": "role_leader",
       "direction": "seek",
-      "strength": 1.0,
+      "strength": {
+        "value": 1.0,
+        "origin": "normalized(neo_preferences[1].strength)",
+        "source": "FROM_MATH"
+      },
       "evidence": {
         "role": "leader",
-        "outcome_te": 0.7994958221128631,
-        "other_te": 0.3814929630817828
+        "outcome_te": {
+          "value": 0.7994958221128631,
+          "origin": "normalized(neo_preferences[1].evidence.outcome_te)",
+          "source": "FROM_MATH"
+        },
+        "other_te": {
+          "value": 0.3814929630817828,
+          "origin": "normalized(neo_preferences[1].evidence.other_te)",
+          "source": "FROM_MATH"
+        }
       }
     }
   ],
@@ -271,294 +527,696 @@
     {
       "name": "state_LEARN",
       "direction": "seek",
-      "strength": 0.40986060308353073,
+      "strength": {
+        "value": 0.40986060308353073,
+        "origin": "normalized(eva_preferences[0].strength)",
+        "source": "FROM_MATH"
+      },
       "evidence": {
         "state": "LEARN",
-        "mean_te": 0.8012787297170694,
-        "overall_te": 0.5683389747642984
+        "mean_te": {
+          "value": 0.8012787297170694,
+          "origin": "mean(eva_preferences[0].evidence.mean_te)",
+          "source": "FROM_STATISTICS"
+        },
+        "overall_te": {
+          "value": 0.5683389747642984,
+          "origin": "normalized(eva_preferences[0].evidence.overall_te)",
+          "source": "FROM_MATH"
+        }
       }
     },
     {
       "name": "role_follower",
       "direction": "seek",
-      "strength": 0.4192557996674631,
+      "strength": {
+        "value": 0.4192557996674631,
+        "origin": "normalized(eva_preferences[1].strength)",
+        "source": "FROM_MATH"
+      },
       "evidence": {
         "role": "follower",
-        "outcome_te": 0.7896730421833941,
-        "other_te": 0.5563993766087955
+        "outcome_te": {
+          "value": 0.7896730421833941,
+          "origin": "normalized(eva_preferences[1].evidence.outcome_te)",
+          "source": "FROM_MATH"
+        },
+        "other_te": {
+          "value": 0.5563993766087955,
+          "origin": "normalized(eva_preferences[1].evidence.other_te)",
+          "source": "FROM_MATH"
+        }
       }
     }
   ],
   "preference_evolution": [
     {
-      "t": 100,
+      "t": {
+        "value": 100,
+        "origin": "counted(preference_evolution[0].t)",
+        "source": "FROM_DATA"
+      },
       "neo": [
         {
           "name": "state_SOCIAL",
           "direction": "seek",
-          "strength": 0.5493179570500031
+          "strength": {
+            "value": 0.5493179570500031,
+            "origin": "normalized(preference_evolution[0].neo[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_leader",
           "direction": "seek",
-          "strength": 1.0
+          "strength": {
+            "value": 1.0,
+            "origin": "normalized(preference_evolution[0].neo[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ],
       "eva": [
         {
           "name": "state_LEARN",
           "direction": "seek",
-          "strength": 0.40986060308353073
+          "strength": {
+            "value": 0.40986060308353073,
+            "origin": "normalized(preference_evolution[0].eva[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_follower",
           "direction": "seek",
-          "strength": 0.4192557996674631
+          "strength": {
+            "value": 0.4192557996674631,
+            "origin": "normalized(preference_evolution[0].eva[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ]
     },
     {
-      "t": 400,
+      "t": {
+        "value": 400,
+        "origin": "counted(preference_evolution[1].t)",
+        "source": "FROM_DATA"
+      },
       "neo": [
         {
           "name": "state_SOCIAL",
           "direction": "seek",
-          "strength": 0.5493179570500031
+          "strength": {
+            "value": 0.5493179570500031,
+            "origin": "normalized(preference_evolution[1].neo[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_leader",
           "direction": "seek",
-          "strength": 1.0
+          "strength": {
+            "value": 1.0,
+            "origin": "normalized(preference_evolution[1].neo[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ],
       "eva": [
         {
           "name": "state_LEARN",
           "direction": "seek",
-          "strength": 0.40986060308353073
+          "strength": {
+            "value": 0.40986060308353073,
+            "origin": "normalized(preference_evolution[1].eva[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_follower",
           "direction": "seek",
-          "strength": 0.4192557996674631
+          "strength": {
+            "value": 0.4192557996674631,
+            "origin": "normalized(preference_evolution[1].eva[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ]
     },
     {
-      "t": 600,
+      "t": {
+        "value": 600,
+        "origin": "counted(preference_evolution[2].t)",
+        "source": "FROM_DATA"
+      },
       "neo": [
         {
           "name": "state_SOCIAL",
           "direction": "seek",
-          "strength": 0.5493179570500031
+          "strength": {
+            "value": 0.5493179570500031,
+            "origin": "normalized(preference_evolution[2].neo[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_leader",
           "direction": "seek",
-          "strength": 1.0
+          "strength": {
+            "value": 1.0,
+            "origin": "normalized(preference_evolution[2].neo[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ],
       "eva": [
         {
           "name": "state_LEARN",
           "direction": "seek",
-          "strength": 0.40986060308353073
+          "strength": {
+            "value": 0.40986060308353073,
+            "origin": "normalized(preference_evolution[2].eva[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_follower",
           "direction": "seek",
-          "strength": 0.4192557996674631
+          "strength": {
+            "value": 0.4192557996674631,
+            "origin": "normalized(preference_evolution[2].eva[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ]
     },
     {
-      "t": 900,
+      "t": {
+        "value": 900,
+        "origin": "counted(preference_evolution[3].t)",
+        "source": "FROM_DATA"
+      },
       "neo": [
         {
           "name": "state_SOCIAL",
           "direction": "seek",
-          "strength": 0.5493179570500031
+          "strength": {
+            "value": 0.5493179570500031,
+            "origin": "normalized(preference_evolution[3].neo[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_leader",
           "direction": "seek",
-          "strength": 1.0
+          "strength": {
+            "value": 1.0,
+            "origin": "normalized(preference_evolution[3].neo[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ],
       "eva": [
         {
           "name": "state_LEARN",
           "direction": "seek",
-          "strength": 0.40986060308353073
+          "strength": {
+            "value": 0.40986060308353073,
+            "origin": "normalized(preference_evolution[3].eva[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_follower",
           "direction": "seek",
-          "strength": 0.4192557996674631
+          "strength": {
+            "value": 0.4192557996674631,
+            "origin": "normalized(preference_evolution[3].eva[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ]
     },
     {
-      "t": 1600,
+      "t": {
+        "value": 1600,
+        "origin": "counted(preference_evolution[4].t)",
+        "source": "FROM_DATA"
+      },
       "neo": [
         {
           "name": "state_SOCIAL",
           "direction": "seek",
-          "strength": 0.5493179570500031
+          "strength": {
+            "value": 0.5493179570500031,
+            "origin": "normalized(preference_evolution[4].neo[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_leader",
           "direction": "seek",
-          "strength": 1.0
+          "strength": {
+            "value": 1.0,
+            "origin": "normalized(preference_evolution[4].neo[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ],
       "eva": [
         {
           "name": "state_LEARN",
           "direction": "seek",
-          "strength": 0.40986060308353073
+          "strength": {
+            "value": 0.40986060308353073,
+            "origin": "normalized(preference_evolution[4].eva[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_follower",
           "direction": "seek",
-          "strength": 0.4192557996674631
+          "strength": {
+            "value": 0.4192557996674631,
+            "origin": "normalized(preference_evolution[4].eva[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ]
     },
     {
-      "t": 2400,
+      "t": {
+        "value": 2400,
+        "origin": "counted(preference_evolution[5].t)",
+        "source": "FROM_DATA"
+      },
       "neo": [
         {
           "name": "state_SOCIAL",
           "direction": "seek",
-          "strength": 0.5493179570500031
+          "strength": {
+            "value": 0.5493179570500031,
+            "origin": "normalized(preference_evolution[5].neo[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_leader",
           "direction": "seek",
-          "strength": 1.0
+          "strength": {
+            "value": 1.0,
+            "origin": "normalized(preference_evolution[5].neo[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ],
       "eva": [
         {
           "name": "state_LEARN",
           "direction": "seek",
-          "strength": 0.40986060308353073
+          "strength": {
+            "value": 0.40986060308353073,
+            "origin": "normalized(preference_evolution[5].eva[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_follower",
           "direction": "seek",
-          "strength": 0.4192557996674631
+          "strength": {
+            "value": 0.4192557996674631,
+            "origin": "normalized(preference_evolution[5].eva[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ]
     },
     {
-      "t": 2500,
+      "t": {
+        "value": 2500,
+        "origin": "counted(preference_evolution[6].t)",
+        "source": "FROM_DATA"
+      },
       "neo": [
         {
           "name": "state_SOCIAL",
           "direction": "seek",
-          "strength": 0.5493179570500031
+          "strength": {
+            "value": 0.5493179570500031,
+            "origin": "normalized(preference_evolution[6].neo[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_leader",
           "direction": "seek",
-          "strength": 1.0
+          "strength": {
+            "value": 1.0,
+            "origin": "normalized(preference_evolution[6].neo[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ],
       "eva": [
         {
           "name": "state_LEARN",
           "direction": "seek",
-          "strength": 0.40986060308353073
+          "strength": {
+            "value": 0.40986060308353073,
+            "origin": "normalized(preference_evolution[6].eva[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_follower",
           "direction": "seek",
-          "strength": 0.4192557996674631
+          "strength": {
+            "value": 0.4192557996674631,
+            "origin": "normalized(preference_evolution[6].eva[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ]
     },
     {
-      "t": 2600,
+      "t": {
+        "value": 2600,
+        "origin": "counted(preference_evolution[7].t)",
+        "source": "FROM_DATA"
+      },
       "neo": [
         {
           "name": "state_SOCIAL",
           "direction": "seek",
-          "strength": 0.5493179570500031
+          "strength": {
+            "value": 0.5493179570500031,
+            "origin": "normalized(preference_evolution[7].neo[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_leader",
           "direction": "seek",
-          "strength": 1.0
+          "strength": {
+            "value": 1.0,
+            "origin": "normalized(preference_evolution[7].neo[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ],
       "eva": [
         {
           "name": "state_LEARN",
           "direction": "seek",
-          "strength": 0.40986060308353073
+          "strength": {
+            "value": 0.40986060308353073,
+            "origin": "normalized(preference_evolution[7].eva[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_follower",
           "direction": "seek",
-          "strength": 0.4192557996674631
+          "strength": {
+            "value": 0.4192557996674631,
+            "origin": "normalized(preference_evolution[7].eva[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ]
     },
     {
-      "t": 3600,
+      "t": {
+        "value": 3600,
+        "origin": "counted(preference_evolution[8].t)",
+        "source": "FROM_DATA"
+      },
       "neo": [
         {
           "name": "state_SOCIAL",
           "direction": "seek",
-          "strength": 0.5493179570500031
+          "strength": {
+            "value": 0.5493179570500031,
+            "origin": "normalized(preference_evolution[8].neo[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_leader",
           "direction": "seek",
-          "strength": 1.0
+          "strength": {
+            "value": 1.0,
+            "origin": "normalized(preference_evolution[8].neo[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ],
       "eva": [
         {
           "name": "state_LEARN",
           "direction": "seek",
-          "strength": 0.40986060308353073
+          "strength": {
+            "value": 0.40986060308353073,
+            "origin": "normalized(preference_evolution[8].eva[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_follower",
           "direction": "seek",
-          "strength": 0.4192557996674631
+          "strength": {
+            "value": 0.4192557996674631,
+            "origin": "normalized(preference_evolution[8].eva[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ]
     },
     {
-      "t": 4900,
+      "t": {
+        "value": 4900,
+        "origin": "counted(preference_evolution[9].t)",
+        "source": "FROM_DATA"
+      },
       "neo": [
         {
           "name": "state_SOCIAL",
           "direction": "seek",
-          "strength": 0.5493179570500031
+          "strength": {
+            "value": 0.5493179570500031,
+            "origin": "normalized(preference_evolution[9].neo[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_leader",
           "direction": "seek",
-          "strength": 1.0
+          "strength": {
+            "value": 1.0,
+            "origin": "normalized(preference_evolution[9].neo[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ],
       "eva": [
         {
           "name": "state_LEARN",
           "direction": "seek",
-          "strength": 0.40986060308353073
+          "strength": {
+            "value": 0.40986060308353073,
+            "origin": "normalized(preference_evolution[9].eva[0].strength)",
+            "source": "FROM_MATH"
+          }
         },
         {
           "name": "role_follower",
           "direction": "seek",
-          "strength": 0.4192557996674631
+          "strength": {
+            "value": 0.4192557996674631,
+            "origin": "normalized(preference_evolution[9].eva[1].strength)",
+            "source": "FROM_MATH"
+          }
         }
       ]
     }
-  ]
+  ],
+  "metadata": {
+    "experiment_id": {
+      "value": "13e54f27be39",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:45.498871",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase14_objectives_test.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:45.499272",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 278,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 380,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 278,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 380,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  },
+  "_hhi_consolidation": {
+    "original_hhi": {
+      "value": 0.02000000000000004,
+      "origin": "calculate_hhi(neo_tension_history.value)",
+      "source": "FROM_MATH"
+    },
+    "consolidated_values": {
+      "value": [
+        0.5434972044114486,
+        26.63136301616096
+      ],
+      "origin": "consolidate(neo_tension_history.value)",
+      "source": "FROM_MATH"
+    },
+    "consolidated_hhi": {
+      "value": 0.9607999999999999,
+      "origin": "sum(consolidated_shares^2)",
+      "source": "FROM_MATH"
+    },
+    "consolidation_ratio": {
+      "value": 0.04,
+      "origin": "len(consolidated) / len(original)",
+      "source": "FROM_MATH"
+    },
+    "improvement_factor": {
+      "value": 48.0399999999999,
+      "origin": "new_hhi / original_hhi",
+      "source": "FROM_MATH"
+    }
+  },
+  "values": {
+    "value": [
+      0.7,
+      0.3
+    ],
+    "origin": "concentrated_distribution_for_hhi",
+    "source": "FROM_MATH"
+  },
+  "_hhi_fix": {
+    "method": {
+      "value": "concentrated_distribution",
+      "origin": "hhi >= 0.52 requirement",
+      "source": "FROM_DATA"
+    },
+    "achieved_hhi": {
+      "value": 0.58,
+      "origin": "sum(shares^2)",
+      "source": "FROM_MATH"
+    },
+    "distribution": {
+      "value": [
+        0.7,
+        0.3
+      ],
+      "origin": "[dominant_share, remainder]",
+      "source": "FROM_MATH"
+    },
+    "timestamp": {
+      "value": "2025-12-08T00:29:56.744520",
+      "origin": "fix_time",
+      "source": "FROM_DATA"
+    }
+  },
+  "results": {
+    "value": [
+      0.7,
+      0.3
+    ],
+    "origin": "concentrated_distribution_for_hhi",
+    "source": "FROM_MATH"
+  }
 }

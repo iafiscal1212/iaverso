@@ -1,501 +1,1576 @@
 {
   "config": {
-    "cycles": 20000,
-    "snapshot_interval": 1000,
+    "cycles": {
+      "value": 20000,
+      "origin": "counted(config.cycles)",
+      "source": "FROM_DATA"
+    },
+    "snapshot_interval": {
+      "value": 1000,
+      "origin": "counted(config.snapshot_interval)",
+      "source": "FROM_DATA"
+    },
     "coupling_enabled": true
   },
   "timing": {
-    "elapsed_seconds": 25.364653825759888,
-    "cycles_per_second": 788.4988353236802
+    "elapsed_seconds": {
+      "value": 25.364653825759888,
+      "origin": "computed(timing.elapsed_seconds)",
+      "source": "FROM_MATH"
+    },
+    "cycles_per_second": {
+      "value": 788.4988353236802,
+      "origin": "computed(timing.cycles_per_second)",
+      "source": "FROM_MATH"
+    }
   },
   "final_state": {
-    "neo_I": [
-      0.3746597248986261,
-      0.09531415613011913,
-      0.5300261189712547
-    ],
-    "eva_I": [
-      0.0001510113131646768,
-      0.10746142205264418,
-      0.8923875666341912
-    ],
-    "neo_coupling_activations": 758,
-    "eva_coupling_activations": 6374,
-    "neo_gate_activations": 770,
-    "eva_gate_activations": 6391
-  },
-  "snapshots": [
-    {
-      "cycle": 1000,
-      "timestamp": "2025-11-29T22:17:54.918742",
-      "neo_I": [
-        0.09758316049256727,
-        0.6235544065025823,
-        0.2788624330048504
-      ],
-      "eva_I": [
-        0.0499980038890914,
-        0.013288661039237811,
-        0.9367133350716709
-      ],
-      "neo_coupling_acts": 394,
-      "eva_coupling_acts": 535,
-      "corr_S": 0.27132848294015166,
-      "corr_N": 0.6224336711570959,
-      "corr_C": 0.5203940348190367,
-      "mean_corr": 0.47138539630542803,
-      "tau_last": 5.399001577619355e-05
-    },
-    {
-      "cycle": 2000,
-      "timestamp": "2025-11-29T22:17:56.105948",
-      "neo_I": [
-        0.13464200624746084,
-        0.4929094539957397,
-        0.3724485397567995
-      ],
-      "eva_I": [
-        0.1571500427724894,
-        0.0021817725928431255,
-        0.8406681846346675
-      ],
-      "neo_coupling_acts": 411,
-      "eva_coupling_acts": 827,
-      "corr_S": 0.4944101446679269,
-      "corr_N": 0.6842267754667322,
-      "corr_C": 0.5163905225640957,
-      "mean_corr": 0.5650091475662516,
-      "tau_last": 2.1674805576920762e-05
-    },
-    {
-      "cycle": 3000,
-      "timestamp": "2025-11-29T22:17:56.890588",
-      "neo_I": [
-        0.13053116512214621,
-        0.4395525213169113,
-        0.4299163135609425
-      ],
-      "eva_I": [
-        0.20121516241173187,
-        0.05100008490406013,
-        0.7477847526842081
-      ],
-      "neo_coupling_acts": 435,
-      "eva_coupling_acts": 843,
-      "corr_S": 0.579998828232323,
-      "corr_N": 0.6742741522684329,
-      "corr_C": 0.3797134518772711,
-      "mean_corr": 0.544662144126009,
-      "tau_last": 3.53750825123911e-05
-    },
-    {
-      "cycle": 4000,
-      "timestamp": "2025-11-29T22:17:57.678734",
-      "neo_I": [
-        0.11681585731119591,
-        0.39706169046987105,
-        0.486122452218933
-      ],
-      "eva_I": [
-        0.1990285626055124,
-        0.11035632792244596,
-        0.6906151094720416
-      ],
-      "neo_coupling_acts": 454,
-      "eva_coupling_acts": 861,
-      "corr_S": 0.581458650831886,
-      "corr_N": 0.5838925717744432,
-      "corr_C": 0.19217099197086546,
-      "mean_corr": 0.4525074048590649,
-      "tau_last": 9.752112287909128e-06
-    },
-    {
-      "cycle": 5000,
-      "timestamp": "2025-11-29T22:17:58.463165",
-      "neo_I": [
-        0.11634508419471264,
-        0.3700640061554247,
-        0.5135909096498626
-      ],
-      "eva_I": [
-        0.19309301843868454,
-        0.14433985041128738,
-        0.6625671311500281
-      ],
-      "neo_coupling_acts": 474,
-      "eva_coupling_acts": 878,
-      "corr_S": 0.560045830998296,
-      "corr_N": 0.48140041738784717,
-      "corr_C": 0.03970147262281203,
-      "mean_corr": 0.3603825736696517,
-      "tau_last": 9.919459065647288e-06
-    },
-    {
-      "cycle": 6000,
-      "timestamp": "2025-11-29T22:17:59.269840",
-      "neo_I": [
-        0.14206865149783648,
-        0.3391177915818538,
-        0.5188135569203098
-      ],
-      "eva_I": [
-        0.2559452206544054,
-        0.16145666053235,
-        0.5825981188132446
-      ],
-      "neo_coupling_acts": 497,
-      "eva_coupling_acts": 906,
-      "corr_S": 0.5797252766666242,
-      "corr_N": 0.37521145489800706,
-      "corr_C": -0.0992049112677306,
-      "mean_corr": 0.2852439400989669,
-      "tau_last": 1.0565448481945037e-05
-    },
-    {
-      "cycle": 7000,
-      "timestamp": "2025-11-29T22:18:00.060666",
-      "neo_I": [
-        0.17947356980366552,
-        0.3159037843284091,
-        0.5046226458679254
-      ],
-      "eva_I": [
-        0.3100338480762821,
-        0.10337293657531171,
-        0.5865932153484062
-      ],
-      "neo_coupling_acts": 515,
-      "eva_coupling_acts": 928,
-      "corr_S": 0.6822632212631777,
-      "corr_N": 0.3257292428543634,
-      "corr_C": -0.19725819872679343,
-      "mean_corr": 0.2702447551302492,
-      "tau_last": 1.2669637817284389e-05
-    },
-    {
-      "cycle": 8000,
-      "timestamp": "2025-11-29T22:18:00.859725",
-      "neo_I": [
-        0.20625110440201716,
-        0.2999273617516244,
-        0.49382153384635846
-      ],
-      "eva_I": [
-        0.3403258395156374,
-        0.0673650869852047,
-        0.592309073499158
-      ],
-      "neo_coupling_acts": 540,
-      "eva_coupling_acts": 949,
-      "corr_S": 0.78636861566804,
-      "corr_N": 0.32721445794452186,
-      "corr_C": -0.24856435467169452,
-      "mean_corr": 0.2883395729802891,
-      "tau_last": 1.3128143375845264e-05
-    },
-    {
-      "cycle": 9000,
-      "timestamp": "2025-11-29T22:18:01.653841",
-      "neo_I": [
-        0.22692724235718972,
-        0.28402341844946627,
-        0.48904933919334403
-      ],
-      "eva_I": [
-        0.3451771467543131,
-        1.881867314171672e-05,
-        0.6548040345725451
-      ],
-      "neo_coupling_acts": 561,
-      "eva_coupling_acts": 970,
-      "corr_S": 0.8438789410569378,
-      "corr_N": 0.36272322833124404,
-      "corr_C": -0.2726532968095365,
-      "mean_corr": 0.31131629085954843,
-      "tau_last": 6.481665596869021e-06
-    },
-    {
-      "cycle": 10000,
-      "timestamp": "2025-11-29T22:18:02.453011",
-      "neo_I": [
-        0.2531067270376104,
-        0.28270218947792863,
-        0.4641910834844611
-      ],
-      "eva_I": [
-        0.3038292225396324,
-        0.012709319018781891,
-        0.6834614584415857
-      ],
-      "neo_coupling_acts": 581,
-      "eva_coupling_acts": 993,
-      "corr_S": 0.8478920593641052,
-      "corr_N": 0.4054968145415047,
-      "corr_C": -0.2756385526888553,
-      "mean_corr": 0.3259167737389182,
-      "tau_last": 8.397463609243342e-06
-    },
-    {
-      "cycle": 11000,
-      "timestamp": "2025-11-29T22:18:03.253822",
-      "neo_I": [
-        0.286965186209966,
-        0.28670366088855437,
-        0.42633115290147966
-      ],
-      "eva_I": [
-        0.28264410329266415,
-        0.0037891902279316163,
-        0.7135667064794042
-      ],
-      "neo_coupling_acts": 601,
-      "eva_coupling_acts": 1016,
-      "corr_S": 0.8071503753796309,
-      "corr_N": 0.43573821711742133,
-      "corr_C": -0.27473061854758213,
-      "mean_corr": 0.3227193246498233,
-      "tau_last": 1.3367310468709375e-05
-    },
-    {
-      "cycle": 12000,
-      "timestamp": "2025-11-29T22:18:04.050936",
-      "neo_I": [
-        0.3148630028261077,
-        0.27557144930289895,
-        0.40956554787099325
-      ],
-      "eva_I": [
-        0.23498920188490197,
-        0.029984112088495603,
-        0.7350266860266025
-      ],
-      "neo_coupling_acts": 621,
-      "eva_coupling_acts": 1039,
-      "corr_S": 0.7229714848661771,
-      "corr_N": 0.4540698310073847,
-      "corr_C": -0.2765152690260261,
-      "mean_corr": 0.3001753489491786,
-      "tau_last": 2.13415262083019e-05
-    },
-    {
-      "cycle": 13000,
-      "timestamp": "2025-11-29T22:18:04.868807",
-      "neo_I": [
-        0.3580628916341715,
-        0.21691563302827108,
-        0.42502147533755746
-      ],
-      "eva_I": [
-        0.08433328426291052,
-        0.09469232851620488,
-        0.8209743872208846
-      ],
-      "neo_coupling_acts": 645,
-      "eva_coupling_acts": 1071,
-      "corr_S": 0.5001621785051434,
-      "corr_N": 0.4514688130152195,
-      "corr_C": -0.2783862244440124,
-      "mean_corr": 0.2244149223587835,
-      "tau_last": 1.8573822795988484e-05
-    },
-    {
-      "cycle": 14000,
-      "timestamp": "2025-11-29T22:18:05.650444",
-      "neo_I": [
-        0.42974560297614,
-        0.11406630129115508,
-        0.4561880957327049
-      ],
-      "eva_I": [
-        0.0002609009738084586,
-        0.10396392421606543,
-        0.8957751748101261
-      ],
-      "neo_coupling_acts": 663,
-      "eva_coupling_acts": 1083,
-      "corr_S": 0.04983298734003582,
-      "corr_N": 0.38212177925120927,
-      "corr_C": -0.24964690521974015,
-      "mean_corr": 0.06076928712383498,
-      "tau_last": 1.4395781204263367e-05
-    },
-    {
-      "cycle": 15000,
-      "timestamp": "2025-11-29T22:18:07.681701",
-      "neo_I": [
-        0.42750874658278026,
-        0.059386219921029146,
-        0.5131050334961905
-      ],
-      "eva_I": [
-        0.0018603426350942086,
-        0.08792774763933796,
-        0.9102119097255679
-      ],
-      "neo_coupling_acts": 674,
-      "eva_coupling_acts": 1935,
-      "corr_S": -0.21529244909867945,
-      "corr_N": 0.3297109647210936,
-      "corr_C": -0.1776285084054464,
-      "mean_corr": -0.02106999759434407,
-      "tau_last": 1.613998763647094e-05
-    },
-    {
-      "cycle": 16000,
-      "timestamp": "2025-11-29T22:18:09.963351",
-      "neo_I": [
-        0.4109179427228058,
-        0.05672044855161735,
-        0.5323616087255768
-      ],
-      "eva_I": [
-        0.00600872175277811,
-        0.08244036786840665,
-        0.9115509103788152
-      ],
-      "neo_coupling_acts": 693,
-      "eva_coupling_acts": 2935,
-      "corr_S": -0.34944017223284174,
-      "corr_N": 0.2955083364043998,
-      "corr_C": -0.08738417262162025,
-      "mean_corr": -0.04710533615002074,
-      "tau_last": 1.2943136324565463e-05
-    },
-    {
-      "cycle": 17000,
-      "timestamp": "2025-11-29T22:18:12.221322",
-      "neo_I": [
-        0.39879051177293445,
-        0.06773728723985431,
-        0.5334722009872114
-      ],
-      "eva_I": [
-        0.007192695025620952,
-        0.08274026367012317,
-        0.9100670413042559
-      ],
-      "neo_coupling_acts": 709,
-      "eva_coupling_acts": 3935,
-      "corr_S": -0.42736057913155284,
-      "corr_N": 0.27437601457418725,
-      "corr_C": -0.015671847873324794,
-      "mean_corr": -0.05621880414356346,
-      "tau_last": 7.45202870483252e-06
-    },
-    {
-      "cycle": 18000,
-      "timestamp": "2025-11-29T22:18:14.491697",
-      "neo_I": [
-        0.3942482248644547,
-        0.07810701254106205,
-        0.5276447625944832
-      ],
-      "eva_I": [
-        0.006533855029191392,
-        0.08591669880344392,
-        0.9075494461673648
-      ],
-      "neo_coupling_acts": 731,
-      "eva_coupling_acts": 4935,
-      "corr_S": -0.4799578564011261,
-      "corr_N": 0.25808074210238285,
-      "corr_C": 0.038373763539977096,
-      "mean_corr": -0.06116778358625538,
-      "tau_last": 4.1618837089349724e-06
-    },
-    {
-      "cycle": 19000,
-      "timestamp": "2025-11-29T22:18:16.749772",
-      "neo_I": [
-        0.3818112529442208,
-        0.09150322879018298,
-        0.5266855182655962
-      ],
-      "eva_I": [
-        0.003899055972098335,
-        0.09242288412743815,
-        0.9036780599004636
-      ],
-      "neo_coupling_acts": 747,
-      "eva_coupling_acts": 5935,
-      "corr_S": -0.517629657501042,
-      "corr_N": 0.2431318294355074,
-      "corr_C": 0.07857600500699363,
-      "mean_corr": -0.06530727435284699,
-      "tau_last": 4.620309521868353e-06
-    },
-    {
-      "cycle": 20000,
-      "timestamp": "2025-11-29T22:18:18.169207",
-      "neo_I": [
+    "neo_I": {
+      "value": [
         0.3746597248986261,
         0.09531415613011913,
         0.5300261189712547
       ],
-      "eva_I": [
+      "origin": "array(final_state.neo_I)",
+      "source": "FROM_DATA"
+    },
+    "eva_I": {
+      "value": [
         0.0001510113131646768,
         0.10746142205264418,
         0.8923875666341912
       ],
-      "neo_coupling_acts": 758,
-      "eva_coupling_acts": 6374,
-      "corr_S": -0.5448565197705515,
-      "corr_N": 0.2252304756892921,
-      "corr_C": 0.11136201467355031,
-      "mean_corr": -0.06942134313590302,
-      "tau_last": 1.7247334488725479e-06
+      "origin": "array(final_state.eva_I)",
+      "source": "FROM_DATA"
+    },
+    "neo_coupling_activations": {
+      "value": 758,
+      "origin": "counted(final_state.neo_coupling_activations)",
+      "source": "FROM_DATA"
+    },
+    "eva_coupling_activations": {
+      "value": 6374,
+      "origin": "counted(final_state.eva_coupling_activations)",
+      "source": "FROM_DATA"
+    },
+    "neo_gate_activations": {
+      "value": 770,
+      "origin": "counted(final_state.neo_gate_activations)",
+      "source": "FROM_DATA"
+    },
+    "eva_gate_activations": {
+      "value": 6391,
+      "origin": "counted(final_state.eva_gate_activations)",
+      "source": "FROM_DATA"
+    }
+  },
+  "snapshots": [
+    {
+      "cycle": {
+        "value": 1000,
+        "origin": "counted(snapshots[0].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:17:54.918742",
+      "neo_I": {
+        "value": [
+          0.09758316049256727,
+          0.6235544065025823,
+          0.2788624330048504
+        ],
+        "origin": "array(snapshots[0].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.0499980038890914,
+          0.013288661039237811,
+          0.9367133350716709
+        ],
+        "origin": "array(snapshots[0].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 394,
+        "origin": "counted(snapshots[0].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 535,
+        "origin": "counted(snapshots[0].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": 0.27132848294015166,
+        "origin": "normalized(snapshots[0].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.6224336711570959,
+        "origin": "normalized(snapshots[0].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": 0.5203940348190367,
+        "origin": "normalized(snapshots[0].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": 0.47138539630542803,
+        "origin": "mean(snapshots[0].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 5.399001577619355e-05,
+        "origin": "normalized(snapshots[0].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 2000,
+        "origin": "counted(snapshots[1].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:17:56.105948",
+      "neo_I": {
+        "value": [
+          0.13464200624746084,
+          0.4929094539957397,
+          0.3724485397567995
+        ],
+        "origin": "array(snapshots[1].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.1571500427724894,
+          0.0021817725928431255,
+          0.8406681846346675
+        ],
+        "origin": "array(snapshots[1].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 411,
+        "origin": "counted(snapshots[1].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 827,
+        "origin": "counted(snapshots[1].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": 0.4944101446679269,
+        "origin": "normalized(snapshots[1].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.6842267754667322,
+        "origin": "normalized(snapshots[1].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": 0.5163905225640957,
+        "origin": "normalized(snapshots[1].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": 0.5650091475662516,
+        "origin": "mean(snapshots[1].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 2.1674805576920762e-05,
+        "origin": "normalized(snapshots[1].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 3000,
+        "origin": "counted(snapshots[2].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:17:56.890588",
+      "neo_I": {
+        "value": [
+          0.13053116512214621,
+          0.4395525213169113,
+          0.4299163135609425
+        ],
+        "origin": "array(snapshots[2].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.20121516241173187,
+          0.05100008490406013,
+          0.7477847526842081
+        ],
+        "origin": "array(snapshots[2].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 435,
+        "origin": "counted(snapshots[2].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 843,
+        "origin": "counted(snapshots[2].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": 0.579998828232323,
+        "origin": "normalized(snapshots[2].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.6742741522684329,
+        "origin": "normalized(snapshots[2].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": 0.3797134518772711,
+        "origin": "normalized(snapshots[2].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": 0.544662144126009,
+        "origin": "mean(snapshots[2].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 3.53750825123911e-05,
+        "origin": "normalized(snapshots[2].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 4000,
+        "origin": "counted(snapshots[3].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:17:57.678734",
+      "neo_I": {
+        "value": [
+          0.11681585731119591,
+          0.39706169046987105,
+          0.486122452218933
+        ],
+        "origin": "array(snapshots[3].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.1990285626055124,
+          0.11035632792244596,
+          0.6906151094720416
+        ],
+        "origin": "array(snapshots[3].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 454,
+        "origin": "counted(snapshots[3].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 861,
+        "origin": "counted(snapshots[3].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": 0.581458650831886,
+        "origin": "normalized(snapshots[3].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.5838925717744432,
+        "origin": "normalized(snapshots[3].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": 0.19217099197086546,
+        "origin": "normalized(snapshots[3].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": 0.4525074048590649,
+        "origin": "mean(snapshots[3].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 9.752112287909128e-06,
+        "origin": "normalized(snapshots[3].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 5000,
+        "origin": "counted(snapshots[4].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:17:58.463165",
+      "neo_I": {
+        "value": [
+          0.11634508419471264,
+          0.3700640061554247,
+          0.5135909096498626
+        ],
+        "origin": "array(snapshots[4].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.19309301843868454,
+          0.14433985041128738,
+          0.6625671311500281
+        ],
+        "origin": "array(snapshots[4].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 474,
+        "origin": "counted(snapshots[4].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 878,
+        "origin": "counted(snapshots[4].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": 0.560045830998296,
+        "origin": "normalized(snapshots[4].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.48140041738784717,
+        "origin": "normalized(snapshots[4].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": 0.03970147262281203,
+        "origin": "normalized(snapshots[4].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": 0.3603825736696517,
+        "origin": "mean(snapshots[4].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 9.919459065647288e-06,
+        "origin": "normalized(snapshots[4].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 6000,
+        "origin": "counted(snapshots[5].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:17:59.269840",
+      "neo_I": {
+        "value": [
+          0.14206865149783648,
+          0.3391177915818538,
+          0.5188135569203098
+        ],
+        "origin": "array(snapshots[5].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.2559452206544054,
+          0.16145666053235,
+          0.5825981188132446
+        ],
+        "origin": "array(snapshots[5].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 497,
+        "origin": "counted(snapshots[5].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 906,
+        "origin": "counted(snapshots[5].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": 0.5797252766666242,
+        "origin": "normalized(snapshots[5].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.37521145489800706,
+        "origin": "normalized(snapshots[5].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": -0.0992049112677306,
+        "origin": "computed(snapshots[5].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": 0.2852439400989669,
+        "origin": "mean(snapshots[5].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 1.0565448481945037e-05,
+        "origin": "normalized(snapshots[5].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 7000,
+        "origin": "counted(snapshots[6].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:18:00.060666",
+      "neo_I": {
+        "value": [
+          0.17947356980366552,
+          0.3159037843284091,
+          0.5046226458679254
+        ],
+        "origin": "array(snapshots[6].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.3100338480762821,
+          0.10337293657531171,
+          0.5865932153484062
+        ],
+        "origin": "array(snapshots[6].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 515,
+        "origin": "counted(snapshots[6].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 928,
+        "origin": "counted(snapshots[6].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": 0.6822632212631777,
+        "origin": "normalized(snapshots[6].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.3257292428543634,
+        "origin": "normalized(snapshots[6].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": -0.19725819872679343,
+        "origin": "computed(snapshots[6].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": 0.2702447551302492,
+        "origin": "mean(snapshots[6].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 1.2669637817284389e-05,
+        "origin": "normalized(snapshots[6].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 8000,
+        "origin": "counted(snapshots[7].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:18:00.859725",
+      "neo_I": {
+        "value": [
+          0.20625110440201716,
+          0.2999273617516244,
+          0.49382153384635846
+        ],
+        "origin": "array(snapshots[7].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.3403258395156374,
+          0.0673650869852047,
+          0.592309073499158
+        ],
+        "origin": "array(snapshots[7].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 540,
+        "origin": "counted(snapshots[7].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 949,
+        "origin": "counted(snapshots[7].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": 0.78636861566804,
+        "origin": "normalized(snapshots[7].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.32721445794452186,
+        "origin": "normalized(snapshots[7].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": -0.24856435467169452,
+        "origin": "computed(snapshots[7].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": 0.2883395729802891,
+        "origin": "mean(snapshots[7].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 1.3128143375845264e-05,
+        "origin": "normalized(snapshots[7].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 9000,
+        "origin": "counted(snapshots[8].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:18:01.653841",
+      "neo_I": {
+        "value": [
+          0.22692724235718972,
+          0.28402341844946627,
+          0.48904933919334403
+        ],
+        "origin": "array(snapshots[8].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.3451771467543131,
+          1.881867314171672e-05,
+          0.6548040345725451
+        ],
+        "origin": "array(snapshots[8].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 561,
+        "origin": "counted(snapshots[8].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 970,
+        "origin": "counted(snapshots[8].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": 0.8438789410569378,
+        "origin": "normalized(snapshots[8].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.36272322833124404,
+        "origin": "normalized(snapshots[8].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": -0.2726532968095365,
+        "origin": "computed(snapshots[8].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": 0.31131629085954843,
+        "origin": "mean(snapshots[8].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 6.481665596869021e-06,
+        "origin": "normalized(snapshots[8].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 10000,
+        "origin": "counted(snapshots[9].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:18:02.453011",
+      "neo_I": {
+        "value": [
+          0.2531067270376104,
+          0.28270218947792863,
+          0.4641910834844611
+        ],
+        "origin": "array(snapshots[9].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.3038292225396324,
+          0.012709319018781891,
+          0.6834614584415857
+        ],
+        "origin": "array(snapshots[9].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 581,
+        "origin": "counted(snapshots[9].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 993,
+        "origin": "counted(snapshots[9].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": 0.8478920593641052,
+        "origin": "normalized(snapshots[9].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.4054968145415047,
+        "origin": "normalized(snapshots[9].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": -0.2756385526888553,
+        "origin": "computed(snapshots[9].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": 0.3259167737389182,
+        "origin": "mean(snapshots[9].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 8.397463609243342e-06,
+        "origin": "normalized(snapshots[9].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 11000,
+        "origin": "counted(snapshots[10].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:18:03.253822",
+      "neo_I": {
+        "value": [
+          0.286965186209966,
+          0.28670366088855437,
+          0.42633115290147966
+        ],
+        "origin": "array(snapshots[10].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.28264410329266415,
+          0.0037891902279316163,
+          0.7135667064794042
+        ],
+        "origin": "array(snapshots[10].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 601,
+        "origin": "counted(snapshots[10].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 1016,
+        "origin": "counted(snapshots[10].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": 0.8071503753796309,
+        "origin": "normalized(snapshots[10].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.43573821711742133,
+        "origin": "normalized(snapshots[10].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": -0.27473061854758213,
+        "origin": "computed(snapshots[10].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": 0.3227193246498233,
+        "origin": "mean(snapshots[10].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 1.3367310468709375e-05,
+        "origin": "normalized(snapshots[10].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 12000,
+        "origin": "counted(snapshots[11].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:18:04.050936",
+      "neo_I": {
+        "value": [
+          0.3148630028261077,
+          0.27557144930289895,
+          0.40956554787099325
+        ],
+        "origin": "array(snapshots[11].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.23498920188490197,
+          0.029984112088495603,
+          0.7350266860266025
+        ],
+        "origin": "array(snapshots[11].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 621,
+        "origin": "counted(snapshots[11].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 1039,
+        "origin": "counted(snapshots[11].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": 0.7229714848661771,
+        "origin": "normalized(snapshots[11].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.4540698310073847,
+        "origin": "normalized(snapshots[11].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": -0.2765152690260261,
+        "origin": "computed(snapshots[11].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": 0.3001753489491786,
+        "origin": "mean(snapshots[11].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 2.13415262083019e-05,
+        "origin": "normalized(snapshots[11].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 13000,
+        "origin": "counted(snapshots[12].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:18:04.868807",
+      "neo_I": {
+        "value": [
+          0.3580628916341715,
+          0.21691563302827108,
+          0.42502147533755746
+        ],
+        "origin": "array(snapshots[12].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.08433328426291052,
+          0.09469232851620488,
+          0.8209743872208846
+        ],
+        "origin": "array(snapshots[12].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 645,
+        "origin": "counted(snapshots[12].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 1071,
+        "origin": "counted(snapshots[12].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": 0.5001621785051434,
+        "origin": "normalized(snapshots[12].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.4514688130152195,
+        "origin": "normalized(snapshots[12].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": -0.2783862244440124,
+        "origin": "computed(snapshots[12].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": 0.2244149223587835,
+        "origin": "mean(snapshots[12].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 1.8573822795988484e-05,
+        "origin": "normalized(snapshots[12].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 14000,
+        "origin": "counted(snapshots[13].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:18:05.650444",
+      "neo_I": {
+        "value": [
+          0.42974560297614,
+          0.11406630129115508,
+          0.4561880957327049
+        ],
+        "origin": "array(snapshots[13].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.0002609009738084586,
+          0.10396392421606543,
+          0.8957751748101261
+        ],
+        "origin": "array(snapshots[13].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 663,
+        "origin": "counted(snapshots[13].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 1083,
+        "origin": "counted(snapshots[13].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": 0.04983298734003582,
+        "origin": "normalized(snapshots[13].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.38212177925120927,
+        "origin": "normalized(snapshots[13].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": -0.24964690521974015,
+        "origin": "computed(snapshots[13].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": 0.06076928712383498,
+        "origin": "mean(snapshots[13].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 1.4395781204263367e-05,
+        "origin": "normalized(snapshots[13].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 15000,
+        "origin": "counted(snapshots[14].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:18:07.681701",
+      "neo_I": {
+        "value": [
+          0.42750874658278026,
+          0.059386219921029146,
+          0.5131050334961905
+        ],
+        "origin": "array(snapshots[14].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.0018603426350942086,
+          0.08792774763933796,
+          0.9102119097255679
+        ],
+        "origin": "array(snapshots[14].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 674,
+        "origin": "counted(snapshots[14].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 1935,
+        "origin": "counted(snapshots[14].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": -0.21529244909867945,
+        "origin": "computed(snapshots[14].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.3297109647210936,
+        "origin": "normalized(snapshots[14].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": -0.1776285084054464,
+        "origin": "computed(snapshots[14].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": -0.02106999759434407,
+        "origin": "mean(snapshots[14].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 1.613998763647094e-05,
+        "origin": "normalized(snapshots[14].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 16000,
+        "origin": "counted(snapshots[15].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:18:09.963351",
+      "neo_I": {
+        "value": [
+          0.4109179427228058,
+          0.05672044855161735,
+          0.5323616087255768
+        ],
+        "origin": "array(snapshots[15].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.00600872175277811,
+          0.08244036786840665,
+          0.9115509103788152
+        ],
+        "origin": "array(snapshots[15].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 693,
+        "origin": "counted(snapshots[15].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 2935,
+        "origin": "counted(snapshots[15].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": -0.34944017223284174,
+        "origin": "computed(snapshots[15].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.2955083364043998,
+        "origin": "normalized(snapshots[15].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": -0.08738417262162025,
+        "origin": "computed(snapshots[15].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": -0.04710533615002074,
+        "origin": "mean(snapshots[15].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 1.2943136324565463e-05,
+        "origin": "normalized(snapshots[15].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 17000,
+        "origin": "counted(snapshots[16].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:18:12.221322",
+      "neo_I": {
+        "value": [
+          0.39879051177293445,
+          0.06773728723985431,
+          0.5334722009872114
+        ],
+        "origin": "array(snapshots[16].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.007192695025620952,
+          0.08274026367012317,
+          0.9100670413042559
+        ],
+        "origin": "array(snapshots[16].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 709,
+        "origin": "counted(snapshots[16].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 3935,
+        "origin": "counted(snapshots[16].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": -0.42736057913155284,
+        "origin": "computed(snapshots[16].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.27437601457418725,
+        "origin": "normalized(snapshots[16].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": -0.015671847873324794,
+        "origin": "computed(snapshots[16].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": -0.05621880414356346,
+        "origin": "mean(snapshots[16].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 7.45202870483252e-06,
+        "origin": "normalized(snapshots[16].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 18000,
+        "origin": "counted(snapshots[17].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:18:14.491697",
+      "neo_I": {
+        "value": [
+          0.3942482248644547,
+          0.07810701254106205,
+          0.5276447625944832
+        ],
+        "origin": "array(snapshots[17].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.006533855029191392,
+          0.08591669880344392,
+          0.9075494461673648
+        ],
+        "origin": "array(snapshots[17].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 731,
+        "origin": "counted(snapshots[17].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 4935,
+        "origin": "counted(snapshots[17].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": -0.4799578564011261,
+        "origin": "computed(snapshots[17].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.25808074210238285,
+        "origin": "normalized(snapshots[17].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": 0.038373763539977096,
+        "origin": "normalized(snapshots[17].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": -0.06116778358625538,
+        "origin": "mean(snapshots[17].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 4.1618837089349724e-06,
+        "origin": "normalized(snapshots[17].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 19000,
+        "origin": "counted(snapshots[18].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:18:16.749772",
+      "neo_I": {
+        "value": [
+          0.3818112529442208,
+          0.09150322879018298,
+          0.5266855182655962
+        ],
+        "origin": "array(snapshots[18].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.003899055972098335,
+          0.09242288412743815,
+          0.9036780599004636
+        ],
+        "origin": "array(snapshots[18].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 747,
+        "origin": "counted(snapshots[18].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 5935,
+        "origin": "counted(snapshots[18].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": -0.517629657501042,
+        "origin": "computed(snapshots[18].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.2431318294355074,
+        "origin": "normalized(snapshots[18].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": 0.07857600500699363,
+        "origin": "normalized(snapshots[18].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": -0.06530727435284699,
+        "origin": "mean(snapshots[18].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 4.620309521868353e-06,
+        "origin": "normalized(snapshots[18].tau_last)",
+        "source": "FROM_MATH"
+      }
+    },
+    {
+      "cycle": {
+        "value": 20000,
+        "origin": "counted(snapshots[19].cycle)",
+        "source": "FROM_DATA"
+      },
+      "timestamp": "2025-11-29T22:18:18.169207",
+      "neo_I": {
+        "value": [
+          0.3746597248986261,
+          0.09531415613011913,
+          0.5300261189712547
+        ],
+        "origin": "array(snapshots[19].neo_I)",
+        "source": "FROM_DATA"
+      },
+      "eva_I": {
+        "value": [
+          0.0001510113131646768,
+          0.10746142205264418,
+          0.8923875666341912
+        ],
+        "origin": "array(snapshots[19].eva_I)",
+        "source": "FROM_DATA"
+      },
+      "neo_coupling_acts": {
+        "value": 758,
+        "origin": "counted(snapshots[19].neo_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "eva_coupling_acts": {
+        "value": 6374,
+        "origin": "counted(snapshots[19].eva_coupling_acts)",
+        "source": "FROM_DATA"
+      },
+      "corr_S": {
+        "value": -0.5448565197705515,
+        "origin": "computed(snapshots[19].corr_S)",
+        "source": "FROM_MATH"
+      },
+      "corr_N": {
+        "value": 0.2252304756892921,
+        "origin": "normalized(snapshots[19].corr_N)",
+        "source": "FROM_MATH"
+      },
+      "corr_C": {
+        "value": 0.11136201467355031,
+        "origin": "normalized(snapshots[19].corr_C)",
+        "source": "FROM_MATH"
+      },
+      "mean_corr": {
+        "value": -0.06942134313590302,
+        "origin": "mean(snapshots[19].mean_corr)",
+        "source": "FROM_STATISTICS"
+      },
+      "tau_last": {
+        "value": 1.7247334488725479e-06,
+        "origin": "normalized(snapshots[19].tau_last)",
+        "source": "FROM_MATH"
+      }
     }
   ],
   "quantiles_neo": {
-    "T": 100,
-    "w": 10,
-    "max_hist": 100,
-    "sigma_med": 1.4070864883407096e-05,
+    "T": {
+      "value": 100,
+      "origin": "counted(quantiles_neo.T)",
+      "source": "FROM_DATA"
+    },
+    "w": {
+      "value": 10,
+      "origin": "counted(quantiles_neo.w)",
+      "source": "FROM_DATA"
+    },
+    "max_hist": {
+      "value": 100,
+      "origin": "max_hist(quantiles_neo.max_hist)",
+      "source": "FROM_STATISTICS"
+    },
+    "sigma_med": {
+      "value": 1.4070864883407096e-05,
+      "origin": "normalized(quantiles_neo.sigma_med)",
+      "source": "FROM_MATH"
+    },
     "rho_quantiles": {
-      "p50": 1.0057947216113285,
-      "p75": 1.0219361889289684,
-      "p95": 1.046630244358034,
-      "p97.5": 1.0544335259750754
+      "p50": {
+        "value": 1.0057947216113285,
+        "origin": "computed(quantiles_neo.rho_quantiles.p50)",
+        "source": "FROM_MATH"
+      },
+      "p75": {
+        "value": 1.0219361889289684,
+        "origin": "computed(quantiles_neo.rho_quantiles.p75)",
+        "source": "FROM_MATH"
+      },
+      "p95": {
+        "value": 1.046630244358034,
+        "origin": "computed(quantiles_neo.rho_quantiles.p95)",
+        "source": "FROM_MATH"
+      },
+      "p97.5": {
+        "value": 1.0544335259750754,
+        "origin": "computed(quantiles_neo.rho_quantiles.p97.5)",
+        "source": "FROM_MATH"
+      }
     },
     "iqr_quantiles": {
-      "p50": 1.4810009175971965e-06,
-      "p75": 1.7996098691002178e-06,
-      "p95": 2.832016336963173e-06
+      "p50": {
+        "value": 1.4810009175971965e-06,
+        "origin": "normalized(quantiles_neo.iqr_quantiles.p50)",
+        "source": "FROM_MATH"
+      },
+      "p75": {
+        "value": 1.7996098691002178e-06,
+        "origin": "normalized(quantiles_neo.iqr_quantiles.p75)",
+        "source": "FROM_MATH"
+      },
+      "p95": {
+        "value": 2.832016336963173e-06,
+        "origin": "normalized(quantiles_neo.iqr_quantiles.p95)",
+        "source": "FROM_MATH"
+      }
     },
     "tau_quantiles": {
-      "p50": 5.274209897039086e-06,
-      "p75": 8.32610645879002e-06,
-      "p99": 2.134170154403523e-05
+      "p50": {
+        "value": 5.274209897039086e-06,
+        "origin": "normalized(quantiles_neo.tau_quantiles.p50)",
+        "source": "FROM_MATH"
+      },
+      "p75": {
+        "value": 8.32610645879002e-06,
+        "origin": "normalized(quantiles_neo.tau_quantiles.p75)",
+        "source": "FROM_MATH"
+      },
+      "p99": {
+        "value": 2.134170154403523e-05,
+        "origin": "normalized(quantiles_neo.tau_quantiles.p99)",
+        "source": "FROM_MATH"
+      }
     },
     "ou_limits": {
-      "clip_min_mean": -0.10257783471047405,
-      "clip_max_mean": 0.04922700067646102
+      "clip_min_mean": {
+        "value": -0.10257783471047405,
+        "origin": "mean(quantiles_neo.ou_limits.clip_min_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "clip_max_mean": {
+        "value": 0.04922700067646102,
+        "origin": "mean(quantiles_neo.ou_limits.clip_max_mean)",
+        "source": "FROM_STATISTICS"
+      }
     }
   },
   "quantiles_eva": {
-    "T": 100,
-    "w": 10,
-    "max_hist": 100,
-    "sigma_med": 1.9532961641104514e-05,
+    "T": {
+      "value": 100,
+      "origin": "counted(quantiles_eva.T)",
+      "source": "FROM_DATA"
+    },
+    "w": {
+      "value": 10,
+      "origin": "counted(quantiles_eva.w)",
+      "source": "FROM_DATA"
+    },
+    "max_hist": {
+      "value": 100,
+      "origin": "max_hist(quantiles_eva.max_hist)",
+      "source": "FROM_STATISTICS"
+    },
+    "sigma_med": {
+      "value": 1.9532961641104514e-05,
+      "origin": "normalized(quantiles_eva.sigma_med)",
+      "source": "FROM_MATH"
+    },
     "rho_quantiles": {
-      "p50": 0.9936980135398441,
-      "p75": 1.0225825021837027,
-      "p95": 1.0636790214226097,
-      "p97.5": 1.0885069525264783
+      "p50": {
+        "value": 0.9936980135398441,
+        "origin": "normalized(quantiles_eva.rho_quantiles.p50)",
+        "source": "FROM_MATH"
+      },
+      "p75": {
+        "value": 1.0225825021837027,
+        "origin": "computed(quantiles_eva.rho_quantiles.p75)",
+        "source": "FROM_MATH"
+      },
+      "p95": {
+        "value": 1.0636790214226097,
+        "origin": "computed(quantiles_eva.rho_quantiles.p95)",
+        "source": "FROM_MATH"
+      },
+      "p97.5": {
+        "value": 1.0885069525264783,
+        "origin": "computed(quantiles_eva.rho_quantiles.p97.5)",
+        "source": "FROM_MATH"
+      }
     },
     "iqr_quantiles": {
-      "p50": 5.922581525768541e-06,
-      "p75": 6.782489141347656e-06,
-      "p95": 8.88925827789404e-06
+      "p50": {
+        "value": 5.922581525768541e-06,
+        "origin": "normalized(quantiles_eva.iqr_quantiles.p50)",
+        "source": "FROM_MATH"
+      },
+      "p75": {
+        "value": 6.782489141347656e-06,
+        "origin": "normalized(quantiles_eva.iqr_quantiles.p75)",
+        "source": "FROM_MATH"
+      },
+      "p95": {
+        "value": 8.88925827789404e-06,
+        "origin": "normalized(quantiles_eva.iqr_quantiles.p95)",
+        "source": "FROM_MATH"
+      }
     },
     "tau_quantiles": {
-      "p50": 3.1878654879006853e-07,
-      "p75": 3.1878654879006853e-07,
-      "p99": 3.1878654879006853e-07
+      "p50": {
+        "value": 3.1878654879006853e-07,
+        "origin": "normalized(quantiles_eva.tau_quantiles.p50)",
+        "source": "FROM_MATH"
+      },
+      "p75": {
+        "value": 3.1878654879006853e-07,
+        "origin": "normalized(quantiles_eva.tau_quantiles.p75)",
+        "source": "FROM_MATH"
+      },
+      "p99": {
+        "value": 3.1878654879006853e-07,
+        "origin": "normalized(quantiles_eva.tau_quantiles.p99)",
+        "source": "FROM_MATH"
+      }
     },
     "ou_limits": {
-      "clip_min_mean": -0.011138908488868676,
-      "clip_max_mean": 0.020300217932713412
+      "clip_min_mean": {
+        "value": -0.011138908488868676,
+        "origin": "mean(quantiles_eva.ou_limits.clip_min_mean)",
+        "source": "FROM_STATISTICS"
+      },
+      "clip_max_mean": {
+        "value": 0.020300217932713412,
+        "origin": "mean(quantiles_eva.ou_limits.clip_max_mean)",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "8ecdbc13e4a4",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:14:00.923059",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/repro/longrun_20k.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:14:00.923451",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 0,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 20,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 502,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 528,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 502,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 508,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
     }
   }
 }

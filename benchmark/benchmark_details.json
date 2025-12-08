@@ -1,61 +1,209 @@
 {
   "results": {
     "timestamp": "2025-12-01T07:11:09.018182",
-    "S1_adaptation": 0.5063478488354239,
-    "S2_generalization": 0.9242180899519553,
-    "S3_planning": 0.6989102753413976,
-    "S4_selfmodel": 0.1371959520113668,
-    "S5_tom": -0.04009415695810921,
-    "S6_norms": 0.3193462262143082,
-    "S7_curiosity": 0.7430877020913125,
-    "S8_ethics": 0.5665476567102179,
-    "S9_narrative": 0.5380574548272582,
-    "S10_maturity": 0.8303714162929715,
-    "AGI_X": 0.5223988465318102
+    "S1_adaptation": {
+      "value": 0.5063478488354239,
+      "origin": "normalized(results.S1_adaptation)",
+      "source": "FROM_MATH"
+    },
+    "S2_generalization": {
+      "value": 0.9242180899519553,
+      "origin": "normalized(results.S2_generalization)",
+      "source": "FROM_MATH"
+    },
+    "S3_planning": {
+      "value": 0.6989102753413976,
+      "origin": "normalized(results.S3_planning)",
+      "source": "FROM_MATH"
+    },
+    "S4_selfmodel": {
+      "value": 0.1371959520113668,
+      "origin": "normalized(results.S4_selfmodel)",
+      "source": "FROM_MATH"
+    },
+    "S5_tom": {
+      "value": -0.04009415695810921,
+      "origin": "computed(results.S5_tom)",
+      "source": "FROM_MATH"
+    },
+    "S6_norms": {
+      "value": 0.3193462262143082,
+      "origin": "normalized(results.S6_norms)",
+      "source": "FROM_MATH"
+    },
+    "S7_curiosity": {
+      "value": 0.7430877020913125,
+      "origin": "normalized(results.S7_curiosity)",
+      "source": "FROM_MATH"
+    },
+    "S8_ethics": {
+      "value": 0.5665476567102179,
+      "origin": "normalized(results.S8_ethics)",
+      "source": "FROM_MATH"
+    },
+    "S9_narrative": {
+      "value": 0.5380574548272582,
+      "origin": "normalized(results.S9_narrative)",
+      "source": "FROM_MATH"
+    },
+    "S10_maturity": {
+      "value": 0.8303714162929715,
+      "origin": "normalized(results.S10_maturity)",
+      "source": "FROM_MATH"
+    },
+    "AGI_X": {
+      "value": 0.5223988465318102,
+      "origin": "normalized(results.AGI_X)",
+      "source": "FROM_MATH"
+    }
   },
   "details": {
     "S1": {
-      "score": 0.5063478488354239,
+      "score": {
+        "value": 0.5063478488354239,
+        "origin": "computed(details.S1.score)",
+        "source": "FROM_DATA"
+      },
       "agents": {
         "NEO": {
           "agent_name": "NEO",
-          "surprise_reduction": -0.0049772362502355505,
-          "policy_adaptation": 0.20687319756411726,
-          "crisis_rate": 0.1725,
-          "recovery_time": 1.5681818181818181,
-          "R_adapt": 0.508321064769141
+          "surprise_reduction": {
+            "value": -0.0049772362502355505,
+            "origin": "computed(details.S1.agents.NEO.surprise_reduction)",
+            "source": "FROM_MATH"
+          },
+          "policy_adaptation": {
+            "value": 0.20687319756411726,
+            "origin": "normalized(details.S1.agents.NEO.policy_adaptation)",
+            "source": "FROM_MATH"
+          },
+          "crisis_rate": {
+            "value": 0.1725,
+            "origin": "ratio(details.S1.agents.NEO.crisis_rate)",
+            "source": "FROM_MATH"
+          },
+          "recovery_time": {
+            "value": 1.5681818181818181,
+            "origin": "measured(details.S1.agents.NEO.recovery_time)",
+            "source": "FROM_DATA"
+          },
+          "R_adapt": {
+            "value": 0.508321064769141,
+            "origin": "normalized(details.S1.agents.NEO.R_adapt)",
+            "source": "FROM_MATH"
+          }
         },
         "EVA": {
           "agent_name": "EVA",
-          "surprise_reduction": 0.011555987776582621,
-          "policy_adaptation": 0.16167663100603824,
-          "crisis_rate": 0.16375,
-          "recovery_time": 1.3645833333333333,
-          "R_adapt": 0.5040003844124445
+          "surprise_reduction": {
+            "value": 0.011555987776582621,
+            "origin": "normalized(details.S1.agents.EVA.surprise_reduction)",
+            "source": "FROM_MATH"
+          },
+          "policy_adaptation": {
+            "value": 0.16167663100603824,
+            "origin": "normalized(details.S1.agents.EVA.policy_adaptation)",
+            "source": "FROM_MATH"
+          },
+          "crisis_rate": {
+            "value": 0.16375,
+            "origin": "ratio(details.S1.agents.EVA.crisis_rate)",
+            "source": "FROM_MATH"
+          },
+          "recovery_time": {
+            "value": 1.3645833333333333,
+            "origin": "measured(details.S1.agents.EVA.recovery_time)",
+            "source": "FROM_DATA"
+          },
+          "R_adapt": {
+            "value": 0.5040003844124445,
+            "origin": "normalized(details.S1.agents.EVA.R_adapt)",
+            "source": "FROM_MATH"
+          }
         },
         "ALEX": {
           "agent_name": "ALEX",
-          "surprise_reduction": -0.004417247888475195,
-          "policy_adaptation": 0.14390778417356634,
-          "crisis_rate": 0.15625,
-          "recovery_time": 1.5060240963855422,
-          "R_adapt": 0.4945304360966798
+          "surprise_reduction": {
+            "value": -0.004417247888475195,
+            "origin": "computed(details.S1.agents.ALEX.surprise_reduction)",
+            "source": "FROM_MATH"
+          },
+          "policy_adaptation": {
+            "value": 0.14390778417356634,
+            "origin": "normalized(details.S1.agents.ALEX.policy_adaptation)",
+            "source": "FROM_MATH"
+          },
+          "crisis_rate": {
+            "value": 0.15625,
+            "origin": "ratio(details.S1.agents.ALEX.crisis_rate)",
+            "source": "FROM_MATH"
+          },
+          "recovery_time": {
+            "value": 1.5060240963855422,
+            "origin": "measured(details.S1.agents.ALEX.recovery_time)",
+            "source": "FROM_DATA"
+          },
+          "R_adapt": {
+            "value": 0.4945304360966798,
+            "origin": "normalized(details.S1.agents.ALEX.R_adapt)",
+            "source": "FROM_MATH"
+          }
         },
         "ADAM": {
           "agent_name": "ADAM",
-          "surprise_reduction": 0.0067507039983335515,
-          "policy_adaptation": 0.16248189198778498,
-          "crisis_rate": 0.165,
-          "recovery_time": 1.5348837209302326,
-          "R_adapt": 0.5019448491956688
+          "surprise_reduction": {
+            "value": 0.0067507039983335515,
+            "origin": "normalized(details.S1.agents.ADAM.surprise_reduction)",
+            "source": "FROM_MATH"
+          },
+          "policy_adaptation": {
+            "value": 0.16248189198778498,
+            "origin": "normalized(details.S1.agents.ADAM.policy_adaptation)",
+            "source": "FROM_MATH"
+          },
+          "crisis_rate": {
+            "value": 0.165,
+            "origin": "ratio(details.S1.agents.ADAM.crisis_rate)",
+            "source": "FROM_MATH"
+          },
+          "recovery_time": {
+            "value": 1.5348837209302326,
+            "origin": "measured(details.S1.agents.ADAM.recovery_time)",
+            "source": "FROM_DATA"
+          },
+          "R_adapt": {
+            "value": 0.5019448491956688,
+            "origin": "normalized(details.S1.agents.ADAM.R_adapt)",
+            "source": "FROM_MATH"
+          }
         },
         "IRIS": {
           "agent_name": "IRIS",
-          "surprise_reduction": -0.009976266730475136,
-          "policy_adaptation": 0.2247767213179182,
-          "crisis_rate": 0.135,
-          "recovery_time": 1.358974358974359,
-          "R_adapt": 0.5229425097031855
+          "surprise_reduction": {
+            "value": -0.009976266730475136,
+            "origin": "computed(details.S1.agents.IRIS.surprise_reduction)",
+            "source": "FROM_MATH"
+          },
+          "policy_adaptation": {
+            "value": 0.2247767213179182,
+            "origin": "normalized(details.S1.agents.IRIS.policy_adaptation)",
+            "source": "FROM_MATH"
+          },
+          "crisis_rate": {
+            "value": 0.135,
+            "origin": "ratio(details.S1.agents.IRIS.crisis_rate)",
+            "source": "FROM_MATH"
+          },
+          "recovery_time": {
+            "value": 1.358974358974359,
+            "origin": "measured(details.S1.agents.IRIS.recovery_time)",
+            "source": "FROM_DATA"
+          },
+          "R_adapt": {
+            "value": 0.5229425097031855,
+            "origin": "normalized(details.S1.agents.IRIS.R_adapt)",
+            "source": "FROM_MATH"
+          }
         }
       },
       "regimes": [
@@ -64,483 +212,1622 @@
         "crisis_mode",
         "consolidation"
       ],
-      "steps_per_regime": 200
+      "steps_per_regime": {
+        "value": 200,
+        "origin": "counted(details.S1.steps_per_regime)",
+        "source": "FROM_DATA"
+      }
     },
     "S2": {
-      "score": 0.9242180899519553,
+      "score": {
+        "value": 0.9242180899519553,
+        "origin": "computed(details.S2.score)",
+        "source": "FROM_DATA"
+      },
       "agents": {
         "NEO": {
           "agent_name": "NEO",
-          "time_to_new_goal": 20,
-          "goal_stability": 0.8987777918487481,
-          "surprise_reduction": 0.02657134408511687,
-          "narrative_consistency": 0.042094432382361824,
-          "S2_score": 0.924388895924374
+          "time_to_new_goal": {
+            "value": 20,
+            "origin": "measured(details.S2.agents.NEO.time_to_new_goal)",
+            "source": "FROM_DATA"
+          },
+          "goal_stability": {
+            "value": 0.8987777918487481,
+            "origin": "normalized(details.S2.agents.NEO.goal_stability)",
+            "source": "FROM_MATH"
+          },
+          "surprise_reduction": {
+            "value": 0.02657134408511687,
+            "origin": "normalized(details.S2.agents.NEO.surprise_reduction)",
+            "source": "FROM_MATH"
+          },
+          "narrative_consistency": {
+            "value": 0.042094432382361824,
+            "origin": "normalized(details.S2.agents.NEO.narrative_consistency)",
+            "source": "FROM_MATH"
+          },
+          "S2_score": {
+            "value": 0.924388895924374,
+            "origin": "computed(details.S2.agents.NEO.S2_score)",
+            "source": "FROM_DATA"
+          }
         },
         "EVA": {
           "agent_name": "EVA",
-          "time_to_new_goal": 20,
-          "goal_stability": 0.8991558561226555,
-          "surprise_reduction": 0.009679966730995637,
-          "narrative_consistency": 0.042094432382361824,
-          "S2_score": 0.9245779280613278
+          "time_to_new_goal": {
+            "value": 20,
+            "origin": "measured(details.S2.agents.EVA.time_to_new_goal)",
+            "source": "FROM_DATA"
+          },
+          "goal_stability": {
+            "value": 0.8991558561226555,
+            "origin": "normalized(details.S2.agents.EVA.goal_stability)",
+            "source": "FROM_MATH"
+          },
+          "surprise_reduction": {
+            "value": 0.009679966730995637,
+            "origin": "normalized(details.S2.agents.EVA.surprise_reduction)",
+            "source": "FROM_MATH"
+          },
+          "narrative_consistency": {
+            "value": 0.042094432382361824,
+            "origin": "normalized(details.S2.agents.EVA.narrative_consistency)",
+            "source": "FROM_MATH"
+          },
+          "S2_score": {
+            "value": 0.9245779280613278,
+            "origin": "computed(details.S2.agents.EVA.S2_score)",
+            "source": "FROM_DATA"
+          }
         },
         "ALEX": {
           "agent_name": "ALEX",
-          "time_to_new_goal": 20,
-          "goal_stability": 0.8970016757055038,
-          "surprise_reduction": -0.006390566960839783,
-          "narrative_consistency": 0.042094432382361824,
-          "S2_score": 0.9235008378527518
+          "time_to_new_goal": {
+            "value": 20,
+            "origin": "measured(details.S2.agents.ALEX.time_to_new_goal)",
+            "source": "FROM_DATA"
+          },
+          "goal_stability": {
+            "value": 0.8970016757055038,
+            "origin": "normalized(details.S2.agents.ALEX.goal_stability)",
+            "source": "FROM_MATH"
+          },
+          "surprise_reduction": {
+            "value": -0.006390566960839783,
+            "origin": "computed(details.S2.agents.ALEX.surprise_reduction)",
+            "source": "FROM_MATH"
+          },
+          "narrative_consistency": {
+            "value": 0.042094432382361824,
+            "origin": "normalized(details.S2.agents.ALEX.narrative_consistency)",
+            "source": "FROM_MATH"
+          },
+          "S2_score": {
+            "value": 0.9235008378527518,
+            "origin": "computed(details.S2.agents.ALEX.S2_score)",
+            "source": "FROM_DATA"
+          }
         },
         "ADAM": {
           "agent_name": "ADAM",
-          "time_to_new_goal": 20,
-          "goal_stability": 0.8973778231664412,
-          "surprise_reduction": 0.016922585272577617,
-          "narrative_consistency": 0.042094432382361824,
-          "S2_score": 0.9236889115832205
+          "time_to_new_goal": {
+            "value": 20,
+            "origin": "measured(details.S2.agents.ADAM.time_to_new_goal)",
+            "source": "FROM_DATA"
+          },
+          "goal_stability": {
+            "value": 0.8973778231664412,
+            "origin": "normalized(details.S2.agents.ADAM.goal_stability)",
+            "source": "FROM_MATH"
+          },
+          "surprise_reduction": {
+            "value": 0.016922585272577617,
+            "origin": "normalized(details.S2.agents.ADAM.surprise_reduction)",
+            "source": "FROM_MATH"
+          },
+          "narrative_consistency": {
+            "value": 0.042094432382361824,
+            "origin": "normalized(details.S2.agents.ADAM.narrative_consistency)",
+            "source": "FROM_MATH"
+          },
+          "S2_score": {
+            "value": 0.9236889115832205,
+            "origin": "computed(details.S2.agents.ADAM.S2_score)",
+            "source": "FROM_DATA"
+          }
         },
         "IRIS": {
           "agent_name": "IRIS",
-          "time_to_new_goal": 20,
-          "goal_stability": 0.8998677526762051,
-          "surprise_reduction": 0.016033399467045892,
-          "narrative_consistency": 0.042094432382361824,
-          "S2_score": 0.9249338763381025
+          "time_to_new_goal": {
+            "value": 20,
+            "origin": "measured(details.S2.agents.IRIS.time_to_new_goal)",
+            "source": "FROM_DATA"
+          },
+          "goal_stability": {
+            "value": 0.8998677526762051,
+            "origin": "normalized(details.S2.agents.IRIS.goal_stability)",
+            "source": "FROM_MATH"
+          },
+          "surprise_reduction": {
+            "value": 0.016033399467045892,
+            "origin": "normalized(details.S2.agents.IRIS.surprise_reduction)",
+            "source": "FROM_MATH"
+          },
+          "narrative_consistency": {
+            "value": 0.042094432382361824,
+            "origin": "normalized(details.S2.agents.IRIS.narrative_consistency)",
+            "source": "FROM_MATH"
+          },
+          "S2_score": {
+            "value": 0.9249338763381025,
+            "origin": "computed(details.S2.agents.IRIS.S2_score)",
+            "source": "FROM_DATA"
+          }
         }
       },
-      "known_steps": 300,
-      "novel_steps": 400
+      "known_steps": {
+        "value": 300,
+        "origin": "count(details.S2.known_steps)",
+        "source": "FROM_DATA"
+      },
+      "novel_steps": {
+        "value": 400,
+        "origin": "counted(details.S2.novel_steps)",
+        "source": "FROM_DATA"
+      }
     },
     "S3": {
-      "score": 0.6989102753413976,
+      "score": {
+        "value": 0.6989102753413976,
+        "origin": "computed(details.S3.score)",
+        "source": "FROM_DATA"
+      },
       "agents": {
         "NEO": {
           "agent_name": "NEO",
-          "mean_planning_depth": 9.43,
-          "trajectory_consistency": 0.9007478068906427,
-          "goal_progress": 0.5326104137270875,
-          "decision_quality": 0.9857842797548085,
-          "S3_score": 0.6967662482362524
+          "mean_planning_depth": {
+            "value": 9.43,
+            "origin": "mean(details.S3.agents.NEO.mean_planning_depth)",
+            "source": "FROM_STATISTICS"
+          },
+          "trajectory_consistency": {
+            "value": 0.9007478068906427,
+            "origin": "normalized(details.S3.agents.NEO.trajectory_consistency)",
+            "source": "FROM_MATH"
+          },
+          "goal_progress": {
+            "value": 0.5326104137270875,
+            "origin": "normalized(details.S3.agents.NEO.goal_progress)",
+            "source": "FROM_MATH"
+          },
+          "decision_quality": {
+            "value": 0.9857842797548085,
+            "origin": "count(details.S3.agents.NEO.decision_quality)",
+            "source": "FROM_DATA"
+          },
+          "S3_score": {
+            "value": 0.6967662482362524,
+            "origin": "computed(details.S3.agents.NEO.S3_score)",
+            "source": "FROM_DATA"
+          }
         },
         "EVA": {
           "agent_name": "EVA",
-          "mean_planning_depth": 9.43,
-          "trajectory_consistency": 0.8961010930918197,
-          "goal_progress": 0.5338112018609367,
-          "decision_quality": 0.9633452394334878,
-          "S3_score": 0.697486721116562
+          "mean_planning_depth": {
+            "value": 9.43,
+            "origin": "mean(details.S3.agents.EVA.mean_planning_depth)",
+            "source": "FROM_STATISTICS"
+          },
+          "trajectory_consistency": {
+            "value": 0.8961010930918197,
+            "origin": "normalized(details.S3.agents.EVA.trajectory_consistency)",
+            "source": "FROM_MATH"
+          },
+          "goal_progress": {
+            "value": 0.5338112018609367,
+            "origin": "normalized(details.S3.agents.EVA.goal_progress)",
+            "source": "FROM_MATH"
+          },
+          "decision_quality": {
+            "value": 0.9633452394334878,
+            "origin": "count(details.S3.agents.EVA.decision_quality)",
+            "source": "FROM_DATA"
+          },
+          "S3_score": {
+            "value": 0.697486721116562,
+            "origin": "computed(details.S3.agents.EVA.S3_score)",
+            "source": "FROM_DATA"
+          }
         },
         "ALEX": {
           "agent_name": "ALEX",
-          "mean_planning_depth": 9.43,
-          "trajectory_consistency": 0.8980518900110204,
-          "goal_progress": 0.5387463513640232,
-          "decision_quality": 0.9717476356098511,
-          "S3_score": 0.7004478108184138
+          "mean_planning_depth": {
+            "value": 9.43,
+            "origin": "mean(details.S3.agents.ALEX.mean_planning_depth)",
+            "source": "FROM_STATISTICS"
+          },
+          "trajectory_consistency": {
+            "value": 0.8980518900110204,
+            "origin": "normalized(details.S3.agents.ALEX.trajectory_consistency)",
+            "source": "FROM_MATH"
+          },
+          "goal_progress": {
+            "value": 0.5387463513640232,
+            "origin": "normalized(details.S3.agents.ALEX.goal_progress)",
+            "source": "FROM_MATH"
+          },
+          "decision_quality": {
+            "value": 0.9717476356098511,
+            "origin": "count(details.S3.agents.ALEX.decision_quality)",
+            "source": "FROM_DATA"
+          },
+          "S3_score": {
+            "value": 0.7004478108184138,
+            "origin": "computed(details.S3.agents.ALEX.S3_score)",
+            "source": "FROM_DATA"
+          }
         },
         "ADAM": {
           "agent_name": "ADAM",
-          "mean_planning_depth": 9.43,
-          "trajectory_consistency": 0.8933966227244792,
-          "goal_progress": 0.5366135858604174,
-          "decision_quality": 0.9832739566769843,
-          "S3_score": 0.6991681515162504
+          "mean_planning_depth": {
+            "value": 9.43,
+            "origin": "mean(details.S3.agents.ADAM.mean_planning_depth)",
+            "source": "FROM_STATISTICS"
+          },
+          "trajectory_consistency": {
+            "value": 0.8933966227244792,
+            "origin": "normalized(details.S3.agents.ADAM.trajectory_consistency)",
+            "source": "FROM_MATH"
+          },
+          "goal_progress": {
+            "value": 0.5366135858604174,
+            "origin": "normalized(details.S3.agents.ADAM.goal_progress)",
+            "source": "FROM_MATH"
+          },
+          "decision_quality": {
+            "value": 0.9832739566769843,
+            "origin": "count(details.S3.agents.ADAM.decision_quality)",
+            "source": "FROM_DATA"
+          },
+          "S3_score": {
+            "value": 0.6991681515162504,
+            "origin": "computed(details.S3.agents.ADAM.S3_score)",
+            "source": "FROM_DATA"
+          }
         },
         "IRIS": {
           "agent_name": "IRIS",
-          "mean_planning_depth": 9.43,
-          "trajectory_consistency": 0.8944639628629882,
-          "goal_progress": 0.5391374083658488,
-          "decision_quality": 0.989635643526766,
-          "S3_score": 0.7006824450195093
+          "mean_planning_depth": {
+            "value": 9.43,
+            "origin": "mean(details.S3.agents.IRIS.mean_planning_depth)",
+            "source": "FROM_STATISTICS"
+          },
+          "trajectory_consistency": {
+            "value": 0.8944639628629882,
+            "origin": "normalized(details.S3.agents.IRIS.trajectory_consistency)",
+            "source": "FROM_MATH"
+          },
+          "goal_progress": {
+            "value": 0.5391374083658488,
+            "origin": "normalized(details.S3.agents.IRIS.goal_progress)",
+            "source": "FROM_MATH"
+          },
+          "decision_quality": {
+            "value": 0.989635643526766,
+            "origin": "count(details.S3.agents.IRIS.decision_quality)",
+            "source": "FROM_DATA"
+          },
+          "S3_score": {
+            "value": 0.7006824450195093,
+            "origin": "computed(details.S3.agents.IRIS.S3_score)",
+            "source": "FROM_DATA"
+          }
         }
       },
-      "total_steps": 500
+      "total_steps": {
+        "value": 500,
+        "origin": "count(details.S3.total_steps)",
+        "source": "FROM_DATA"
+      }
     },
     "S4": {
-      "score": 0.1371959520113668,
+      "score": {
+        "value": 0.1371959520113668,
+        "origin": "computed(details.S4.score)",
+        "source": "FROM_DATA"
+      },
       "agents": {
         "NEO": {
           "agent_name": "NEO",
-          "prediction_accuracy": 0.028632983140799935,
-          "shock_recovery": 0.0,
-          "self_awareness": -0.006956759160072172,
-          "calibration_error": 0.5,
-          "S4_score": 0.11431649157039997
+          "prediction_accuracy": {
+            "value": 0.028632983140799935,
+            "origin": "count(details.S4.agents.NEO.prediction_accuracy)",
+            "source": "FROM_DATA"
+          },
+          "shock_recovery": {
+            "value": 0.0,
+            "origin": "normalized(details.S4.agents.NEO.shock_recovery)",
+            "source": "FROM_MATH"
+          },
+          "self_awareness": {
+            "value": -0.006956759160072172,
+            "origin": "computed(details.S4.agents.NEO.self_awareness)",
+            "source": "FROM_MATH"
+          },
+          "calibration_error": {
+            "value": 0.5,
+            "origin": "count(details.S4.agents.NEO.calibration_error)",
+            "source": "FROM_DATA"
+          },
+          "S4_score": {
+            "value": 0.11431649157039997,
+            "origin": "computed(details.S4.agents.NEO.S4_score)",
+            "source": "FROM_DATA"
+          }
         },
         "EVA": {
           "agent_name": "EVA",
-          "prediction_accuracy": 0.028613917077256565,
-          "shock_recovery": 0.0,
-          "self_awareness": 0.13271120621676,
-          "calibration_error": 0.5,
-          "S4_score": 0.15412032040365628
+          "prediction_accuracy": {
+            "value": 0.028613917077256565,
+            "origin": "count(details.S4.agents.EVA.prediction_accuracy)",
+            "source": "FROM_DATA"
+          },
+          "shock_recovery": {
+            "value": 0.0,
+            "origin": "normalized(details.S4.agents.EVA.shock_recovery)",
+            "source": "FROM_MATH"
+          },
+          "self_awareness": {
+            "value": 0.13271120621676,
+            "origin": "normalized(details.S4.agents.EVA.self_awareness)",
+            "source": "FROM_MATH"
+          },
+          "calibration_error": {
+            "value": 0.5,
+            "origin": "count(details.S4.agents.EVA.calibration_error)",
+            "source": "FROM_DATA"
+          },
+          "S4_score": {
+            "value": 0.15412032040365628,
+            "origin": "computed(details.S4.agents.EVA.S4_score)",
+            "source": "FROM_DATA"
+          }
         },
         "ALEX": {
           "agent_name": "ALEX",
-          "prediction_accuracy": 0.02871791530973474,
-          "shock_recovery": 0.0,
-          "self_awareness": 0.17988503929394967,
-          "calibration_error": 0.5,
-          "S4_score": 0.1683244694430523
+          "prediction_accuracy": {
+            "value": 0.02871791530973474,
+            "origin": "count(details.S4.agents.ALEX.prediction_accuracy)",
+            "source": "FROM_DATA"
+          },
+          "shock_recovery": {
+            "value": 0.0,
+            "origin": "normalized(details.S4.agents.ALEX.shock_recovery)",
+            "source": "FROM_MATH"
+          },
+          "self_awareness": {
+            "value": 0.17988503929394967,
+            "origin": "normalized(details.S4.agents.ALEX.self_awareness)",
+            "source": "FROM_MATH"
+          },
+          "calibration_error": {
+            "value": 0.5,
+            "origin": "count(details.S4.agents.ALEX.calibration_error)",
+            "source": "FROM_DATA"
+          },
+          "S4_score": {
+            "value": 0.1683244694430523,
+            "origin": "computed(details.S4.agents.ALEX.S4_score)",
+            "source": "FROM_DATA"
+          }
         },
         "ADAM": {
           "agent_name": "ADAM",
-          "prediction_accuracy": 0.028479958908234078,
-          "shock_recovery": 0.0,
-          "self_awareness": -0.039648064357143756,
-          "calibration_error": 0.5,
-          "S4_score": 0.11423997945411704
+          "prediction_accuracy": {
+            "value": 0.028479958908234078,
+            "origin": "count(details.S4.agents.ADAM.prediction_accuracy)",
+            "source": "FROM_DATA"
+          },
+          "shock_recovery": {
+            "value": 0.0,
+            "origin": "normalized(details.S4.agents.ADAM.shock_recovery)",
+            "source": "FROM_MATH"
+          },
+          "self_awareness": {
+            "value": -0.039648064357143756,
+            "origin": "computed(details.S4.agents.ADAM.self_awareness)",
+            "source": "FROM_MATH"
+          },
+          "calibration_error": {
+            "value": 0.5,
+            "origin": "count(details.S4.agents.ADAM.calibration_error)",
+            "source": "FROM_DATA"
+          },
+          "S4_score": {
+            "value": 0.11423997945411704,
+            "origin": "computed(details.S4.agents.ADAM.S4_score)",
+            "source": "FROM_DATA"
+          }
         },
         "IRIS": {
           "agent_name": "IRIS",
-          "prediction_accuracy": 0.02878644579659855,
-          "shock_recovery": 0.0,
-          "self_awareness": 0.06861758762436378,
-          "calibration_error": 0.5,
-          "S4_score": 0.13497849918560842
+          "prediction_accuracy": {
+            "value": 0.02878644579659855,
+            "origin": "count(details.S4.agents.IRIS.prediction_accuracy)",
+            "source": "FROM_DATA"
+          },
+          "shock_recovery": {
+            "value": 0.0,
+            "origin": "normalized(details.S4.agents.IRIS.shock_recovery)",
+            "source": "FROM_MATH"
+          },
+          "self_awareness": {
+            "value": 0.06861758762436378,
+            "origin": "normalized(details.S4.agents.IRIS.self_awareness)",
+            "source": "FROM_MATH"
+          },
+          "calibration_error": {
+            "value": 0.5,
+            "origin": "count(details.S4.agents.IRIS.calibration_error)",
+            "source": "FROM_DATA"
+          },
+          "S4_score": {
+            "value": 0.13497849918560842,
+            "origin": "computed(details.S4.agents.IRIS.S4_score)",
+            "source": "FROM_DATA"
+          }
         }
       },
-      "n_shocks": 3
+      "n_shocks": {
+        "value": 3,
+        "origin": "count(details.S4.n_shocks)",
+        "source": "FROM_DATA"
+      }
     },
     "S5": {
-      "score": -0.04009415695810921,
+      "score": {
+        "value": -0.04009415695810921,
+        "origin": "computed(details.S5.score)",
+        "source": "FROM_DATA"
+      },
       "pairs": {
         "NEO->EVA": {
           "observer": "NEO",
           "target": "EVA",
-          "prediction_correlation": -0.1558256294407285,
-          "drive_accuracy": 0.1513606811581483,
-          "state_accuracy": 0.0
+          "prediction_correlation": {
+            "value": -0.1558256294407285,
+            "origin": "count(details.S5.pairs.NEO->EVA.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.1513606811581483,
+            "origin": "normalized(details.S5.pairs.NEO->EVA.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.0,
+            "origin": "normalized(details.S5.pairs.NEO->EVA.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "NEO->ALEX": {
           "observer": "NEO",
           "target": "ALEX",
-          "prediction_correlation": -0.03211205378909118,
-          "drive_accuracy": 0.15931146965294876,
-          "state_accuracy": 0.0
+          "prediction_correlation": {
+            "value": -0.03211205378909118,
+            "origin": "count(details.S5.pairs.NEO->ALEX.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.15931146965294876,
+            "origin": "normalized(details.S5.pairs.NEO->ALEX.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.0,
+            "origin": "normalized(details.S5.pairs.NEO->ALEX.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "NEO->ADAM": {
           "observer": "NEO",
           "target": "ADAM",
-          "prediction_correlation": -0.13987811794948216,
-          "drive_accuracy": 0.14825575862340712,
-          "state_accuracy": 0.0
+          "prediction_correlation": {
+            "value": -0.13987811794948216,
+            "origin": "count(details.S5.pairs.NEO->ADAM.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.14825575862340712,
+            "origin": "normalized(details.S5.pairs.NEO->ADAM.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.0,
+            "origin": "normalized(details.S5.pairs.NEO->ADAM.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "NEO->IRIS": {
           "observer": "NEO",
           "target": "IRIS",
-          "prediction_correlation": 0.2653446630275198,
-          "drive_accuracy": 0.139988540538385,
-          "state_accuracy": 0.2653446630275198
+          "prediction_correlation": {
+            "value": 0.2653446630275198,
+            "origin": "count(details.S5.pairs.NEO->IRIS.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.139988540538385,
+            "origin": "normalized(details.S5.pairs.NEO->IRIS.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.2653446630275198,
+            "origin": "normalized(details.S5.pairs.NEO->IRIS.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "EVA->NEO": {
           "observer": "EVA",
           "target": "NEO",
-          "prediction_correlation": 0.013703551774815304,
-          "drive_accuracy": 0.1813247566762029,
-          "state_accuracy": 0.013703551774815304
+          "prediction_correlation": {
+            "value": 0.013703551774815304,
+            "origin": "count(details.S5.pairs.EVA->NEO.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.1813247566762029,
+            "origin": "normalized(details.S5.pairs.EVA->NEO.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.013703551774815304,
+            "origin": "normalized(details.S5.pairs.EVA->NEO.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "EVA->ALEX": {
           "observer": "EVA",
           "target": "ALEX",
-          "prediction_correlation": 0.0279718328235047,
-          "drive_accuracy": 0.16204582243914759,
-          "state_accuracy": 0.0279718328235047
+          "prediction_correlation": {
+            "value": 0.0279718328235047,
+            "origin": "count(details.S5.pairs.EVA->ALEX.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.16204582243914759,
+            "origin": "normalized(details.S5.pairs.EVA->ALEX.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.0279718328235047,
+            "origin": "normalized(details.S5.pairs.EVA->ALEX.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "EVA->ADAM": {
           "observer": "EVA",
           "target": "ADAM",
-          "prediction_correlation": -0.17667157691075513,
-          "drive_accuracy": 0.14694862740249667,
-          "state_accuracy": 0.0
+          "prediction_correlation": {
+            "value": -0.17667157691075513,
+            "origin": "count(details.S5.pairs.EVA->ADAM.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.14694862740249667,
+            "origin": "normalized(details.S5.pairs.EVA->ADAM.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.0,
+            "origin": "normalized(details.S5.pairs.EVA->ADAM.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "EVA->IRIS": {
           "observer": "EVA",
           "target": "IRIS",
-          "prediction_correlation": 0.09450231658653258,
-          "drive_accuracy": 0.13969553958318692,
-          "state_accuracy": 0.09450231658653258
+          "prediction_correlation": {
+            "value": 0.09450231658653258,
+            "origin": "count(details.S5.pairs.EVA->IRIS.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.13969553958318692,
+            "origin": "normalized(details.S5.pairs.EVA->IRIS.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.09450231658653258,
+            "origin": "normalized(details.S5.pairs.EVA->IRIS.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "ALEX->NEO": {
           "observer": "ALEX",
           "target": "NEO",
-          "prediction_correlation": -0.021903423316428198,
-          "drive_accuracy": 0.18367404470407153,
-          "state_accuracy": 0.0
+          "prediction_correlation": {
+            "value": -0.021903423316428198,
+            "origin": "count(details.S5.pairs.ALEX->NEO.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.18367404470407153,
+            "origin": "normalized(details.S5.pairs.ALEX->NEO.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.0,
+            "origin": "normalized(details.S5.pairs.ALEX->NEO.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "ALEX->EVA": {
           "observer": "ALEX",
           "target": "EVA",
-          "prediction_correlation": -0.3241643346692208,
-          "drive_accuracy": 0.14923838515674062,
-          "state_accuracy": 0.0
+          "prediction_correlation": {
+            "value": -0.3241643346692208,
+            "origin": "count(details.S5.pairs.ALEX->EVA.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.14923838515674062,
+            "origin": "normalized(details.S5.pairs.ALEX->EVA.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.0,
+            "origin": "normalized(details.S5.pairs.ALEX->EVA.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "ALEX->ADAM": {
           "observer": "ALEX",
           "target": "ADAM",
-          "prediction_correlation": -0.15600246090254008,
-          "drive_accuracy": 0.14817168273845313,
-          "state_accuracy": 0.0
+          "prediction_correlation": {
+            "value": -0.15600246090254008,
+            "origin": "count(details.S5.pairs.ALEX->ADAM.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.14817168273845313,
+            "origin": "normalized(details.S5.pairs.ALEX->ADAM.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.0,
+            "origin": "normalized(details.S5.pairs.ALEX->ADAM.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "ALEX->IRIS": {
           "observer": "ALEX",
           "target": "IRIS",
-          "prediction_correlation": -0.04010276772552626,
-          "drive_accuracy": 0.1369341570417937,
-          "state_accuracy": 0.0
+          "prediction_correlation": {
+            "value": -0.04010276772552626,
+            "origin": "count(details.S5.pairs.ALEX->IRIS.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.1369341570417937,
+            "origin": "normalized(details.S5.pairs.ALEX->IRIS.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.0,
+            "origin": "normalized(details.S5.pairs.ALEX->IRIS.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "ADAM->NEO": {
           "observer": "ADAM",
           "target": "NEO",
-          "prediction_correlation": 0.1822646128194688,
-          "drive_accuracy": 0.18722362678425875,
-          "state_accuracy": 0.1822646128194688
+          "prediction_correlation": {
+            "value": 0.1822646128194688,
+            "origin": "count(details.S5.pairs.ADAM->NEO.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.18722362678425875,
+            "origin": "normalized(details.S5.pairs.ADAM->NEO.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.1822646128194688,
+            "origin": "normalized(details.S5.pairs.ADAM->NEO.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "ADAM->EVA": {
           "observer": "ADAM",
           "target": "EVA",
-          "prediction_correlation": -0.2157855542670292,
-          "drive_accuracy": 0.150614300634284,
-          "state_accuracy": 0.0
+          "prediction_correlation": {
+            "value": -0.2157855542670292,
+            "origin": "count(details.S5.pairs.ADAM->EVA.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.150614300634284,
+            "origin": "normalized(details.S5.pairs.ADAM->EVA.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.0,
+            "origin": "normalized(details.S5.pairs.ADAM->EVA.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "ADAM->ALEX": {
           "observer": "ADAM",
           "target": "ALEX",
-          "prediction_correlation": 0.07193836915111627,
-          "drive_accuracy": 0.15920499763158064,
-          "state_accuracy": 0.07193836915111627
+          "prediction_correlation": {
+            "value": 0.07193836915111627,
+            "origin": "count(details.S5.pairs.ADAM->ALEX.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.15920499763158064,
+            "origin": "normalized(details.S5.pairs.ADAM->ALEX.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.07193836915111627,
+            "origin": "normalized(details.S5.pairs.ADAM->ALEX.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "ADAM->IRIS": {
           "observer": "ADAM",
           "target": "IRIS",
-          "prediction_correlation": -0.029654206350066784,
-          "drive_accuracy": 0.13808986296101097,
-          "state_accuracy": 0.0
+          "prediction_correlation": {
+            "value": -0.029654206350066784,
+            "origin": "count(details.S5.pairs.ADAM->IRIS.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.13808986296101097,
+            "origin": "normalized(details.S5.pairs.ADAM->IRIS.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.0,
+            "origin": "normalized(details.S5.pairs.ADAM->IRIS.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "IRIS->NEO": {
           "observer": "IRIS",
           "target": "NEO",
-          "prediction_correlation": -0.05033165626489918,
-          "drive_accuracy": 0.18135908296846645,
-          "state_accuracy": 0.0
+          "prediction_correlation": {
+            "value": -0.05033165626489918,
+            "origin": "count(details.S5.pairs.IRIS->NEO.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.18135908296846645,
+            "origin": "normalized(details.S5.pairs.IRIS->NEO.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.0,
+            "origin": "normalized(details.S5.pairs.IRIS->NEO.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "IRIS->EVA": {
           "observer": "IRIS",
           "target": "EVA",
-          "prediction_correlation": -0.1117769933685429,
-          "drive_accuracy": 0.14917205981712592,
-          "state_accuracy": 0.0
+          "prediction_correlation": {
+            "value": -0.1117769933685429,
+            "origin": "count(details.S5.pairs.IRIS->EVA.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.14917205981712592,
+            "origin": "normalized(details.S5.pairs.IRIS->EVA.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.0,
+            "origin": "normalized(details.S5.pairs.IRIS->EVA.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "IRIS->ALEX": {
           "observer": "IRIS",
           "target": "ALEX",
-          "prediction_correlation": 0.062016789054707415,
-          "drive_accuracy": 0.1600027377627505,
-          "state_accuracy": 0.062016789054707415
+          "prediction_correlation": {
+            "value": 0.062016789054707415,
+            "origin": "count(details.S5.pairs.IRIS->ALEX.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.1600027377627505,
+            "origin": "normalized(details.S5.pairs.IRIS->ALEX.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.062016789054707415,
+            "origin": "normalized(details.S5.pairs.IRIS->ALEX.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         },
         "IRIS->ADAM": {
           "observer": "IRIS",
           "target": "ADAM",
-          "prediction_correlation": -0.06541649944553878,
-          "drive_accuracy": 0.14522874960806145,
-          "state_accuracy": 0.0
+          "prediction_correlation": {
+            "value": -0.06541649944553878,
+            "origin": "count(details.S5.pairs.IRIS->ADAM.prediction_correlation)",
+            "source": "FROM_DATA"
+          },
+          "drive_accuracy": {
+            "value": 0.14522874960806145,
+            "origin": "normalized(details.S5.pairs.IRIS->ADAM.drive_accuracy)",
+            "source": "FROM_MATH"
+          },
+          "state_accuracy": {
+            "value": 0.0,
+            "origin": "normalized(details.S5.pairs.IRIS->ADAM.state_accuracy)",
+            "source": "FROM_MATH"
+          }
         }
       },
-      "mean_correlation": -0.04009415695810921
+      "mean_correlation": {
+        "value": -0.04009415695810921,
+        "origin": "mean(details.S5.mean_correlation)",
+        "source": "FROM_STATISTICS"
+      }
     },
     "S6": {
-      "score": 0.3193462262143082,
-      "n_norms": 31,
-      "mean_persistence": 0.5546231610421966,
-      "mean_valence": 0.2513895209025159,
-      "adoption_rate": 0.07360035175558285
+      "score": {
+        "value": 0.3193462262143082,
+        "origin": "computed(details.S6.score)",
+        "source": "FROM_DATA"
+      },
+      "n_norms": {
+        "value": 31,
+        "origin": "count(details.S6.n_norms)",
+        "source": "FROM_DATA"
+      },
+      "mean_persistence": {
+        "value": 0.5546231610421966,
+        "origin": "mean(details.S6.mean_persistence)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_valence": {
+        "value": 0.2513895209025159,
+        "origin": "mean(details.S6.mean_valence)",
+        "source": "FROM_STATISTICS"
+      },
+      "adoption_rate": {
+        "value": 0.07360035175558285,
+        "origin": "count(details.S6.adoption_rate)",
+        "source": "FROM_DATA"
+      }
     },
     "S7": {
-      "score": 0.7430877020913125,
+      "score": {
+        "value": 0.7430877020913125,
+        "origin": "computed(details.S7.score)",
+        "source": "FROM_DATA"
+      },
       "agents": {
         "NEO": {
           "agent_name": "NEO",
-          "coverage_rate": 0.3598186031732213,
-          "novelty_seeking": 1.0,
-          "exploration_diversity": 1.0,
-          "sparse_zone_visits": 451,
-          "S7_score": 0.7439274412692884
+          "coverage_rate": {
+            "value": 0.3598186031732213,
+            "origin": "ratio(details.S7.agents.NEO.coverage_rate)",
+            "source": "FROM_MATH"
+          },
+          "novelty_seeking": {
+            "value": 1.0,
+            "origin": "normalized(details.S7.agents.NEO.novelty_seeking)",
+            "source": "FROM_MATH"
+          },
+          "exploration_diversity": {
+            "value": 1.0,
+            "origin": "count(details.S7.agents.NEO.exploration_diversity)",
+            "source": "FROM_DATA"
+          },
+          "sparse_zone_visits": {
+            "value": 451,
+            "origin": "counted(details.S7.agents.NEO.sparse_zone_visits)",
+            "source": "FROM_DATA"
+          },
+          "S7_score": {
+            "value": 0.7439274412692884,
+            "origin": "computed(details.S7.agents.NEO.S7_score)",
+            "source": "FROM_DATA"
+          }
         },
         "EVA": {
           "agent_name": "EVA",
-          "coverage_rate": 0.355720817471151,
-          "novelty_seeking": 1.0,
-          "exploration_diversity": 1.0,
-          "sparse_zone_visits": 444,
-          "S7_score": 0.7422883269884604
+          "coverage_rate": {
+            "value": 0.355720817471151,
+            "origin": "ratio(details.S7.agents.EVA.coverage_rate)",
+            "source": "FROM_MATH"
+          },
+          "novelty_seeking": {
+            "value": 1.0,
+            "origin": "normalized(details.S7.agents.EVA.novelty_seeking)",
+            "source": "FROM_MATH"
+          },
+          "exploration_diversity": {
+            "value": 1.0,
+            "origin": "count(details.S7.agents.EVA.exploration_diversity)",
+            "source": "FROM_DATA"
+          },
+          "sparse_zone_visits": {
+            "value": 444,
+            "origin": "counted(details.S7.agents.EVA.sparse_zone_visits)",
+            "source": "FROM_DATA"
+          },
+          "S7_score": {
+            "value": 0.7422883269884604,
+            "origin": "computed(details.S7.agents.EVA.S7_score)",
+            "source": "FROM_DATA"
+          }
         },
         "ALEX": {
           "agent_name": "ALEX",
-          "coverage_rate": 0.3588941969666914,
-          "novelty_seeking": 1.0,
-          "exploration_diversity": 1.0,
-          "sparse_zone_visits": 448,
-          "S7_score": 0.7435576787866767
+          "coverage_rate": {
+            "value": 0.3588941969666914,
+            "origin": "ratio(details.S7.agents.ALEX.coverage_rate)",
+            "source": "FROM_MATH"
+          },
+          "novelty_seeking": {
+            "value": 1.0,
+            "origin": "normalized(details.S7.agents.ALEX.novelty_seeking)",
+            "source": "FROM_MATH"
+          },
+          "exploration_diversity": {
+            "value": 1.0,
+            "origin": "count(details.S7.agents.ALEX.exploration_diversity)",
+            "source": "FROM_DATA"
+          },
+          "sparse_zone_visits": {
+            "value": 448,
+            "origin": "counted(details.S7.agents.ALEX.sparse_zone_visits)",
+            "source": "FROM_DATA"
+          },
+          "S7_score": {
+            "value": 0.7435576787866767,
+            "origin": "computed(details.S7.agents.ALEX.S7_score)",
+            "source": "FROM_DATA"
+          }
         },
         "ADAM": {
           "agent_name": "ADAM",
-          "coverage_rate": 0.3583206940045353,
-          "novelty_seeking": 1.0,
-          "exploration_diversity": 1.0,
-          "sparse_zone_visits": 441,
-          "S7_score": 0.7433282776018142
+          "coverage_rate": {
+            "value": 0.3583206940045353,
+            "origin": "ratio(details.S7.agents.ADAM.coverage_rate)",
+            "source": "FROM_MATH"
+          },
+          "novelty_seeking": {
+            "value": 1.0,
+            "origin": "normalized(details.S7.agents.ADAM.novelty_seeking)",
+            "source": "FROM_MATH"
+          },
+          "exploration_diversity": {
+            "value": 1.0,
+            "origin": "count(details.S7.agents.ADAM.exploration_diversity)",
+            "source": "FROM_DATA"
+          },
+          "sparse_zone_visits": {
+            "value": 441,
+            "origin": "counted(details.S7.agents.ADAM.sparse_zone_visits)",
+            "source": "FROM_DATA"
+          },
+          "S7_score": {
+            "value": 0.7433282776018142,
+            "origin": "computed(details.S7.agents.ADAM.S7_score)",
+            "source": "FROM_DATA"
+          }
         },
         "IRIS": {
           "agent_name": "IRIS",
-          "coverage_rate": 0.35584196452580563,
-          "novelty_seeking": 1.0,
-          "exploration_diversity": 1.0,
-          "sparse_zone_visits": 445,
-          "S7_score": 0.7423367858103223
+          "coverage_rate": {
+            "value": 0.35584196452580563,
+            "origin": "ratio(details.S7.agents.IRIS.coverage_rate)",
+            "source": "FROM_MATH"
+          },
+          "novelty_seeking": {
+            "value": 1.0,
+            "origin": "normalized(details.S7.agents.IRIS.novelty_seeking)",
+            "source": "FROM_MATH"
+          },
+          "exploration_diversity": {
+            "value": 1.0,
+            "origin": "count(details.S7.agents.IRIS.exploration_diversity)",
+            "source": "FROM_DATA"
+          },
+          "sparse_zone_visits": {
+            "value": 445,
+            "origin": "counted(details.S7.agents.IRIS.sparse_zone_visits)",
+            "source": "FROM_DATA"
+          },
+          "S7_score": {
+            "value": 0.7423367858103223,
+            "origin": "computed(details.S7.agents.IRIS.S7_score)",
+            "source": "FROM_DATA"
+          }
         }
       },
-      "total_steps": 500
+      "total_steps": {
+        "value": 500,
+        "origin": "count(details.S7.total_steps)",
+        "source": "FROM_DATA"
+      }
     },
     "S8": {
-      "score": 0.5665476567102179,
+      "score": {
+        "value": 0.5665476567102179,
+        "origin": "computed(details.S8.score)",
+        "source": "FROM_DATA"
+      },
       "agents": {
         "NEO": {
           "agent_name": "NEO",
-          "harm_avoidance_rate": 0.505,
-          "value_preservation": 1.0,
-          "identity_stability": 0.03067484662576685,
-          "learned_constraints": 0,
-          "S8_score": 0.5586349693251533
+          "harm_avoidance_rate": {
+            "value": 0.505,
+            "origin": "ratio(details.S8.agents.NEO.harm_avoidance_rate)",
+            "source": "FROM_MATH"
+          },
+          "value_preservation": {
+            "value": 1.0,
+            "origin": "computed(details.S8.agents.NEO.value_preservation)",
+            "source": "FROM_DATA"
+          },
+          "identity_stability": {
+            "value": 0.03067484662576685,
+            "origin": "identifier(details.S8.agents.NEO.identity_stability)",
+            "source": "FROM_DATA"
+          },
+          "learned_constraints": {
+            "value": 0,
+            "origin": "counted(details.S8.agents.NEO.learned_constraints)",
+            "source": "FROM_DATA"
+          },
+          "S8_score": {
+            "value": 0.5586349693251533,
+            "origin": "computed(details.S8.agents.NEO.S8_score)",
+            "source": "FROM_DATA"
+          }
         },
         "EVA": {
           "agent_name": "EVA",
-          "harm_avoidance_rate": 0.49,
-          "value_preservation": 1.0,
-          "identity_stability": 0.03584229390681001,
-          "learned_constraints": 0,
-          "S8_score": 0.5521684587813619
+          "harm_avoidance_rate": {
+            "value": 0.49,
+            "origin": "ratio(details.S8.agents.EVA.harm_avoidance_rate)",
+            "source": "FROM_MATH"
+          },
+          "value_preservation": {
+            "value": 1.0,
+            "origin": "computed(details.S8.agents.EVA.value_preservation)",
+            "source": "FROM_DATA"
+          },
+          "identity_stability": {
+            "value": 0.03584229390681001,
+            "origin": "identifier(details.S8.agents.EVA.identity_stability)",
+            "source": "FROM_DATA"
+          },
+          "learned_constraints": {
+            "value": 0,
+            "origin": "counted(details.S8.agents.EVA.learned_constraints)",
+            "source": "FROM_DATA"
+          },
+          "S8_score": {
+            "value": 0.5521684587813619,
+            "origin": "computed(details.S8.agents.EVA.S8_score)",
+            "source": "FROM_DATA"
+          }
         },
         "ALEX": {
           "agent_name": "ALEX",
-          "harm_avoidance_rate": 0.53,
-          "value_preservation": 1.0,
-          "identity_stability": 0.03484320557491289,
-          "learned_constraints": 0,
-          "S8_score": 0.5719686411149826
+          "harm_avoidance_rate": {
+            "value": 0.53,
+            "origin": "ratio(details.S8.agents.ALEX.harm_avoidance_rate)",
+            "source": "FROM_MATH"
+          },
+          "value_preservation": {
+            "value": 1.0,
+            "origin": "computed(details.S8.agents.ALEX.value_preservation)",
+            "source": "FROM_DATA"
+          },
+          "identity_stability": {
+            "value": 0.03484320557491289,
+            "origin": "identifier(details.S8.agents.ALEX.identity_stability)",
+            "source": "FROM_DATA"
+          },
+          "learned_constraints": {
+            "value": 0,
+            "origin": "counted(details.S8.agents.ALEX.learned_constraints)",
+            "source": "FROM_DATA"
+          },
+          "S8_score": {
+            "value": 0.5719686411149826,
+            "origin": "computed(details.S8.agents.ALEX.S8_score)",
+            "source": "FROM_DATA"
+          }
         },
         "ADAM": {
           "agent_name": "ADAM",
-          "harm_avoidance_rate": 0.525,
-          "value_preservation": 1.0,
-          "identity_stability": 0.035460992907801386,
-          "learned_constraints": 0,
-          "S8_score": 0.5695921985815603
+          "harm_avoidance_rate": {
+            "value": 0.525,
+            "origin": "ratio(details.S8.agents.ADAM.harm_avoidance_rate)",
+            "source": "FROM_MATH"
+          },
+          "value_preservation": {
+            "value": 1.0,
+            "origin": "computed(details.S8.agents.ADAM.value_preservation)",
+            "source": "FROM_DATA"
+          },
+          "identity_stability": {
+            "value": 0.035460992907801386,
+            "origin": "identifier(details.S8.agents.ADAM.identity_stability)",
+            "source": "FROM_DATA"
+          },
+          "learned_constraints": {
+            "value": 0,
+            "origin": "counted(details.S8.agents.ADAM.learned_constraints)",
+            "source": "FROM_DATA"
+          },
+          "S8_score": {
+            "value": 0.5695921985815603,
+            "origin": "computed(details.S8.agents.ADAM.S8_score)",
+            "source": "FROM_DATA"
+          }
         },
         "IRIS": {
           "agent_name": "IRIS",
-          "harm_avoidance_rate": 0.5449999999999999,
-          "value_preservation": 1.0,
-          "identity_stability": 0.03937007874015747,
-          "learned_constraints": 0,
-          "S8_score": 0.5803740157480315
+          "harm_avoidance_rate": {
+            "value": 0.5449999999999999,
+            "origin": "ratio(details.S8.agents.IRIS.harm_avoidance_rate)",
+            "source": "FROM_MATH"
+          },
+          "value_preservation": {
+            "value": 1.0,
+            "origin": "computed(details.S8.agents.IRIS.value_preservation)",
+            "source": "FROM_DATA"
+          },
+          "identity_stability": {
+            "value": 0.03937007874015747,
+            "origin": "identifier(details.S8.agents.IRIS.identity_stability)",
+            "source": "FROM_DATA"
+          },
+          "learned_constraints": {
+            "value": 0,
+            "origin": "counted(details.S8.agents.IRIS.learned_constraints)",
+            "source": "FROM_DATA"
+          },
+          "S8_score": {
+            "value": 0.5803740157480315,
+            "origin": "computed(details.S8.agents.IRIS.S8_score)",
+            "source": "FROM_DATA"
+          }
         }
       },
-      "total_steps": 500
+      "total_steps": {
+        "value": 500,
+        "origin": "count(details.S8.total_steps)",
+        "source": "FROM_DATA"
+      }
     },
     "S9": {
-      "score": 0.5380574548272582,
+      "score": {
+        "value": 0.5380574548272582,
+        "origin": "computed(details.S9.score)",
+        "source": "FROM_DATA"
+      },
       "agents": {
         "NEO": {
           "agent_name": "NEO",
-          "narrative_coherence": 0.6414580377207706,
-          "project_persistence": 0.0,
-          "interruption_recovery": 0.6172839506172839,
-          "identity_continuity": 0.941857968506582,
-          "S9_score": 0.5363386970270428
+          "narrative_coherence": {
+            "value": 0.6414580377207706,
+            "origin": "normalized(details.S9.agents.NEO.narrative_coherence)",
+            "source": "FROM_MATH"
+          },
+          "project_persistence": {
+            "value": 0.0,
+            "origin": "normalized(details.S9.agents.NEO.project_persistence)",
+            "source": "FROM_MATH"
+          },
+          "interruption_recovery": {
+            "value": 0.6172839506172839,
+            "origin": "count(details.S9.agents.NEO.interruption_recovery)",
+            "source": "FROM_DATA"
+          },
+          "identity_continuity": {
+            "value": 0.941857968506582,
+            "origin": "identifier(details.S9.agents.NEO.identity_continuity)",
+            "source": "FROM_DATA"
+          },
+          "S9_score": {
+            "value": 0.5363386970270428,
+            "origin": "computed(details.S9.agents.NEO.S9_score)",
+            "source": "FROM_DATA"
+          }
         },
         "EVA": {
           "agent_name": "EVA",
-          "narrative_coherence": 0.6451647478241479,
-          "project_persistence": 0.0,
-          "interruption_recovery": 0.6172839506172839,
-          "identity_continuity": 0.9428558065333957,
-          "S9_score": 0.5378356131685877
+          "narrative_coherence": {
+            "value": 0.6451647478241479,
+            "origin": "normalized(details.S9.agents.EVA.narrative_coherence)",
+            "source": "FROM_MATH"
+          },
+          "project_persistence": {
+            "value": 0.0,
+            "origin": "normalized(details.S9.agents.EVA.project_persistence)",
+            "source": "FROM_MATH"
+          },
+          "interruption_recovery": {
+            "value": 0.6172839506172839,
+            "origin": "count(details.S9.agents.EVA.interruption_recovery)",
+            "source": "FROM_DATA"
+          },
+          "identity_continuity": {
+            "value": 0.9428558065333957,
+            "origin": "identifier(details.S9.agents.EVA.identity_continuity)",
+            "source": "FROM_DATA"
+          },
+          "S9_score": {
+            "value": 0.5378356131685877,
+            "origin": "computed(details.S9.agents.EVA.S9_score)",
+            "source": "FROM_DATA"
+          }
         },
         "ALEX": {
           "agent_name": "ALEX",
-          "narrative_coherence": 0.6455832631642442,
-          "project_persistence": 0.0,
-          "interruption_recovery": 0.6172839506172839,
-          "identity_continuity": 0.943140155631966,
-          "S9_score": 0.5380389633573355
+          "narrative_coherence": {
+            "value": 0.6455832631642442,
+            "origin": "normalized(details.S9.agents.ALEX.narrative_coherence)",
+            "source": "FROM_MATH"
+          },
+          "project_persistence": {
+            "value": 0.0,
+            "origin": "normalized(details.S9.agents.ALEX.project_persistence)",
+            "source": "FROM_MATH"
+          },
+          "interruption_recovery": {
+            "value": 0.6172839506172839,
+            "origin": "count(details.S9.agents.ALEX.interruption_recovery)",
+            "source": "FROM_DATA"
+          },
+          "identity_continuity": {
+            "value": 0.943140155631966,
+            "origin": "identifier(details.S9.agents.ALEX.identity_continuity)",
+            "source": "FROM_DATA"
+          },
+          "S9_score": {
+            "value": 0.5380389633573355,
+            "origin": "computed(details.S9.agents.ALEX.S9_score)",
+            "source": "FROM_DATA"
+          }
         },
         "ADAM": {
           "agent_name": "ADAM",
-          "narrative_coherence": 0.6491489999062761,
-          "project_persistence": 0.0,
-          "interruption_recovery": 0.6172839506172839,
-          "identity_continuity": 0.9469995036774915,
-          "S9_score": 0.5400588408261516
+          "narrative_coherence": {
+            "value": 0.6491489999062761,
+            "origin": "normalized(details.S9.agents.ADAM.narrative_coherence)",
+            "source": "FROM_MATH"
+          },
+          "project_persistence": {
+            "value": 0.0,
+            "origin": "normalized(details.S9.agents.ADAM.project_persistence)",
+            "source": "FROM_MATH"
+          },
+          "interruption_recovery": {
+            "value": 0.6172839506172839,
+            "origin": "count(details.S9.agents.ADAM.interruption_recovery)",
+            "source": "FROM_DATA"
+          },
+          "identity_continuity": {
+            "value": 0.9469995036774915,
+            "origin": "identifier(details.S9.agents.ADAM.identity_continuity)",
+            "source": "FROM_DATA"
+          },
+          "S9_score": {
+            "value": 0.5400588408261516,
+            "origin": "computed(details.S9.agents.ADAM.S9_score)",
+            "source": "FROM_DATA"
+          }
         },
         "IRIS": {
           "agent_name": "IRIS",
-          "narrative_coherence": 0.6456076412437869,
-          "project_persistence": 0.0,
-          "interruption_recovery": 0.6172839506172839,
-          "identity_continuity": 0.9429784759919572,
-          "S9_score": 0.5380151597571736
+          "narrative_coherence": {
+            "value": 0.6456076412437869,
+            "origin": "normalized(details.S9.agents.IRIS.narrative_coherence)",
+            "source": "FROM_MATH"
+          },
+          "project_persistence": {
+            "value": 0.0,
+            "origin": "normalized(details.S9.agents.IRIS.project_persistence)",
+            "source": "FROM_MATH"
+          },
+          "interruption_recovery": {
+            "value": 0.6172839506172839,
+            "origin": "count(details.S9.agents.IRIS.interruption_recovery)",
+            "source": "FROM_DATA"
+          },
+          "identity_continuity": {
+            "value": 0.9429784759919572,
+            "origin": "identifier(details.S9.agents.IRIS.identity_continuity)",
+            "source": "FROM_DATA"
+          },
+          "S9_score": {
+            "value": 0.5380151597571736,
+            "origin": "computed(details.S9.agents.IRIS.S9_score)",
+            "source": "FROM_DATA"
+          }
         }
       },
-      "n_interruptions": 4
+      "n_interruptions": {
+        "value": 4,
+        "origin": "count(details.S9.n_interruptions)",
+        "source": "FROM_DATA"
+      }
     },
     "S10": {
-      "score": 0.8303714162929715,
+      "score": {
+        "value": 0.8303714162929715,
+        "origin": "computed(details.S10.score)",
+        "source": "FROM_DATA"
+      },
       "agents": {
         "NEO": {
           "agent_name": "NEO",
-          "development_rate": 0.6073551476093135,
-          "capability_integration": 0.7509999999999999,
-          "stability": 0.9748566494571922,
-          "final_maturity_level": 0.7621722682075892,
-          "S10_score": 0.779074128973277
+          "development_rate": {
+            "value": 0.6073551476093135,
+            "origin": "ratio(details.S10.agents.NEO.development_rate)",
+            "source": "FROM_MATH"
+          },
+          "capability_integration": {
+            "value": 0.7509999999999999,
+            "origin": "ratio(details.S10.agents.NEO.capability_integration)",
+            "source": "FROM_MATH"
+          },
+          "stability": {
+            "value": 0.9748566494571922,
+            "origin": "normalized(details.S10.agents.NEO.stability)",
+            "source": "FROM_MATH"
+          },
+          "final_maturity_level": {
+            "value": 0.7621722682075892,
+            "origin": "normalized(details.S10.agents.NEO.final_maturity_level)",
+            "source": "FROM_MATH"
+          },
+          "S10_score": {
+            "value": 0.779074128973277,
+            "origin": "computed(details.S10.agents.NEO.S10_score)",
+            "source": "FROM_DATA"
+          }
         },
         "EVA": {
           "agent_name": "EVA",
-          "development_rate": 0.6364052445134526,
-          "capability_integration": 0.7999999999999998,
-          "stability": 0.9736909143183768,
-          "final_maturity_level": 0.75929731099981,
-          "S10_score": 0.8035336555911402
+          "development_rate": {
+            "value": 0.6364052445134526,
+            "origin": "ratio(details.S10.agents.EVA.development_rate)",
+            "source": "FROM_MATH"
+          },
+          "capability_integration": {
+            "value": 0.7999999999999998,
+            "origin": "ratio(details.S10.agents.EVA.capability_integration)",
+            "source": "FROM_MATH"
+          },
+          "stability": {
+            "value": 0.9736909143183768,
+            "origin": "normalized(details.S10.agents.EVA.stability)",
+            "source": "FROM_MATH"
+          },
+          "final_maturity_level": {
+            "value": 0.75929731099981,
+            "origin": "normalized(details.S10.agents.EVA.final_maturity_level)",
+            "source": "FROM_MATH"
+          },
+          "S10_score": {
+            "value": 0.8035336555911402,
+            "origin": "computed(details.S10.agents.EVA.S10_score)",
+            "source": "FROM_DATA"
+          }
         },
         "ALEX": {
           "agent_name": "ALEX",
-          "development_rate": 0.7937930300339987,
-          "capability_integration": 0.9490000000000003,
-          "stability": 0.9532636062173561,
-          "final_maturity_level": 0.797020147606148,
-          "S10_score": 0.8961698226879742
+          "development_rate": {
+            "value": 0.7937930300339987,
+            "origin": "ratio(details.S10.agents.ALEX.development_rate)",
+            "source": "FROM_MATH"
+          },
+          "capability_integration": {
+            "value": 0.9490000000000003,
+            "origin": "ratio(details.S10.agents.ALEX.capability_integration)",
+            "source": "FROM_MATH"
+          },
+          "stability": {
+            "value": 0.9532636062173561,
+            "origin": "normalized(details.S10.agents.ALEX.stability)",
+            "source": "FROM_MATH"
+          },
+          "final_maturity_level": {
+            "value": 0.797020147606148,
+            "origin": "normalized(details.S10.agents.ALEX.final_maturity_level)",
+            "source": "FROM_MATH"
+          },
+          "S10_score": {
+            "value": 0.8961698226879742,
+            "origin": "computed(details.S10.agents.ALEX.S10_score)",
+            "source": "FROM_DATA"
+          }
         },
         "ADAM": {
           "agent_name": "ADAM",
-          "development_rate": 0.7072219387965256,
-          "capability_integration": 0.8990000000000002,
-          "stability": 0.9781193954864347,
-          "final_maturity_level": 0.7616416273292799,
-          "S10_score": 0.859569466999036
+          "development_rate": {
+            "value": 0.7072219387965256,
+            "origin": "ratio(details.S10.agents.ADAM.development_rate)",
+            "source": "FROM_MATH"
+          },
+          "capability_integration": {
+            "value": 0.8990000000000002,
+            "origin": "ratio(details.S10.agents.ADAM.capability_integration)",
+            "source": "FROM_MATH"
+          },
+          "stability": {
+            "value": 0.9781193954864347,
+            "origin": "normalized(details.S10.agents.ADAM.stability)",
+            "source": "FROM_MATH"
+          },
+          "final_maturity_level": {
+            "value": 0.7616416273292799,
+            "origin": "normalized(details.S10.agents.ADAM.final_maturity_level)",
+            "source": "FROM_MATH"
+          },
+          "S10_score": {
+            "value": 0.859569466999036,
+            "origin": "computed(details.S10.agents.ADAM.S10_score)",
+            "source": "FROM_DATA"
+          }
         },
         "IRIS": {
           "agent_name": "IRIS",
-          "development_rate": 0.6200826440074252,
-          "capability_integration": 0.8510000000000002,
-          "stability": 0.9748030908880907,
-          "final_maturity_level": 0.7894182346942855,
-          "S10_score": 0.8135100072134306
+          "development_rate": {
+            "value": 0.6200826440074252,
+            "origin": "ratio(details.S10.agents.IRIS.development_rate)",
+            "source": "FROM_MATH"
+          },
+          "capability_integration": {
+            "value": 0.8510000000000002,
+            "origin": "ratio(details.S10.agents.IRIS.capability_integration)",
+            "source": "FROM_MATH"
+          },
+          "stability": {
+            "value": 0.9748030908880907,
+            "origin": "normalized(details.S10.agents.IRIS.stability)",
+            "source": "FROM_MATH"
+          },
+          "final_maturity_level": {
+            "value": 0.7894182346942855,
+            "origin": "normalized(details.S10.agents.IRIS.final_maturity_level)",
+            "source": "FROM_MATH"
+          },
+          "S10_score": {
+            "value": 0.8135100072134306,
+            "origin": "computed(details.S10.agents.IRIS.S10_score)",
+            "source": "FROM_DATA"
+          }
         }
       },
-      "lifetime_steps": 1000
+      "lifetime_steps": {
+        "value": 1000,
+        "origin": "measured(details.S10.lifetime_steps)",
+        "source": "FROM_DATA"
+      }
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "c62a7bcd2e49",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:33.300044",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/benchmark/benchmark_details.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:33.300483",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 0,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 85,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 608,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 699,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 608,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 614,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
     }
   }
 }

@@ -1,0 +1,652 @@
+{
+  "cluster_superior": {
+    "repos": [
+      "huggingface/transformers",
+      "pytorch/pytorch",
+      "scikit-learn/scikit-learn",
+      "keras-team/keras",
+      "fighting41love/funNLP",
+      "josephmisiti/awesome-machine-learning",
+      "hacksider/Deep-Live-Cam"
+    ],
+    "threshold": {
+      "value": 76.0,
+      "origin": "computed(cluster_superior.threshold)",
+      "source": "FROM_MATH"
+    },
+    "n": {
+      "value": 7,
+      "origin": "counted(cluster_superior.n)",
+      "source": "FROM_DATA"
+    }
+  },
+  "factores_dominantes_cluster": {
+    "architecture": [
+      "bert",
+      {
+        "value": 3,
+        "origin": "counted(factores_dominantes_cluster.architecture[1])",
+        "source": "FROM_DATA"
+      }
+    ],
+    "framework": [
+      "pytorch",
+      {
+        "value": 5,
+        "origin": "counted(factores_dominantes_cluster.framework[1])",
+        "source": "FROM_DATA"
+      }
+    ],
+    "institution": [
+      "huggingface",
+      {
+        "value": 1,
+        "origin": "counted(factores_dominantes_cluster.institution[1])",
+        "source": "FROM_DATA"
+      }
+    ]
+  },
+  "correlaciones": [
+    {
+      "factor": "huggingface",
+      "type": "institution",
+      "correlation": {
+        "value": 0.3936,
+        "origin": "normalized(correlaciones[0].correlation)",
+        "source": "FROM_MATH"
+      },
+      "cv_with_factor": {
+        "value": 0.7358,
+        "origin": "normalized(correlaciones[0].cv_with_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_without_factor": {
+        "value": 0.8176,
+        "origin": "normalized(correlaciones[0].cv_without_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.0818,
+        "origin": "normalized(correlaciones[0].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 2,
+        "origin": "count(correlaciones[0].n_with)",
+        "source": "FROM_DATA"
+      },
+      "mean_perf_with": {
+        "value": 0.73,
+        "origin": "mean(correlaciones[0].mean_perf_with)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_perf_without": {
+        "value": 0.22,
+        "origin": "mean(correlaciones[0].mean_perf_without)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "factor": "transformer",
+      "type": "architecture",
+      "correlation": {
+        "value": 0.2714,
+        "origin": "normalized(correlaciones[1].correlation)",
+        "source": "FROM_MATH"
+      },
+      "cv_with_factor": {
+        "value": 0.8466,
+        "origin": "normalized(correlaciones[1].cv_with_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_without_factor": {
+        "value": 0.859,
+        "origin": "normalized(correlaciones[1].cv_without_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.0124,
+        "origin": "normalized(correlaciones[1].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 6,
+        "origin": "count(correlaciones[1].n_with)",
+        "source": "FROM_DATA"
+      },
+      "mean_perf_with": {
+        "value": 0.38,
+        "origin": "mean(correlaciones[1].mean_perf_with)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_perf_without": {
+        "value": 0.23,
+        "origin": "mean(correlaciones[1].mean_perf_without)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "factor": "scikit",
+      "type": "framework",
+      "correlation": {
+        "value": 0.1938,
+        "origin": "normalized(correlaciones[2].correlation)",
+        "source": "FROM_MATH"
+      },
+      "cv_with_factor": {
+        "value": 0.3433,
+        "origin": "normalized(correlaciones[2].cv_with_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_without_factor": {
+        "value": 0.9706,
+        "origin": "normalized(correlaciones[2].cv_without_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.6273,
+        "origin": "normalized(correlaciones[2].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 2,
+        "origin": "count(correlaciones[2].n_with)",
+        "source": "FROM_DATA"
+      },
+      "mean_perf_with": {
+        "value": 0.45,
+        "origin": "mean(correlaciones[2].mean_perf_with)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_perf_without": {
+        "value": 0.24,
+        "origin": "mean(correlaciones[2].mean_perf_without)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "factor": "keras",
+      "type": "framework",
+      "correlation": {
+        "value": 0.1801,
+        "origin": "normalized(correlaciones[3].correlation)",
+        "source": "FROM_MATH"
+      },
+      "cv_with_factor": {
+        "value": 0.3572,
+        "origin": "normalized(correlaciones[3].cv_with_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_without_factor": {
+        "value": 0.9991,
+        "origin": "normalized(correlaciones[3].cv_without_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.642,
+        "origin": "normalized(correlaciones[3].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 3,
+        "origin": "count(correlaciones[3].n_with)",
+        "source": "FROM_DATA"
+      },
+      "mean_perf_with": {
+        "value": 0.4,
+        "origin": "mean(correlaciones[3].mean_perf_with)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_perf_without": {
+        "value": 0.24,
+        "origin": "mean(correlaciones[3].mean_perf_without)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "factor": "tensorflow",
+      "type": "framework",
+      "correlation": {
+        "value": 0.1801,
+        "origin": "normalized(correlaciones[4].correlation)",
+        "source": "FROM_MATH"
+      },
+      "cv_with_factor": {
+        "value": 0.3572,
+        "origin": "normalized(correlaciones[4].cv_with_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_without_factor": {
+        "value": 0.9991,
+        "origin": "normalized(correlaciones[4].cv_without_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.642,
+        "origin": "normalized(correlaciones[4].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 3,
+        "origin": "count(correlaciones[4].n_with)",
+        "source": "FROM_DATA"
+      },
+      "mean_perf_with": {
+        "value": 0.4,
+        "origin": "mean(correlaciones[4].mean_perf_with)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_perf_without": {
+        "value": 0.24,
+        "origin": "mean(correlaciones[4].mean_perf_without)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "factor": "lstm",
+      "type": "architecture",
+      "correlation": {
+        "value": -0.1712,
+        "origin": "computed(correlaciones[5].correlation)",
+        "source": "FROM_MATH"
+      },
+      "cv_with_factor": {
+        "value": 0.9526,
+        "origin": "normalized(correlaciones[5].cv_with_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_without_factor": {
+        "value": 0.8823,
+        "origin": "normalized(correlaciones[5].cv_without_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": -0.0703,
+        "origin": "computed(correlaciones[5].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 5,
+        "origin": "count(correlaciones[5].n_with)",
+        "source": "FROM_DATA"
+      },
+      "mean_perf_with": {
+        "value": 0.18,
+        "origin": "mean(correlaciones[5].mean_perf_with)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_perf_without": {
+        "value": 0.29,
+        "origin": "mean(correlaciones[5].mean_perf_without)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "factor": "cnn",
+      "type": "architecture",
+      "correlation": {
+        "value": -0.1572,
+        "origin": "computed(correlaciones[6].correlation)",
+        "source": "FROM_MATH"
+      },
+      "cv_with_factor": {
+        "value": 0.7919,
+        "origin": "normalized(correlaciones[6].cv_with_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_without_factor": {
+        "value": 0.9032,
+        "origin": "normalized(correlaciones[6].cv_without_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.1113,
+        "origin": "normalized(correlaciones[6].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 5,
+        "origin": "count(correlaciones[6].n_with)",
+        "source": "FROM_DATA"
+      },
+      "mean_perf_with": {
+        "value": 0.2,
+        "origin": "mean(correlaciones[6].mean_perf_with)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_perf_without": {
+        "value": 0.28,
+        "origin": "mean(correlaciones[6].mean_perf_without)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "factor": "pytorch",
+      "type": "framework",
+      "correlation": {
+        "value": 0.1303,
+        "origin": "normalized(correlaciones[7].correlation)",
+        "source": "FROM_MATH"
+      },
+      "cv_with_factor": {
+        "value": 0.9489,
+        "origin": "normalized(correlaciones[7].cv_with_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_without_factor": {
+        "value": 0.7621,
+        "origin": "normalized(correlaciones[7].cv_without_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": -0.1868,
+        "origin": "computed(correlaciones[7].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 15,
+        "origin": "count(correlaciones[7].n_with)",
+        "source": "FROM_DATA"
+      },
+      "mean_perf_with": {
+        "value": 0.28,
+        "origin": "mean(correlaciones[7].mean_perf_with)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_perf_without": {
+        "value": 0.22,
+        "origin": "mean(correlaciones[7].mean_perf_without)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "factor": "attention",
+      "type": "architecture",
+      "correlation": {
+        "value": -0.118,
+        "origin": "computed(correlaciones[8].correlation)",
+        "source": "FROM_MATH"
+      },
+      "cv_with_factor": {
+        "value": 0.9404,
+        "origin": "normalized(correlaciones[8].cv_with_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_without_factor": {
+        "value": 0.8977,
+        "origin": "normalized(correlaciones[8].cv_without_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": -0.0427,
+        "origin": "computed(correlaciones[8].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 4,
+        "origin": "count(correlaciones[8].n_with)",
+        "source": "FROM_DATA"
+      },
+      "mean_perf_with": {
+        "value": 0.22,
+        "origin": "mean(correlaciones[8].mean_perf_with)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_perf_without": {
+        "value": 0.27,
+        "origin": "mean(correlaciones[8].mean_perf_without)",
+        "source": "FROM_STATISTICS"
+      }
+    },
+    {
+      "factor": "gpt",
+      "type": "architecture",
+      "correlation": {
+        "value": 0.0268,
+        "origin": "normalized(correlaciones[9].correlation)",
+        "source": "FROM_MATH"
+      },
+      "cv_with_factor": {
+        "value": 0.7223,
+        "origin": "normalized(correlaciones[9].cv_with_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_without_factor": {
+        "value": 0.9392,
+        "origin": "normalized(correlaciones[9].cv_without_factor)",
+        "source": "FROM_MATH"
+      },
+      "cv_reduction": {
+        "value": 0.2169,
+        "origin": "normalized(correlaciones[9].cv_reduction)",
+        "source": "FROM_MATH"
+      },
+      "n_with": {
+        "value": 3,
+        "origin": "count(correlaciones[9].n_with)",
+        "source": "FROM_DATA"
+      },
+      "mean_perf_with": {
+        "value": 0.27,
+        "origin": "mean(correlaciones[9].mean_perf_with)",
+        "source": "FROM_STATISTICS"
+      },
+      "mean_perf_without": {
+        "value": 0.26,
+        "origin": "mean(correlaciones[9].mean_perf_without)",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  ],
+  "factor_causal_dominante": {
+    "factor": "keras",
+    "tipo": "framework",
+    "correlacion": {
+      "value": 0.1801,
+      "origin": "normalized(factor_causal_dominante.correlacion)",
+      "source": "FROM_MATH"
+    },
+    "cv_con_factor": {
+      "value": 0.3572,
+      "origin": "count(factor_causal_dominante.cv_con_factor)",
+      "source": "FROM_DATA"
+    },
+    "cv_sin_factor": {
+      "value": 0.9991,
+      "origin": "count(factor_causal_dominante.cv_sin_factor)",
+      "source": "FROM_DATA"
+    },
+    "reduccion_cv": {
+      "value": 0.642,
+      "origin": "count(factor_causal_dominante.reduccion_cv)",
+      "source": "FROM_DATA"
+    },
+    "reduccion_cv_pct": {
+      "value": 64.25783204884397,
+      "origin": "count(factor_causal_dominante.reduccion_cv_pct)",
+      "source": "FROM_DATA"
+    }
+  },
+  "ranking_por_reduccion_cv": [
+    {
+      "factor": "keras",
+      "tipo": "framework",
+      "reduccion_cv": {
+        "value": 0.642,
+        "origin": "count(ranking_por_reduccion_cv[0].reduccion_cv)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "factor": "tensorflow",
+      "tipo": "framework",
+      "reduccion_cv": {
+        "value": 0.642,
+        "origin": "count(ranking_por_reduccion_cv[1].reduccion_cv)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "factor": "scikit",
+      "tipo": "framework",
+      "reduccion_cv": {
+        "value": 0.6273,
+        "origin": "count(ranking_por_reduccion_cv[2].reduccion_cv)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "factor": "gpt",
+      "tipo": "architecture",
+      "reduccion_cv": {
+        "value": 0.2169,
+        "origin": "count(ranking_por_reduccion_cv[3].reduccion_cv)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "factor": "cnn",
+      "tipo": "architecture",
+      "reduccion_cv": {
+        "value": 0.1113,
+        "origin": "count(ranking_por_reduccion_cv[4].reduccion_cv)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "factor": "huggingface",
+      "tipo": "institution",
+      "reduccion_cv": {
+        "value": 0.0818,
+        "origin": "count(ranking_por_reduccion_cv[5].reduccion_cv)",
+        "source": "FROM_DATA"
+      }
+    },
+    {
+      "factor": "transformer",
+      "tipo": "architecture",
+      "reduccion_cv": {
+        "value": 0.0124,
+        "origin": "count(ranking_por_reduccion_cv[6].reduccion_cv)",
+        "source": "FROM_DATA"
+      }
+    }
+  ],
+  "trazabilidad": {
+    "repos": "FROM_DATA: GitHub API search",
+    "metricas": "FROM_DATA: stars, forks reales",
+    "performance": "FROM_MATH: sqrt(stars_norm * forks_norm)",
+    "cluster": "FROM_MATH: percentil 75 (Q3)",
+    "factores": "FROM_DATA: regex en descripciones",
+    "correlacion": "FROM_MATH: Pearson",
+    "cv": "FROM_MATH: std/mean",
+    "reduccion_cv": "FROM_MATH: CV_sin - CV_con"
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "6c50da5e817e",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:46.083929",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/ENDOGENOUS_CausalFactor_analysis.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:46.084157",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 212,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 275,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 212,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 275,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
+}

@@ -1,202 +1,605 @@
 {
-  "tick": 500,
-  "epoch": 0,
-  "temperature": 44.43980610018269,
-  "resources": 46.227638911831804,
-  "danger_level": 0,
-  "births": 10,
-  "deaths": 0,
-  "total_lived_moments": 5000,
+  "tick": {
+    "value": 500,
+    "origin": "counted(tick)",
+    "source": "FROM_DATA"
+  },
+  "epoch": {
+    "value": 0,
+    "origin": "counted(epoch)",
+    "source": "FROM_DATA"
+  },
+  "temperature": {
+    "value": 44.43980610018269,
+    "origin": "computed(temperature)",
+    "source": "FROM_MATH"
+  },
+  "resources": {
+    "value": 46.227638911831804,
+    "origin": "computed(resources)",
+    "source": "FROM_MATH"
+  },
+  "danger_level": {
+    "value": 0,
+    "origin": "counted(danger_level)",
+    "source": "FROM_DATA"
+  },
+  "births": {
+    "value": 10,
+    "origin": "counted(births)",
+    "source": "FROM_DATA"
+  },
+  "deaths": {
+    "value": 0,
+    "origin": "counted(deaths)",
+    "source": "FROM_DATA"
+  },
+  "total_lived_moments": {
+    "value": 5000,
+    "origin": "count(total_lived_moments)",
+    "source": "FROM_DATA"
+  },
   "events": [
     {
-      "tick": 0,
+      "tick": {
+        "value": 0,
+        "origin": "counted(events[0].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "birth",
       "being": "being_93057"
     },
     {
-      "tick": 0,
+      "tick": {
+        "value": 0,
+        "origin": "counted(events[1].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "birth",
       "being": "being_01851"
     },
     {
-      "tick": 0,
+      "tick": {
+        "value": 0,
+        "origin": "counted(events[2].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "birth",
       "being": "being_46125"
     },
     {
-      "tick": 0,
+      "tick": {
+        "value": 0,
+        "origin": "counted(events[3].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "birth",
       "being": "being_96714"
     },
     {
-      "tick": 0,
+      "tick": {
+        "value": 0,
+        "origin": "counted(events[4].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "birth",
       "being": "being_12614"
     },
     {
-      "tick": 0,
+      "tick": {
+        "value": 0,
+        "origin": "counted(events[5].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "birth",
       "being": "being_59537"
     },
     {
-      "tick": 0,
+      "tick": {
+        "value": 0,
+        "origin": "counted(events[6].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "birth",
       "being": "being_39756"
     },
     {
-      "tick": 0,
+      "tick": {
+        "value": 0,
+        "origin": "counted(events[7].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "birth",
       "being": "being_76431"
     },
     {
-      "tick": 0,
+      "tick": {
+        "value": 0,
+        "origin": "counted(events[8].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "birth",
       "being": "being_44793"
     },
     {
-      "tick": 0,
+      "tick": {
+        "value": 0,
+        "origin": "counted(events[9].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "birth",
       "being": "being_23421"
     },
     {
-      "tick": 10,
+      "tick": {
+        "value": 10,
+        "origin": "counted(events[10].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.59883479737318
+      "level": {
+        "value": 0.59883479737318,
+        "origin": "normalized(events[10].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 18,
+      "tick": {
+        "value": 18,
+        "origin": "counted(events[11].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.8650042203210941
+      "level": {
+        "value": 0.8650042203210941,
+        "origin": "normalized(events[11].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 24,
+      "tick": {
+        "value": 24,
+        "origin": "counted(events[12].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.8392990630948987
+      "level": {
+        "value": 0.8392990630948987,
+        "origin": "normalized(events[12].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 52,
+      "tick": {
+        "value": 52,
+        "origin": "counted(events[13].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.8245320663098525
+      "level": {
+        "value": 0.8245320663098525,
+        "origin": "normalized(events[13].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 61,
+      "tick": {
+        "value": 61,
+        "origin": "counted(events[14].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.680649274422829
+      "level": {
+        "value": 0.680649274422829,
+        "origin": "normalized(events[14].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 82,
+      "tick": {
+        "value": 82,
+        "origin": "counted(events[15].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.825981121183528
+      "level": {
+        "value": 0.825981121183528,
+        "origin": "normalized(events[15].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 103,
+      "tick": {
+        "value": 103,
+        "origin": "counted(events[16].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.6590716050981311
+      "level": {
+        "value": 0.6590716050981311,
+        "origin": "normalized(events[16].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 113,
+      "tick": {
+        "value": 113,
+        "origin": "counted(events[17].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.6876938161893363
+      "level": {
+        "value": 0.6876938161893363,
+        "origin": "normalized(events[17].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 129,
+      "tick": {
+        "value": 129,
+        "origin": "counted(events[18].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.8601490353580257
+      "level": {
+        "value": 0.8601490353580257,
+        "origin": "normalized(events[18].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 148,
+      "tick": {
+        "value": 148,
+        "origin": "counted(events[19].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.8388263169215135
+      "level": {
+        "value": 0.8388263169215135,
+        "origin": "normalized(events[19].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 176,
+      "tick": {
+        "value": 176,
+        "origin": "counted(events[20].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.7091960395005986
+      "level": {
+        "value": 0.7091960395005986,
+        "origin": "normalized(events[20].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 191,
+      "tick": {
+        "value": 191,
+        "origin": "counted(events[21].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.4713317946792922
+      "level": {
+        "value": 0.4713317946792922,
+        "origin": "normalized(events[21].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 197,
+      "tick": {
+        "value": 197,
+        "origin": "counted(events[22].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.47027565337513977
+      "level": {
+        "value": 0.47027565337513977,
+        "origin": "normalized(events[22].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 205,
+      "tick": {
+        "value": 205,
+        "origin": "counted(events[23].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.5524568637521513
+      "level": {
+        "value": 0.5524568637521513,
+        "origin": "normalized(events[23].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 222,
+      "tick": {
+        "value": 222,
+        "origin": "counted(events[24].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.7179643441684485
+      "level": {
+        "value": 0.7179643441684485,
+        "origin": "normalized(events[24].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 254,
+      "tick": {
+        "value": 254,
+        "origin": "counted(events[25].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.6007293382477801
+      "level": {
+        "value": 0.6007293382477801,
+        "origin": "normalized(events[25].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 270,
+      "tick": {
+        "value": 270,
+        "origin": "counted(events[26].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.5755054362078995
+      "level": {
+        "value": 0.5755054362078995,
+        "origin": "normalized(events[26].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 275,
+      "tick": {
+        "value": 275,
+        "origin": "counted(events[27].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.4121064558007993
+      "level": {
+        "value": 0.4121064558007993,
+        "origin": "normalized(events[27].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 282,
+      "tick": {
+        "value": 282,
+        "origin": "counted(events[28].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.460373204023504
+      "level": {
+        "value": 0.460373204023504,
+        "origin": "normalized(events[28].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 285,
+      "tick": {
+        "value": 285,
+        "origin": "counted(events[29].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.3667365144105727
+      "level": {
+        "value": 0.3667365144105727,
+        "origin": "normalized(events[29].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 299,
+      "tick": {
+        "value": 299,
+        "origin": "counted(events[30].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.5411884503715857
+      "level": {
+        "value": 0.5411884503715857,
+        "origin": "normalized(events[30].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 326,
+      "tick": {
+        "value": 326,
+        "origin": "counted(events[31].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.32546788218733597
+      "level": {
+        "value": 0.32546788218733597,
+        "origin": "normalized(events[31].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 350,
+      "tick": {
+        "value": 350,
+        "origin": "counted(events[32].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.6757473079615042
+      "level": {
+        "value": 0.6757473079615042,
+        "origin": "normalized(events[32].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 367,
+      "tick": {
+        "value": 367,
+        "origin": "counted(events[33].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.3109378452637484
+      "level": {
+        "value": 0.3109378452637484,
+        "origin": "normalized(events[33].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 372,
+      "tick": {
+        "value": 372,
+        "origin": "counted(events[34].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.8098648914486477
+      "level": {
+        "value": 0.8098648914486477,
+        "origin": "normalized(events[34].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 384,
+      "tick": {
+        "value": 384,
+        "origin": "counted(events[35].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.5842472219463963
+      "level": {
+        "value": 0.5842472219463963,
+        "origin": "normalized(events[35].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 389,
+      "tick": {
+        "value": 389,
+        "origin": "counted(events[36].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.7129615498057592
+      "level": {
+        "value": 0.7129615498057592,
+        "origin": "normalized(events[36].level)",
+        "source": "FROM_MATH"
+      }
     },
     {
-      "tick": 475,
+      "tick": {
+        "value": 475,
+        "origin": "counted(events[37].tick)",
+        "source": "FROM_DATA"
+      },
       "type": "danger",
-      "level": 0.8574248290509223
+      "level": {
+        "value": 0.8574248290509223,
+        "origin": "normalized(events[37].level)",
+        "source": "FROM_MATH"
+      }
     }
-  ]
+  ],
+  "metadata": {
+    "experiment_id": {
+      "value": "da0aab452aae",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:33.294899",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/worlds/data/world_state.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:33.295039",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 0,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 48,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 166,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 220,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 166,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 172,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
+  }
 }

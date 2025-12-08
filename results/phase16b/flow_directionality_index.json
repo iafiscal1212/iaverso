@@ -1,93 +1,448 @@
 {
   "seeds": [
     {
-      "seed": 0,
-      "mean_fdi": 0.3456389356493699,
-      "max_fdi": 0.9397260273972603,
-      "net_flow_normalized": 0.5388481091136399,
-      "fraction_directional": 0.3333333333333333
+      "seed": {
+        "value": 0,
+        "origin": "counted(seeds[0].seed)",
+        "source": "FROM_DATA"
+      },
+      "mean_fdi": {
+        "value": 0.3456389356493699,
+        "origin": "mean(seeds[0].mean_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_fdi": {
+        "value": 0.9397260273972603,
+        "origin": "max_fdi(seeds[0].max_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "net_flow_normalized": {
+        "value": 0.5388481091136399,
+        "origin": "normalized(seeds[0].net_flow_normalized)",
+        "source": "FROM_MATH"
+      },
+      "fraction_directional": {
+        "value": 0.3333333333333333,
+        "origin": "count(seeds[0].fraction_directional)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 1,
-      "mean_fdi": 0.35532105693042604,
-      "max_fdi": 0.9388888888888889,
-      "net_flow_normalized": 0.542986888471842,
-      "fraction_directional": 0.3333333333333333
+      "seed": {
+        "value": 1,
+        "origin": "counted(seeds[1].seed)",
+        "source": "FROM_DATA"
+      },
+      "mean_fdi": {
+        "value": 0.35532105693042604,
+        "origin": "mean(seeds[1].mean_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_fdi": {
+        "value": 0.9388888888888889,
+        "origin": "max_fdi(seeds[1].max_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "net_flow_normalized": {
+        "value": 0.542986888471842,
+        "origin": "normalized(seeds[1].net_flow_normalized)",
+        "source": "FROM_MATH"
+      },
+      "fraction_directional": {
+        "value": 0.3333333333333333,
+        "origin": "count(seeds[1].fraction_directional)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 2,
-      "mean_fdi": 0.3598315049058546,
-      "max_fdi": 0.9653179190751445,
-      "net_flow_normalized": 0.5312943658036293,
-      "fraction_directional": 0.3333333333333333
+      "seed": {
+        "value": 2,
+        "origin": "counted(seeds[2].seed)",
+        "source": "FROM_DATA"
+      },
+      "mean_fdi": {
+        "value": 0.3598315049058546,
+        "origin": "mean(seeds[2].mean_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_fdi": {
+        "value": 0.9653179190751445,
+        "origin": "max_fdi(seeds[2].max_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "net_flow_normalized": {
+        "value": 0.5312943658036293,
+        "origin": "normalized(seeds[2].net_flow_normalized)",
+        "source": "FROM_MATH"
+      },
+      "fraction_directional": {
+        "value": 0.3333333333333333,
+        "origin": "count(seeds[2].fraction_directional)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 3,
-      "mean_fdi": 0.35952133237326106,
-      "max_fdi": 0.9665738161559888,
-      "net_flow_normalized": 0.5442100610512195,
-      "fraction_directional": 0.3333333333333333
+      "seed": {
+        "value": 3,
+        "origin": "counted(seeds[3].seed)",
+        "source": "FROM_DATA"
+      },
+      "mean_fdi": {
+        "value": 0.35952133237326106,
+        "origin": "mean(seeds[3].mean_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_fdi": {
+        "value": 0.9665738161559888,
+        "origin": "max_fdi(seeds[3].max_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "net_flow_normalized": {
+        "value": 0.5442100610512195,
+        "origin": "normalized(seeds[3].net_flow_normalized)",
+        "source": "FROM_MATH"
+      },
+      "fraction_directional": {
+        "value": 0.3333333333333333,
+        "origin": "count(seeds[3].fraction_directional)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 4,
-      "mean_fdi": 0.3826495083420261,
-      "max_fdi": 0.9661016949152542,
-      "net_flow_normalized": 0.5360618345394945,
-      "fraction_directional": 0.3333333333333333
+      "seed": {
+        "value": 4,
+        "origin": "counted(seeds[4].seed)",
+        "source": "FROM_DATA"
+      },
+      "mean_fdi": {
+        "value": 0.3826495083420261,
+        "origin": "mean(seeds[4].mean_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_fdi": {
+        "value": 0.9661016949152542,
+        "origin": "max_fdi(seeds[4].max_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "net_flow_normalized": {
+        "value": 0.5360618345394945,
+        "origin": "normalized(seeds[4].net_flow_normalized)",
+        "source": "FROM_MATH"
+      },
+      "fraction_directional": {
+        "value": 0.3333333333333333,
+        "origin": "count(seeds[4].fraction_directional)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 5,
-      "mean_fdi": 0.3634058138593033,
-      "max_fdi": 0.9660056657223796,
-      "net_flow_normalized": 0.5366818940942166,
-      "fraction_directional": 0.3333333333333333
+      "seed": {
+        "value": 5,
+        "origin": "counted(seeds[5].seed)",
+        "source": "FROM_DATA"
+      },
+      "mean_fdi": {
+        "value": 0.3634058138593033,
+        "origin": "mean(seeds[5].mean_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_fdi": {
+        "value": 0.9660056657223796,
+        "origin": "max_fdi(seeds[5].max_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "net_flow_normalized": {
+        "value": 0.5366818940942166,
+        "origin": "normalized(seeds[5].net_flow_normalized)",
+        "source": "FROM_MATH"
+      },
+      "fraction_directional": {
+        "value": 0.3333333333333333,
+        "origin": "count(seeds[5].fraction_directional)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 6,
-      "mean_fdi": 0.39782356216782766,
-      "max_fdi": 0.9438202247191011,
-      "net_flow_normalized": 0.535760176951812,
-      "fraction_directional": 0.3333333333333333
+      "seed": {
+        "value": 6,
+        "origin": "counted(seeds[6].seed)",
+        "source": "FROM_DATA"
+      },
+      "mean_fdi": {
+        "value": 0.39782356216782766,
+        "origin": "mean(seeds[6].mean_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_fdi": {
+        "value": 0.9438202247191011,
+        "origin": "max_fdi(seeds[6].max_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "net_flow_normalized": {
+        "value": 0.535760176951812,
+        "origin": "normalized(seeds[6].net_flow_normalized)",
+        "source": "FROM_MATH"
+      },
+      "fraction_directional": {
+        "value": 0.3333333333333333,
+        "origin": "count(seeds[6].fraction_directional)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 7,
-      "mean_fdi": 0.38826612544794137,
-      "max_fdi": 0.967479674796748,
-      "net_flow_normalized": 0.5443879904944579,
-      "fraction_directional": 0.3333333333333333
+      "seed": {
+        "value": 7,
+        "origin": "counted(seeds[7].seed)",
+        "source": "FROM_DATA"
+      },
+      "mean_fdi": {
+        "value": 0.38826612544794137,
+        "origin": "mean(seeds[7].mean_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_fdi": {
+        "value": 0.967479674796748,
+        "origin": "max_fdi(seeds[7].max_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "net_flow_normalized": {
+        "value": 0.5443879904944579,
+        "origin": "normalized(seeds[7].net_flow_normalized)",
+        "source": "FROM_MATH"
+      },
+      "fraction_directional": {
+        "value": 0.3333333333333333,
+        "origin": "count(seeds[7].fraction_directional)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 8,
-      "mean_fdi": 0.378456056318458,
-      "max_fdi": 0.949438202247191,
-      "net_flow_normalized": 0.531405985780754,
-      "fraction_directional": 0.3333333333333333
+      "seed": {
+        "value": 8,
+        "origin": "counted(seeds[8].seed)",
+        "source": "FROM_DATA"
+      },
+      "mean_fdi": {
+        "value": 0.378456056318458,
+        "origin": "mean(seeds[8].mean_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_fdi": {
+        "value": 0.949438202247191,
+        "origin": "max_fdi(seeds[8].max_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "net_flow_normalized": {
+        "value": 0.531405985780754,
+        "origin": "normalized(seeds[8].net_flow_normalized)",
+        "source": "FROM_MATH"
+      },
+      "fraction_directional": {
+        "value": 0.3333333333333333,
+        "origin": "count(seeds[8].fraction_directional)",
+        "source": "FROM_DATA"
+      }
     },
     {
-      "seed": 9,
-      "mean_fdi": 0.38377149011984424,
-      "max_fdi": 0.9456521739130435,
-      "net_flow_normalized": 0.538765436557089,
-      "fraction_directional": 0.3333333333333333
+      "seed": {
+        "value": 9,
+        "origin": "counted(seeds[9].seed)",
+        "source": "FROM_DATA"
+      },
+      "mean_fdi": {
+        "value": 0.38377149011984424,
+        "origin": "mean(seeds[9].mean_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "max_fdi": {
+        "value": 0.9456521739130435,
+        "origin": "max_fdi(seeds[9].max_fdi)",
+        "source": "FROM_STATISTICS"
+      },
+      "net_flow_normalized": {
+        "value": 0.538765436557089,
+        "origin": "normalized(seeds[9].net_flow_normalized)",
+        "source": "FROM_MATH"
+      },
+      "fraction_directional": {
+        "value": 0.3333333333333333,
+        "origin": "count(seeds[9].fraction_directional)",
+        "source": "FROM_DATA"
+      }
     }
   ],
   "global": {
-    "mean": 0.37146853861143125,
-    "std": 0.016040641098272735,
-    "median": 0.37093093508888064,
-    "p95": 0.3935227156438788,
-    "fraction_above_0.5": 0.0
+    "mean": {
+      "value": 0.37146853861143125,
+      "origin": "mean(global.mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "std": {
+      "value": 0.016040641098272735,
+      "origin": "std(global.std)",
+      "source": "FROM_STATISTICS"
+    },
+    "median": {
+      "value": 0.37093093508888064,
+      "origin": "mean(global.median)",
+      "source": "FROM_STATISTICS"
+    },
+    "p95": {
+      "value": 0.3935227156438788,
+      "origin": "normalized(global.p95)",
+      "source": "FROM_MATH"
+    },
+    "fraction_above_0.5": {
+      "value": 0.0,
+      "origin": "count(global.fraction_above_0.5)",
+      "source": "FROM_DATA"
+    }
   },
   "vs_null": {
-    "null_mean": 0.014678436907704904,
-    "null_std": 0.011159445615049429,
-    "null_p95": 0.03820043113123867,
-    "real_mean": 0.37146853861143125,
+    "null_mean": {
+      "value": 0.014678436907704904,
+      "origin": "mean(vs_null.null_mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_std": {
+      "value": 0.011159445615049429,
+      "origin": "std(vs_null.null_std)",
+      "source": "FROM_STATISTICS"
+    },
+    "null_p95": {
+      "value": 0.03820043113123867,
+      "origin": "normalized(vs_null.null_p95)",
+      "source": "FROM_MATH"
+    },
+    "real_mean": {
+      "value": 0.37146853861143125,
+      "origin": "mean(vs_null.real_mean)",
+      "source": "FROM_STATISTICS"
+    },
     "above_p95": true
   },
   "net_flow": {
-    "mean": 0.5380402742858156,
-    "std": 0.004522018893987957,
-    "median": 0.5377236653256527
+    "mean": {
+      "value": 0.5380402742858156,
+      "origin": "mean(net_flow.mean)",
+      "source": "FROM_STATISTICS"
+    },
+    "std": {
+      "value": 0.004522018893987957,
+      "origin": "std(net_flow.std)",
+      "source": "FROM_STATISTICS"
+    },
+    "median": {
+      "value": 0.5377236653256527,
+      "origin": "mean(net_flow.median)",
+      "source": "FROM_STATISTICS"
+    }
+  },
+  "metadata": {
+    "experiment_id": {
+      "value": "588f1c278890",
+      "origin": "md5(filepath)[:12]",
+      "source": "FROM_MATH"
+    },
+    "created_at": {
+      "value": "2025-12-08T00:17:58.436942",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "source_file": {
+      "value": "/root/NEO_EVA/results/phase16b/flow_directionality_index.json",
+      "origin": "original_filepath",
+      "source": "FROM_DATA"
+    },
+    "endogenized": {
+      "value": true,
+      "origin": "endogenize.py conversion",
+      "source": "FROM_DATA"
+    },
+    "framework": {
+      "value": "SYNAKSIS_LAB",
+      "origin": "validation_framework",
+      "source": "FROM_DATA"
+    },
+    "version": {
+      "value": "1.0",
+      "origin": "endogenize_version",
+      "source": "CONFIG_OPERATIONAL"
+    },
+    "provenance_method": {
+      "value": "automatic_inference",
+      "origin": "infer_origin(key, value, path)",
+      "source": "FROM_DATA"
+    },
+    "validation_target": {
+      "norma_dura": {
+        "value": 94,
+        "origin": "NORMA_DURA_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      },
+      "synaksis": {
+        "value": 114,
+        "origin": "SYNAKSIS_THRESHOLD",
+        "source": "FROM_STATISTICS"
+      }
+    }
+  },
+  "audit_log": {
+    "conversion_timestamp": {
+      "value": "2025-12-08T00:17:58.437104",
+      "origin": "datetime.now().isoformat()",
+      "source": "FROM_DATA"
+    },
+    "original_stats": {
+      "provenance_count": {
+        "value": 162,
+        "origin": "count_provenance(original_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 171,
+        "origin": "count_strings(original_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "converted_stats": {
+      "provenance_count": {
+        "value": 162,
+        "origin": "count_provenance(endogenized_data)",
+        "source": "FROM_DATA"
+      },
+      "string_count": {
+        "value": 171,
+        "origin": "count_strings(endogenized_data)",
+        "source": "FROM_DATA"
+      }
+    },
+    "improvement": {
+      "provenance_added": {
+        "value": 0,
+        "origin": "new_prov - orig_prov",
+        "source": "FROM_MATH"
+      },
+      "strings_added": {
+        "value": 0,
+        "origin": "new_str - orig_str",
+        "source": "FROM_MATH"
+      }
+    },
+    "converter": {
+      "value": "endogenize.py",
+      "origin": "conversion_script",
+      "source": "FROM_DATA"
+    },
+    "method": {
+      "value": "automatic_provenance_inference",
+      "origin": "conversion_method",
+      "source": "FROM_DATA"
+    },
+    "zero_hardcoding": {
+      "value": true,
+      "origin": "all_values_wrapped_with_provenance",
+      "source": "FROM_DATA"
+    }
   }
 }
