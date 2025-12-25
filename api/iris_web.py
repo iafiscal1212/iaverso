@@ -2123,6 +2123,210 @@ async def get_dashboard():
         return HTMLResponse(content=f"<h1>Error cargando dashboard: {e}</h1>")
 
 
+# ========== Endpoints Especializados: Fiscal ==========
+
+@app.get("/fiscal/calendario")
+async def get_calendario_fiscal():
+    """Retorna el calendario fiscal con proximos plazos"""
+    try:
+        sys.path.insert(0, '/root/NEO_EVA/domains')
+        from iris_fiscal import get_fiscal
+        fiscal = get_fiscal()
+        plazos = fiscal.obtener_proximos_plazos(dias=60)
+        return {
+            "plazos": [{"numero": p.numero, "descripcion": p.descripcion,
+                       "fecha_limite": p.fecha_limite, "dias_restantes": p.dias_restantes}
+                      for p in plazos],
+            "timestamp": datetime.now().isoformat()
+        }
+    except Exception as e:
+        return {"error": str(e)}
+
+
+@app.get("/fiscal/resumen")
+async def get_resumen_fiscal():
+    """Retorna resumen fiscal completo"""
+    try:
+        sys.path.insert(0, '/root/NEO_EVA/domains')
+        from iris_fiscal import get_fiscal
+        fiscal = get_fiscal()
+        return {"resumen": fiscal.resumen_fiscal()}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+@app.get("/fiscal/modelo/{numero}")
+async def get_info_modelo(numero: str):
+    """Retorna informacion sobre un modelo fiscal"""
+    try:
+        sys.path.insert(0, '/root/NEO_EVA/domains')
+        from iris_fiscal import get_fiscal
+        fiscal = get_fiscal()
+        return {"info": fiscal.info_modelo(numero)}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+@app.post("/fiscal/calcular-iva")
+async def calcular_iva(base: float, tipo: str = "general"):
+    """Calcula IVA"""
+    try:
+        sys.path.insert(0, '/root/NEO_EVA/domains')
+        from iris_fiscal import get_fiscal
+        fiscal = get_fiscal()
+        return fiscal.calcular_iva(base, tipo)
+    except Exception as e:
+        return {"error": str(e)}
+
+
+# ========== Endpoints Especializados: Investigacion IA ==========
+
+@app.get("/research/papers")
+async def buscar_papers(query: str, max_results: int = 10):
+    """Busca papers en arXiv"""
+    try:
+        sys.path.insert(0, '/root/NEO_EVA/domains')
+        from iris_research import get_research
+        research = get_research()
+        papers = research.buscar_arxiv(query, max_results)
+        return {
+            "papers": [{"id": p.id, "titulo": p.titulo, "autores": p.autores,
+                       "abstract": p.abstract[:300], "fecha": p.fecha, "url": p.url}
+                      for p in papers],
+            "total": len(papers)
+        }
+    except Exception as e:
+        return {"error": str(e)}
+
+
+@app.get("/research/digest")
+async def get_digest_semanal():
+    """Retorna el digest semanal de IA"""
+    try:
+        sys.path.insert(0, '/root/NEO_EVA/domains')
+        from iris_research import get_research
+        research = get_research()
+        return {"digest": research.digest_semanal()}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+@app.get("/research/tendencias")
+async def get_tendencias_ia():
+    """Retorna tendencias actuales en IA"""
+    try:
+        sys.path.insert(0, '/root/NEO_EVA/domains')
+        from iris_research import get_research
+        research = get_research()
+        return {"tendencias": research.tendencias_actuales()}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+@app.get("/research/explicar/{concepto}")
+async def explicar_concepto_ia(concepto: str):
+    """Explica un concepto de IA"""
+    try:
+        sys.path.insert(0, '/root/NEO_EVA/domains')
+        from iris_research import get_research
+        research = get_research()
+        return {"explicacion": research.explicar_concepto(concepto)}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+# ========== Endpoints Especializados: Tareas y Personal ==========
+
+@app.get("/tareas")
+async def listar_tareas(categoria: str = None, solo_pendientes: bool = True):
+    """Lista tareas"""
+    try:
+        sys.path.insert(0, '/root/NEO_EVA/domains')
+        from iris_personal import get_personal
+        personal = get_personal()
+        tareas = personal.listar_tareas(categoria=categoria, solo_pendientes=solo_pendientes)
+        return {"tareas": tareas}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+@app.post("/tareas")
+async def crear_tarea_endpoint(titulo: str, descripcion: str = "", prioridad: str = "media",
+                               fecha_limite: str = None, categoria: str = "admin"):
+    """Crea una nueva tarea"""
+    try:
+        sys.path.insert(0, '/root/NEO_EVA/domains')
+        from iris_personal import get_personal
+        personal = get_personal()
+        from dataclasses import asdict
+        tarea = personal.crear_tarea(titulo, descripcion, prioridad, fecha_limite, categoria)
+        return {"tarea": asdict(tarea), "mensaje": "Tarea creada correctamente"}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+@app.post("/tareas/{tarea_id}/completar")
+async def completar_tarea_endpoint(tarea_id: str):
+    """Marca una tarea como completada"""
+    try:
+        sys.path.insert(0, '/root/NEO_EVA/domains')
+        from iris_personal import get_personal
+        personal = get_personal()
+        exito = personal.completar_tarea(tarea_id)
+        return {"exito": exito}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+@app.get("/tareas/resumen")
+async def resumen_tareas_endpoint():
+    """Retorna resumen de tareas"""
+    try:
+        sys.path.insert(0, '/root/NEO_EVA/domains')
+        from iris_personal import get_personal
+        personal = get_personal()
+        return {"resumen": personal.resumen_tareas()}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+@app.get("/agenda")
+async def agenda_hoy():
+    """Retorna la agenda del dia"""
+    try:
+        sys.path.insert(0, '/root/NEO_EVA/domains')
+        from iris_personal import get_personal
+        personal = get_personal()
+        return {"agenda": personal.generar_agenda_dia()}
+    except Exception as e:
+        return {"error": str(e)}
+
+
+class EmailRequest(BaseModel):
+    tipo: str
+    nombre: str
+    tema: str = ""
+    contenido: str = ""
+
+
+@app.post("/redactar/email")
+async def redactar_email_endpoint(request: EmailRequest):
+    """Redacta un email"""
+    try:
+        sys.path.insert(0, '/root/NEO_EVA/domains')
+        from iris_personal import get_personal
+        personal = get_personal()
+        email = personal.redactar_email(
+            request.tipo,
+            nombre=request.nombre,
+            tema=request.tema,
+            contenido=request.contenido
+        )
+        return {"email": email}
+    except Exception as e:
+        return {"error": str(e)}
+
+
 if __name__ == "__main__":
     print("🔮 IRIS Web iniciando en http://0.0.0.0:8891")
     print("   Endpoints de ejecucion y aprobacion activos")

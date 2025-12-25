@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-IRIS Asistente Personal - Comunicacion Natural
+IRIS Asistente Personal - Asesora Fiscal Legaltech e Investigadora IA
 
-IRIS habla contigo por la web como si fuera una persona:
-- Te cuenta lo que ve
-- Te propone cosas
-- Espera tu "ok" para actuar
-- Te da los buenos dias
-- Te avisa de problemas
+IRIS es tu asistente especializada que:
+- Monitorea plazos fiscales y normativas
+- Investiga papers de IA y tendencias
+- Redacta emails y contenido
+- Gestiona tareas y comunicaciones
+- Habla contigo de forma natural
 
-Todo por el chat, como un humano.
+Como una colega de confianza que trabaja para ti.
 """
 
 import os
@@ -26,6 +26,19 @@ import threading
 sys.path.insert(0, '/root/NEO_EVA')
 sys.path.insert(0, '/root/NEO_EVA/core')
 sys.path.insert(0, '/root/NEO_EVA/api')
+sys.path.insert(0, '/root/NEO_EVA/config')
+sys.path.insert(0, '/root/NEO_EVA/domains')
+
+# Importar modulos especializados
+try:
+    from iris_perfil import PERFIL, SYSTEM_PROMPT, CONOCIMIENTO_FISCAL
+    from iris_fiscal import IrisFiscal, get_fiscal
+    from iris_research import IrisResearch, get_research
+    from iris_personal import IrisPersonal, get_personal
+    MODULOS_DISPONIBLES = True
+except ImportError as e:
+    print(f"Advertencia: Modulos especializados no disponibles: {e}")
+    MODULOS_DISPONIBLES = False
 
 # Archivo de mensajes pendientes para la web
 MENSAJES_FILE = Path("/root/NEO_EVA/agents_state/iris_mensajes.json")
@@ -321,6 +334,186 @@ class IrisAsistente:
             self.estado["ultimo_reporte"] = datetime.now().isoformat()
             self._guardar_estado()
 
+    # ========== FUNCIONES ESPECIALIZADAS ==========
+
+    def verificar_plazos_fiscales(self):
+        """Verifica y avisa de plazos fiscales proximos"""
+        if not MODULOS_DISPONIBLES:
+            return
+
+        try:
+            fiscal = get_fiscal()
+            plazos = fiscal.obtener_proximos_plazos(dias=10)
+
+            for plazo in plazos:
+                plazo_id = f"plazo_{plazo.numero}_{plazo.fecha_limite}"
+
+                # No repetir alertas
+                if plazo_id in self.estado.get("plazos_notificados", []):
+                    continue
+
+                if plazo.dias_restantes <= 3:
+                    self.enviar_mensaje(
+                        f"⚠️ URGENTE: El plazo del Modelo {plazo.numero} ({plazo.descripcion}) vence en {plazo.dias_restantes} dias ({plazo.fecha_limite}). ¿Quieres que te prepare un recordatorio para el cliente?",
+                        tipo="pregunta",
+                        accion={"tipo": "fiscal", "comando": f"recordatorio_{plazo.numero}"},
+                        urgente=True
+                    )
+                elif plazo.dias_restantes <= 7:
+                    self.enviar_mensaje(
+                        f"📅 Recuerda: Modelo {plazo.numero} vence el {plazo.fecha_limite} ({plazo.dias_restantes} dias). {plazo.descripcion}.",
+                        tipo="info"
+                    )
+
+                if "plazos_notificados" not in self.estado:
+                    self.estado["plazos_notificados"] = []
+                self.estado["plazos_notificados"].append(plazo_id)
+
+            # Limpiar notificaciones viejas
+            self.estado["plazos_notificados"] = self.estado.get("plazos_notificados", [])[-50:]
+            self._guardar_estado()
+
+        except Exception as e:
+            self._log(f"Error verificando plazos fiscales: {e}")
+
+    def revisar_boe(self):
+        """Revisa el BOE para novedades fiscales"""
+        if not MODULOS_DISPONIBLES:
+            return
+
+        try:
+            fiscal = get_fiscal()
+            novedades = fiscal.revisar_boe()
+
+            if novedades:
+                # Agrupar novedades
+                resumen = f"📰 He encontrado {len(novedades)} novedades relevantes en el BOE de hoy:\n"
+                for n in novedades[:3]:
+                    resumen += f"\n• {n['titulo'][:80]}..."
+
+                self.enviar_mensaje(
+                    resumen + "\n\n¿Quieres que te prepare un resumen detallado?",
+                    tipo="pregunta",
+                    accion={"tipo": "fiscal", "comando": "resumen_boe"}
+                )
+
+        except Exception as e:
+            self._log(f"Error revisando BOE: {e}")
+
+    def obtener_digest_ia(self):
+        """Obtiene novedades de IA semanalmente"""
+        if not MODULOS_DISPONIBLES:
+            return
+
+        # Solo los lunes
+        if datetime.now().weekday() != 0:
+            return
+
+        ultimo_digest = self.estado.get("ultimo_digest_ia")
+        if ultimo_digest:
+            ultimo_dt = datetime.fromisoformat(ultimo_digest)
+            if (datetime.now() - ultimo_dt).days < 7:
+                return
+
+        try:
+            research = get_research()
+            papers = research.papers_recientes("llm", dias=7, max_results=5)
+
+            if papers:
+                self.enviar_mensaje(
+                    f"🔬 Tengo el digest semanal de IA listo. He encontrado {len(papers)} papers interesantes sobre LLMs y agentes. ¿Te lo muestro?",
+                    tipo="pregunta",
+                    accion={"tipo": "research", "comando": "mostrar_digest"}
+                )
+
+            self.estado["ultimo_digest_ia"] = datetime.now().isoformat()
+            self._guardar_estado()
+
+        except Exception as e:
+            self._log(f"Error obteniendo digest IA: {e}")
+
+    def recordar_tareas(self):
+        """Recuerda tareas pendientes importantes"""
+        if not MODULOS_DISPONIBLES:
+            return
+
+        try:
+            personal = get_personal()
+            tareas = personal.listar_tareas(solo_pendientes=True)
+
+            tareas_urgentes = [t for t in tareas if t.get("prioridad") == "alta"]
+
+            if tareas_urgentes:
+                nombres = [t["titulo"] for t in tareas_urgentes[:3]]
+                self.enviar_mensaje(
+                    f"📝 Tienes {len(tareas_urgentes)} tareas de alta prioridad pendientes: {', '.join(nombres)}. ¿Empezamos con alguna?",
+                    tipo="info"
+                )
+
+        except Exception as e:
+            self._log(f"Error recordando tareas: {e}")
+
+    def generar_resumen_fiscal(self) -> str:
+        """Genera resumen fiscal completo"""
+        if not MODULOS_DISPONIBLES:
+            return "Modulos fiscales no disponibles."
+
+        fiscal = get_fiscal()
+        return fiscal.resumen_fiscal()
+
+    def generar_digest_semanal(self) -> str:
+        """Genera digest semanal de IA"""
+        if not MODULOS_DISPONIBLES:
+            return "Modulos de investigacion no disponibles."
+
+        research = get_research()
+        return research.digest_semanal()
+
+    def info_modelo_fiscal(self, numero: str) -> str:
+        """Informacion sobre un modelo fiscal"""
+        if not MODULOS_DISPONIBLES:
+            return "Modulos fiscales no disponibles."
+
+        fiscal = get_fiscal()
+        return fiscal.info_modelo(numero)
+
+    def buscar_papers(self, query: str) -> str:
+        """Busca papers en arXiv"""
+        if not MODULOS_DISPONIBLES:
+            return "Modulos de investigacion no disponibles."
+
+        research = get_research()
+        papers = research.buscar_arxiv(query, max_results=5)
+
+        if not papers:
+            return f"No encontre papers sobre '{query}'."
+
+        resultado = f"## Papers encontrados: {query}\n\n"
+        for p in papers:
+            resultado += f"**{p.titulo}**\n"
+            resultado += f"*{', '.join(p.autores[:2])}* - {p.fecha}\n"
+            resultado += f"{p.abstract[:150]}...\n"
+            resultado += f"[Link]({p.url})\n\n"
+
+        return resultado
+
+    def crear_tarea(self, titulo: str, prioridad: str = "media") -> str:
+        """Crea una nueva tarea"""
+        if not MODULOS_DISPONIBLES:
+            return "Modulos de tareas no disponibles."
+
+        personal = get_personal()
+        tarea = personal.crear_tarea(titulo, prioridad=prioridad)
+        return f"Tarea creada: {tarea.titulo} (prioridad: {tarea.prioridad})"
+
+    def redactar_email_cliente(self, nombre: str, tema: str, contenido: str) -> str:
+        """Redacta un email para un cliente"""
+        if not MODULOS_DISPONIBLES:
+            return "Modulos de comunicacion no disponibles."
+
+        personal = get_personal()
+        return personal.responder_consulta(nombre, tema, contenido)
+
     # ========== ACCIONES ==========
 
     def ejecutar_accion(self, accion: Dict) -> str:
@@ -330,7 +523,54 @@ class IrisAsistente:
 
         self._log(f"Ejecutando accion: {tipo} - {comando}")
 
-        if tipo == "diagnostico" and comando == "top_procesos":
+        # ===== ACCIONES FISCALES =====
+        if tipo == "fiscal":
+            if comando == "resumen_boe":
+                return "He revisado el BOE. Las novedades mas relevantes estan relacionadas con normativa tributaria. Te recomiendo revisar los enlaces que te pase."
+
+            elif comando.startswith("recordatorio_"):
+                modelo = comando.replace("recordatorio_", "")
+                if MODULOS_DISPONIBLES:
+                    personal = get_personal()
+                    fiscal = get_fiscal()
+                    info = fiscal.info_modelo(modelo)
+                    return f"He preparado la info del modelo {modelo}:\n\n{info}\n\n¿Quieres que redacte un email de recordatorio para algun cliente?"
+                return f"Recordatorio del modelo {modelo} preparado."
+
+            elif comando == "calendario":
+                if MODULOS_DISPONIBLES:
+                    return self.generar_resumen_fiscal()
+                return "Modulo fiscal no disponible."
+
+        # ===== ACCIONES DE INVESTIGACION =====
+        elif tipo == "research":
+            if comando == "mostrar_digest":
+                if MODULOS_DISPONIBLES:
+                    return self.generar_digest_semanal()
+                return "Modulo de investigacion no disponible."
+
+            elif comando.startswith("buscar_"):
+                query = comando.replace("buscar_", "")
+                if MODULOS_DISPONIBLES:
+                    return self.buscar_papers(query)
+                return "Modulo de investigacion no disponible."
+
+        # ===== ACCIONES DE TAREAS =====
+        elif tipo == "tarea":
+            if comando.startswith("crear_"):
+                titulo = comando.replace("crear_", "")
+                if MODULOS_DISPONIBLES:
+                    return self.crear_tarea(titulo)
+                return "Modulo de tareas no disponible."
+
+            elif comando == "listar":
+                if MODULOS_DISPONIBLES:
+                    personal = get_personal()
+                    return personal.resumen_tareas()
+                return "Modulo de tareas no disponible."
+
+        # ===== ACCIONES DE SISTEMA =====
+        elif tipo == "diagnostico" and comando == "top_procesos":
             result = subprocess.run(
                 "ps aux --sort=-%cpu | head -10",
                 shell=True, capture_output=True, text=True
@@ -425,13 +665,27 @@ class IrisAsistente:
         # 1. Saludar si es nuevo dia
         self.saludar()
 
-        # 2. Verificar y reportar problemas
+        # 2. Verificar y reportar problemas del sistema
         self.reportar_problemas()
 
-        # 3. Sugerir mejoras ocasionalmente
+        # 3. Verificar plazos fiscales (especializado)
+        self.verificar_plazos_fiscales()
+
+        # 4. Revisar BOE diariamente (por la manana)
+        hora = datetime.now().hour
+        if 8 <= hora <= 10:
+            self.revisar_boe()
+
+        # 5. Digest semanal de IA (lunes)
+        self.obtener_digest_ia()
+
+        # 6. Recordar tareas importantes
+        self.recordar_tareas()
+
+        # 7. Sugerir mejoras ocasionalmente
         self.sugerir_mejoras()
 
-        # 4. Reporte diario por la tarde
+        # 8. Reporte diario por la tarde
         self.dar_reporte_diario()
 
         self._log("Ciclo de monitoreo completado")
